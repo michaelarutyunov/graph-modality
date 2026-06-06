@@ -50,15 +50,31 @@
 
 ### 1.2 Beads
 
-#### 1a. Download dataset
+#### 1a. Download + validate dataset
 - **File:** `data/download.py` ✅ (exists, needs real API keys to run)
-- **Acceptance:** Three CSVs present in `data/raw/interview_transcripts/`
+- **Acceptance:** Three CSVs present in `data/raw/interview_transcripts/`; row counts verified (~1000/125/125); column schema validated; transcript quality report produced (see below)
+- **Data quality checks (run after download):**
+  - Every `transcript_id` is unique across all 3 CSVs
+  - Every transcript has valid UTF-8 encoding
+  - Every transcript has ≥1 `Assistant:` prefix and ≥1 `Human:` prefix
+  - Every transcript has text length ≥ 100 characters (below this = likely corrupted)
+  - No duplicate transcripts (by `transcript_id` or by text content hash)
+  - Print a summary report: total transcripts, min/max/median text length per split, any quality flags
 - **Model:** haiku
 - **Blocks:** everything after it
 
 #### 1b. Speaker tagger
 - **File:** `extraction/tagger.py`
 - **Acceptance:** `parse_transcript()` and `format_for_extraction()` work on one real transcript; unit tests in `tests/test_tagger.py` pass
+- **Edge cases that must be tested:**
+  - Normal multi-turn transcript
+  - Single-turn edge case
+  - Empty transcript → returns empty list
+  - Transcript with only one speaker → returns only that speaker's turns
+  - `"Assistant:"` appearing inside Human text (e.g. "I work as an assistant") → does NOT split there; regex must require `Assistant:` at line start
+  - Multiple consecutive turns by the same speaker → preserves both as separate turns
+  - Whitespace-only turn text → turn is included with stripped (possibly empty) text
+  - Round-trip: `parse_transcript()` → `format_for_extraction()` preserves content
 - **Model:** sonnet
 - **Blocks:** 1c, 1e, 1f, 1g
 
@@ -89,6 +105,17 @@
 #### 1g. Scale extraction
 - **File:** `extraction/extractor.py` (batch mode)
 - **Acceptance:** 300 transcripts extracted (100/split, stratified); all cached in `data/graphs/free_text/`; failed extractions logged to `extraction/failed.txt`; validator run on all graphs
+- **Mid-scale quality gate (at 50 transcripts):**
+  - Pause extraction after 50 transcripts are cached
+  - Compute aggregate validation statistics: % of graphs passing clean, mean node count, mean edge count, bipolarity score distribution
+  - Spot-check 5 random graphs for quality (same rubric as 1e manual review)
+  - If >20% of graphs have validation violations, or spot-check scores drop >1 point below 1e baseline: STOP, log findings, escalate for prompt revision
+  - If quality passes: log checkpoint to extraction-log.md and continue to 300
+- **Cost tracking (recorded in each graph's metadata):**
+  - `model_used`: model identifier (e.g. `claude-sonnet-4-6`)
+  - `tokens_in` / `tokens_out`: token counts from API response
+  - `estimated_cost_usd`: computed from model pricing
+  - Cumulative cost printed every 50 transcripts; logged to extraction-log.md
 - **Model:** sonnet
 - **Blocks:** Phase 2
 
@@ -293,6 +320,19 @@ Per codified-context-principles.md: agents are created when **all three** condit
 | torch_geometric install fails | Phase 0 | Low | High | ✅ Verified working |
 | Agnes context window < 32k | Phase 1 | Medium | Low | Exclude from comparison; proceed with Claude + DeepSeek |
 | Extraction quality poor | Phase 1 | Medium | High | Manual review gate at 5 transcripts; iterate prompt before scale |
+| Extraction quality drifts at scale | Phase 1 | Medium | High | Mid-scale quality gate at 50 transcripts; abort if >20% violations or quality drop |
+| API cost overrun | Phase 1 | Low | Medium | Cost tracking per transcript; cumulative cost logged every 50; escalate if budget exceeded |
+| Corrupted transcripts in dataset | Phase 1 | Low | Medium | Data quality validation in download bead (1a): encoding, prefix presence, min length, no duplicates |
+| Tagger splits on "assistant" in text | Phase 1 | Low | Medium | Regex requires `Assistant:`/`Human:` at line start, not mid-line |
 | Graph sparsity (< 5 nodes median) | Phase 3 | Medium | Medium | Route 2 dominates; note as boundary condition |
 | GNN overfitting on 300 graphs | Phase 3 | Medium | Medium | Early stopping, dropout 0.3, weight decay 1e-4; report curves |
 | Negative result | Phase 4 | Possible | Low | Pre-committed to reporting; frame as boundary condition |
+
+### Improvements log
+
+| Date | Source | What changed | Why |
+|------|--------|-------------|-----|
+| 2026-06-07 | DeepSeek second-opinion review | Added data quality validation to download bead (1a) | Corrupted transcripts waste API calls and pollute graph dataset |
+| 2026-06-07 | DeepSeek second-opinion review | Added mid-scale quality gate at 50 transcripts in scale extraction (1g) | Quality can drift between 5-transcript review and 300-transcript scale |
+| 2026-06-07 | DeepSeek second-opinion review | Added cost tracking per transcript | Prevents budget surprises; cumulative cost visible during scale extraction |
+| 2026-06-07 | DeepSeek second-opinion review | Expanded tagger edge cases (1b) | Regex splitting on "assistant" in text, consecutive same-speaker turns, whitespace-only turns are real failure modes |
