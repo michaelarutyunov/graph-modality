@@ -234,3 +234,8 @@ results/*
 *.pt
 extraction/failed.txt
 .claude/context/graph-schema.md:Zone.Identifier
+
+# Beads / Dolt files (added by bd init)
+.dolt/
+*.db
+.beads-credential-key
