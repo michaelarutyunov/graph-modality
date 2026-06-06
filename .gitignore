@@ -216,3 +216,21 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# ── Project-specific ──────────────────────────────────────────────
+# Data, cache, and results are never committed (see CLAUDE.md conventions)
+data/raw/**/*.csv
+data/tagged/*
+!data/tagged/.gitkeep
+data/graphs/free_text/*
+!data/graphs/free_text/.gitkeep
+data/graphs/canonical/*
+!data/graphs/canonical/.gitkeep
+cache/*
+!cache/.gitkeep
+results/*
+!results/.gitkeep
+*.npy
+*.pt
+extraction/failed.txt
+.claude/context/graph-schema.md:Zone.Identifier

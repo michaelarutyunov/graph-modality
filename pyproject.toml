@@ -1,0 +1,62 @@
+[project]
+name = "cdt-graph-modality"
+version = "0.1.0"
+description = "Research prototype testing concept graphs as a structurally distinct modality for consumer digital twin representation"
+requires-python = ">=3.11"
+dependencies = [
+    "polars>=1.0",
+    "sentence-transformers>=3.0",
+    "networkx>=3.3",
+    "scikit-learn>=1.5",
+    "tqdm>=4.66",
+    "jsonschema>=4.22",
+    "python-dotenv>=1.0",
+    "anthropic>=0.30",
+    "huggingface-hub>=0.24",
+    "marimo>=0.7",
+    "matplotlib>=3.9",
+    "pyvis>=0.3",
+    "torch>=2.3",
+    "torchvision>=0.18",
+    "torch-geometric>=2.5",
+]
+
+[tool.uv.sources]
+torch = { index = "pytorch-cpu" }
+torchvision = { index = "pytorch-cpu" }
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["data", "extraction", "canonicalisation", "encoding", "classification"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = [
+    "E",    # pycodestyle errors
+    "W",    # pycodestyle warnings
+    "F",    # pyflakes
+    "I",    # isort
+    "UP",   # pyupgrade
+    "B",    # flake8-bugbear
+    "SIM",  # flake8-simplify
+    "TCH",  # flake8-type-checking
+    "RUF",  # ruff-specific rules
+]
+
+[tool.ruff.lint.isort]
+known-first-party = ["extraction", "canonicalisation", "encoding", "classification"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
