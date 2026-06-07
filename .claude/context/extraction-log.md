@@ -21,6 +21,34 @@
 
 ---
 
+## manual review (6 transcripts, 2026-06-07)
+
+Reviewed 6 graphs across 3 splits (2 workforce, 2 creatives, 1 scientist, plus work_0000 from earlier test). All passed structural validation with zero violations.
+
+| metric | value |
+|---|---|
+| transcripts reviewed | 6 (work_0000, work_0001, work_0002, creativity_0000, creativity_0001, science_0000) |
+| extraction model | claude-sonnet-4-6 |
+| prompt version | v1 |
+| mean nodes | 13.5 (range 13–14) |
+| mean edges | 13.7 (range 12–17) |
+| bipolarity completeness | 100% (all Constructs fully bipolar) |
+| CSM count | 2 per graph (at ceiling, consistent) |
+| CONFLICTS_WITH edges | present in all 6 graphs (9 total) |
+| Stance→Value violations | 0 |
+| validation failures | 0 / 6 |
+
+**Qualitative observations:**
+- Construct labels are specific and well-grounded in transcript spans
+- All graphs exhibit the expected hub-and-spoke structure (Values as high-degree hubs)
+- CONFLICTS_WITH edges appear in every graph — higher than expected for short interviews; suggests the prompt may be encouraging conflict identification
+- CSM count exactly 2 in every graph — LLM may be "filling the quota" rather than genuinely identifying style markers
+- Prompt v1 appears solid; no iteration needed before model comparison
+
+**Decision:** Prompt v1 is locked. Proceed to model comparison experiment.
+
+---
+
 ## model comparison
 
 > *To be populated after the comparison experiment (`graph-modality-7xc`).*
@@ -57,4 +85,10 @@
 
 > *Record any unexpected behaviour, API issues, or decisions that depart from the plan.*
 
-None yet.
+### 2026-06-07: `ANTHROPIC_BASE_URL` env var conflict
+
+The global `.env` contains `ANTHROPIC_BASE_URL=https://api.deepseek.com/anthropic/...` (from the Claude Code harness config). The Anthropic Python SDK reads this env var and routes ALL calls to DeepSeek's API, which rejects real Anthropic API keys with 401. Fixed by passing `base_url="https://api.anthropic.com"` explicitly to `Anthropic()` constructor in `extractor.py`. The global env var is left untouched — it's needed for Claude Code's own operation.
+
+### 2026-06-07: Transcript ID hallucination bug
+
+`validate_graph()` used `graph.setdefault("transcript_id", transcript_id)` to attach metadata. When the LLM included a `transcript_id` in its JSON output (which it often hallucinates), `setdefault` preserved the LLM's value instead of the true dataset ID. This caused duplicate IDs across different splits (e.g. three graphs with `interview_001`). Fixed by using direct assignment `graph["transcript_id"] = transcript_id`. Affected cache files were deleted and re-extracted.

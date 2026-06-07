@@ -37,6 +37,7 @@ FAILED_LOG = Path("extraction/failed.txt")
 # ── API config ───────────────────────────────────────────────────────
 
 DEFAULT_MODEL = "claude-sonnet-4-6"
+DEFAULT_BASE_URL = "https://api.anthropic.com"
 MAX_RETRIES = 3
 RETRY_DELAYS = [2, 8, 32]  # seconds — exponential-ish
 API_TIMEOUT = 120  # seconds
@@ -140,7 +141,9 @@ def extract_one(
         return None
 
     # ── attach metadata ────────────────────────────────────────────
-    graph.setdefault("transcript_id", transcript_id)
+    # Always use the true transcript_id from the dataset, never the
+    # LLM's guess.  The LLM may hallucinate an ID in its JSON output.
+    graph["transcript_id"] = transcript_id
     graph["split"] = split
     graph["extraction_model"] = model
     graph["prompt_version"] = prompt_version
@@ -261,7 +264,9 @@ def main() -> None:
         print("ERROR: ANTHROPIC_API_KEY not set in environment or .env")
         sys.exit(1)
 
-    client = Anthropic(api_key=api_key)
+    # Explicit base_url bypasses ANTHROPIC_BASE_URL env var which may
+    # point to a third-party proxy (e.g. DeepSeek) in global config.
+    client = Anthropic(api_key=api_key, base_url=DEFAULT_BASE_URL)
     tagged = load_tagged_transcripts()
 
     if args.tid:
