@@ -240,3 +240,4 @@ extraction/failed.txt
 *.db
 .beads-credential-key
 extraction/model_comparison/results/
+extraction/model_comparison/validation_results/
