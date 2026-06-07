@@ -14,6 +14,8 @@ import json
 import os
 import sys
 import time
+import urllib.error
+import urllib.request
 from pathlib import Path
 
 from anthropic import Anthropic
@@ -33,29 +35,34 @@ RESULTS_DIR.mkdir(parents=True, exist_ok=True)
 
 # ── model configs ────────────────────────────────────────────────────
 
-# Each entry: (display_name, model_id, api_key_env_var, base_url, auth_token_env_var)
-# auth_token_env_var is used as api_key for non-Anthropic endpoints that expect
-# Bearer token auth via the x-api-key header (DeepSeek's Anthropic-compatible API).
+# api_type: "anthropic" uses the Anthropic SDK; "openai" uses raw HTTP.
+# max_tokens: per-model output budget.  DeepSeek needs extra because
+#   thinking tokens share the budget with visible output.
 MODELS = [
     {
         "name": "Claude",
         "model_id": "claude-sonnet-4-6",
+        "api_type": "anthropic",
         "api_key_env": "ANTHROPIC_API_KEY",
         "base_url": "https://api.anthropic.com",
+        "max_tokens": 4096,
     },
     {
         "name": "DeepSeek",
-        "model_id": "deepseek-v4-pro",
+        "model_id": "deepseek-chat",
+        "api_type": "openai",
         "api_key_env": "ANTHROPIC_AUTH_TOKEN",
-        "base_url": "https://api.deepseek.com/anthropic",
+        "base_url": "https://api.deepseek.com/v1/chat/completions",
+        "max_tokens": 8192,
+        "json_mode": True,  # enables response_format={"type": "json_object"}
     },
     {
         "name": "Agnes",
-        "model_id": None,  # TBD — verify endpoint and model name
+        "model_id": "agnes-2.0-flash",
+        "api_type": "openai",
         "api_key_env": "AGNES_API_KEY",
-        "base_url": None,  # TBD
-        "skip": True,
-        "skip_reason": "Agnes API endpoint unknown — configure before running",
+        "base_url": "https://apihub.agnes-ai.com/v1/chat/completions",
+        "max_tokens": 4096,
     },
 ]
 
@@ -89,46 +96,94 @@ def _load_tagged() -> dict[str, dict]:
     return records
 
 
-def _extract_with_model(
-    transcript_id: str,
-    formatted_transcript: str,
+def _extract_anthropic(
+    prompt: str,
     client: Anthropic,
     model_id: str,
-    prompt_template: str,
-) -> dict | None:
-    """Extract a graph for one transcript with a specific model."""
-    prompt = prompt_template.replace("{transcript}", formatted_transcript)
-
-    raw_text: str | None = None
+    max_tokens: int,
+) -> str | None:
+    """Extract via Anthropic-compatible API.  Returns raw text or None."""
     for attempt in range(MAX_RETRIES):
         try:
             response = client.messages.create(
                 model=model_id,
-                max_tokens=4096,
+                max_tokens=max_tokens,
                 messages=[{"role": "user", "content": prompt}],
-                timeout=120,
+                timeout=180,
             )
-            # Extract text from the first text-type content block.
-            # Some models (DeepSeek) return "thinking" blocks before "text".
             text_blocks = [b for b in response.content if b.type == "text"]
             if not text_blocks:
-                raise ValueError(f"no text block in response "
-                                 f"(blocks: {[b.type for b in response.content]})")
-            raw_text = text_blocks[0].text
-            break
+                raise ValueError(f"no text block (blocks: {[b.type for b in response.content]})")
+            return text_blocks[0].text
         except Exception as exc:
             if attempt < MAX_RETRIES - 1:
                 time.sleep(RETRY_DELAYS[attempt])
             else:
                 print(f"    FAILED after {MAX_RETRIES} attempts: {exc}")
                 return None
+    return None
 
-    if raw_text is None:
-        print("    FAILED: all retries exhausted, no response")
-        return None
 
-    # Parse JSON from response
+def _extract_openai(
+    prompt: str,
+    api_key: str,
+    base_url: str,
+    model_id: str,
+    max_tokens: int,
+    json_mode: bool = False,
+) -> str | None:
+    """Extract via OpenAI-compatible API.  Returns raw text or None."""
+    messages = [{"role": "user", "content": prompt}]
+    # DeepSeek JSON mode requires the word "json" in the prompt
+    if json_mode:
+        messages.insert(0, {"role": "system", "content": "You must output valid JSON."})
+
+    payload: dict = {
+        "model": model_id,
+        "messages": messages,
+        "max_tokens": max_tokens,
+        "temperature": 0.0,
+    }
+    if json_mode:
+        payload["response_format"] = {"type": "json_object"}
+
+    body = json.dumps(payload).encode("utf-8")
+
+    for attempt in range(MAX_RETRIES):
+        try:
+            req = urllib.request.Request(
+                base_url,
+                data=body,
+                headers={
+                    "Authorization": f"Bearer {api_key}",
+                    "Content-Type": "application/json",
+                },
+            )
+            with urllib.request.urlopen(req, timeout=180) as resp:
+                data = json.loads(resp.read().decode("utf-8"))
+            content = data["choices"][0]["message"]["content"]
+            return content
+        except Exception as exc:
+            if attempt < MAX_RETRIES - 1:
+                time.sleep(RETRY_DELAYS[attempt])
+            else:
+                # Try to extract error detail from response
+                detail = str(exc)
+                if isinstance(exc, urllib.error.HTTPError):
+                    try:
+                        err_body = exc.read().decode("utf-8")
+                        detail = err_body[:200]
+                    except Exception:
+                        pass
+                print(f"    FAILED after {MAX_RETRIES} attempts: {detail}")
+                return None
+    return None
+
+
+def _parse_graph_json(raw_text: str, transcript_id: str, model_id: str) -> dict | None:
+    """Parse JSON from LLM response, validate, and attach metadata."""
     json_text = raw_text.strip()
+    # Strip markdown fences
     if json_text.startswith("```"):
         nl = json_text.find("\n")
         if nl != -1:
@@ -143,12 +198,10 @@ def _extract_with_model(
         print(f"    JSON parse error: {exc}")
         return None
 
-    # Attach metadata (always use true ID)
     graph["transcript_id"] = transcript_id
     graph["extraction_model"] = model_id
     violations = validate_graph(graph)
     graph["validation_violations"] = violations
-
     return graph
 
 
@@ -236,12 +289,9 @@ def main() -> None:
 
     for model_cfg in MODELS:
         name = model_cfg["name"]
-        if model_cfg.get("skip"):
-            print(f"=== {name} === SKIPPED: {model_cfg.get('skip_reason', '?')}")
-            print()
-            continue
-
+        api_type = model_cfg["api_type"]
         model_id = model_cfg["model_id"]
+        max_tokens = model_cfg["max_tokens"]
         api_key = os.environ.get(model_cfg["api_key_env"], "")
         base_url = model_cfg["base_url"]
 
@@ -250,26 +300,37 @@ def main() -> None:
             print()
             continue
 
-        print(f"=== {name} ({model_id}) ===")
+        print(f"=== {name} ({model_id}) === [api={api_type}, max_tokens={max_tokens}]")
 
-        client = Anthropic(api_key=api_key, base_url=base_url)
+        # Create client for Anthropic-compatible APIs
+        client = None
+        if api_type == "anthropic":
+            client = Anthropic(api_key=api_key, base_url=base_url)
+
         graphs: dict[str, dict] = {}
 
         for i, tid in enumerate(sample_ids):
             rec = tagged[tid]
+            prompt = prompt_template.replace("{transcript}", rec["formatted"])
             print(
                 f"  [{i + 1}/{len(sample_ids)}] {tid} "
                 f"({rec['split']}, {rec['n_human_turns']} human turns)..."
             )
 
-            graph = _extract_with_model(
-                transcript_id=tid,
-                formatted_transcript=rec["formatted"],
-                client=client,
-                model_id=model_id,
-                prompt_template=prompt_template,
-            )
+            # Dispatch to the right API backend
+            if api_type == "anthropic":
+                raw_text = _extract_anthropic(prompt, client, model_id, max_tokens)
+            else:
+                json_mode = model_cfg.get("json_mode", False)
+                raw_text = _extract_openai(
+                    prompt, api_key, base_url, model_id, max_tokens, json_mode=json_mode
+                )
 
+            if raw_text is None:
+                print("    → FAILED")
+                continue
+
+            graph = _parse_graph_json(raw_text, tid, model_id)
             if graph:
                 graphs[tid] = graph
                 n_nodes = len(graph["nodes"])
