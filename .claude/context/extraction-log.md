@@ -57,10 +57,20 @@ Reviewed 6 graphs across 3 splits (2 workforce, 2 creatives, 1 scientist, plus w
 |---|---|---|---|---|---|---|
 | — | — | — | — | — | — | — |
 
-**Winner:** TBD  
-**Tiebreaker used:** TBD (R3 — bipolarity capture — is the tiebreaker per CHARTER.md §4)
+**Winner:** Claude (claude-sonnet-4-6) — DeepSeek failed to produce any valid graphs.  
+**DeepSeek analysis:** 0/10 transcripts produced valid graphs. Failure modes: (a) response contained only thinking blocks, no text output (5/10), (b) JSON truncated mid-string — model hit output limits or lost track of JSON structure (5/10). The `deepseek-v4-pro` thinking variant is unsuitable for structured JSON extraction. A non-thinking variant (`deepseek-v4-flash`) may work but was not tested.  
+**Agnes:** skipped — API endpoint unknown.  
+**Tiebreaker used:** N/A (one-sided result)
 
 **Sample IDs:** `extraction/model_comparison/sample_ids.txt` (4 workforce, 3 creatives, 3 scientists)
+
+**Claude metrics (10/10 after retry of science_0060):**
+- Mean nodes: 15.1 (range 11–21)
+- Mean edges: 15.8 (range 12–21)
+- CV(N): 0.198 (low variance = consistent extraction)
+- Bipolarity: 100% (all Constructs fully bipolar)
+- Validation violations: 0
+- Transient failure: science_0060 (empty response on first attempt; succeeded on retry)
 
 ---
 

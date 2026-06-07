@@ -239,3 +239,4 @@ extraction/failed.txt
 .dolt/
 *.db
 .beads-credential-key
+extraction/model_comparison/results/

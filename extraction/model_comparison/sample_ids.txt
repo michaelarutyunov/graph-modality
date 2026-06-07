@@ -1,0 +1,22 @@
+# Fixed 10-transcript sample for model comparison experiment.
+# Design: 4 workforce (2 short <8k, 2 long >15k), 3 creatives, 3 scientists.
+# These IDs are PERMANENT — never change them after the first comparison run.
+# Selected 2026-06-07 based on transcript length analysis.
+
+# workforce — short (<8k chars)
+work_0981
+work_0225
+
+# workforce — long (>15k chars)
+work_0362
+work_0552
+
+# creatives
+creativity_0085
+creativity_0060
+creativity_0092
+
+# scientists
+science_0050
+science_0060
+science_0112

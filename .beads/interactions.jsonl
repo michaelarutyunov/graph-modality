@@ -6,3 +6,4 @@
 {"id":"int-9567c815","kind":"field_change","created_at":"2026-06-07T18:54:53.47856743Z","actor":"michaelarutyunov","issue_id":"graph-modality-2ig","extra":{"field":"status","new_value":"closed","old_value":"in_progress","reason":"Closed"}}
 {"id":"int-e6ef0955","kind":"field_change","created_at":"2026-06-07T18:54:53.589190506Z","actor":"michaelarutyunov","issue_id":"graph-modality-xg2","extra":{"field":"status","new_value":"closed","old_value":"in_progress","reason":"Closed"}}
 {"id":"int-2d15309a","kind":"field_change","created_at":"2026-06-07T18:54:53.699329356Z","actor":"michaelarutyunov","issue_id":"graph-modality-2ng","extra":{"field":"status","new_value":"closed","old_value":"in_progress","reason":"Closed"}}
+{"id":"int-8e0780de","kind":"field_change","created_at":"2026-06-07T19:40:23.718695636Z","actor":"michaelarutyunov","issue_id":"graph-modality-5md","extra":{"field":"status","new_value":"closed","old_value":"in_progress","reason":"Closed"}}
