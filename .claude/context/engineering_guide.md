@@ -251,11 +251,18 @@ df = load_all().with_columns(
 
 `extraction/tagger.py`
 
-Transcripts use `Assistant:` and `Human:` prefixes on each turn (confirmed from dataset inspection).
+Transcripts use three speaker prefixes (confirmed from dataset inspection, 2026-06-07):
+- ``Assistant:`` — first AI turn (opening)
+- ``AI:`` — subsequent AI turns
+- ``User:`` — all human turns
+
+**NOTE:** The earlier documentation stated ``Human:`` but no transcript in the dataset uses that prefix.
 
 ```python
 import re
 from dataclasses import dataclass
+
+_SPEAKER_PREFIX = re.compile(r"^(Assistant|AI|User):\s*", re.MULTILINE)
 
 @dataclass
 class Turn:
@@ -264,15 +271,14 @@ class Turn:
     turn_index: int
 
 def parse_transcript(raw_text: str) -> list[Turn]:
-    pattern = re.compile(r"(Assistant|Human):\s*", re.MULTILINE)
-    parts = pattern.split(raw_text.strip())
+    parts = _SPEAKER_PREFIX.split(raw_text.strip())
     # parts alternates: [pre-match, speaker, text, speaker, text, ...]
     turns = []
     i = 1
     while i < len(parts) - 1:
         speaker_raw = parts[i].strip()
         text = parts[i + 1].strip()
-        speaker = "AI" if speaker_raw == "Assistant" else "Human"
+        speaker = "Human" if speaker_raw == "User" else "AI"
         turns.append(Turn(speaker=speaker, text=text, turn_index=len(turns)))
         i += 2
     return turns
