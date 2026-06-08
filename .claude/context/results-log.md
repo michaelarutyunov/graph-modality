@@ -57,18 +57,20 @@
 | class distribution (val) | workforce=150, creatives=19, scientists=18 |
 | class distribution (test) | workforce=150, creatives=19, scientists=19 |
 
-### Ceiling effect (key finding)
+### Interviewer confound (key finding)
 
-The text-only baseline (768-dim `all-mpnet-base-v2` embeddings → logistic regression) achieves **perfect val macro-F1 = 1.0**. The three cohorts (workforce / creatives / scientists) are trivially separable from language alone. Routes 2 and 3 cannot beat Route 1 on F1 — they can only match it. The research question shifts from "do graphs add predictive power?" to "do graph features provide equivalent signal with fewer dimensions, better robustness, or interpretable structure?" The test set evaluation (bead `ico`) is critical: the ceiling may not hold on held-out data.
+Initial results showed a **perfect val macro-F1 = 1.0** ceiling effect across all routes. Investigation revealed an interviewer confound: the AI interviewer uses cohort-specific opening scripts ("...using AI in your **creative** work" vs "...using AI in your **scientific** work"), injecting the cohort label into every transcript's `formatted` field. Since the text encoder embeds the full conversation, the classifier trivially separates cohorts by the interviewer's word choices, not the interviewee's cognitive patterns.
+
+**Fix (2026-06-08):** `text_encoder.py` now defaults to **human-only** encoding (`speaker_filter="Human"`), stripping AI turns. All embeddings, models, and results below reflect this fix. The human-only task is genuinely challenging: classify professional cohort from how people describe their work, without the interviewer's label leakage.
 
 ### Route 1 — Text-only baseline
 
 | metric | value |
 |---|---|
 | classifier | LogisticRegression (C=1.0, class_weight=balanced, max_iter=1000) |
-| text encoder | all-mpnet-base-v2 (768-dim) |
-| val macro-F1 | **1.0000** |
-| test macro-F1 | **1.0000** |
+| text encoder | all-mpnet-base-v2 (768-dim), human-only turns |
+| val macro-F1 | **0.9032** |
+| test macro-F1 | **0.8228** |
 
 ### Route 2 — Text + graph statistics
 
@@ -77,10 +79,9 @@ The text-only baseline (768-dim `all-mpnet-base-v2` embeddings → logistic regr
 | classifier | LogisticRegression (C=1.0, class_weight=balanced, max_iter=1000) |
 | feature dim | 798 (768 text + 30 graph stats) |
 | graph stats source | canonicalised graphs via `encoding/graph_stats.py` |
-| val macro-F1 | **1.0000** (Δ = +0.0000 vs baseline) |
-| test macro-F1 | **1.0000** (Δ = +0.0000 vs baseline) |
-| permutation importance | All zero (model already perfect on val; cannot improve) |
-| top permutation features | N/A (ceiling effect) |
+| val macro-F1 | **0.9122** (Δ = +0.0090 vs baseline) |
+| test macro-F1 | **0.8390** (Δ = +0.0161 vs baseline) |
+| top permutation features | diameter_norm (0.0092), component_ratio (0.0036), mixed_stance_frac (0.0034), max_degree_norm (0.0023) |
 
 ### Route 3 — Text + GIN
 
@@ -89,25 +90,29 @@ The text-only baseline (768-dim `all-mpnet-base-v2` embeddings → logistic regr
 | architecture | 2-layer GIN (388-dim input → 256 hidden → 128 output) + MLP head (896 → 256 → 3) |
 | node features | 4-dim type one-hot + 384-dim MiniLM label embedding = 388 |
 | training config | Adam (lr=1e-3, weight_decay=1e-4), ReduceLROnPlateau, early stopping patience=10 |
-| epochs run | 26 (early stopped) |
-| best epoch | 16 |
-| val macro-F1 | **0.9797** (Δ = -0.0203 vs baseline) |
-| test macro-F1 | **0.9903** (Δ = -0.0097 vs baseline) |
+| epochs run | 20 (early stopped) |
+| best epoch | 10 |
+| val macro-F1 | **0.9249** (Δ = +0.0217 vs baseline) |
+| test macro-F1 | **0.8368** (Δ = +0.0139 vs baseline) |
 
 ### Route comparison
 
 | route | val macro-F1 | test macro-F1 | Δ vs baseline (test) |
 |---|---|---|---|
-| Baseline (text-only) | 1.0000 | 1.0000 | — |
-| Route 2 (text + stats) | 1.0000 | 1.0000 | +0.0000 |
-| Route 3 (text + GIN) | 0.9797 | 0.9903 | -0.0097 |
+| Baseline (text-only) | 0.9032 | 0.8228 | — |
+| Route 2 (text + stats) | 0.9122 | 0.8390 | +0.0161 |
+| Route 3 (text + GIN) | 0.9249 | 0.8368 | +0.0139 |
 
----
+### Per-class breakdown (test set)
 
+| class | Route 1 | Route 2 | Route 3 | support |
+|---|---|---|---|---|
+| workforce | 0.9301 | 0.9371 | 0.9347 | 150 |
+| creatives | 0.6667 | 0.6531 | 0.6809 | 19 |
+| scientists | 0.8718 | 0.9268 | 0.8947 | 19 |
 
-### Test set evaluation — 2026-06-08T141331Z
+The "creatives" cohort is hardest to classify across all routes (F1 ≈ 0.65-0.68), likely due to small sample size (n=19) and high within-cohort diversity (composers, designers, visual artists). Scientists benefit most from graph features (+0.055 F1 from Route 1→2).
 
-Test set evaluated once on 2026-06-08T141331Z. 188 transcripts (150 workforce / 19 creatives / 19 scientists).
 ---
 
 ## Phase 4 — Analysis
