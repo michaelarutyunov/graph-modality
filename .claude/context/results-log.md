@@ -68,7 +68,7 @@ The text-only baseline (768-dim `all-mpnet-base-v2` embeddings → logistic regr
 | classifier | LogisticRegression (C=1.0, class_weight=balanced, max_iter=1000) |
 | text encoder | all-mpnet-base-v2 (768-dim) |
 | val macro-F1 | **1.0000** |
-| test macro-F1 | — (held out) |
+| test macro-F1 | **1.0000** |
 
 ### Route 2 — Text + graph statistics
 
@@ -78,7 +78,7 @@ The text-only baseline (768-dim `all-mpnet-base-v2` embeddings → logistic regr
 | feature dim | 798 (768 text + 30 graph stats) |
 | graph stats source | canonicalised graphs via `encoding/graph_stats.py` |
 | val macro-F1 | **1.0000** (Δ = +0.0000 vs baseline) |
-| test macro-F1 | — (held out) |
+| test macro-F1 | **1.0000** (Δ = +0.0000 vs baseline) |
 | permutation importance | All zero (model already perfect on val; cannot improve) |
 | top permutation features | N/A (ceiling effect) |
 
@@ -92,16 +92,22 @@ The text-only baseline (768-dim `all-mpnet-base-v2` embeddings → logistic regr
 | epochs run | 26 (early stopped) |
 | best epoch | 16 |
 | val macro-F1 | **0.9797** (Δ = -0.0203 vs baseline) |
-| test macro-F1 | — (held out) |
+| test macro-F1 | **0.9903** (Δ = -0.0097 vs baseline) |
 
 ### Route comparison
 
-| route | val macro-F1 | test macro-F1 | Δ vs baseline |
+| route | val macro-F1 | test macro-F1 | Δ vs baseline (test) |
 |---|---|---|---|
-| Baseline (text-only) | 1.0000 | — | — |
-| Route 2 (text + stats) | 1.0000 | — | +0.0000 |
-| Route 3 (text + GIN) | 0.9797 | — | -0.0203 |
+| Baseline (text-only) | 1.0000 | 1.0000 | — |
+| Route 2 (text + stats) | 1.0000 | 1.0000 | +0.0000 |
+| Route 3 (text + GIN) | 0.9797 | 0.9903 | -0.0097 |
 
+---
+
+
+### Test set evaluation — 2026-06-08T141331Z
+
+Test set evaluated once on 2026-06-08T141331Z. 188 transcripts (150 workforce / 19 creatives / 19 scientists).
 ---
 
 ## Phase 4 — Analysis
