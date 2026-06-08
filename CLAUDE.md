@@ -22,7 +22,7 @@ data/
 cache/                    # Encoded embeddings and trained weights (gitignored)
 extraction/
   prompts/                # Versioned extraction prompts — tracked in git
-  model_comparison/       # 10-transcript comparison experiment
+  model_comparison/       # 3-model comparison + validation report
   tagger.py
   extractor.py
   validator.py
@@ -58,10 +58,12 @@ tests/
 | `CHARTER.md` | Research questions, ontology, evaluation philosophy, scope |
 | `ENGINEERING.md` | Full technical spec — pipeline, encoding, classification, setup |
 | `.claude/context/graph-schema.md` | Graph JSON schema — data contract between extraction and encoding |
-| `.claude/context/extraction-log.md` | Prompt version history, model comparison results *(created during Phase 1)* |
-| `.claude/context/results-log.md` | Experiment results summary *(created during Phase 2)* |
+| `.claude/context/extraction-log.md` | Prompt version history, model comparison results |
+| `.claude/context/results-log.md` | Experiment results summary *(create during Phase 3)* |
 | **Extraction** | |
-| `extraction/prompts/v1.txt` | Active extraction prompt — version-controlled |
+| `extraction/prompts/v3.txt` | Active extraction prompt (two-shot: workforce + scientist examples) |
+| `extraction/prompts/v2.txt` | One-shot variant (workforce example only) |
+| `extraction/prompts/v1.txt` | Original prompt (no examples) — preserved, never deleted |
 | `extraction/validator.py` | Structural constraint checks — run after every extraction |
 | **Canonicalisation** | |
 | `canonicalisation/canonical_map.json` | Locked canonical vocabulary — source of truth for all node type counting |
@@ -74,7 +76,8 @@ tests/
 ## Architecture Principles
 
 - **Cache everything.** Extraction is API-expensive; text encoding is compute-expensive. Both run once and write to `cache/` or `data/graphs/`. Never re-extract or re-encode if cached output exists. Check cache before any API call.
-- **Prompts are versioned files.** Extraction prompts live in `extraction/prompts/` as numbered text files (`v1.txt`, `v2.txt`). Never hardcode prompt text in Python. The active version is noted in `.claude/context/extraction-log.md`.
+- **Multi-backend extractor.** The extractor supports both Anthropic and OpenAI-compatible backends via `--backend`. DeepSeek uses the OpenAI-compatible endpoint (`deepseek-chat`) with JSON mode (`response_format={"type": "json_object"}`) — NOT the Anthropic-compatible endpoint which forces thinking mode and causes JSON truncation. Agnes uses OpenAI-compatible endpoint. Claude uses Anthropic SDK.
+- **Prompts are versioned files.** Extraction prompts live in `extraction/prompts/` as numbered text files (`v1.txt`, `v2.txt`, `v3.txt`). Never hardcode prompt text in Python. Active version: `v3.txt` (two-shot examples: workforce + scientist). Older versions preserved, never deleted.
 - **Lock before modelling.** `canonical_map.json` is finalised and locked before any encoding or classification begins. No downstream code may modify it. If the vocabulary needs changing, re-run canonicalisation and re-encode from scratch.
 - **Scripts for pipeline, Marimo for analysis.** Long-running or stateful stages (extraction, encoding, classification) are Python scripts. Interactive inspection, visualisation, and hypothesis testing are Marimo notebooks.
 - **Graph schema is the contract.** The JSON schema in `.claude/context/graph-schema.md` is the stable interface between extraction and all downstream modules. Never change it without updating `extraction/validator.py` and all encoding modules.
@@ -100,8 +103,9 @@ tests/
 
 ```bash
 uv run python data/download.py                              # Download dataset (idempotent)
-uv run python extraction/extractor.py                       # Run extraction (skips cached)
-uv run python extraction/model_comparison/run_comparison.py # 3-model comparison experiment
+uv run python extraction/extractor.py                       # Run extraction with DeepSeek (default, skips cached)
+uv run python extraction/extractor.py --backend anthropic  # Use Claude instead
+uv run python extraction/model_comparison/run_comparison.py # 3-model comparison (Claude/DeepSeek/Agnes)
 uv run python canonicalisation/clusterer.py                 # Build canonical vocabulary
 uv run python canonicalisation/apply_canonical.py           # Apply to all graphs
 uv run python encoding/text_encoder.py                      # Encode transcripts (caches)
@@ -171,7 +175,7 @@ Every bead that dispatches parallel sub-agents must include an explicit **Merge 
 |---|---|
 | `.claude/context/graph-schema.md`, `extraction/validator.py` | `.claude/agents/schema-guardian/AGENT.md` |
 | `extraction/**` | `.claude/agents/extraction-specialist/AGENT.md` |
-| `canonicalisation/**` | `.claude/agents/canonicalisation-specialist/AGENT.md` *(placeholder)* |
+| `canonicalisation/**` | `.claude/agents/canonicalisation-specialist/AGENT.md` |
 | `encoding/**` | `.claude/agents/encoding-specialist/AGENT.md` *(placeholder)* |
 | `classification/**`, `notebooks/**` | `.claude/agents/analysis-specialist/AGENT.md` *(placeholder)* |
 
@@ -185,17 +189,32 @@ Every bead that dispatches parallel sub-agents must include an explicit **Merge 
 |---|---|
 | Research charter | `CHARTER.md` |
 | Engineering guide | `ENGINEERING.md` |
-| Graph JSON schema | `.claude/context/graph-schema.md` *(create on day 1)* |
-| Extraction log | `.claude/context/extraction-log.md` *(create during Phase 1)* |
+| Graph JSON schema | `.claude/context/graph-schema.md` |
+| Extraction log | `.claude/context/extraction-log.md` |
 | Governance principles | `.claude/context/codified-context-principles.md` |
-| Results log | `.claude/context/results-log.md` *(create during Phase 2)* |
-| Phase 1 post-mortem | `.claude/context/phase1-postmortem.md` *(create after Phase 1)* |
+| Results log | `.claude/context/results-log.md` *(create during Phase 3)* |
+| Phase 1 post-mortem | `.claude/context/phase1-postmortem.md` *(create during Phase 4)* |
 
 ---
 
 ## Current Phase
 
-**Phase 1 — Extraction.** Not started. Environment setup and dataset acquisition first. Then: speaker tagger, extraction prompt v1, manual review on 5 transcripts, model comparison experiment (Claude / DeepSeek / Agnes) on 10 fixed transcripts. Gate: extraction model selected and prompt locked before any scale extraction begins. See `CHARTER.md` §7 (week plan) and `ENGINEERING.md` §12 (quick-start checklist).
+**Phase 2 complete. Ready for Phase 3 — Encoding + Classification.**
+
+### Phase 1 ✅ — Extraction (complete)
+- 1,250 transcripts extracted with DeepSeek (deepseek-chat, OpenAI-compatible endpoint, JSON mode)
+- Prompt v3 active (two-shot examples: workforce + scientist)
+- 0 failures, 0.3% violation rate, mean 14.9 nodes / 13.6 edges per graph
+- Model comparison: Claude won initial round; DeepSeek works after switching to OpenAI endpoint + JSON mode; Agnes is viable but leaner
+
+### Phase 2 ✅ — Canonicalisation (complete)
+- 1,271 canonical labels from 15,753 free-text labels across 4 entity types
+- AgglomerativeClustering, cosine distance, threshold=0.35
+- 100% coverage: all 18,662 nodes mapped
+- `canonical_map.json` locked (2026-06-08)
+
+### Phase 3 🔲 — Encoding + Classification (next)
+See `PLAN.md` §Phase 3 for bead structure. Gate: all three routes evaluated on held-out test set.
 
 
 <!-- BEGIN BEADS INTEGRATION v:1 profile:minimal hash:7510c1e2 -->
