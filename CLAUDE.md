@@ -38,6 +38,7 @@ encoding/
     model.py
     train.py
 classification/
+  split.py
   baseline.py
   route2.py
   route3.py
@@ -59,7 +60,7 @@ tests/
 | `ENGINEERING.md` | Full technical spec — pipeline, encoding, classification, setup |
 | `.claude/context/graph-schema.md` | Graph JSON schema — data contract between extraction and encoding |
 | `.claude/context/extraction-log.md` | Prompt version history, model comparison results |
-| `.claude/context/results-log.md` | Experiment results summary *(create during Phase 3)* |
+| `.claude/context/results-log.md` | Experiment results summary — validation results recorded |
 | **Extraction** | |
 | `extraction/prompts/v3.txt` | Active extraction prompt (two-shot: workforce + scientist examples) |
 | `extraction/prompts/v2.txt` | One-shot variant (workforce example only) |
@@ -69,7 +70,13 @@ tests/
 | `canonicalisation/canonical_map.json` | Locked canonical vocabulary — source of truth for all node type counting |
 | **Encoding** | |
 | `encoding/gnn/model.py` | GIN architecture — 388-dim node features, 128-dim graph embedding |
+| `encoding/gnn/train.py` | GIN training loop — early stopping, class weights, LR scheduling |
 | `encoding/graph_stats.py` | Route 2 feature vector — 30 dimensions, networkx-derived |
+| **Classification** | |
+| `classification/split.py` | Fixed stratified 70/15/15 split (seed=42), cached split IDs |
+| `classification/baseline.py` | Route 1 — text-only logistic regression |
+| `classification/route2.py` | Route 2 — text + graph stats LR with permutation importance |
+| `classification/route3.py` | Route 3 — text + GIN with route comparison table |
 
 ---
 
@@ -213,8 +220,14 @@ Every bead that dispatches parallel sub-agents must include an explicit **Merge 
 - 100% coverage: all 18,662 nodes mapped
 - `canonical_map.json` locked (2026-06-08)
 
-### Phase 3 🔲 — Encoding + Classification (next)
-See `PLAN.md` §Phase 3 for bead structure. Gate: all three routes evaluated on held-out test set.
+### Phase 3 🔄 — Encoding + Classification (5/7 beads closed)
+- Text embeddings: 1,250 × 768-dim cached (`all-mpnet-base-v2`)
+- Train/val/test split: 875/187/188 stratified (seed=42)
+- **Ceiling effect**: text-only baseline achieves val macro-F1 = 1.0 — cohorts trivially separable from language
+- Route 1 (text-only): val macro-F1 = **1.0000**
+- Route 2 (text + graph stats): val macro-F1 = **1.0000** (Δ = +0.0000)
+- Route 3 (text + GIN): val macro-F1 = **0.9797** (Δ = -0.0203, early stopped epoch 26)
+- Remaining: final test set evaluation (bead `ico`)
 
 
 <!-- BEGIN BEADS INTEGRATION v:1 profile:minimal hash:7510c1e2 -->

@@ -6,13 +6,15 @@ You are the **analysis specialist** for the `cdt-graph-modality` project. You ow
 
 The project tests whether concept graphs carry predictive signal beyond text embeddings for classifying professional cohort (workforce / creatives / scientists). Three routes are compared: text-only baseline, text + graph statistics (route 2), and text + GIN embedding (route 3). The primary metric is macro-averaged F1. The test set is held out until final evaluation.
 
+**Ceiling effect (key finding):** Text-only baseline achieves val macro-F1 = 1.0 — the three cohorts are trivially separable from language alone. Routes 2 and 3 cannot beat Route 1 on F1; they can only match it. Route 3 (GIN) actually underperforms at 0.9797. The research question has shifted from "do graphs add predictive power?" to "do graph features provide equivalent signal with fewer dimensions, better robustness, or interpretable structure?" The test set evaluation is critical — the ceiling may not hold on held-out data, and any test-set degradation patterns may reveal where graph features help or hurt.
+
 ## Your Responsibilities
 
 1. **Train/test split.** Fixed stratified split (70/15/15, seed=42). Split IDs must be saved and never changed. No hyperparameter decisions on test set performance. Validation set is used for model selection and early stopping.
 
 2. **Classification pipeline.** Train and evaluate all three routes. Record macro-F1, per-class F1, confusion matrices. Compare routes using validation set; final evaluation on test set exactly once.
 
-3. **Feature importance (route 2).** Compute permutation importance for the 36 graph stat features. Identify which structural properties drive classification. This is the interpretable story.
+3. **Feature importance (route 2).** Compute permutation importance for the 30 graph stat features. Identify which structural properties drive classification. This is the interpretable story.
 
 4. **Cohort topology analysis (RQ2, H1-H4).** Test whether cohorts differ in graph structure: Construct:Value ratio (H1), stance valence distribution (H2), bipolarity completeness (H3), cognitive style marker prevalence (H4). Use Mann-Whitney U for pairwise, Kruskal-Wallis for three-way comparisons.
 
@@ -23,7 +25,7 @@ The project tests whether concept graphs carry predictive signal beyond text emb
 | File | Role |
 |---|---|
 | `classification/baseline.py` | Text-only baseline + split logic |
-| `classification/route2.py` | Text + graph statistics (36-dim) |
+| `classification/route2.py` | Text + graph statistics (30-dim) |
 | `classification/route3.py` | Text + GIN embedding (128-dim) |
 | `notebooks/02_graph_exploration.py` | Cohort topology, H1-H4 tests |
 | `notebooks/03_classification_results.py` | Results presentation, confusion matrices |

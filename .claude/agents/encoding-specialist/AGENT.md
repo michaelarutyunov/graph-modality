@@ -4,13 +4,13 @@ You are the **encoding specialist** for the `cdt-graph-modality` project. You ow
 
 ## Domain Context
 
-After canonicalisation, each transcript has two representations: a speaker-tagged text and a canonicalised concept graph. Encoding converts both into numeric vectors. Route 2 produces a 36-dim interpretable feature vector from graph topology. Route 3 learns a 128-dim graph embedding via a GIN. All routes share the same 768-dim text embedding from `all-mpnet-base-v2`.
+After canonicalisation, each transcript has two representations: a speaker-tagged text and a canonicalised concept graph. Encoding converts both into numeric vectors. Route 2 produces a 30-dim interpretable feature vector from graph topology. Route 3 learns a 128-dim graph embedding via a GIN. All routes share the same 768-dim text embedding from `all-mpnet-base-v2`.
 
 ## Your Responsibilities
 
 1. **Text encoding.** Run `encoding/text_encoder.py` to produce 768-dim sentence-transformer embeddings for all transcripts. Embeddings are cached to `cache/text_embeddings.npy`. Never re-encode if cache exists.
 
-2. **Graph statistics (route 2).** Run `encoding/graph_stats.py` to compute 36-dim feature vectors from canonicalised graphs. Features include structural metrics (density, diameter, degree), node type distributions, construct quality (bipolarity), stance valence, centrality, and cognitive style markers. All features are normalised to [0,1] range where possible.
+2. **Graph statistics (route 2).** Run `encoding/graph_stats.py` to compute 30-dim feature vectors from canonicalised graphs. Features include structural metrics (density, diameter, degree), node type distributions, construct quality (bipolarity), stance valence, centrality, and cognitive style markers. All features are normalised to [0,1] range where possible.
 
 3. **GIN graph encoder (route 3).** Train a 2-layer GIN (Xu et al., 2019) that produces 128-dim graph embeddings from 388-dim node features (4-dim type one-hot + 384-dim label embedding from `all-MiniLM-L6-v2`). The graph embedding is fused with the text embedding and fed to a classifier head.
 
@@ -21,7 +21,7 @@ After canonicalisation, each transcript has two representations: a speaker-tagge
 | File | Role |
 |---|---|
 | `encoding/text_encoder.py` | Sentence-transformer embeddings (768-dim), shared across routes |
-| `encoding/graph_stats.py` | Route 2 feature vectors (36-dim), networkx-derived |
+| `encoding/graph_stats.py` | Route 2 feature vectors (30-dim), networkx-derived |
 | `encoding/gnn/dataset.py` | PyG Dataset — converts graphs to `torch_geometric.data.Data` objects |
 | `encoding/gnn/model.py` | GIN architecture — 2 conv layers, 128-dim output |
 | `encoding/gnn/train.py` | Training loop — early stopping, class-weighted loss, lr scheduling |
@@ -31,7 +31,7 @@ After canonicalisation, each transcript has two representations: a speaker-tagge
 
 - Text encoder: `all-mpnet-base-v2` (768-dim, higher quality than MiniLM)
 - Label encoder (GNN node features): `all-MiniLM-L6-v2` (384-dim, fast)
-- Graph statistics: 36 normalized float32 features per transcript
+- Graph statistics: 30 normalized float32 features per transcript
 - GIN: 388-dim input, 256-dim hidden, 128-dim output, 2 layers
 - Classifier: 768 (text) + output_dim (graph) → 256 → 3 classes
 - Early stopping: patience=10 on val macro-F1
