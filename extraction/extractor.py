@@ -1,14 +1,14 @@
 """Extract concept graphs from speaker-tagged transcripts via LLM API.
 
-Loads the versioned extraction prompt, calls the Anthropic API, caches
-results, and runs structural validation.  Designed for batch operation
-with idempotent cache-first behaviour.
+Supports Anthropic and OpenAI-compatible backends.  Caches results and
+runs structural validation.  Cache-first: never re-extracts if output exists.
 
 Usage:
-    uv run python extraction/extractor.py                       # all uncached
-    uv run python extraction/extractor.py --tid work_0000       # single transcript
-    uv run python extraction/extractor.py --split workforce     # one split
-    uv run python extraction/extractor.py --limit 5             # first 5 uncached
+    uv run python extraction/extractor.py                          # all uncached (DeepSeek)
+    uv run python extraction/extractor.py --backend anthropic      # use Claude
+    uv run python extraction/extractor.py --tid work_0000          # single transcript
+    uv run python extraction/extractor.py --split workforce        # one split
+    uv run python extraction/extractor.py --limit 100              # first N uncached
 """
 
 from __future__ import annotations
@@ -18,6 +18,8 @@ import json
 import os
 import sys
 import time
+import urllib.error
+import urllib.request
 from pathlib import Path
 
 from anthropic import Anthropic
@@ -34,46 +36,122 @@ TAGGED_DIR = Path("data/tagged")
 GRAPH_DIR = Path("data/graphs/free_text")
 FAILED_LOG = Path("extraction/failed.txt")
 
-# ── API config ───────────────────────────────────────────────────────
+# ── backends ─────────────────────────────────────────────────────────
 
-DEFAULT_MODEL = "claude-sonnet-4-6"
-DEFAULT_BASE_URL = "https://api.anthropic.com"
+BACKENDS = {
+    "deepseek": {
+        "type": "openai",
+        "model": "deepseek-chat",
+        "api_key_env": "ANTHROPIC_AUTH_TOKEN",
+        "base_url": "https://api.deepseek.com/v1/chat/completions",
+        "max_tokens": 8192,
+        "json_mode": True,
+    },
+    "anthropic": {
+        "type": "anthropic",
+        "model": "claude-sonnet-4-6",
+        "api_key_env": "ANTHROPIC_API_KEY",
+        "base_url": "https://api.anthropic.com",
+        "max_tokens": 4096,
+    },
+}
+
 MAX_RETRIES = 3
-RETRY_DELAYS = [2, 8, 32]  # seconds — exponential-ish
-API_TIMEOUT = 120  # seconds
+RETRY_DELAYS = [2, 8, 32]
+API_TIMEOUT = 180
 
 
 # ── helpers ──────────────────────────────────────────────────────────
 
 
-def _load_prompt(version: str = "v1") -> str:
-    """Load the extraction prompt template from its versioned file."""
+def _load_prompt(version: str = "v3") -> str:
     path = PROMPT_DIR / f"{version}.txt"
     if not path.exists():
         raise FileNotFoundError(f"prompt file not found: {path}")
     return path.read_text(encoding="utf-8")
 
 
-def _build_prompt(prompt_template: str, formatted_transcript: str) -> str:
-    """Insert the formatted transcript into the prompt template."""
-    return prompt_template.replace("{transcript}", formatted_transcript)
-
-
-def _extract_json_from_response(text: str) -> str:
-    """Extract a JSON object from an LLM response that may include markdown fences."""
+def _strip_markdown_fences(text: str) -> str:
     text = text.strip()
-
-    # Strip ```json … ``` fences if present
     if text.startswith("```"):
-        # find the first newline after the opening fence
         nl = text.find("\n")
         if nl != -1:
             text = text[nl + 1 :]
-        # strip closing fence
         if text.rstrip().endswith("```"):
             text = text.rstrip()[: text.rstrip().rfind("```")]
-
     return text.strip()
+
+
+def _log_failure(transcript_id: str, reason: str) -> None:
+    FAILED_LOG.parent.mkdir(parents=True, exist_ok=True)
+    with open(FAILED_LOG, "a", encoding="utf-8") as f:
+        f.write(f"{transcript_id}\t{reason}\n")
+
+
+# ── API callers ──────────────────────────────────────────────────────
+
+
+def _call_anthropic(prompt: str, client: Anthropic, model: str, max_tokens: int) -> str | None:
+    for attempt in range(MAX_RETRIES):
+        try:
+            response = client.messages.create(
+                model=model,
+                max_tokens=max_tokens,
+                messages=[{"role": "user", "content": prompt}],
+                timeout=API_TIMEOUT,
+            )
+            text_blocks = [b for b in response.content if b.type == "text"]
+            if not text_blocks:
+                raise ValueError(f"no text block (blocks: {[b.type for b in response.content]})")
+            return text_blocks[0].text
+        except Exception:
+            if attempt == MAX_RETRIES - 1:
+                return None
+            time.sleep(RETRY_DELAYS[attempt])
+    return None
+
+
+def _call_openai(
+    prompt: str,
+    api_key: str,
+    base_url: str,
+    model: str,
+    max_tokens: int,
+    json_mode: bool = False,
+) -> str | None:
+    messages = [{"role": "user", "content": prompt}]
+    if json_mode:
+        messages.insert(0, {"role": "system", "content": "You must output valid JSON."})
+
+    payload: dict = {
+        "model": model,
+        "messages": messages,
+        "max_tokens": max_tokens,
+        "temperature": 0.0,
+    }
+    if json_mode:
+        payload["response_format"] = {"type": "json_object"}
+
+    body = json.dumps(payload).encode("utf-8")
+
+    for attempt in range(MAX_RETRIES):
+        try:
+            req = urllib.request.Request(
+                base_url,
+                data=body,
+                headers={
+                    "Authorization": f"Bearer {api_key}",
+                    "Content-Type": "application/json",
+                },
+            )
+            with urllib.request.urlopen(req, timeout=API_TIMEOUT) as resp:
+                data = json.loads(resp.read().decode("utf-8"))
+            return data["choices"][0]["message"]["content"]
+        except Exception:
+            if attempt == MAX_RETRIES - 1:
+                return None
+            time.sleep(RETRY_DELAYS[attempt])
+    return None
 
 
 # ── core extraction ──────────────────────────────────────────────────
@@ -82,101 +160,72 @@ def _extract_json_from_response(text: str) -> str:
 def extract_one(
     transcript_id: str,
     formatted_transcript: str,
-    client: Anthropic,
-    model: str = DEFAULT_MODEL,
-    prompt_version: str = "v1",
+    backend: dict,
+    prompt_version: str = "v3",
     split: str = "unknown",
+    anthropic_client: Anthropic | None = None,
 ) -> dict | None:
     """Extract a concept graph for a single transcript.
 
     Checks cache first.  Retries on API failure with backoff.
-    Returns the parsed graph dict, or None on failure.
     """
     cache_path = GRAPH_DIR / f"{transcript_id}.json"
-
-    # ── cache hit ──────────────────────────────────────────────────
     if cache_path.exists():
         return json.loads(cache_path.read_text(encoding="utf-8"))
 
-    # ── build prompt ───────────────────────────────────────────────
     template = _load_prompt(prompt_version)
-    prompt = _build_prompt(template, formatted_transcript)
+    prompt = template.replace("{transcript}", formatted_transcript)
 
-    # ── call API with retry ────────────────────────────────────────
-    raw_text: str | None = None
-    last_error: str = ""
-    for attempt in range(MAX_RETRIES):
-        try:
-            response = client.messages.create(
-                model=model,
-                max_tokens=4096,
-                messages=[{"role": "user", "content": prompt}],
-                timeout=API_TIMEOUT,
-            )
-            raw_text = response.content[0].text
-            break
-        except Exception as exc:
-            last_error = str(exc)
-            if attempt < MAX_RETRIES - 1:
-                delay = RETRY_DELAYS[attempt]
-                print(
-                    f"  [{transcript_id}] attempt {attempt + 1} failed "
-                    f"({last_error[:80]}), retrying in {delay}s..."
-                )
-                time.sleep(delay)
-            else:
-                _log_failure(transcript_id, last_error)
-                return None
+    # Call API
+    if backend["type"] == "anthropic":
+        raw_text = _call_anthropic(
+            prompt, anthropic_client, backend["model"], backend["max_tokens"]
+        )
+    else:
+        raw_text = _call_openai(
+            prompt,
+            api_key=os.environ[backend["api_key_env"]],
+            base_url=backend["base_url"],
+            model=backend["model"],
+            max_tokens=backend["max_tokens"],
+            json_mode=backend.get("json_mode", False),
+        )
 
     if raw_text is None:
-        _log_failure(transcript_id, "all retries exhausted, no response")
+        _log_failure(transcript_id, "API call failed after retries")
         return None
 
-    # ── parse ──────────────────────────────────────────────────────
+    # Parse
     try:
-        json_text = _extract_json_from_response(raw_text)
+        json_text = _strip_markdown_fences(raw_text)
         graph = json.loads(json_text)
     except json.JSONDecodeError as exc:
         _log_failure(transcript_id, f"JSON decode error: {exc}")
         return None
 
-    # ── attach metadata ────────────────────────────────────────────
-    # Always use the true transcript_id from the dataset, never the
-    # LLM's guess.  The LLM may hallucinate an ID in its JSON output.
+    # Metadata — always use the true transcript_id
     graph["transcript_id"] = transcript_id
     graph["split"] = split
-    graph["extraction_model"] = model
+    graph["extraction_model"] = backend["model"]
     graph["prompt_version"] = prompt_version
 
-    # ── validate ───────────────────────────────────────────────────
+    # Validate
     violations = validate_graph(graph)
     graph["validation_violations"] = violations
     if violations:
         for v in violations:
             print(f"  [{transcript_id}] VIOLATION: {v}")
 
-    # ── cache ──────────────────────────────────────────────────────
+    # Cache
     GRAPH_DIR.mkdir(parents=True, exist_ok=True)
     cache_path.write_text(json.dumps(graph, indent=2, ensure_ascii=False), encoding="utf-8")
-
     return graph
 
 
-# ── failure logging ──────────────────────────────────────────────────
-
-
-def _log_failure(transcript_id: str, reason: str) -> None:
-    """Append a failed extraction to the failure log."""
-    FAILED_LOG.parent.mkdir(parents=True, exist_ok=True)
-    with open(FAILED_LOG, "a", encoding="utf-8") as f:
-        f.write(f"{transcript_id}\t{reason}\n")
-
-
-# ── batch extraction ─────────────────────────────────────────────────
+# ── batch helpers ────────────────────────────────────────────────────
 
 
 def load_tagged_transcripts() -> dict[str, dict]:
-    """Load all tagged transcripts from JSONL files into a dict keyed by ID."""
     records: dict[str, dict] = {}
     for path in sorted(TAGGED_DIR.glob("*.jsonl")):
         for line in path.read_text(encoding="utf-8").strip().split("\n"):
@@ -190,14 +239,10 @@ def load_tagged_transcripts() -> dict[str, dict]:
 def extract_batch(
     transcript_ids: list[str],
     tagged: dict[str, dict],
-    client: Anthropic,
-    model: str = DEFAULT_MODEL,
-    prompt_version: str = "v1",
+    backend: dict,
+    prompt_version: str = "v3",
+    anthropic_client: Anthropic | None = None,
 ) -> tuple[int, int]:
-    """Extract graphs for a list of transcript IDs.
-
-    Returns (success_count, failure_count).
-    """
     success = 0
     failure = 0
 
@@ -216,10 +261,10 @@ def extract_batch(
         result = extract_one(
             transcript_id=tid,
             formatted_transcript=rec["formatted"],
-            client=client,
-            model=model,
+            backend=backend,
             prompt_version=prompt_version,
             split=rec["split"],
+            anthropic_client=anthropic_client,
         )
 
         if result is None:
@@ -251,39 +296,49 @@ def main() -> None:
     )
     parser.add_argument("--limit", type=int, help="Process at most N uncached transcripts")
     parser.add_argument(
-        "--model", type=str, default=DEFAULT_MODEL, help=f"Model to use (default: {DEFAULT_MODEL})"
+        "--backend",
+        type=str,
+        default="deepseek",
+        choices=["deepseek", "anthropic"],
+        help="Backend to use (default: deepseek)",
     )
     parser.add_argument(
-        "--prompt-version", type=str, default="v1", help="Prompt version to use (default: v1)"
+        "--prompt-version",
+        type=str,
+        default="v3",
+        help="Prompt version (default: v3)",
     )
     parser.add_argument("--force", action="store_true", help="Re-extract even if cache exists")
     args = parser.parse_args()
 
-    api_key = os.environ.get("ANTHROPIC_API_KEY")
+    backend = BACKENDS[args.backend]
+    api_key = os.environ.get(backend["api_key_env"])
     if not api_key:
-        print("ERROR: ANTHROPIC_API_KEY not set in environment or .env")
+        print(f"ERROR: {backend['api_key_env']} not set in environment or .env")
         sys.exit(1)
 
-    # Explicit base_url bypasses ANTHROPIC_BASE_URL env var which may
-    # point to a third-party proxy (e.g. DeepSeek) in global config.
-    client = Anthropic(api_key=api_key, base_url=DEFAULT_BASE_URL)
+    # Create Anthropic client only if needed
+    anthropic_client = None
+    if backend["type"] == "anthropic":
+        anthropic_client = Anthropic(api_key=api_key, base_url=backend["base_url"])
+
     tagged = load_tagged_transcripts()
 
+    # ── single transcript mode ─────────────────────────────────────
     if args.tid:
         if args.tid not in tagged:
             print(f"ERROR: transcript '{args.tid}' not found in tagged data")
             sys.exit(1)
         rec = tagged[args.tid]
         if args.force:
-            cache_path = GRAPH_DIR / f"{args.tid}.json"
-            cache_path.unlink(missing_ok=True)
+            (GRAPH_DIR / f"{args.tid}.json").unlink(missing_ok=True)
         result = extract_one(
             transcript_id=args.tid,
             formatted_transcript=rec["formatted"],
-            client=client,
-            model=args.model,
+            backend=backend,
             prompt_version=args.prompt_version,
             split=rec["split"],
+            anthropic_client=anthropic_client,
         )
         if result is None:
             print("Extraction failed.")
@@ -294,14 +349,13 @@ def main() -> None:
         )
         return
 
-    # Build the work list
+    # ── batch mode ─────────────────────────────────────────────────
     ids: list[str] = []
     if args.split:
         ids = [tid for tid, rec in tagged.items() if rec["split"] == args.split]
     else:
         ids = sorted(tagged.keys())
 
-    # Skip cached unless --force
     if not args.force:
         uncached = [tid for tid in ids if not (GRAPH_DIR / f"{tid}.json").exists()]
         skipped = len(ids) - len(uncached)
@@ -317,14 +371,15 @@ def main() -> None:
         return
 
     print(
-        f"Processing {len(ids)} transcripts with model={args.model}, prompt={args.prompt_version}"
+        f"Processing {len(ids)} transcripts with "
+        f"backend={args.backend} model={backend['model']} prompt={args.prompt_version}"
     )
     success, failure = extract_batch(
         transcript_ids=ids,
         tagged=tagged,
-        client=client,
-        model=args.model,
+        backend=backend,
         prompt_version=args.prompt_version,
+        anthropic_client=anthropic_client,
     )
     print(f"\nDone. {success} succeeded, {failure} failed.")
 

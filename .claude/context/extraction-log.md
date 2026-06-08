@@ -76,9 +76,20 @@ Reviewed 6 graphs across 3 splits (2 workforce, 2 creatives, 1 scientist, plus w
 
 ## scale extraction stats
 
-> *To be populated after scale extraction (`graph-modality-5jq`).*
+**Completed 2026-06-08.** DeepSeek (deepseek-chat) via OpenAI-compatible endpoint with JSON mode. Prompt v3 (two-shot examples).
 
 | metric | value |
+|---|---|
+| transcripts processed | 1,250 |
+| successful extractions | 1,250 (100%) |
+| failed extractions | 0 |
+| extraction model | deepseek-chat |
+| prompt version | v3 |
+| mean nodes per graph | 14.9 |
+| mean edges per graph | 13.6 |
+| graphs with violations | 4 (0.3%) |
+| failure log | `extraction/failed.txt` is empty (0 entries) |
+| backend | OpenAI-compatible, `response_format={"type": "json_object"}`, `max_tokens=8192` |
 |---|---|
 | transcripts processed | — |
 | successful extractions | — |
