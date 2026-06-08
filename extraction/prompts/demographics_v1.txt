@@ -13,12 +13,25 @@ Classify the interviewee's career stage based on explicit experience markers:
 
 ## Attribute 2: ai_adoption
 
-Classify the interviewee's level of AI adoption based on their described usage patterns:
+Classify the interviewee's depth of AI integration into their professional work. The key dimension is **how deeply AI is woven into their workflow**, not how many different tasks they use it for. Someone who uses AI for 10 different things but always as simple Q&A is less integrated than someone who built one custom tool that reshaped their entire process.
 
-- **novice** — Rarely or never uses AI, just trying it out for the first time, skeptical or hesitant, uses only basic features if at all. Evidence examples: "I've only used it a couple times", "I don't really trust AI tools", "I tried ChatGPT once but didn't see the point".
-- **experienced** — Regular AI user, has integrated AI into their workflow, knows what it's good and bad at, has developed opinions or preferences about AI tools. Evidence examples: "I use it daily for drafting emails and reports", "Claude helps me brainstorm but I always review the output", "I've figured out what prompts work best for my use case".
-- **power_user** — Custom workflows or pipelines, API-level or programmatic usage, fine-tuning or system prompting, teaches others to use AI, pushing the boundaries of what AI can do in their domain. Evidence examples: "I built a custom GPT that integrates with our CMS", "I use the API to batch-process hundreds of documents", "I've developed a prompting methodology I share with colleagues".
-- **uncertain** — Ambiguous or contradictory evidence. The person might mention AI in passing without enough detail to determine their adoption level. Use this liberally when the transcript doesn't contain enough to decide.
+- **novice** — No real integration. Rarely or never uses AI, just trying it out for the first time, skeptical or hesitant. AI is not part of how they work. Evidence examples: "I've only used it a couple times", "I don't really trust AI tools", "I tried ChatGPT once but didn't see the point".
+- **tool_user** — Uses AI as a convenient tool for specific, bounded tasks. It saves time but doesn't fundamentally change how they work. They reach for AI when they need a particular thing done (format data, draft an email, generate ideas) but could do their job without it. Evidence examples: "AI helps me clean data faster", "I use it to generate test cases", "sometimes I ask it for design ideas", "I use AI for writing emails". The common thread: AI is a time-saver, not a workflow transformer.
+- **integrated** — AI is woven into their daily professional process. They have developed methods, prompting strategies, or custom configurations. They know what AI is good and bad at for their specific domain, and may have strong opinions about different tools or approaches. They would notice if AI were taken away. Evidence examples: "I have a daily ChatGPT conversation where I log everything I did", "I created a Custom GPT trained on our company guidelines", "I've developed a specific prompting workflow that I refine over time", "I use AI iteratively — giving it output, reviewing, and asking for revisions until it meets my standards". The common thread: AI has changed how they work, not just made existing tasks faster.
+- **power_user** — Pushing the boundaries of what AI can do in their domain. Builds custom integrations, uses APIs programmatically, fine-tunes or system-prompts models, teaches or advocates for AI adoption among colleagues, or has developed novel AI-assisted workflows that go beyond what the tools were designed for. Evidence examples: "I built a custom pipeline that uses the API to batch-process documents", "I'm the AI pioneer in my team — I convinced my colleagues to adopt it", "I wrote a script that chains multiple model calls together", "I've integrated AI directly into our production workflow".
+- **uncertain** — Not enough detail about AI usage to determine integration depth. The person might mention AI in passing without describing how or how often they use it. Use this liberally when evidence is thin.
+
+### Distinguishing tool_user from integrated
+
+This is the most important boundary. Look for these signals:
+
+| Signal | tool_user | integrated |
+|---|---|---|
+| Would they notice if AI disappeared? | Minor inconvenience | Significant disruption to workflow |
+| How do they interact? | One-shot prompts | Iterative back-and-forth, refinement |
+| Have they customized anything? | Uses default interface | Custom GPTs, saved prompts, personal methods |
+| Do they evaluate AI output? | "I check if it looks right" | "I've learned which tasks it's reliable for and which need human judgment" |
+| Agency | AI does tasks for them | They direct AI as part of a larger process they control |
 
 ## Important rules
 
@@ -40,7 +53,7 @@ Respond with a single JSON object. No other text. The JSON must follow this exac
     "quotes": ["quote 1", "quote 2"]
   },
   "ai_adoption": {
-    "label": "novice|experienced|power_user|uncertain",
+    "label": "novice|tool_user|integrated|power_user|uncertain",
     "reasoning": "Step-by-step reasoning. If not uncertain, include at least one direct quote from [Human] turns.",
     "quotes": ["quote 1", "quote 2"]
   }

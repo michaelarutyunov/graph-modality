@@ -3,19 +3,20 @@
     "transcript_id": "work_0025",
     "career_stage": {
       "label": "mid",
-      "reasoning": "The interviewee describes themselves as working as a 'QA tester' but discusses the role of 'Test Manager/Software Test Engineer' and 'Test Associates' in a way that suggests they are part of the team structure, likely in a role that bridges execution and management or is senior enough to understand the workflow deeply. They mention 'we' frequently, indicating team membership. They do not describe themselves as a junior learning the ropes, nor do they claim to manage a large team or have 15+ years of experience. They speak with established knowledge of the domain (JIRA, test cases, bug numbers) and workflow integration, fitting the 'mid' career stage of an established professional.",
+      "reasoning": "The interviewee describes themselves as working as a 'QA tester' and discusses the role of 'Test Manager/Software Test Engineer' in a way that suggests they are an established practitioner within that hierarchy. They analyze the division of labor between Test Managers and Test Associates, indicating a level of professional experience and understanding of team dynamics that goes beyond entry-level. They do not mention being new to the field, nor do they claim senior leadership or 15+ years of experience. They describe regular work responsibilities involving test case generation and reporting.",
       "quotes": [
         "I work as a QA tester for software applications",
         "Because test creation, management, and reporting is primarily the role of a Test Manager/Software Test Engineer, it feels that AI is making their job easier whereas the Test Associates... still do all the manual work."
       ]
     },
     "ai_adoption": {
-      "label": "experienced",
-      "reasoning": "The interviewee describes a regular, integrated use of AI in their professional workflow. They mention specific tools (3rd party AI tool into JIRA as an add-on), specific tasks (generating test cases, compiling results, generating reports), and a clear understanding of the division of labor (AI handles heavy lifting/data, humans handle visual/navigational testing and planning). They have developed opinions on the limitations of AI (needs predetermined workflow, cannot test freely without guidance) and the impact on team dynamics. This goes beyond novice usage but does not reach power_user status as there is no mention of custom pipelines, API-level coding, or teaching others to build these systems.",
+      "label": "tool_user",
+      "reasoning": "The interviewee uses AI as a specific tool to handle bounded tasks like generating test cases and compiling reports. They describe it as 'heavy lifting' that makes processes 'easier' and 'quicker', but explicitly state that human planning and execution remain primary. They do not mention building custom integrations, using APIs, or developing novel workflows beyond using a 3rd party add-on. They view AI as a convenience that saves time but does not fundamentally transform their professional identity or core skills, noting that 'Test Managers might get a little rusty... but... that appears to remain intact.'",
       "quotes": [
-        "You can integrate a 3rd party AI tool into JIRA as an add-on.",
+        "AI can be useful in generating test cases... With the help of AI this process can be done quicker",
         "AI primarily handles test management and reporting where it can handle large volumes of data at a time.",
-        "The contents of the tests and reports are determined by us, AI just does the heavy lifting by putting it all together."
+        "AI is mostly used as a tool to make certain processes easier",
+        "AI just does the heavy lifting by putting it all together."
       ]
     },
     "_model": "Agnes"
@@ -24,16 +25,16 @@
     "transcript_id": "work_0114",
     "career_stage": {
       "label": "uncertain",
-      "reasoning": "The interviewee describes their work (designing jewellery, writing emails) and mentions that 'most people in my field' use AI for administrative tasks. However, they do not provide any explicit markers regarding their years of experience, seniority level, or whether they are junior, mid-level, or senior. There is no evidence to classify them as early, mid, or late career.",
+      "reasoning": "The interviewee describes their work (designing jewellery, writing emails) but provides no explicit markers regarding their years of experience, seniority level, or career timeline. They do not mention being junior, senior, managing a team, or having worked in the field for a specific duration. Therefore, the career stage cannot be determined from the provided text.",
       "quotes": []
     },
     "ai_adoption": {
-      "label": "experienced",
-      "reasoning": "The interviewee uses AI regularly for specific professional tasks: generating design inspiration and drafting administrative emails. They describe a nuanced workflow where they iterate with AI for creative tasks ('go back and forth') but use it independently for routine tasks ('let it handle things independently'). They also have specific opinions on AI's limitations ('struggling to use all the ideas') and future plans for integration ('see how it could help me answering customers emails'). This indicates regular, integrated usage with developed preferences, fitting the 'experienced' category rather than novice (who would be hesitant or rare) or power user (who would show custom pipelines or API usage).",
+      "label": "tool_user",
+      "reasoning": "The interviewee uses AI for specific, bounded tasks such as generating design inspiration and drafting emails. They describe using it as a time-saver or convenience ('helping me write emails', 'give me design ideas') but note that they handle complex customer queries themselves and that physical making cannot be replaced. They do not describe custom configurations, API usage, or deep integration into a core workflow that would define them as integrated or power users. Their usage is functional and task-specific.",
       "quotes": [
         "I use AI for giving me inspiration when designing new jewellery and helping me write emails/automated messages to customers",
-        "I tend to go back and forth when thinking of creative ideas with AI. For writing emails, I give it a complete request and let it handle things independently.",
-        "A time I was frustrated was when I was asking AI to visually design a logo for me using concepts I had given it and it was struggling to use all the ideas I had listed."
+        "I usually give AI some topics related around jewellery and ask it to give me design ideas",
+        "For writing emails, I give it a complete request and let it handle things independently."
       ]
     },
     "_model": "Agnes"
@@ -42,19 +43,21 @@
     "transcript_id": "work_0142",
     "career_stage": {
       "label": "mid",
-      "reasoning": "The interviewee describes themselves as a 'planning engineer' who performs regular, established tasks such as data cleaning, email checking, and generating weekly plans. They mention having 'underlying skills' and making conscious decisions about when to use AI versus manual work, indicating experience. They are not described as a junior learning the ropes, nor do they hold a senior leadership role (they mention convincing peers but not managing them). The phrase 'I've been doing this' is implied by the depth of their workflow knowledge, but specifically, they identify as a peer to colleagues in their 50s, suggesting they are an established professional in the middle of their career.",
+      "reasoning": "The interviewee identifies as a 'planning engineer' and describes performing regular, substantive professional tasks such as cross-referencing critical paths, making decisions on job assignments, and conducting quality assurance checks. They mention mentoring or convincing older colleagues ('guys in their 50s') to adopt AI, which suggests they are an established peer rather than a junior learner or a senior executive managing a large team. The role implies a level of experience and autonomy consistent with a mid-career professional.",
       "quotes": [
-        "In my role as a planning engineer within the Aviation industry, Ai has become a brilliant support tool for me and my team.",
-        "I don't want to lose my underlying skills as a planning engineer."
+        "In my role as a planning engineer within the Aviation industry...",
+        "The list of numbers has already been chosen by me through cross referring with the critical path and making my own decision on whether a job number that could be worked should be.",
+        "There are a couple of guys that are in their 50s and it has taken some convincing for me to use it and they are now even using it!"
       ]
     },
     "ai_adoption": {
-      "label": "experienced",
-      "reasoning": "The interviewee uses AI regularly for specific, recurring tasks (data cleaning, email checking, plan generation). They have developed specific workflows, such as providing 'controlled datasets' to get better results, and understand the iterative nature of prompting for open-ended tasks ('hash it out together'). They are the 'AI Pioneer' in their team, actively teaching and convincing others to use it, but they do not build custom pipelines, use APIs, or fine-tune models, which keeps them from being a 'power_user'.",
+      "label": "integrated",
+      "reasoning": "The interviewee has woven AI into their daily workflow for specific, recurring tasks (data cleaning, email checking, plan generation). They have developed specific methods, such as providing 'controlled datasets' to the AI to ensure accuracy, and they engage in iterative refinement ('hash it out together') for open-ended tasks. They explicitly state that AI has 'changed the way I work for the better' and that they would notice its absence ('resource that without the context would mean nothing'). They also act as an internal advocate ('AI Pioneer'), teaching colleagues, which indicates a deep, personal integration beyond simple one-off tool usage.",
       "quotes": [
         "I often use Ai to clean and format data often saving me 30 mins +.",
         "I use AI to find the full job number from these small bits of information, by providing it with the necessary resource.",
-        "To be honest I keep it to the very necessary, and it will often be a resource that without the context would mean nothing. For example, if I need to find the necessary job number from a description I provide controlled datasets...",
+        "I provide controlled datasets, which can then be used to find number that I need...",
+        "Overall, its changed the way I work for the better.",
         "I think I am the AI Pioneer within the team... they are now even using it!"
       ]
     },
@@ -64,18 +67,17 @@
     "transcript_id": "work_0228",
     "career_stage": {
       "label": "mid",
-      "reasoning": "The interviewee describes themselves as a regular contributor who handles the 'majority of editing' and has established workflows for generating titles and H2s. They mention being 'required to use' specific tools as part of their job and participating in staff meetings, indicating an established role rather than a junior or entry-level position. However, they do not mention managing a team or holding a senior leadership title, fitting the 'mid' stage of an established professional.",
+      "reasoning": "The interviewee describes themselves as a professional who handles the 'majority of editing' and creates content strategies (titles, H2s) for articles. They mention working collaboratively and having access to employer-provided tools and subscriptions, indicating an established role. They are not described as a junior learner or a senior manager/director, but rather as an individual contributor with regular responsibilities in content creation and optimization.",
       "quotes": [
         "I generally handle the majority of editing myself unless the text is really clunky and hard to parse.",
-        "I'm required to use this as part of my job.",
-        "We had an AI staff meeting and staff offered suggestions on ways we should and shouldn't use it."
+        "I work collaboratively, but don't always follow up if I'm satisfied with the results on the first try."
       ]
     },
     "ai_adoption": {
-      "label": "power_user",
-      "reasoning": "The interviewee demonstrates advanced usage patterns beyond simple prompting. They explicitly state they 'created' a Custom GPT to handle specific editing constraints because the base model was insufficient. They also describe a workflow of feeding specific employer guidance into new projects to tailor outputs, indicating a sophisticated understanding of how to configure AI tools for professional needs.",
+      "label": "integrated",
+      "reasoning": "The interviewee has deeply integrated AI into their workflow by creating custom configurations (Custom GPTs) to handle specific constraints that default models fail to meet. They engage in iterative refinement, providing detailed context (employer guidance) and adjusting prompts based on previous outputs. They have developed a specific workflow for title generation and editing that involves feeding the model specific instructions and evaluating its output against SEO standards, indicating that AI is a central part of their daily process rather than just a casual tool.",
       "quotes": [
-        "this is via a Custom GPT that I created because I find that ChatGPT on its own edits too heavily",
+        "Sometimes I ask it to do light editing of text, but this is via a Custom GPT that I created because I find that ChatGPT on its own edits too heavily and has a tendency to add text, which I don't want it to do.",
         "I've fed ChatGPT all of my employer's guidance on titling articles.",
         "I selected New Project on ChatGPT and copy-pasted my employer's instructions along with additional guidance on what I wanted it to do"
       ]
@@ -86,20 +88,19 @@
     "transcript_id": "work_0250",
     "career_stage": {
       "label": "early",
-      "reasoning": "The interviewee explicitly identifies their current role as an internship, stating 'in one of my internship' and 'i was working with setting up local aws lambda and dynamodb for my internship'. Internships are typically held by individuals early in their careers, often students or recent graduates, fitting the 'early' classification.",
+      "reasoning": "The interviewee explicitly identifies their current role as an internship, stating 'in one of my internship' and 'working with setting up local aws lambda and dynamodb for my internship'. They describe themselves as learning the ropes, mentioning they are 'confused of' setting up local environments and rely on AI to help them understand and implement tasks they are still mastering. This indicates they are at the very beginning of their professional career.",
       "quotes": [
         "For instance, in one of my internship, i have to implement a live collaboration feature",
         "ye sure, i was working with setting up local aws lambda and dynamodb for my internship"
       ]
     },
     "ai_adoption": {
-      "label": "experienced",
-      "reasoning": "The interviewee uses AI regularly and has developed a specific workflow for it. They describe using AI for task breakdown, code generation, and iterative debugging (mentioning '50 turns' or 'more than 100 turns' in a single chat). They also demonstrate critical evaluation of AI outputs, noting that AI code often has bugs or fails to compile, requiring them to apply their own knowledge to fix issues. They have tried specific tools like Cursor and Zed and formed opinions on their utility versus external chatboxes. This indicates regular, integrated usage with developed preferences and understanding of limitations, fitting the 'experienced' category rather than novice (who would be hesitant or rare) or power user (who would likely be building custom pipelines or APIs).",
+      "label": "integrated",
+      "reasoning": "The interviewee uses AI as a central part of their daily development workflow, not just for occasional queries. They describe a specific, iterative process: asking for steps, generating code, debugging by feeding error messages back into the AI, and engaging in long conversations (up to 50-100 turns) to resolve complex issues. They have developed a strategy for managing context (keeping chats open vs. starting new ones) and evaluate AI output critically, applying their own knowledge to fix bugs and understand the code. This represents a deep integration where AI has changed how they approach problem-solving and coding.",
       "quotes": [
-        "i usually just give the context of this feature to the AI, and ask it to list down the different steps I have to do to complete this feature.",
         "With this AI workflow, i'm able to minimise the time to write the code, but at the same time, i still have to face different bugs and tackle it with my own knowledge and with the solutions from the AI.",
-        "Sometimes it might take around 50 turns to actually solve it by keep feeding the messages and context.",
-        "With cursor, it could understand the context of the codebase so that it could provide more tailored solution, but after using it for some time, i found that although it has more context than external AI chatbox, but it still have lots of bugs when understanding multiple contexts in my codebase"
+        "I usually collaborate with it throughout the task until i complete it... When there's bugs that occur from the AI's code, i would constantly fed it with the error message and solve the bug together. Sometimes it might take around 50 turns to actually solve it",
+        "I'm always thinking about how could i maintain my skills when using AI to solve the daily tasks i have in work."
       ]
     },
     "_model": "Agnes"
@@ -108,19 +109,19 @@
     "transcript_id": "work_0281",
     "career_stage": {
       "label": "mid",
-      "reasoning": "The interviewee describes performing specific, skilled tasks (editing and transcribing medical documents, fact-checking) and mentions that their department has become smaller due to retirements without replacement, implying they have been in the role long enough to witness these structural changes. They are not described as a beginner learning the ropes, nor do they hold a senior leadership or management role. They are an established contributor in their field.",
+      "reasoning": "The interviewee describes a specific, established role involving editing and transcribing medical documents with fact-checking responsibilities. They mention that their department has become smaller due to retirements and that they are part of a team where others use built-in AI tools (speech-to-text). This suggests they are an established professional with some tenure, rather than a new graduate or a senior leader managing the department. They are a regular contributor to the workflow.",
       "quotes": [
         "My work involves editing and transcribing medical documents which includes a lot of fact checking.",
         "Already, our department has become smaller and as people retire they are not getting replaced by new hires."
       ]
     },
     "ai_adoption": {
-      "label": "experienced",
-      "reasoning": "The interviewee uses AI (chatbots) regularly as part of their workflow for 'detective work' and research. They have developed a specific methodology: using AI to clarify search terms or narrow down possibilities, but always double-checking the output against primary sources (Google, medical records) due to trust issues. They are aware of the tool's limitations and have integrated it into their process, distinguishing them from a novice who might not use it or a power user who builds custom pipelines.",
+      "label": "tool_user",
+      "reasoning": "The interviewee uses AI (chatbots) as a specific tool for research and fact-checking when standard search engines fail. They explicitly state that AI is their 'third choice' and that they must 'double check everything' because they don't trust the source. They use it for bounded tasks (narrowing down medication names or diseases based on symptoms) but do not describe integrating it into their core production workflow or changing their fundamental process. They view it as a helper for 'detective work' rather than a transformative element of their daily output.",
       "quotes": [
         "When I have a hard time finding what I'm looking for in Google, I will use a chatbot to help.",
-        "I can then ask a chatbot about which diseases have those symptoms that start with something that sounds like \"dis\" and through the conversation, I can usually narrow down the word I am looking for.",
-        "AI is usually my third choice because I don't know if the information is trustworthy... and I have to double check everything which takes longer."
+        "AI is usually my third choice because I don't know if the information is trustworthy... and I have to double check everything which takes longer.",
+        "I plan on continuing to use the chatbots as I am for now, as a helper for research and fact checking."
       ]
     },
     "_model": "Agnes"
@@ -129,19 +130,18 @@
     "transcript_id": "work_0654",
     "career_stage": {
       "label": "mid",
-      "reasoning": "The interviewee describes themselves as an established professional who handles specific, complex tasks like monthly COGS (Cost of Goods Sold) calculations and troubleshooting existing formulas. They mention having a manager and coworkers, indicating they are part of an established team structure. They are not described as a junior learning basics (they are devising complex sheets and troubleshooting) nor as a senior leader managing teams (they mention asking their manager for permission to try a tool, implying they are an individual contributor). The phrase 'I was actually using AI at my day job to help with a freelancing job I also do' suggests a level of professional stability and experience that allows for side work, fitting the 'mid' career stage profile of an established regular contributor.",
+      "reasoning": "The interviewee describes themselves as having a day job and also doing freelancing. They mention managing monthly COGS (Cost of Goods Sold) tasks and dealing with specific company constraints ('cannot use macros'). They also mention having a manager and coworkers, indicating an established professional role rather than a student or entry-level position. However, they do not describe managing a large team or having 15+ years of experience, fitting the 'mid' stage of an established contributor.",
       "quotes": [
-        "For monthly COGS I devised a Google Sheet that cannot use macros but uses complex equations that I started to ask for help to execute.",
-        "Initially it was troubleshooting existing ones.",
-        "I mentioned it to my manager that I was going to try to use it to help me."
+        "I was actually using AI at my day job to help with a freelancing job I also do.",
+        "I mentioned it to my manager that I was going to try to use it to help me. I largely cannot ask for help from my coworkers..."
       ]
     },
     "ai_adoption": {
-      "label": "experienced",
-      "reasoning": "The interviewee uses AI regularly for specific professional tasks (troubleshooting formulas, drafting complex equations). They have developed specific opinions and preferences about the tools, noting that models 'do not understand the specific constraints' and that they need to provide context ('Without the constraints that I am forced to work with, the models do much better'). They also use AI for personal projects (testing understanding of fiction) and have a nuanced view of its current utility ('troubleshooting tool') versus future potential. This indicates regular integration into their workflow and a developed understanding of the tool's strengths and weaknesses, fitting the 'experienced' category rather than novice (they are not just trying it out) or power user (they are not building custom pipelines or using APIs, but rather using standard chat interfaces for specific tasks).",
+      "label": "tool_user",
+      "reasoning": "The interviewee uses AI for specific, bounded tasks such as troubleshooting Google Sheet formulas and generating ideas for ancillary tasks. They explicitly state, 'At current, I can only see it as a troubleshooting tool.' They use it to save time ('more efficient than googling') but do not describe building custom integrations, APIs, or fundamentally changing their core workflow beyond using it as a helper for specific problems. They also note limitations, such as models not understanding specific constraints from a blank screen, requiring them to initiate proceedings on their own.",
       "quotes": [
+        "I use AI for ancillary tasks that are still important to do, but not locked down by the company to do so.",
         "I found asking Gemini or ChatGPT to be more efficient than googling for the answer.",
-        "For adding new things to the COGS task, I have found it's better to initiate proceedings on my own. Unfortunately, the models do not understand the specific constraints when asking to help from a blank screen.",
         "At current, I can only see it as a troubleshooting tool."
       ]
     },
@@ -151,7 +151,7 @@
     "transcript_id": "work_0759",
     "career_stage": {
       "label": "mid",
-      "reasoning": "The interviewee describes themselves as a 'customer service and sales rep' who has 'extensive experience of problem solving'. They mention leaving a previous job in 2022, implying they have been in their current or similar roles for some time, but they do not hold a senior leadership or management position. They are an established contributor who handles complex customer interactions and uses AI to enhance their performance, fitting the 'mid' career stage profile of an experienced professional who is not yet in senior management.",
+      "reasoning": "The interviewee describes themselves as an established professional with specific experience markers. They mention having 'extensive experience of problem solving' in their current role and reference a previous job they left in 2022, indicating they are not a recent graduate or entry-level worker. They are a regular contributor in their field (customer service/sales) but do not describe managing teams or holding senior leadership titles, fitting the 'mid' stage.",
       "quotes": [
         "I'm a customer service and sales rep",
         "despite my extensive experience of problem solving",
@@ -159,13 +159,12 @@
       ]
     },
     "ai_adoption": {
-      "label": "experienced",
-      "reasoning": "The interviewee uses AI regularly ('I use AI frequently outside of work') and has integrated it into their professional workflow for brainstorming, scenario planning, and improving communication. They demonstrate a nuanced understanding of the tool's utility, noting that they 'don't tend to just take the first answer' and use AI outputs as 'inspiration/jumping off point' rather than final products. They also actively teach colleagues, indicating a level of proficiency beyond novice usage, but they do not build custom pipelines or use APIs, so they do not qualify as a power user.",
+      "label": "integrated",
+      "reasoning": "The interviewee demonstrates a deep integration of AI into their workflow, moving beyond simple one-shot queries. They explicitly state they engage in 'working back and forth' and do not 'just take the first answer,' indicating an iterative refinement process. They use AI for brainstorming tactics, analyzing failed sales scenarios, and refining communication styles. They also have a specific strategy for using AI outputs as 'inspiration/jumping off point' rather than direct copy-paste, showing they have developed a personal method for leveraging AI while maintaining human agency. This iterative, strategic use distinguishes them from a novice or simple tool user.",
       "quotes": [
-        "I use AI frequently outside of work",
-        "I mostly use it for the sales aspect of my role... brainstorm sales tactics with me, run over scenarios",
-        "I don't tend to just take the first answer and run with it",
-        "I use the scripts or tactics as more of an inspiration/jumping off point"
+        "Definitely working back and forth, I don't tend to just take the first answer and run with it.",
+        "There's often aspects I think could be improved or additional things I need to add.",
+        "I use the scripts or tactics as more of an inspiration/jumping off point, rather than just following them word for word."
       ]
     },
     "_model": "Agnes"
@@ -174,19 +173,19 @@
     "transcript_id": "creativity_0011",
     "career_stage": {
       "label": "mid",
-      "reasoning": "The interviewee describes themselves as a 'contract-based graphic designer' who has established a client base and handles a variety of professional tasks including 'cohesive suites of materials' and 'website creation'. They mention having 'free rein' from clients and managing the entire production process, which indicates an established professional status rather than a junior or entry-level role. They do not mention being a student, recently graduated, or in a senior leadership/management position, fitting the 'mid' career stage profile.",
+      "reasoning": "The interviewee describes themselves as an established professional with a clear specialization and a portfolio of diverse work (graphic design, website creation, script treatments). They mention having clients who give them 'free rein' and describe a workflow involving 'hammering out changes,' which indicates an established practice rather than a junior learning phase. They also reference past projects (e.g., designing a banner for a manager who died 'the previous year'), suggesting a history of professional engagement. They do not mention managing a large team or holding a senior executive title, fitting the 'mid' stage of an established individual contributor.",
       "quotes": [
         "I am a contract-based graphic designer who specializes in preparing projects to print.",
-        "A client will contact me, give me an idea of what they want, and generally give me free rein over how it gets made"
+        "A client will contact me, give me an idea of what they want, and generally give me free rein over how it gets made; then we hammer out changes."
       ]
     },
     "ai_adoption": {
-      "label": "experienced",
-      "reasoning": "The interviewee uses AI regularly and has integrated it into their specific workflow for tasks like background extraction, photo compositing, and smoothing. They demonstrate a nuanced understanding of AI's capabilities and limitations, noting that while AI 'did well, but wasn't perfect' and required manual correction in Photoshop. They view AI as a tool for 'timesaver for rote tasks' and 'drudge work', allowing them to focus on creative direction, which shows they have moved beyond novice experimentation to a functional, critical integration of the technology.",
+      "label": "tool_user",
+      "reasoning": "The interviewee uses AI as a convenient tool for specific, bounded tasks (extracting logos, compositing photos, smoothing details) to save time on 'rote tasks' or 'drudge work.' They explicitly state they use it 'sparingly' and 'occasionally.' Crucially, they emphasize that AI is not a replacement for their core skill; they must still 'go in and separate the logo,' 'check everything back over in PS,' and act as a 'supervisor.' They note that AI output is 'not perfect' and requires human refinement. This fits the 'tool_user' definition: AI saves time but doesn't fundamentally change the workflow, and the professional could do their job without it (though perhaps less efficiently). They do not build custom integrations, use APIs, or have a deeply iterative, custom-prompted workflow that reshapes their entire process.",
       "quotes": [
         "In my case, I have used AI for my graphic design work sparingly, occasionally to make mockups... but generally as a timesaver for rote tasks.",
-        "I used an AI tool to extract this logo for me, and it did well, but wasn't perfect... Still, it saved some time",
-        "I was able to use AI to composite some 'good' grandparents together, then in Photoshop I pasted everyone in... then ran a copy of it through an AI tool to smooth some things out"
+        "I used an AI tool to extract this logo for me... Still, it saved some time... so I killed the background and tweaked the warped text so I could use the logo.",
+        "I'm playing supervisor to some extent."
       ]
     },
     "_model": "Agnes"
@@ -195,18 +194,20 @@
     "transcript_id": "creativity_0013",
     "career_stage": {
       "label": "mid",
-      "reasoning": "The interviewee describes having a 'side job/hobby/hustle' creating marketing materials and mentions having 'cinematography experience' in the past, implying they are not a complete beginner to the field. However, they are not in a senior leadership role managing a large team, nor are they a student just starting out. They operate as an established freelancer with specific skills (cinematography) applied to a new medium (AI generation), fitting the 'mid' career stage of an established professional adapting their skills.",
+      "reasoning": "The interviewee describes having a 'side job/hobby/hustle' creating marketing materials and mentions having 'cinematography experience' (though limited). They are not a beginner learning the ropes, nor are they in a senior leadership role managing a large team. They operate as an established freelancer or side-hustler with specific professional skills (cinematography) applied to a new medium. This fits the 'mid' stage of an established professional contributing regularly, even if in a non-traditional or side capacity.",
       "quotes": [
         "So I have a side job/hobby/hustle creating marketing materials for authors",
-        "as my cinematography experience is limited"
+        "my cinematography experience is limited"
       ]
     },
     "ai_adoption": {
-      "label": "experienced",
-      "reasoning": "The interviewee uses AI tools (ChatGPT, Sora) regularly as part of their professional workflow. They describe a specific, iterative process involving prompt engineering (using summaries to create prompts, remixing results, tweaking details like 'change the colour of the lights'), and have developed a nuanced understanding of the technology's limitations ('battle to be honest', 'non-compliant worker'). They are not just trying it out (novice) but are not building custom APIs or pipelines (power_user).",
+      "label": "integrated",
+      "reasoning": "The interviewee has deeply integrated AI into their workflow. They don't just use it for simple tasks; they have developed a specific iterative process involving breaking down summaries, creating detailed prompts (up to 200 words), remixing outputs, and refining results over multiple hours. They explicitly state that AI 'changed everything' and that they would not be able to do this work without it due to budget constraints for traditional methods. They also demonstrate domain-specific knowledge by discussing the limitations of current models (e.g., movement, setting accuracy) and how they navigate them through refinement, indicating AI is a core, non-negotiable part of their professional process.",
       "quotes": [
-        "I use ChatGPT or similar to break down the blub or a summary of the book, and use that to help me get the gist of the book. Then I can use this to turn into prompts for Sora",
-        "Often I would take the best of the results and remix that with things like 'change the colour of the lights' or 'lower the camera angle' - just little tweaks until it met the authors vision"
+        "I often use AI models to help me figure out more about the book if I have not read it, so for example I use ChatGPT or similar to break down the blub or a summary of the book",
+        "I then used each of these scenes to create a prompt to give to sora, and with a lot of tries and remixes came out with some good videos.",
+        "some scenes took multiple hours to refine... Often I would take the best of the results and remix that with things like 'change the colour of the lights' or 'lower the camera angle' - just little tweaks until it met the authors vision",
+        "I think it changed everything, as before AI I would not be able to do this"
       ]
     },
     "_model": "Agnes"
@@ -215,18 +216,21 @@
     "transcript_id": "creativity_0069",
     "career_stage": {
       "label": "mid",
-      "reasoning": "The interviewee describes themselves as an established professional with specific, regular responsibilities in copywriting and content creation. They mention working with clients ('my boss', 'one client replace me') and handling a variety of project types (proposals, emails, internal summaries). They do not describe themselves as a beginner or student, nor do they mention managing a large team or holding a senior executive title. Their experience level suggests they are an established contributor in their field.",
+      "reasoning": "The interviewee describes themselves as an established professional with significant experience in copywriting and client management. They mention having a 'boss' they report to, indicating they are not in a senior leadership role themselves, but they also have a history of client work ('I already had one client replace me') and a deep understanding of industry norms ('Blog post structures were all the same'). This suggests they are an experienced contributor, fitting the 'mid' career stage rather than early (they are not learning basics) or late (they are not managing teams or nearing retirement).",
       "quotes": [
         "I work creatively in a few different ways. I do a lot of writing, but mostly in the areas of copywriting, email and text message writing, and sometimes even proposals.",
-        "I already had one client replace me as her blog writer in favor of ChatGPT"
+        "I already had one client replace me as her blog writer in favor of ChatGPT",
+        "give my boss what she needs"
       ]
     },
     "ai_adoption": {
-      "label": "experienced",
-      "reasoning": "The interviewee uses AI daily and has integrated it into their core workflow for information extraction, drafting, and project management. They describe a specific, ongoing workflow with ChatGPT for daily tracking and action items. They also demonstrate a nuanced understanding of AI limitations and capabilities, such as the need for human creative control and the iterative process of refining outputs ('we have a conversation until it does'). They are not just trying it out, nor are they building custom APIs or pipelines.",
+      "label": "integrated",
+      "reasoning": "The interviewee has deeply integrated AI into their daily workflow, moving beyond simple one-off tasks. They use AI iteratively ('we have a conversation until it does'), have developed specific prompting strategies ('The more specific you are with what you need, the better your results'), and maintain a persistent, custom workflow for daily tracking and action item identification ('I have a conversation in ChatGPT specifically devoted to telling it what I did for the day'). They explicitly state that AI has 'changed my definition of what it means to do creative work,' indicating a fundamental shift in their professional process rather than just a time-saving tool.",
       "quotes": [
-        "Every day I keep track of the things I did during the day. I have a conversation in ChatGPT specifically devoted to telling it what I did for the day and it helps me identify action items for the next day.",
-        "This took some trial and error to understand how to do, but it was valuable time well spent."
+        "I have an ongoing situation that I use ChatGPT for. Every day I keep track of the things I did during the day. I have a conversation in ChatGPT specifically devoted to telling it what I did for the day and it helps me identify action items for the next day.",
+        "I have always equated AI to training a new employee. The more specific you are with what you need, the better your results.",
+        "if I don't like the results, I identify what I don't like, tell it what's going on and ask it to give me new results that align with what I'm looking for.",
+        "using AI has changed my definition of what it means to do creative work."
       ]
     },
     "_model": "Agnes"
@@ -235,19 +239,21 @@
     "transcript_id": "creativity_0086",
     "career_stage": {
       "label": "mid",
-      "reasoning": "The interviewee describes themselves as a screenwriter who has 'sold two animated short scripts' last year and performs standup comedy. They mention collaborating with others and having a established creative process ('I know my own voice'). This indicates an established professional who is actively working and selling work, but not necessarily in a senior leadership or mentoring role, nor are they a beginner. The evidence points to a mid-career stage.",
+      "reasoning": "The interviewee describes themselves as a screenwriter who has sold scripts ('Last year I sold two animated short scripts') and performs standup comedy. They have an established body of work and a clear professional identity, but they do not mention managing large teams, holding a senior executive title, or having 15+ years of experience. They describe themselves as actively working on projects and collaborating, which fits the profile of an established professional or mid-career creative.",
       "quotes": [
+        "I am a screenwriter and my project usually involves writing a feature length screenplay...",
         "Last year I sold two animated short scripts.",
-        "I am a screenwriter and my project usually involves writing a feature length screenplay, revising a screenplay, collaboration with others on co-writing scripts"
+        "I also do standup comedy..."
       ]
     },
     "ai_adoption": {
-      "label": "experienced",
-      "reasoning": "The interviewee uses AI regularly for specific professional tasks such as brainstorming jokes, character building, and research. They describe a clear workflow: inputting material, getting outputs, and then critically editing or adding to those outputs to fit their voice. They have developed specific opinions on AI's limitations (e.g., humor, authenticity) and have a clear vision for future integration (novel adaptation, marketing research). This fits the 'experienced' category of regular usage with integrated workflow and developed opinions, rather than just trying it out (novice) or building custom pipelines/APIs (power_user).",
+      "label": "tool_user",
+      "reasoning": "The interviewee uses AI for specific, bounded tasks such as brainstorming joke extensions, character name generation, and research. They explicitly state they are 'driving the creative decisions' and that AI is used like 'story prompts' from a book, where they create the final story. They mention using AI to save time on research and to generate initial ideas or angles, but they do not describe a deeply integrated, iterative workflow or custom configurations. They view AI as a convenient tool for specific functions rather than a fundamental transformer of their creative process.",
       "quotes": [
-        "With standup, I have inputted parts of my set into AI to help me brainstorm ways to extend a joke, or do call-backs from jokes earlier in my set.",
-        "I am definitely driving the creative decisions. I know my own voice, but I like to get ideas. It's like using the old books like \"PEN ON FIRE,\" where you're given story prompts, but you create the story.",
-        "I save a lot of time on research because I usually get answers in seconds, instead of having to jump around from website to website to get the info I need."
+        "With standup, I have inputted parts of my set into AI to help me brainstorm ways to extend a joke...",
+        "As for my screenplays, I've primarily used it to do character building: quickly access popular names...",
+        "I save a lot of time on research because I usually get answers in seconds...",
+        "I am definitely driving the creative decisions... It's like using the old books like 'PEN ON FIRE,' where you're given story prompts, but you create the story."
       ]
     },
     "_model": "Agnes"
@@ -256,19 +262,19 @@
     "transcript_id": "creativity_0094",
     "career_stage": {
       "label": "early",
-      "reasoning": "The interviewee explicitly identifies themselves as new to their profession and describes activities typical of someone establishing their career, such as launching a new business and building an online presence. They also mention using AI to learn best practices, indicating they are still in a learning phase.",
+      "reasoning": "The interviewee explicitly identifies themselves as new to their career and describes their current activities as starting up a business and gaining an online presence, which are typical markers of someone early in their professional journey. They also mention needing to 'drill down on best practices,' indicating they are still learning the ropes.",
       "quotes": [
-        "As I'm new to the career, it helps me drill down on best practices",
+        "As I'm new to the career",
         "I also am starting up a business to sell prints, but that hasn't been launched yet. I'm also trying to gain an online presence with social media"
       ]
     },
     "ai_adoption": {
-      "label": "experienced",
-      "reasoning": "The interviewee uses AI regularly for specific, non-creative tasks like research consolidation and equipment comparison. They have developed a clear understanding of AI's utility (saving time on 'busy work') and its limitations (avoiding it for creative post-processing to maintain authenticity). They describe a consistent workflow where AI assists with administrative or research hurdles, showing integration into their professional habits.",
+      "label": "tool_user",
+      "reasoning": "The interviewee uses AI for specific, bounded tasks such as consolidating search results, comparing camera specs, and handling administrative hurdles. They explicitly state they avoid using it for creative work and view it as a way to save time on 'busy work' rather than a fundamental change to their creative workflow. They describe AI as a convenience that helps them act faster on research, but they could theoretically perform these tasks without it, fitting the definition of a tool user.",
       "quotes": [
         "I use it to gain information about migration patterns for birds, or to consilidate and compare specs for different camera equipment",
-        "I'm using AI as a collaborator to save time with 'busy work'",
-        "I tend to avoid using it for anything creative"
+        "I'm using AI as a collaborator to save time with 'busy work'.",
+        "I tend to avoid using it for anything creative."
       ]
     },
     "_model": "Agnes"
@@ -277,18 +283,20 @@
     "transcript_id": "creativity_0114",
     "career_stage": {
       "label": "mid",
-      "reasoning": "The interviewee describes themselves as an established professional with regular responsibilities ('I work for' the church) and a portfolio of ongoing projects ('I have lots of creative projects'). They demonstrate experience in managing constraints (time restrictions) and refining creative output, which suggests they are past the 'early' learning phase but do not mention managing teams or holding a senior leadership title, fitting the 'mid' stage.",
+      "reasoning": "The interviewee describes themselves as having 'lots of creative projects' and working for a church, indicating an established role rather than a student or entry-level position. They describe a regular workflow involving planning, scripting, and editing, and express professional concerns about their value in the market ('reduce my value'), which suggests they are an established professional with a track record. There is no evidence of senior leadership (managing teams) or early career status (learning basics/first job).",
       "quotes": [
+        "I have lots of creative projects, mostly involved with audio and video content creation.",
         "My video projects are typically promo videos for the church I work for.",
-        "I have lots of creative projects, mostly involved with audio and video content creation."
+        "Like any creative, I'm concerned about AI being able to replicate my work and reduce my value."
       ]
     },
     "ai_adoption": {
-      "label": "experienced",
-      "reasoning": "The interviewee uses AI regularly and has developed specific workflows for planning, scripting, and editing. They demonstrate a nuanced understanding of AI's capabilities and limitations, noting that suggestions are 'often generic and slightly off the mark' and that they use AI to 'shape my own creative output' rather than relying on it blindly. This indicates a regular, integrated usage pattern with developed opinions.",
+      "label": "integrated",
+      "reasoning": "The interviewee uses AI iteratively and critically, not just for one-off tasks. They describe a specific workflow where they use AI to identify key elements from existing audio, then refine the output by providing their own constraints ('told it what were the important elements for me') to generate a script that fits a specific voice. They explicitly state they evaluate the output ('find the AI suggestions useful, but often generic') and use it to 'shape my own creative output.' This indicates AI is woven into their creative process as a collaborative partner that requires human direction and refinement, rather than just a simple time-saving tool.",
       "quotes": [
-        "I use AI tools for planning and scripting.",
-        "I find the AI suggestions useful, but often generic and slightly off the mark. So I use the suggestions to shape my own creative output."
+        "I use AI to talk through the most essential elements to communicate and how to pare down the script for a tight one minute promo.",
+        "I gave the voice over from the longer video to the model and asked it to identify what it thought were the most important elements. I then told it what were the important elements for me and asked it to create a one minute script from those details that fit the voice and identity of the church.",
+        "It's collaborative, but I'm making the final decisions. I find the AI suggestions useful, but often generic and slightly off the mark. So I use the suggestions to shape my own creative output."
       ]
     },
     "_model": "Agnes"
@@ -297,18 +305,19 @@
     "transcript_id": "science_0003",
     "career_stage": {
       "label": "mid",
-      "reasoning": "The interviewee describes themselves as part of a team working on a 'recent research project' involving complex tasks like pattern recognition and stock market modeling. They mention 'modular style code' and reviewing code for logic errors, indicating established professional competence. They are not described as a junior learning basics, nor do they hold a senior leadership or director role; they are a regular contributor to the project. The phrase 'dipping our toes in project' refers to the specific AI initiative, not their career stage.",
+      "reasoning": "The interviewee describes themselves as a contributor to a research project involving complex tasks like pattern recognition and stock market modeling. They mention working with a team ('some members', 'we') and having specific domain expertise ('subjects I know a lot about'). They are not in a junior learning phase, nor do they describe managing a large team or holding a senior leadership title. They are an established professional contributing to technical work.",
       "quotes": [
         "A recent research project I worked on was developing a model for pattern recognition.",
-        "We try to always write modular style code, so we can test small parts together pretty easily."
+        "if I use it to make decisions on subjects I know a lot about"
       ]
     },
     "ai_adoption": {
-      "label": "novice",
-      "reasoning": "The interviewee explicitly states they do not love using AI and are skeptical about its accuracy and reasoning. They mention that for their specific project, they 'didn't want to commit too many resources to learning how to effectively set up and use AI'. Their usage is limited to basic debugging and occasional brainstorming, with a primary focus on testing and manual review rather than integration into a workflow. They express hesitation and a lack of deep familiarity or custom workflows.",
+      "label": "tool_user",
+      "reasoning": "The interviewee uses AI for specific, bounded tasks such as debugging code, generating starting points for code, and brainstorming inspiration. They explicitly state that they did not commit resources to deeply integrating AI into the workflow for this project ('didn't want to commit too many resources to learning how to effectively set up and use AI'). They use it as a convenience to save time or spark ideas but maintain a skeptical stance regarding its accuracy and reasoning, indicating it is not yet woven into their core professional process or decision-making.",
       "quotes": [
-        "Personally I don't love using it that much since I worry about it's accuracy in my work.",
-        "AI was definitely brought up and considered in our project, but since it is more of a proof of concept/experimental project, we didn't want to commit too many resources to learning how to effectively set up and use AI this time around."
+        "AI was mostly used to debug code and might have been used by some members to help them create code or have a starting point to writing their parts of the code.",
+        "we didn't want to commit too many resources to learning how to effectively set up and use AI this time around.",
+        "Personally I don't love using it that much since I worry about it's accuracy in my work."
       ]
     },
     "_model": "Agnes"
@@ -317,19 +326,18 @@
     "transcript_id": "science_0004",
     "career_stage": {
       "label": "mid",
-      "reasoning": "The interviewee describes working in a 'multidisciplinary team' on complex projects involving 'computational design', 'genome scale models', and 'techno-economical models'. They mention having 'some years of experience' implicitly by discussing established workflows and mentoring or observing team members ('most of the team members used simple prompts'). They are not in a junior learning phase nor a senior leadership role, but rather an established contributor executing complex technical tasks.",
+      "reasoning": "The interviewee describes themselves as a participant in a multidisciplinary team, specifically handling 'computational design' and 'evaluation' tasks. They mention working on 'industrial scale' feasibility and techno-economic models, which implies a level of professional experience beyond entry-level. However, they do not claim leadership, management, or senior director roles, nor do they describe themselves as junior or new. The description of being a 'participant' in a team effort with specific technical responsibilities aligns with a mid-level professional role.",
       "quotes": [
-        "recently I worked in a multidisciplinary team for the design and engineering of microbial strains",
-        "I participated mostly in the computational design of the strain",
-        "Since we where working in a team, most of the team members used simple prompts"
+        "I participated mostly in the computational design of the strain and to evaluate two potential host organisms",
+        "recently I worked in a multidisciplinary team for the design and engineering of microbial strains"
       ]
     },
     "ai_adoption": {
-      "label": "experienced",
-      "reasoning": "The interviewee uses AI regularly for specific tasks like literature review, data extraction, and code debugging. They have developed specific, advanced prompting strategies (preprocessing text, providing examples, specific instructions to avoid hallucinations) to mitigate model limitations. They also have clear opinions on what AI is good at (speeding up trivial tasks, code debugging) and bad at (novel hypothesis generation, domain-specific deep understanding).",
+      "label": "integrated",
+      "reasoning": "The interviewee demonstrates a deep integration of AI into their workflow, moving beyond simple Q&A. They have developed specific, advanced prompting strategies (preprocessing text, providing examples, specific instructions for missing data) to mitigate hallucinations, which is a hallmark of an integrated user who has refined their process. They explicitly state they 'prefer to take the task over all by my self' to control the output, indicating AI is a tool they direct rather than just use passively. They also evaluate AI's limitations in their specific domain (struggling with scientific libraries, lack of deep understanding) and use it selectively for tasks like code debugging and literature review where they have established methods. This shows AI is woven into their daily process with specific methods and strategies.",
       "quotes": [
         "I prefer to take the task over all by my self and use advance prompting strategies such as provide the preprocessed text of the website and use a much more detailed prompt with specific instructions to avoid hallucinations.",
-        "I decided to try AI because of the promise of speed up trivial or time consuming tasks",
+        "What I implemented was to preprocess the actual webpage content and provide it in the prompt, then I explained the spreadsheet format and provided examples of a couple of rows.",
         "I think that in other areas where novelty is required such as the generation of hypothesis or initial ideas for new projects, I haven't really used them because I don't trust enough its capacity for generating truly novel ideas"
       ]
     },
@@ -339,15 +347,15 @@
     "transcript_id": "science_0011",
     "career_stage": {
       "label": "uncertain",
-      "reasoning": "The interviewee describes working on a research project involving machine learning models (SVM, LightGBM, CNN) and data cleaning. They mention using 'we' and collaborating with a researcher, but there are no explicit markers regarding their years of experience, seniority level, or specific role (e.g., student, junior analyst, senior lead). They do not describe themselves as junior, nor do they mention managing teams or having 15+ years of experience. Therefore, the career stage cannot be determined from the provided text.",
+      "reasoning": "The interviewee describes working on a research project involving machine learning models (SVM, LightGBM, CNN) and data cleaning. They mention using 'we' and collaborating with a researcher, but there are no explicit markers regarding their years of experience, seniority level, or specific role (e.g., student, junior analyst, senior lead). They do not describe themselves as new or experienced, nor do they mention managing others or strategic leadership. Therefore, the career stage cannot be determined from the provided text.",
       "quotes": []
     },
     "ai_adoption": {
-      "label": "experienced",
-      "reasoning": "The interviewee demonstrates regular and integrated use of AI in their professional workflow. They describe specific use cases such as using AI to 'clean data' and build a 'basic skeleton of each model as a guiding hand.' They also articulate a nuanced understanding of AI's capabilities and limitations, noting that while it is a 'great starting point' for code structure, it 'was not able to draw the same in depth conclusions' and requires human oversight ('used in conjunction with a researcher'). This indicates a developed opinion and routine integration rather than novice experimentation or power-user customization.",
+      "label": "tool_user",
+      "reasoning": "The interviewee uses AI as a convenient tool for specific, bounded tasks: cleaning data and generating a 'basic skeleton' of code. They describe it as a 'guiding hand' and a 'great starting point' to save time on iteration. They explicitly state that AI was not able to draw in-depth conclusions and needed to be used in conjunction with a researcher, indicating that AI did not fundamentally transform their analytical workflow but rather assisted in preliminary steps. They spot-check the output, treating AI as a time-saving assistant rather than an integrated partner or a custom-built pipeline.",
       "quotes": [
         "We used AI to help clean data and also to build a basic skeleton of each model as a guiding hand.",
-        "We used AI because we believed it to be a great starting point for code we were writing.",
+        "We used AI because we believed it to be a great starting point for code we were writing. It allows you to see an overview of all potentially required sections quicker, thus allowing you to see what is missing or needs improvement.",
         "We found that AI was not able to draw the same in depth conclusions about the picture the statistics painted. It needed to be used in conjunction with a researcher."
       ]
     },
@@ -357,18 +365,18 @@
     "transcript_id": "science_0027",
     "career_stage": {
       "label": "early",
-      "reasoning": "The interviewee explicitly states they are currently studying Software Development and have not yet done specific research projects. They describe their work as 'small projects' aimed at 'test[ing] and improv[ing] my coding skills,' which indicates they are a student or beginner in the field.",
+      "reasoning": "The interviewee explicitly states they are currently studying Software Development and have not yet done specific research projects. They describe using AI to assist with small projects to 'test and improve my coding skills,' which indicates they are in a learning phase and early in their professional journey.",
       "quotes": [
         "So I'm studying Software Development which is what I use AI to assist with.",
         "I haven't done any specific \"research projects\" just yet, but I have used AI to assist with small projects in order to test and improve my coding skills."
       ]
     },
     "ai_adoption": {
-      "label": "novice",
-      "reasoning": "The interviewee uses AI for specific, limited tasks like bug spotting and refactoring suggestions on small personal projects. They describe a basic workflow of writing code first, then using AI to review it. There is no evidence of custom workflows, API usage, or deep integration into a professional pipeline; the usage is consistent with a learner experimenting with tools.",
+      "label": "tool_user",
+      "reasoning": "The interviewee uses AI as a specific tool for debugging and refactoring suggestions within their coding workflow. They describe a bounded process: writing code first, then using AI to spot bugs and suggest improvements. They do not describe building custom integrations, using APIs, or having AI fundamentally reshape their entire professional methodology beyond being a helpful assistant for specific tasks. They mention using standard interfaces (VSCode, REPL) and treating AI output as suggestions to review.",
       "quotes": [
         "I didn't use AI until I had a version of the game that I could use/test - the purpose of AI was to spot bugs (e.g. edge cases) and point them out to me so I could further investigate and fix.",
-        "I also used it to provide suggestions for refinement and/or refactoring"
+        "I also used it to provide suggestions for refinement and/or refactoring - perhaps improving the logic, or minimising repetition of code."
       ]
     },
     "_model": "Agnes"
@@ -377,18 +385,19 @@
     "transcript_id": "science_0054",
     "career_stage": {
       "label": "early",
-      "reasoning": "The interviewee explicitly mentions completing a master's degree and refers to their thesis as their 'proudest achievement to date', indicating they are at the beginning of their professional research career. They describe their work as part of a research group under a supervisor, which is typical for graduate students or early-career researchers.",
+      "reasoning": "The interviewee explicitly identifies their recent project as a 'thesis' and states they are getting their 'master's degree'. They describe the work as 'trial and error' and mention learning from their 'supervisor', which are strong markers of an early-career researcher or graduate student.",
       "quotes": [
-        "I couldn't really trust AI, as it so often went against what I was taught during my master's degree.",
+        "The final output was a kind of thesis, in which I documented the tin, lead and germanium variants of my molecule...",
         "I actually really wanted to write my thesis myself because that was my proudest achievement to date: getting my master's degree."
       ]
     },
     "ai_adoption": {
       "label": "novice",
-      "reasoning": "The interviewee uses AI very rarely and primarily for high-level conceptual questions rather than integration into their workflow. They express significant skepticism, stating they 'could never really trust AI' and find its answers 'insufficient'. They do not use it for core tasks like data analysis or writing, viewing it as a 'cheap cop-out', which indicates a hesitant, non-integrated, and skeptical approach consistent with a novice user.",
+      "reasoning": "The interviewee rarely uses AI and expresses significant skepticism and distrust. They describe AI usage as limited to asking about the 'bigger picture' or suggesting structures, but find the answers 'insufficient' or 'wrong'. They explicitly state they 'could never really trust AI' and view its use as a 'cheap cop-out'. They do not integrate it into their workflow; instead, they avoid it to ensure their own work is authentic and accurate.",
       "quotes": [
-        "With the experimental stuff, not much. I'm more inclined to ask AI about the bigger picture... However, I often found that it's answers were insufficient",
-        "Honestly I could never really trust AI, as it so often went against what I was taught during my master's degree."
+        "With the experimental stuff, not much. I'm more inclined to ask AI about the bigger picture... However, I often found that it's answers were insufficient...",
+        "Honestly I could never really trust AI, as it so often went against what I was taught during my master's degree.",
+        "I couldn't use it for anything other than asking it to suggest structures... However, I very often knew what these would be in the first place, so didn't need its help."
       ]
     },
     "_model": "Agnes"
@@ -397,7 +406,7 @@
     "transcript_id": "science_0075",
     "career_stage": {
       "label": "mid",
-      "reasoning": "The interviewee describes themselves as an established professional who leads specific projects (writing observing proposals, obtaining data, writing up for publication) and collaborates with a group. They mention having 'existing code written that I am highly confident in using' and being part of a 'collaboration group', which suggests they are beyond the early learning stage but do not describe managing a large team or holding a senior director-level title. The level of autonomy and expertise described fits the 'mid' career stage.",
+      "reasoning": "The interviewee describes themselves as an established professional who leads specific projects (writing observing proposals, obtaining data) and collaborates with a group. They mention having 'existing code written that I am highly confident in using' and being part of a 'collaboration group' where work is spread by expertise. This indicates a level of experience and autonomy consistent with a mid-career researcher, rather than a student or junior member just starting out, but not necessarily a senior leader managing the entire field or team structure in a way that suggests late-career seniority.",
       "quotes": [
         "I work in astrophysics. A recent project of mine involved a study of the central supermassive black hole...",
         "I analysed this large dataset along with my collaboration group, spreading out the work according to the expertise of the respective team members.",
@@ -405,12 +414,13 @@
       ]
     },
     "ai_adoption": {
-      "label": "experienced",
-      "reasoning": "The interviewee uses AI regularly and integrates it into multiple stages of their workflow (data manipulation, literature review, visualization, writing). They have developed specific strategies for using AI, such as verifying outputs carefully, checking mathematical formulae by hand, and using AI for inspiration rather than final content generation. They also express nuanced opinions on AI's limitations (scientific reasoning, biases, reproducibility), indicating a level of familiarity and critical engagement that goes beyond novice usage but does not reach the level of custom pipelines or API-level development described for power users.",
+      "label": "tool_user",
+      "reasoning": "The interviewee uses AI for specific, bounded tasks such as data manipulation (formatting), summarizing literature, generating visualization inspiration, and assisting with phrasing in writing. They explicitly state that AI helps 'speed up the process' and 'work more efficiently,' but they do not describe AI as fundamentally changing their core workflow or scientific reasoning. They maintain strict human oversight, verifying all outputs, especially for numbers and mathematical formulae, and express skepticism about AI's ability to interpret results. They use AI as a convenient assistant for discrete steps rather than integrating it into a custom pipeline or daily iterative loop that reshapes their professional identity.",
       "quotes": [
-        "Four ways that I implemented AI immediately come to mind: ... I used AI to help manipulate the dataset ... I used AI to help summarise the key findings ... I used AI to help with data visualisation ... I also used AI to help with the writing process",
+        "I used AI to help manipulate the dataset in a more efficient manner.",
+        "I used it to help create plots and graphs... predominantly to provide me with inspiration for the final plots",
         "I use it for inspiration and ideas, but I read all output carefully and only use something if I agree with it.",
-        "For anything that involves numbers or mathematical formulae, I always check these carefully by hand as I think this is an area where mistakes are more likely to slip through."
+        "For anything that involves numbers or mathematical formulae, I always check these carefully by hand"
       ]
     },
     "_model": "Agnes"
