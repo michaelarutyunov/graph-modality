@@ -95,13 +95,48 @@ Initial results showed a **perfect val macro-F1 = 1.0** ceiling effect across al
 | val macro-F1 | **0.9249** (Δ = +0.0217 vs baseline) |
 | test macro-F1 | **0.8368** (Δ = +0.0139 vs baseline) |
 
+### Route 2b — Graph statistics ONLY (no text)
+
+| metric | value |
+|---|---|
+| classifier | LogisticRegression (C=1.0, class_weight=balanced, max_iter=2000) |
+| feature dim | 30 (graph statistics only, no text concatenated) |
+| val macro-F1 | **0.3796** |
+| test macro-F1 | **0.4891** |
+| notes | Above chance (0.333) but weak — hand-crafted features capture modest structural signal. Scientists most graph-distinctive (15/18 val). |
+
+### Route 3b — GIN graph embedding ONLY (no text)
+
+| metric | value |
+|---|---|
+| architecture | 2-layer GIN (388-dim input → 256 hidden → 128 output) + MLP head (128 → 256 → 3) |
+| node features | 4-dim type one-hot + 384-dim MiniLM label embedding = 388 |
+| training config | Adam (lr=1e-3, weight_decay=1e-4), ReduceLROnPlateau, early stopping patience=10 |
+| epochs run | 14 (early stopped) |
+| best epoch | 4 |
+| val macro-F1 | **0.8621** |
+| test macro-F1 | **0.8434** (Δ = +0.0206 vs R1 baseline) |
+| key finding | **GIN-only BEATS text-only on test set** (+2.06 pp). Graph topology alone is a stronger predictor of professional cohort than 768-dim sentence embeddings of human speech. |
+
 ### Route comparison
 
-| route | val macro-F1 | test macro-F1 | Δ vs baseline (test) |
-|---|---|---|---|
-| Baseline (text-only) | 0.9032 | 0.8228 | — |
-| Route 2 (text + stats) | 0.9122 | 0.8390 | +0.0161 |
-| Route 3 (text + GIN) | 0.9249 | 0.8368 | +0.0139 |
+| route | modalities | val macro-F1 | test macro-F1 | Δ vs R1 (test) |
+|---|---|---|---|---|
+| Route 1 (text-only) | text | 0.9032 | 0.8228 | — |
+| Route 2 (text + stats) | text+stats | 0.9122 | 0.8390 | +0.0161 |
+| Route 3 (text + GIN) | text+gin | 0.9249 | 0.8368 | +0.0139 |
+| Route 2b (stats only) | stats | 0.3796 | 0.4891 | -0.3338 |
+| **Route 3b (GIN only)** | **gin** | **0.8621** | **0.8434** | **+0.0206** |
+
+### Per-class breakdown (test set, all 5 routes)
+
+| class | R1 (text) | R2 (text+stats) | R3 (text+gin) | R2b (stats) | R3b (gin) | support |
+|---|---|---|---|---|---|---|
+| workforce | 0.9301 | 0.9371 | 0.9347 | 0.6609 | 0.9508 | 150 |
+| creatives | 0.6667 | 0.6531 | 0.6809 | 0.3529 | 0.7222 | 19 |
+| scientists | 0.8718 | 0.9268 | 0.8947 | 0.4533 | 0.8571 | 19 |
+
+**Key insight:** GIN-only (R3b) outperforms text-only (R1) on workforce AND creatives. Scientists are slightly better with text. The concept graph modality is not just complementary — for some cohorts it's the stronger signal. The text+GIN fusion (R3) underperforms GIN-only, suggesting the simple concatenation fusion is suboptimal.
 
 ### Per-class breakdown (test set)
 
