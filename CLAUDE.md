@@ -69,7 +69,7 @@ tests/
 | `canonicalisation/canonical_map.json` | Locked canonical vocabulary — source of truth for all node type counting |
 | **Encoding** | |
 | `encoding/gnn/model.py` | GIN architecture — 388-dim node features, 128-dim graph embedding |
-| `encoding/graph_stats.py` | Route 2 feature vector — 36 dimensions, networkx-derived |
+| `encoding/graph_stats.py` | Route 2 feature vector — 30 dimensions, networkx-derived |
 
 ---
 
@@ -176,10 +176,10 @@ Every bead that dispatches parallel sub-agents must include an explicit **Merge 
 | `.claude/context/graph-schema.md`, `extraction/validator.py` | `.claude/agents/schema-guardian/AGENT.md` |
 | `extraction/**` | `.claude/agents/extraction-specialist/AGENT.md` |
 | `canonicalisation/**` | `.claude/agents/canonicalisation-specialist/AGENT.md` |
-| `encoding/**` | `.claude/agents/encoding-specialist/AGENT.md` *(placeholder)* |
-| `classification/**`, `notebooks/**` | `.claude/agents/analysis-specialist/AGENT.md` *(placeholder)* |
+| `encoding/**` | `.claude/agents/encoding-specialist/AGENT.md` |
+| `classification/**`, `notebooks/**` | `.claude/agents/analysis-specialist/AGENT.md` |
 
-> Agents not yet created are placeholders — create on first observed failure in that domain.
+> All 5 planned agents are now active.
 
 ---
 
@@ -192,7 +192,7 @@ Every bead that dispatches parallel sub-agents must include an explicit **Merge 
 | Graph JSON schema | `.claude/context/graph-schema.md` |
 | Extraction log | `.claude/context/extraction-log.md` |
 | Governance principles | `.claude/context/codified-context-principles.md` |
-| Results log | `.claude/context/results-log.md` *(create during Phase 3)* |
+| Results log | `.claude/context/results-log.md` |
 | Phase 1 post-mortem | `.claude/context/phase1-postmortem.md` *(create during Phase 4)* |
 
 ---
