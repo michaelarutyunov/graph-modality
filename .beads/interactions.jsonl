@@ -29,3 +29,4 @@
 {"id":"int-e2553c9d","kind":"field_change","created_at":"2026-06-08T15:31:05.241010845Z","actor":"michaelarutyunov","issue_id":"graph-modality-at2","extra":{"field":"status","new_value":"closed","old_value":"in_progress","reason":"Closed"}}
 {"id":"int-7f712faa","kind":"field_change","created_at":"2026-06-08T15:31:05.695783401Z","actor":"michaelarutyunov","issue_id":"graph-modality-y38","extra":{"field":"status","new_value":"closed","old_value":"in_progress","reason":"Closed"}}
 {"id":"int-a6741a2c","kind":"field_change","created_at":"2026-06-08T15:31:12.019515466Z","actor":"michaelarutyunov","issue_id":"graph-modality-zoq","extra":{"field":"status","new_value":"closed","old_value":"in_progress","reason":"Closed"}}
+{"id":"int-76db6e7c","kind":"field_change","created_at":"2026-06-08T17:18:27.313366117Z","actor":"michaelarutyunov","issue_id":"graph-modality-lxk","extra":{"field":"status","new_value":"closed","old_value":"in_progress","reason":"Closed"}}

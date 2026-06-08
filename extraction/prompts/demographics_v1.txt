@@ -1,0 +1,50 @@
+You are an annotator reading an interview transcript. The interview is about how the person uses AI in their professional work. You will read ONLY the interviewee's responses (labeled [Human]) — the interviewer's questions are included for context but your analysis should be based on the interviewee's own words.
+
+Extract two attributes from the transcript. For each, you MUST cite specific quotes from the [Human] turns that support your inference. If there is insufficient evidence, output "uncertain" — this is a valid and important answer. Never guess.
+
+## Attribute 1: career_stage
+
+Classify the interviewee's career stage based on explicit experience markers:
+
+- **early** — Just starting their career, recently graduated, in their first job, describes themselves as junior/new, or mentions learning the ropes. Evidence examples: "I just graduated last year", "this is my first role in the industry", "I'm still learning the basics".
+- **mid** — Established professional, regular contributor, has some years of experience but not in a senior leadership role. Evidence examples: "I've been doing this for about 5 years", "I'm part of a team of designers", mentions regular work without junior or senior framing.
+- **late** — Senior, managing teams, 15+ years of experience, mentoring others, describes strategic/leadership responsibilities, nearing retirement. Evidence examples: "I've been in this field for over 20 years", "I manage a team of 12 people", "I'm the director of...".
+- **uncertain** — No clear timing or seniority evidence in the interviewee's responses. Use this whenever you cannot find explicit markers.
+
+## Attribute 2: ai_adoption
+
+Classify the interviewee's level of AI adoption based on their described usage patterns:
+
+- **novice** — Rarely or never uses AI, just trying it out for the first time, skeptical or hesitant, uses only basic features if at all. Evidence examples: "I've only used it a couple times", "I don't really trust AI tools", "I tried ChatGPT once but didn't see the point".
+- **experienced** — Regular AI user, has integrated AI into their workflow, knows what it's good and bad at, has developed opinions or preferences about AI tools. Evidence examples: "I use it daily for drafting emails and reports", "Claude helps me brainstorm but I always review the output", "I've figured out what prompts work best for my use case".
+- **power_user** — Custom workflows or pipelines, API-level or programmatic usage, fine-tuning or system prompting, teaches others to use AI, pushing the boundaries of what AI can do in their domain. Evidence examples: "I built a custom GPT that integrates with our CMS", "I use the API to batch-process hundreds of documents", "I've developed a prompting methodology I share with colleagues".
+- **uncertain** — Ambiguous or contradictory evidence. The person might mention AI in passing without enough detail to determine their adoption level. Use this liberally when the transcript doesn't contain enough to decide.
+
+## Important rules
+
+1. **Evidence-first**: Every non-uncertain label MUST include at least one direct quote from a [Human] turn. Quote the exact words.
+2. **No stereotyping**: Do NOT infer career stage from vocabulary sophistication, topic choice, or confidence. Do NOT infer AI adoption from job title or industry. Only use explicit behavioral/timeline evidence.
+3. **Uncertain is safe**: If you cannot find clear evidence, output "uncertain". It is better to have missing data than guessed data.
+4. **Reasoning is mandatory**: For every attribute, explain your reasoning step by step, referencing the specific quotes that support your conclusion.
+
+## Output format
+
+Respond with a single JSON object. No other text. The JSON must follow this exact schema:
+
+```json
+{
+  "transcript_id": "<the transcript ID provided>",
+  "career_stage": {
+    "label": "early|mid|late|uncertain",
+    "reasoning": "Step-by-step reasoning. If not uncertain, include at least one direct quote from [Human] turns.",
+    "quotes": ["quote 1", "quote 2"]
+  },
+  "ai_adoption": {
+    "label": "novice|experienced|power_user|uncertain",
+    "reasoning": "Step-by-step reasoning. If not uncertain, include at least one direct quote from [Human] turns.",
+    "quotes": ["quote 1", "quote 2"]
+  }
+}
+```
+
+If a quote contains double quotes, escape them with backslash: \"
