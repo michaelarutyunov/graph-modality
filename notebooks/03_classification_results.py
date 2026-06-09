@@ -108,32 +108,31 @@ def __(routes, mo):
                 "f1": _f1,
             })
 
-    if not _class_rows:
+    if _class_rows:
+        df_class = _pl.DataFrame(_class_rows)
+
+        # Bar chart
+        _fig, _ax = _plt.subplots(figsize=(12, 6))
+        _classes = ["workforce", "creatives", "scientists"]
+        _x = range(len(_classes))
+        _width = 0.15
+
+        # Get unique routes, limit to main ones for readability
+        _route_names = sorted(set(df_class["route"].to_list()))
+        for _i, _r in enumerate(_route_names):
+            _f1s = [df_class.filter((df_class["route"] == _r) & (df_class["class"] == _c))["f1"].item() for _c in _classes]
+            _ax.bar([_xi + _i * _width for _xi in _x], _f1s, _width, label=_r)
+
+        _ax.set_ylabel("F1 Score")
+        _ax.set_title("Per-Class F1 by Route")
+        _ax.set_xticks([_xi + _width * (len(_route_names) - 1) / 2 for _xi in _x])
+        _ax.set_xticklabels(_classes)
+        _ax.legend(bbox_to_anchor=(1.05, 1), loc="upper left")
+        _ax.set_ylim(0, 1)
+        _plt.tight_layout()
+        _plt.show()
+    else:
         mo.md("No per-class data found.")
-        return
-
-    df_class = _pl.DataFrame(_class_rows)
-
-    # Bar chart
-    _fig, _ax = _plt.subplots(figsize=(12, 6))
-    _classes = ["workforce", "creatives", "scientists"]
-    _x = range(len(_classes))
-    _width = 0.15
-
-    # Get unique routes, limit to main ones for readability
-    _route_names = sorted(set(df_class["route"].to_list()))
-    for _i, _r in enumerate(_route_names):
-        _f1s = [df_class.filter((df_class["route"] == _r) & (df_class["class"] == _c))["f1"].item() for _c in _classes]
-        _ax.bar([_xi + _i * _width for _xi in _x], _f1s, _width, label=_r)
-
-    _ax.set_ylabel("F1 Score")
-    _ax.set_title("Per-Class F1 by Route")
-    _ax.set_xticks([_xi + _width * (len(_route_names) - 1) / 2 for _xi in _x])
-    _ax.set_xticklabels(_classes)
-    _ax.legend(bbox_to_anchor=(1.05, 1), loc="upper left")
-    _ax.set_ylim(0, 1)
-    _plt.tight_layout()
-    _plt.show()
     return
 
 
@@ -193,21 +192,20 @@ def __(demo_results, mo):
     """Demographic results table."""
     import polars as _pl
 
-    if not demo_results:
-        mo.md("No demographic results found.")
-        return
+    if demo_results:
+        _demo_rows = []
+        for _route, _data in demo_results.get("ai_adoption", {}).items():
+            _demo_rows.append({
+                "route": _route,
+                "macro_f1": round(_data.get("macro_f1", 0), 4),
+            })
 
-    _demo_rows = []
-    for _route, _data in demo_results.get("ai_adoption", {}).items():
-        _demo_rows.append({
-            "route": _route,
-            "macro_f1": round(_data.get("macro_f1", 0), 4),
-        })
-
-    if _demo_rows:
-        _pl.DataFrame(_demo_rows)
+        if _demo_rows:
+            _pl.DataFrame(_demo_rows)
+        else:
+            mo.md("No AI adoption data found.")
     else:
-        mo.md("No AI adoption data found.")
+        mo.md("No demographic results found.")
     return
 
 

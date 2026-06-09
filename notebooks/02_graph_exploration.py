@@ -429,40 +429,38 @@ def __(selected_graph, mo):
 
     if selected_graph is None:
         mo.md("No graph selected")
-        return
+    else:
+        _G = _nx.DiGraph()
+        _color_map = {
+            "Construct": "skyblue",
+            "Value": "lightgreen",
+            "Stance": "salmon",
+            "CognitiveStyleMarker": "plum",
+        }
+        _node_colors = []
+        _labels = {}
 
-    _G = _nx.DiGraph()
-    _color_map = {
-        "Construct": "skyblue",
-        "Value": "lightgreen",
-        "Stance": "salmon",
-        "CognitiveStyleMarker": "plum",
-    }
-    _node_colors = []
-    _labels = {}
+        for _n in selected_graph.get("nodes", []):
+            _G.add_node(_n["id"])
+            _node_colors.append(_color_map.get(_n.get("type", ""), "gray"))
+            _labels[_n["id"]] = _n.get("label", _n["id"])[:20]
 
-    for _n in selected_graph.get("nodes", []):
-        _G.add_node(_n["id"])
-        _node_colors.append(_color_map.get(_n.get("type", ""), "gray"))
-        _labels[_n["id"]] = _n.get("label", _n["id"])[:20]
+        for _e in selected_graph.get("edges", []):
+            _G.add_edge(_e["source"], _e["target"], relation=_e.get("relation", ""))
 
-    for _e in selected_graph.get("edges", []):
-        _G.add_edge(_e["source"], _e["target"], relation=_e.get("relation", ""))
+        _fig, _ax = _plt.subplots(figsize=(12, 10))
+        _pos = _nx.spring_layout(_G, k=2, iterations=50, seed=42)
+        _nx.draw_networkx_nodes(_G, _pos, node_color=_node_colors, node_size=800, ax=_ax)
+        _nx.draw_networkx_labels(_G, _pos, _labels, font_size=8, ax=_ax)
+        _nx.draw_networkx_edges(_G, _pos, edge_color="gray", arrows=True, arrowsize=15, ax=_ax)
 
-    _fig, _ax = _plt.subplots(figsize=(12, 10))
-    _pos = _nx.spring_layout(_G, k=2, iterations=50, seed=42)
-    _nx.draw_networkx_nodes(_G, _pos, node_color=_node_colors, node_size=800, ax=_ax)
-    _nx.draw_networkx_labels(_G, _pos, _labels, font_size=8, ax=_ax)
-    _nx.draw_networkx_edges(_G, _pos, edge_color="gray", arrows=True, arrowsize=15, ax=_ax)
-
-    from matplotlib.patches import Patch
-    _legend_elements = [Patch(facecolor=_c, label=_t) for _t, _c in _color_map.items()]
-    _ax.legend(handles=_legend_elements, loc="upper right")
-    _ax.set_title(f"Concept Graph: {selected_graph['transcript_id']}")
-    _ax.axis("off")
-    _plt.tight_layout()
-    _plt.show()
-    return
+        from matplotlib.patches import Patch
+        _legend_elements = [Patch(facecolor=_c, label=_t) for _t, _c in _color_map.items()]
+        _ax.legend(handles=_legend_elements, loc="upper right")
+        _ax.set_title(f"Concept Graph: {selected_graph['transcript_id']}")
+        _ax.axis("off")
+        _plt.tight_layout()
+        _plt.show()
 
 
 @app.cell

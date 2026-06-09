@@ -193,66 +193,60 @@ def __(dropdown, json, glob, mo):
 @app.cell
 def __(selected_graph, mo):
     """Node detail table."""
-    if selected_graph is None:
-        return
+    if selected_graph is not None:
+        import polars as _pl
 
-    import polars as _pl
-
-    _nodes = selected_graph.get("nodes", [])
-    if _nodes:
-        _df_nodes = _pl.DataFrame(_nodes)
-        mo.md("### Nodes")
-        _cols = ["id", "type", "label"]
-        if "valence" in _df_nodes.columns:
-            _cols.append("valence")
-        if "bipolarity_complete" in _df_nodes.columns:
-            _cols.append("bipolarity_complete")
-        _df_nodes.select(_cols)
-    else:
-        mo.md("No nodes in this graph")
+        _nodes = selected_graph.get("nodes", [])
+        if _nodes:
+            _df_nodes = _pl.DataFrame(_nodes)
+            mo.md("### Nodes")
+            _cols = ["id", "type", "label"]
+            if "valence" in _df_nodes.columns:
+                _cols.append("valence")
+            if "bipolarity_complete" in _df_nodes.columns:
+                _cols.append("bipolarity_complete")
+            _df_nodes.select(_cols)
+        else:
+            mo.md("No nodes in this graph")
     return
 
 
 @app.cell
 def __(selected_graph, mo):
     """Edge detail table."""
-    if selected_graph is None:
-        return
+    if selected_graph is not None:
+        import polars as _pl
 
-    import polars as _pl
-
-    _edges = selected_graph.get("edges", [])
-    if _edges:
-        mo.md("### Edges")
-        _pl.DataFrame(_edges)
-    else:
-        mo.md("No edges in this graph")
+        _edges = selected_graph.get("edges", [])
+        if _edges:
+            mo.md("### Edges")
+            _pl.DataFrame(_edges)
+        else:
+            mo.md("No edges in this graph")
     return
 
 
 @app.cell
 def __(selected_graph, mo):
     """Grounding spans."""
-    if selected_graph is None:
-        return
+    if selected_graph is not None:
+        mo.md("### Grounding Spans")
+        _spans = []
+        for _n in selected_graph.get("nodes", []):
+            _span = _n.get("grounding_span", "")
+            if _span:
+                _spans.append({
+                    "id": _n.get("id", ""),
+                    "type": _n.get("type", ""),
+                    "label": _n.get("label", "")[:40],
+                    "grounding": _span[:100],
+                })
 
-    mo.md("### Grounding Spans")
-    _spans = []
-    for _n in selected_graph.get("nodes", []):
-        _span = _n.get("grounding_span", "")
-        if _span:
-            _spans.append({
-                "id": _n.get("id", ""),
-                "type": _n.get("type", ""),
-                "label": _n.get("label", "")[:40],
-                "grounding": _span[:100],
-            })
-
-    if _spans:
-        import polars as _pl
-        _pl.DataFrame(_spans)
-    else:
-        mo.md("No grounding spans available")
+        if _spans:
+            import polars as _pl
+            _pl.DataFrame(_spans)
+        else:
+            mo.md("No grounding spans available")
     return
 
 
