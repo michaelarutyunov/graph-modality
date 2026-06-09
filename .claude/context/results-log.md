@@ -190,15 +190,115 @@ The "creatives" cohort is hardest to classify across all routes (F1 ≈ 0.65-0.6
 
 ---
 
-## Phase 4 — Analysis
+## Phase 4 — Structural Analysis (RQ2)
 
-> *To be populated during Phase 4.*
+*Analysis date: 2026-06-09. All tests run on 1,250 canonical graphs. Omnibus: Kruskal-Wallis.
+Post-hoc: pairwise Mann-Whitney U with Bonferroni correction (α=0.05/3=0.0167). Effect sizes:
+eta-squared (η²) for 3-group comparisons, Cliff's delta (δ) for pairwise.*
 
-### Structural analysis (RQ2)
+### H1–H4 Confirmatory Results
 
-| hypothesis | test statistic | p-value | significant | interpretation |
+| hypothesis | Kruskal-Wallis H | p-value | η² | significant (α=0.05) | interpretation |
+|---|---|---|---|---|---|
+| H1 — Scientist hub-and-spoke (C:V ratio) | 23.902 | 0.000006 | 0.024 | **yes** | Significant but **opposite direction**: scientists have *lower* C:V ratio (1.44) than workforce (1.60). Scientists have fewer constructs per terminal value — values are more concentrated, not more differentiated. The "hub-and-spoke" pattern holds structurally (fewer constructs radiating from each value) but not in the predicted direction. |
+| H2 — Creative negative valence | 11.129 | 0.003831 | 0.009 | **yes** | **Supported.** Creatives have highest negative-valence stance fraction (0.396) vs scientists (0.341) and workforce (0.385). Post-hoc: creatives > scientists (p=0.002, δ=0.179), creatives > workforce (p=0.104, n.s.). The dual satisfaction/anxiety pattern is structurally visible. |
+| H3 — Workforce bipolarity | 5.525 | 0.063130 | 0.004 | no | **Not significant.** Bipolarity is near ceiling across all cohorts: workforce 0.998, scientists 0.998, creatives 0.986. The ontology constraint (both poles required) and strong prompt compliance leave almost no variance for differentiation. Smallest η² of all hypotheses. |
+| H4 — Scientist cognitive style (CSM count) | 0.500 | 0.778645 | 0.001 | no | **Not significant.** 99.8% of graphs have exactly 2 CSMs (the ontology ceiling). Only 2 graphs (both workforce) have 1 CSM. The CSM ceiling constraint makes count-based differentiation impossible. Verification-oriented CSM fraction shows no significant cohort difference (p=0.221). |
+
+### H1 Detail: Construct:Value Ratio
+
+| cohort | mean C:V ratio | mean n_construct | mean n_value | median C:V |
 |---|---|---|---|---|
-| H1 — Scientist hub-and-spoke | — | — | — | — |
-| H2 — Creative negative valence | — | — | — | — |
-| H3 — Workforce bipolarity | — | — | — | — |
-| H4 — Scientist cognitive style | — | — | — | — |
+| workforce | 1.604 | 10.89 | 7.51 | 1.500 |
+| creatives | 1.572 | 10.78 | 7.55 | 1.429 |
+| scientists | 1.439 | 9.70 | 7.22 | 1.333 |
+
+**Interpretation:** Scientists have the *lowest* C:V ratio — they extract fewer constructs relative to values. This is the opposite of the pre-registered prediction. Rather than scientists having more differentiated evaluation frames, they appear to have more *concentrated* value structures: fewer constructs serving each terminal value. The significant pairwise differences are scientists < workforce (p=0.000003, δ=-0.182) and scientists < creatives (p=0.026, δ=-0.093). Workforce and creatives do not differ significantly (p=1.0).
+
+Possible explanation: The scientist cohort (n=125) discusses AI adoption in narrower epistemic terms (data integrity, verification, rigour), producing fewer distinct constructs per value. Workforce respondents (n=1,000) have broader, more varied AI interactions, producing more differentiated evaluation frames.
+
+### H2 Detail: Negative Stance Valence
+
+| cohort | mean neg_frac | mean n_stance | mean n_negative | pairwise |
+|---|---|---|---|---|
+| workforce | 0.385 | 11.35 | 4.43 | — |
+| creatives | 0.396 | 11.46 | 4.66 | > scientists (p=0.002) |
+| scientists | 0.341 | 10.76 | 3.71 | < creatives (p=0.002), < workforce (p=0.042) |
+
+**Interpretation:** The creative cohort's higher negative-valence fraction is consistent with the dual satisfaction/anxiety pattern documented in the Anthropic research. Creatives report 97% productivity gains but also pervasive identity anxiety — this ambivalence shows up structurally as a higher proportion of negatively-valenced stances. Scientists are the least negative, consistent with a more instrumental relationship to AI (tool for verification, not a threat to identity).
+
+### H3 Detail: Bipolarity Completeness
+
+| cohort | mean complete_frac | mean bipolarity_score | % 100% complete |
+|---|---|---|---|
+| workforce | 0.998 | 0.999 | 99.7% |
+| creatives | 0.986 | 0.993 | 96.8% |
+| scientists | 0.998 | 0.999 | 99.2% |
+
+**Interpretation:** The near-ceiling bipolarity scores (all >0.98) reflect strong prompt compliance and the ontology's requirement that constructs have both poles. Creatives show slightly lower completeness (0.986 vs 0.998), consistent with H3's directional prediction of more ambivalent/unresolved constructs, but the difference does not reach significance after correction. The metric is effectively saturated — future work should use a continuous bipolarity measure (e.g., pole specificity rating) rather than binary complete/incomplete.
+
+### H4 Detail: CSM Prevalence
+
+| cohort | mean CSM count | % with CSM | mean verify_frac |
+|---|---|---|---|
+| workforce | 1.998 | 100% | 0.439 |
+| creatives | 2.000 | 100% | 0.400 |
+| scientists | 2.000 | 100% | 0.402 |
+
+**Interpretation:** The CSM ceiling (max 2 per transcript) is universally enforced by the extractor — only 2 of 1,250 graphs have fewer than 2 CSMs. This makes H4's count-based prediction untestable. The verification-oriented fraction is slightly higher in workforce (0.439) than scientists (0.402), opposite to the predicted direction, but not significant (Kruskal-Wallis p=0.221). Scientists do not show higher verification-orientation in their CSM subtypes.
+
+### Methodological Note: Ceiling Effects
+
+Two of four pre-registered hypotheses (H3, H4) were undermined by ceiling effects from the extraction ontology itself. When the prompt enforces "both poles required" and "max 2 CSMs," those constraints become the dominant source of variance (or lack thereof). Future pre-registration should verify metric variance on pilot data before locking hypotheses.
+
+### Exploratory: Structural Analysis by AI Adoption
+
+Same metrics regrouped by AI adoption (`tool_user` n=602 vs `integrated` n=622; novice=21, power_user=5 excluded). Mann-Whitney U with Cliff's delta.
+
+| metric | mean tool_user | mean integrated | Cliff's δ | p-value | significant |
+|---|---|---|---|---|---|
+| Construct:Value ratio | 1.556 | 1.612 | -0.107 | 0.000985 | **yes** |
+| Graph size (nodes) | 14.85 | 14.82 | 0.016 | 0.610 | no |
+| Edge count | 13.48 | 13.62 | -0.010 | 0.758 | no |
+| Negative stance fraction | 0.386 | 0.376 | 0.037 | 0.256 | no |
+| Bipolarity completeness | 0.997 | 0.997 | -0.005 | 0.371 | no |
+| CSM count | 1.998 | 1.998 | -0.000 | 0.982 | no |
+| Verification CSM fraction | 0.437 | 0.430 | 0.008 | 0.755 | no |
+| Conflict prevalence | 0.246 | 0.243 | 0.006 | 0.839 | no |
+
+**Key finding:** Integrated users have a significantly *higher* Construct:Value ratio (1.61 vs 1.56, p=0.001, δ=-0.107). Integrated users articulate more differentiated evaluation frames — more constructs per terminal value — than tool_users. This is the only metric that differentiates AI adoption groups, and it's the same metric that differentiates cohorts (H1). The effect size is small (δ=-0.107) but robust.
+
+No other metric reaches significance. AI adoption does not produce dramatically different graph topology beyond the C:V ratio shift — the structural fingerprint of AI adoption is subtler than the structural fingerprint of professional cohort.
+
+### Cross-Target Comparison
+
+| metric | cohort η² | cohort p | AI adoption |δ| | AI adoption p | stronger signal |
+|---|---|---|---|---|---|---|
+| C:V ratio | 0.024 | 0.000006 | 0.107 | 0.000985 | cohort |
+| Neg stance fraction | 0.009 | 0.003831 | 0.037 | 0.256 | cohort |
+| Bipolarity completeness | 0.004 | 0.063130 | 0.005 | 0.371 | neither (ceiling) |
+| CSM count | 0.001 | 0.778645 | 0.000 | 0.982 | neither (ceiling) |
+
+**Verdict:** Professional cohort is a stronger structural differentiator than AI adoption level. Where structural differentiation exists (C:V ratio, negative valence), it is more pronounced across cohorts than across AI adoption groups. This is consistent with the R1 classification results: cohort classification achieves F1 ≈ 0.82-0.84, while AI adoption classification peaks at F1 ≈ 0.72.
+
+### Phase 4 Synthesis
+
+**Which hypotheses were supported?**
+- H2 (creative negative valence): **Supported** — clear structural fingerprint of the dual satisfaction/anxiety pattern.
+- H1 (scientist hub-and-spoke): **Significant but reversed** — scientists have lower, not higher, C:V ratio. The structural pattern exists but in the opposite direction.
+- H3 (workforce bipolarity): **Not supported** — ceiling effect from ontology constraint.
+- H4 (scientist cognitive style): **Not supported** — ceiling effect from CSM max constraint.
+
+**Does graph topology differentiate by cohort?**
+Yes, modestly. H1 (C:V ratio, η²=0.024) and H2 (negative valence, η²=0.009) show significant cohort differences with small-to-medium effect sizes. However, both significant effects are small in absolute terms. Graph topology carries genuine but limited cohort signal — consistent with R2b (stats-only classification: F1=0.49, above chance but far below text-only).
+
+**Does graph topology differentiate by AI adoption?**
+Only through C:V ratio (δ=-0.107, p=0.001). All other metrics are non-significant. AI adoption leaves a fainter structural trace than professional cohort.
+
+**What does this mean for the modality hypothesis?**
+The concept graph modality carries some structural signal that differentiates groups (RQ2), but the signal is modest and concentrated in a few metrics (C:V ratio, stance valence). The classification results (Phase 3) showed that graph structure alone can classify cohort at F1=0.49 (stats) to F1=0.84 (GIN), substantially above chance. But the interpretable, hypothesis-driven metrics (H1-H4) capture only a fraction of whatever signal the GIN is exploiting. This gap between interpretable metrics and GNN performance suggests that the GIN is picking up on structural patterns not captured by hand-crafted features — possibly subgraph motifs, edge-type interactions, or label-semantic patterns that the simple count-based metrics miss.
+
+**Open questions:**
+1. What is the GIN actually learning? The gap between interpretable metrics (η²≈0.01-0.02) and GIN-only classification (F1=0.84) is large. Attribution techniques (GNNExplainer, integrated gradients) could probe what structural patterns the GIN exploits.
+2. Would a larger scientist cohort (n=125 currently) change H1 direction? The reversed H1 finding might reflect the small scientist sample or genuine differences in how scientists discuss AI in short interviews.
+3. Can we design continuous metrics that avoid ceiling effects? Binary bipolarity and capped CSM counts are inherently low-variance.
