@@ -122,7 +122,19 @@ Three conditions are compared against a text-only baseline:
 | route 2 | text embedding + hand-crafted graph statistics (networkx) |
 | route 3 | text embedding + GNN graph embedding (torch_geometric) |
 
-### 5.3 handling negative results
+### 5.3 target-agnostic architecture (Phase 5)
+
+Phase 5 introduces a critical architectural refinement. The original GIN (route 3) was trained end-to-end with classification loss — its embedding was task-specific, not a pure modality representation. Phase 5 retrains the GIN as a self-supervised autoencoder (no classification labels), freezes it, and trains separate classifier architectures on the frozen embeddings.
+
+The classifier zoo includes four architectures:
+- **Single-modality:** MLP on one embedding (text-only, stats-only, GIN-only baselines)
+- **Stacked:** Concatenate all modalities → MLP (current route 2/3 approach)
+- **Gated fusion:** Learn per-example modality weights → classifier
+- **Late fusion:** Separate classifier per modality → ensemble vote
+
+All architectures compared on identical frozen embeddings. Two targets: cohort (3-class) and AI adoption (binary).
+
+### 5.4 handling negative results
 
 A negative result — graph features do not improve over text-only — is treated as a substantive finding rather than a failure. It would indicate that concept graphs extracted from short, topic-constrained attitude interviews do not carry signal beyond what the text already contains. This is a specific and useful claim about the limits of graph extraction from shallow interviews, and would inform decisions about minimum elicitation depth for CDT-relevant graph recovery.
 
@@ -142,16 +154,16 @@ Secondary analyses test four falsifiable predictions about cohort differences in
 
 ---
 
-## 7. week plan
+## 7. plan
 
-| day | focus | gate |
+| phase | focus | status |
 |---|---|---|
-| 1 | environment setup; data acquisition; speaker tagger | tagged transcripts for comparison sample |
-| 2 | model comparison experiment; prompt iteration; model selection | locked extraction prompt; extraction model chosen |
-| 3 | scale extraction (300 transcripts); validation; canonicalisation | graph corpus ready; `canonical_map.json` locked |
-| 4 | text encoding; route 2 feature engineering; baseline + route 2 classification | route 2 results |
-| 5 | route 3 GNN; structural analysis (RQ2); interpretability hypotheses | route 3 results; H1–H4 tested |
-| 6–7 | synthesis and writing | — |
+| 1 | extraction: prompts, model comparison, scale extraction (1,250 graphs) | ✅ complete |
+| 2 | canonicalisation: clustering, vocabulary lock | ✅ complete |
+| 3 | encoding + classification: text/stats/GIN routes, demographic targets | ✅ complete |
+| 4 | structural analysis (RQ2): H1-H4, AI adoption exploratory | ✅ complete |
+| 5 | target-agnostic modality fusion: GIN autoencoder, classifier zoo, disentanglement | 🔜 next |
+| 6 | synthesis and writing | — |
 
 **critical path:** day 2 gates everything. Do not begin scale extraction until the extraction prompt is locked and the model is selected.
 

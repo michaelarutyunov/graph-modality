@@ -28,10 +28,15 @@
 | `canonicalisation/clusterer.py` | script | one-shot clustering; output locked before any modelling |
 | `encoding/text_encoder.py` | script | long-running; caches to disk |
 | `encoding/graph_stats.py` | script | called by classification notebooks |
-| `encoding/gnn_encoder.py` | script | training loop; called by classification notebooks |
+| `encoding/gnn/autoencoder.py` | script | self-supervised GIN training (run once, all graphs) |
+| `encoding/gnn/encode.py` | script | frozen encoder inference → 128-dim embeddings |
+| `encoding/build_dataset.py` | script | package frozen embeddings as .npz per split/target |
+| `classification/fusion/run.py` | script | config-driven experiment runner (any arch × any target) |
 | `notebooks/01_extraction_review.py` | Marimo | interactive graph inspection, model comparison scoring |
 | `notebooks/02_graph_exploration.py` | Marimo | cohort topology visualisation, hypothesis testing |
 | `notebooks/03_classification_results.py` | Marimo | confusion matrices, feature importance, route comparison |
+| `notebooks/04_structural_analysis.py` | Marimo | H1-H4 confirmatory analysis, AI adoption exploratory |
+| `notebooks/05_fusion_analysis.py` | Marimo | fusion experiment: complementarity matrices, arch comparison |
 
 ---
 
@@ -700,15 +705,13 @@ def graph_to_features(graph_path: Path) -> np.ndarray:
 **Total feature vector dimension:** 36  
 **Interpretation layer:** use sklearn permutation importance on the trained logistic regression model to identify which features drive classification. This is where the interpretable story lives.
 
-### 8.3 route 3: GIN graph encoder
+### 8.3 GIN autoencoder (self-supervised, target-agnostic)
+
+**Architecture principle:** The GIN encoder is trained with a self-supervised reconstruction objective on ALL 1,250 graphs — no classification labels. After training, the encoder is frozen and produces 128-dim graph embeddings. This is the graph equivalent of what SBERT does for text: a fixed representation that encodes what the graph IS, not what it predicts. The old task-supervised GIN (`encoding/gnn/model.py`, `encoding/gnn/train.py`) is **deprecated** — it conflated encoding with classification, making it impossible to cleanly measure modality complementarity.
 
 #### 8.3.1 node feature construction
 
-`encoding/gnn/dataset.py`
-
-Each node gets a 388-dimensional feature vector:
-- entity type one-hot: 4 dimensions
-- label embedding: 384 dimensions (`all-MiniLM-L6-v2` on the free-text label)
+`encoding/gnn/dataset.py` — **unchanged.** Each node still gets 388-dim features (4 type one-hot + 384 label embedding from `all-MiniLM-L6-v2`). The dataset now accepts optional `labels=None` for unsupervised training.
 
 ```python
 import torch
@@ -780,9 +783,9 @@ class GraphDataset(Dataset):
         )
 ```
 
-#### 8.3.2 GIN model
+#### 8.3.2 GIN autoencoder architecture
 
-`encoding/gnn/model.py`
+`encoding/gnn/autoencoder.py`
 
 ```python
 import torch
@@ -790,175 +793,232 @@ import torch.nn as nn
 import torch.nn.functional as F
 from torch_geometric.nn import GINConv, global_mean_pool
 
-class GraphEncoder(nn.Module):
+class GINEncoder(nn.Module):
+    """Target-agnostic GIN encoder. Produces 128-dim graph embeddings.
+    Trained with self-supervised reconstruction — NEVER sees classification labels."""
     def __init__(self, in_channels: int = 388, hidden: int = 256, 
-                 out_channels: int = 128, n_classes: int = 3):
+                 out_channels: int = 128):
         super().__init__()
         
-        # GIN layer 1
         mlp1 = nn.Sequential(
-            nn.Linear(in_channels, hidden),
-            nn.ReLU(),
-            nn.Linear(hidden, hidden),
+            nn.Linear(in_channels, hidden), nn.ReLU(), nn.Linear(hidden, hidden)
         )
         self.conv1 = GINConv(mlp1)
         self.bn1 = nn.BatchNorm1d(hidden)
         
-        # GIN layer 2
         mlp2 = nn.Sequential(
-            nn.Linear(hidden, hidden),
-            nn.ReLU(),
-            nn.Linear(hidden, out_channels),
+            nn.Linear(hidden, hidden), nn.ReLU(), nn.Linear(hidden, out_channels)
         )
         self.conv2 = GINConv(mlp2)
         self.bn2 = nn.BatchNorm1d(out_channels)
-        
-        # classifier head (receives fused text + graph embedding)
-        self.classifier = nn.Sequential(
-            nn.Linear(768 + out_channels, 256),
-            nn.ReLU(),
-            nn.Dropout(0.3),
-            nn.Linear(256, n_classes),
-        )
     
-    def encode_graph(self, x, edge_index, batch):
+    def forward(self, x, edge_index, batch):
         x = F.relu(self.bn1(self.conv1(x, edge_index)))
         x = F.relu(self.bn2(self.conv2(x, edge_index)))
-        return global_mean_pool(x, batch)  # shape: (batch_size, 128)
+        return global_mean_pool(x, batch)  # (batch_size, 128)
+
+
+class GINAutoencoder(nn.Module):
+    """Self-supervised GIN: encode graph, reconstruct node types."""
+    def __init__(self):
+        super().__init__()
+        self.encoder = GINEncoder()
+        self.node_type_head = nn.Linear(128, 4)  # reconstruct 4 entity types
     
-    def forward(self, data, text_embeddings: torch.Tensor):
-        graph_emb = self.encode_graph(data.x, data.edge_index, data.batch)
-        fused = torch.cat([text_embeddings, graph_emb], dim=1)  # (B, 896)
-        return self.classifier(fused)
+    def forward(self, data):
+        # Get per-node embeddings before pooling
+        x = F.relu(self.encoder.bn1(self.encoder.conv1(data.x, data.edge_index)))
+        node_embs = F.relu(self.encoder.bn2(self.encoder.conv2(x, data.edge_index)))
+        # Graph-level embedding (not used directly in reconstruction, but the bottleneck)
+        graph_emb = global_mean_pool(node_embs, data.batch)
+        # Reconstruct node types from per-node embeddings
+        node_type_logits = self.node_type_head(node_embs)
+        return node_type_logits
 ```
 
-#### 8.3.3 training loop
+**Loss:** Cross-entropy on node type reconstruction. Node types are extracted from the 4-dim one-hot in `data.x[:, :4]`.
+**Training:** ALL 1,250 graphs (no split — no labels needed). Adam, lr=1e-3. Save encoder to `cache/gin_encoder.pt`.
 
-`encoding/gnn/train.py`
+#### 8.3.3 frozen encoder inference
+
+`encoding/gnn/encode.py`
 
 ```python
-import torch
-from torch_geometric.loader import DataLoader
-import numpy as np
-
-def compute_class_weights(labels: list[int], n_classes: int = 3) -> torch.Tensor:
-    counts = np.bincount(labels, minlength=n_classes)
-    weights = 1.0 / (counts + 1e-6)
-    return torch.tensor(weights / weights.sum() * n_classes, dtype=torch.float32)
-
-def train(model, train_loader, val_loader, 
-          text_emb_train, text_emb_val,
-          class_weights, epochs: int = 50):
+def encode_graphs(graph_paths: list[Path], 
+                  encoder_weights: str = "cache/gin_encoder.pt") -> np.ndarray:
+    """Produce 128-dim frozen embeddings for a set of graphs."""
+    encoder = GINEncoder()
+    encoder.load_state_dict(torch.load(encoder_weights))
+    encoder.eval()
     
-    optimiser = torch.optim.Adam(model.parameters(), lr=1e-3, weight_decay=1e-4)
-    criterion = torch.nn.CrossEntropyLoss(weight=class_weights)
-    scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(
-        optimiser, mode="max", patience=5, factor=0.5
-    )
+    dataset = GraphDataset(graph_paths, labels=None)  # no labels
+    loader = DataLoader(dataset, batch_size=32, shuffle=False)
     
-    best_val_f1 = 0.0
-    patience_counter = 0
+    embeddings = []
+    with torch.no_grad():
+        for batch in loader:
+            emb = encoder(batch.x, batch.edge_index, batch.batch)
+            embeddings.append(emb.numpy())
     
-    for epoch in range(epochs):
-        model.train()
-        for batch_idx, batch in enumerate(train_loader):
-            text_batch = text_emb_train[batch_idx * train_loader.batch_size :
-                                        (batch_idx + 1) * train_loader.batch_size]
-            optimiser.zero_grad()
-            logits = model(batch, torch.tensor(text_batch, dtype=torch.float32))
-            loss = criterion(logits, batch.y)
-            loss.backward()
-            optimiser.step()
-        
-        val_f1 = evaluate(model, val_loader, text_emb_val)
-        scheduler.step(val_f1)
-        
-        if val_f1 > best_val_f1:
-            best_val_f1 = val_f1
-            torch.save(model.state_dict(), "cache/best_gin.pt")
-            patience_counter = 0
-        else:
-            patience_counter += 1
-            if patience_counter >= 10:
-                print(f"early stopping at epoch {epoch}")
-                break
-        
-        if epoch % 5 == 0:
-            print(f"epoch {epoch:3d} | val macro-F1: {val_f1:.4f}")
+    return np.concatenate(embeddings)  # (N, 128)
 ```
+
+### 8.4 modality embedding dataset
+
+`encoding/build_dataset.py`
+
+Packages all three frozen modality embeddings into .npz files per split and target. This is the single source of truth for downstream classifiers.
+
+```python
+def build_dataset(target: str, split_ids: dict, 
+                  text_embs: np.ndarray, stats_embs: np.ndarray,
+                  gin_embs: np.ndarray, labels: np.ndarray):
+    """Save frozen embeddings as .npz per split."""
+    for split_name, ids in [("train", split_ids["train"]), 
+                             ("val", split_ids["val"]),
+                             ("test", split_ids["test"])]:
+        idx = [id_to_index[tid] for tid in ids]
+        np.savez(f"cache/modality_dataset/{target}_{split_name}.npz",
+                 text_emb=text_embs[idx],      # (N, 768)
+                 stats_emb=stats_embs[idx],    # (N, 30)
+                 graph_emb=gin_embs[idx],      # (N, 128)
+                 labels=labels[idx],           # (N,)
+                 transcript_ids=ids)           # (N,)
+```
+
+Output: `cache/modality_dataset/{target}_{split}.npz` — 6 files for 2 targets × 3 splits.
 
 ---
 
-## 9. classification
+## 9. classification (target-agnostic architecture)
+
+**Architecture principle:** All classifiers consume frozen modality embeddings from .npz files. The encoders are never fine-tuned on classification tasks. Only the classifier weights are learned. This separation enables clean measurement: does adding a frozen graph embedding improve over text alone?
+
+The old `classification/route3.py` (which trained GIN+classifier end-to-end with classification loss) is **deprecated** — it conflated encoding with task learning.
 
 ### 9.1 train/test split
 
-Fixed before any modelling. Use stratified split to preserve class ratios.
+Fixed before any modelling. Use stratified split to preserve class ratios. Identical to before — split IDs cached at `cache/split_ids.json`.
 
 ```python
-from sklearn.model_selection import train_test_split
-
-# 70 / 15 / 15 stratified split
-ids = df["transcript_id"].to_list()
-labels = df["label"].to_list()
-
-ids_train, ids_temp, y_train, y_temp = train_test_split(
-    ids, labels, test_size=0.30, stratify=labels, random_state=42
-)
-ids_val, ids_test, y_val, y_test = train_test_split(
-    ids_temp, y_temp, test_size=0.50, stratify=y_temp, random_state=42
-)
+from classification.split import load_split
+train_ids, val_ids, test_ids, labels_dict = load_split()
 ```
 
 **The test set is held out until final evaluation. No hyperparameter decisions are made on test set performance.**
 
-### 9.2 baseline and route 2
+### 9.2 classifier zoo
+
+`classification/fusion/models.py`
+
+Four architectures, all consuming frozen modality embeddings with the same interface:
 
 ```python
-from sklearn.linear_model import LogisticRegression
-from sklearn.neural_network import MLPClassifier
-from sklearn.metrics import classification_report, f1_score, confusion_matrix
+class SingleModalityClassifier(nn.Module):
+    """MLP on one modality. Used for text-only, stats-only, GIN-only baselines."""
+    def __init__(self, input_dim: int, n_classes: int, hidden: int = 256):
+        super().__init__()
+        self.net = nn.Sequential(
+            nn.Linear(input_dim, hidden), nn.ReLU(), nn.Dropout(0.3),
+            nn.Linear(hidden, n_classes)
+        )
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
+        return self.net(x)
 
-# baseline: text embeddings only
-X_train_base = text_emb[train_idx]
-X_val_base = text_emb[val_idx]
 
-lr = LogisticRegression(class_weight="balanced", max_iter=1000, C=1.0)
-lr.fit(X_train_base, y_train)
-preds = lr.predict(X_val_base)
-print(f"baseline macro-F1: {f1_score(y_val, preds, average='macro'):.4f}")
+class StackedClassifier(nn.Module):
+    """Concat all selected modalities -> MLP. (Old R2/R3 approach.)"""
+    def __init__(self, total_dim: int, n_classes: int, hidden: int = 256):
+        super().__init__()
+        self.net = nn.Sequential(
+            nn.Linear(total_dim, hidden), nn.ReLU(), nn.Dropout(0.3),
+            nn.Linear(hidden, n_classes)
+        )
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
+        return self.net(x)
 
-# route 2: text + graph stats
-X_train_r2 = np.hstack([text_emb[train_idx], graph_stats[train_idx]])
-lr_r2 = LogisticRegression(class_weight="balanced", max_iter=1000, C=1.0)
-lr_r2.fit(X_train_r2, y_train)
+
+class GatedFusionClassifier(nn.Module):
+    """Learn per-example modality weights, then classify weighted features."""
+    def __init__(self, text_dim: int, graph_dim: int, n_classes: int, hidden: int = 256):
+        super().__init__()
+        total = text_dim + graph_dim
+        self.gate = nn.Sequential(
+            nn.Linear(total, 128), nn.ReLU(), nn.Linear(128, 1), nn.Sigmoid()
+        )
+        self.classifier = nn.Sequential(
+            nn.Linear(total, hidden), nn.ReLU(), nn.Dropout(0.3),
+            nn.Linear(hidden, n_classes)
+        )
+    def forward(self, text_emb, graph_emb):
+        concat = torch.cat([text_emb, graph_emb], dim=1)
+        gate = self.gate(concat)  # per-example weight [0,1]
+        weighted = concat * torch.cat([gate, 1 - gate], dim=1)
+        return self.classifier(weighted)
+
+
+class LateFusionClassifier(nn.Module):
+    """Separate classifier per modality -> average logits (ensemble)."""
+    def __init__(self, modality_dims: dict[str, int], n_classes: int, hidden: int = 128):
+        super().__init__()
+        self.classifiers = nn.ModuleDict({
+            m: nn.Sequential(nn.Linear(d, hidden), nn.ReLU(), nn.Linear(hidden, n_classes))
+            for m, d in modality_dims.items()
+        })
+    def forward(self, embeddings: dict[str, torch.Tensor]) -> torch.Tensor:
+        return torch.stack([clf(emb) for clf, emb in zip(self.classifiers.values(), embeddings.values())]).mean(dim=0)
 ```
 
-### 9.3 evaluation
+### 9.3 experiment runner
+
+`classification/fusion/config.py` + `classification/fusion/run.py`
 
 ```python
-from sklearn.metrics import classification_report, ConfusionMatrixDisplay
-import matplotlib.pyplot as plt
+@dataclass
+class ExperimentConfig:
+    target: str                    # "ai_adoption" | "cohort"
+    modalities: list[str]          # ["text"] | ["text", "graph"] | ...
+    architecture: str             # "single" | "stacked" | "gated" | "late"
+    hidden_dim: int = 256
+    lr: float = 1e-3
+    max_epochs: int = 50
+    early_stopping_patience: int = 10
+    seed: int = 42
 
-def evaluate_full(model, X_test, y_test, route_name: str):
-    preds = model.predict(X_test)
-    print(f"\n=== {route_name} ===")
-    print(classification_report(y_test, preds,
-                                 target_names=["workforce", "creatives", "scientists"],
-                                 digits=4))
-    macro_f1 = f1_score(y_test, preds, average="macro")
-    print(f"macro F1: {macro_f1:.4f}")
+def run_experiment(cfg: ExperimentConfig) -> dict:
+    """Load frozen .npz, train classifier, save results."""
+    train_data = load_dataset(cfg.target, "train")
+    val_data = load_dataset(cfg.target, "val")
+    test_data = load_dataset(cfg.target, "test")
     
-    fig, ax = plt.subplots(figsize=(6, 5))
-    ConfusionMatrixDisplay.from_predictions(
-        y_test, preds,
-        display_labels=["workforce", "creatives", "scientists"],
-        ax=ax, colorbar=False
-    )
-    ax.set_title(f"{route_name} — confusion matrix")
-    plt.tight_layout()
-    plt.savefig(f"cache/{route_name.lower().replace(' ', '_')}_cm.png", dpi=150)
+    model = build_classifier(cfg)
+    results = train(model, train_data, val_data, cfg)
+    test_metrics = evaluate(model, test_data)
+    
+    save_dir = f"results/fusion/{cfg.target}/{cfg.architecture}_{'-'.join(cfg.modalities)}/"
+    save_results(results, test_metrics, cfg, save_dir)
+    return {**results, "test": test_metrics}
 ```
+
+Each run produces: `model.pt`, `curves.png`, `test_preds.npy`, `metrics.json`.
+
+### 9.4 evaluation
+
+Primary metric: macro-averaged F1. Per-class F1 and confusion matrices additionally reported. Test set held out until final evaluation. All architectures compared on identical frozen embeddings from the same split.
+
+### 9.5 experiment matrix
+
+| Dimension | Values |
+|---|---|
+| Target | AI adoption (binary, n=1,224), Cohort (3-class, n=1,250) |
+| Modalities | text, stats, graph, text+stats, text+graph, text+stats+graph |
+| Architecture | single, stacked, gated, late |
+
+Total: 2 × 6 × 4 = 48 experiments. The config-driven runner makes this a parameter sweep, not 48 separate scripts.
+
+### 9.6 baseline and route 2 (sklearn, unchanged)
+
+`classification/baseline.py` and `classification/route2.py` remain as sklearn LogisticRegression baselines for comparison with Phase 3 results. These operate on the same frozen embeddings.
 
 ---
 

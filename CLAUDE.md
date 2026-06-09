@@ -6,7 +6,7 @@
 
 ## Project Identity
 
-`cdt-graph-modality` is a research prototype testing whether **concept graphs extracted from interview transcripts constitute a structurally distinct modality** for consumer digital twin (CDT) representation. It runs three experimental conditions against a text-only baseline: text + hand-crafted graph statistics (route 2) and text + GIN graph embedding (route 3), all classifying professional cohort from the Anthropic Interviewer dataset (1,250 transcripts, workforce / creatives / scientists). The stack is Python 3.11+ / PyTorch CPU-only / uv / Polars / Marimo. The pipeline is linear: download → extract → canonicalise → encode → classify → analyse.
+`cdt-graph-modality` is a research prototype testing whether **concept graphs extracted from interview transcripts constitute a structurally distinct modality** for consumer digital twin (CDT) representation. The architecture is built on **target-agnostic modality encoders**: each modality (text, graph stats, GIN graph embedding) produces a frozen vector representation that encodes what the data IS, not what it predicts. Downstream classifiers consume these fixed embeddings. This separation allows clean measurement of whether graph modalities add complementary signal over text alone. The stack is Python 3.11+ / PyTorch CPU-only / uv / Polars / Marimo. The pipeline is linear: download → extract → canonicalise → encode → classify → analyse.
 
 ---
 
@@ -34,14 +34,19 @@ encoding/
   text_encoder.py
   graph_stats.py
   gnn/
-    dataset.py
-    model.py
-    train.py
+    dataset.py          # PyG Dataset — converts graphs to Data objects
+    autoencoder.py      # GIN autoencoder — self-supervised, target-agnostic
+    encode.py           # Frozen encoder inference — produces 128-dim embeddings
 classification/
   split.py
   baseline.py
   route2.py
-  route3.py
+  route3.py             # DEPRECATED — conflated GIN+classifier, replaced by fusion/
+  fusion/
+    models.py           # Classifier zoo (single, stacked, gated, late fusion)
+    train.py            # Generic training loop for frozen embeddings
+    run.py              # Config-driven experiment runner
+    config.py           # ExperimentConfig dataclass
 notebooks/                # Marimo notebooks (.py files, tracked in git)
 results/                  # Experiment results as JSON/CSV (gitignored)
 tests/
@@ -69,20 +74,27 @@ tests/
 | **Canonicalisation** | |
 | `canonicalisation/canonical_map.json` | Locked canonical vocabulary — source of truth for all node type counting |
 | **Encoding** | |
-| `encoding/gnn/model.py` | GIN architecture — 388-dim node features, 128-dim graph embedding |
-| `encoding/gnn/train.py` | GIN training loop — early stopping, class weights, LR scheduling |
-| `encoding/graph_stats.py` | Route 2 feature vector — 30 dimensions, networkx-derived |
+| `encoding/text_encoder.py` | SBERT text embeddings (768-dim), human-only turns, frozen |
+| `encoding/graph_stats.py` | Route 2 feature vector — 30 dimensions, networkx-derived, deterministic |
+| `encoding/gnn/dataset.py` | PyG Dataset — converts graphs to Data objects with node features |
+| `encoding/gnn/autoencoder.py` | GIN autoencoder — self-supervised training, target-agnostic |
+| `encoding/gnn/encode.py` | Frozen GIN inference — produces 128-dim embeddings for any graph set |
 | **Classification** | |
 | `classification/split.py` | Fixed stratified 70/15/15 split (seed=42), cached split IDs |
 | `classification/baseline.py` | Route 1 — text-only logistic regression |
 | `classification/route2.py` | Route 2 — text + graph stats LR with permutation importance |
-| `classification/route3.py` | Route 3 — text + GIN with route comparison table |
+| `classification/route3.py` | DEPRECATED — conflated GIN+classifier; replaced by fusion/ package |
+| `classification/fusion/models.py` | Classifier zoo — single, stacked, gated fusion, late fusion |
+| `classification/fusion/train.py` | Generic training loop — consumes frozen modality embeddings |
+| `classification/fusion/run.py` | Config-driven experiment runner — any arch × any target |
+| `classification/fusion/config.py` | ExperimentConfig dataclass — reproducible experiment specs |
 
 ---
 
 ## Architecture Principles
 
 - **Cache everything.** Extraction is API-expensive; text encoding is compute-expensive. Both run once and write to `cache/` or `data/graphs/`. Never re-extract or re-encode if cached output exists. Check cache before any API call.
+- **Target-agnostic encoders, task-specific classifiers.** Modality encoders (SBERT, graph stats, GIN autoencoder) produce frozen vector representations that encode what the data IS, not what it predicts. Only classifiers learn per-task. This separation enables clean measurement of modality complementarity — the same graph embedding is used for cohort, AI adoption, or any future target without retraining the encoder.
 - **Multi-backend extractor.** The extractor supports both Anthropic and OpenAI-compatible backends via `--backend`. DeepSeek uses the OpenAI-compatible endpoint (`deepseek-chat`) with JSON mode (`response_format={"type": "json_object"}`) — NOT the Anthropic-compatible endpoint which forces thinking mode and causes JSON truncation. Agnes uses OpenAI-compatible endpoint. Claude uses Anthropic SDK.
 - **Prompts are versioned files.** Extraction prompts live in `extraction/prompts/` as numbered text files (`v1.txt`, `v2.txt`, `v3.txt`). Never hardcode prompt text in Python. Active version: `v3.txt` (two-shot examples: workforce + scientist). Older versions preserved, never deleted.
 - **Lock before modelling.** `canonical_map.json` is finalised and locked before any encoding or classification begins. No downstream code may modify it. If the vocabulary needs changing, re-run canonicalisation and re-encode from scratch.
@@ -115,13 +127,19 @@ uv run python extraction/extractor.py --backend anthropic  # Use Claude instead
 uv run python extraction/model_comparison/run_comparison.py # 3-model comparison (Claude/DeepSeek/Agnes)
 uv run python canonicalisation/clusterer.py                 # Build canonical vocabulary
 uv run python canonicalisation/apply_canonical.py           # Apply to all graphs
-uv run python encoding/text_encoder.py                      # Encode transcripts (caches)
+uv run python encoding/text_encoder.py                      # Encode transcripts → 768-dim (caches)
+uv run python encoding/graph_stats.py                       # Compute graph stats → 30-dim (caches)
+uv run python encoding/gnn/autoencoder.py                   # Train GIN autoencoder (self-supervised)
+uv run python encoding/gnn/encode.py                        # Frozen GIN inference → 128-dim (caches)
+uv run python encoding/build_dataset.py                     # Package frozen embeddings → .npz
+uv run python classification/fusion/run.py                  # Run classifier experiment (config-driven)
 uv run python classification/baseline.py                    # Text-only baseline
 uv run python classification/route2.py                      # Text + graph stats
-uv run python classification/route3.py                      # Text + GIN
 uv run marimo edit notebooks/01_extraction_review.py        # Graph inspection notebook
 uv run marimo edit notebooks/02_graph_exploration.py        # Cohort topology notebook
 uv run marimo edit notebooks/03_classification_results.py   # Results notebook
+uv run marimo edit notebooks/04_structural_analysis.py      # H1-H4 structural analysis
+uv run marimo edit notebooks/05_fusion_analysis.py          # Fusion experiment analysis
 uv run pytest                                               # Run test suite
 bd ready                                                    # Check available tasks (Beads)
 ```
@@ -200,19 +218,19 @@ Every bead that dispatches parallel sub-agents must include an explicit **Merge 
 | Extraction log | `.claude/context/extraction-log.md` |
 | Governance principles | `.claude/context/codified-context-principles.md` |
 | Results log | `.claude/context/results-log.md` |
-| Phase 1 post-mortem | `.claude/context/phase1-postmortem.md` *(create during Phase 4)* |
+| Phase 1 post-mortem | `.claude/context/phase1-postmortem.md` |
 
 ---
 
 ## Current Phase
 
-**Phase 2 complete. Ready for Phase 3 — Encoding + Classification.**
+**Phase 4 complete. Phase 5 — Target-Agnostic Modality Fusion — ready to start.**
 
 ### Phase 1 ✅ — Extraction (complete)
 - 1,250 transcripts extracted with DeepSeek (deepseek-chat, OpenAI-compatible endpoint, JSON mode)
 - Prompt v3 active (two-shot examples: workforce + scientist)
 - 0 failures, 0.3% violation rate, mean 14.9 nodes / 13.6 edges per graph
-- Model comparison: Claude won initial round; DeepSeek works after switching to OpenAI endpoint + JSON mode; Agnes is viable but leaner
+- Model comparison complete; post-mortem at `.claude/context/phase1-postmortem.md`
 
 ### Phase 2 ✅ — Canonicalisation (complete)
 - 1,271 canonical labels from 15,753 free-text labels across 4 entity types
@@ -220,14 +238,33 @@ Every bead that dispatches parallel sub-agents must include an explicit **Merge 
 - 100% coverage: all 18,662 nodes mapped
 - `canonical_map.json` locked (2026-06-08)
 
-### Phase 3 🔄 — Encoding + Classification (5/7 beads closed)
-- Text embeddings: 1,250 × 768-dim cached (`all-mpnet-base-v2`)
+### Phase 3 ✅ — Encoding + Classification (complete)
+- Text embeddings: 1,250 × 768-dim cached (`all-mpnet-base-v2`, human-only turns)
 - Train/val/test split: 875/187/188 stratified (seed=42)
-- **Ceiling effect**: text-only baseline achieves val macro-F1 = 1.0 — cohorts trivially separable from language
-- Route 1 (text-only): val macro-F1 = **1.0000**
-- Route 2 (text + graph stats): val macro-F1 = **1.0000** (Δ = +0.0000)
-- Route 3 (text + GIN): val macro-F1 = **0.9797** (Δ = -0.0203, early stopped epoch 26)
-- Remaining: final test set evaluation (bead `ico`)
+- **Interviewer confound found and fixed** — AI turns stripped (cohort-specific openings leaked labels)
+- Route 1 (text-only): test macro-F1 = 0.8228
+- Route 2 (text+stats): test macro-F1 = 0.8390 (Δ = +0.0161)
+- Route 3 (text+GIN): test macro-F1 = 0.8368 (Δ = +0.0139)
+- Key finding: GIN-only (0.8434) beats text-only — graph structure alone is a strong signal
+- Demographic classification: AI adoption shows graph upside (+4.3pp); career stage not viable
+
+### Phase 4 ✅ — Structural Analysis (RQ2) (complete)
+- H1 (scientist hub-and-spoke): Significant but reversed — scientists have lower C:V ratio
+- H2 (creative negative valence): Supported — creatives highest negative-stance fraction
+- H3 (workforce bipolarity): Not significant — ceiling effect from ontology constraint
+- H4 (scientist cognitive style): Not significant — CSM count ceiling (max 2)
+- AI adoption exploratory: only C:V ratio differentiates tool_user vs integrated
+- Full results in `.claude/context/results-log.md` and `notebooks/04_structural_analysis.py`
+
+### Phase 5 🔜 — Target-Agnostic Modality Fusion (epic `4h4`, 5 beads)
+- **Goal:** Test whether graph modalities add complementary signal when encoders are frozen (target-agnostic)
+- Bead A (`8d2`): GIN autoencoder — self-supervised, no classification labels
+- Bead B (`bbt`): Modality embedding dataset — package frozen embeddings as .npz
+- Bead C (`olc`): Classifier zoo + experiment runner — 4 architectures, config-driven
+- Bead D (`778`): Disentanglement analysis — complementarity matrices
+- Bead E (`6cu`): Summary report — synthesis in results-log.md
+- **Key design change:** Old `encoding/gnn/model.py` and `train.py` (task-supervised GIN) are DEPRECATED.
+  New: `encoding/gnn/autoencoder.py` (self-supervised) + `classification/fusion/` (task-specific classifiers).
 
 
 <!-- BEGIN BEADS INTEGRATION v:1 profile:minimal hash:7510c1e2 -->
