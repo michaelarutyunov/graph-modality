@@ -107,6 +107,7 @@ def apply_all(
 
 
 def main() -> None:
+    """Apply canonical labels to all free-text graphs and write to s1_data/graphs/canonical/."""
     print(f"Canonicalising graphs from {FREE_TEXT_DIR} → {CANONICAL_DIR}")
     total, clean, unmapped = apply_all()
 

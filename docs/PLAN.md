@@ -192,6 +192,13 @@
 
 ### 3.2 Beads
 
+> ⚠️ **Phase 3 bead file paths reflect the pre-restructuring layout.** Files were renamed/merged during Phase 5 post-implementation restructuring (2026-06-09). See Phase 5 completion notes below for current file names:
+> - `s4_encoding/graph_stats.py` → `s4_encoding/graph_stats_encoder.py`
+> - `s4_encoding/gnn/dataset.py` → `s4_encoding/graph_dataset.py`
+> - `s4_encoding/gnn/model.py` + `gnn/train.py` → `s4_encoding/graph_gnn_encoder.py`
+> - `s5_classification/route2.py` → restructured (analysis-only, training in `train_run.py`)
+> - `s5_classification/route3.py` → `s5_classification/_archived/route3.py`
+
 #### 3a. Text embeddings
 - **File:** `s4_encoding/text_encoder.py`
 - **Acceptance:** 300 × 768-dim embeddings cached in `cache/text_embeddings.npy`; ID cache in `cache/text_embedding_ids.json`; idempotent (loads from cache on re-run)

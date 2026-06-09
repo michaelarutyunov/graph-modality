@@ -30,7 +30,7 @@
 | `s4_encoding/graph_stats_encoder.py` | script | called by classification notebooks |
 | `s4_encoding/graph_gnn_encoder.py` | script | self-supervised GIN training + frozen inference (train once, encode with --encode) |
 | `s4_encoding/build_dataset.py` | script | package frozen embeddings as .npz per split/target |
-| `s5_classification/run.py` | script | config-driven experiment runner (any arch × any target) |
+| `s5_classification/train_run.py` | script | config-driven experiment runner (any arch × any target) |
 | `s6_notebooks/01_extraction_review.py` | Marimo | interactive graph inspection, model comparison scoring |
 | `s6_notebooks/02_graph_exploration.py` | Marimo | cohort topology visualisation, hypothesis testing |
 | `s6_notebooks/03_classification_results.py` | Marimo | confusion matrices, feature importance, route comparison |
@@ -50,7 +50,7 @@ cdt-graph-modality/
 │   ├── PLAN.md
 │   └── adr/
 │
-├── data/
+├── s1_data/
 │   ├── raw/                              # downloaded CSVs (gitignored)
 │   ├── tagged/                           # speaker-tagged .jsonl (gitignored)
 │   └── graphs/
@@ -97,7 +97,7 @@ cdt-graph-modality/
 │   ├── analysis_stats.py                 # stats-only per-class report
 │   └── _archived/                        # Phase 3 route3
 │
-├── notebooks/
+├── s6_notebooks/
 │   ├── 01_extraction_review.py           # Marimo
 │   ├── 02_graph_exploration.py           # Marimo
 │   ├── 03_classification_results.py      # Marimo
@@ -1020,7 +1020,7 @@ train_ids, val_ids, test_ids, labels_dict = load_split()
 
 ### 9.2 classifier zoo
 
-`s5_classification/models.py` (re-exports from single/stacked/gated/late)
+`s5_classification/classifiers.py` (re-exports from mlp_single/stacked/gated/late)
 
 Four architectures, all consuming frozen modality embeddings with the same interface:
 
@@ -1095,7 +1095,7 @@ class LateFusionClassifier(nn.Module):
 
 ### 9.3 experiment runner
 
-`s5_classification/config.py` + `s5_classification/run.py`
+`s5_classification/train_config.py` + `s5_classification/train_run.py`
 
 ```python
 @dataclass
@@ -1173,7 +1173,7 @@ Total: 2 × 6 × 4 = 48 experiments. The config-driven runner makes this a param
 
 ## 10. marimo notebooks
 
-Marimo notebooks are `.py` files run with `marimo edit notebooks/01_extraction_review.py`.
+Marimo notebooks are `.py` files run with `marimo edit s6_notebooks/01_extraction_review.py`.
 
 ### 10.1 01_extraction_review.py
 
@@ -1253,9 +1253,9 @@ Key cells:
 [ ] uv sync — verify torch is CPU-only (check torch.__version__ ends in +cpu)
 [ ] torch_geometric import succeeds
 [ ] .env with API keys
-[ ] python data/download.py — dataset present in data/raw/
+[ ] python s1_data/download.py — dataset present in s1_data/raw/
 [ ] python s2_extraction/tagger.py — test on one transcript
 [ ] extraction prompt v1 manually reviewed on 5 transcripts
 [ ] model comparison sample IDs fixed in sample_ids.txt
-[ ] marimo edit notebooks/01_extraction_review.py — opens without error
+[ ] marimo edit s6_notebooks/01_extraction_review.py — opens without error
 ```

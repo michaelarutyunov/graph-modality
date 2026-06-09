@@ -129,7 +129,7 @@ docs/                     # CHARTER.md, ENGINEERING.md, PLAN.md
 ## Build / Run / Test
 
 ```bash
-uv run python data/download.py                              # Download dataset (idempotent)
+uv run python s1_data/download.py                              # Download dataset (idempotent)
 uv run python s2_extraction/extractor.py                       # Run extraction with DeepSeek (default, skips cached)
 uv run python s2_extraction/extractor.py --backend anthropic  # Use Claude instead
 uv run python s2_extraction/model_comparison/run_comparison.py # 3-model comparison (Claude/DeepSeek/Agnes)
@@ -234,6 +234,7 @@ Every bead that dispatches parallel sub-agents must include an explicit **Merge 
 | Governance principles | `.claude/context/codified-context-principles.md` |
 | Results log | `.claude/context/results-log.md` |
 | Phase 1 post-mortem | `.claude/context/phase1-postmortem.md` |
+| Demographic variable selection | `.claude/context/demographic-variables.md` |
 
 ---
 

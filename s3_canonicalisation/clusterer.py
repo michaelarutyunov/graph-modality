@@ -163,6 +163,7 @@ def _print_sample_clusters(
 
 
 def main() -> None:
+    """Build canonical vocabulary from free-text labels and save to canonical_map.json."""
     canonical_map = build_canonical_map()
 
     # Write output
