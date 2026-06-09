@@ -1,5 +1,4 @@
-"""Route 2b — graph statistics ONLY analysis.
-
+"""
 Loads a pre-trained sklearn model (stats-only, trained by ``classification/run.py``
 with backend=sklearn, modalities=[\"stats\"]) and reports per-class metrics.
 
@@ -18,8 +17,8 @@ import joblib
 import numpy as np
 from sklearn.metrics import classification_report, confusion_matrix, f1_score
 
-from s5_classification.split import load_split
 from s4_encoding.graph_stats_encoder import compute_all_stats
+from s5_classification.split import load_split
 
 CACHE_DIR = Path("cache")
 DEFAULT_MODEL_PATH = CACHE_DIR / "route2b_model.joblib"
@@ -59,16 +58,17 @@ def analyze(model_path: Path | None = None) -> dict:
     per_class = f1_score(y_val, preds, average=None, zero_division=0)
     cm = confusion_matrix(y_val, preds)
 
-    print(f"\n{'='*60}")
+    print(f"\n{'=' * 60}")
     print("ROUTE 2b: Graph Statistics ONLY (30-dim)")
-    print(f"{'='*60}")
+    print(f"{'=' * 60}")
     print(f"Val macro-F1: {f1:.4f}")
-    print(f"\nPer-class F1:")
+    print("\nPer-class F1:")
     for i, name in LABEL_MAP.items():
         print(f"  {name}: {per_class[i]:.4f}")
-    print(f"\nClassification report:")
-    print(classification_report(y_val, preds, target_names=list(LABEL_MAP.values()),
-                                zero_division=0))
+    print("\nClassification report:")
+    print(
+        classification_report(y_val, preds, target_names=list(LABEL_MAP.values()), zero_division=0)
+    )
     print(f"Confusion matrix:\n{cm}")
 
     return {

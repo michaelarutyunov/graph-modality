@@ -178,6 +178,8 @@ def extract_one(
 
     # Call API
     if backend["type"] == "anthropic":
+        if anthropic_client is None:
+            raise ValueError("Anthropic client required for anthropic backend")
         raw_text = _call_anthropic(
             prompt, anthropic_client, backend["model"], backend["max_tokens"]
         )

@@ -23,6 +23,9 @@ import matplotlib.pyplot as plt
 import numpy as np
 from sklearn.metrics import confusion_matrix, f1_score
 
+from s4_encoding.build_dataset import load_dataset
+from s5_classification.classifiers import build_classifier
+from s5_classification.sklearn_classifier import SklearnClassifier
 from s5_classification.train_config import (
     ExperimentConfig,
     build_all_sweeps,
@@ -30,10 +33,7 @@ from s5_classification.train_config import (
     build_sweep,
     print_sweep_summary,
 )
-from s5_classification.classifiers import build_classifier
-from s5_classification.sklearn_classifier import SklearnClassifier
 from s5_classification.train_loop import Trainer, TrainingConfig, plot_curves
-from s4_encoding.build_dataset import load_dataset
 
 
 def _load_data(cfg: ExperimentConfig) -> tuple[dict, dict, dict]:
@@ -55,7 +55,9 @@ def _load_data(cfg: ExperimentConfig) -> tuple[dict, dict, dict]:
         ft_idx = {tid: i for i, tid in enumerate(ft_ids)}
 
         for split_data, split_name in [
-            (train_data, "train"), (val_data, "val"), (test_data, "test")
+            (train_data, "train"),
+            (val_data, "val"),
+            (test_data, "test"),
         ]:
             tids = split_data["transcript_ids"]
             idx = [ft_idx[t] for t in tids if t in ft_idx]
@@ -91,9 +93,11 @@ def _run_torch(cfg: ExperimentConfig) -> dict:
     """Run a PyTorch experiment."""
     train_data, val_data, test_data = _load_data(cfg)
 
-    print(f"  Train: {len(train_data['labels'])}, "
-          f"Val: {len(val_data['labels'])}, "
-          f"Test: {len(test_data['labels'])}")
+    print(
+        f"  Train: {len(train_data['labels'])}, "
+        f"Val: {len(val_data['labels'])}, "
+        f"Test: {len(test_data['labels'])}"
+    )
 
     model = build_classifier(
         architecture=cfg.architecture,
@@ -119,6 +123,7 @@ def _run_torch(cfg: ExperimentConfig) -> dict:
     test_metrics = trainer.evaluate(test_data)
 
     import torch
+
     output_dir = Path(cfg.output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
     torch.save(model.state_dict(), output_dir / "model.pt")
@@ -152,9 +157,11 @@ def _run_sklearn(cfg: ExperimentConfig) -> dict:
     """Run a sklearn experiment."""
     train_data, val_data, test_data = _load_data(cfg)
 
-    print(f"  Train: {len(train_data['labels'])}, "
-          f"Val: {len(val_data['labels'])}, "
-          f"Test: {len(test_data['labels'])}")
+    print(
+        f"  Train: {len(train_data['labels'])}, "
+        f"Val: {len(val_data['labels'])}, "
+        f"Test: {len(test_data['labels'])}"
+    )
 
     model = SklearnClassifier(
         architecture=cfg.architecture,
@@ -193,8 +200,8 @@ def _run_sklearn(cfg: ExperimentConfig) -> dict:
 
     train_results = {
         "best_val_f1": val_f1,
-        "best_epoch": 0,       # sklearn doesn't epoch
-        "epochs_run": 0,       # sklearn doesn't epoch
+        "best_epoch": 0,  # sklearn doesn't epoch
+        "epochs_run": 0,  # sklearn doesn't epoch
         "train_losses": [],
         "val_losses": [],
         "val_f1s": [],
@@ -223,9 +230,14 @@ def _save_sklearn_curve(val_f1: float, save_path: Path) -> None:
     ax.set_ylabel("Macro-F1")
     ax.set_title("Sklearn — Validation F1")
     ax.axhline(y=val_f1, color="gray", linestyle="--", alpha=0.5)
-    for bar, val in zip(ax.patches, [val_f1]):
-        ax.text(bar.get_x() + bar.get_width() / 2, bar.get_height() + 0.02,
-                f"{val:.4f}", ha="center", fontsize=11)
+    for bar, val in zip(ax.patches, [val_f1], strict=False):
+        ax.text(
+            bar.get_x() + bar.get_width() / 2,
+            bar.get_height() + 0.02,
+            f"{val:.4f}",
+            ha="center",
+            fontsize=11,
+        )
     fig.tight_layout()
     save_path.parent.mkdir(parents=True, exist_ok=True)
     fig.savefig(save_path, dpi=150)
@@ -242,7 +254,7 @@ def run_experiment(cfg: ExperimentConfig) -> dict:
 
     Dispatches to the correct backend based on ``cfg.backend``.
     """
-    print(f"\n{'='*70}")
+    print(f"\n{'=' * 70}")
     print(f"Experiment: {cfg.tag}")
     print(f"  Backend: {cfg.backend}")
     print(f"  Target: {cfg.target} ({cfg.n_classes} classes)")
@@ -250,12 +262,9 @@ def run_experiment(cfg: ExperimentConfig) -> dict:
     print(f"  Architecture: {cfg.architecture}")
     if "graph" in cfg.modalities:
         print(f"  Graph labels: {cfg.graph_label_source}")
-    print(f"{'='*70}")
+    print(f"{'=' * 70}")
 
-    if cfg.backend == "sklearn":
-        result = _run_sklearn(cfg)
-    else:
-        result = _run_torch(cfg)
+    result = _run_sklearn(cfg) if cfg.backend == "sklearn" else _run_torch(cfg)
 
     train_results = result["train_results"]
     test_metrics = result["test_metrics"]
@@ -302,12 +311,12 @@ def run_sweep(
     for i, cfg in enumerate(configs):
         output_dir = Path(cfg.output_dir)
         if skip_existing and (output_dir / "metrics.json").exists():
-            print(f"\n[{i+1}/{len(configs)}] SKIP {cfg.tag} — already exists")
+            print(f"\n[{i + 1}/{len(configs)}] SKIP {cfg.tag} — already exists")
             existing = json.loads((output_dir / "metrics.json").read_text(encoding="utf-8"))
             results.append({"metrics": existing})
             continue
 
-        print(f"\n[{i+1}/{len(configs)}] Running {cfg.tag}...")
+        print(f"\n[{i + 1}/{len(configs)}] Running {cfg.tag}...")
         try:
             result = run_experiment(cfg)
             results.append(result)
@@ -320,9 +329,9 @@ def run_sweep(
 
 def print_comparison_table(results: list[dict]) -> None:
     """Print a summary comparison table of all experiments."""
-    print(f"\n{'='*110}")
+    print(f"\n{'=' * 110}")
     print("EXPERIMENT SUMMARY")
-    print(f"{'='*110}")
+    print(f"{'=' * 110}")
     header = f"{'Tag':<52} {'Backend':<8} {'Target':<14} {'Arch':<12} {'Val F1':<8} {'Test F1':<8}"
     print(header)
     print("-" * 110)
@@ -343,46 +352,60 @@ def print_comparison_table(results: list[dict]) -> None:
         print(f"{tag:<52} {backend:<8} {target:<14} {arch:<12} {val_f1:<8.4f} {test_f1:<8.4f}")
 
     # Best by target
-    print(f"\n{'='*110}")
+    print(f"\n{'=' * 110}")
     print("BEST BY TARGET")
     for target in ["ai_adoption", "cohort"]:
         target_results = [
-            r["metrics"] for r in results
-            if "metrics" in r and r["metrics"].get("target") == target
+            r["metrics"] for r in results if "metrics" in r and r["metrics"].get("target") == target
         ]
         if not target_results:
             continue
         best = max(target_results, key=lambda m: m.get("test_macro_f1", 0.0))
-        print(f"  {target}: {best['tag']} (backend={best.get('backend','torch')}) — "
-              f"test F1 = {best['test_macro_f1']:.4f}")
+        print(
+            f"  {target}: {best['tag']} (backend={best.get('backend', 'torch')}) — "
+            f"test F1 = {best['test_macro_f1']:.4f}"
+        )
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Run modality fusion experiments.")
     parser.add_argument(
-        "--dry-run", action="store_true",
+        "--dry-run",
+        action="store_true",
         help="Print the sweep without running experiments.",
     )
     parser.add_argument(
-        "--target", type=str, choices=["ai_adoption", "cohort"], default=None,
+        "--target",
+        type=str,
+        choices=["ai_adoption", "cohort"],
+        default=None,
         help="Run only experiments for a specific target.",
     )
     parser.add_argument(
-        "--backend", type=str, choices=["torch", "sklearn"], default=None,
+        "--backend",
+        type=str,
+        choices=["torch", "sklearn"],
+        default=None,
         help="Run only experiments for a specific backend.",
     )
     parser.add_argument(
-        "--sweep", type=str, choices=["torch", "sklearn", "all"], default="torch",
+        "--sweep",
+        type=str,
+        choices=["torch", "sklearn", "all"],
+        default="torch",
         help="Which sweep to run (default: torch).",
     )
     parser.add_argument(
-        "--graph-label-source", type=str, choices=["canonical", "free_text"],
+        "--graph-label-source",
+        type=str,
+        choices=["canonical", "free_text"],
         default=None,
         help="Override graph label source for all experiments "
-             "(default: canonical). Only affects graph modality.",
+        "(default: canonical). Only affects graph modality.",
     )
     parser.add_argument(
-        "--force", action="store_true",
+        "--force",
+        action="store_true",
         help="Re-run experiments even if results already exist.",
     )
     args = parser.parse_args()

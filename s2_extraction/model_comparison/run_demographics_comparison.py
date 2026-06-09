@@ -12,7 +12,6 @@ from __future__ import annotations
 
 import json
 import os
-import sys
 import time
 import urllib.error
 import urllib.request
@@ -105,9 +104,7 @@ def _call_openai(
     """
     api_key = os.environ.get(model_cfg["api_key_env"], "")
     if not api_key:
-        raise ValueError(
-            f"API key env var {model_cfg['api_key_env']} not set"
-        )
+        raise ValueError(f"API key env var {model_cfg['api_key_env']} not set")
 
     body: dict = {
         "model": model_cfg["model_id"],
@@ -220,7 +217,10 @@ def _compare(deepseek: dict, agnes: dict) -> None:
     print("=" * 70)
 
     # Per-transcript table
-    print(f"\n{'transcript_id':<22} {'DS career':>12} {'AG career':>12} {'agree?':>8}  {'DS AI':>12} {'AG AI':>12} {'agree?':>8}")
+    print(
+        f"\n{'transcript_id':<22} {'DS career':>12} {'AG career':>12} "
+        f"{'agree?':>8}  {'DS AI':>12} {'AG AI':>12} {'agree?':>8}"
+    )
     print("-" * 90)
 
     cs_agree = 0
@@ -269,9 +269,13 @@ def _compare(deepseek: dict, agnes: dict) -> None:
     print("=" * 70)
     print(f"\n{'Metric':<35} {'Career Stage':>15} {'AI Adoption':>15}")
     print("-" * 67)
-    print(f"{'Agreement rate':<35} {cs_agree/n:>14.1%}  {ai_agree/n:>14.1%}")
-    print(f"{'DeepSeek uncertain rate':<35} {cs_ds_uncertain/n:>14.1%}  {ai_ds_uncertain/n:>14.1%}")
-    print(f"{'Agnes uncertain rate':<35} {cs_ag_uncertain/n:>14.1%}  {ai_ag_uncertain/n:>14.1%}")
+    print(f"{'Agreement rate':<35} {cs_agree / n:>14.1%}  {ai_agree / n:>14.1%}")
+    print(
+        f"{'DeepSeek uncertain rate':<35} {cs_ds_uncertain / n:>14.1%}  {ai_ds_uncertain / n:>14.1%}"
+    )
+    print(
+        f"{'Agnes uncertain rate':<35} {cs_ag_uncertain / n:>14.1%}  {ai_ag_uncertain / n:>14.1%}"
+    )
 
     # Class distribution comparison
     for attr, attr_name in [("career_stage", "Career Stage"), ("ai_adoption", "AI Adoption")]:
@@ -306,9 +310,9 @@ def main() -> None:
 
     for model_cfg in MODELS:
         name = model_cfg["name"]
-        print(f"\n{'='*60}")
+        print(f"\n{'=' * 60}")
         print(f"Running {name} ({model_cfg['model_id']})...")
-        print(f"{'='*60}")
+        print(f"{'=' * 60}")
         results[name.lower()] = _run_model(model_cfg, sample_ids)
 
     _compare(results["deepseek"], results["agnes"])
@@ -326,10 +330,10 @@ def main() -> None:
             print(f"\n  [{model_name}]")
             print(f"    career_stage: {cs.get('label')}")
             if cs.get("quotes"):
-                print(f"    quote: \"{cs['quotes'][0][:120]}...\"")
+                print(f'    quote: "{cs["quotes"][0][:120]}..."')
             print(f"    ai_adoption: {ai.get('label')}")
             if ai.get("quotes"):
-                print(f"    quote: \"{ai['quotes'][0][:120]}...\"")
+                print(f'    quote: "{ai["quotes"][0][:120]}..."')
 
 
 if __name__ == "__main__":

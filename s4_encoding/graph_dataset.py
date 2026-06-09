@@ -10,11 +10,14 @@ Each graph is converted to a ``torch_geometric.data.Data`` object with:
 from __future__ import annotations
 
 import json
-from pathlib import Path
+from typing import TYPE_CHECKING
 
 import torch
 from sentence_transformers import SentenceTransformer
 from torch_geometric.data import Data, Dataset
+
+if TYPE_CHECKING:
+    from pathlib import Path
 
 ENTITY_TYPES = ["Construct", "Value", "Stance", "CognitiveStyleMarker"]
 RELATIONS = ["SERVES", "EXPRESSED_VIA", "MODULATED_BY", "CONFLICTS_WITH"]
@@ -60,18 +63,24 @@ class GraphDataset(Dataset):
             if ntype in TYPE_TO_IDX:
                 type_onehots[i, TYPE_TO_IDX[ntype]] = 1.0
 
-        x = torch.cat([
-            type_onehots,
-            torch.tensor(label_embeddings, dtype=torch.float32),
-        ], dim=1)  # (n_nodes, 388)
+        x = torch.cat(
+            [
+                type_onehots,
+                torch.tensor(label_embeddings, dtype=torch.float32),
+            ],
+            dim=1,
+        )  # (n_nodes, 388)
 
         # ── edge index and attributes ──────────────────────────────
         if edges:
-            edge_index = torch.tensor(
-                [[node_id_to_idx[e["source"]], node_id_to_idx[e["target"]]]
-                 for e in edges],
-                dtype=torch.long,
-            ).t().contiguous()  # (2, n_edges)
+            edge_index = (
+                torch.tensor(
+                    [[node_id_to_idx[e["source"]], node_id_to_idx[e["target"]]] for e in edges],
+                    dtype=torch.long,
+                )
+                .t()
+                .contiguous()
+            )  # (2, n_edges)
 
             edge_attr = torch.zeros(len(edges), 4)
             for i, e in enumerate(edges):

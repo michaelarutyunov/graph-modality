@@ -59,9 +59,8 @@ class GatedFusionClassifier(nn.Module):
         attn = F.softmax(self.gate(concat), dim=1)  # (B, n_modalities)
 
         # Expand each modality's weight across its dimensions and multiply
-        weights = torch.cat([
-            attn[:, i:i + 1].expand(-1, sz)
-            for i, sz in enumerate(self.modality_sizes)
-        ], dim=1)
+        weights = torch.cat(
+            [attn[:, i : i + 1].expand(-1, sz) for i, sz in enumerate(self.modality_sizes)], dim=1
+        )
 
         return self.classifier(concat * weights)

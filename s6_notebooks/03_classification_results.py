@@ -38,6 +38,7 @@ def _():
     import json as _json
 
     from pathlib import Path as _Path
+
     _repo_root = _Path(__file__).parent.parent
     result_dir = _repo_root / "results"
 
@@ -110,17 +111,21 @@ def _(mo, routes):
 
     _detail_rows = []
     for _name, _data in routes.items():
-        _detail_rows.append({
-            "route": _name,
-            "macro_f1": round(_data.get("macro_f1", 0), 4),
-            "n_samples": _data.get("n_samples", "—"),
-        })
+        _detail_rows.append(
+            {
+                "route": _name,
+                "macro_f1": round(_data.get("macro_f1", 0), 4),
+                "n_samples": _data.get("n_samples", "—"),
+            }
+        )
 
     if _detail_rows:
-        mo.vstack([
-            mo.md("## 2. Per-Route Results"),
-            _pl.DataFrame(_detail_rows).sort("macro_f1", descending=True),
-        ])
+        mo.vstack(
+            [
+                mo.md("## 2. Per-Route Results"),
+                _pl.DataFrame(_detail_rows).sort("macro_f1", descending=True),
+            ]
+        )
     else:
         mo.md("## 2. Per-Route Results\n\nNo route data found.")
     return
@@ -143,11 +148,13 @@ def _(mo, routes):
     for _name, _data in routes.items():
         _per_class = _data.get("per_class_f1", {})
         for _cls, _f1 in _per_class.items():
-            _class_rows.append({
-                "route": _name,
-                "class": _cls,
-                "f1": _f1,
-            })
+            _class_rows.append(
+                {
+                    "route": _name,
+                    "class": _cls,
+                    "f1": _f1,
+                }
+            )
 
     if _class_rows:
         df_class = _pl.DataFrame(_class_rows)
@@ -161,7 +168,10 @@ def _(mo, routes):
         # Get unique routes, limit to main ones for readability
         _route_names = sorted(set(df_class["route"].to_list()))
         for _i, _r in enumerate(_route_names):
-            _f1s = [df_class.filter((df_class["route"] == _r) & (df_class["class"] == _c))["f1"].item() for _c in _classes]
+            _f1s = [
+                df_class.filter((df_class["route"] == _r) & (df_class["class"] == _c))["f1"].item()
+                for _c in _classes
+            ]
             _ax.bar([_xi + _i * _width for _xi in _x], _f1s, _width, label=_r)
 
         _ax.set_ylabel("F1 Score")
@@ -198,6 +208,7 @@ def _(mo):
     fallback message.
     """
     from pathlib import Path as _Path
+
     _repo_root = _Path(__file__).parent.parent
     _pngs = sorted((_repo_root / "results").glob("confusion_matrices_*.png"))
     if _pngs:
@@ -215,7 +226,9 @@ def _(mo):
     permutation importance can identify which graph-stat features
     contribute most to classification.
     """
-    mo.md("## 5. Feature Importance (Route 2)\n\nTop graph statistics features from permutation importance:")
+    mo.md(
+        "## 5. Feature Importance (Route 2)\n\nTop graph statistics features from permutation importance:"
+    )
     return
 
 
@@ -248,7 +261,9 @@ def _(mo):
     integrated) for AI adoption, using the same route structure but
     on the subset of transcripts that have demographic metadata.
     """
-    mo.md("## 6. Demographic Classification Results\n\nAI adoption (tool_user vs integrated) — n=1,224:")
+    mo.md(
+        "## 6. Demographic Classification Results\n\nAI adoption (tool_user vs integrated) — n=1,224:"
+    )
     return
 
 
@@ -265,10 +280,12 @@ def _(demo_results, mo):
     if demo_results:
         _demo_rows = []
         for _route, _data in demo_results.get("ai_adoption", {}).items():
-            _demo_rows.append({
-                "route": _route,
-                "macro_f1": round(_data.get("macro_f1", 0), 4),
-            })
+            _demo_rows.append(
+                {
+                    "route": _route,
+                    "macro_f1": round(_data.get("macro_f1", 0), 4),
+                }
+            )
 
         if _demo_rows:
             _pl.DataFrame(_demo_rows)
@@ -300,6 +317,7 @@ def _(mo):
     (required by Marimo's display model).
     """
     from pathlib import Path as _Path
+
     _repo_root = _Path(__file__).parent.parent
     _curve_path = _repo_root / "cache/gnn_curves.png"
     (

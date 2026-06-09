@@ -22,10 +22,10 @@ from typing import Any
 
 import numpy as np
 
-from s5_classification.split import load_split
-from s4_encoding.graph_stats_encoder import compute_all_stats
 from s4_encoding.graph_gnn_encoder import encode_graphs
+from s4_encoding.graph_stats_encoder import compute_all_stats
 from s4_encoding.text_encoder import encode_transcripts
+from s5_classification.split import load_split
 
 # ── Paths ────────────────────────────────────────────────────────────────────
 PROJECT_ROOT = Path(".")
@@ -140,10 +140,7 @@ def build_dataset(label_source: str = "canonical") -> dict[str, Any]:
     modalities = _load_modality_arrays(label_source=label_source)
 
     # Build ID→index lookups for each modality
-    idx_lookups = {
-        name: _build_id_index(id_list)
-        for name, (_embs, id_list) in modalities.items()
-    }
+    idx_lookups = {name: _build_id_index(id_list) for name, (_embs, id_list) in modalities.items()}
 
     # ── Load cohort labels ──────────────────────────────────────────────────
     print("\nLoading cohort split and labels...")
@@ -179,13 +176,11 @@ def build_dataset(label_source: str = "canonical") -> dict[str, Any]:
                 arrays[mod_name] = embs[indices]
 
             # Gather labels
-            label_array = np.array(
-                [labels[tid] for tid in split_id_list], dtype=np.int64
-            )
+            label_array = np.array([labels[tid] for tid in split_id_list], dtype=np.int64)
 
             # Compute label distribution
             unique, counts = np.unique(label_array, return_counts=True)
-            label_dist = {str(int(u)): int(c) for u, c in zip(unique, counts)}
+            label_dist = {str(int(u)): int(c) for u, c in zip(unique, counts, strict=False)}
 
             # Save
             out_path = DATASET_DIR / f"{target}_{split_name}.npz"
@@ -222,7 +217,10 @@ def build_dataset(label_source: str = "canonical") -> dict[str, Any]:
         "source_encoders": {
             "text": "all-mpnet-base-v2 (frozen SBERT, human-only turns)",
             "stats": "networkx-derived graph statistics (30-dim, deterministic)",
-            "graph": f"GIN autoencoder (self-supervised, node type reconstruction, 128-dim, {label_source} labels)",
+            "graph": (
+                f"GIN autoencoder (self-supervised, node type reconstruction, "
+                f"128-dim, {label_source} labels)"
+            ),
         },
         "graph_label_source": label_source,
         "targets": {
@@ -232,9 +230,7 @@ def build_dataset(label_source: str = "canonical") -> dict[str, Any]:
     }
 
     readme_path = DATASET_DIR / "README.json"
-    readme_path.write_text(
-        json.dumps(metadata, indent=2, ensure_ascii=False), encoding="utf-8"
-    )
+    readme_path.write_text(json.dumps(metadata, indent=2, ensure_ascii=False), encoding="utf-8")
     print(f"\nMetadata saved to {readme_path}")
 
     return metadata
@@ -256,8 +252,7 @@ def load_dataset(target: str, split: str) -> dict[str, np.ndarray]:
     path = DATASET_DIR / f"{target}_{split}.npz"
     if not path.exists():
         raise FileNotFoundError(
-            f"Dataset file not found: {path}. "
-            "Run 'uv run python encoding/build_dataset.py' first."
+            f"Dataset file not found: {path}. Run 'uv run python encoding/build_dataset.py' first."
         )
     return dict(np.load(path, allow_pickle=False))
 
@@ -267,7 +262,7 @@ if __name__ == "__main__":
 
     # Print summary
     for target_name, target_data in metadata["targets"].items():
-        print(f"\n{'='*60}")
+        print(f"\n{'=' * 60}")
         print(f"Target: {target_name}")
         for split_name, split_data in target_data["shapes"].items():
             dist = target_data["label_distributions"][split_name]

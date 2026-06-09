@@ -102,11 +102,16 @@ def test_apply_all_output_count_matches_input(tmp_path, sample_map):
     for i in range(3):
         g = {
             "transcript_id": f"t{i}",
-            "nodes": [{
-                "id": "n1", "type": "Construct", "label": "trust ↔ distrust",
-                "label_negative": "distrust", "bipolarity_complete": True,
-                "grounding_span": "test",
-            }],
+            "nodes": [
+                {
+                    "id": "n1",
+                    "type": "Construct",
+                    "label": "trust ↔ distrust",
+                    "label_negative": "distrust",
+                    "bipolarity_complete": True,
+                    "grounding_span": "test",
+                }
+            ],
             "edges": [],
         }
         (free / f"t{i}.json").write_text(json.dumps(g))

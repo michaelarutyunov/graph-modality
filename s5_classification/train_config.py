@@ -22,7 +22,7 @@ MODALITY_DIMS = {
 }
 
 TARGET_CLASSES = {
-    "cohort": 3,       # workforce, creatives, scientists
+    "cohort": 3,  # workforce, creatives, scientists
     "ai_adoption": 2,  # tool_user, integrated
 }
 
@@ -82,10 +82,14 @@ class ExperimentConfig:
         """Relative output directory for this experiment's results."""
         modality_str = "-".join(self.modalities)
         prefix = f"{self.backend}_" if self.backend != "torch" else ""
-        label_suffix = f"_{self.graph_label_source}" if (
-            "graph" in self.modalities and self.graph_label_source != "canonical"
-        ) else ""
-        return f"results/fusion/{self.target}/{prefix}{self.architecture}_{modality_str}{label_suffix}"
+        label_suffix = (
+            f"_{self.graph_label_source}"
+            if ("graph" in self.modalities and self.graph_label_source != "canonical")
+            else ""
+        )
+        return (
+            f"results/fusion/{self.target}/{prefix}{self.architecture}_{modality_str}{label_suffix}"
+        )
 
 
 def build_sweep() -> list[ExperimentConfig]:
@@ -156,7 +160,10 @@ def build_sklearn_sweep() -> list[ExperimentConfig]:
     ]
 
     sklearn_archs: list[SklearnArchitecture] = [
-        "logistic", "random_forest", "gradient_boost", "svm",
+        "logistic",
+        "random_forest",
+        "gradient_boost",
+        "svm",
     ]
 
     for target in targets:

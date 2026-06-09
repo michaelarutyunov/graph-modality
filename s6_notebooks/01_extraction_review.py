@@ -33,6 +33,7 @@ def _(mo):
     heading and body into one displayed output.
     """
     from pathlib import Path as _Path
+
     _results_dir = _Path("s2_extraction/model_comparison/results")
     _has_structured = _results_dir.exists() and any(_results_dir.iterdir())
 
@@ -114,6 +115,7 @@ def _():
     import json as _json
 
     from pathlib import Path as _Path
+
     _repo_root = _Path(__file__).parent.parent
     _paths = sorted(_repo_root.glob("s1_data/graphs/free_text/*.json"))
     graphs = []
@@ -145,32 +147,36 @@ def _(graphs, mo):
             _t = _n.get("type", "")
             if _t in _type_counts:
                 _type_counts[_t] += 1
-        _rows.append({
-            "transcript_id": _g["transcript_id"],
-            "split": _g["split"],
-            "n_nodes": len(_nodes),
-            "n_edges": len(_edges),
-            "n_construct": _type_counts["Construct"],
-            "n_value": _type_counts["Value"],
-            "n_stance": _type_counts["Stance"],
-            "n_csm": _type_counts["CognitiveStyleMarker"],
-            "violations": len(_g.get("validation_violations", [])),
-        })
+        _rows.append(
+            {
+                "transcript_id": _g["transcript_id"],
+                "split": _g["split"],
+                "n_nodes": len(_nodes),
+                "n_edges": len(_edges),
+                "n_construct": _type_counts["Construct"],
+                "n_value": _type_counts["Value"],
+                "n_stance": _type_counts["Stance"],
+                "n_csm": _type_counts["CognitiveStyleMarker"],
+                "violations": len(_g.get("validation_violations", [])),
+            }
+        )
 
     df_meta = _pl.DataFrame(_rows)
 
-    mo.vstack([
-        mo.md("## Corpus-Level Summary"),
-        mo.md(f"""
+    mo.vstack(
+        [
+            mo.md("## Corpus-Level Summary"),
+            mo.md(f"""
         | Metric | Value |
         |--------|-------|
         | Total graphs | {df_meta.height} |
-        | Mean nodes | {df_meta['n_nodes'].mean():.1f} |
-        | Mean edges | {df_meta['n_edges'].mean():.1f} |
-        | Graphs with violations | {df_meta.filter(df_meta['violations'] > 0).height} |
-        | Violation rate | {df_meta['violations'].mean() * 100:.1f}% |
+        | Mean nodes | {df_meta["n_nodes"].mean():.1f} |
+        | Mean edges | {df_meta["n_edges"].mean():.1f} |
+        | Graphs with violations | {df_meta.filter(df_meta["violations"] > 0).height} |
+        | Violation rate | {df_meta["violations"].mean() * 100:.1f}% |
         """),
-    ])
+        ]
+    )
     return (df_meta,)
 
 
@@ -183,16 +189,23 @@ def _(df_meta):
     is the last expression so Marimo renders it as an interactive table.
     """
     import polars as _pl
-    _cohort = df_meta.group_by("split").agg([
-        _pl.col("n_nodes").mean().round(2).alias("avg_nodes"),
-        _pl.col("n_edges").mean().round(2).alias("avg_edges"),
-        _pl.col("n_construct").mean().round(2).alias("avg_constructs"),
-        _pl.col("n_value").mean().round(2).alias("avg_values"),
-        _pl.col("n_stance").mean().round(2).alias("avg_stances"),
-        _pl.col("n_csm").mean().round(2).alias("avg_csms"),
-        _pl.col("violations").sum().alias("total_violations"),
-        _pl.len().alias("count"),
-    ]).sort("split")
+
+    _cohort = (
+        df_meta.group_by("split")
+        .agg(
+            [
+                _pl.col("n_nodes").mean().round(2).alias("avg_nodes"),
+                _pl.col("n_edges").mean().round(2).alias("avg_edges"),
+                _pl.col("n_construct").mean().round(2).alias("avg_constructs"),
+                _pl.col("n_value").mean().round(2).alias("avg_values"),
+                _pl.col("n_stance").mean().round(2).alias("avg_stances"),
+                _pl.col("n_csm").mean().round(2).alias("avg_csms"),
+                _pl.col("violations").sum().alias("total_violations"),
+                _pl.len().alias("count"),
+            ]
+        )
+        .sort("split")
+    )
     _cohort
     return
 
@@ -204,7 +217,9 @@ def _(mo):
     Purely presentational — displays the section title and instructions
     for the dropdown-driven transcript inspection below.
     """
-    mo.md("## Interactive Graph Inspection\n\nSelect a transcript to inspect its extracted concept graph:")
+    mo.md(
+        "## Interactive Graph Inspection\n\nSelect a transcript to inspect its extracted concept graph:"
+    )
     return
 
 
@@ -238,6 +253,7 @@ def _(dropdown, mo):
     import json as _json
 
     from pathlib import Path as _Path
+
     _repo_root = _Path(__file__).parent.parent
     _selected_id = dropdown.value
     selected_graph = None
@@ -255,11 +271,15 @@ def _(dropdown, mo):
             if _v
             else mo.md("✅ No validation violations")
         )
-        mo.vstack([
-            mo.md(f"**Selected:** {_selected_id} ({selected_graph['split']})"),
-            mo.md(f"Nodes: {len(selected_graph['nodes'])}, Edges: {len(selected_graph['edges'])}"),
-            _violations_md,
-        ])
+        mo.vstack(
+            [
+                mo.md(f"**Selected:** {_selected_id} ({selected_graph['split']})"),
+                mo.md(
+                    f"Nodes: {len(selected_graph['nodes'])}, Edges: {len(selected_graph['edges'])}"
+                ),
+                _violations_md,
+            ]
+        )
     else:
         mo.md(f"Graph {_selected_id} not found")
     return (selected_graph,)
@@ -325,15 +345,18 @@ def _(mo, selected_graph):
         for _n in selected_graph.get("nodes", []):
             _span = _n.get("grounding_span", "")
             if _span:
-                _spans.append({
-                    "id": _n.get("id", ""),
-                    "type": _n.get("type", ""),
-                    "label": _n.get("label", "")[:40],
-                    "grounding": _span[:100],
-                })
+                _spans.append(
+                    {
+                        "id": _n.get("id", ""),
+                        "type": _n.get("type", ""),
+                        "label": _n.get("label", "")[:40],
+                        "grounding": _span[:100],
+                    }
+                )
 
         if _spans:
             import polars as _pl
+
             mo.vstack([mo.md("### Grounding Spans"), _pl.DataFrame(_spans)])
         else:
             mo.md("### Grounding Spans\n\nNo grounding spans available")

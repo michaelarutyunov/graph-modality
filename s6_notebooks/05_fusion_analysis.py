@@ -72,21 +72,21 @@ def _build_complementarity(experiments, np):
     def get_architectures(target_exps):
         """Return set of architectures used in this target."""
         archs = set()
-        for key, exp in target_exps.items():
+        for _key, exp in target_exps.items():
             archs.add(exp["metrics"]["architecture"])
         return sorted(archs)
 
     def get_modality_combos(target_exps):
         """Return set of modality combinations used in this target."""
         combos = set()
-        for key, exp in target_exps.items():
+        for _key, exp in target_exps.items():
             mods = tuple(sorted(exp["metrics"]["modalities"]))
             combos.add(mods)
         return sorted(combos, key=lambda c: (len(c), c))
 
     def find_experiment(target_exps, architecture, modalities):
         """Find a specific experiment by architecture and modalities."""
-        for key, exp in target_exps.items():
+        for _key, exp in target_exps.items():
             m = exp["metrics"]
             if m["architecture"] == architecture and set(m["modalities"]) == set(modalities):
                 return exp
@@ -102,18 +102,20 @@ def _build_complementarity(experiments, np):
         With fractions: TEXT-UNIQUE, GRAPH-UNIQUE, OVERLAP, NEITHER
         """
         n = len(labels_a)
-        a_correct = (preds_a == labels_a)
-        b_correct = (preds_b == labels_b)
+        a_correct = preds_a == labels_a
+        b_correct = preds_b == labels_b
 
         both_correct = int((a_correct & b_correct).sum())
-        b_only = int((~a_correct & b_correct).sum())        # GRAPH-UNIQUE
-        a_only = int((a_correct & ~b_correct).sum())        # TEXT-UNIQUE
+        b_only = int((~a_correct & b_correct).sum())  # GRAPH-UNIQUE
+        a_only = int((a_correct & ~b_correct).sum())  # TEXT-UNIQUE
         neither = int((~a_correct & ~b_correct).sum())
 
-        matrix = np.array([
-            [both_correct, b_only],
-            [a_only, neither],
-        ])
+        matrix = np.array(
+            [
+                [both_correct, b_only],
+                [a_only, neither],
+            ]
+        )
 
         fractions = {
             "graph_unique": b_only / n,
@@ -155,8 +157,9 @@ def _build_complementarity(experiments, np):
                 fusion_preds = np.load(exp["preds_path"])
                 fusion_labels = np.load(exp["labels_path"])
 
-                assert np.array_equal(text_labels, fusion_labels), \
+                assert np.array_equal(text_labels, fusion_labels), (
                     f"Label mismatch for {combo_key}/{arch}"
+                )
 
                 matrix, fractions = build_2x2_matrix(
                     text_preds, text_labels, fusion_preds, fusion_labels
@@ -221,7 +224,7 @@ def _plot_complementarity_heatmaps(all_matrices, plt, np):
             matrix = m["matrix"]
             fracs = m["fractions"]
 
-            im = ax.imshow(matrix, cmap="YlOrRd", vmin=0, vmax=matrix.max())
+            ax.imshow(matrix, cmap="YlOrRd", vmin=0, vmax=matrix.max())
 
             # Annotate cells
             for r in range(2):
@@ -230,9 +233,13 @@ def _plot_complementarity_heatmaps(all_matrices, plt, np):
                     total = matrix.sum()
                     pct = count / total * 100
                     ax.text(
-                        c, r, f"{count}\n({pct:.1f}%)",
-                        ha="center", va="center",
-                        fontsize=10, fontweight="bold",
+                        c,
+                        r,
+                        f"{count}\n({pct:.1f}%)",
+                        ha="center",
+                        va="center",
+                        fontsize=10,
+                        fontweight="bold",
                         color="black" if matrix[r, c] < matrix.max() * 0.6 else "white",
                     )
 
@@ -278,19 +285,21 @@ def _summary_table(all_matrices):
 
     rows = []
     for target, matrices in all_matrices.items():
-        for key, m in matrices.items():
-            rows.append({
-                "target": target,
-                "architecture": m["architecture"],
-                "modalities": "+".join(m["modalities"]),
-                "graph_unique": m["fractions"]["graph_unique"],
-                "text_unique": m["fractions"]["text_unique"],
-                "overlap": m["fractions"]["overlap"],
-                "neither": m["fractions"]["neither"],
-                "text_f1": m["text_f1"],
-                "fusion_f1": m["fusion_f1"],
-                "f1_delta": m["fusion_f1"] - m["text_f1"],
-            })
+        for _key, m in matrices.items():
+            rows.append(
+                {
+                    "target": target,
+                    "architecture": m["architecture"],
+                    "modalities": "+".join(m["modalities"]),
+                    "graph_unique": m["fractions"]["graph_unique"],
+                    "text_unique": m["fractions"]["text_unique"],
+                    "overlap": m["fractions"]["overlap"],
+                    "neither": m["fractions"]["neither"],
+                    "text_f1": m["text_f1"],
+                    "fusion_f1": m["fusion_f1"],
+                    "f1_delta": m["fusion_f1"] - m["text_f1"],
+                }
+            )
 
     df = pd.DataFrame(rows)
 
@@ -349,7 +358,7 @@ def _per_class_breakdown(all_matrices, experiments, np):
         target_exps = experiments[target]
         # Find text baseline
         text_only = None
-        for key, exp in target_exps.items():
+        for _key, exp in target_exps.items():
             m = exp["metrics"]
             if m["architecture"] == "single" and m["modalities"] == ["text"]:
                 text_only = exp
@@ -364,10 +373,13 @@ def _per_class_breakdown(all_matrices, experiments, np):
         best_key = ""
         for key, exp in target_exps.items():
             m = exp["metrics"]
-            if len(m["modalities"]) > 1 and "graph" in m["modalities"]:
-                if best_fusion is None or m["test_macro_f1"] > best_fusion["metrics"]["test_macro_f1"]:
-                    best_fusion = exp
-                    best_key = key
+            is_fusion = len(m["modalities"]) > 1 and "graph" in m["modalities"]
+            beats_current = (
+                best_fusion is None or m["test_macro_f1"] > best_fusion["metrics"]["test_macro_f1"]
+            )
+            if is_fusion and beats_current:
+                best_fusion = exp
+                best_key = key
 
         if best_fusion is None:
             print(f"  No fusion experiment for {target}")
@@ -431,7 +443,7 @@ def _answer_gate_questions(all_matrices, experiments):
         # Best text-only F1
         target_exps = experiments[target]
         text_f1s = []
-        for key, exp in target_exps.items():
+        for _key, exp in target_exps.items():
             m = exp["metrics"]
             if m["modalities"] == ["text"]:
                 text_f1s.append(m["test_macro_f1"])
@@ -462,7 +474,7 @@ def _answer_gate_questions(all_matrices, experiments):
         if gated_unique and stacked_unique:
             avg_gated = sum(gated_unique) / len(gated_unique)
             avg_stacked = sum(stacked_unique) / len(stacked_unique)
-            print(f"\n  Gated vs Stacked (text+graph combos):")
+            print("\n  Gated vs Stacked (text+graph combos):")
             print(f"    Gated avg GRAPH-UNIQUE: {avg_gated:.4f}")
             print(f"    Stacked avg GRAPH-UNIQUE: {avg_stacked:.4f}")
 

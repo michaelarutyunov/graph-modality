@@ -64,6 +64,7 @@ def _graph_dir(label_source: str) -> Path:
     """Return graph directory for a given label source."""
     return FREE_TEXT_DIR if label_source == "free_text" else CANONICAL_DIR
 
+
 # ── Architecture constants ────────────────────────────────────────────────────
 IN_CHANNELS = 388  # 4 type one-hot + 384 label embedding
 HIDDEN_DIM = 256
@@ -186,7 +187,9 @@ def _plot_training_curves(
     axes[0].set_title("Training Loss (Node Type Reconstruction)")
     axes[0].grid(True, alpha=0.3)
 
-    axes[1].plot(epochs, train_accs, label="Train accuracy", color="green", marker="o", markersize=3)
+    axes[1].plot(
+        epochs, train_accs, label="Train accuracy", color="green", marker="o", markersize=3
+    )
     axes[1].set_xlabel("Epoch")
     axes[1].set_ylabel("Accuracy")
     axes[1].legend()
@@ -257,7 +260,10 @@ def train_autoencoder(
     criterion = nn.CrossEntropyLoss()
     optimizer = torch.optim.Adam(model.parameters(), lr=LR, weight_decay=WEIGHT_DECAY)
     scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(
-        optimizer, mode="min", patience=SCHEDULER_PATIENCE, factor=SCHEDULER_FACTOR,
+        optimizer,
+        mode="min",
+        patience=SCHEDULER_PATIENCE,
+        factor=SCHEDULER_FACTOR,
     )
 
     best_loss = float("inf")
@@ -316,7 +322,7 @@ def train_autoencoder(
 
     _plot_training_curves(train_losses, train_accs, _curves_path(label_source))
 
-    print(f"\nAutoencoder training complete.")
+    print("\nAutoencoder training complete.")
     print(f"  Label source: {label_source}")
     print(f"  Best loss: {best_loss:.4f} at epoch {best_epoch}")
     print(f"  Final node type accuracy: {train_accs[-1]:.4f}")
@@ -420,7 +426,10 @@ def encode_graphs(
     CACHE_DIR.mkdir(parents=True, exist_ok=True)
     np.save(emb_cache, result)
     id_cache.write_text(json.dumps(all_ids, ensure_ascii=False), encoding="utf-8")
-    print(f"cached {len(all_ids)} GIN embeddings ({result.shape[1]}d, {label_source} labels) → {emb_cache}")
+    print(
+        f"cached {len(all_ids)} GIN embeddings "
+        f"({result.shape[1]}d, {label_source} labels) → {emb_cache}"
+    )
 
     return result, all_ids
 
@@ -432,25 +441,30 @@ def encode_graphs(
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="GIN graph encoder: train or encode.")
     parser.add_argument(
-        "--encode", action="store_true",
+        "--encode",
+        action="store_true",
         help="Run frozen encoder inference (instead of training).",
     )
     parser.add_argument(
-        "--force", action="store_true",
+        "--force",
+        action="store_true",
         help="Re-encode even if cache exists (only with --encode).",
     )
     parser.add_argument(
-        "--label-source", type=str, choices=["canonical", "free_text"],
+        "--label-source",
+        type=str,
+        choices=["canonical", "free_text"],
         default="canonical",
         help="Which graph labels to use (default: canonical). "
-             "Training: trains a separate encoder. "
-             "Encoding: uses the matching encoder weights.",
+        "Training: trains a separate encoder. "
+        "Encoding: uses the matching encoder weights.",
     )
     args = parser.parse_args()
 
     if args.encode:
         embeddings, ids = encode_graphs(
-            force=args.force, label_source=args.label_source,
+            force=args.force,
+            label_source=args.label_source,
         )
         print(f"Done. Shape: {embeddings.shape}, IDs: {len(ids)}")
     else:

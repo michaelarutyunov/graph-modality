@@ -20,6 +20,7 @@ def embedder():
 
 def test_load_all_labels_returns_all_entity_types(tmp_path):
     import json
+
     g = {
         "transcript_id": "test",
         "nodes": [
@@ -41,6 +42,7 @@ def test_load_all_labels_returns_all_entity_types(tmp_path):
 
 def test_load_all_labels_handles_missing_types(tmp_path):
     import json
+
     g = {
         "transcript_id": "test",
         "nodes": [{"id": "n1", "type": "Value", "label": "autonomy"}],
@@ -57,6 +59,7 @@ def test_load_all_labels_handles_missing_types(tmp_path):
 
 def test_load_all_labels_deduplicates(tmp_path):
     import json
+
     g1 = {
         "transcript_id": "t1",
         "nodes": [{"id": "n1", "type": "Value", "label": "autonomy"}],
@@ -124,6 +127,7 @@ def test_cluster_returns_all_input_labels(embedder):
 
 def test_build_canonical_map_all_entity_types_present(tmp_path):
     import json
+
     g = {
         "transcript_id": "test",
         "nodes": [
@@ -145,6 +149,7 @@ def test_build_canonical_map_all_entity_types_present(tmp_path):
 def test_build_canonical_map_canonical_self_maps(tmp_path):
     """Every canonical label should appear as its own value (it maps to itself)."""
     import json
+
     g = {
         "transcript_id": "test",
         "nodes": [

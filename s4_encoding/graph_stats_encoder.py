@@ -77,10 +77,9 @@ def graph_to_features(graph_data: dict, graph_path: Path | None = None) -> np.nd
     # ── construct quality (3) ──────────────────────────────────────
     constructs = [n for n in nodes if n.get("type") == "Construct"]
     bipolarity_score = (
-        np.mean([
-            1.0 if n.get("bipolarity_complete") else 0.5 for n in constructs
-        ])
-        if constructs else 0.0
+        np.mean([1.0 if n.get("bipolarity_complete") else 0.5 for n in constructs])
+        if constructs
+        else 0.0
     )
     construct_degrees = [G.degree(n["id"]) for n in constructs]
     mean_construct_degree = np.mean(construct_degrees) if construct_degrees else 0.0
@@ -95,9 +94,7 @@ def graph_to_features(graph_data: dict, graph_path: Path | None = None) -> np.nd
             valence_counts[v] += 1
 
     n_stance_safe = max(n_stance, 1)
-    dominant_valence = (
-        max(valence_counts, key=valence_counts.get) if stances else "absent"
-    )
+    dominant_valence = max(valence_counts, key=valence_counts.__getitem__) if stances else "absent"
     valence_onehot = [1.0 if dominant_valence == v else 0.0 for v in VALENCES]
     valence_onehot.append(1.0 if dominant_valence == "absent" else 0.0)
 
@@ -108,9 +105,7 @@ def graph_to_features(graph_data: dict, graph_path: Path | None = None) -> np.nd
         max_bc = max(bc_values) if bc_values else 0.0
         mean_bc = np.mean(bc_values) if bc_values else 0.0
         value_nodes = [n["id"] for n in nodes if n.get("type") == "Value"]
-        max_value_bc = (
-            max(betweenness.get(v, 0.0) for v in value_nodes) if value_nodes else 0.0
-        )
+        max_value_bc = max(betweenness.get(v, 0.0) for v in value_nodes) if value_nodes else 0.0
     except Exception:
         max_bc = mean_bc = max_value_bc = 0.0
 
@@ -118,40 +113,43 @@ def graph_to_features(graph_data: dict, graph_path: Path | None = None) -> np.nd
     csm_present = float(n_csm > 0)
     csm_count_clipped = min(n_csm, 2) / 2.0
 
-    features = np.array([
-        # structural (7)
-        n_total / 15.0,
-        n_edges / 20.0,
-        density,
-        n_components / n_total,
-        avg_degree / 5.0,
-        max_degree / 10.0,
-        (diameter + 1) / 10.0,
-        # node type distribution (6)
-        n_construct / n_total,
-        n_value / n_total,
-        n_stance / n_total,
-        n_csm / n_total,
-        construct_value_ratio / 5.0,
-        stance_construct_ratio / 3.0,
-        # construct quality (3)
-        bipolarity_score,
-        mean_construct_degree / 5.0,
-        max_construct_degree / 10.0,
-        # stance valence (8)
-        valence_counts["positive"] / n_stance_safe,
-        valence_counts["negative"] / n_stance_safe,
-        valence_counts["mixed"] / n_stance_safe,
-        valence_counts["ambivalent"] / n_stance_safe,
-        *valence_onehot,  # 5 values
-        # centrality (3)
-        max_bc,
-        mean_bc,
-        max_value_bc,
-        # cognitive style (2)
-        csm_present,
-        csm_count_clipped,
-    ], dtype=np.float32)
+    features = np.array(
+        [
+            # structural (7)
+            n_total / 15.0,
+            n_edges / 20.0,
+            density,
+            n_components / n_total,
+            avg_degree / 5.0,
+            max_degree / 10.0,
+            (diameter + 1) / 10.0,
+            # node type distribution (6)
+            n_construct / n_total,
+            n_value / n_total,
+            n_stance / n_total,
+            n_csm / n_total,
+            construct_value_ratio / 5.0,
+            stance_construct_ratio / 3.0,
+            # construct quality (3)
+            bipolarity_score,
+            mean_construct_degree / 5.0,
+            max_construct_degree / 10.0,
+            # stance valence (8)
+            valence_counts["positive"] / n_stance_safe,
+            valence_counts["negative"] / n_stance_safe,
+            valence_counts["mixed"] / n_stance_safe,
+            valence_counts["ambivalent"] / n_stance_safe,
+            *valence_onehot,  # 5 values
+            # centrality (3)
+            max_bc,
+            mean_bc,
+            max_value_bc,
+            # cognitive style (2)
+            csm_present,
+            csm_count_clipped,
+        ],
+        dtype=np.float32,
+    )
 
     return features
 
@@ -199,7 +197,7 @@ def compute_all_stats(
 if __name__ == "__main__":
     stats, ids = compute_all_stats()
     print(f"Done. Shape: {stats.shape}, IDs: {len(ids)}")
-    print(f"Sample features (first graph):")
+    print("Sample features (first graph):")
     print(f"  structural: {stats[0, :7]}")
     print(f"  type dist:  {stats[0, 7:13]}")
     print(f"  construct:  {stats[0, 13:16]}")

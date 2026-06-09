@@ -14,7 +14,6 @@ from __future__ import annotations
 import argparse
 import json
 import os
-import sys
 import time
 import urllib.error
 import urllib.request
@@ -180,7 +179,7 @@ def _print_distribution(results: dict[str, dict]) -> None:
     ai_counts: dict[str, int] = {}
     errors = 0
 
-    for tid, entry in results.items():
+    for _tid, entry in results.items():
         cs = entry.get("career_stage", {}).get("label", "?")
         ai = entry.get("ai_adoption", {}).get("label", "?")
         if cs == "error" or ai == "error":
@@ -190,11 +189,11 @@ def _print_distribution(results: dict[str, dict]) -> None:
 
     n = len(results)
 
-    print(f"\n{'='*60}")
+    print(f"\n{'=' * 60}")
     print(f"DISTRIBUTION ({n} transcripts")
     if errors:
         print(f"  Errors: {errors}")
-    print(f"{'='*60}")
+    print(f"{'=' * 60}")
 
     for attr_name, counts, valid_set in [
         ("Career Stage", cs_counts, VALID_CAREER_STAGES),
@@ -218,9 +217,7 @@ def main() -> None:
     parser = argparse.ArgumentParser(
         description="Extract demographics from all transcripts via DeepSeek"
     )
-    parser.add_argument(
-        "--limit", type=int, default=None, help="Only process first N transcripts"
-    )
+    parser.add_argument("--limit", type=int, default=None, help="Only process first N transcripts")
     args = parser.parse_args()
 
     prompt = PROMPT_PATH.read_text(encoding="utf-8")
@@ -315,11 +312,11 @@ def main() -> None:
             time.sleep(RATE_LIMIT)
 
     elapsed = time.time() - start_time
-    print(f"\n{'='*60}")
-    print(f"EXTRACTION COMPLETE")
-    print(f"{'='*60}")
+    print(f"\n{'=' * 60}")
+    print("EXTRACTION COMPLETE")
+    print(f"{'=' * 60}")
     print(f"Processed: {len(pending)} transcripts")
-    print(f"Elapsed:   {elapsed:.0f}s ({elapsed/len(pending):.1f}s/transcript)")
+    print(f"Elapsed:   {elapsed:.0f}s ({elapsed / len(pending):.1f}s/transcript)")
     print(f"Output:    {OUTPUT_PATH}")
     print(f"Warnings:  {len(warnings)}")
     if warnings:

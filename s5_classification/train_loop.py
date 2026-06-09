@@ -13,14 +13,16 @@ Usage:
 from __future__ import annotations
 
 from dataclasses import dataclass
-from pathlib import Path
-from typing import Any
+from typing import TYPE_CHECKING, Any
 
 import matplotlib.pyplot as plt
 import numpy as np
 import torch
 import torch.nn as nn
 from sklearn.metrics import confusion_matrix, f1_score
+
+if TYPE_CHECKING:
+    from pathlib import Path
 
 
 @dataclass
@@ -100,14 +102,12 @@ class Trainer:
         """
         modality_keys = [k for k in data if k.endswith("_emb")]
         embeddings = {
-            key.replace("_emb", ""): torch.tensor(
-                data[key][indices], dtype=torch.float32
-            ).to(self.device)
+            key.replace("_emb", ""): torch.tensor(data[key][indices], dtype=torch.float32).to(
+                self.device
+            )
             for key in modality_keys
         }
-        labels = torch.tensor(
-            data["labels"][indices], dtype=torch.long
-        ).to(self.device)
+        labels = torch.tensor(data["labels"][indices], dtype=torch.long).to(self.device)
         return embeddings, labels
 
     def _shuffle_indices(self, n: int) -> np.ndarray:
@@ -131,7 +131,7 @@ class Trainer:
             Dictionary with training history and best metrics.
         """
         n_train = len(train_data["labels"])
-        n_val = len(val_data["labels"])
+        len(val_data["labels"])
         batch_size = self.config.batch_size
 
         best_val_f1 = -1.0
@@ -147,7 +147,7 @@ class Trainer:
             indices = self._shuffle_indices(n_train)
 
             for start in range(0, n_train, batch_size):
-                batch_idx = indices[start: start + batch_size]
+                batch_idx = indices[start : start + batch_size]
                 embeddings, labels = self._prepare_batch(train_data, batch_idx)
 
                 self.optimizer.zero_grad()
@@ -173,10 +173,7 @@ class Trainer:
             if improved:
                 best_val_f1 = val_f1
                 best_epoch = epoch
-                best_state = {
-                    k: v.cpu().clone()
-                    for k, v in self.model.state_dict().items()
-                }
+                best_state = {k: v.cpu().clone() for k, v in self.model.state_dict().items()}
                 epochs_no_improve = 0
                 marker = "* best"
             else:
@@ -199,7 +196,7 @@ class Trainer:
         if best_state is not None:
             self.model.load_state_dict(best_state)
 
-        print(f"\nTraining complete.")
+        print("\nTraining complete.")
         print(f"  Best val macro-F1: {best_val_f1:.4f} at epoch {best_epoch}")
         print(f"  Epochs run: {len(self.train_losses)}")
 
@@ -245,9 +242,7 @@ class Trainer:
             n_batches += 1
 
         avg_loss = total_loss / max(n_batches, 1)
-        macro_f1 = float(
-            f1_score(all_labels, all_preds, average="macro", zero_division=0)
-        )
+        macro_f1 = float(f1_score(all_labels, all_preds, average="macro", zero_division=0))
         return avg_loss, macro_f1
 
     @torch.no_grad()
@@ -281,14 +276,10 @@ class Trainer:
             all_preds.extend(preds.cpu().tolist())
             all_labels.extend(labels.cpu().tolist())
 
-        macro_f1 = float(
-            f1_score(all_labels, all_preds, average="macro", zero_division=0)
-        )
+        macro_f1 = float(f1_score(all_labels, all_preds, average="macro", zero_division=0))
         per_class_f1 = {
             str(cls): float(f1)
-            for cls, f1 in enumerate(
-                f1_score(all_labels, all_preds, average=None, zero_division=0)
-            )
+            for cls, f1 in enumerate(f1_score(all_labels, all_preds, average=None, zero_division=0))
         }
         cm = confusion_matrix(all_labels, all_preds).tolist()
 

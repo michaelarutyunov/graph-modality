@@ -10,11 +10,15 @@ Supports both single-modality (stats-only, text-only) and multi-modality
 
 from __future__ import annotations
 
+from typing import TYPE_CHECKING
+
 import numpy as np
-from sklearn.base import ClassifierMixin
 from sklearn.ensemble import GradientBoostingClassifier, RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.svm import SVC
+
+if TYPE_CHECKING:
+    from sklearn.base import ClassifierMixin
 
 SKLEARN_CLASSES: dict[str, type] = {
     "logistic": LogisticRegression,

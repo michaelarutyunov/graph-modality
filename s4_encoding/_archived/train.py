@@ -15,13 +15,13 @@ from pathlib import Path
 import matplotlib.pyplot as plt
 import numpy as np
 import torch
+from s4_encoding.gnn.dataset import GraphDataset
+from s4_encoding.gnn.model import GraphEncoder
 from torch import nn
 from torch_geometric.loader import DataLoader
 
-from s5_classification.split import load_split
-from s4_encoding.gnn.dataset import GraphDataset
-from s4_encoding.gnn.model import GraphEncoder
 from s4_encoding.text_encoder import encode_transcripts
+from s5_classification.split import load_split
 
 # ── Paths ────────────────────────────────────────────────────────────────────
 PROJECT_ROOT = Path(".")

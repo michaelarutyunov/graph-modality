@@ -32,6 +32,7 @@ def _():
     import json as _json
 
     from pathlib import Path as _Path
+
     _repo_root = _Path(__file__).parent.parent
     _paths = sorted(_repo_root.glob("s1_data/graphs/canonical/*.json"))
     graphs = []
@@ -70,20 +71,23 @@ def _(graphs):
         _bipolarity = (
             sum(1.0 if _c.get("bipolarity_complete") else 0.5 for _c in _constructs)
             / len(_constructs)
-            if _constructs else 0.0
+            if _constructs
+            else 0.0
         )
-        rows.append({
-            "transcript_id": _g["transcript_id"],
-            "split": _g["split"],
-            "n_nodes": len(_nodes),
-            "n_edges": len(_edges),
-            "n_construct": _type_counts["Construct"],
-            "n_value": _type_counts["Value"],
-            "n_stance": _type_counts["Stance"],
-            "n_csm": _type_counts["CognitiveStyleMarker"],
-            "bipolarity_score": _bipolarity,
-            "violations": len(_g.get("validation_violations", [])),
-        })
+        rows.append(
+            {
+                "transcript_id": _g["transcript_id"],
+                "split": _g["split"],
+                "n_nodes": len(_nodes),
+                "n_edges": len(_edges),
+                "n_construct": _type_counts["Construct"],
+                "n_value": _type_counts["Value"],
+                "n_stance": _type_counts["Stance"],
+                "n_csm": _type_counts["CognitiveStyleMarker"],
+                "bipolarity_score": _bipolarity,
+                "violations": len(_g.get("validation_violations", [])),
+            }
+        )
 
     df_meta = pl.DataFrame(rows)
     df_meta
@@ -125,23 +129,31 @@ def _(df_meta, mo, pl):
     row per cohort.  Displayed via mo.vstack with a heading and the
     DataFrame (Marimo renders DataFrames as interactive HTML tables).
     """
-    summary = df_meta.group_by("split").agg([
-        pl.col("n_nodes").mean().round(2).alias("avg_nodes"),
-        pl.col("n_edges").mean().round(2).alias("avg_edges"),
-        pl.col("n_construct").mean().round(2).alias("avg_constructs"),
-        pl.col("n_value").mean().round(2).alias("avg_values"),
-        pl.col("n_stance").mean().round(2).alias("avg_stances"),
-        pl.col("n_csm").mean().round(2).alias("avg_csms"),
-        pl.col("bipolarity_score").mean().round(3).alias("avg_bipolarity"),
-        pl.col("violations").mean().round(3).alias("avg_violations"),
-        pl.len().alias("count"),
-    ]).sort("split")
+    summary = (
+        df_meta.group_by("split")
+        .agg(
+            [
+                pl.col("n_nodes").mean().round(2).alias("avg_nodes"),
+                pl.col("n_edges").mean().round(2).alias("avg_edges"),
+                pl.col("n_construct").mean().round(2).alias("avg_constructs"),
+                pl.col("n_value").mean().round(2).alias("avg_values"),
+                pl.col("n_stance").mean().round(2).alias("avg_stances"),
+                pl.col("n_csm").mean().round(2).alias("avg_csms"),
+                pl.col("bipolarity_score").mean().round(3).alias("avg_bipolarity"),
+                pl.col("violations").mean().round(3).alias("avg_violations"),
+                pl.len().alias("count"),
+            ]
+        )
+        .sort("split")
+    )
 
-    mo.vstack([
-        mo.md("## 1. Cohort Summary Statistics"),
-        mo.md("Per-cohort means across all graph metrics:"),
-        summary,
-    ])
+    mo.vstack(
+        [
+            mo.md("## 1. Cohort Summary Statistics"),
+            mo.md("Per-cohort means across all graph metrics:"),
+            summary,
+        ]
+    )
     return
 
 
@@ -192,23 +204,30 @@ def _(graphs, mo, pl):
     for _g in graphs:
         for _n in _g.get("nodes", []):
             if _n.get("type") == "Stance":
-                _valence_rows.append({
-                    "split": _g["split"],
-                    "valence": _n.get("valence", "unknown"),
-                })
+                _valence_rows.append(
+                    {
+                        "split": _g["split"],
+                        "valence": _n.get("valence", "unknown"),
+                    }
+                )
 
     df_valence = pl.DataFrame(_valence_rows)
-    valence_summary = df_valence.group_by(["split", "valence"]).agg(
-        pl.len().alias("count")
-    ).with_columns(
-        (pl.col("count") / pl.col("count").sum().over("split")).round(3).alias("proportion")
-    ).sort(["split", "valence"])
+    valence_summary = (
+        df_valence.group_by(["split", "valence"])
+        .agg(pl.len().alias("count"))
+        .with_columns(
+            (pl.col("count") / pl.col("count").sum().over("split")).round(3).alias("proportion")
+        )
+        .sort(["split", "valence"])
+    )
 
-    mo.vstack([
-        mo.md("## 2. Stance Valence Analysis"),
-        mo.md("Distribution of stance valences across cohorts (preview of H2):"),
-        valence_summary,
-    ])
+    mo.vstack(
+        [
+            mo.md("## 2. Stance Valence Analysis"),
+            mo.md("Distribution of stance valences across cohorts (preview of H2):"),
+            valence_summary,
+        ]
+    )
     return (df_valence,)
 
 
@@ -233,9 +252,7 @@ def _(df_valence):
     for _i, _v in enumerate(_valences):
         _props = []
         for _s in _splits:
-            _subset = df_valence.filter(
-                (df_valence["split"] == _s) & (df_valence["valence"] == _v)
-            )
+            _subset = df_valence.filter((df_valence["split"] == _s) & (df_valence["valence"] == _v))
             _total = df_valence.filter(df_valence["split"] == _s).height
             _props.append(_subset.height / _total if _total > 0 else 0)
         _ax.bar(_x + _i * _width, _props, _width, label=_v.title())
@@ -265,23 +282,33 @@ def _(graphs, mo, pl):
         _constructs = [_n for _n in _g.get("nodes", []) if _n.get("type") == "Construct"]
         if _constructs:
             _complete = sum(1 for _c in _constructs if _c.get("bipolarity_complete"))
-            _bip_rows.append({
-                "split": _g["split"],
-                "bipolarity_complete_frac": _complete / len(_constructs),
-                "n_constructs": len(_constructs),
-            })
+            _bip_rows.append(
+                {
+                    "split": _g["split"],
+                    "bipolarity_complete_frac": _complete / len(_constructs),
+                    "n_constructs": len(_constructs),
+                }
+            )
 
     df_bip = pl.DataFrame(_bip_rows)
-    bip_summary = df_bip.group_by("split").agg([
-        pl.col("bipolarity_complete_frac").mean().round(3).alias("mean_complete"),
-        pl.col("n_constructs").mean().round(2).alias("avg_constructs"),
-    ]).sort("split")
+    bip_summary = (
+        df_bip.group_by("split")
+        .agg(
+            [
+                pl.col("bipolarity_complete_frac").mean().round(3).alias("mean_complete"),
+                pl.col("n_constructs").mean().round(2).alias("avg_constructs"),
+            ]
+        )
+        .sort("split")
+    )
 
-    mo.vstack([
-        mo.md("## 3. Construct Bipolarity Completeness"),
-        mo.md("Fraction of constructs with both poles defined (preview of H3):"),
-        bip_summary,
-    ])
+    mo.vstack(
+        [
+            mo.md("## 3. Construct Bipolarity Completeness"),
+            mo.md("Fraction of constructs with both poles defined (preview of H3):"),
+            bip_summary,
+        ]
+    )
     return (df_bip,)
 
 
@@ -301,7 +328,9 @@ def _(df_bip):
         df_bip.filter(df_bip["split"] == _s)["bipolarity_complete_frac"].to_list()
         for _s in ["workforce", "creatives", "scientists"]
     ]
-    _bp = _ax.boxplot(_data, tick_labels=["workforce", "creatives", "scientists"], patch_artist=True)
+    _bp = _ax.boxplot(
+        _data, tick_labels=["workforce", "creatives", "scientists"], patch_artist=True
+    )
     for _patch in _bp["boxes"]:
         _patch.set_facecolor("lightblue")
     _ax.set_ylabel("Bipolarity Completeness Fraction")
@@ -318,7 +347,9 @@ def _(mo):
     Building NetworkX DiGraphs for all 1,250 transcripts and computing
     betweenness centrality takes several seconds.
     """
-    mo.md("## 4. Degree and Centrality Analysis\n\nComputing network metrics for all graphs (this may take a moment)...")
+    mo.md(
+        "## 4. Degree and Centrality Analysis\n\nComputing network metrics for all graphs (this may take a moment)..."
+    )
     return
 
 
@@ -359,14 +390,16 @@ def _(graphs):
         except Exception:
             _max_btw = _mean_btw = 0
 
-        _degree_rows.append({
-            "split": _g["split"],
-            "mean_degree": _np.mean(_degrees) if _degrees else 0,
-            "max_degree": max(_degrees) if _degrees else 0,
-            "mean_value_degree": _np.mean(_value_degrees) if _value_degrees else 0,
-            "max_betweenness": _max_btw,
-            "mean_betweenness": _mean_btw,
-        })
+        _degree_rows.append(
+            {
+                "split": _g["split"],
+                "mean_degree": _np.mean(_degrees) if _degrees else 0,
+                "max_degree": max(_degrees) if _degrees else 0,
+                "mean_value_degree": _np.mean(_value_degrees) if _value_degrees else 0,
+                "max_betweenness": _max_btw,
+                "mean_betweenness": _mean_btw,
+            }
+        )
 
     df_degree = _pl.DataFrame(_degree_rows)
     df_degree
@@ -407,16 +440,25 @@ def _(df_degree, mo):
     terminal values (a prediction of H1 from CHARTER.md).
     """
     import polars as _pl
-    vdeg_summary = df_degree.group_by("split").agg([
-        _pl.col("mean_value_degree").mean().round(2).alias("mean_value_degree"),
-        _pl.col("mean_betweenness").mean().round(4).alias("mean_betweenness"),
-    ]).sort("split")
 
-    mo.vstack([
-        mo.md("### Value Node Degree (Hub-and-Spoke Preview)"),
-        mo.md("Higher value degree suggests constructs cluster around terminal values:"),
-        vdeg_summary,
-    ])
+    vdeg_summary = (
+        df_degree.group_by("split")
+        .agg(
+            [
+                _pl.col("mean_value_degree").mean().round(2).alias("mean_value_degree"),
+                _pl.col("mean_betweenness").mean().round(4).alias("mean_betweenness"),
+            ]
+        )
+        .sort("split")
+    )
+
+    mo.vstack(
+        [
+            mo.md("### Value Node Degree (Hub-and-Spoke Preview)"),
+            mo.md("Higher value degree suggests constructs cluster around terminal values:"),
+            vdeg_summary,
+        ]
+    )
     return
 
 
@@ -446,26 +488,36 @@ def _(graphs, mo, pl):
             if _r in _rel_counts:
                 _rel_counts[_r] += 1
         _total = len(_edges)
-        _rel_rows.append({
-            "split": _g["split"],
-            **{_k: _v / _total if _total > 0 else 0 for _k, _v in _rel_counts.items()},
-            "total_edges": _total,
-            "has_conflicts": _rel_counts["CONFLICTS_WITH"] > 0,
-        })
+        _rel_rows.append(
+            {
+                "split": _g["split"],
+                **{_k: _v / _total if _total > 0 else 0 for _k, _v in _rel_counts.items()},
+                "total_edges": _total,
+                "has_conflicts": _rel_counts["CONFLICTS_WITH"] > 0,
+            }
+        )
 
     df_rel = pl.DataFrame(_rel_rows)
-    rel_summary = df_rel.group_by("split").agg([
-        pl.col("SERVES").mean().round(3).alias("SERVES"),
-        pl.col("EXPRESSED_VIA").mean().round(3).alias("EXPRESSED_VIA"),
-        pl.col("MODULATED_BY").mean().round(3).alias("MODULATED_BY"),
-        pl.col("CONFLICTS_WITH").mean().round(3).alias("CONFLICTS_WITH"),
-        pl.col("has_conflicts").mean().round(3).alias("conflict_prevalence"),
-    ]).sort("split")
+    rel_summary = (
+        df_rel.group_by("split")
+        .agg(
+            [
+                pl.col("SERVES").mean().round(3).alias("SERVES"),
+                pl.col("EXPRESSED_VIA").mean().round(3).alias("EXPRESSED_VIA"),
+                pl.col("MODULATED_BY").mean().round(3).alias("MODULATED_BY"),
+                pl.col("CONFLICTS_WITH").mean().round(3).alias("CONFLICTS_WITH"),
+                pl.col("has_conflicts").mean().round(3).alias("conflict_prevalence"),
+            ]
+        )
+        .sort("split")
+    )
 
-    mo.vstack([
-        mo.md("Proportion of each relation type by cohort:"),
-        rel_summary,
-    ])
+    mo.vstack(
+        [
+            mo.md("Proportion of each relation type by cohort:"),
+            rel_summary,
+        ]
+    )
     return (rel_summary,)
 
 
@@ -537,6 +589,7 @@ def _(dropdown, mo):
     import json as _json
 
     from pathlib import Path as _Path
+
     _repo_root = _Path(__file__).parent.parent
     _selected_id = dropdown.value
     selected_graph = None
@@ -548,10 +601,14 @@ def _(dropdown, mo):
             break
 
     if selected_graph:
-        mo.vstack([
-            mo.md(f"**Selected:** {_selected_id} ({selected_graph['split']})"),
-            mo.md(f"Nodes: {len(selected_graph['nodes'])}, Edges: {len(selected_graph['edges'])}"),
-        ])
+        mo.vstack(
+            [
+                mo.md(f"**Selected:** {_selected_id} ({selected_graph['split']})"),
+                mo.md(
+                    f"Nodes: {len(selected_graph['nodes'])}, Edges: {len(selected_graph['edges'])}"
+                ),
+            ]
+        )
     else:
         mo.md(f"Graph {_selected_id} not found")
     return (selected_graph,)
@@ -597,6 +654,7 @@ def _(mo, selected_graph):
         _nx.draw_networkx_edges(_G, _pos, edge_color="gray", arrows=True, arrowsize=15, ax=_ax)
 
         from matplotlib.patches import Patch
+
         _legend_elements = [Patch(facecolor=_c, label=_t) for _t, _c in _color_map.items()]
         _ax.legend(handles=_legend_elements, loc="upper right")
         _ax.set_title(f"Concept Graph: {selected_graph['transcript_id']}")
@@ -622,12 +680,14 @@ def _(mo, selected_graph):
     else:
         nodes_df = _pl.DataFrame(selected_graph.get("nodes", []))
         edges_df = _pl.DataFrame(selected_graph.get("edges", []))
-        mo.vstack([
-            mo.md("### Nodes"),
-            nodes_df.select(["id", "type", "label"]),
-            mo.md("### Edges"),
-            edges_df,
-        ])
+        mo.vstack(
+            [
+                mo.md("### Nodes"),
+                nodes_df.select(["id", "type", "label"]),
+                mo.md("### Edges"),
+                edges_df,
+            ]
+        )
     return
 
 

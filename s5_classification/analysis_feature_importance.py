@@ -1,5 +1,4 @@
-"""Route 2 analysis: permutation importance of graph features.
-
+"""
 Loads a pre-trained sklearn model (trained by ``classification/run.py`` with
 backend=sklearn) and computes permutation importance to identify which
 graph-statistic features drive classification.
@@ -20,9 +19,9 @@ import numpy as np
 from sklearn.inspection import permutation_importance
 from sklearn.metrics import f1_score
 
-from s5_classification.split import load_split
 from s4_encoding.graph_stats_encoder import compute_all_stats
 from s4_encoding.text_encoder import encode_transcripts
+from s5_classification.split import load_split
 
 # ── Paths ────────────────────────────────────────────────────────────────────
 CACHE_DIR = Path("cache")
@@ -32,17 +31,36 @@ TEXT_DIM = 768
 GRAPH_DIM = 30
 
 FEATURE_NAMES: list[str] = [
-    "node_count_norm", "edge_count_norm", "density", "component_ratio",
-    "avg_degree_norm", "max_degree_norm", "diameter_norm",
-    "construct_ratio", "value_ratio", "stance_ratio", "csm_ratio",
-    "construct_value_ratio", "stance_construct_ratio",
-    "bipolarity_score", "mean_construct_degree", "max_construct_degree",
-    "positive_stance_frac", "negative_stance_frac", "mixed_stance_frac",
+    "node_count_norm",
+    "edge_count_norm",
+    "density",
+    "component_ratio",
+    "avg_degree_norm",
+    "max_degree_norm",
+    "diameter_norm",
+    "construct_ratio",
+    "value_ratio",
+    "stance_ratio",
+    "csm_ratio",
+    "construct_value_ratio",
+    "stance_construct_ratio",
+    "bipolarity_score",
+    "mean_construct_degree",
+    "max_construct_degree",
+    "positive_stance_frac",
+    "negative_stance_frac",
+    "mixed_stance_frac",
     "ambivalent_stance_frac",
-    "valence_positive", "valence_negative", "valence_mixed",
-    "valence_ambivalent", "valence_absent",
-    "max_betweenness", "mean_betweenness", "max_value_betweenness",
-    "csm_present", "csm_count_clipped",
+    "valence_positive",
+    "valence_negative",
+    "valence_mixed",
+    "valence_ambivalent",
+    "valence_absent",
+    "max_betweenness",
+    "mean_betweenness",
+    "max_value_betweenness",
+    "csm_present",
+    "csm_count_clipped",
 ]
 
 
@@ -74,8 +92,10 @@ def load_aligned_features():
     labels = np.array([labels_dict[t] for t in common], dtype=np.int32)
 
     return (
-        features[train_idx], labels[train_idx],
-        features[val_idx], labels[val_idx],
+        features[train_idx],
+        labels[train_idx],
+        features[val_idx],
+        labels[val_idx],
     )
 
 
@@ -98,7 +118,7 @@ def analyze(model_path: Path | None = None) -> dict:
     print(f"Loading model from {model_path}...")
     model = joblib.load(model_path)
 
-    X_train, y_train, X_val, y_val = load_aligned_features()
+    X_train, _y_train, X_val, y_val = load_aligned_features()
     print(f"Train: {X_train.shape}, Val: {X_val.shape}")
 
     # Baseline F1
@@ -109,8 +129,12 @@ def analyze(model_path: Path | None = None) -> dict:
     # Permutation importance (graph features only: cols TEXT_DIM:)
     print("\nComputing permutation importance (graph features, n_repeats=10)...")
     result = permutation_importance(
-        model, X_val, y_val,
-        n_repeats=10, random_state=42, scoring="f1_macro",
+        model,
+        X_val,
+        y_val,
+        n_repeats=10,
+        random_state=42,
+        scoring="f1_macro",
     )
 
     graph_imp = result.importances_mean[TEXT_DIM:]
@@ -118,19 +142,25 @@ def analyze(model_path: Path | None = None) -> dict:
 
     # Top-10
     top_idx = np.argsort(graph_imp)[::-1][:10]
-    print(f"\n{'='*80}")
+    print(f"\n{'=' * 80}")
     print("Top-10 graph features by permutation importance")
-    print(f"{'='*80}")
+    print(f"{'=' * 80}")
     print(f"{'rank':>4}  {'feature':<30}  {'importance':>10}  {'std':>8}")
     print("-" * 80)
     for rank, idx in enumerate(top_idx, start=1):
-        print(f"{rank:>4}  {FEATURE_NAMES[idx]:<30}  {graph_imp[idx]:>10.6f}  {graph_std[idx]:>8.6f}")
+        print(
+            f"{rank:>4}  {FEATURE_NAMES[idx]:<30}  {graph_imp[idx]:>10.6f}  {graph_std[idx]:>8.6f}"
+        )
 
     return {
         "baseline_f1": float(baseline_f1),
         "top_features": [
-            {"rank": r, "name": FEATURE_NAMES[i],
-             "importance": float(graph_imp[i]), "std": float(graph_std[i])}
+            {
+                "rank": r,
+                "name": FEATURE_NAMES[i],
+                "importance": float(graph_imp[i]),
+                "std": float(graph_std[i]),
+            }
             for r, i in enumerate(top_idx, start=1)
         ],
     }

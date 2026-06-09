@@ -319,6 +319,8 @@ def main() -> None:
 
             # Dispatch to the right API backend
             if api_type == "anthropic":
+                if client is None:
+                    raise ValueError("Anthropic client required for anthropic API")
                 raw_text = _extract_anthropic(prompt, client, model_id, max_tokens)
             else:
                 json_mode = model_cfg.get("json_mode", False)

@@ -7,12 +7,12 @@ Each classifier lives in its own file for readability. This module re-exports
 them all and provides the ``build_classifier`` factory function.
 """
 
-from s5_classification.mlp_single import SingleModalityClassifier
-from s5_classification.mlp_stacked import StackedClassifier
+import torch.nn as nn
+
 from s5_classification.mlp_gated import GatedFusionClassifier
 from s5_classification.mlp_late import LateFusionClassifier
-
-import torch.nn as nn
+from s5_classification.mlp_single import SingleModalityClassifier
+from s5_classification.mlp_stacked import StackedClassifier
 
 
 def build_classifier(
@@ -50,15 +50,14 @@ def build_classifier(
         return LateFusionClassifier(modality_dims, n_classes, hidden)
     else:
         raise ValueError(
-            f"Unknown architecture: {architecture}. "
-            f"Choose from: single, stacked, gated, late."
+            f"Unknown architecture: {architecture}. Choose from: single, stacked, gated, late."
         )
 
 
 __all__ = [
-    "SingleModalityClassifier",
-    "StackedClassifier",
     "GatedFusionClassifier",
     "LateFusionClassifier",
+    "SingleModalityClassifier",
+    "StackedClassifier",
     "build_classifier",
 ]

@@ -53,9 +53,7 @@ def _build_text(record: dict, speaker_filter: str | None) -> str:
 
     # Reconstruct text from filtered turns only
     filtered = [
-        f"[{t['speaker']}]: {t['text']}"
-        for t in record["turns"]
-        if t["speaker"] == speaker_filter
+        f"[{t['speaker']}]: {t['text']}" for t in record["turns"] if t["speaker"] == speaker_filter
     ]
     return "\n\n".join(filtered)
 
@@ -104,13 +102,8 @@ def encode_transcripts(
     # Cache
     CACHE_DIR.mkdir(parents=True, exist_ok=True)
     np.save(emb_cache, embeddings)
-    id_cache.write_text(
-        json.dumps(transcript_ids, ensure_ascii=False), encoding="utf-8"
-    )
-    print(
-        f"cached {len(embeddings)} embeddings "
-        f"({embeddings.shape[1]}d) → {emb_cache}"
-    )
+    id_cache.write_text(json.dumps(transcript_ids, ensure_ascii=False), encoding="utf-8")
+    print(f"cached {len(embeddings)} embeddings ({embeddings.shape[1]}d) → {emb_cache}")
 
     return embeddings, transcript_ids
 
