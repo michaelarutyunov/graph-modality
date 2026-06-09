@@ -138,6 +138,46 @@ Initial results showed a **perfect val macro-F1 = 1.0** ceiling effect across al
 
 **Key insight:** GIN-only (R3b) outperforms text-only (R1) on workforce AND creatives. Scientists are slightly better with text. The concept graph modality is not just complementary — for some cohorts it's the stronger signal. The text+GIN fusion (R3) underperforms GIN-only, suggesting the simple concatenation fusion is suboptimal.
 
+---
+
+## Alternative targets — Demographic classification (2026-06-09)
+
+Demographic attributes extracted from human-only transcripts via DeepSeek (prompt v2, bead `lxk` + `sfz`). Two classification targets tested.
+
+### AI Adoption — binary (tool_user vs integrated)
+
+n=1,224 (novice=21, power_user=5 dropped). Well-balanced: 602 tool_user / 622 integrated.
+
+| route | test macro-F1 | Δ vs text |
+|---|---|---|
+| R1 (text) | 0.6736 | — |
+| **R2 (text+stats)** | **0.7169** | **+0.0433** |
+| R3 (text+GIN) | 0.6319 | -0.0416 |
+| R2b (stats only) | 0.6249 | -0.0487 |
+| R3b (GIN only) | 0.6682 | -0.0053 |
+
+**Key finding:** Text alone achieves a moderate 0.67 F1 — genuine headroom for graphs. Route 2 (text+stats) adds +4.3pp, the largest graph contribution across any target. GIN underperforms across the board (both R3 and R3b), suggesting the GIN architecture overfits on the subtle tool_user/integrated distinction. R3b (GIN-only, 0.668) nearly matches text-only — graph structure alone captures AI adoption patterns almost as well as language.
+
+Per-class: tool_user 0.73 (R2), integrated 0.70 (R2). No class is systematically harder.
+
+### Career Stage — 3-class (early/mid/late)
+
+n=430 (uncertain=820 dropped). Imbalanced: 105 early / 264 mid / 61 late.
+
+| route | test macro-F1 | Δ vs text |
+|---|---|---|
+| **R1 (text)** | **0.4501** | — |
+| R2 (text+stats) | 0.3161 | -0.1340 |
+| R3 (text+GIN) | 0.3539 | -0.0962 |
+| R2b (stats only) | 0.2956 | -0.1545 |
+| R3b (GIN only) | 0.3632 | -0.0869 |
+
+**Key finding:** Task is hard (chance=0.33, text=0.45). ALL graph routes hurt — adding graph features introduces noise, not signal. The "late" class is essentially unpredictable (F1=0.11-0.29, only 9 test samples). Small sample + class imbalance make this target unreliable. **Verdict: career stage is not viable as a classification target with n=430.** Would need a larger labeled dataset or a semi-supervised approach leveraging the 820 uncertains.
+
+### Cross-target comparison
+
+AI adoption is the better demographic target: well-powered (n=1,224), balanced, moderate text baseline (0.67) with genuine graph upside (+4.3pp from stats). Career stage suffers from small sample and the 65% uncertain rate making supervised classification impractical.
+
 ### Per-class breakdown (test set)
 
 | class | Route 1 | Route 2 | Route 3 | support |
