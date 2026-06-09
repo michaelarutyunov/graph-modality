@@ -302,3 +302,43 @@ The concept graph modality carries some structural signal that differentiates gr
 1. What is the GIN actually learning? The gap between interpretable metrics (η²≈0.01-0.02) and GIN-only classification (F1=0.84) is large. Attribution techniques (GNNExplainer, integrated gradients) could probe what structural patterns the GIN exploits.
 2. Would a larger scientist cohort (n=125 currently) change H1 direction? The reversed H1 finding might reflect the small scientist sample or genuine differences in how scientists discuss AI in short interviews.
 3. Can we design continuous metrics that avoid ceiling effects? Binary bipolarity and capped CSM counts are inherently low-variance.
+
+---
+
+## Phase 5 — Target-Agnostic Modality Fusion
+
+> *To be populated during Phase 5.*
+
+### GIN autoencoder
+
+| metric | value |
+|---|---|
+| training graphs | 1,250 (all, no split) |
+| architecture | 2-layer GIN (388→256→128) + node type reconstruction head |
+| loss | cross-entropy on 4-class node type prediction |
+| — | — |
+| encoder weights | `cache/gin_encoder.pt` |
+| embedding dim | 128 |
+
+### Frozen embedding dataset
+
+| file | contents |
+|---|---|
+| `cache/modality_dataset/ai_adoption_{split}.npz` | text (768), stats (30), graph (128), labels, IDs |
+| `cache/modality_dataset/cohort_{split}.npz` | text (768), stats (30), graph (128), labels, IDs |
+
+### Classifier comparison
+
+| target | architecture | modalities | test macro-F1 | Δ vs text-only |
+|---|---|---|---|---|
+| — | — | — | — | — |
+
+### Disentanglement (complementarity matrices)
+
+| target | architecture | GRAPH-UNIQUE fraction | TEXT-UNIQUE fraction | overlap |
+|---|---|---|---|---|
+| — | — | — | — | — |
+
+### Synthesis
+
+> *To be written after experiments complete.*

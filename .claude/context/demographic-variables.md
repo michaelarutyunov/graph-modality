@@ -64,8 +64,10 @@ Credentials (PhD, MA, college dropout) are extractable but:
 
 1. **Test phase** (bead `lxk`): DeepSeek vs Agnes on 20 random transcripts
 2. **Full extraction** (follow-up): Selected model on all 1,250 transcripts
-3. **New classification targets**: Evaluate text-only, graph-only, and text+graph on career stage and AI adoption
+3. **New classification targets**: Evaluate text-only, graph-only, and text+graph on career stage and AI adoption using target-agnostic frozen embeddings + classifier zoo (Phase 5)
 4. **Compare**: Does graph modality add more value on these targets than on professional cohort?
+
+> **Note (2026-06-09):** Step 3 is now implemented as part of Phase 5 (Target-Agnostic Modality Fusion, epic `4h4`). Classifiers consume frozen .npz embeddings from `cache/modality_dataset/`. Career stage excluded due to small n=430 and 65% uncertain rate — AI adoption is the primary Phase 5 target.
 
 ## Prompt design principles
 

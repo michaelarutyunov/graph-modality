@@ -843,24 +843,40 @@ class GINAutoencoder(nn.Module):
 
 `encoding/gnn/encode.py`
 
+Follows the same cache-first pattern as `text_encoder.py` and `graph_stats.py`.
+
 ```python
+GIN_CACHE = Path("cache/gin_embeddings.npy")
+GIN_ID_CACHE = Path("cache/gin_embedding_ids.json")
+
 def encode_graphs(graph_paths: list[Path], 
-                  encoder_weights: str = "cache/gin_encoder.pt") -> np.ndarray:
-    """Produce 128-dim frozen embeddings for a set of graphs."""
+                  encoder_weights: str = "cache/gin_encoder.pt",
+                  force: bool = False) -> tuple[np.ndarray, list[str]]:
+    """Produce 128-dim frozen embeddings. Cached to cache/gin_embeddings.npy."""
+    if GIN_CACHE.exists() and GIN_ID_CACHE.exists() and not force:
+        print("loading cached GIN embeddings")
+        return np.load(GIN_CACHE), json.loads(GIN_ID_CACHE.read_text())
+    
     encoder = GINEncoder()
-    encoder.load_state_dict(torch.load(encoder_weights))
+    encoder.load_state_dict(torch.load(encoder_weights, weights_only=True))
     encoder.eval()
     
     dataset = GraphDataset(graph_paths, labels=None)  # no labels
     loader = DataLoader(dataset, batch_size=32, shuffle=False)
     
-    embeddings = []
+    embeddings, ids = [], []
     with torch.no_grad():
         for batch in loader:
             emb = encoder(batch.x, batch.edge_index, batch.batch)
             embeddings.append(emb.numpy())
+            ids.extend(batch.transcript_id)
     
-    return np.concatenate(embeddings)  # (N, 128)
+    result = np.concatenate(embeddings)  # (N, 128)
+    GIN_CACHE.parent.mkdir(exist_ok=True)
+    np.save(GIN_CACHE, result)
+    GIN_ID_CACHE.write_text(json.dumps(ids))
+    print(f"cached {len(ids)} GIN embeddings -> {GIN_CACHE}")
+    return result, ids
 ```
 
 ### 8.4 modality embedding dataset
@@ -870,23 +886,52 @@ def encode_graphs(graph_paths: list[Path],
 Packages all three frozen modality embeddings into .npz files per split and target. This is the single source of truth for downstream classifiers.
 
 ```python
-def build_dataset(target: str, split_ids: dict, 
-                  text_embs: np.ndarray, stats_embs: np.ndarray,
-                  gin_embs: np.ndarray, labels: np.ndarray):
-    """Save frozen embeddings as .npz per split."""
+def build_dataset(target: str, split_ids: dict, labels: np.ndarray):
+    """Load cached frozen embeddings, package as .npz per split.
+    
+    All three modality caches must exist before calling:
+    - cache/text_embeddings_human_only.npy + _ids.json
+    - cache/graph_stats.npy + _ids.json
+    - cache/gin_embeddings.npy + _ids.json
+    
+    Adding a new modality means: (1) produce cached .npy + _ids.json,
+    (2) add one line here to load and include it.
+    """
+    text_embs, text_ids = load_text_embeddings()
+    stats_embs, stats_ids = load_graph_stats()
+    gin_embs, gin_ids = load_gin_embeddings()
+    
+    # Build ID -> index lookups
+    text_idx = {tid: i for i, tid in enumerate(text_ids)}
+    stats_idx = {tid: i for i, tid in enumerate(stats_ids)}
+    gin_idx = {tid: i for i, tid in enumerate(gin_ids)}
+    
     for split_name, ids in [("train", split_ids["train"]), 
                              ("val", split_ids["val"]),
                              ("test", split_ids["test"])]:
-        idx = [id_to_index[tid] for tid in ids]
+        # All modalities use the same ID ordering
+        t_idx = [text_idx[tid] for tid in ids]
+        s_idx = [stats_idx[tid] for tid in ids]
+        g_idx = [gin_idx[tid] for tid in ids]
+        l_idx = [label_idx[tid] for tid in ids]
+        
         np.savez(f"cache/modality_dataset/{target}_{split_name}.npz",
-                 text_emb=text_embs[idx],      # (N, 768)
-                 stats_emb=stats_embs[idx],    # (N, 30)
-                 graph_emb=gin_embs[idx],      # (N, 128)
-                 labels=labels[idx],           # (N,)
-                 transcript_ids=ids)           # (N,)
+                 text_emb=text_embs[t_idx],      # (N, 768)
+                 stats_emb=stats_embs[s_idx],    # (N, 30)
+                 graph_emb=gin_embs[g_idx],      # (N, 128)
+                 labels=labels[l_idx],           # (N,)
+                 transcript_ids=ids)             # (N,)
+
+def load_dataset(target: str, split: str) -> dict[str, np.ndarray]:
+    """Load one .npz file. Returns dict with text_emb, stats_emb, graph_emb, labels, ids.
+    Classifiers access modalities by name: data['text_emb'], data['graph_emb'], etc.
+    Adding a new modality: the new key is automatically available to classifiers
+    that reference it in their modality_dims config."""
+    return dict(np.load(f"cache/modality_dataset/{target}_{split}.npz"))
 ```
 
 Output: `cache/modality_dataset/{target}_{split}.npz` — 6 files for 2 targets × 3 splits.
+Modality files are self-describing: keys in the .npz define which modalities are available.
 
 ---
 
@@ -939,22 +984,35 @@ class StackedClassifier(nn.Module):
 
 
 class GatedFusionClassifier(nn.Module):
-    """Learn per-example modality weights, then classify weighted features."""
-    def __init__(self, text_dim: int, graph_dim: int, n_classes: int, hidden: int = 256):
+    """Learn per-example modality weights via softmax, then classify weighted features.
+    Supports N modalities — not limited to text+graph."""
+    def __init__(self, modality_dims: dict[str, int], n_classes: int, hidden: int = 256):
         super().__init__()
-        total = text_dim + graph_dim
+        self.modality_names = sorted(modality_dims.keys())
+        self.modality_sizes = [modality_dims[m] for m in self.modality_names]
+        total = sum(self.modality_sizes)
+        n_modalities = len(self.modality_names)
+        
+        # Gate: predict per-modality attention weight from all features
         self.gate = nn.Sequential(
-            nn.Linear(total, 128), nn.ReLU(), nn.Linear(128, 1), nn.Sigmoid()
-        )
+            nn.Linear(total, 128), nn.ReLU(), nn.Linear(128, n_modalities)
+        )  # outputs raw scores, softmax applied in forward
+        
         self.classifier = nn.Sequential(
             nn.Linear(total, hidden), nn.ReLU(), nn.Dropout(0.3),
             nn.Linear(hidden, n_classes)
         )
-    def forward(self, text_emb, graph_emb):
-        concat = torch.cat([text_emb, graph_emb], dim=1)
-        gate = self.gate(concat)  # per-example weight [0,1]
-        weighted = concat * torch.cat([gate, 1 - gate], dim=1)
-        return self.classifier(weighted)
+    
+    def forward(self, embeddings: dict[str, torch.Tensor]) -> torch.Tensor:
+        ordered = [embeddings[m] for m in self.modality_names]
+        concat = torch.cat(ordered, dim=1)
+        # Per-example softmax weights over modalities
+        attn = F.softmax(self.gate(concat), dim=1)  # (B, n_modalities)
+        # Repeat each modality's weight across its dimensions
+        weights = torch.cat([
+            attn[:, i:i+1].expand(-1, sz) for i, sz in enumerate(self.modality_sizes)
+        ], dim=1)
+        return self.classifier(concat * weights)
 
 
 class LateFusionClassifier(nn.Module):
@@ -992,15 +1050,40 @@ def run_experiment(cfg: ExperimentConfig) -> dict:
     test_data = load_dataset(cfg.target, "test")
     
     model = build_classifier(cfg)
-    results = train(model, train_data, val_data, cfg)
-    test_metrics = evaluate(model, test_data)
+    trainer = Trainer(model, cfg)
+    
+    # Training loop tracks per-epoch metrics for curves
+    results = trainer.fit(train_data, val_data)
+    # results contains: {
+    #   'train_losses': list[float],    # per epoch
+    #   'val_losses': list[float],      # per epoch
+    #   'val_f1s': list[float],         # per epoch
+    #   'best_val_f1': float,
+    #   'best_epoch': int,
+    #   'epochs_run': int,
+    # }
+    
+    test_metrics = trainer.evaluate(test_data)
+    # test_metrics contains: {
+    #   'macro_f1': float,
+    #   'per_class_f1': dict,
+    #   'confusion_matrix': list,
+    #   'predictions': np.ndarray,     # per-example, for complementarity analysis
+    #   'labels': np.ndarray,          # ground truth
+    # }
     
     save_dir = f"results/fusion/{cfg.target}/{cfg.architecture}_{'-'.join(cfg.modalities)}/"
     save_results(results, test_metrics, cfg, save_dir)
     return {**results, "test": test_metrics}
 ```
 
-Each run produces: `model.pt`, `curves.png`, `test_preds.npy`, `metrics.json`.
+Each run produces:
+| File | Content |
+|---|---|
+| `model.pt` | Best classifier weights (by val F1) |
+| `curves.png` | Train/val loss + val F1 vs epoch (2-panel plot) |
+| `test_preds.npy` | Per-example predictions on test set |
+| `metrics.json` | Test macro-F1, per-class F1, confusion matrix, config snapshot |
 
 ### 9.4 evaluation
 
