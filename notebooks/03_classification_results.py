@@ -18,7 +18,8 @@ def __():
 @app.cell
 def __(json, glob, Path):
     """Load all result JSON files."""
-    result_dir = Path("results")
+    _repo_root = Path(__file__).parent.parent
+    result_dir = _repo_root / "results"
 
     # Find the latest comparison files
     _comp_files = sorted(result_dir.glob("comparison_5routes_*.json"))
@@ -147,7 +148,8 @@ def __(mo):
 @app.cell
 def __(mo, Path):
     """Display confusion matrix images."""
-    _pngs = sorted(Path("results").glob("confusion_matrices_*.png"))
+    _repo_root = Path(__file__).parent.parent
+    _pngs = sorted((_repo_root / "results").glob("confusion_matrices_*.png"))
     if _pngs:
         for _p in _pngs:
             mo.image(str(_p))
@@ -219,7 +221,8 @@ def __(mo):
 @app.cell
 def __(mo, Path):
     """Display training curve image."""
-    _curve_path = Path("cache/gnn_curves.png")
+    _repo_root = Path(__file__).parent.parent
+    _curve_path = _repo_root / "cache/gnn_curves.png"
     if _curve_path.exists():
         mo.image(str(_curve_path))
     else:

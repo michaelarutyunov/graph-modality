@@ -16,9 +16,10 @@ def __():
 
 
 @app.cell
-def __(json, glob):
+def __(json, glob, Path):
     """Load all canonical graphs into memory."""
-    _paths = sorted(glob.glob("data/graphs/canonical/*.json"))
+    _repo_root = Path(__file__).parent.parent
+    _paths = sorted(glob.glob(str(_repo_root / "data/graphs/canonical/*.json")))
     graphs = []
     for _p in _paths:
         with open(_p) as _f:
@@ -402,11 +403,12 @@ def __(mo, graphs):
 
 
 @app.cell
-def __(dropdown, json, glob, mo):
+def __(dropdown, json, glob, mo, Path):
     """Load selected graph."""
+    _repo_root = Path(__file__).parent.parent
     _selected_id = dropdown.value
     selected_graph = None
-    for _p in glob.glob("data/graphs/canonical/*.json"):
+    for _p in glob.glob(str(_repo_root / "data/graphs/canonical/*.json")):
         with open(_p) as _f:
             _g = json.load(_f)
         if _g["transcript_id"] == _selected_id:
