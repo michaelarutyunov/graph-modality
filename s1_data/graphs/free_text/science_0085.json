@@ -1,0 +1,166 @@
+{
+  "transcript_id": "science_0085",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as efficient reference and troubleshooting tool",
+      "label_negative": "AI as unreliable or generic suggestion provider",
+      "bipolarity_complete": true,
+      "grounding_span": "AI tools are often useful for giving a straightforward explanation of what certain parameters or processes mean"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for coding error resolution",
+      "label_negative": "AI for nuanced model design and hyperparameter tuning",
+      "bipolarity_complete": true,
+      "grounding_span": "AI tools can also be useful for the coding stage, especially when errors are occurring"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for generic technical support",
+      "label_negative": "AI for domain-specific physical analysis",
+      "bipolarity_complete": true,
+      "grounding_span": "the physical analysis is best done by the actual physicists that know the subject inside and out"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI for overcoming research dead ends with novel ideas",
+      "label_negative": "AI limited to existing knowledge, unable to generate truly novel paths",
+      "bipolarity_complete": true,
+      "grounding_span": "If an AI model could help with this aspect of research, it would be fantastic"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Research efficiency and time savings",
+      "grounding_span": "Often using AI in these instances saved time"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Scientific rigor and domain expertise",
+      "grounding_span": "the physical analysis is best done by the actual physicists that know the subject inside and out"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Novel scientific discovery",
+      "grounding_span": "If an AI model could help with this aspect of research, it would be fantastic"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Positive appreciation for AI in straightforward tasks",
+      "valence": "positive",
+      "grounding_span": "they were certainly useful when they needed to be"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Skepticism toward AI for nuanced model design",
+      "valence": "negative",
+      "grounding_span": "the answers that AI might give you to try and improve them are often generic and not applicable"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Firm belief that physical analysis should remain human-led",
+      "valence": "negative",
+      "grounding_span": "the physical analysis is best done by the actual physicists"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Aspirational hope for AI in novel research breakthroughs",
+      "valence": "positive",
+      "grounding_span": "If an AI model could help with this aspect of research, it would be fantastic"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Empirical trial-and-error approach to model development",
+      "grounding_span": "trial and error was the best way to go, rather than blindly trust the suggestions of an AI tool"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-boundary reasoning — clear demarcation between AI-suitable and human-essential tasks",
+      "grounding_span": "the physical analysis is best done by the actual physicists that know the subject inside and out"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n4",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

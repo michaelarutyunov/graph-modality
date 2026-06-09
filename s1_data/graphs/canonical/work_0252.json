@@ -1,0 +1,200 @@
+{
+  "transcript_id": "work_0252",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as brainstorming and idea generator",
+      "label_negative": "AI as sole source of ideas without human input",
+      "bipolarity_complete": true,
+      "grounding_span": "I'll use AI as a quick tool to get some ideas to draw inspiration from"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as coding assistant for unfamiliar languages",
+      "label_negative": "AI as unreliable programming solution",
+      "bipolarity_complete": true,
+      "grounding_span": "I may need help solving programming issues or analyzing code"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as supplement to creative process",
+      "label_negative": "AI feedback as irrelevant or unhelpful",
+      "bipolarity_complete": true,
+      "grounding_span": "I will occasionally ask AI for honest feedback about what is good or bad"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as collaborator for iterative refinement",
+      "label_negative": "One-shot AI response without follow-up",
+      "bipolarity_complete": true,
+      "grounding_span": "It's definitely a back and forth for the most part"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Human control over creative decisions",
+      "label_negative": "AI taking over creative decisions",
+      "bipolarity_complete": true,
+      "grounding_span": "I'll always make my own final changes to the dialog in the end"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI providing untrustworthy or broken code",
+      "bipolarity_complete": true,
+      "grounding_span": "AI would offer some code that it guaranteed was tested and working, and despite several hours trying to fix the issue using its 'tested and working' code, I couldn't get it to work"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI as practical problem solver",
+      "label_negative": "AI as time-wasting source of frustration",
+      "bipolarity_complete": true,
+      "grounding_span": "I spent several hours trying to solve the problem until I asked AI for help, and within 5 minutes, I had the problem fixed"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Creative satisfaction and enjoyment",
+      "grounding_span": "I enjoy coming up with ideas for a game, or trying to work through different problems"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "within 5 minutes, I had the problem fixed"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Quality and accuracy of work output",
+      "grounding_span": "it's unlikely to completely fulfill my goals/needs"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "within 5 minutes, I had the problem fixed"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with AI for coding",
+      "valence": "negative",
+      "grounding_span": "despite several hours trying to fix the issue using its 'tested and working' code, I couldn't get it to work"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Preference for human handling of creative tasks",
+      "valence": "negative",
+      "grounding_span": "I would prefer to do most of the creative tasks myself"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Cautious reliance on AI",
+      "valence": "positive",
+      "grounding_span": "I think my use of AI will remain pretty much the same"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement with limited back-and-forth",
+      "grounding_span": "I'll ask a general question, have the AI respond, and then give it all the extra information it needs to refine the response further"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Maintaining creative control and final judgment",
+      "grounding_span": "I'll always make my own final changes to the dialog in the end"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n4",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n6",
+      "target": "n7",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

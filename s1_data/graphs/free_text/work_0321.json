@@ -1,0 +1,154 @@
+{
+  "transcript_id": "work_0321",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as learning platform for professional knowledge",
+      "label_negative": "AI as unreliable source for critical tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI as a learning platform which aides my work as a bookkeeper"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability for factual information",
+      "label_negative": "AI unreliability requiring cross-referencing",
+      "bipolarity_complete": true,
+      "grounding_span": "cross reference the AI's response online to ensure that the answer from AI is correct"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Human control over mathematical and financial decisions",
+      "label_negative": "AI involvement in mathematical and financial decisions",
+      "bipolarity_complete": true,
+      "grounding_span": "I prefer to handle all mathematical problems myself as I trust my own calculations more than AI"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as enhancer of human skills",
+      "label_negative": "AI as threat to human role",
+      "bipolarity_complete": true,
+      "grounding_span": "it helps bookkeepers improve their skillsets and is not a threat to them"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Professional competence and up-to-date knowledge",
+      "grounding_span": "keep me up to date on taxation laws"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Accuracy and trust in calculations",
+      "grounding_span": "I trust my own calculations more than AI which can make errors sometimes"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional autonomy and job security",
+      "grounding_span": "bookkeeping will always need a human to verify calculations"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Satisfaction with AI as comprehensive information source",
+      "valence": "positive",
+      "grounding_span": "It provided me with a comprehensive list of softwares and this was satisfying"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Distrust of AI for mathematical tasks",
+      "valence": "negative",
+      "grounding_span": "I trust my own calculations more than AI which can make errors sometimes"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Confidence in AI as non-threatening skill enhancer",
+      "valence": "positive",
+      "grounding_span": "it helps bookkeepers improve their skillsets and is not a threat to them"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Verification-oriented cross-referencing",
+      "grounding_span": "cross reference the AI's response online to ensure that the answer from AI is correct"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Concise and straightforward interaction style",
+      "grounding_span": "My interaction with AI is usually concise, straightforward, and to the point"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

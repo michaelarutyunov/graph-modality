@@ -1,0 +1,222 @@
+{
+  "transcript_id": "science_0004",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as speed tool for discrete tasks",
+      "label_negative": "AI as source of errors requiring double-checking",
+      "bipolarity_complete": true,
+      "grounding_span": "speed up trivial or time consuming tasks such as scrapping websites"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability and hallucination",
+      "label_negative": "AI hallucination and inconsistency",
+      "bipolarity_complete": true,
+      "grounding_span": "the model had the trend to hallucinate"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as debugging assistant",
+      "label_negative": "AI as full pipeline executor lacking deep domain knowledge",
+      "bipolarity_complete": true,
+      "grounding_span": "it worked as an assistant in code debugging and code reorganization"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as brainstorming and idea generator",
+      "label_negative": "AI as mere iteration/combination of existing ideas",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't trust enough its capacity for generating truly novel ideas"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as literature discovery tool",
+      "label_negative": "AI hallucination in literature review",
+      "bipolarity_complete": true,
+      "grounding_span": "discovery relevant papers or literature for my projects"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI language style: academic vs. literary",
+      "label_negative": "AI using literary style instead of academic language",
+      "bipolarity_complete": true,
+      "grounding_span": "some tools use a more literacy style instead of standard academic language"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Research efficiency",
+      "grounding_span": "speed up trivial or time consuming tasks"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Accuracy and reliability",
+      "grounding_span": "double check all the already extracted data"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Scientific discovery and breakthrough",
+      "grounding_span": "truly novel ideas and not just iterations or combination of others ideas"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Domain-appropriate communication",
+      "grounding_span": "standard academic language"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Positive toward AI for quick problem-solving",
+      "valence": "positive",
+      "grounding_span": "I was able to get much more consistent and accurate data extracted"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with AI hallucination",
+      "valence": "negative",
+      "grounding_span": "the model had the trend to hallucinate, so it was detrimental"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Positive toward AI for coding tasks",
+      "valence": "positive",
+      "grounding_span": "it worked as an assistant in code debugging and code reorganization"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Positive view of AI as idea generator",
+      "valence": "negative",
+      "grounding_span": "I don't trust enough its capacity for generating truly novel ideas"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Negative stance toward AI for literature search",
+      "valence": "ambivalent",
+      "grounding_span": "discovery relevant papers or literature for my projects"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Negative stance toward AI for literature search",
+      "valence": "negative",
+      "grounding_span": "some tools use a more literacy style instead of standard academic language"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative back-and-forth prompting",
+      "grounding_span": "preprocess the actual webpage content and provide it in the prompt"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Sampling verification — spot-checking outputs",
+      "grounding_span": "I do sampling and verify most of the data doing a quick search"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n3",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

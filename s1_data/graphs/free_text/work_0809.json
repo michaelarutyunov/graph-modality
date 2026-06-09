@@ -1,0 +1,180 @@
+{
+  "transcript_id": "work_0809",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as drafting assistant for communications",
+      "label_negative": "Manual drafting of communications",
+      "bipolarity_complete": true,
+      "grounding_span": "drafting emails that will then be tweaked and sent back to parents"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI accuracy in context-specific details",
+      "label_negative": "AI inaccuracy in context-specific details",
+      "bipolarity_complete": true,
+      "grounding_span": "included a few extra bits and pieces that didn't make sense in the full context"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for lesson design and resource creation",
+      "label_negative": "Teacher's own judgment for lesson design",
+      "bipolarity_complete": true,
+      "grounding_span": "when it comes to making work sheets or lesson design I'm doing it myself"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI technical reliability (e.g., LaTeX rendering)",
+      "label_negative": "AI technical failures (e.g., LaTeX rendering issues)",
+      "bipolarity_complete": true,
+      "grounding_span": "inability to render LaTeX correctly which then made it an unusable waste of time"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as tool requiring human expertise to evaluate",
+      "label_negative": "AI as autonomous replacement for human skill",
+      "bipolarity_complete": true,
+      "grounding_span": "if I am not skilled in an area then I cannot tell if the AI is doing good work or not"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Professional communication quality",
+      "grounding_span": "warm, professional and grateful for her email"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Pedagogical expertise and contextual judgment",
+      "grounding_span": "AI can't really compete with my judgement as I know the school, the kids, the curriculum"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Time efficiency",
+      "grounding_span": "saved me about 10-15 mins"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Human oversight and accountability",
+      "grounding_span": "I wouldn't put my name to anything that had not been read through properly"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for email drafting",
+      "valence": "positive",
+      "grounding_span": "all in all a win"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI technical limitations",
+      "valence": "negative",
+      "grounding_span": "unusable waste of time"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Preference for own judgment in lesson design",
+      "valence": "negative",
+      "grounding_span": "AI never quite hits the mark"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Optimism about future AI improvements",
+      "valence": "positive",
+      "grounding_span": "it is going to get more refined"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative collaborative refinement — drafts then edits",
+      "grounding_span": "drafting emails that will then be tweaked"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Expertise-dependent evaluation — uses own skill to judge AI output",
+      "grounding_span": "if I am not skilled in an area then I cannot tell if the AI is doing good work"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

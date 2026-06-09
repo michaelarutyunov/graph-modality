@@ -1,0 +1,254 @@
+{
+  "transcript_id": "work_0292",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as code generation assistant",
+      "label_negative": "Manual coding of tedious tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "When I am doing small tasks such as creating elements and tedious code for a mobile app, I use AI to help me generate the code for that"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as comprehension aid for unfamiliar topics",
+      "label_negative": "Independent struggle with concepts",
+      "bipolarity_complete": true,
+      "grounding_span": "I also use ChatGPT to help me better understand different concepts as I learn and progress"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI with structured planning for control",
+      "label_negative": "AI without upfront planning leading to surprises",
+      "bipolarity_complete": true,
+      "grounding_span": "I first ask AI to create a markdown file of the plan... I then edit and make iterations on the markdown file to exactly what I want, so I know exactly what will be implemented and have full control over it"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as independent task executor",
+      "bipolarity_complete": true,
+      "grounding_span": "I find myself going back-and-forth with it throughout a task. I personally find it important to know what the AI code does exactly, especially when working with a team, thus I try to avoid giving the AI independent tasks"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as workload reducer for repetitive tasks",
+      "label_negative": "AI use for all tasks indiscriminately",
+      "bipolarity_complete": true,
+      "grounding_span": "taking advantage of AI can boost your productivity, using AI for more redundant tasks and using the time you save to spend on bigger problems"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "Personal enjoyment and meaningful engagement",
+      "label_negative": "AI involvement in personally fulfilling tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I enjoy discussing and brainstorming potential ideas myself because it is something I am passionate about and find joy in doing so"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI scope control to avoid excessive code changes",
+      "label_negative": "AI making uncontrolled large changes",
+      "bipolarity_complete": true,
+      "grounding_span": "Initially, I was frustrated because the AI would write too much code, although I just asked for simple tasks"
+    },
+    {
+      "id": "n8",
+      "type": "Construct",
+      "label": "Understanding AI-generated code to maintain skills",
+      "label_negative": "Blindly accepting AI code leading to skill degradation",
+      "bipolarity_complete": true,
+      "grounding_span": "not fully understanding the AI generated solutions could make me forget skills and potentially become worse of a developer overtime"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "boost your productivity"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Epistemic accuracy and understanding",
+      "grounding_span": "help me better understand different concepts"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Understanding and control",
+      "grounding_span": "have full control over it"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Personal fulfillment through creative engagement",
+      "grounding_span": "something I am passionate about and find joy in doing so"
+    },
+    {
+      "id": "n13",
+      "type": "Value",
+      "label": "Professional growth and skill maintenance",
+      "grounding_span": "maintaining your development skills"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Positive toward AI for quick problem-solving",
+      "valence": "positive",
+      "grounding_span": "I use AI throughout my day and I am even encouraged and taught to by my senior engineers"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Frustration with AI making unintended changes",
+      "valence": "negative",
+      "grounding_span": "Initially, I was frustrated because the AI would write too much code"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "Later on, I got better at controlling the code that the AI writes"
+    },
+    {
+      "id": "n17",
+      "type": "Stance",
+      "label": "Preference for human handling of creative tasks",
+      "valence": "positive",
+      "grounding_span": "I enjoy discussing and brainstorming potential ideas myself"
+    },
+    {
+      "id": "n18",
+      "type": "Stance",
+      "label": "Concern about AI replacing skills",
+      "valence": "negative",
+      "grounding_span": "not fully understanding the AI generated solutions could make me forget skills"
+    },
+    {
+      "id": "n19",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "positive",
+      "grounding_span": "I envision myself continuing to use AI at work as I progress in my career, hopefully using it to become a more efficient engineer"
+    },
+    {
+      "id": "n20",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative, step-by-step planning for novel tasks",
+      "grounding_span": "I first ask AI to create a markdown file of the plan... I then edit and make iterations on the markdown file"
+    },
+    {
+      "id": "n21",
+      "type": "CognitiveStyleMarker",
+      "label": "Preference for deep understanding and hands-on involvement",
+      "grounding_span": "I find myself going back-and-forth with it throughout a task"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n13",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n14",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n17",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n18",
+      "target": "n8",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n19",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n3",
+      "target": "n20",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n21",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n7",
+      "target": "n20",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n6",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

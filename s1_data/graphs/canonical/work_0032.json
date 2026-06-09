@@ -1,0 +1,203 @@
+{
+  "transcript_id": "work_0032",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as tool for lesson planning",
+      "label_negative": "AI as time-consuming fixer-upper",
+      "bipolarity_complete": true,
+      "grounding_span": "That saves me SO much time"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI alignment with educational standards and rigor",
+      "label_negative": "AI misalignment with standards and rigor",
+      "bipolarity_complete": true,
+      "grounding_span": "AI tends to make prompts a bit too complex or a bit too simple"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for time-sensitive or flexible tasks",
+      "label_negative": "AI failure under time pressure",
+      "bipolarity_complete": true,
+      "grounding_span": "I counted on the AI and it failed when I really needed it to work"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI for data analysis with expert oversight",
+      "label_negative": "AI as autonomous replacement for teacher judgment",
+      "bipolarity_complete": true,
+      "grounding_span": "I treat AI like a teacher assistant in many ways"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as tool for precise product photography",
+      "label_negative": "AI producing bare-bones unattractive outputs",
+      "bipolarity_complete": true,
+      "grounding_span": "AI usually produces a bare bones version that needs a lot of editing and doesn't look good"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "That saves me SO much time"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Educational quality and accuracy",
+      "grounding_span": "how well the prompt aligns with the standard"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Trustworthiness and accuracy",
+      "grounding_span": "I counted on the AI and it failed when I really needed it to work"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Professional judgment and expertise",
+      "grounding_span": "I don't think you could use AI very well as a teacher unless you have the expertise to notice when the AI makes a mistake"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Quality and accuracy in teaching materials",
+      "grounding_span": "create more attractive products"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Optimism about expanding AI use in lesson planning",
+      "valence": "positive",
+      "grounding_span": "I love, love, love using it to scaffold writing exercises"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with AI misalignment",
+      "valence": "negative",
+      "grounding_span": "AI tends to make prompts a bit too complex or a bit too simple"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Anxiety about AI reliability under time pressure",
+      "valence": "negative",
+      "grounding_span": "It makes me nervous anticipating relying on AI when in a time crunch"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Confidence in AI as a key skill",
+      "valence": "positive",
+      "grounding_span": "I treat AI like a teacher assistant in many ways"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Frustration with AI output quality",
+      "valence": "negative",
+      "grounding_span": "AI usually produces a bare bones version that needs a lot of editing and doesn't look good"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement with limited back-and-forth",
+      "grounding_span": "going back and forth 8-12 rounds is fairly normal"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Expert-driven quality control and nitpicking",
+      "grounding_span": "I am incredibly nitpicky about the result"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n3",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

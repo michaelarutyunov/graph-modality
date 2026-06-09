@@ -1,0 +1,231 @@
+{
+  "transcript_id": "science_0065",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as syntax assistant for coding",
+      "label_negative": "Manual syntax lookup",
+      "bipolarity_complete": true,
+      "grounding_span": "AI helps make sure I am using the correct syntax"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as literature review tool",
+      "label_negative": "Manual literature search",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is not very good for literature reviews"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as database query tool",
+      "label_negative": "Manual database search",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is also very bad at searching through astronomical databases"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as writing assistant for first drafts",
+      "label_negative": "Manual writing from scratch",
+      "bipolarity_complete": true,
+      "grounding_span": "I have AI write the paragraphs"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as plot generation tool",
+      "label_negative": "Manual plot coding",
+      "bipolarity_complete": true,
+      "grounding_span": "When making plots, I'll test the plotting scripts"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as student-like output requiring skepticism",
+      "label_negative": "AI as fully reliable output",
+      "bipolarity_complete": true,
+      "grounding_span": "I kinda treat AI outputs as something on of my students would bring me"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficient coding and syntax accuracy",
+      "grounding_span": "AI helps make sure I am using the correct syntax"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Accurate literature synthesis",
+      "grounding_span": "If AI could break down the main results of research papers"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Reliable database query results",
+      "grounding_span": "it will be unable to do so"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Efficient writing and formatting",
+      "grounding_span": "quickly write first drafts of paragraphs or format data tables"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Verifiable plot outputs",
+      "grounding_span": "test the plotting scripts with data that I know the answer for"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Scientific rigor and critical evaluation",
+      "grounding_span": "I'm skeptical, and try to figure out if it makes sense"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Positive reliance on AI for coding syntax",
+      "valence": "positive",
+      "grounding_span": "AI helps make sure I am using the correct syntax"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Negative assessment of AI for literature reviews",
+      "valence": "negative",
+      "grounding_span": "AI is not very good for literature reviews"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Negative assessment of AI for database queries",
+      "valence": "negative",
+      "grounding_span": "AI is also very bad at searching through astronomical databases"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Pragmatic use of AI for writing drafts",
+      "valence": "positive",
+      "grounding_span": "I have AI write the paragraphs"
+    },
+    {
+      "id": "n17",
+      "type": "Stance",
+      "label": "Cautious validation of AI-generated plots",
+      "valence": "ambivalent",
+      "grounding_span": "I'll test the plotting scripts with data that I know the answer for"
+    },
+    {
+      "id": "n18",
+      "type": "Stance",
+      "label": "Skeptical stance toward AI outputs",
+      "valence": "ambivalent",
+      "grounding_span": "I kinda treat AI outputs as something on of my students would bring me"
+    },
+    {
+      "id": "n19",
+      "type": "Stance",
+      "label": "Aspirational desire for AI literature synthesis",
+      "valence": "positive",
+      "grounding_span": "If AI could break down the main results of research papers"
+    },
+    {
+      "id": "n20",
+      "type": "CognitiveStyleMarker",
+      "label": "Systematic validation through known data and edge cases",
+      "grounding_span": "test the plotting scripts with data that I know the answer for or think of extreme/limiting cases"
+    },
+    {
+      "id": "n21",
+      "type": "CognitiveStyleMarker",
+      "label": "Skeptical evaluation by analogy to student work",
+      "grounding_span": "I kinda treat AI outputs as something on of my students would bring me"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n13",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n17",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n18",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n19",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n5",
+      "target": "n20",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n21",
+      "relation": "MODULATED_BY"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

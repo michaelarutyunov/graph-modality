@@ -1,0 +1,162 @@
+{
+  "transcript_id": "work_0771",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as writing assistant",
+      "label_negative": "AI as story performer replacing human teller",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI models to help me with this. I provide the basic elements...and the model creates a story"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "Human control over story content and adaptation",
+      "label_negative": "AI dictating story content without human input",
+      "bipolarity_complete": true,
+      "grounding_span": "I review it for overall tone and message. Typically, I will make a few changes"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Human expertise and credibility in storytelling",
+      "label_negative": "Storytelling as AI-mediated content delivery",
+      "bipolarity_complete": true,
+      "grounding_span": "story-telling is about human-to-human connections"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI responsiveness to iterative adjustments",
+      "label_negative": "AI rigidity requiring many revisions",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't recall ever needing more than three turns with the model to get what I needed"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Personalized classroom context integration",
+      "label_negative": "Generic story without classroom relevance",
+      "bipolarity_complete": true,
+      "grounding_span": "I always try to make the story reflect something we are doing in class"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Student engagement and learning",
+      "grounding_span": "The kids really got into the story. They loved the characters' names and talked about the story"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Human connection and relationship",
+      "grounding_span": "They crave human interaction. That is what storytelling is all about"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Creative control and originality",
+      "grounding_span": "I always try to make the story reflect something we are doing in class, some of the personalities of the students"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Resistance to AI taking over storytelling",
+      "valence": "positive",
+      "grounding_span": "I've done this many times, always to good effect"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Resistance to AI taking over storytelling",
+      "valence": "negative",
+      "grounding_span": "I'm not ready to let them 'take over'"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Openness to using AI for math in future",
+      "valence": "positive",
+      "grounding_span": "I have not used it yet for math and this seems like an area where the models could be very helpful"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through revision requests",
+      "grounding_span": "I repeat this process until I feel like I have something I can use"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Context-driven audience adaptation",
+      "grounding_span": "I can make adjustments in real time"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

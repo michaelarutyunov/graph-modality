@@ -13,46 +13,47 @@
 ## Repo Structure
 
 ```
-data/
-  raw/                    # Downloaded CSVs from HuggingFace (gitignored)
-  tagged/                 # Speaker-tagged transcripts as .jsonl (gitignored)
+s1_data/
+  raw/                    # Downloaded CSVs (gitignored)
+  tagged/                 # Speaker-tagged .jsonl (gitignored)
   graphs/
     free_text/            # Extracted graphs, free-text labels (gitignored)
     canonical/            # Canonicalised graphs (gitignored)
-cache/                    # Encoded embeddings and trained weights (gitignored)
-extraction/
-  prompts/                # Versioned extraction prompts — tracked in git
-  model_comparison/       # 3-model comparison + validation report
-  tagger.py
-  extractor.py
-  validator.py
-canonicalisation/
-  clusterer.py
-  apply_canonical.py
-  canonical_map.json      # Locked after day 3 — never modified post-lock
-encoding/
-  text_encoder.py
-  graph_stats.py
-  gnn/
-    dataset.py          # PyG Dataset — converts graphs to Data objects
-    autoencoder.py      # GIN autoencoder — self-supervised, target-agnostic
-    encode.py           # Frozen encoder inference — produces 128-dim embeddings
-classification/
-  split.py
-  baseline.py
-  route2.py
-  route3.py             # DEPRECATED — conflated GIN+classifier, replaced by fusion/
-  fusion/
-    models.py           # Classifier zoo (single, stacked, gated, late fusion)
-    train.py            # Generic training loop for frozen embeddings
-    run.py              # Config-driven experiment runner
-    config.py           # ExperimentConfig dataclass
-notebooks/                # Marimo notebooks (.py files, tracked in git)
-results/                  # Experiment results as JSON/CSV (gitignored)
+cache/                    # Embeddings + models (gitignored)
+s2_extraction/
+  prompts/                # Versioned prompts — tracked in git
+  model_comparison/       # 3-model comparison
+  tagger.py, extractor.py, validator.py
+s3_canonicalisation/
+  clusterer.py, apply_canonical.py
+  canonical_map.json      # Locked, immutable
+s4_encoding/              # Flat — no subfolders
+  text_encoder.py         # SBERT 768-dim
+  graph_stats_encoder.py  # 30-dim deterministic
+  graph_gnn_encoder.py    # GIN autoencoder + frozen inference (train + --encode)
+  graph_dataset.py        # PyG Dataset wrapper
+  build_dataset.py        # Package as .npz
+  _archived/              # Phase 3 task-supervised GIN
+s5_classification/        # Flat — no subfolders
+  split.py                # Train/val/test split
+  classifiers.py          # Factory + re-exports (mlp_* files)
+  mlp_single.py           # Single-modality MLP
+  mlp_stacked.py          # Concat fusion MLP
+  mlp_gated.py            # Gated attention MLP
+  mlp_late.py             # Late ensemble MLP
+  sklearn_classifier.py   # Sklearn wrapper (4 classifiers)
+  train_loop.py           # PyTorch training loop
+  train_config.py         # ExperimentConfig + sweeps
+  train_run.py            # Config-driven runner (torch + sklearn)
+  baseline.py             # Thin convenience wrapper
+  analysis_feature_importance.py  # Permutation importance
+  analysis_stats.py       # Stats-only report
+  _archived/              # Phase 3 route3
+s6_notebooks/             # Marimo notebooks (.py, tracked in git)
+results/                  # Experiment outputs (gitignored)
 tests/
-.claude/
-  agents/                 # Specialist agents
-  context/                # Knowledge base
+docs/                     # CHARTER.md, ENGINEERING.md, PLAN.md
+.claude/                  # Agents + context docs
 ```
 
 ---
@@ -61,45 +62,52 @@ tests/
 
 | File | Purpose |
 |---|---|
-| `CHARTER.md` | Research questions, ontology, evaluation philosophy, scope |
-| `ENGINEERING.md` | Full technical spec — pipeline, encoding, classification, setup |
+| `docs/CHARTER.md` | Research questions, ontology, evaluation philosophy, scope |
+| `docs/ENGINEERING.md` | Full technical spec — pipeline, encoding, classification, setup |
+| `docs/PLAN.md` | Sequenced implementation plan with phase gates and decisions |
 | `.claude/context/graph-schema.md` | Graph JSON schema — data contract between extraction and encoding |
 | `.claude/context/extraction-log.md` | Prompt version history, model comparison results |
 | `.claude/context/results-log.md` | Experiment results summary — validation results recorded |
 | **Extraction** | |
-| `extraction/prompts/v3.txt` | Active extraction prompt (two-shot: workforce + scientist examples) |
-| `extraction/prompts/v2.txt` | One-shot variant (workforce example only) |
-| `extraction/prompts/v1.txt` | Original prompt (no examples) — preserved, never deleted |
-| `extraction/validator.py` | Structural constraint checks — run after every extraction |
+| `s2_extraction/prompts/v3.txt` | Active extraction prompt (two-shot: workforce + scientist examples) |
+| `s2_extraction/prompts/v2.txt` | One-shot variant (workforce example only) |
+| `s2_extraction/prompts/v1.txt` | Original prompt (no examples) — preserved, never deleted |
+| `s2_extraction/validator.py` | Structural constraint checks — run after every extraction |
 | **Canonicalisation** | |
-| `canonicalisation/canonical_map.json` | Locked canonical vocabulary — source of truth for all node type counting |
+| `s3_canonicalisation/canonical_map.json` | Locked canonical vocabulary — source of truth for all node type counting |
 | **Encoding** | |
-| `encoding/text_encoder.py` | SBERT text embeddings (768-dim), human-only turns, frozen |
-| `encoding/graph_stats.py` | Route 2 feature vector — 30 dimensions, networkx-derived, deterministic |
-| `encoding/gnn/dataset.py` | PyG Dataset — converts graphs to Data objects with node features |
-| `encoding/gnn/autoencoder.py` | GIN autoencoder — self-supervised training, target-agnostic |
-| `encoding/gnn/encode.py` | Frozen GIN inference — produces 128-dim embeddings for any graph set |
+| `s4_encoding/text_encoder.py` | SBERT text embeddings (768-dim), human-only turns, frozen |
+| `s4_encoding/graph_stats_encoder.py` | Route 2 feature vector — 30 dimensions, networkx-derived, deterministic |
+| `s4_encoding/graph_dataset.py` | PyG Dataset — converts graphs to Data objects with node features |
+| `s4_encoding/graph_gnn_encoder.py` | GIN autoencoder + frozen inference — self-supervised, target-agnostic (train + encode in one file) |
 | **Classification** | |
-| `classification/split.py` | Fixed stratified 70/15/15 split (seed=42), cached split IDs |
-| `classification/baseline.py` | Route 1 — text-only logistic regression |
-| `classification/route2.py` | Route 2 — text + graph stats LR with permutation importance |
-| `classification/route3.py` | DEPRECATED — conflated GIN+classifier; replaced by fusion/ package |
-| `classification/fusion/models.py` | Classifier zoo — single, stacked, gated fusion, late fusion |
-| `classification/fusion/train.py` | Generic training loop — consumes frozen modality embeddings |
-| `classification/fusion/run.py` | Config-driven experiment runner — any arch × any target |
-| `classification/fusion/config.py` | ExperimentConfig dataclass — reproducible experiment specs |
+| `s5_classification/split.py` | Fixed stratified 70/15/15 split (seed=42), cached split IDs |
+| `s5_classification/baseline.py` | Route 1 — text-only logistic regression (Phase 3 reference) |
+| `s5_classification/analysis_feature_importance.py` | Permutation importance analysis — which graph features matter |
+| `s5_classification/analysis_stats.py` | Stats-only per-class report — graph topology discriminability |
+| `s5_classification/route3.py` | DEPRECATED — conflated GIN+classifier; moved to _archived/ |
+| `s5_classification/classifiers.py` | PyTorch classifier zoo + build_classifier() factory |
+| `s5_classification/mlp_single.py` | Single-modality MLP baseline |
+| `s5_classification/mlp_stacked.py` | Stacked (concatenation) fusion classifier |
+| `s5_classification/mlp_gated.py` | Gated fusion with learned per-modality attention |
+| `s5_classification/mlp_late.py` | Late fusion ensemble (average logits) |
+| `s5_classification/sklearn_classifier.py` | Sklearn wrapper — any sklearn classifier behind Phase 5 interface |
+| `s5_classification/train_loop.py` | PyTorch training loop — Trainer, TrainingConfig, curve plotting |
+| `s5_classification/train_run.py` | Config-driven experiment runner — torch + sklearn backends |
+| `s5_classification/train_config.py` | ExperimentConfig dataclass + sweep builders (torch, sklearn, all) |
 
 ---
 
 ## Architecture Principles
 
-- **Cache everything.** Extraction is API-expensive; text encoding is compute-expensive. Both run once and write to `cache/` or `data/graphs/`. Never re-extract or re-encode if cached output exists. Check cache before any API call.
+- **Cache everything.** Extraction is API-expensive; text encoding is compute-expensive. Both run once and write to `cache/` or `s1_data/graphs/`. Never re-extract or re-encode if cached output exists. Check cache before any API call.
 - **Target-agnostic encoders, task-specific classifiers.** Modality encoders (SBERT, graph stats, GIN autoencoder) produce frozen vector representations that encode what the data IS, not what it predicts. Only classifiers learn per-task. This separation enables clean measurement of modality complementarity — the same graph embedding is used for cohort, AI adoption, or any future target without retraining the encoder.
+- **Dual backend: torch + sklearn.** Classifiers can be PyTorch MLPs (epoch-based, early stopping) or sklearn estimators (one-shot fit). Both consume the same frozen .npz embeddings. Adding a new sklearn classifier is one import + one dict entry. The experiment runner dispatches by `backend` field in config.
 - **Multi-backend extractor.** The extractor supports both Anthropic and OpenAI-compatible backends via `--backend`. DeepSeek uses the OpenAI-compatible endpoint (`deepseek-chat`) with JSON mode (`response_format={"type": "json_object"}`) — NOT the Anthropic-compatible endpoint which forces thinking mode and causes JSON truncation. Agnes uses OpenAI-compatible endpoint. Claude uses Anthropic SDK.
-- **Prompts are versioned files.** Extraction prompts live in `extraction/prompts/` as numbered text files (`v1.txt`, `v2.txt`, `v3.txt`). Never hardcode prompt text in Python. Active version: `v3.txt` (two-shot examples: workforce + scientist). Older versions preserved, never deleted.
+- **Prompts are versioned files.** Extraction prompts live in `s2_extraction/prompts/` as numbered text files (`v1.txt`, `v2.txt`, `v3.txt`). Never hardcode prompt text in Python. Active version: `v3.txt` (two-shot examples: workforce + scientist). Older versions preserved, never deleted.
 - **Lock before modelling.** `canonical_map.json` is finalised and locked before any encoding or classification begins. No downstream code may modify it. If the vocabulary needs changing, re-run canonicalisation and re-encode from scratch.
 - **Scripts for pipeline, Marimo for analysis.** Long-running or stateful stages (extraction, encoding, classification) are Python scripts. Interactive inspection, visualisation, and hypothesis testing are Marimo notebooks.
-- **Graph schema is the contract.** The JSON schema in `.claude/context/graph-schema.md` is the stable interface between extraction and all downstream modules. Never change it without updating `extraction/validator.py` and all encoding modules.
+- **Graph schema is the contract.** The JSON schema in `.claude/context/graph-schema.md` is the stable interface between extraction and all downstream modules. Never change it without updating `s2_extraction/validator.py` and all encoding modules.
 - **uv only.** Never use `pip` directly. All package management via `uv add` / `uv run`.
 - **PYTHONPATH=.** All imports are absolute from repo root. No relative imports across module boundaries.
 
@@ -108,9 +116,9 @@ tests/
 ## Non-Negotiable Conventions
 
 - `canonical_map.json` is **immutable post-lock** — if vocabulary changes are needed, re-run full canonicalisation pipeline and treat it as a new experiment, not a patch
-- New route = update `ENGINEERING.md` first, then implement. Never in reverse.
+- New route = update `docs/ENGINEERING.md` first, then implement. Never in reverse.
 - Extraction prompt changes increment the version number — `v1.txt` → `v2.txt`. Old versions are never deleted.
-- `data/`, `cache/`, `results/` are gitignored — never commit graphs, embeddings, or result files
+- `s1_data/`, `cache/`, `results/` are gitignored — never commit graphs, embeddings, or result files
 - `.env` is gitignored — API keys (Anthropic, DeepSeek, Agnes) live there only
 - Test set is held out until final evaluation — no hyperparameter decisions on test performance
 - Experiment results written to `results/{route}_{timestamp}.json` — never overwrite a prior result file
@@ -122,19 +130,25 @@ tests/
 
 ```bash
 uv run python data/download.py                              # Download dataset (idempotent)
-uv run python extraction/extractor.py                       # Run extraction with DeepSeek (default, skips cached)
-uv run python extraction/extractor.py --backend anthropic  # Use Claude instead
-uv run python extraction/model_comparison/run_comparison.py # 3-model comparison (Claude/DeepSeek/Agnes)
-uv run python canonicalisation/clusterer.py                 # Build canonical vocabulary
-uv run python canonicalisation/apply_canonical.py           # Apply to all graphs
-uv run python encoding/text_encoder.py                      # Encode transcripts → 768-dim (caches)
-uv run python encoding/graph_stats.py                       # Compute graph stats → 30-dim (caches)
-uv run python encoding/gnn/autoencoder.py                   # Train GIN autoencoder (self-supervised)
-uv run python encoding/gnn/encode.py                        # Frozen GIN inference → 128-dim (caches)
-uv run python encoding/build_dataset.py                     # Package frozen embeddings → .npz
-uv run python classification/fusion/run.py                  # Run classifier experiment (config-driven)
-uv run python classification/baseline.py                    # Text-only baseline
-uv run python classification/route2.py                      # Text + graph stats
+uv run python s2_extraction/extractor.py                       # Run extraction with DeepSeek (default, skips cached)
+uv run python s2_extraction/extractor.py --backend anthropic  # Use Claude instead
+uv run python s2_extraction/model_comparison/run_comparison.py # 3-model comparison (Claude/DeepSeek/Agnes)
+uv run python s3_canonicalisation/clusterer.py                 # Build canonical vocabulary
+uv run python s3_canonicalisation/apply_canonical.py           # Apply to all graphs
+uv run python s4_encoding/text_encoder.py                      # Encode transcripts → 768-dim (caches)
+uv run python s4_encoding/graph_stats_encoder.py               # Compute graph stats → 30-dim (caches)
+uv run python s4_encoding/graph_gnn_encoder.py                 # Train GIN autoencoder (canonical labels)
+uv run python s4_encoding/graph_gnn_encoder.py --label-source free_text  # Train free-text autoencoder
+uv run python s4_encoding/graph_gnn_encoder.py --encode        # Frozen GIN inference (canonical)
+uv run python s4_encoding/graph_gnn_encoder.py --encode --label-source free_text  # Free-text inference
+uv run python s4_encoding/build_dataset.py                     # Package frozen embeddings → .npz
+uv run python s5_classification/train_run.py                         # Torch sweep (42 experiments)
+uv run python s5_classification/train_run.py --sweep sklearn         # Sklearn sweep (48 experiments)
+uv run python s5_classification/train_run.py --sweep all --dry-run   # Full plan (90 experiments)
+uv run python s5_classification/train_run.py --target ai_adoption    # Single-target sweep
+uv run python s5_classification/baseline.py                          # Text-only LR baseline (convenience)
+uv run python s5_classification/analysis_feature_importance.py       # Permutation importance analysis
+uv run python s5_classification/analysis_stats.py                    # Stats-only per-class report
 uv run marimo edit notebooks/01_extraction_review.py        # Graph inspection notebook
 uv run marimo edit notebooks/02_graph_exploration.py        # Cohort topology notebook
 uv run marimo edit notebooks/03_classification_results.py   # Results notebook
@@ -198,11 +212,11 @@ Every bead that dispatches parallel sub-agents must include an explicit **Merge 
 
 | File pattern | Specialist agent |
 |---|---|
-| `.claude/context/graph-schema.md`, `extraction/validator.py` | `.claude/agents/schema-guardian/AGENT.md` |
-| `extraction/**` | `.claude/agents/extraction-specialist/AGENT.md` |
-| `canonicalisation/**` | `.claude/agents/canonicalisation-specialist/AGENT.md` |
-| `encoding/**` | `.claude/agents/encoding-specialist/AGENT.md` |
-| `classification/**`, `notebooks/**` | `.claude/agents/analysis-specialist/AGENT.md` |
+| `.claude/context/graph-schema.md`, `s2_extraction/validator.py` | `.claude/agents/schema-guardian/AGENT.md` |
+| `s2_extraction/**` | `.claude/agents/extraction-specialist/AGENT.md` |
+| `s3_canonicalisation/**` | `.claude/agents/canonicalisation-specialist/AGENT.md` |
+| `s4_encoding/**` | `.claude/agents/encoding-specialist/AGENT.md` |
+| `s5_classification/**`, `s6_notebooks/**`, sklearn integration | `.claude/agents/analysis-specialist/AGENT.md` |
 
 > All 5 planned agents are now active.
 
@@ -212,8 +226,9 @@ Every bead that dispatches parallel sub-agents must include an explicit **Merge 
 
 | Topic | Path |
 |---|---|
-| Research charter | `CHARTER.md` |
-| Engineering guide | `ENGINEERING.md` |
+| Research charter | `docs/CHARTER.md` |
+| Engineering guide | `docs/ENGINEERING.md` |
+| Implementation plan | `docs/PLAN.md` |
 | Graph JSON schema | `.claude/context/graph-schema.md` |
 | Extraction log | `.claude/context/extraction-log.md` |
 | Governance principles | `.claude/context/codified-context-principles.md` |
@@ -254,7 +269,7 @@ Every bead that dispatches parallel sub-agents must include an explicit **Merge 
 - H3 (workforce bipolarity): Not significant — ceiling effect from ontology constraint
 - H4 (scientist cognitive style): Not significant — CSM count ceiling (max 2)
 - AI adoption exploratory: only C:V ratio differentiates tool_user vs integrated
-- Full results in `.claude/context/results-log.md` and `notebooks/04_structural_analysis.py`
+- Full results in `.claude/context/results-log.md` and `s6_notebooks/04_structural_analysis.py`
 
 ### Phase 5 🔜 — Target-Agnostic Modality Fusion (epic `4h4`, 5 beads)
 - **Goal:** Test whether graph modalities add complementary signal when encoders are frozen (target-agnostic)
@@ -263,8 +278,8 @@ Every bead that dispatches parallel sub-agents must include an explicit **Merge 
 - Bead C (`olc`): Classifier zoo + experiment runner — 4 architectures, config-driven
 - Bead D (`778`): Disentanglement analysis — complementarity matrices
 - Bead E (`6cu`): Summary report — synthesis in results-log.md
-- **Key design change:** Old `encoding/gnn/model.py` and `train.py` (task-supervised GIN) are DEPRECATED.
-  New: `encoding/gnn/autoencoder.py` (self-supervised) + `classification/fusion/` (task-specific classifiers).
+- **Key design change:** Old `s4_encoding/gnn/model.py` and `train.py` (task-supervised GIN) are DEPRECATED (moved to `s4_encoding/_archived/`).
+  New: `s4_encoding/graph_gnn_encoder.py` (self-supervised GIN, train+encode in one file) + `s5_classification/` (task-specific classifiers, flat directory).
 
 
 <!-- BEGIN BEADS INTEGRATION v:1 profile:minimal hash:7510c1e2 -->

@@ -1,0 +1,174 @@
+{
+  "transcript_id": "work_0917",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI independence in task completion",
+      "label_negative": "AI as collaborative ongoing partner",
+      "bipolarity_complete": true,
+      "grounding_span": "Definitely delegate complete tasks to handle independently for now"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI hallucination and fabrication",
+      "bipolarity_complete": true,
+      "grounding_span": "the AI would produce an answer that looked correct at first glance and give a reference. The answer was always incorrect and the reference link was broken every time"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as efficiency tool",
+      "label_negative": "Manual execution despite repetitiveness",
+      "bipolarity_complete": true,
+      "grounding_span": "it would still take less time to do it myself than to use AI. Giving a lot of context and complex instructions takes quite a long time"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as productivity enhancer",
+      "label_negative": "AI as threat to human skills",
+      "bipolarity_complete": true,
+      "grounding_span": "I see it as a tool that can open up more time for humans to focus on more complex analytical and creative problems"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as skill development enabler",
+      "label_negative": "AI illiteracy",
+      "bipolarity_complete": true,
+      "grounding_span": "every person should be proficient in interacting with AI in the same way we use personal computers"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "increase productivity and allow us to spend time on more complex issues"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Accuracy and reliability in work",
+      "grounding_span": "I want the correct answer every time"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional growth and skill maintenance",
+      "grounding_span": "I'm actively trying to develop tools that would allow AI to take over entire tasks/areas of work"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Frustration with AI hallucination",
+      "valence": "negative",
+      "grounding_span": "what was frustrating was that instead of admitting it couldn't find anything, the AI would produce an answer that looked correct at first glance and give a reference"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Preference for manual over AI in accuracy tasks",
+      "valence": "negative",
+      "grounding_span": "When the task requires 100% accuracy and a very particular tone that needs context to understand, I rather just do it myself"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "positive",
+      "grounding_span": "I see it as a tool that can open up more time for humans to focus on more complex analytical and creative problems"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Forward-looking belief in AI ubiquity",
+      "valence": "positive",
+      "grounding_span": "every person should be proficient in interacting with AI in the same way we use personal computers"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic cost-benefit analysis of AI use",
+      "grounding_span": "it would still take less time to do it myself than to use AI. Giving a lot of context and complex instructions takes quite a long time"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Proactive tool integration and influence",
+      "grounding_span": "I'm actively trying to develop tools that would allow AI to take over entire tasks/areas of work"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

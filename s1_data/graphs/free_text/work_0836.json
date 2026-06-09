@@ -1,0 +1,174 @@
+{
+  "transcript_id": "work_0836",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative writing partner",
+      "label_negative": "AI as fully autonomous writer",
+      "bipolarity_complete": true,
+      "grounding_span": "I let AI work its magic. We collaborate."
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI accuracy and reliability",
+      "label_negative": "AI inaccuracy and repetition",
+      "bipolarity_complete": true,
+      "grounding_span": "AI kept providing me information that was inaccurate"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Personal creative control over visual content",
+      "label_negative": "AI handling visual content selection",
+      "bipolarity_complete": true,
+      "grounding_span": "I prefer to insert myself because I use my own photos of my own artwork as examples"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as productivity booster under deadline",
+      "label_negative": "AI as unreliable under normal conditions",
+      "bipolarity_complete": true,
+      "grounding_span": "I was able to produce both projects overnight with the help of AI"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as personal secret tool",
+      "label_negative": "Openly shared AI use",
+      "bipolarity_complete": true,
+      "grounding_span": "It's my personal secret"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficient task completion",
+      "grounding_span": "produce both projects overnight"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Artistic authenticity and personal expression",
+      "grounding_span": "my own photos of my own artwork as examples"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional competence and accuracy",
+      "grounding_span": "well-written, thorough, and very informative"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for writing tasks",
+      "valence": "positive",
+      "grounding_span": "I was extremely satisfied with my use of AI"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI inaccuracies",
+      "valence": "negative",
+      "grounding_span": "AI kept providing me information that was inaccurate"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Reserved trust in AI for personal creative tasks",
+      "valence": "negative",
+      "grounding_span": "I'm not sure would be met with as much accuracy as if I did it myself"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Contentment with current AI use pattern",
+      "valence": "positive",
+      "grounding_span": "I don't necessarily see my relationship evolving with AI"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Step-by-step iterative refinement",
+      "grounding_span": "I will usually ask for content step-by-step and make adjustments as we go"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-specific boundary setting",
+      "grounding_span": "Any photographic detail needed in addition to the worded content, I prefer to insert myself"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

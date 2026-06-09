@@ -1,0 +1,186 @@
+{
+  "transcript_id": "work_0553",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as writing quality enhancer",
+      "label_negative": "AI as undermining personal voice",
+      "bipolarity_complete": true,
+      "grounding_span": "help elevate my writing quality and ensure that I am conveying the proper message"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as meeting note taker",
+      "label_negative": "Human note taking with potential omissions",
+      "bipolarity_complete": true,
+      "grounding_span": "AI takes the meeting notes, that is the most satisfying to me, because nothing is lost"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as task automator for efficiency",
+      "label_negative": "Manual handling of repetitive tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "automate some of those more repetitive tasks or emails"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as quick answer provider",
+      "label_negative": "AI as overly inquisitive requiring clarification",
+      "bipolarity_complete": true,
+      "grounding_span": "I get frustrated when AI asks too many clarifying questions rather than just providing a quick answer"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as enabler of human relationship focus",
+      "label_negative": "AI as distraction from human connections",
+      "bipolarity_complete": true,
+      "grounding_span": "focus more on developing relationships with my teammates"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Effective communication",
+      "grounding_span": "conveying the proper message"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Reliable documentation",
+      "grounding_span": "nothing is lost"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Time efficiency",
+      "grounding_span": "free up time in my day"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Personal touch in communication",
+      "grounding_span": "without losing the personal touch"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Human relationships",
+      "grounding_span": "developing relationships with my teammates"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI meeting notes",
+      "valence": "positive",
+      "grounding_span": "AI takes the meeting notes, that is the most satisfying to me"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with AI asking too many questions",
+      "valence": "negative",
+      "grounding_span": "I get frustrated when AI asks too many clarifying questions"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Optimism about AI automation for efficiency",
+      "valence": "positive",
+      "grounding_span": "very excited to see how it can help us automate tasks"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Desire to maintain personal touch",
+      "valence": "mixed",
+      "grounding_span": "without losing the personal touch"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement with human oversight",
+      "grounding_span": "I describe what I want the email to say and with which tone. I then let AI craft the email and I will make any corrections"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Task-specific autonomy delegation",
+      "grounding_span": "For meeting notes, I will let AI handle all of it and I will just proofread"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "SERVES"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

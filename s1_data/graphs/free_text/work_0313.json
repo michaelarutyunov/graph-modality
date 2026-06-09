@@ -1,0 +1,190 @@
+{
+  "transcript_id": "work_0313",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as efficient filter for database sifting",
+      "label_negative": "Manual exhaustive search through database",
+      "bipolarity_complete": true,
+      "grounding_span": "helps me narrow down the pool a lot faster"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as independent scheduler for repetitive tasks",
+      "label_negative": "AI requiring step-by-step collaboration for scheduling",
+      "bipolarity_complete": true,
+      "grounding_span": "I definitely let it handle schedules alone"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as collaborative partner for creative filtering",
+      "label_negative": "AI as fully autonomous decision-maker in casting",
+      "bipolarity_complete": true,
+      "grounding_span": "with stuff related to filtering the database, we do feel like more of a team"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Human irreplaceability in assessing chemistry and fit",
+      "label_negative": "AI capability to fully replace human judgment in casting",
+      "bipolarity_complete": true,
+      "grounding_span": "AI will ever be able to fully understand and feel chemistry between two actors like a person can"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI use in entertainment industry as controversial",
+      "label_negative": "AI use in entertainment as universally accepted",
+      "bipolarity_complete": true,
+      "grounding_span": "there are a lot of strong opinions on whether we should use AI in any capacity"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "saves me some time"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Creative autonomy and final say",
+      "grounding_span": "I definitely get the final say in who gets picked"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Meaningful human connection with actors",
+      "grounding_span": "I feel like I can really get to know the actors and not rush them out the door"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Job security and professional identity",
+      "grounding_span": "it's scary to think that my job could be fully automated one day"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for time-saving in casting",
+      "valence": "positive",
+      "grounding_span": "A lot of AI-related satisfaction comes from that fast turnaround with casting"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Contentment with current AI balance",
+      "valence": "positive",
+      "grounding_span": "I feel like we're at a good balance as-is"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Concern about job automation",
+      "valence": "negative",
+      "grounding_span": "it's scary to think that my job could be fully automated one day"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Skepticism about AI replacing human intuition",
+      "valence": "negative",
+      "grounding_span": "I really don't think AI will ever be able to fully understand and feel chemistry"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Task-based delegation — assigns different levels of autonomy based on task type",
+      "grounding_span": "I definitely let it handle schedules alone... but with stuff related to filtering the database, we do feel like more of a team"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Intuition-driven final judgment — relies on personal feel despite data",
+      "grounding_span": "you really have to meet a lot of these people in person to know whether they're a great fit or not"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

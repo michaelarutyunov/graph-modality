@@ -1,0 +1,174 @@
+{
+  "transcript_id": "work_0739",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as error-checking and consistency tool",
+      "label_negative": "AI as unreliable or missing errors",
+      "bipolarity_complete": true,
+      "grounding_span": "ask if there are any errors or inconsistencies in my work"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as collaborative partner for complex tasks",
+      "label_negative": "AI as independent task completer",
+      "bipolarity_complete": true,
+      "grounding_span": "I use it more for collaboration"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability through experience and cross-checking",
+      "label_negative": "AI unreliability when taken at face value",
+      "bipolarity_complete": true,
+      "grounding_span": "I have learned that it can be temperamental and sometimes make mistakes, though I have learnt ways of identifying mistakes"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI use as professional competence vs. incompetence",
+      "label_negative": "AI use as incompetence",
+      "bipolarity_complete": true,
+      "grounding_span": "as if someone using AI doesn't know how to do their own job"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI for high-stakes structural assessment",
+      "label_negative": "AI for low-stakes tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "the stakes are very high"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Work quality and client communication",
+      "grounding_span": "reduce confusion"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and productivity",
+      "grounding_span": "complete work faster"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional autonomy and learning",
+      "grounding_span": "not have to ask someone all the time for help"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for error-checking",
+      "valence": "positive",
+      "grounding_span": "makes me feel satisfied when I am able to complete work faster"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Trust in AI based on experience",
+      "valence": "positive",
+      "grounding_span": "I personally have a lot of trust in AI"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Awareness of AI limitations",
+      "valence": "ambivalent",
+      "grounding_span": "it can be temperamental and sometimes make mistakes"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Feeling of being frowned upon for AI use",
+      "valence": "negative",
+      "grounding_span": "I feel like it is frowned upon"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Decomposition and cross-referencing",
+      "grounding_span": "break a difficult question up and ask for help on each step"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Experience-driven calibration of trust",
+      "grounding_span": "I have learned that it can be temperamental"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

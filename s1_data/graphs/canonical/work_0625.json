@@ -1,0 +1,182 @@
+{
+  "transcript_id": "work_0625",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as fully autonomous content generator",
+      "bipolarity_complete": true,
+      "grounding_span": "I then worked collaboratively with the AI to refine the blog post until it was to my liking"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI output quality and appropriateness",
+      "label_negative": "AI superficial or generic output",
+      "bipolarity_complete": true,
+      "grounding_span": "I usually asked the AI to be more specific, as it was giving general facts about the languages"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI hallucination and fabrication",
+      "bipolarity_complete": true,
+      "grounding_span": "I do sometimes have to double check sources as there have been some hallucinations"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI transcription accuracy for technical terms",
+      "label_negative": "Human-only transcription for compliance",
+      "bipolarity_complete": true,
+      "grounding_span": "I am not against using AI for transcription, but I would definitely edit and proofread the transcripts myself"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI for client communication",
+      "label_negative": "Direct human client communication",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't think I would use it for client communication, as it just seems faster to do it myself"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "Client-driven AI usage rules",
+      "label_negative": "User-driven discovery of AI applications",
+      "bipolarity_complete": true,
+      "grounding_span": "I do wish it presented other ways it could help me that I haven't thought of"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "It used to take me several hours to craft one post, and now I feel like I can write one that's even longer but shorter time-wise"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Accuracy and factual reliability",
+      "grounding_span": "I do feel a responsibility to post true things to the best of my ability and to cite my sources"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Personal learning and knowledge retention",
+      "grounding_span": "I am constantly reading and learning about languages, so I try to keep growing personally"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for viral content",
+      "valence": "positive",
+      "grounding_span": "I really, really like AI for blog posts"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI hallucination",
+      "valence": "negative",
+      "grounding_span": "I do sometimes have to double check sources as there have been some hallucinations"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Openness to increasing AI use in future",
+      "valence": "positive",
+      "grounding_span": "I wouldn't mind expanding it, but I'm not sure in what ways. I think I would need guidance"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Resistance to AI in client communication",
+      "valence": "negative",
+      "grounding_span": "I don't think I would use it for client communication"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement with limited back-and-forth",
+      "grounding_span": "I asked the AI for 3 languages, and then kept asking (narrowing down my parameters and saying no to certain languages) until I got 3 I wanted"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Systematic verification through source checking",
+      "grounding_span": "I typically start with Wikipedia and the sources listed in Wikipedia. I use a lot of journals and scientific research as sources"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

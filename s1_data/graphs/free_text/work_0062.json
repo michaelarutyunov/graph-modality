@@ -1,0 +1,161 @@
+{
+  "transcript_id": "work_0062",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as nuanced creative partner",
+      "label_negative": "AI missing nuance and hints",
+      "bipolarity_complete": true,
+      "grounding_span": "the nuance and hints is where the AI misses every time"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as tool for feedback and critique",
+      "label_negative": "AI as over-perfectionist causing spiral",
+      "bipolarity_complete": true,
+      "grounding_span": "the AI is a perfectionist- your work will always have a flaw according to AI and it makes it harder to get it out to agents if you dont put your foot down"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI preserving author voice and continuity",
+      "label_negative": "AI hallucinating and fabricating details",
+      "bipolarity_complete": true,
+      "grounding_span": "the AI forgot continuity, and hallucinated- rather than reading the chapter- it made up a whole chapter"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as writing partner not author",
+      "label_negative": "AI as replacement stripping creative process",
+      "bipolarity_complete": true,
+      "grounding_span": "its a writing tool, a writing partner, never the author"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI adapting to character voice",
+      "label_negative": "AI failing to distinguish character from author",
+      "bipolarity_complete": true,
+      "grounding_span": "AI needs to adapt to the character- AI adapts to the person it talks to- my characters arent me- thats also where it fails"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative authenticity and authorial control",
+      "grounding_span": "preserving my writing abilities is very important to me- I dont want AI to write like me"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and focus",
+      "grounding_span": "AI keeps me focused and logical, it doesnt allow me to drift"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Frustration with AI hallucination and lack of nuance",
+      "valence": "negative",
+      "grounding_span": "the AI forgot continuity, and hallucinated- rather than reading the chapter- it made up a whole chapter"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI as focus aid and logical partner",
+      "valence": "positive",
+      "grounding_span": "AI keeps me focused and logical, it doesnt allow me to drift"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Ambivalence about AI perfectionism",
+      "valence": "ambivalent",
+      "grounding_span": "the AI is a perfectionist- your work will always have a flaw according to AI and it makes it harder to get it out to agents if you dont put your foot down"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative back-and-forth refinement",
+      "grounding_span": "Oh I go back and forth lol"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Sacred, autonomous creative process",
+      "grounding_span": "its a very sacred, almost religious process to me"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n8",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

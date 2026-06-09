@@ -1,0 +1,184 @@
+{
+  "transcript_id": "work_0075",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as time-saving tool for tedious tasks",
+      "label_negative": "AI as unnecessary for enjoyable tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "If I don't like doing the task I ask AI"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI output quality and usability",
+      "label_negative": "AI output requiring heavy editing",
+      "bipolarity_complete": true,
+      "grounding_span": "the questions aren't that good and I have to edit them"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI adherence to specific formatting requirements",
+      "label_negative": "AI deviation from required format",
+      "bipolarity_complete": true,
+      "grounding_span": "With the session notes they NEED to be written a specific way"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as collaborative partner vs independent delegator",
+      "label_negative": "AI as fully autonomous delegator",
+      "bipolarity_complete": true,
+      "grounding_span": "it's a collaborative approach"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Preserving enjoyable work tasks for oneself",
+      "label_negative": "Delegating enjoyable tasks to AI",
+      "bipolarity_complete": true,
+      "grounding_span": "If a task is fun and fulfilling I don't see the value in asking AI"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "if I can get 15 usable ones then I only have to generate 10"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Work enjoyment and fulfillment",
+      "grounding_span": "I'd rather enjoy my work than save time"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional competence and skill maintenance",
+      "grounding_span": "It does seem kinda pointless to maintain skills that will most likely become obsolete"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Pragmatic acceptance of AI for tedious tasks",
+      "valence": "positive",
+      "grounding_span": "If I don't like doing the task I ask AI"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI output quality",
+      "valence": "negative",
+      "grounding_span": "the model is not good at this and I almost always have to ask it to rewrite"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction when AI works well",
+      "valence": "positive",
+      "grounding_span": "the model managed to write the note basically perfect on the first try"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Resistance to delegating enjoyable tasks",
+      "valence": "negative",
+      "grounding_span": "If a task is fun and fulfilling I don't see the value in asking AI"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through back-and-forth prompting",
+      "grounding_span": "I'll try and provide an example if I have one"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic cost-benefit evaluation of AI use",
+      "grounding_span": "if I can get 15 usable ones then I only have to generate 10"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

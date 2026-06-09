@@ -1,0 +1,126 @@
+{
+  "transcript_id": "science_0055",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as efficiency tool for planning and troubleshooting",
+      "label_negative": "AI as unnecessary for routine experimental work",
+      "bipolarity_complete": true,
+      "grounding_span": "Using AI seemed like the most efficient way to gather data during the planning stage"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as idea generator for novel solutions",
+      "label_negative": "AI as unreliable without expert verification",
+      "bipolarity_complete": true,
+      "grounding_span": "AI was just able to give us ideas about something we hadn't considered yet"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI augmentation of manual experimental throughput",
+      "label_negative": "Manual-only experimental throughput limits",
+      "bipolarity_complete": true,
+      "grounding_span": "By increasing our screening capacity it would just augment the speed and breadth of the research"
+    },
+    {
+      "id": "n4",
+      "type": "Value",
+      "label": "Research efficiency and productivity",
+      "grounding_span": "the most efficient way to gather data"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Scientific rigor and validation",
+      "grounding_span": "our PI verified them as potential solutions and we tested them"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Research speed and breadth",
+      "grounding_span": "augment the speed and breadth of the research"
+    },
+    {
+      "id": "n7",
+      "type": "Stance",
+      "label": "Satisfaction with AI for planning and troubleshooting",
+      "valence": "positive",
+      "grounding_span": "we were satisfied with the results"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Indifference toward AI for routine experimental work",
+      "valence": "negative",
+      "grounding_span": "there wasn't really any situation where we felt AI was necessary"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Aspirational desire for AI-augmented screening",
+      "valence": "positive",
+      "grounding_span": "I would love to have a synergistic display platform that uses both directed evolution and in silico mutagenesis"
+    },
+    {
+      "id": "n10",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic task differentiation — AI for non-routine, manual for routine",
+      "grounding_span": "there wasn't really any situation where we felt AI was necessary since we were performing relatively standard tests"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Expert-mediated validation — AI ideas verified by authority or testing",
+      "grounding_span": "our PI verified them as potential solutions and we tested them"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n10",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

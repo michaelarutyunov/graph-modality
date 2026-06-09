@@ -1,0 +1,156 @@
+{
+  "transcript_id": "science_0009",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as decision support for overwhelming choices",
+      "label_negative": "AI as unnecessary when expertise suffices",
+      "bipolarity_complete": true,
+      "grounding_span": "AI can be helpful to make a reasonable first pass guess to establish a starting point for screening, reducing mental load and choice paralysis"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as tool for regulated report writing",
+      "label_negative": "Human manual report writing prone to errors",
+      "bipolarity_complete": true,
+      "grounding_span": "it would be nice if AI would help me write the report. It is very robotic and regulated, and seems like a prime candidate to be handled by an unfeeling machine"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Institutional permission for AI use",
+      "label_negative": "Institutional prohibition or uncertainty about AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I would use it more if it was encouraged or explicitly allowed. But as is, I can't really tell my boss that I used AI for a report"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as fallback when own solutions fail",
+      "label_negative": "AI as unnecessary when own solutions work",
+      "bipolarity_complete": true,
+      "grounding_span": "I likely would have turned to AI if my own solutions had failed, but because everything I did seemed to work"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Efficiency and reduced mental load",
+      "grounding_span": "reducing mental load and choice paralysis"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Accuracy and error-free compliance",
+      "grounding_span": "it is naturally difficult for human beings to follow rules down to the letter without making any small mistakes"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional safety and risk avoidance",
+      "grounding_span": "I can't really tell my boss that I used AI for a report, so I just won't do it to avoid getting in trouble"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Positive toward AI for initial screening",
+      "valence": "positive",
+      "grounding_span": "AI can be helpful to make a reasonable first pass guess"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Positive toward AI for report writing",
+      "valence": "positive",
+      "grounding_span": "it would be nice if AI would help me write the report"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Cautious avoidance due to institutional uncertainty",
+      "valence": "negative",
+      "grounding_span": "I can't really tell my boss that I used AI for a report, so I just won't do it to avoid getting in trouble"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Confidence in own expertise over AI",
+      "valence": "positive",
+      "grounding_span": "Everything else I felt like I knew what I was doing and I didn't need to ask"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Expertise-driven selective AI engagement",
+      "grounding_span": "I was more confident in the other steps, and I was overwhelmed by the number of choices for column"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic risk-averse tool adoption",
+      "grounding_span": "I only feel comfortable using it like Google and without including any confidential information"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

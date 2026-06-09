@@ -1,0 +1,179 @@
+{
+  "transcript_id": "work_0448",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as writing assistant",
+      "label_negative": "AI as original idea generator",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI mostly for research and as an aid while I'm writing. I've never used AI for help coming up with an original idea"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for low-stakes tasks",
+      "label_negative": "AI for high-stakes tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "For something that is higher stakes to me, like writing a pitch that may possibly land a TV series deal for my company, it's more like 20-25% AI assisted writing/research"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as independent delegate",
+      "bipolarity_complete": true,
+      "grounding_span": "Yes, it's 100% collaborative"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI hallucination and fabrication",
+      "bipolarity_complete": true,
+      "grounding_span": "I've had AI hallucinate events in history while researching TV shows, which was frustrating"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI integration into existing software",
+      "label_negative": "AI as separate tool requiring extra effort",
+      "bipolarity_complete": true,
+      "grounding_span": "I hope in the future that AI will be more integrated into the software (like the editing softwares I mentioned) I use for my job"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative control and originality",
+      "grounding_span": "Idea generation I prefer to do myself. I am more happy with the results when I do it this way"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "it saves a lot of time"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional writing skill preservation",
+      "grounding_span": "being a good writer is my most important professional skill"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Reluctance to use AI for writing",
+      "valence": "positive",
+      "grounding_span": "My most satisfying experiences have been when I can give a list of 4-5 examples of things I've researched and AI can write the short blurbs"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI hallucination",
+      "valence": "negative",
+      "grounding_span": "I've had AI hallucinate events in history while researching TV shows, which was frustrating"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Positive view of AI as idea generator",
+      "valence": "negative",
+      "grounding_span": "I've never used AI for help coming up with an original idea"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Optimism about future AI integration",
+      "valence": "positive",
+      "grounding_span": "I hope in the future that AI will be more integrated into the software"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-specific calibration of AI use",
+      "grounding_span": "For something that is higher stakes to me, like writing a pitch that may possibly land a TV series deal for my company, it's more like 20-25% AI assisted writing/research"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Boundary-setting between core and peripheral creative tasks",
+      "grounding_span": "Idea generation I prefer to do myself. I am more happy with the results when I do it this way"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

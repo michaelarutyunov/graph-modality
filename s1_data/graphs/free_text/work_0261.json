@@ -1,0 +1,149 @@
+{
+  "transcript_id": "work_0261",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as efficiency tool for resource location and task management",
+      "label_negative": "Manual search and paper-based tracking",
+      "bipolarity_complete": true,
+      "grounding_span": "AI has assisted me in the past to locate resources quickly for clients"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as writing assistant for logs and notes",
+      "label_negative": "AI writing replacing original authentic notes",
+      "bipolarity_complete": true,
+      "grounding_span": "I do enjoy writing the basis for all of my logs independently of AI"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as collaborative partner with human oversight",
+      "label_negative": "AI as autonomous decision-maker without human input",
+      "bipolarity_complete": true,
+      "grounding_span": "I will usually collaborate with it throughout the task"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as tool to reduce mental load while preserving critical thinking",
+      "label_negative": "AI overuse leading to skill atrophy",
+      "bipolarity_complete": true,
+      "grounding_span": "I think AI should be used in conjunction with with these skills, and not just relied on exclusively"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "without needing to scan and search for google search results, which can be time consuming"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Authenticity and personal autonomy",
+      "grounding_span": "I want my original interaction to hold true when I log notes"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional competence and skill preservation",
+      "grounding_span": "I would lose out on honing these skills, and transferable abilities"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Positive satisfaction with AI for resource location",
+      "valence": "positive",
+      "grounding_span": "they were very pleased with the assistance"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Anxiety about losing autonomy and control",
+      "valence": "negative",
+      "grounding_span": "I am a bit anxious to just let AI do all of the thinking for me"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Intentional balanced use of AI",
+      "valence": "mixed",
+      "grounding_span": "I think balance is the key to everything, and using AI should be no different"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative collaborative refinement — reads output and adjusts",
+      "grounding_span": "I will read over its output briefly, and make adjustments as I go"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Deliberate boundary-setting to preserve core skills",
+      "grounding_span": "I do find many people letting AI do everything for them, which I try my best to avoid"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n3",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

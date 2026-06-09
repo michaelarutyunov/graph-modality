@@ -1,0 +1,149 @@
+{
+  "transcript_id": "science_0053",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as generic research starting point for landscape mapping",
+      "label_negative": "AI handling sensitive or classified information",
+      "bipolarity_complete": true,
+      "grounding_span": "using AI as a generic research starting point to map the landscape, never with sensitive information"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "Thorough verification of AI outputs",
+      "label_negative": "AI output as list of facts accepted without verification",
+      "bipolarity_complete": true,
+      "grounding_span": "I treat LLM outputs as a hypothesis list, not as a list of facts"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI use for sensitive data",
+      "label_negative": "AI unusable for sensitive tasks due to tracking and retention concerns",
+      "bipolarity_complete": true,
+      "grounding_span": "create an LLM that is usable for sensitive tasks involving TS/SCI and has no tracking, memory or reporting outside of that instance"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI adherence to user specifications",
+      "label_negative": "AI use that risks exposure of classified information",
+      "bipolarity_complete": true,
+      "grounding_span": "If there's any chance the scoping could touch TS/SCI PII, I avoid the use of the LLM entirely"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Security and compliance",
+      "grounding_span": "classification/policy, risk/impact, domain maturity, and auditability"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Epistemic accuracy and understanding",
+      "grounding_span": "I break it into atomic claims and require primary corroboration"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Operational efficiency in unclassified tasks",
+      "grounding_span": "could greatly speed up the menial tasks of my work"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Cautious acceptance of AI for unclassified scoping",
+      "valence": "positive",
+      "grounding_span": "I run generic prompts to map the landscape"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Resistance to AI in sensitive tasks",
+      "valence": "negative",
+      "grounding_span": "I keep those steps air gapped"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Resistance to AI in sensitive tasks",
+      "valence": "positive",
+      "grounding_span": "I would wave the want to create an LLM that is usable for sensitive tasks"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Systematic verification through atomic claim decomposition",
+      "grounding_span": "I break it into atomic claims and require primary corroboration"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Risk-based decision framework for AI adoption",
+      "grounding_span": "Typically I weight four things; classification/policy, risk/impact, domain maturity, and auditability"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

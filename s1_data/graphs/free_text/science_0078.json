@@ -1,0 +1,131 @@
+{
+  "transcript_id": "science_0078",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI reliability for core vs peripheral tasks",
+      "label_negative": "AI unreliability for core tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "Ai hasn't shown me that it is reliable enough for work that is of core importance to the paper"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as discovery tool for unfamiliar fields",
+      "label_negative": "AI as unnecessary for familiar domains",
+      "bipolarity_complete": true,
+      "grounding_span": "It is most helpful when our work has possible analogs in area of research that we aren't as familiar with"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as communication bridge from theory to practice",
+      "label_negative": "AI unable to simplify complex theory",
+      "bipolarity_complete": true,
+      "grounding_span": "Being able to present our work in simpler terms for a more general audience"
+    },
+    {
+      "id": "n4",
+      "type": "Value",
+      "label": "Research integrity and reliability",
+      "grounding_span": "mistakes are relatively unimportant compared to the theoretical proof or something more central to the novelty of the paper"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Efficient knowledge discovery",
+      "grounding_span": "identify relevant related works. Similar to a quarriable encyclopedia"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Accessible science communication",
+      "grounding_span": "Bridging this gap from theory to the appliers of the theory is a difficult, but important step"
+    },
+    {
+      "id": "n7",
+      "type": "Stance",
+      "label": "Cautious trust in AI for peripheral tasks",
+      "valence": "ambivalent",
+      "grounding_span": "Ai hasn't shown me that it is reliable enough for work that is of core importance to the paper"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Positive view of AI for cross-domain discovery",
+      "valence": "positive",
+      "grounding_span": "It is most helpful when our work has possible analogs in area of research that we aren't as familiar with"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Aspirational desire for AI as communication aid",
+      "valence": "positive",
+      "grounding_span": "Being able to present our work in simpler terms for a more general audience"
+    },
+    {
+      "id": "n10",
+      "type": "CognitiveStyleMarker",
+      "label": "Task-stakes differentiation — separates core from peripheral",
+      "grounding_span": "Ai hasn't shown me that it is reliable enough for work that is of core importance to the paper"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Verification-oriented — always checks AI outputs",
+      "grounding_span": "We always follow links to the underlying research papers to verify the claims"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n8",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n10",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

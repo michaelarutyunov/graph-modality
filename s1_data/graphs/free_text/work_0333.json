@@ -1,0 +1,204 @@
+{
+  "transcript_id": "work_0333",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as writing and communication assistant",
+      "label_negative": "AI as intrusive auto-correction tool",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "Grammarly's built-in AI always helps me fine tune my writing skills"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as first-level search and note-taking tool",
+      "label_negative": "AI as unreliable or insufficient for complex tasks",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "commonly use as a first level search engine (and to transcribe/take meeting notes)"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as collaborative partner during tasks",
+      "label_negative": "AI as independent task delegator",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I mostly collaborate with it while I am working throughout a work assignment"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI for mundane administrative tasks",
+      "label_negative": "AI for tasks that support professional development",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "The kind of tasks I do utilize AI for are for more mundane, administrative in nature"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as learning tool for skill development",
+      "label_negative": "AI as crutch that hinders learning",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "the more opportunities I foresee myself into learning from what the AI produces"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as data synthesis and insight generator",
+      "label_negative": "AI lacking advanced analytical features",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "synthesizing all of the data on the spreadsheet and then creating an overview 'big-picture' look"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional growth and skill development",
+      "grounding_span": "most beneficial for my continued professional development in my current role"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Operational efficiency and productivity",
+      "grounding_span": "become more operationally efficient with how I handle my business operations workflows"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Human touch and authenticity in communication",
+      "grounding_span": "a more 'humanized' touch because there are certain cases where it's pretty comically obvious that AI responded"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Career advancement and new responsibilities",
+      "grounding_span": "show my manager that I am also capable of taking on more responsibilities in business finance areas"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI note-taking and transcription",
+      "valence": "positive",
+      "grounding_span": "I felt very satisfied with AI was the first time I discovered that the built-in Gemini feature...had the ability to take notes and transcribe work meetings"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with intrusive AI features",
+      "valence": "negative",
+      "grounding_span": "The primary times I find frustrating with AI...are the little annoying features that come built into the tool"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Strategic preservation of learning tasks from AI",
+      "valence": "mixed",
+      "grounding_span": "I mentally factor how much time I would save if I were to punt that task to an AI versus the amount of valuable knowledge I would lose out on"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Optimism about AI as a learning partner for career growth",
+      "valence": "positive",
+      "grounding_span": "The more I familiarize myself with how these AI tools operate the more likely I will want to use it into my daily workflow"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic task differentiation based on learning value",
+      "grounding_span": "The tasks I like to leave for myself to do are ones that will be most beneficial for my continued professional development"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative collaborative refinement with final human review",
+      "grounding_span": "I act as the final editor of whatever it produces because I always double check my work"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n4",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

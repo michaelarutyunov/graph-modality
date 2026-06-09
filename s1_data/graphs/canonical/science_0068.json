@@ -1,0 +1,131 @@
+{
+  "transcript_id": "science_0068",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborator for iterative refinement",
+      "label_negative": "AI involvement in core scientific thinking",
+      "bipolarity_complete": true,
+      "grounding_span": "I used AI to clean up the writing and fine-tune my vocabulary"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "Personal ownership of scientific process",
+      "label_negative": "AI delegation of scientific tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I like to get all of my personal ideas down and written before I confide in anybody else"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI verifiability and accuracy",
+      "label_negative": "Unverifiable AI suggestions",
+      "bipolarity_complete": true,
+      "grounding_span": "If I don't know if the suggestion is good, which is mainly structural edits, I will just keep what I originally have"
+    },
+    {
+      "id": "n4",
+      "type": "Value",
+      "label": "Academic writing quality",
+      "grounding_span": "I often fail to find the best words to use and write smooth-flowing sentences"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Personal autonomy and discovery",
+      "grounding_span": "I like to get all of my personal ideas down and written before I confide in anybody else"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Epistemic confidence in output",
+      "grounding_span": "If I don't know if the suggestion is good, I will just keep what I originally have"
+    },
+    {
+      "id": "n7",
+      "type": "Stance",
+      "label": "Satisfaction with AI for refactoring",
+      "valence": "positive",
+      "grounding_span": "I used AI to clean up the writing and fine-tune my vocabulary"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Cautious reliance on AI for experimental design",
+      "valence": "negative",
+      "grounding_span": "The experimental design is easy for me to do on my own, and typically doesn't challenge me"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Frustration with AI's impractical suggestions",
+      "valence": "ambivalent",
+      "grounding_span": "If I don't know if the suggestion is good, which is mainly structural edits, I will just keep what I originally have"
+    },
+    {
+      "id": "n10",
+      "type": "CognitiveStyleMarker",
+      "label": "Sequential compartmentalization — separates idea generation from refinement",
+      "grounding_span": "I like to get all of my personal ideas down and written before I confide in anybody else"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Self-reliance in core expertise — trusts own knowledge over AI",
+      "grounding_span": "I am already educated on these things"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n8",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n10",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,166 @@
+{
+  "transcript_id": "creativity_0105",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as efficient synthesis tool for complex research",
+      "label_negative": "Inefficient manual search through disparate information",
+      "bipolarity_complete": true,
+      "grounding_span": "synthesizing information into a clear, direct, and coherent response that saves me a lot of time"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as execution tool under human creative direction",
+      "label_negative": "AI as autonomous creative partner",
+      "bipolarity_complete": true,
+      "grounding_span": "I am, because I know exactly what I want, so I'm asking the model to initially generate to my specifications and then iterate / refine based on my feedback"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI output consistency and quality",
+      "label_negative": "AI quality degradation in iterative feedback",
+      "bipolarity_complete": true,
+      "grounding_span": "Sometimes it falls into feedback loops of quality degradation where the desired creation gets worse instead of better despite very thoughtful commentary"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as non-threatening tool for documentary filmmaking",
+      "label_negative": "AI as threat to documentary authenticity",
+      "bipolarity_complete": true,
+      "grounding_span": "I only see AI as a tool that allows for more efficient work on behalf of smaller teams, not a threat to the end product"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "saves me a lot of time"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative control and intentionality",
+      "grounding_span": "I know exactly what I want"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "High-quality creative output",
+      "grounding_span": "The quality of what I'm able to produce is higher on the whole"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Positive appreciation for AI research synthesis",
+      "valence": "positive",
+      "grounding_span": "That's what I think AI models are best at - synthesizing information into a clear, direct, and coherent response"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Positive stance toward AI as execution tool under direction",
+      "valence": "positive",
+      "grounding_span": "I am, because I know exactly what I want, so I'm asking the model to initially generate to my specifications"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI quality degradation in iteration",
+      "valence": "negative",
+      "grounding_span": "Sometimes it falls into feedback loops of quality degradation where the desired creation gets worse instead of better"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Confident dismissal of AI as threat to documentary",
+      "valence": "positive",
+      "grounding_span": "I only see AI as a tool that allows for more efficient work on behalf of smaller teams, not a threat to the end product"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Intentional specificity in prompting — precise instructions to guide output",
+      "grounding_span": "you need to be very specific and explain the most important elements that you want"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement with critical evaluation — monitors quality degradation",
+      "grounding_span": "Sometimes it falls into feedback loops of quality degradation where the desired creation gets worse instead of better despite very thoughtful commentary"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

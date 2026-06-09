@@ -1,0 +1,149 @@
+{
+  "transcript_id": "work_0852",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative debugging partner",
+      "label_negative": "AI as unreliable or unhelpful in debugging",
+      "bipolarity_complete": true,
+      "grounding_span": "I use cursor to try and first identify what part of the JSON is causing the patient to output a certain value"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI code change validity and logical soundness",
+      "label_negative": "AI code changes that are incorrect or illogical",
+      "bipolarity_complete": true,
+      "grounding_span": "making sure its not making changes that just so happen to work"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI pattern recognition across multiple cases",
+      "label_negative": "Human-led trend identification",
+      "bipolarity_complete": true,
+      "grounding_span": "I prefer to recognize the trends themself and then tell cursor"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as thinking assistant despite hallucination",
+      "label_negative": "AI as completely dependable tool",
+      "bipolarity_complete": true,
+      "grounding_span": "it's not a completely dependable tool, but as if you have someone in your ear saying, 'Have you thought about it this way?'"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Professional excellence and efficiency",
+      "grounding_span": "I am now excelling at my work"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Epistemic understanding and logical coherence",
+      "grounding_span": "the logic makes sense"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Autonomy and skill evolution",
+      "grounding_span": "I'll just develop new skills"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Satisfaction with AI debugging assistance",
+      "valence": "positive",
+      "grounding_span": "Many times I have felt satisfied when it helps me debug things that others have struggled with"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Frustration with AI confidently incorrect",
+      "valence": "negative",
+      "grounding_span": "I am most frustrated when it keeps telling me incorrect things about my codebase"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Pragmatic acceptance of hallucination as manageable",
+      "valence": "mixed",
+      "grounding_span": "People tend to be hesitant around hallucination, but this is something that shouldn't deter use"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative hypothesis testing — cycles through debugging steps",
+      "grounding_span": "I cycle through running the patient until I have figured out what the core issue is"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Proactive leadership and skill adaptation",
+      "grounding_span": "I am starting to lead initiatives for this to improve efficiency"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

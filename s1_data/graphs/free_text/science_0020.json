@@ -1,0 +1,162 @@
+{
+  "transcript_id": "science_0020",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as validation tool for calculations",
+      "label_negative": "AI as unreliable for calculations",
+      "bipolarity_complete": true,
+      "grounding_span": "mainly just to check my work"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as creative idea generator",
+      "label_negative": "AI as unoriginal or irrelevant",
+      "bipolarity_complete": true,
+      "grounding_span": "I also find ai quite creative, when I ask for ideas regarding my research it gives some interesting ideas"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability for verification",
+      "label_negative": "AI unreliability and hallucination",
+      "bipolarity_complete": true,
+      "grounding_span": "whenever I use it to check my work it has never faulted"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI for literature search and reference generation",
+      "label_negative": "AI generating fake references",
+      "bipolarity_complete": true,
+      "grounding_span": "If AI could generate me a list of existing references of research articles"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Trust in AI based on track record",
+      "label_negative": "Distrust due to hallucination experiences",
+      "bipolarity_complete": true,
+      "grounding_span": "i am becoming more trusting"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Research accuracy and integrity",
+      "grounding_span": "if the calculations are wrong, my research will be inaccurate"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Scientific creativity and discovery",
+      "grounding_span": "it gave me some very unique plants I hadn't heard of"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "save those in the field vast amounts of time"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Cautious trust in AI for verification",
+      "valence": "ambivalent",
+      "grounding_span": "I don't fully have faith in it"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Positive appreciation of AI creativity",
+      "valence": "positive",
+      "grounding_span": "I also find ai quite creative"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI hallucination in references",
+      "valence": "negative",
+      "grounding_span": "it generates fake articles or makes up references which don't exist"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Cross-referencing with literature for validation",
+      "grounding_span": "By doing my own research on Google Scholar or PubMed, using past research articles to justify similar results"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Incremental trust building through consistent reliability",
+      "grounding_span": "whenever I use it to check my work it has never faulted"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

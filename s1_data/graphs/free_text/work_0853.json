@@ -1,0 +1,174 @@
+{
+  "transcript_id": "work_0853",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as research accelerator for initial leads",
+      "label_negative": "AI as unreliable source requiring full manual verification",
+      "bipolarity_complete": true,
+      "grounding_span": "I use it as a quick way to visually see a lot of useful information, but still need to manually check it is correct"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI accuracy and reliability in data",
+      "label_negative": "AI hallucination and outdated information",
+      "bipolarity_complete": true,
+      "grounding_span": "It offered names that were made up and also more and more duplicates"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI output quality threshold",
+      "label_negative": "AI output quality degradation after initial results",
+      "bipolarity_complete": true,
+      "grounding_span": "The first 50 were mostly good and were accurate... When I asked for more the quality started dipping"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as efficiency improver",
+      "label_negative": "AI as source of frustration due to poor data",
+      "bipolarity_complete": true,
+      "grounding_span": "It has improved our overall efficiency to a decent level"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Active human involvement in AI-assisted work",
+      "label_negative": "Passive reliance on AI without verification",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't feel like a passenger with the work and still feel like I need to be actively involved"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Data accuracy and reliability",
+      "grounding_span": "the accuracy of data is very important"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Work efficiency and productivity",
+      "grounding_span": "It has improved our overall efficiency to a decent level"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional autonomy and control",
+      "grounding_span": "I don't feel like a passenger with the work"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for initial lead generation",
+      "valence": "positive",
+      "grounding_span": "I was satisfied recently when it helped me locate a lot of ASL teachers that quickly"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI hallucination and poor data",
+      "valence": "negative",
+      "grounding_span": "The most common source of frustration is when it offers poor data"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Conditional trust in AI for initial results",
+      "valence": "ambivalent",
+      "grounding_span": "I can usually trust the initial results will be helpful"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Preference for AI to be fully accurate",
+      "valence": "positive",
+      "grounding_span": "I would prefer it would be completely correct and up to date"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Systematic quality monitoring and adaptive query adjustment",
+      "grounding_span": "I can see when it is starting this so I will adjust my query if possible"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Visual and organizational preference for clean chat separation",
+      "grounding_span": "I find it visually better too to start a new chat, a clean page so to speak"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

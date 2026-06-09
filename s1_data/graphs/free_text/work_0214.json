@@ -1,0 +1,201 @@
+{
+  "transcript_id": "work_0214",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as drafting assistant for templates and reusable documents",
+      "label_negative": "Manual drafting without AI assistance",
+      "bipolarity_complete": true,
+      "grounding_span": "using AI to assist in drafting any kind of template"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability for legal citations and direct quotes",
+      "label_negative": "AI inaccuracy in legal citations",
+      "bipolarity_complete": true,
+      "grounding_span": "I do not trust AI in its current state to provide accurate legal citations in any capacity"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as testable draft generator",
+      "label_negative": "AI as untestable black box",
+      "bipolarity_complete": true,
+      "grounding_span": "put that back into the AI to TEST it with specific details from hypotheticals"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI adherence to user's task framing",
+      "label_negative": "AI unsolicited modification of user's work",
+      "bipolarity_complete": true,
+      "grounding_span": "the AI misunderstands the task and tries to rewrite or suggest modifications"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI collaborative fine-tuning vs. full delegation",
+      "label_negative": "AI full delegation without iterative refinement",
+      "bipolarity_complete": true,
+      "grounding_span": "I will open up one tab and have the AI give me a full model policy... but I will also use a different tab to repeat the same task but with the granularity of the collaborative approach"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI creativity in generating complex scenarios",
+      "label_negative": "AI lack of creativity or simplistic outputs",
+      "bipolarity_complete": true,
+      "grounding_span": "I am always impressed when I ask the AI to create a fictional case study, and it actually produces something that is genuinely impressively creative"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI usage skills gap",
+      "label_negative": "AI replacement of human workers",
+      "bipolarity_complete": true,
+      "grounding_span": "I am less and less concerned about an AI 'takeover' and more worried about an AI usage skills gap"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional accountability and due diligence",
+      "grounding_span": "I want to be able to truthfully say--potentially under oath--that I did my due diligence and manually researched and added the relevant legal citations"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Efficiency and quality in document production",
+      "grounding_span": "the draft generally holds up"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Control over task execution and output",
+      "grounding_span": "I can go section by section and fine tune OR zoom out and change the whole document"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Continuous learning and skill development",
+      "grounding_span": "I actively look for ways to work AI into my process so that I gain experience and understanding"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Trust in AI for drafting but not for legal citations",
+      "valence": "ambivalent",
+      "grounding_span": "I do not trust AI in its current state to provide accurate legal citations in any capacity"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Satisfaction with AI's creative case studies",
+      "valence": "positive",
+      "grounding_span": "I am always impressed when I ask the AI to create a fictional case study"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Concern about AI usage skills gap among professionals",
+      "valence": "negative",
+      "grounding_span": "I am less and less concerned about an AI 'takeover' and more worried about an AI usage skills gap"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Pragmatic openness to AI integration for learning",
+      "valence": "positive",
+      "grounding_span": "I actively look for ways to work AI into my process so that I gain experience and understanding"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Backwards design approach — starting from final output",
+      "grounding_span": "I generally use a backwards design approach; considering how the product will physically need to appear when it is complete and filled"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Dual-tab cross-referencing — comparing delegation vs. collaboration",
+      "grounding_span": "I will open up one tab and have the AI give me a full model policy... but I will also use a different tab to repeat the same task but with the granularity of the collaborative approach"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

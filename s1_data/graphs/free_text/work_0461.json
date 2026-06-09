@@ -1,0 +1,197 @@
+{
+  "transcript_id": "work_0461",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as preparation and education partner",
+      "label_negative": "AI as replacement for human expertise",
+      "bipolarity_complete": true,
+      "grounding_span": "AI has filled the gaps for me in a great way"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as verifiable information source",
+      "label_negative": "AI as unverifiable or inaccurate source",
+      "bipolarity_complete": true,
+      "grounding_span": "I can quickly verify with trusted reference materials"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as ethical boundary-respecting tool",
+      "label_negative": "AI as tool that compromises professional ethics",
+      "bipolarity_complete": true,
+      "grounding_span": "Ethically, I usually can not delegate more than compiling a report that is solely for my consumption and education"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as collaborative partner with human creativity",
+      "label_negative": "AI as autonomous replacement of human creativity",
+      "bipolarity_complete": true,
+      "grounding_span": "The creativity is always mine, but AI has also sparked ideas"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI security and privacy compliance",
+      "label_negative": "AI security and privacy risks",
+      "bipolarity_complete": true,
+      "grounding_span": "HIPAA is often the law governing my work"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI quality and reliability",
+      "label_negative": "AI misunderstanding and poor performance",
+      "bipolarity_complete": true,
+      "grounding_span": "I have been disappointed with the model that works through my glasses"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional competence and accuracy",
+      "grounding_span": "I strive for professional results"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Personal creativity and authenticity",
+      "grounding_span": "submit original work with my own language, flaws and all"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Career growth and adaptability",
+      "grounding_span": "My openness to AI has given me a work advantage that I believe will grow my participation in my field"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI as preparation partner",
+      "valence": "positive",
+      "grounding_span": "AI has filled the gaps for me in a great way"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with low-quality AI models",
+      "valence": "negative",
+      "grounding_span": "I have been disappointed with the model that works through my glasses"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Optimism about AI collaboration",
+      "valence": "positive",
+      "grounding_span": "I see opportunity where others see their retirement"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Caution about AI due to security concerns",
+      "valence": "negative",
+      "grounding_span": "HIPAA is often the law governing my work"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Verification-oriented approach — cross-checks AI outputs with trusted references",
+      "grounding_span": "I can quickly verify with trusted reference materials"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Ethical boundary-setting — distinguishes preparation from final work",
+      "grounding_span": "Ethically, I usually can not delegate more than compiling a report that is solely for my consumption and education"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

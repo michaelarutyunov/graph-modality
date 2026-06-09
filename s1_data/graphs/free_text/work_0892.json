@@ -1,0 +1,157 @@
+{
+  "transcript_id": "work_0892",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as creative brainstorming partner",
+      "label_negative": "AI as uncreative and repetitive generator",
+      "bipolarity_complete": true,
+      "grounding_span": "lack of creativity and repetition from the model"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability for factual accuracy",
+      "label_negative": "AI unreliability with dates and facts",
+      "bipolarity_complete": true,
+      "grounding_span": "results in errors with the wrong dates"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI consistency across task batches",
+      "label_negative": "AI degradation over longer tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "the paragraphs got shorter and shorter"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as enhancer of content quality",
+      "label_negative": "AI as threat to job security",
+      "bipolarity_complete": true,
+      "grounding_span": "improve the quality of the content I produce"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Creative output and idea generation",
+      "grounding_span": "coming up with lists of ideas"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Accuracy and truthfulness",
+      "grounding_span": "errors with the wrong dates"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and productivity",
+      "grounding_span": "batch write a months worth"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional competence and job security",
+      "grounding_span": "I don't see it being able to take over my job"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for creative tasks",
+      "valence": "positive",
+      "grounding_span": "my boss/coworkers chose a couple of them to use for our content"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI inconsistency",
+      "valence": "negative",
+      "grounding_span": "the paragraphs got shorter and shorter"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Confidence in human irreplaceability",
+      "valence": "positive",
+      "grounding_span": "I don't see it being able to take over my job"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Optimistic expectation of AI improvement",
+      "valence": "positive",
+      "grounding_span": "as AI improves I'll probably use it about the same or a little more often"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Specific prompt engineering — frontloading detail for better results",
+      "grounding_span": "I give it a set of instructions to start and then just see what it does"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement — back-and-forth adjustments",
+      "grounding_span": "If I'm not happy I do go back and forth"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

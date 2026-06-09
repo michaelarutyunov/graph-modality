@@ -1,0 +1,222 @@
+{
+  "transcript_id": "work_0232",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as drafting and research assistant",
+      "label_negative": "AI as unreliable for specialized legal tasks",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I use AI tools for drafting documents, first-pass research"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability in legal research",
+      "label_negative": "AI hallucination and fabrication of precedents",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "Every single case it brought up was a hallucination to some extent"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Human writing for cognitive clarity",
+      "label_negative": "AI-generated writing without personal engagement",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I do enjoy the writing process as I find it is very useful for focussing my thoughts"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Personal voice and style in communication",
+      "label_negative": "Generic AI-generated communication",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I prefer having my own voice/style"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as tool for routine legal work",
+      "label_negative": "AI replacing human judgment in complex legal tasks",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "For the simpler files, I believe AI will relatively quickly replace human analysis"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "Value of human interaction in professional work",
+      "label_negative": "AI-mediated impersonal communication",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I try to have actual phone conversations for all important discussions"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional competence and accuracy",
+      "grounding_span": "Mostly accuracy"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Personal autonomy and self-expression",
+      "grounding_span": "I prefer having my own voice/style"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Human connection and authenticity",
+      "grounding_span": "personal interactions will be of premium value"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for drafting and research",
+      "valence": "positive",
+      "grounding_span": "I use AI tools for drafting documents, first-pass research"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI hallucination in legal research",
+      "valence": "negative",
+      "grounding_span": "Every single case it brought up was a hallucination"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Preference for writing legal analysis manually",
+      "valence": "positive",
+      "grounding_span": "I will usually write the analysis for caselaw precedents myself"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Resistance to AI in creative and client communication",
+      "valence": "negative",
+      "grounding_span": "Creative writing is something for which I never use AI"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Optimism about AI improving over time",
+      "valence": "positive",
+      "grounding_span": "the models seem to be better at not generating so many failures"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Strategic anticipation of premium on human interaction",
+      "valence": "positive",
+      "grounding_span": "I try to have actual phone conversations for all important discussions"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Historical and science-fiction influenced perspective",
+      "grounding_span": "My perspective is usually historical and science-fiction influenced"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Competency-first approach to AI adoption",
+      "grounding_span": "I try to do things myself with just a little help from AI for the first few attempts"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n3",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n4",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

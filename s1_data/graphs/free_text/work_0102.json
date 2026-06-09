@@ -1,0 +1,190 @@
+{
+  "transcript_id": "work_0102",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as brainstorming and research accelerator",
+      "label_negative": "AI as crutch that reduces critical thinking",
+      "bipolarity_complete": true,
+      "grounding_span": "I primarily use it for brainstorming"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for mechanical tasks (typos, grammar, coding)",
+      "label_negative": "AI for core pedagogical decisions",
+      "bipolarity_complete": true,
+      "grounding_span": "I feel very okay with AI being used to fix my typos or grammatical issues"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as glorified search engine",
+      "label_negative": "AI as autonomous creator or collaborator",
+      "bipolarity_complete": true,
+      "grounding_span": "I think if I personally restrict AI to being a glorified search engine in work, then it is acceptable"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI reliability for objective tasks",
+      "label_negative": "AI unreliability for subjective or creative tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "For objective cases, I feel that AIs are fairly reliable, but when it comes to being conversational or discussing opinions, it is strange"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI voice human-likeness",
+      "label_negative": "AI voice non-human to protect youth mental health",
+      "bipolarity_complete": true,
+      "grounding_span": "I think it is actually fairly crucial that AI sound non-human if it reads out loud"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Personal development and critical thinking",
+      "grounding_span": "not having AI forces brainstorming and critical thinking and research"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Pedagogical responsibility and role modeling",
+      "grounding_span": "I'm supposed to teach, not to be the messenger of the AI"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and productivity",
+      "grounding_span": "It just is a helpful starting point that is faster than going through a separate search engine"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Youth mental health and ethical safety",
+      "grounding_span": "ethically I see major concerns for the mental health of youth who use AI with too-human sounding voices"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for brainstorming and resource finding",
+      "valence": "positive",
+      "grounding_span": "I felt particularly excited when in that recent lesson planning it gave me examples of circuit problems"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI for subjective or creative tasks",
+      "valence": "negative",
+      "grounding_span": "The uses that frustrate me more are generally with respect to non-work related uses, such as creative writing or philosophical debates"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Concern about AI reducing critical thinking in youth",
+      "valence": "negative",
+      "grounding_span": "recent studies have shown that AI basically reduces brain connectivity and general critical thinking and creativity"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Intentional restriction of AI use to avoid crutch",
+      "valence": "ambivalent",
+      "grounding_span": "I actively consider not using it as a crutch"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Self-imposed boundaries and deliberate restriction",
+      "grounding_span": "I generally try to do my own brainstorming or problem solving first"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Task-specific calibration based on personal skill and value",
+      "grounding_span": "I think the only real threats I see to my skills are in things I actively find frustrating"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n3",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

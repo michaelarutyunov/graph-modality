@@ -1,0 +1,156 @@
+{
+  "transcript_id": "creativity_0114",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative partner in creative work",
+      "label_negative": "AI as threat to human creative value",
+      "bipolarity_complete": true,
+      "grounding_span": "I see AI as a partner in my work"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for planning and scripting under constraints",
+      "label_negative": "AI producing generic or off-mark suggestions",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI tools for planning and scripting"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for efficiency and time savings",
+      "label_negative": "AI reducing human creative value",
+      "bipolarity_complete": true,
+      "grounding_span": "It makes my work faster and more efficient"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Human creative control and final decision-making",
+      "label_negative": "AI-driven creative decisions",
+      "bipolarity_complete": true,
+      "grounding_span": "I'm making the final decisions"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Creative authenticity and personal voice",
+      "grounding_span": "maintain my voice"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and productivity",
+      "grounding_span": "makes my work faster and more efficient"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Human storytelling and value",
+      "grounding_span": "human storytelling continues to be essential"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Optimistic partnership with AI",
+      "valence": "positive",
+      "grounding_span": "I see AI as a partner in my work"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Concern about AI replicating work and reducing value",
+      "valence": "negative",
+      "grounding_span": "concerned about AI being able to replicate my work and reduce my value"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for efficiency gains",
+      "valence": "positive",
+      "grounding_span": "It makes my work faster and more efficient"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Critical view of AI suggestions as generic",
+      "valence": "negative",
+      "grounding_span": "often generic and slightly off the mark"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement — uses AI suggestions to shape own output",
+      "grounding_span": "I use the suggestions to shape my own creative output"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Constraint-driven planning — works within time and identity constraints",
+      "grounding_span": "make sure my plan will fit in the constraint"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

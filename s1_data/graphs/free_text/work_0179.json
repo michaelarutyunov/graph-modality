@@ -1,0 +1,180 @@
+{
+  "transcript_id": "work_0179",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as research starting point with verification",
+      "label_negative": "AI as sole source of truth without verification",
+      "bipolarity_complete": true,
+      "grounding_span": "I'll use AI answers to give me an initial impression of the right answer and then I use the links provided to double check the accuracy on my own"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for creative idea generation",
+      "label_negative": "AI for full creative execution",
+      "bipolarity_complete": true,
+      "grounding_span": "I like to get the initial spark and then take it from there"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for personalized student communication",
+      "label_negative": "AI for drafting personal voice communication",
+      "bipolarity_complete": true,
+      "grounding_span": "I prefer to draft my own emails and parent communication so that I can ensure it is in my voice"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as job security threat",
+      "label_negative": "AI as tool for efficiency and human element preservation",
+      "bipolarity_complete": true,
+      "grounding_span": "it felt a little bit like the beginning of the end"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI for differentiated instruction and lesson planning",
+      "label_negative": "AI for replacing teacher judgment",
+      "bipolarity_complete": true,
+      "grounding_span": "I see myself using the tools more frequently to support differentiated instruction and lesson planning"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Epistemic confidence and accuracy",
+      "grounding_span": "AI combined with my double checking is what gives me the confidence to then share the answer with my students"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Authentic self-expression and personal voice",
+      "grounding_span": "I prefer to draft my own emails and parent communication so that I can ensure it is in my voice"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Job security and professional relevance",
+      "grounding_span": "it felt a little bit like the beginning of the end"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Student-centered effective teaching",
+      "grounding_span": "The articles perfectly captured what I was trying to communicate to the student"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for sensitive student communication",
+      "valence": "positive",
+      "grounding_span": "That was a very satisfying experience"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI pop-ups disrupting workflow",
+      "valence": "negative",
+      "grounding_span": "how they are constantly popping up and disrupting my workflow"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Anxiety about AI replacing teaching role",
+      "valence": "negative",
+      "grounding_span": "it felt a little bit like the beginning of the end"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Openness to expanding AI use for instruction",
+      "valence": "positive",
+      "grounding_span": "I see myself using the tools more frequently to support differentiated instruction and lesson planning"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Verification-oriented dual-check reasoning",
+      "grounding_span": "I'll use AI answers to give me an initial impression of the right answer and then I use the links provided to double check the accuracy on my own"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based task delegation with personal boundary",
+      "grounding_span": "I prefer to handle creative tasks myself"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,230 @@
+{
+  "transcript_id": "creativity_0050",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as precise creative director tool",
+      "label_negative": "AI as imprecise or uncontrollable generator",
+      "bipolarity_complete": true,
+      "grounding_span": "I was directing the AI to generate the vision that I had"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as brainstorming and idea generator",
+      "label_negative": "AI as uncreative or unhelpful partner",
+      "bipolarity_complete": true,
+      "grounding_span": "I've talked with Gemini and ChatGPT and just brainstormed with them"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for copyright-safe content generation",
+      "label_negative": "Relying on stock footage or others' content with copyright risk",
+      "bipolarity_complete": true,
+      "grounding_span": "I feel safer and more in control when using AI to generate exactly what I'm looking for"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as time-saving tool",
+      "label_negative": "Manual time-consuming editing tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "it definitely saved a lot of time"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as editing assistant",
+      "label_negative": "Manual rotoscoping and similar tedious work",
+      "bipolarity_complete": true,
+      "grounding_span": "One thing I hate doing is using the roto brush in after effects, if that could be automated it would be amazing"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI for custom audio generation",
+      "label_negative": "Searching through stock music libraries",
+      "bipolarity_complete": true,
+      "grounding_span": "I also use suno to add music to my videos or elevenlabs for sound effects"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Creative control and precision",
+      "grounding_span": "I feel safer and more in control when using AI to generate exactly what I'm looking for"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Novelty and creative insight",
+      "grounding_span": "the model often does come up with a surprisingly good idea"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Safety and peace of mind",
+      "grounding_span": "it would be terrible to get someone else's content a potential copystrike"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "it definitely saved a lot of time"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Creative focus on high-level aspects",
+      "grounding_span": "I can just focus on more creative aspects"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "I was directing the AI to generate the vision that I had"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Satisfaction with AI for brainstorming",
+      "valence": "positive",
+      "grounding_span": "it's surprising that they can parse through reddit comments to see what viewer would enjoy"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Optimistic anticipation of AI's video editing capabilities",
+      "valence": "positive",
+      "grounding_span": "I feel safer and more in control when using AI to generate exactly what I'm looking for"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Enthusiasm for full automation of editing",
+      "valence": "positive",
+      "grounding_span": "I would more than happy for AI to be able to completely automate editing"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Concern about job displacement",
+      "valence": "negative",
+      "grounding_span": "I could see that as an issue for people who edit as their only source of income"
+    },
+    {
+      "id": "n17",
+      "type": "Stance",
+      "label": "Satisfaction with AI for rote tasks",
+      "valence": "positive",
+      "grounding_span": "if that could be automated it would be amazing"
+    },
+    {
+      "id": "n18",
+      "type": "Stance",
+      "label": "Positive anticipation for AI automating audio editing",
+      "valence": "positive",
+      "grounding_span": "This also lets me control exactly the type of music I want"
+    },
+    {
+      "id": "n19",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative back-and-forth prompting",
+      "grounding_span": "just start prompting and making tweaks until I get what I need"
+    },
+    {
+      "id": "n20",
+      "type": "CognitiveStyleMarker",
+      "label": "Dual-mode creative direction: director vs collaborator",
+      "grounding_span": "sometimes I'm the director with a clear vision, and other times I'm more like creative collaborators brainstorming together"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n17",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n18",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n19",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n20",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

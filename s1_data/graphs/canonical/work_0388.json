@@ -1,0 +1,175 @@
+{
+  "transcript_id": "work_0388",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as neutral advisor for customer disputes",
+      "label_negative": "Emotional self-handling of customer disputes",
+      "bipolarity_complete": true,
+      "grounding_span": "I wanted their opinion after explaining the scenario"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as writing assistant",
+      "label_negative": "Self-written blunt communication",
+      "bipolarity_complete": true,
+      "grounding_span": "help draft a professional email to that customer"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as quick visualization tool for own ideas",
+      "label_negative": "AI as autonomous creative designer",
+      "bipolarity_complete": true,
+      "grounding_span": "I am fine with using AI as a tool simply to see something quick"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Authenticity in creative work",
+      "label_negative": "AI-generated design for sale",
+      "bipolarity_complete": true,
+      "grounding_span": "it wouldn't feel right if it's not coming from my brain and my creativity"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as code template generator",
+      "label_negative": "Manual typing of routine messages",
+      "bipolarity_complete": true,
+      "grounding_span": "AI could quickly recall a template message for me"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Effective communication and customer satisfaction",
+      "grounding_span": "I had confidence in it being appropriate and fair"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Emotional catharsis and professional tone",
+      "grounding_span": "I could say what I really wanted to say"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Creative authenticity and human expression",
+      "grounding_span": "it wouldn't feel right if it's not coming from my brain"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Efficiency and reduced workload",
+      "grounding_span": "If I could just click a button and the message would populate or send"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI as delegated employee",
+      "valence": "positive",
+      "grounding_span": "it was nice to have AI to write something and I felt better"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Reluctance to use AI for writing",
+      "valence": "positive",
+      "grounding_span": "This was satisfying because I could say what I really wanted to say"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Resistance to AI in creative work",
+      "valence": "negative",
+      "grounding_span": "I wouldn't use AI to actually design something"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Openness to AI for routine template messages",
+      "valence": "positive",
+      "grounding_span": "It would have actually been nice to have AI handle those sorts of interactions"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Scenario-based problem solving — describes specific customer cases",
+      "grounding_span": "I used AI another time when a customer said she ordered the wrong size"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Autonomous decision-making — runs own shop, no community influence",
+      "grounding_span": "It's really just me, myself, and I"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

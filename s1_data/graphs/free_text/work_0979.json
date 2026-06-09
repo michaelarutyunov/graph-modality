@@ -1,0 +1,162 @@
+{
+  "transcript_id": "work_0979",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as initial data organizer and task starter",
+      "label_negative": "AI as sole decision-maker without human review",
+      "bipolarity_complete": true,
+      "grounding_span": "I uploaded the spreadsheet, but reviewed the AI results"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability in structured data tasks",
+      "label_negative": "AI confusion with complex spreadsheet tables",
+      "bipolarity_complete": true,
+      "grounding_span": "Sometimes I ask AI to count things, but it can get confused with tables within a spreadsheet"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Human contextual knowledge over AI",
+      "label_negative": "AI reliance without personal insight",
+      "bipolarity_complete": true,
+      "grounding_span": "Just because I know what certain students might prefer in tabling over their overall 4 chosen table topics"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Organic human writing vs AI-perfect writing",
+      "label_negative": "AI-generated perfect but impersonal writing",
+      "bipolarity_complete": true,
+      "grounding_span": "I still think it's important for emails, messages, and other areas of writing to sound organic over perfect with big words"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Efficiency and deadline adherence",
+      "grounding_span": "I use it as needed or when I am trying to quickly finish a task to meet a deadline"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Accuracy and correctness in data tasks",
+      "grounding_span": "I wanted to ensure the students were in their correctly chosen tables"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Personalized decision-making",
+      "grounding_span": "Sometimes I just prefer to conclude the task myself because I might have different preferences that AI, of course, does not know about it"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Authentic human communication",
+      "grounding_span": "I still think it's important for emails, messages, and other areas of writing to sound organic over perfect with big words"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI as initial pass tool",
+      "valence": "positive",
+      "grounding_span": "I like AI to do a pass or three before I take over and refine the task"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI confusion in spreadsheets",
+      "valence": "negative",
+      "grounding_span": "Sometimes I ask AI to count things, but it can get confused with tables within a spreadsheet"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Confidence in human judgment over AI",
+      "valence": "positive",
+      "grounding_span": "Just because I know what certain students might prefer in tabling over their overall 4 chosen table topics"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Preference for organic writing over AI perfection",
+      "valence": "positive",
+      "grounding_span": "I still think it's important for emails, messages, and other areas of writing to sound organic over perfect with big words"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement with AI feedback loops",
+      "grounding_span": "I do give AI feedback"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-specific human oversight",
+      "grounding_span": "I made the changes myself"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

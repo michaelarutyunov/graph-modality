@@ -1,0 +1,201 @@
+{
+  "transcript_id": "work_0532",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as efficiency tool for content creation",
+      "label_negative": "AI as source of low-quality or embarrassing output",
+      "bipolarity_complete": true,
+      "grounding_span": "I regularly use AI to help me to come up with LinkedIn content to promote my business"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "Authenticity of AI-generated content",
+      "label_negative": "AI output that is obviously AI-written or wrong",
+      "bipolarity_complete": true,
+      "grounding_span": "there is a lot of really bad AI only output on LinkedIn and I don't want one of those posts associated with me"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Human control over creative decisions",
+      "label_negative": "AI dictating creative direction",
+      "bipolarity_complete": true,
+      "grounding_span": "I always have a creative direction in mind before starting"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as autonomous delegator",
+      "bipolarity_complete": true,
+      "grounding_span": "I collaborate with it to complete the task"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI tool specialization and switching",
+      "label_negative": "Single tool for all tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I frequently will use a different tool for visual elements than for text because I find that some tools work better for different things"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI image generation capability",
+      "label_negative": "AI image generation unpredictability",
+      "bipolarity_complete": true,
+      "grounding_span": "It's frustrating when you mostly like an image, but you want a relatively minor change and when you prompt the AI to change that 1 thing, they dramatically change the image instead of tweaking it"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI as practical labor-saving tool",
+      "label_negative": "AI as job destroyer",
+      "bipolarity_complete": true,
+      "grounding_span": "AI has decimated the labor market in that industry, especially in more expensive countries"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Authenticity and personal integrity",
+      "grounding_span": "I don't want one of those posts associated with me"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "it can really speed up output while still doing quality work if used correctly"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Autonomy and self-reliance",
+      "grounding_span": "it's important to think for yourself and only use AI as an efficiency tool"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Creative satisfaction and enjoyment",
+      "grounding_span": "There are also activities that I do because I enjoy them"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Careful editing and quality control stance",
+      "valence": "positive",
+      "grounding_span": "I always edit AI output prior to posting"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Frustration with AI image generation",
+      "valence": "negative",
+      "grounding_span": "It's frustrating when you mostly like an image, but you want a relatively minor change and when you prompt the AI to change that 1 thing, they dramatically change the image"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "mixed",
+      "grounding_span": "I don't expect to change how I work with AI much. I think that it's important to think for yourself and only use AI as an efficiency tool"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Worry about AI's negative impact on jobs",
+      "valence": "negative",
+      "grounding_span": "AI has decimated the labor market in that industry"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement and testing",
+      "grounding_span": "I might use the same prompt with a second chatbot if I didn't like the output of the first"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic cost-benefit analysis of AI use",
+      "grounding_span": "if I would need to do just as much work reviewing as I would doing the activity myself, I will just do it myself"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

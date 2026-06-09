@@ -1,0 +1,267 @@
+{
+  "transcript_id": "work_0712",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as tone checker for professional communication",
+      "label_negative": "Direct unmoderated communication",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "help me write better emails as it setting the tone"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as aid requiring human direction",
+      "label_negative": "Reliance on outdated interpersonal skills",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "help me navigate 'people'"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Human emotional intelligence vs AI capability",
+      "label_negative": "Lack of emotional intelligence due to time constraints",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "helped me have a greater amount of 'emotional intelligence'"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as answer provider without collaboration",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I would say it was more collaborative"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as efficiency tool",
+      "label_negative": "Manual time-consuming diagnostics",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "help with spreadsheets and identifying issues"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as mental health understanding aid",
+      "label_negative": "Difficulty understanding mental health impacts at work",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "mental health is trickier"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI use for non-proprietary tasks",
+      "label_negative": "Official prohibition of AI use",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "we haven't been 'allowed' to officially use AI"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Effective communication",
+      "valence": null,
+      "grounding_span": "getting my message across"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Team well-being and support",
+      "valence": null,
+      "grounding_span": "support my team"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Authentic professional growth and self-awareness",
+      "valence": null,
+      "grounding_span": "I've learned so much about other people and myself"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "valence": null,
+      "grounding_span": "free up time for us to get fixing issues"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Human connection and empathy",
+      "valence": null,
+      "grounding_span": "understand that behaviour"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Positive appreciation for AI as research catalyst",
+      "valence": "positive",
+      "grounding_span": "help me write better emails"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Comfortable with AI for navigation",
+      "valence": "positive",
+      "grounding_span": "help me navigate 'people'"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Positive toward AI as emotional support",
+      "valence": "positive",
+      "grounding_span": "helped me have a greater amount of 'emotional intelligence'"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Satisfaction with AI as collaborative partner",
+      "valence": "positive",
+      "grounding_span": "I would say it was more collaborative"
+    },
+    {
+      "id": "n17",
+      "type": "Stance",
+      "label": "Satisfaction with AI diagnostic help",
+      "valence": "positive",
+      "grounding_span": "I'd love for AI to... help with spreadsheets"
+    },
+    {
+      "id": "n18",
+      "type": "Stance",
+      "label": "Frustration with AI's irrelevant offers",
+      "valence": "negative",
+      "grounding_span": "I do get frustrated with being asked if I want a one-pager"
+    },
+    {
+      "id": "n19",
+      "type": "Stance",
+      "label": "Cautious approach due to data protection",
+      "valence": "ambivalent",
+      "grounding_span": "I have to be careful as I cant just copy and paste"
+    },
+    {
+      "id": "n20",
+      "type": "CognitiveStyleMarker",
+      "label": "Reflective and collaborative reasoning",
+      "valence": null,
+      "grounding_span": "I do usually give my take on it and ask if that's right"
+    },
+    {
+      "id": "n21",
+      "type": "CognitiveStyleMarker",
+      "label": "Contextual boundary setting based on organizational knowledge",
+      "valence": null,
+      "grounding_span": "I don't tell people that I have used it for help understanding my members of staff"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n13",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n17",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n18",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n19",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n3",
+      "target": "n20",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n20",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n7",
+      "target": "n21",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

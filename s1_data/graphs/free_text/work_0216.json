@@ -1,0 +1,149 @@
+{
+  "transcript_id": "work_0216",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as ideation and editing partner",
+      "label_negative": "AI as content creator replacing personal voice",
+      "bipolarity_complete": true,
+      "grounding_span": "I usually use it to get ideas for social media posts and edit/refine marketing copy"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for conciseness and clarity",
+      "label_negative": "AI for generic or cliche content",
+      "bipolarity_complete": true,
+      "grounding_span": "Conciseness and clarity! I am very wordy and my thoughts can get lost in the fluff, so AI helps me make my content more succinct and easy to read."
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Preservation of unique voice and empathy",
+      "label_negative": "Reliance on AI for content creation",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't create generic content and a big part of my brand is my unique voice, empathy, and insights."
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as efficiency booster for writing",
+      "label_negative": "AI as crutch that degrades writing skills",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't think it's negatively impacting my writing skills - I write prose here and there in my free time - but it helps elevate my level of concise communication"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Authentic self-expression",
+      "grounding_span": "a big part of my brand is my unique voice, empathy, and insights"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Effective communication",
+      "grounding_span": "Conciseness and clarity! I am very wordy and my thoughts can get lost in the fluff"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "the time spent writing is much less"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Satisfaction with AI for editing and ideation",
+      "valence": "positive",
+      "grounding_span": "I love the ability to edit and refine what I've created from a writing perspective"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Dissatisfaction with AI for content generation",
+      "valence": "negative",
+      "grounding_span": "I usually have my own ideas and find those suggestions unhelpful"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Confidence in balanced AI use",
+      "valence": "positive",
+      "grounding_span": "I definitely don't want to over-rely on it! I still keep a fair balance"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement — cycles of AI suggestion, personal implementation, AI polish",
+      "grounding_span": "It's like AI gets things going, I implement in my way, then take it back to AI to polish it up."
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Selective delegation — AI for ideation and editing, self for content and voice",
+      "grounding_span": "I like to deal with the details of the content I'm creating. I like the suggestions AI gives to get the juices flowing."
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n8",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,169 @@
+{
+  "transcript_id": "science_0035",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as literature discovery tool",
+      "label_negative": "Manual reading of complex literature",
+      "bipolarity_complete": true,
+      "grounding_span": "For some papers that were highly complicated or too long for me to read through, I relied on using AI to save time."
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as literature discovery tool",
+      "label_negative": "Unaided analysis of literature and statistics",
+      "bipolarity_complete": true,
+      "grounding_span": "I used AI tools to help me analyze the literature during review. I also used AI tools when I was trying to determine the best statistical analysis to apply to my specific datasets."
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI trustworthiness and verification",
+      "label_negative": "AI trustworthiness without verification",
+      "bipolarity_complete": true,
+      "grounding_span": "I would conduct follow up research, cross check its analysis with other researchers and online information, in addition to relying on my proficiency with the science to determine if its analysis was sound."
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as writing assistant preserving personal voice",
+      "label_negative": "AI use in paper writing without personal voice",
+      "bipolarity_complete": true,
+      "grounding_span": "With paper writing specifically, Ive avoided using AI because I wanted my own insights and findings to be communicated."
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI for tedious data processing",
+      "label_negative": "Manual data collection and statistical analysis",
+      "bipolarity_complete": true,
+      "grounding_span": "Statistical analysis and data collection. This is an extremely time-consuming and tedious process that wastes lots of human time."
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Research efficiency",
+      "grounding_span": "save time"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Scientific rigor and accuracy",
+      "grounding_span": "cross check its analysis with other researchers and online information"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Personal intellectual ownership",
+      "grounding_span": "I wanted my own insights and findings to be communicated"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Negative stance toward AI for literature search",
+      "valence": "positive",
+      "grounding_span": "I used AI tools to help me analyze the literature during review. I also used AI tools when I was trying to determine the best statistical analysis to apply to my specific datasets."
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Cautious verification stance toward AI outputs",
+      "valence": "ambivalent",
+      "grounding_span": "I would conduct follow up research, cross check its analysis with other researchers and online information"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Negative stance toward AI-generated writing",
+      "valence": "negative",
+      "grounding_span": "With paper writing specifically, Ive avoided using AI because I wanted my own insights and findings to be communicated."
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Hesitation toward AI for data analysis",
+      "valence": "positive",
+      "grounding_span": "Statistical analysis and data collection. This is an extremely time-consuming and tedious process that wastes lots of human time."
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic delegation with oversight",
+      "grounding_span": "For some papers that were highly complicated or too long for me to read through, I relied on using AI to save time."
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative verification through external sources",
+      "grounding_span": "I would conduct follow up research, cross check its analysis with other researchers and online information, in addition to relying on my proficiency with the science"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

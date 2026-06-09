@@ -1,0 +1,167 @@
+{
+  "transcript_id": "work_0201",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as quick guidance and short coding assistant",
+      "label_negative": "AI as unreliable for complex or critical tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "go-to source for any questions and guidance"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI with full codebase context for high-success tasks",
+      "label_negative": "AI without full context for critical codebases",
+      "bipolarity_complete": true,
+      "grounding_span": "having the full codebase as context in Cursor gives it a high chance of success"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as productivity booster for well-understood tasks",
+      "label_negative": "AI as slowdown for tasks with clear implementation",
+      "bipolarity_complete": true,
+      "grounding_span": "AI tools will just slow me down"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as empowering dependency for higher-level work",
+      "label_negative": "AI as crutch that erodes skills",
+      "bipolarity_complete": true,
+      "grounding_span": "become more and more 'dependent' on them in a good way"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI trust based on verifiability and low risk",
+      "label_negative": "AI trust undermined by critical errors",
+      "bipolarity_complete": true,
+      "grounding_span": "easily verifiable task I want completed"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "greatly increased my productivity"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Creative and higher-level decision making",
+      "grounding_span": "focus on higher level decision making"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Control and precision in implementation",
+      "grounding_span": "I want the code written in a very specific way"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for verifiable tasks",
+      "valence": "positive",
+      "grounding_span": "most satisfying tasks are when I have a very easily verifiable task"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Preference for no AI when implementation is clear",
+      "valence": "negative",
+      "grounding_span": "AI tools will just slow me down"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Optimism about increasing AI dependency",
+      "valence": "positive",
+      "grounding_span": "become more and more 'dependent' on them in a good way"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic context-based tool selection",
+      "grounding_span": "My decision to use Cursor is always about the context window"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative prompt refinement and context resetting",
+      "grounding_span": "wipe the conversation and ask in a slightly different way"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

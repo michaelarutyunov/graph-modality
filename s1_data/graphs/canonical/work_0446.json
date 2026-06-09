@@ -1,0 +1,406 @@
+{
+  "transcript_id": "work_0446",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as formatting and synthesizing tool",
+      "label_negative": "Manual code formatting and restructuring",
+      "bipolarity_complete": true,
+      "grounding_span": "There is piece of code that needs a better format or requires some restructuring/cleaning"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as code generation assistant",
+      "label_negative": "Writing baseline code from scratch without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I need a baseline code to start with (a blue print) so I request the AI model to built it using highly specific instructions with low ambiguity"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as coding suggestion tool",
+      "label_negative": "Self-directed code analysis without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I often require some quick explanation on a code that implements an algorithm, to identify the logic being used in implementation"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI for language translation",
+      "label_negative": "Manual code translation between languages",
+      "bipolarity_complete": true,
+      "grounding_span": "I might need to translate an algorithm I implemented in a certain language into another"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as research starting point",
+      "label_negative": "Manual initial research without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I also use AI models to perform an initial quick research on a science-related topic, an algorithm, state-of-the-art techniques"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI bug severity and fix effort",
+      "label_negative": "Manual bug understanding without AI suggestions",
+      "bipolarity_complete": true,
+      "grounding_span": "I often use the AI-model to understand already-localized bugs, and try variations of the suggestions it provides"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "Preference for full awareness in deployment code",
+      "label_negative": "Delegating deployment code to AI without full awareness",
+      "bipolarity_complete": true,
+      "grounding_span": "Something I am creating for deployment and I need to be fully-aware (or as much as possible) of what each part is doing"
+    },
+    {
+      "id": "n8",
+      "type": "Construct",
+      "label": "Preference for self-directed skill building in language proficiency",
+      "label_negative": "Using AI to bypass language learning",
+      "bipolarity_complete": true,
+      "grounding_span": "I am trying to increase my proficiency in a certain language while analyzing an algorithm"
+    },
+    {
+      "id": "n9",
+      "type": "Construct",
+      "label": "Preference for active learning through source validation",
+      "label_negative": "Passive acceptance of AI summaries without validation",
+      "bipolarity_complete": true,
+      "grounding_span": "I validate the summary of the research's results provided by the AI model, so that I can actively learn from the source"
+    },
+    {
+      "id": "n10",
+      "type": "Construct",
+      "label": "Collaborative interaction pattern with decreasing specificity",
+      "label_negative": "Delegation of entire tasks to AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I often collaborate with the model throughout a task. however, the more I advance into the task more specific the questions I pose become"
+    },
+    {
+      "id": "n11",
+      "type": "Construct",
+      "label": "AI scope control to avoid excessive code changes",
+      "label_negative": "AI making only requested modifications",
+      "bipolarity_complete": true,
+      "grounding_span": "The only possible frustration would be related to situations in which unrequested modifications to a code were made by the AI model"
+    },
+    {
+      "id": "n12",
+      "type": "Construct",
+      "label": "Self-reliance for debugging to maintain skill",
+      "label_negative": "Skill maintenance for tasks fully automatable by AI",
+      "bipolarity_complete": true,
+      "grounding_span": "Maintaining such skills is relevant only/mostly if they are connected to a way of thinking, or if the skills are related to areas that will likely need someone who knows enough to debug specialized/challenging issues"
+    },
+    {
+      "id": "n13",
+      "type": "Construct",
+      "label": "AI as supplement to creative process",
+      "label_negative": "AI limited to non-creative tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "It could evolve mostly if they become more capable, so that I can do more of the ''creative'' aspect of it"
+    },
+    {
+      "id": "n14",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "I need a baseline code to start with (a blue print) so I request the AI model to built it using highly specific instructions"
+    },
+    {
+      "id": "n15",
+      "type": "Value",
+      "label": "Learning and understanding",
+      "grounding_span": "I often require some quick explanation on a code that implements an algorithm, to identify the logic being used in implementation"
+    },
+    {
+      "id": "n16",
+      "type": "Value",
+      "label": "Control and awareness over code",
+      "grounding_span": "Something I am creating for deployment and I need to be fully-aware (or as much as possible) of what each part is doing"
+    },
+    {
+      "id": "n17",
+      "type": "Value",
+      "label": "Skill development and learning",
+      "grounding_span": "I am trying to increase my proficiency in a certain language while analyzing an algorithm"
+    },
+    {
+      "id": "n18",
+      "type": "Value",
+      "label": "Active learning from sources",
+      "grounding_span": "I validate the summary of the research's results provided by the AI model, so that I can actively learn from the source"
+    },
+    {
+      "id": "n19",
+      "type": "Value",
+      "label": "Trust and reliability in AI outputs",
+      "grounding_span": "The only possible frustration would be related to situations in which unrequested modifications to a code were made by the AI model"
+    },
+    {
+      "id": "n20",
+      "type": "Value",
+      "label": "Creative expression and quality",
+      "grounding_span": "so that I can do more of the ''creative'' aspect of it"
+    },
+    {
+      "id": "n21",
+      "type": "Stance",
+      "label": "Frustration with AI formatting",
+      "valence": "positive",
+      "grounding_span": "There is piece of code that needs a better format or requires some restructuring/cleaning"
+    },
+    {
+      "id": "n22",
+      "type": "Stance",
+      "label": "Satisfaction with AI for code generation",
+      "valence": "positive",
+      "grounding_span": "I need a baseline code to start with (a blue print) so I request the AI model to built it using highly specific instructions with low ambiguity"
+    },
+    {
+      "id": "n23",
+      "type": "Stance",
+      "label": "Satisfaction with AI for code generation",
+      "valence": "positive",
+      "grounding_span": "I often require some quick explanation on a code that implements an algorithm"
+    },
+    {
+      "id": "n24",
+      "type": "Stance",
+      "label": "Satisfaction with AI for code translation",
+      "valence": "positive",
+      "grounding_span": "I might need to translate an algorithm I implemented in a certain language into another"
+    },
+    {
+      "id": "n25",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "I also use AI models to perform an initial quick research on a science-related topic"
+    },
+    {
+      "id": "n26",
+      "type": "Stance",
+      "label": "Satisfaction with AI for bug understanding",
+      "valence": "positive",
+      "grounding_span": "I often use the AI-model to understand already-localized bugs"
+    },
+    {
+      "id": "n27",
+      "type": "Stance",
+      "label": "Preference for handling deployment code without AI",
+      "valence": "negative",
+      "grounding_span": "Something I am creating for deployment and I need to be fully-aware (or as much as possible) of what each part is doing"
+    },
+    {
+      "id": "n28",
+      "type": "Stance",
+      "label": "Preference for self-directed language learning",
+      "valence": "negative",
+      "grounding_span": "I am trying to increase my proficiency in a certain language while analyzing an algorithm"
+    },
+    {
+      "id": "n29",
+      "type": "Stance",
+      "label": "Preference for active validation of AI summaries",
+      "valence": "negative",
+      "grounding_span": "I validate the summary of the research's results provided by the AI model, so that I can actively learn from the source"
+    },
+    {
+      "id": "n30",
+      "type": "Stance",
+      "label": "Frustration with unrequested code modifications",
+      "valence": "negative",
+      "grounding_span": "The only possible frustration would be related to situations in which unrequested modifications to a code were made by the AI model"
+    },
+    {
+      "id": "n31",
+      "type": "Stance",
+      "label": "Resistance to AI in creative work",
+      "valence": "positive",
+      "grounding_span": "It could evolve mostly if they become more capable, so that I can do more of the ''creative'' aspect of it"
+    },
+    {
+      "id": "n32",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic task decomposition based on complexity",
+      "grounding_span": "I need a baseline code to start with (a blue print) so I request the AI model to built it using highly specific instructions with low ambiguity"
+    },
+    {
+      "id": "n33",
+      "type": "CognitiveStyleMarker",
+      "label": "Progressive knowledge absorption — starts with broad collaboration and narrows questions as understanding increases",
+      "grounding_span": "the more I advance into the task more specific the questions I pose become; also, the number of questions decreases over time since I get to ''absorb'' the knoledge provided by the AI model"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n14",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n15",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n14",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n16",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n17",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n18",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n15",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n19",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n12",
+      "target": "n17",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n13",
+      "target": "n20",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n21",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n22",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n23",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n24",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n25",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n26",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n27",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n28",
+      "target": "n8",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n29",
+      "target": "n9",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n30",
+      "target": "n11",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n31",
+      "target": "n13",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n33",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n7",
+      "target": "n32",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n8",
+      "target": "n32",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n9",
+      "target": "n32",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n11",
+      "target": "n32",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

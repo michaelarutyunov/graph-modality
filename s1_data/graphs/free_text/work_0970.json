@@ -1,0 +1,174 @@
+{
+  "transcript_id": "work_0970",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as research tool for historical details",
+      "label_negative": "Traditional time-consuming research",
+      "bipolarity_complete": true,
+      "grounding_span": "I ask a lot of ultra-specific questions about the time period that would take a long time to find out via a Google search alone"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as creative writing substitute",
+      "label_negative": "Human-authored creative writing with distinct voice",
+      "bipolarity_complete": true,
+      "grounding_span": "I never ask AI to write passages for me"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI truthfulness and reliability",
+      "label_negative": "AI hallucination and falsehood",
+      "bipolarity_complete": true,
+      "grounding_span": "it will lie and offer something false as the answer"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI agreeableness and consistency",
+      "label_negative": "AI sycophancy and inconsistency",
+      "bipolarity_complete": true,
+      "grounding_span": "I find it too agreeable, accepting false premises too easily"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Social acceptability of AI use among authors",
+      "label_negative": "Stigma and boycott risk for AI use",
+      "bipolarity_complete": true,
+      "grounding_span": "using AI is very looked down upon"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Authorial voice and creative authenticity",
+      "grounding_span": "the most important part of being an established author is having a distinct voice"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficient research and factual accuracy",
+      "grounding_span": "it would just take a lot longer"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional reputation and social acceptance",
+      "grounding_span": "readers will boycott an author if they think they have used AI"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for research efficiency",
+      "valence": "positive",
+      "grounding_span": "I ask a lot of ultra-specific questions about the time period that would take a long time to find out"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Firm rejection of AI for creative writing",
+      "valence": "negative",
+      "grounding_span": "I never ask AI to write passages for me"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI hallucination and sycophancy",
+      "valence": "negative",
+      "grounding_span": "it will lie and offer something false as the answer"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Concealment of AI use due to stigma",
+      "valence": "mixed",
+      "grounding_span": "I would rather just not mention it at all"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Question-driven discrete interactions",
+      "grounding_span": "I tend to ask specific questions and leave it at that"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Clear boundary setting between research and creation",
+      "grounding_span": "I will never ask an AI simply to write on my behalf"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

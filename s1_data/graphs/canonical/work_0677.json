@@ -1,0 +1,162 @@
+{
+  "transcript_id": "work_0677",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as summarization and primer tool for complex regulatory documents",
+      "label_negative": "Manual reading and synthesis without AI assistance",
+      "bipolarity_complete": true,
+      "grounding_span": "I often use AI to summarize new regulatory documents (orders, testimony, exhibits, etc) or to create quick primers on regulatory processes to date."
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as a one-shot answer provider",
+      "bipolarity_complete": true,
+      "grounding_span": "As I identify those areas with AI, our conversation expands."
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as efficiency tool",
+      "label_negative": "Manual processing without AI efficiency",
+      "bipolarity_complete": true,
+      "grounding_span": "I was able to produce a report from 20-30 pages of meeting notes in just 2 hours."
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Human authorship for high-stakes legal arguments",
+      "label_negative": "AI autonomy in legal document production",
+      "bipolarity_complete": true,
+      "grounding_span": "I often like to handle those myself. I would not want a minor style or formatting error to delay a time sensitive filing."
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as job threat",
+      "label_negative": "AI as a job replacement threat",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is more of a tool in the toolbox than something I fear will take over my job."
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "I was able to produce a report from 20-30 pages of meeting notes in just 2 hours."
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Accuracy and compliance in legal work",
+      "grounding_span": "I would not want a minor style or formatting error to delay a time sensitive filing."
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Epistemic accuracy and understanding",
+      "grounding_span": "Often I am reading the documents for the first time, and may not know all of the things that I need to follow-up on."
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Frustration with AI for complex synthesis",
+      "valence": "positive",
+      "grounding_span": "I felt particularly satisfied when I was able to produce a report from 20-30 pages of meeting notes in just 2 hours."
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Preference for human control over legal writing",
+      "valence": "negative",
+      "grounding_span": "I often like to handle those myself. I would not want a minor style or formatting error to delay a time sensitive filing."
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Openness to increasing AI use in future",
+      "valence": "positive",
+      "grounding_span": "I could see it expanding. If the models become more proficient at extracting and synthesizing regulatory information they could write more final products."
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative verification and follow-up",
+      "grounding_span": "I will then read through what the AI gave me and then go back and skim through the document. If it seems like the AI skipped major chapters or topics I will focus on those with the AI and ask more specific questions."
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based boundary setting — clear separation of AI-appropriate vs. human-only tasks",
+      "grounding_span": "There are some tasks that will be reviewed by our legal department and have specific style and formatting requirements. I often like to handle those myself."
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

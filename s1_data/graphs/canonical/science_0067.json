@@ -1,0 +1,187 @@
+{
+  "transcript_id": "science_0067",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as debugging assistant",
+      "label_negative": "AI as threat to personal skill development",
+      "bipolarity_complete": true,
+      "grounding_span": "ChatGPT's ability to comb through and point out potential matrix issues was impressive and very helpful"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as conceptual clarifier for research",
+      "label_negative": "AI as unreliable implementer of complex methods",
+      "bipolarity_complete": true,
+      "grounding_span": "ChatGPT was helpful here in helping me approach it with the right idea, but it also had trouble getting it to work"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as last resort for design tasks",
+      "label_negative": "AI use in mechanical/tedious troubleshooting",
+      "bipolarity_complete": true,
+      "grounding_span": "I would feel more useless the more work it does for me"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as coding suggestion tool",
+      "label_negative": "AI as crutch that bypasses understanding",
+      "bipolarity_complete": true,
+      "grounding_span": "Combing through its fixes are very telling and is pretty much how I learned MATLAB"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as systematic troubleshooter",
+      "label_negative": "Lack of AI diagnostic support for hardware",
+      "bipolarity_complete": true,
+      "grounding_span": "It would have been nice to insert a magic USB that could gather info and report potential issues/fixes"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "I typically use ChatGPT as a sort of adaptive debugger so that I can better focus on the bigger picture"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Personal accomplishment and satisfaction",
+      "grounding_span": "I would feel more useless the more work it does for me"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Deep understanding",
+      "grounding_span": "Combing through its fixes are very telling and is pretty much how I learned MATLAB"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Efficiency in problem-solving",
+      "grounding_span": "It would have been nice to insert a magic USB that could gather info and report potential issues/fixes"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for debugging",
+      "valence": "positive",
+      "grounding_span": "ChatGPT's ability to comb through and point out potential matrix issues was impressive and very helpful"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Positive stance toward AI as research tool",
+      "valence": "mixed",
+      "grounding_span": "ChatGPT was helpful here in helping me approach it with the right idea, but it also had trouble getting it to work"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Resistance to AI in creative work",
+      "valence": "negative",
+      "grounding_span": "I would feel more useless the more work it does for me"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Positive stance toward AI as research tool",
+      "valence": "positive",
+      "grounding_span": "Combing through its fixes are very telling and is pretty much how I learned MATLAB"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Desire for AI hardware diagnostic tool",
+      "valence": "positive",
+      "grounding_span": "It would have been nice to insert a magic USB that could gather info and report potential issues/fixes"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative trial-and-error approach",
+      "grounding_span": "I typically just inject its suggestions into my code, hit 'Run', send it the new error (if present), and repeat until no errors are present"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based boundary setting — separates creative from non-creative tasks",
+      "grounding_span": "that arbitrary line is drawn near what I consider an artistic expression or display of valuable aptitude"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

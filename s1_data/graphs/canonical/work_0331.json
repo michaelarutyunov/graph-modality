@@ -1,0 +1,211 @@
+{
+  "transcript_id": "work_0331",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as research assistant",
+      "label_negative": "AI as inefficient or irrelevant when providing unsolicited long summaries",
+      "bipolarity_complete": true,
+      "grounding_span": "AI has been my go to for much of this research"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as adaptable tool for modifying checklists and generating safety considerations",
+      "label_negative": "AI as rigid or unhelpful for checklist modification",
+      "bipolarity_complete": true,
+      "grounding_span": "AI has been super helpful at modifying these checklists quickly"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as brainstorming and idea generator",
+      "label_negative": "AI as merely a Q&A tool without collaborative understanding",
+      "bipolarity_complete": true,
+      "grounding_span": "these conversations have become much more active brainstorming sessions"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI content selectivity based on fit",
+      "label_negative": "Sticking with a single AI model regardless of task",
+      "bipolarity_complete": true,
+      "grounding_span": "switching to a second choice AI model for the day"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI responsiveness to user feedback",
+      "label_negative": "AI cluelessness about collaborative intent",
+      "bipolarity_complete": true,
+      "grounding_span": "some days where the AI I'm working with really understands that I'm looking for it to work with me"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI use for efficiency in learning and planning",
+      "label_negative": "Traditional self-directed research without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "the efficiency in letting AI do the heavy reading and sifting is amazing"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "cut down hours of my own research to just minutes"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Deep understanding",
+      "grounding_span": "learn about her condition and also the implications"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Personal autonomy and discovery",
+      "grounding_span": "the various sources wouldn't catch my eye like that the way they do when I'm doing the research fully myself"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "AI has been my go to for much of this research"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Annoyance with unsolicited long summaries",
+      "valence": "negative",
+      "grounding_span": "Longer summaries I find annoying"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI as collaborative partner",
+      "valence": "positive",
+      "grounding_span": "these conversations have become much more active brainstorming sessions"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Pragmatic switching between AI models",
+      "valence": "positive",
+      "grounding_span": "switching to a second choice AI model for the day"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Preference for self-directed citation chasing for general interest topics",
+      "valence": "positive",
+      "grounding_span": "I'm pretty accustomed to just source researching"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through back-and-forth questioning",
+      "grounding_span": "Follows up by asking for more sources like one that looked good"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic tool switching",
+      "grounding_span": "switching to a second choice AI model for the day"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n14",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": [
+    "[work_0331] direct Stance→Value edge disallowed: n14 --[SERVES]--> n9"
+  ]
+}

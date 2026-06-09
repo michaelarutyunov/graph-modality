@@ -1,0 +1,175 @@
+{
+  "transcript_id": "work_0871",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI draft as structural roadmap",
+      "label_negative": "AI draft as unreliable source",
+      "bipolarity_complete": true,
+      "grounding_span": "It prepopulates the draft for me, which is helpful to see the broader topics, number of speakers, and how much each speaker talks"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI accuracy in speaker attribution",
+      "label_negative": "AI hallucination and misattribution",
+      "bipolarity_complete": true,
+      "grounding_span": "It can be pretty good at understanding speaker's voices and attributes them correctly, mostly. But sometimes, there are two speakers and it decides that one speaker actually sounds like 3-4 different speakers"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI handling of speech variability",
+      "label_negative": "AI failure with atypical speech patterns",
+      "bipolarity_complete": true,
+      "grounding_span": "Speakers who stutter a lot or break up their sentences can trip up the model and it's preferable to type from scratch for those tougher file types"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as cost-effective solution for customers",
+      "label_negative": "AI as threat to human livelihood",
+      "bipolarity_complete": true,
+      "grounding_span": "The AI solutions are often cheaper for customers to use, so we have had customers flocking to try them, which loses work for us"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI data confidentiality and security",
+      "label_negative": "AI data exposure and lack of privacy",
+      "bipolarity_complete": true,
+      "grounding_span": "I think it's an area that should have a clear clause around security and confidentiality. Some are court cases that come through and require that; but if it trains an AI model, is it really going to stay confidential, always?"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Work efficiency and accuracy",
+      "grounding_span": "It prepopulates the draft for me, which is helpful"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional competence and quality",
+      "grounding_span": "some customers also come back to the human side after experiencing the AI's 'work' which can be very substandard"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Job security and livelihood",
+      "grounding_span": "some people have lost their livelihood because the work just isn't there now"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Data privacy and ethical use",
+      "grounding_span": "it should be held privately, and have clear rules around its collection"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Positive appreciation for AI draft as starting point",
+      "valence": "positive",
+      "grounding_span": "I think having it prepopulate a transcript is the best way forward"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI hallucination and misattribution",
+      "valence": "negative",
+      "grounding_span": "The model can hallucinate entire sentences of script that don't exist"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Concern about AI replacing human jobs",
+      "valence": "negative",
+      "grounding_span": "some people have lost their livelihood because the work just isn't there now"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Ambivalence about AI data confidentiality",
+      "valence": "ambivalent",
+      "grounding_span": "It's perplexing to think about, because the data is just there, it doesn't go anywhere. But it should be held privately"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Comparative evaluation — weighs AI draft against own listening",
+      "grounding_span": "Once I start listening to the audio to proofread, it's clear where the model does well and where it slips"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic adaptation — adjusts workflow based on file difficulty",
+      "grounding_span": "it's preferable to type from scratch for those tougher file types"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

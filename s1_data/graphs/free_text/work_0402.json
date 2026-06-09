@@ -1,0 +1,215 @@
+{
+  "transcript_id": "work_0402",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as efficient scorer for routine tasks",
+      "label_negative": "AI as unreliable due to length bias",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "AI will sort out unscorable responses and/or actually do some or all of the scoring"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI scoring accuracy vs human scoring",
+      "label_negative": "AI scoring inaccuracies (e.g., length bias)",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "AI often credits writing that isn't necessarily relevant to the prompt and may not credit a shorter response that gets straight to the relevant ideas"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Human collaborative consensus in scoring",
+      "label_negative": "AI-driven individual scoring without group discussion",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "we train as a group and talk as a group; sometimes coming to a consensus on how to credit or not credit something, as a group"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Human contextual judgment for end-of-project reports",
+      "label_negative": "AI-generated reports lacking contextual understanding",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "The reports at the end of certain projects are often tedious, but we continue to do them manually as they require examples of where scorers had difficulty and ideas that could help the director"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI integration driven by cost-saving",
+      "label_negative": "AI integration driven by quality improvement",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "Our corporate heads are always trying to save money, so tasks that AI can accurately perform much more quickly than humans are preferred"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI replacing human roles over time",
+      "label_negative": "AI augmenting human roles without replacement",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I believe my responsibilities will be replaced by AI at some point"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and cost-saving",
+      "valence": null,
+      "grounding_span": "tasks that AI can accurately perform much more quickly than humans are preferred"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Scoring accuracy and fairness",
+      "valence": null,
+      "grounding_span": "AI often credits writing that isn't necessarily relevant to the prompt"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Human collaboration and consensus",
+      "valence": null,
+      "grounding_span": "we train as a group and talk as a group; sometimes coming to a consensus"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Contextual understanding and improvement",
+      "valence": null,
+      "grounding_span": "require examples of where scorers had difficulty and ideas that could help the director"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Confidence in AI for routine scoring",
+      "valence": "positive",
+      "grounding_span": "It doesn't happen often, so we tend to be pretty confident with it"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Caution about eliminating human comparison",
+      "valence": "ambivalent",
+      "grounding_span": "We are not at the point, however, where we want to eliminate the comparison with human scoring"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Frustration with poor communication about AI use",
+      "valence": "negative",
+      "grounding_span": "the director just told me she agreed with the AI instead of me, and it was not helpful"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Resignation about AI replacing role",
+      "valence": "negative",
+      "grounding_span": "I believe my responsibilities will be replaced by AI at some point"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Analytical pattern-seeking in scoring discrepancies",
+      "valence": null,
+      "grounding_span": "Definitely analytical. I look for the patterns and am often correcting the human scorers"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic acceptance of organizational constraints",
+      "valence": null,
+      "grounding_span": "I am able to make recommendations to my superiors, but I don't make the final decisions on AI set up"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

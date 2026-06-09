@@ -1,0 +1,156 @@
+{
+  "transcript_id": "work_0428",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as navigation tool for textbook content",
+      "label_negative": "Traditional manual search without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I've been encouraged to use AI to search that Stats textbook"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as expedient shortcut undermining learning",
+      "label_negative": "AI as efficient aid preserving understanding",
+      "bipolarity_complete": true,
+      "grounding_span": "using AI feels like its making me lazy sometimes"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Personal deep learning of concepts",
+      "label_negative": "AI-mediated learning of concepts",
+      "bipolarity_complete": true,
+      "grounding_span": "When it comes to actually learning the concepts for myself I don't want AI to teach me anything"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as threat to human originality and skill",
+      "label_negative": "AI as non-threatening tool for specialized work",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't really worry about the AI taking over thing because I believe what I do is specialized"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Deep understanding",
+      "grounding_span": "I need to know all the topics very very well to be able to answer any tricky questions"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and efficient task completion",
+      "grounding_span": "I'll usually just search for specific topics or sometimes plug in the homework question"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional integrity and ethical practice",
+      "grounding_span": "taking the easy way out which can sometimes lead to subpar work in other situations"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Comfortable with AI for navigation",
+      "valence": "positive",
+      "grounding_span": "I think I'd like to continue to use it for navigation"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Concern about AI-induced laziness",
+      "valence": "negative",
+      "grounding_span": "using AI feels like its making me lazy sometimes"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Firm boundary against AI for learning concepts",
+      "valence": "negative",
+      "grounding_span": "my rule about not using it for understanding concepts will probably stand firm"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Dismissive of AI as threat to specialized work",
+      "valence": "positive",
+      "grounding_span": "I don't really worry about the AI taking over thing"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Verification-oriented — cross-checks AI outputs against other sources",
+      "grounding_span": "I generally just like to see where its pointing and then go from there on my own"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based boundary setting",
+      "grounding_span": "my rule about not using it for understanding concepts will probably stand firm"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

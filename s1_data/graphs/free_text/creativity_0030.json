@@ -1,0 +1,162 @@
+{
+  "transcript_id": "creativity_0030",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as creative catalyst for brainstorming",
+      "label_negative": "AI as creative replacement",
+      "bipolarity_complete": true,
+      "grounding_span": "I used AI to brainstorm, which then got my creative juices flowing"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for minor non-creative tasks",
+      "label_negative": "AI for core creative tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't allow myself to use AI for the creative meat and potatoes of my story"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as tool to overcome creative blocks",
+      "label_negative": "AI as source of creative dependency",
+      "bipolarity_complete": true,
+      "grounding_span": "I spend less time stressing over minor things and more time actually writing"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Human-driven creative control",
+      "label_negative": "AI-driven creative control",
+      "bipolarity_complete": true,
+      "grounding_span": "it's really important to me to stay in control of the creative decisions"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI authenticity markers",
+      "label_negative": "AI indistinguishable from human writing",
+      "bipolarity_complete": true,
+      "grounding_span": "I know the difference between an AI story and a human's work they've poured their heart into almost immediately"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative authenticity",
+      "grounding_span": "I want it to be authentic to me"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and flow",
+      "grounding_span": "I spend less time stressing over minor things and more time actually writing"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Human authorship and recognition",
+      "grounding_span": "the audience at least that wants something from real live authors"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Positive view of AI as brainstorming partner",
+      "valence": "positive",
+      "grounding_span": "I used AI to brainstorm, which then got my creative juices flowing"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Negative view of AI replacing human creativity",
+      "valence": "negative",
+      "grounding_span": "I do fear that AI could take over writing"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Cautious optimism about AI's future role",
+      "valence": "ambivalent",
+      "grounding_span": "I like to think AI can just continue to find new ways to help us without being the driving force"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Boundary-setting between core and peripheral tasks",
+      "grounding_span": "I don't allow myself to use AI for the creative meat and potatoes of my story"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative collaborative refinement",
+      "grounding_span": "I bounced back and forth with it until we found a perfect title"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,166 @@
+{
+  "transcript_id": "science_0057",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as literature screening tool",
+      "label_negative": "AI as unreliable summarizer",
+      "bipolarity_complete": true,
+      "grounding_span": "I use the Vet Explainer add-on of chat GPT a lot to help me summarize the papers to make sure they're relevant without having to read the entire thing"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as pitfall identifier in studies",
+      "label_negative": "AI missing contextual and author biases",
+      "bipolarity_complete": true,
+      "grounding_span": "it does a really good job at identifying pitfalls of scientific studies"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for evaluating research robustness and reproducibility",
+      "label_negative": "AI inability to handle subjective definitions across disciplines",
+      "bipolarity_complete": true,
+      "grounding_span": "I would love to be able to have AI grade the robustness and reproducibility of research"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Expert manual standardization vs AI delegation",
+      "label_negative": "AI delegation of nuanced standardization tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I would rather use my own expertise and cite studies to back up my standardization choices than ask AI to perform the task"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Research trustworthiness and reproducibility",
+      "grounding_span": "I'm really passionate about trying to improve the trustworthiness of scientific research"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficient literature processing",
+      "grounding_span": "help me summarize the papers to make sure they're relevant without having to read the entire thing"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Expert autonomy and judgment",
+      "grounding_span": "I would rather use my own expertise"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Trust in AI for screening but not full reliance",
+      "valence": "ambivalent",
+      "grounding_span": "I don't trust it fully - I use it as a quick summary to tell me if the paper is worth reading"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Positive appreciation for AI pitfall detection",
+      "valence": "positive",
+      "grounding_span": "it does a really good job at identifying pitfalls of scientific studies - that's one of my favorite uses of AI"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Aspirational desire for AI in robustness evaluation",
+      "valence": "positive",
+      "grounding_span": "I would love to be able to have AI grade the robustness and reproducibility of research"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Skepticism about AI handling subjective definitions",
+      "valence": "negative",
+      "grounding_span": "I don't know if that's ever possible"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Expert-driven manual verification — prefers own expertise for nuanced tasks",
+      "grounding_span": "I would rather use my own expertise and cite studies to back up my standardization choices"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Contextual and institutional awareness — considers author bias and funding",
+      "grounding_span": "identifying author bias requires looking at their publication history, their institutional affiliation"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

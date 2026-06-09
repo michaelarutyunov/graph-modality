@@ -1,0 +1,203 @@
+{
+  "transcript_id": "work_0926",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "Trust in vetted institutional AI systems",
+      "label_negative": "Distrust in open-source AI tools",
+      "bipolarity_complete": true,
+      "grounding_span": "I therefore trust that sufficient due diligence has been done prior to implementation of the system to allow me to trust it"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as data processing aid for overwhelming data",
+      "label_negative": "AI as unnecessary or untrustworthy for data analysis",
+      "bipolarity_complete": true,
+      "grounding_span": "the level of data officers are now handling is unwieldy and unmanageable in many cases and as such, any 'help' we can get from the IT systems available is usually beneficial"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for report writing efficiency",
+      "label_negative": "Manual report writing preserving officer style",
+      "bipolarity_complete": true,
+      "grounding_span": "a greater use of AI for report writing purposes"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI in facial recognition for policing",
+      "label_negative": "Public surveillance and over-reliance on AI",
+      "bipolarity_complete": true,
+      "grounding_span": "facial recognition software and its potential usage for Policing purposes"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI for job applications as unfair advantage",
+      "label_negative": "AI for job applications as legitimate assistance",
+      "bipolarity_complete": true,
+      "grounding_span": "whether it is right and fair to use such tools to write or assist you to write an application as it is then not 'your' work"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Operational efficiency and time saving",
+      "grounding_span": "can waste significant time"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Data accuracy and reliability",
+      "grounding_span": "I would largely trust the systems facts and figures"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Investigative effectiveness",
+      "grounding_span": "another string to my bow in terms of investigative skills"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Public trust and ethical integrity",
+      "grounding_span": "I do understand concerns from the public about being constantly under surveillance"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Fairness in career advancement",
+      "grounding_span": "giving you a significant unfair advantage over someone who doesn't use such tools"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Trust in institutional AI systems",
+      "valence": "positive",
+      "grounding_span": "I therefore trust that sufficient due diligence has been done prior to implementation of the system"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with system limitations",
+      "valence": "negative",
+      "grounding_span": "This can be very frustrating and can waste significant time"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Optimism about AI for report writing",
+      "valence": "positive",
+      "grounding_span": "could undoubtedly be done quicker and to a higher standard of writing by an AI tool"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Ambivalence about facial recognition AI",
+      "valence": "ambivalent",
+      "grounding_span": "I can see both pros and cons of"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Ethical concern about AI in job applications",
+      "valence": "negative",
+      "grounding_span": "this could be seen as giving you a significant unfair advantage"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Experience-guided parameter setting with experimentation when unfamiliar",
+      "grounding_span": "Largely my experience I would say, however when I am using systems I am somewhat less familiar with, I will experiment with different processes"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic acceptance of AI as natural evolution",
+      "grounding_span": "It feels like a natural evolution of the role"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

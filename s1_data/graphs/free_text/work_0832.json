@@ -1,0 +1,210 @@
+{
+  "transcript_id": "work_0832",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as rough draft transcription tool",
+      "label_negative": "AI as final, unedited transcription",
+      "bipolarity_complete": true,
+      "grounding_span": "AI usually fits into my workday in the context of transcribing content"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI transcription accuracy for technical terms",
+      "label_negative": "AI transcription inaccuracy for general speech",
+      "bipolarity_complete": true,
+      "grounding_span": "it does a better job at understanding technical jargon"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI adherence to transcription style guidelines",
+      "label_negative": "AI deviation from required style (e.g., including fillers, incorrect punctuation)",
+      "bipolarity_complete": true,
+      "grounding_span": "transcribes every single word which does not align with my job's constraints"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI speaker differentiation capability",
+      "label_negative": "Human speaker differentiation expertise",
+      "bipolarity_complete": true,
+      "grounding_span": "AI has trouble distinguishing different speakers"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Workplace-sanctioned AI use",
+      "label_negative": "Workplace-discouraged AI use",
+      "bipolarity_complete": true,
+      "grounding_span": "My workplace discourages using AI because they think humans are better"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as time-saving tool for difficult audio",
+      "label_negative": "Manual transcription for difficult audio",
+      "bipolarity_complete": true,
+      "grounding_span": "It saved me a lot of time than if I had transcribed the rough draft myself"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "Career resilience against AI automation",
+      "label_negative": "Career vulnerability to AI automation",
+      "bipolarity_complete": true,
+      "grounding_span": "I have thought about avoiding certain careers where AI will likely take over"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional quality and accuracy",
+      "grounding_span": "I always edit because AI has trouble distinguishing different speakers"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "It saved me a lot of time"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Job security and career stability",
+      "grounding_span": "it will not be replaced by AI"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI for technical transcription",
+      "valence": "positive",
+      "grounding_span": "I felt very satisfied that it saved me hours of work"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Cautious reliance on AI due to imperfections",
+      "valence": "ambivalent",
+      "grounding_span": "AI transcription is far from perfect, so I don't rely on it too much"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Compliance with workplace AI discouragement",
+      "valence": "negative",
+      "grounding_span": "I try to use AI only if I need it because my workplace does not encourage the use of AI"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Optimism about future AI use",
+      "valence": "positive",
+      "grounding_span": "I envision that my use of AI will increase as AI gets better and more sophisticated"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Adaptive workflow switching based on task difficulty",
+      "grounding_span": "When there is fuzzy audio or the speaker uses a lot of technical/medical terms, then I will start with the AI draft first"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic career planning considering AI impact",
+      "grounding_span": "I have steered myself towards considering other careers that will always need humans"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n7",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

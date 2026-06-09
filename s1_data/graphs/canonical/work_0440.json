@@ -1,0 +1,170 @@
+{
+  "transcript_id": "work_0440",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as tool for lesson planning",
+      "label_negative": "AI as ready-to-use lesson plan provider",
+      "bipolarity_complete": true,
+      "grounding_span": "I sometimes use AI to write lesson plans, but usually have to do a lot of tweaking"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as template and synonym tool",
+      "label_negative": "AI as full content creator",
+      "bipolarity_complete": true,
+      "grounding_span": "I've also used AI to create templates for letters of recommendation, or to ask for synonyms"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI understanding of musical terminology",
+      "label_negative": "AI irrelevance to hands-on music teaching",
+      "bipolarity_complete": true,
+      "grounding_span": "I am a music teacher, so a lot of what I do is tangible, hands-on activities"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI use for personalized student instruction",
+      "label_negative": "AI as unnecessary or ineffective for student support",
+      "bipolarity_complete": true,
+      "grounding_span": "knowing that students that need the extra examples or support will have it"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as task delegator for complete tasks",
+      "label_negative": "AI as time-consuming or unnecessary task",
+      "bipolarity_complete": true,
+      "grounding_span": "letting it take over tasks that would leave me more time to work on other things"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as project organization tool",
+      "label_negative": "AI as limited to chatbots",
+      "bipolarity_complete": true,
+      "grounding_span": "I also think I can use it as an organization tool when it comes to documents"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Personalized student support",
+      "grounding_span": "students that need the extra examples or support will have it"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "leave me more time to work on other things"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Authentic hands-on music education",
+      "grounding_span": "tangible, hands-on activities-playing instruments"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for lesson creation",
+      "valence": "positive",
+      "grounding_span": "This would be particularly satisfying"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Cautious optimism toward AI chatbot",
+      "valence": "positive",
+      "grounding_span": "I want to explore AI capabilities beyond just chat bots"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Indifference to workplace AI pressure",
+      "valence": "mixed",
+      "grounding_span": "I have not felt any pressure to do so"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Template-based structured delegation",
+      "grounding_span": "I tend to ask for something complete and then make any necessary changes on my own"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Openness to future exploration",
+      "grounding_span": "I want to explore AI capabilities beyond just chat bots"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,149 @@
+{
+  "transcript_id": "work_0236",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as time-saving tool for routine problems",
+      "label_negative": "Manual problem-solving for routine tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I give AI complex topics to quickly solve if I don't have the time to solve it myself"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI accuracy for numerical vs. textual tasks",
+      "label_negative": "AI inaccuracy for complex textual interpretation",
+      "bipolarity_complete": true,
+      "grounding_span": "AI seems to be accurate with these sort of numerical problems. However, AI has shown significant issues with regards to reading and interpreting whole papers"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI transparency through step-by-step breakdown",
+      "label_negative": "AI as opaque black box",
+      "bipolarity_complete": true,
+      "grounding_span": "I ask it to break it down to each step. This enables me to scan the break down quickly, and determine that the process is accurate"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Human skill maintenance as verification safeguard",
+      "label_negative": "Over-reliance on AI without human skills",
+      "bipolarity_complete": true,
+      "grounding_span": "I am of the strong opinion that humans should maintain and develop the skills that AI could potentially take over"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "I give AI complex topics to quickly solve if I don't have the time to solve it myself"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Accuracy and reliability",
+      "grounding_span": "for accuracy I read them myself, even though it takes more time"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Human competence and autonomy",
+      "grounding_span": "without knowing having the skills myself then I would not of been able to identify the error and correct it"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Satisfaction with AI for routine numerical tasks",
+      "valence": "positive",
+      "grounding_span": "AI seems to be accurate with these sort of numerical problems"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Frustration and distrust due to hallucination",
+      "valence": "negative",
+      "grounding_span": "the data had incorporated hallucinated statements. This lead to ... significantly reducing my trust in AI - which was very frustrating"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Commitment to verification-focused approach",
+      "valence": "positive",
+      "grounding_span": "I will definitely maintain my way of working with AI"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Step-by-step verification — decomposes AI outputs into checkable steps",
+      "grounding_span": "I ask it to break it down to each step. This enables me to scan the break down quickly, and determine that the process is accurate"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Experience-driven trust calibration — adjusts trust based on past accuracy",
+      "grounding_span": "AI has shown significant issues with regards to reading and interpreting whole papers. Thus, for accuracy I read them myself"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

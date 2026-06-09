@@ -1,0 +1,243 @@
+{
+  "transcript_id": "creativity_0045",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as research starting point",
+      "label_negative": "Time-consuming manual research",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I find using AI very efficient"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability and honesty",
+      "label_negative": "AI untruthfulness and hallucination",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I am conscious of the fact that it isn't always truthful"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as research starting point",
+      "label_negative": "AI as fully fulfilling research needs",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "The AI was useful in giving me starting blocks for further research rather than fully fulfilling my needs"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as proofreading assistant",
+      "label_negative": "Human editor or no editorial check",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I am currently a bit hesitant about using AI as a beta reader or editorial checker, but I am tempted"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI for nuanced literature comprehension",
+      "label_negative": "AI inability to grasp literary nuance",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I'm doubtful about its ability to truly understand the nuances in literary fiction"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI-generated fiction quality and depth",
+      "label_negative": "Human-authored original novels",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I'm concerned about the idea of AI-generated novels"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI as writing assistant",
+      "label_negative": "Human craft of writing",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I certainly don't ever see myself using it to produce original writing"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Research efficiency",
+      "grounding_span": "I find using AI very efficient"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Historical accuracy",
+      "grounding_span": "I was paranoid about getting historical facts wrong"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Creative autonomy",
+      "grounding_span": "I love the act and the art of writing"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Intellectual property protection",
+      "grounding_span": "fears around intellectual property/copyright"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Originality and groundbreaking storytelling",
+      "grounding_span": "the quality of the novel is being degraded"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Positive appreciation of AI for efficiency",
+      "valence": "positive",
+      "grounding_span": "I find using AI very efficient"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Negative stance toward AI for sincere communication",
+      "valence": "negative",
+      "grounding_span": "I am conscious of the fact that it isn't always truthful"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Ambivalent stance toward AI as editorial checker",
+      "valence": "ambivalent",
+      "grounding_span": "I am currently a bit hesitant about using AI as a beta reader or editorial checker, but I am tempted"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Frustration with AI errors",
+      "valence": "negative",
+      "grounding_span": "I'm doubtful about its ability to truly understand the nuances in literary fiction"
+    },
+    {
+      "id": "n17",
+      "type": "Stance",
+      "label": "Negative stance toward AI-generated writing",
+      "valence": "negative",
+      "grounding_span": "I'm concerned about the idea of AI-generated novels"
+    },
+    {
+      "id": "n18",
+      "type": "Stance",
+      "label": "Negative stance toward AI-generated writing",
+      "valence": "negative",
+      "grounding_span": "I certainly don't ever see myself using it to produce original writing"
+    },
+    {
+      "id": "n19",
+      "type": "CognitiveStyleMarker",
+      "label": "Verification-oriented approach",
+      "grounding_span": "To work around the truthful issue, I double check anything I'm doubtful about"
+    },
+    {
+      "id": "n20",
+      "type": "CognitiveStyleMarker",
+      "label": "Boundary-setting around creative core",
+      "grounding_span": "I certainly don't ever see myself using it to produce original writing"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n13",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n17",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n18",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n19",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n7",
+      "target": "n20",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

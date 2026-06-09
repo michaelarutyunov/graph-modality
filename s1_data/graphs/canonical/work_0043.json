@@ -1,0 +1,206 @@
+{
+  "transcript_id": "work_0043",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as research starting point",
+      "label_negative": "AI as inaccurate research tool",
+      "bipolarity_complete": true,
+      "grounding_span": "the web search wasn't very accurate"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as systematic troubleshooter",
+      "label_negative": "AI as unhelpful for troubleshooting",
+      "bipolarity_complete": true,
+      "grounding_span": "ChatGPT was able to help me troubleshoot the projectors"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI use for sensitive data",
+      "label_negative": "AI for sensitive data handling",
+      "bipolarity_complete": false,
+      "grounding_span": "I don't use AI to do anything related to analyzing our financial data"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as writing assistant",
+      "label_negative": "Human-written content",
+      "bipolarity_complete": true,
+      "grounding_span": "I always write my own articles"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI delegation for simple tasks",
+      "label_negative": "AI for collaborative ongoing work",
+      "bipolarity_complete": true,
+      "grounding_span": "I usually have it complete small tasks"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as writing assistant",
+      "label_negative": "Human writing quality",
+      "bipolarity_complete": true,
+      "grounding_span": "the common style of AI-generated writing makes it all seem fairly generic"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Trustworthy and accurate information",
+      "grounding_span": "accurate data without needing to rely on when other websites publish their forecasts"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "saved me the time of having to go through multiple pages of results myself"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Privacy and data security",
+      "grounding_span": "sensitive information and want it to end up in the training data"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Authentic and quality writing",
+      "grounding_span": "I don't think most AI writing sounds good to me"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Professional reputation and credibility",
+      "grounding_span": "I just think it's a bad look"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI for debugging",
+      "valence": "positive",
+      "grounding_span": "I was particularly satisfied that ChatGPT was able to help me troubleshoot the projectors"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Frustration with AI errors",
+      "valence": "negative",
+      "grounding_span": "I was very frustrated when ChatGPT couldn't find up to date stargazing forecasts"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Caution about AI for sensitive data",
+      "valence": "negative",
+      "grounding_span": "I don't use AI to do anything related to analyzing our financial data"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Preference for human writing",
+      "valence": "negative",
+      "grounding_span": "I always write my own articles"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Dislike of AI-generated content on work pages",
+      "valence": "negative",
+      "grounding_span": "I don't like seeing it on our pages"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic task delegation — uses AI only for specific, bounded tasks",
+      "grounding_span": "I usually have it complete small tasks"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based boundary setting — clear separation of AI-appropriate vs. human-only tasks",
+      "grounding_span": "I don't use AI to do anything related to analyzing our financial data"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n5",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,166 @@
+{
+  "transcript_id": "science_0072",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as writing assistant for summarization and rewriting",
+      "label_negative": "AI as unreliable for original writing without human input",
+      "bipolarity_complete": true,
+      "grounding_span": "I've found LLMs to be very good at summarizing, so often use them to draft up abstracts or conclusions"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI accuracy and trustworthiness for research tasks",
+      "label_negative": "AI inaccuracy and untrustworthiness for research tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "If I can't trust the tools completely then I can't use them for research because I need to be sure my citations are correct"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI ability to replicate personal writing voice",
+      "label_negative": "AI producing generic, impersonal text",
+      "bipolarity_complete": true,
+      "grounding_span": "the sections don't sound like they are written in my voice. They read too generic"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as time-saving tool for proofreading",
+      "label_negative": "Manual slow proofreading process",
+      "bipolarity_complete": true,
+      "grounding_span": "The AI tools make proof-reading much faster"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Research integrity and accuracy",
+      "grounding_span": "I need to be sure my citations are correct"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "save me some time"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Authentic self-expression in writing",
+      "grounding_span": "they don't sound like they are written in my voice"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Positive stance toward AI for writing tasks with existing foundation",
+      "valence": "positive",
+      "grounding_span": "I've found LLMs to be very good at summarizing"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Negative stance toward AI for literature searching due to inaccuracy",
+      "valence": "negative",
+      "grounding_span": "found it is not worth my time"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Ambivalent stance toward AI for writing from scratch due to voice loss",
+      "valence": "ambivalent",
+      "grounding_span": "I would love for AI to be able to write up certain sections... but ultimately the sections don't sound like they are written in my voice"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Positive stance toward AI for proofreading efficiency",
+      "valence": "positive",
+      "grounding_span": "The AI tools make proof-reading much faster"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Methodical experimentation and evaluation of tool capabilities",
+      "grounding_span": "Once I tried them out I was able to identify fairly quickly the areas where they were more or less helpful"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Verification through existing knowledge foundation",
+      "grounding_span": "Because I know what I'm looking for it's easier to verify"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,211 @@
+{
+  "transcript_id": "work_0092",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as social buffer for introverts",
+      "label_negative": "Direct social interaction with leads",
+      "bipolarity_complete": true,
+      "grounding_span": "I'm an introvert, so I like that my CRM can follow up with leads without me"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for summarization and research",
+      "label_negative": "Manual time-consuming reading",
+      "bipolarity_complete": true,
+      "grounding_span": "I like that AI can summarize data for me and I don't have to take the time to read it"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as brainstorming and idea generator",
+      "label_negative": "Solo manual analysis without AI input",
+      "bipolarity_complete": true,
+      "grounding_span": "I like to go over my underwriting with AI to brainstorm potential creative deal structures"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI trustworthiness and verification",
+      "label_negative": "Distrust due to risk of error",
+      "bipolarity_complete": true,
+      "grounding_span": "I wouldn't trust it to do so"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI accuracy in numerical tasks",
+      "label_negative": "AI inconsistency and errors in numbers",
+      "bipolarity_complete": true,
+      "grounding_span": "how easily AI can get with numbers when underwriting deals"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI up-to-date knowledge",
+      "label_negative": "Lack of instant market knowledge",
+      "bipolarity_complete": true,
+      "grounding_span": "I love that I usually know some market insight or deal strategy right off the top of my head - because it was given to me by AI"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI as assistant for complex work",
+      "label_negative": "Step-by-step prompting required",
+      "bipolarity_complete": true,
+      "grounding_span": "I would like to be able to give AI a basic instruction, order, or command & it follow through on all the steps"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Social energy conservation",
+      "grounding_span": "I'm an introvert, so I like that my CRM can follow up with leads without me"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "Time has value & I don't like spending my time on things I don't need to"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Professional reputation and credibility",
+      "grounding_span": "Helps me to appear like a legit expert"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Risk avoidance",
+      "grounding_span": "I wouldn't want the AI to legally tie me to a price or terms I didn't actually want"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "I love that I usually know some market insight or deal strategy right off the top of my head"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Frustration with AI errors",
+      "valence": "negative",
+      "grounding_span": "it's frustrating that AI struggles to do this and provide a consistent accurate answer"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Cautious trust in AI",
+      "valence": "ambivalent",
+      "grounding_span": "I wouldn't trust it to do so"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Aspirational hope for AI as practical assistant",
+      "valence": "positive",
+      "grounding_span": "I would like to be able to give AI a basic instruction, order, or command & it follow through"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic delegation of energy-draining tasks",
+      "grounding_span": "I'm an introvert, so I like that my CRM can follow up with leads without me"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic focus on time value and automation",
+      "grounding_span": "Time has value & I don't like spending my time on things I don't need to"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n12",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n7",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

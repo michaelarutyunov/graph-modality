@@ -1,0 +1,192 @@
+{
+  "transcript_id": "work_0224",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI ability to provide hard-to-find information",
+      "label_negative": "AI as unreliable source lacking depth",
+      "bipolarity_complete": true,
+      "grounding_span": "if there's a very specific research question I have whose answer might not be easy to find on the first page of a regular search, I might ask a chatbot"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI trustworthiness and verification",
+      "label_negative": "AI inaccuracy and untrustworthiness",
+      "bipolarity_complete": true,
+      "grounding_span": "I wouldn't trust the accuracy as much as I trust myself"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI integration in teaching profession",
+      "label_negative": "Human involvement in qualitative and social teaching work",
+      "bipolarity_complete": true,
+      "grounding_span": "direct involvement is in the nature of teaching work, which is a qualitative and social activity that probably shouldn't be outsourced"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as plagiarism risk",
+      "label_negative": "AI as legitimate research tool for students",
+      "bipolarity_complete": true,
+      "grounding_span": "I had one student who clearly *was* using AI to generate their work"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI freeing time for human-centric work",
+      "label_negative": "AI deployment driven by profit undermining human work",
+      "bipolarity_complete": true,
+      "grounding_span": "the routinized computer-based tasks would be increasingly automated, so more time would be freed up for irreducibly human tasks like teaching itself"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Epistemic accuracy and understanding",
+      "grounding_span": "I wouldn't trust the accuracy as much as I trust myself"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Human-centered engagement",
+      "grounding_span": "direct involvement is in the nature of teaching work, which is a qualitative and social activity"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Pedagogical integrity and student understanding",
+      "grounding_span": "difficult to coax them towards using their own intellect instead"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Human flourishing in work",
+      "grounding_span": "more time would be freed up for irreducibly human tasks like teaching itself"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Cautious skepticism about AI accuracy",
+      "valence": "negative",
+      "grounding_span": "I wouldn't trust the accuracy as much as I trust myself"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Resistance to outsourcing teaching to AI",
+      "valence": "negative",
+      "grounding_span": "direct involvement is in the nature of teaching work, which is a qualitative and social activity that probably shouldn't be outsourced"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with student AI misuse",
+      "valence": "negative",
+      "grounding_span": "I had one student who clearly *was* using AI to generate their work. That was frustrating"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "mixed",
+      "grounding_span": "I expect to use it more as a research tool as it becomes more reliable over time"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Excitement about AI enabling business expansion",
+      "valence": "negative",
+      "grounding_span": "more likely AI will be employed wherever it is profitable, sometimes for better, sometimes for worse"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Selective, need-based engagement with AI",
+      "grounding_span": "I rarely use AI in my typical workday"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based boundary setting — clear separation of AI-appropriate vs. human-only tasks",
+      "grounding_span": "I would consider it irresponsible not to do it myself"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n4",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

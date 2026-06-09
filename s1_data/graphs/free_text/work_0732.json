@@ -1,0 +1,287 @@
+{
+  "transcript_id": "work_0732",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as time-saving administrative assistant",
+      "label_negative": "AI as time-consuming or inefficient tool",
+      "bipolarity_complete": true,
+      "grounding_span": "AI fits into my regular workday in many ways. As a teacher, I rely on AI to help me save time and mental expenditure for administrative tasks such as writing emails, crafting replies to emails, brainstorming ideas for lessons or units."
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as collaborative brainstorming partner",
+      "label_negative": "AI as non-collaborative or directive tool",
+      "bipolarity_complete": true,
+      "grounding_span": "I often use AI as a collaborative partner or an administrative assistant helping me save time or bounce ideas off of when I am feeling mentally drained and in the depths of decision fatigue."
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as external memory bank for teaching strategies",
+      "label_negative": "AI as unnecessary crutch that replaces personal knowledge",
+      "bipolarity_complete": true,
+      "grounding_span": "one difficulty is just remembering them all. There are so many teaching ideas out there, it is nice to have someone - AI in this case - remind you of all the options so you aren't exhausting yourself looking back into your notes or the depths of the web to recall them all."
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as tool for creative lesson design and adaptation",
+      "label_negative": "AI as rigid or uncreative lesson planner",
+      "bipolarity_complete": true,
+      "grounding_span": "I used AI to help me plan different creative solutions and adaptations to my current unit to help ensure I am accurately addressing the provincial curricular outcomes while also incorporating a fresh perspective"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as tool to address academic dishonesty",
+      "label_negative": "AI as enabler of academic dishonesty",
+      "bipolarity_complete": true,
+      "grounding_span": "asking AI to reword a multiple choice exam and rearrange the questions to create another version (to cut down on academic dishonesty)"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as pedagogical tool for student learning",
+      "label_negative": "AI as shortcut that undermines student learning",
+      "bipolarity_complete": true,
+      "grounding_span": "I had this idea where I asked him to rate three paragraphs. One paragraph was his own, but I asked AI to rewrite the same paragraph with the same content at each of the other rubric levels. This really got through to him"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI use in classroom management and interpersonal decisions",
+      "label_negative": "AI avoidance in classroom management and interpersonal decisions",
+      "bipolarity_complete": true,
+      "grounding_span": "I prefer to handle those personally. I trust my instincts, professional judgement and extensive experience to respond in a way that feels authentic for me."
+    },
+    {
+      "id": "n8",
+      "type": "Construct",
+      "label": "AI integration in teaching profession",
+      "label_negative": "AI rejection or skepticism in teaching profession",
+      "bipolarity_complete": true,
+      "grounding_span": "I would love to see the relationship with AI develop and become fully integrated into part of our workload for teaching."
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Teacher efficiency and reduced burnout",
+      "grounding_span": "teachers are asked to do an obscene amount of work within very limited paid hours and honestly, its so overwhelming and discouraging that so many teachers end up with premature burnout"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Authentic teacher-student rapport",
+      "grounding_span": "I think that is key for developing a strong rapport with your students - it really requires developing your instincts and also showing them your human emotions."
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Student critical thinking and creativity",
+      "grounding_span": "allows my students to be creative and practice critical thinking skills"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Student well-being and mental health",
+      "grounding_span": "as someone who takes mental health and student success very seriously, I felt it was my responsibility to ensure I take that factor into account"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Satisfaction with AI as time-saver",
+      "valence": "positive",
+      "grounding_span": "I rely on AI to help me save time and mental expenditure"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Satisfaction with AI as brainstorming partner",
+      "valence": "positive",
+      "grounding_span": "I often use AI as a collaborative partner or an administrative assistant helping me save time or bounce ideas off of"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Satisfaction with AI as memory aid",
+      "valence": "positive",
+      "grounding_span": "it is nice to have someone - AI in this case - remind you of all the options"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Satisfaction with AI for creative lesson design",
+      "valence": "positive",
+      "grounding_span": "I used AI to help me plan different creative solutions and adaptations"
+    },
+    {
+      "id": "n17",
+      "type": "Stance",
+      "label": "Satisfaction with AI for addressing dishonesty",
+      "valence": "positive",
+      "grounding_span": "asking AI to reword a multiple choice exam and rearrange the questions to create another version (to cut down on academic dishonesty)"
+    },
+    {
+      "id": "n18",
+      "type": "Stance",
+      "label": "Satisfaction with AI as pedagogical tool",
+      "valence": "positive",
+      "grounding_span": "This really got through to him and helped him both see what specific improvements he could make"
+    },
+    {
+      "id": "n19",
+      "type": "Stance",
+      "label": "Resistance to AI in classroom management",
+      "valence": "negative",
+      "grounding_span": "I prefer to handle those personally. I trust my instincts, professional judgement and extensive experience"
+    },
+    {
+      "id": "n20",
+      "type": "Stance",
+      "label": "Optimism about AI integration in teaching",
+      "valence": "positive",
+      "grounding_span": "I would love to see the relationship with AI develop and become fully integrated into part of our workload for teaching."
+    },
+    {
+      "id": "n21",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement and adaptation — adjusts interaction style based on task needs",
+      "grounding_span": "I would say both of those occurred throughout the conversation, but mainly I presented my ideas and suggestions upfront for the AI tool to prioritize during the conversation but later on, when I realized that I had to adapt a bit to modify one of my assignments to address a curriculuar outcome I had initially forgotten, I asked it to present me with some supplementary suggestions"
+    },
+    {
+      "id": "n22",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-specific boundary setting — distinguishes between tasks appropriate for AI and those requiring personal judgment",
+      "grounding_span": "I prefer to handle those personally. I trust my instincts, professional judgement and extensive experience to respond in a way that feels authentic for me."
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n13",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n17",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n18",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n19",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n20",
+      "target": "n8",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n21",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n21",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n21",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n7",
+      "target": "n22",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n6",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

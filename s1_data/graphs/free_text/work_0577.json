@@ -1,0 +1,216 @@
+{
+  "transcript_id": "work_0577",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI for menial and preliminary tasks",
+      "label_negative": "AI for core analytical and creative work",
+      "bipolarity_complete": true,
+      "grounding_span": "I would typically use AI for menial tasks such as drafting emails, and sorting data into tables. I would also use it for preliminary research tasks"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as initial research scanner",
+      "label_negative": "Human-led deep research",
+      "bipolarity_complete": true,
+      "grounding_span": "I will rely on AI to do an initial scan of the industry/area and surface the most relevant historical aspects I should then look into myself"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI trustworthiness based on consequence severity",
+      "label_negative": "AI untrustworthiness for high-stakes tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I prefer to handle any task myself where the consequences of AI hallucination are more than minimally significant"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI for brainstorming",
+      "label_negative": "Independent brainstorming for innovation",
+      "bipolarity_complete": true,
+      "grounding_span": "I also prefer to handle any brainstorming tasks myself, as over-reliance on AI could lead to more narrow and structured thinking"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI delegation of complete tasks",
+      "label_negative": "Collaborative AI partnership throughout project",
+      "bipolarity_complete": true,
+      "grounding_span": "I will delegate it complete tasks, as mentioned, mainly menial ones or initial research queries. There is very little collaboration throughout the lifespan of a project"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "Workplace policy on AI use",
+      "label_negative": "Unrestricted AI use",
+      "bipolarity_complete": true,
+      "grounding_span": "In my workplace our use of public AI platforms is dictated by policies aimed at maintaining the confidentiality of private data"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI for drafting minor update emails",
+      "label_negative": "Manual drafting of minor emails",
+      "bipolarity_complete": true,
+      "grounding_span": "The use of AI to quickly draft update emails to clients about quite minor details has been most satisfying"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "the time savings are significant"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Accuracy and trustworthiness",
+      "grounding_span": "the consequences of AI hallucination are more than minimally significant"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Innovation and creative thinking",
+      "grounding_span": "innovative approaches required"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Confidentiality and data security",
+      "grounding_span": "confidential client information/confidential instructions from the client, which is not permitted to be shared with public AI platforms"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI for menial tasks",
+      "valence": "positive",
+      "grounding_span": "The use of AI to quickly draft update emails to clients about quite minor details has been most satisfying"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Caution against AI for high-stakes tasks",
+      "valence": "negative",
+      "grounding_span": "I prefer to handle any task myself where the consequences of AI hallucination are more than minimally significant"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Resistance to AI for brainstorming",
+      "valence": "negative",
+      "grounding_span": "I also prefer to handle any brainstorming tasks myself"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Acceptance of workplace AI policies",
+      "valence": "mixed",
+      "grounding_span": "In my workplace our use of public AI platforms is dictated by policies aimed at maintaining the confidentiality of private data; however, there is still broad use"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Risk-based task delegation",
+      "grounding_span": "I prefer to handle any task myself where the consequences of AI hallucination are more than minimally significant"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Delegation over collaboration",
+      "grounding_span": "I will delegate it complete tasks... There is very little collaboration throughout the lifespan of a project"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n12",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

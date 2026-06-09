@@ -1,0 +1,253 @@
+{
+  "transcript_id": "creativity_0102",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as logistics coordinator for complex creative projects",
+      "label_negative": "Manual tracking of complex logistics",
+      "bipolarity_complete": true,
+      "grounding_span": "I was able to use an AI assistant to go through the names and place them in different areas of a large palace ballroom and social scene"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as creative spark through hallucinated errors",
+      "label_negative": "AI hallucination as pure error without value",
+      "bipolarity_complete": true,
+      "grounding_span": "the AI will begin to hallucinate characters who don't exist. Some of these characters and names, however, have been interesting enough that I did build them out"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as barrier-remover for executive function challenges",
+      "label_negative": "Executive function barriers without AI assistance",
+      "bipolarity_complete": true,
+      "grounding_span": "I have ADHD and I'm awful at logistics... Having an easy workaround for that is really helpful"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as threat to skill development in young writers",
+      "label_negative": "AI as beneficial learning tool for young writers",
+      "bipolarity_complete": true,
+      "grounding_span": "I'm worried about the kids... I would have been losing really valuable time exercising that mental muscle"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI-generated fiction as 'uncanny valley' lacking human value",
+      "label_negative": "AI-generated fiction as valuable creative output",
+      "bipolarity_complete": true,
+      "grounding_span": "I truly feel like I never used to have to shuffle through so much empty-feeling fiction... It's like the uncanny valley for writing"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as environmental burden due to water consumption",
+      "label_negative": "Environmentally sustainable AI use",
+      "bipolarity_complete": true,
+      "grounding_span": "I would definitely use it more if I could be assured the models I was using weren't guzzling gallons and gallons of water"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI as professional tone translator for administrative tasks",
+      "label_negative": "Manual professional tone writing",
+      "bipolarity_complete": true,
+      "grounding_span": "I put what I want to say in normal person language, and the AI gives me back the professional email"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Creative enjoyment and authenticity",
+      "grounding_span": "I enjoy writing and generating the basics takes the fun out of it for me"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Productivity and overcoming procrastination",
+      "grounding_span": "I find it much easier to get over my procrastination instincts and start the scene"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Skill development and cognitive growth",
+      "grounding_span": "I would have been losing really valuable time exercising that mental muscle"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Environmental sustainability",
+      "grounding_span": "I do feel the guilt behind that weighing on me"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Professional competence and efficiency",
+      "grounding_span": "Expanding on that area of assistance... would be amazing for me"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Positive embrace of AI for logistics coordination",
+      "valence": "positive",
+      "grounding_span": "There is no way I could have pulled off the true randomness of the interactions and character groupings without such a tool"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Positive embrace of AI hallucination as creative spark",
+      "valence": "positive",
+      "grounding_span": "Some of these characters and names, however, have been interesting enough that I did build them out"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Positive embrace of AI for executive function support",
+      "valence": "positive",
+      "grounding_span": "Having an easy workaround for that is really helpful, especially on days when I can't take my medication"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Negative concern about AI hindering skill development in youth",
+      "valence": "negative",
+      "grounding_span": "I'm worried about the kids... I would have been losing really valuable time exercising that mental muscle"
+    },
+    {
+      "id": "n17",
+      "type": "Stance",
+      "label": "Negative aversion to AI-generated fiction as low quality",
+      "valence": "negative",
+      "grounding_span": "I truly feel like I never used to have to shuffle through so much empty-feeling fiction before I got to something good"
+    },
+    {
+      "id": "n18",
+      "type": "Stance",
+      "label": "Negative guilt about environmental impact of AI",
+      "valence": "negative",
+      "grounding_span": "I do feel the guilt behind that weighing on me"
+    },
+    {
+      "id": "n19",
+      "type": "Stance",
+      "label": "Positive anticipation of AI for administrative tasks",
+      "valence": "positive",
+      "grounding_span": "Expanding on that area of assistance... would be amazing for me"
+    },
+    {
+      "id": "n20",
+      "type": "CognitiveStyleMarker",
+      "label": "Intuitive pattern recognition — sensing 'offness' without explicit rules",
+      "grounding_span": "I could tell you immediately when something was wrong, but I usually had to look up the rule in order to be able to explain why"
+    },
+    {
+      "id": "n21",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic compartmentalization — preserving creative core while delegating logistics",
+      "grounding_span": "Rarely, if ever, do I use AI in the creative process itself - I enjoy writing and generating the basics takes the fun out of it for me"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n13",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n17",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n18",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n19",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n5",
+      "target": "n20",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n21",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n21",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

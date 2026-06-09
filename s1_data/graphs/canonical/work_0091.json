@@ -1,0 +1,215 @@
+{
+  "transcript_id": "work_0091",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as research accelerator",
+      "label_negative": "Manual boilerplate and self-study without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI most often to provide me boilerplate code, learn new programming concepts, and refresh on programming concepts"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for repetitive simple tasks",
+      "label_negative": "AI for high-attention and complex tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "saves me from doing repetitive tasks"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI delegation for simple tasks",
+      "label_negative": "AI handling secret information",
+      "bipolarity_complete": true,
+      "grounding_span": "Any tasks that involve secret information like API keys I do not delegate"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI for high-attention and complex tasks",
+      "label_negative": "AI delegation for high-attention tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "Any tasks that require a high attention to detail like specific styling or implementing complex algorithms I prefer to do myself"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as one-shot solution provider",
+      "bipolarity_complete": true,
+      "grounding_span": "I will often start with AI produced code and work on it until I run into a difficult problem"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI adoption in workplace",
+      "label_negative": "Initial skepticism toward AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I was initially an AI naysayer but many of my colleagues were early adopters"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI unreliability for algorithmic tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I found that it really struggled with drawing nodes and edges in their correct positions and could not make accurate distance calculations"
+    },
+    {
+      "id": "n8",
+      "type": "Construct",
+      "label": "AI delegation for simple tasks",
+      "label_negative": "Concern about skill atrophy due to AI",
+      "bipolarity_complete": true,
+      "grounding_span": "any skill that AI currently excel at I delegate completely"
+    },
+    {
+      "id": "n9",
+      "type": "Construct",
+      "label": "AI as supplement to creative process",
+      "label_negative": "AI encroaching on creative design work",
+      "bipolarity_complete": true,
+      "grounding_span": "I expect more and more of the tedious programming to be done by AI allowing me to focus on design and creative solutions"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "saves me from doing repetitive tasks"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Security and control",
+      "grounding_span": "Any tasks that involve secret information like API keys I do not delegate"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Accuracy and reliability",
+      "grounding_span": "Any tasks that require a high attention to detail like specific styling or implementing complex algorithms I prefer to do myself"
+    },
+    {
+      "id": "n13",
+      "type": "Value",
+      "label": "Creative autonomy",
+      "grounding_span": "allowing me to focus on design and creative solutions"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Positive adoption influenced by peers",
+      "valence": "positive",
+      "grounding_span": "seeing their productivity improve massively and hearing anecdotes about how much they enjoyed working with AI motivated me to incorporate it more"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Frustration with AI errors",
+      "valence": "negative",
+      "grounding_span": "I found that it really struggled with drawing nodes and edges in their correct positions and could not make accurate distance calculations"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Optimistic expectation for AI to speed workflow",
+      "valence": "positive",
+      "grounding_span": "I expect more and more of the tedious programming to be done by AI allowing me to focus on design and creative solutions"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative problem-solving — start simple, escalate if needed",
+      "grounding_span": "I will often start with AI produced code and work on it until I run into a difficult problem. I will use a combination of web searching and AI prompts to work through difficult problems."
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Selective delegation based on task nature",
+      "grounding_span": "Any tasks that involve secret information like API keys I do not delegate. Any tasks that require a high attention to detail like specific styling or implementing complex algorithms I prefer to do myself."
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n13",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n14",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n9",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n5",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

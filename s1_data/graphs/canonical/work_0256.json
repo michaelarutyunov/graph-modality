@@ -1,0 +1,238 @@
+{
+  "transcript_id": "work_0256",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as data analysis assistant for pattern identification",
+      "label_negative": "AI as source of irrelevant or misleading patterns",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is quite helpful for me as it helps recognise some patterns or things I might have missed"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as proofreading assistant",
+      "label_negative": "AI as inefficient for quick tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "the main role of AI in my typical work day is that of an assistant, proofreader"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliance on curated data to avoid distraction",
+      "label_negative": "AI overwhelmed by irrelevant data",
+      "bipolarity_complete": true,
+      "grounding_span": "if i give too much information that is not needed it can sway the attention of the AI on less important aspects"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI handling of ambiguous or misattributed feedback",
+      "label_negative": "AI misinterpreting feedback due to lack of context",
+      "bipolarity_complete": true,
+      "grounding_span": "some feedbacks can be really generic and they might not have anything to do with the event itself"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI use for sensitive data",
+      "label_negative": "AI use avoided due to data sensitivity",
+      "bipolarity_complete": true,
+      "grounding_span": "the main thing that stops me from using Ai is if i am using sensitive information"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as time-saving tool",
+      "label_negative": "AI as time-wasting for simple tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "it is just a matter of time mainly if i think i can permorm the task easily myself i will just do it"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI stigma in workplace culture",
+      "label_negative": "Open acceptance of AI as legitimate aid",
+      "bipolarity_complete": true,
+      "grounding_span": "there is a stigma around it still"
+    },
+    {
+      "id": "n8",
+      "type": "Construct",
+      "label": "AI as tool requiring human oversight",
+      "label_negative": "AI as autonomous replacement",
+      "bipolarity_complete": true,
+      "grounding_span": "i have the capability to work alongside of AI"
+    },
+    {
+      "id": "n9",
+      "type": "Construct",
+      "label": "Task clarity for AI use",
+      "label_negative": "AI misunderstanding due to poor communication",
+      "bipolarity_complete": true,
+      "grounding_span": "i couldn't understand how to explain my need correctly and kept creating misunderstandings"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "the AI has helped especially during busy times where the workflow is higher and the time is still the same to complete more tasks"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Accuracy and reliability",
+      "grounding_span": "i will filter them out to avoid any mistakes"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Privacy and data security",
+      "grounding_span": "if i am using sensitive information"
+    },
+    {
+      "id": "n13",
+      "type": "Value",
+      "label": "Professional competence",
+      "grounding_span": "i don't want it to come across as if the Ai is doing everything"
+    },
+    {
+      "id": "n14",
+      "type": "Value",
+      "label": "Understanding and control",
+      "grounding_span": "i do strongly believe that it is important to have people alongised that are capable to understand and use it correctly"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Appreciation for AI in pattern analysis",
+      "valence": "positive",
+      "grounding_span": "AI is quite helpful for me as it helps recognise some patterns"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Frustration with AI errors",
+      "valence": "negative",
+      "grounding_span": "it was kind of frustrating as i couldn't understand how to explain my need correctly"
+    },
+    {
+      "id": "n17",
+      "type": "Stance",
+      "label": "Discretion about AI use due to stigma",
+      "valence": "mixed",
+      "grounding_span": "i do find myself sometimes being discreet about it"
+    },
+    {
+      "id": "n18",
+      "type": "Stance",
+      "label": "Preference for collaborative AI use",
+      "valence": "positive",
+      "grounding_span": "i have the capability to work alongside of AI"
+    },
+    {
+      "id": "n19",
+      "type": "CognitiveStyleMarker",
+      "label": "Proactive data curation and filtering",
+      "grounding_span": "i will look at the feedback and include only the pertinent ones"
+    },
+    {
+      "id": "n20",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic cost-benefit evaluation",
+      "grounding_span": "it is just a matter of time mainly if i think i can permorm the task easily myself i will just do it"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n13",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n14",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n15",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n9",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n17",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n18",
+      "target": "n8",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n19",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n20",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

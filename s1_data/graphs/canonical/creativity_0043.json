@@ -1,0 +1,187 @@
+{
+  "transcript_id": "creativity_0043",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as brainstorming and idea generator",
+      "label_negative": "AI as direct content producer",
+      "bipolarity_complete": true,
+      "grounding_span": "the 'wrong' ideas sparked the right ones"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "Human writing and creative control",
+      "label_negative": "AI-driven creative decisions",
+      "bipolarity_complete": true,
+      "grounding_span": "I'm always in control of the creative decisions"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as efficiency tool",
+      "label_negative": "AI for core creative drafting",
+      "bipolarity_complete": true,
+      "grounding_span": "the back end of the process is stronger and takes much less time now"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as professional polish tool",
+      "label_negative": "Human-only editing without AI assistance",
+      "bipolarity_complete": true,
+      "grounding_span": "I rely on the AI editing software a lot for line editing and proofreading"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Preservation of human writing voice",
+      "label_negative": "Loss of human touch through AI generation",
+      "bipolarity_complete": true,
+      "grounding_span": "losing the human touch in the arts"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as research and synthesis tool",
+      "label_negative": "Manual research without AI synthesis",
+      "bipolarity_complete": true,
+      "grounding_span": "AI to synthesize a lot of information in easily digestible portions"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Personal authenticity and unique voice",
+      "grounding_span": "Every human author has a unique voice and point of view"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "really helped save me a lot of time"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Creative integrity and human artistry",
+      "grounding_span": "losing the human touch in the arts"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for brainstorming",
+      "valence": "positive",
+      "grounding_span": "the 'wrong' ideas sparked the right ones"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Negative stance toward AI-generated writing",
+      "valence": "negative",
+      "grounding_span": "concerns about people utilizing AI for drafting entire novels"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Positive appreciation of AI for efficiency",
+      "valence": "positive",
+      "grounding_span": "the back end of the process is stronger and takes much less time now"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Positive stance toward AI as research tool",
+      "valence": "positive",
+      "grounding_span": "AI to synthesize a lot of information in easily digestible portions is very helpful"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement with limited back-and-forth",
+      "grounding_span": "I pieced together ideas from the different versions and slightly reworded it in my own voice"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Boundary-setting between core and peripheral creative tasks",
+      "grounding_span": "I never use it to draft the novel, but I do have AI software specifically for editing"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

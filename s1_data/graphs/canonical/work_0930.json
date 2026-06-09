@@ -1,0 +1,197 @@
+{
+  "transcript_id": "work_0930",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as professional polish tool",
+      "label_negative": "Manual self-editing for professional tone",
+      "bipolarity_complete": true,
+      "grounding_span": "AI can 'polish' my response by using words or phrases that mean the same thing but sound less colloquial"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as speed tool for discrete tasks",
+      "label_negative": "Human slower but more thorough for routine tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "AI thinks much more quickly than I do"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI accuracy in numerical tasks",
+      "label_negative": "AI risk of missing critical details",
+      "bipolarity_complete": true,
+      "grounding_span": "I worry that it might get some details wrong"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as verification-requiring tool",
+      "label_negative": "AI as fully autonomous task completer",
+      "bipolarity_complete": true,
+      "grounding_span": "when I use it, it's in collaboration with me also carrying out elements to make sure that everything is 100% accurate"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI adoption in workplace",
+      "label_negative": "Workplace AI reluctance due to limited exposure",
+      "bipolarity_complete": true,
+      "grounding_span": "As I carry out admin tasks there is more scope for me to use AI, but my other admin colleagues are more reluctant"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI for simple customer issues",
+      "label_negative": "AI using generic information missing customer-specific framing",
+      "bipolarity_complete": true,
+      "grounding_span": "the AI invoice had just used the standard information, whereas if I had generated it myself, I would have tailored it to the customers expectations"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional competence and client satisfaction",
+      "grounding_span": "we want to avoid this kind of situation as it could lead to us losing customers"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "often I need to send the response quickly so I can get on with other things"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Accuracy and reliability in work",
+      "grounding_span": "the customer requires the invoice to be 100% accurate"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for email drafting",
+      "valence": "positive",
+      "grounding_span": "I will use AI to help me format this"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI invoice error",
+      "valence": "negative",
+      "grounding_span": "This was frustrating, because the customer had received what they had asked for, but the AI invoice had just used the standard information"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Fear of industry obsolescence",
+      "valence": "negative",
+      "grounding_span": "I do worry sometimes that roles like mine could be made obsolete by AI"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Optimistic continued use for proven tasks",
+      "valence": "positive",
+      "grounding_span": "I think I will continue to use it for the tasks we know it can do well"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Experience-driven calibration of trust",
+      "grounding_span": "I always want to check it for accuracy meaning it does not save me the amount of time I need it to"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based boundary setting — clear separation of AI-appropriate vs. human-only tasks",
+      "grounding_span": "some elements such as invoicing will remain a person specific activity to ensure accuracy"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

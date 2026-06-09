@@ -1,0 +1,162 @@
+{
+  "transcript_id": "creativity_0107",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as estimation and planning tool",
+      "label_negative": "Manual estimation without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "help estimating how much yarn I'll need"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as expert advisor for pattern confusion",
+      "label_negative": "Lack of expert guidance when confused",
+      "bipolarity_complete": true,
+      "grounding_span": "use AI if I get confused with the pattern and need some expertise"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as communication aid for buyer messages",
+      "label_negative": "Writing buyer messages without AI help",
+      "bipolarity_complete": true,
+      "grounding_span": "use AI to help me word messages to buyers"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as confidence booster for skill development",
+      "label_negative": "Self-doubt and limited skill progression",
+      "bipolarity_complete": true,
+      "grounding_span": "more confident in my skills now"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as specialized future expert in marketing and crafting",
+      "label_negative": "Generic AI lacking domain expertise",
+      "bipolarity_complete": true,
+      "grounding_span": "AI becoming more specialized in certain fields"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative confidence and skill growth",
+      "grounding_span": "more confident in my skills now"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency in project planning",
+      "grounding_span": "help estimating how much yarn I'll need"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional communication quality",
+      "grounding_span": "help me word messages to buyers"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Positive reliance on AI for practical tasks",
+      "valence": "positive",
+      "grounding_span": "it gave me a helpful suggestion"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Cautious trust due to past general answers",
+      "valence": "ambivalent",
+      "grounding_span": "I was a little reluctant"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Optimistic expectation of AI specialization",
+      "valence": "positive",
+      "grounding_span": "AI becoming more specialized in certain fields"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative contextual prompting — provides detailed specs and builds on prior info",
+      "grounding_span": "I'll send information regarding the size of needles/hooks I plan to use"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Self-taught exploratory learning — learns by doing and seeking help when stuck",
+      "grounding_span": "I taught myself how to knit and crochet"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

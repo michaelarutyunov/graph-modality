@@ -1,0 +1,160 @@
+{
+  "transcript_id": "work_0268",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as research starting point",
+      "label_negative": "AI as code generator or low-level implementer",
+      "bipolarity_complete": true,
+      "grounding_span": "use the AI assistant as a more high level research and problem dissection tool"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as brainstorming and idea generator",
+      "label_negative": "AI as independent task delegator",
+      "bipolarity_complete": true,
+      "grounding_span": "I tend to prefer a collaborative approach personally"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI specificity and data preparation",
+      "label_negative": "Generic forum or documentation search",
+      "bipolarity_complete": true,
+      "grounding_span": "being able to problem solve with a specificity that generally cannot be found by searching forums or documentation"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as time-saving tool",
+      "label_negative": "Time-consuming manual research",
+      "bipolarity_complete": true,
+      "grounding_span": "saves a lot of time"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as domain expert enabler for leading projects",
+      "label_negative": "AI replacing developer expertise",
+      "bipolarity_complete": true,
+      "grounding_span": "us developers still need to have an understanding of the software we build"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "saves a lot of time"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional autonomy",
+      "grounding_span": "I prefer to handle the actual coding myself"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency in problem-solving",
+      "grounding_span": "narrowing the problem down to my specific use-case"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for time-saving",
+      "valence": "positive",
+      "grounding_span": "got a solution in about 30 seconds, which was pretty satisfying"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Contentment with current AI use",
+      "valence": "positive",
+      "grounding_span": "I don't see it evolving too much from how I'm using it now"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Back-and-forth iterative reasoning",
+      "grounding_span": "work through the problem in more and more detail in a kind of back-and-forth manner"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Informed and deliberate tool use with maintained expertise",
+      "grounding_span": "AI assistants are tools that need to be used with an informed approach"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

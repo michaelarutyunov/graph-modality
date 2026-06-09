@@ -1,0 +1,172 @@
+{
+  "transcript_id": "work_0652",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI for code modification vs generation from scratch",
+      "label_negative": "AI generating code from scratch",
+      "bipolarity_complete": true,
+      "grounding_span": "I also avoid having AI create its own code from scratch - I limit it to code modifications"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as throughput multiplier vs replacement",
+      "label_negative": "AI replacing human skills",
+      "bipolarity_complete": true,
+      "grounding_span": "I find a way to utilize AI to increase my throughput rather than try to beat it"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI code verbosity and complexity vs human-written clarity",
+      "label_negative": "Concise and understandable AI code",
+      "bipolarity_complete": true,
+      "grounding_span": "AI models are very verbose in their code output. The code is far too convoluted for me to understand at first glance"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as brainstorming partner for approaches vs final decision maker",
+      "label_negative": "AI dictating final approach",
+      "bipolarity_complete": true,
+      "grounding_span": "AI just helps ensure all approaches are considered. Since it's impossible for it to have complete context... it's rare for us to pick a certain approach"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI task decomposition into small steps vs monolithic tasks",
+      "label_negative": "Long conversations with AI on large tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I like to break up tasks and I find it more efficient for token usage as well"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Code quality and maintainability",
+      "grounding_span": "Writing the code myself ensures I catch any possible errors"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "I find a way to utilize AI to increase my throughput"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Understanding and learning",
+      "grounding_span": "I learn from what the model does and write the code myself"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for modifications but frustration with verbosity",
+      "valence": "ambivalent",
+      "grounding_span": "I can give an instance where I was pretty satisfied with the results but a closer look revealed a lot of flaws"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Positive outlook on AI as skill supplement",
+      "valence": "positive",
+      "grounding_span": "I believe that finding more innovative ways to use AI across my work day will supplement my skills rather than replace them"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Preference for AI in brainstorming but not final decisions",
+      "valence": "positive",
+      "grounding_span": "AI just helps ensure all approaches are considered"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Task decomposition into small verifiable steps",
+      "grounding_span": "I like to break up tasks and I find it more efficient for token usage as well"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Learning-oriented review of AI output",
+      "grounding_span": "I learn from what the model does and write the code myself"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

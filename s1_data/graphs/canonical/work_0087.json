@@ -1,0 +1,157 @@
+{
+  "transcript_id": "work_0087",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as task-specific tool",
+      "label_negative": "AI as open-ended autonomous agent",
+      "bipolarity_complete": true,
+      "grounding_span": "define a set of system instructions to follow"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI understanding of business context",
+      "label_negative": "AI handling tasks requiring deep organizational context",
+      "bipolarity_complete": true,
+      "grounding_span": "without knowing all the history of the company, its internal culture, processes, policies etc, AI cannot give a meaningful answer"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as efficiency tool",
+      "label_negative": "AI as unnecessary or error-prone for nuanced tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "it saved a lot of time with me scratching my head"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as supplementary aide to human expertise",
+      "label_negative": "AI as replacement for human judgment",
+      "bipolarity_complete": true,
+      "grounding_span": "I still needed my financial knowledge and expertise to interpret the model suggestions"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI integration into workflow",
+      "label_negative": "AI as external disconnected tool",
+      "bipolarity_complete": true,
+      "grounding_span": "I see it being more connected within the day to day workflows of my work"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "it saved a lot of time"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional competence",
+      "grounding_span": "the nuanced subjective decision making of finance leaders"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Organizational intelligence and embedded knowledge",
+      "grounding_span": "an AI model that can contextualise itself within the fabric of an organisation"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for design tasks",
+      "valence": "positive",
+      "grounding_span": "it saved a lot of time with me scratching my head"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI's inability to maintain context",
+      "valence": "negative",
+      "grounding_span": "without knowing all the history of the company... AI cannot give a meaningful answer"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Optimism about future AI integration",
+      "valence": "positive",
+      "grounding_span": "I see it being more connected within the day to day workflows"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Systematic iterative decomposition of tasks",
+      "grounding_span": "define a set of system instructions to follow"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Contextual boundary setting based on organizational knowledge",
+      "grounding_span": "if information or a task is open to wide interpretation or requires a high amount of business context - I will handle it myself"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

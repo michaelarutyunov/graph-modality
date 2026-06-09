@@ -1,0 +1,138 @@
+{
+  "transcript_id": "work_0436",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as brainstorming and research tool for scripture and sermon ideas",
+      "label_negative": "AI as sole creator of final sermon content",
+      "bipolarity_complete": true,
+      "grounding_span": "help me brainstorm funeral services by helping me pick appropriate scriptures and helping me write a sermon"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as time-saving efficiency tool",
+      "label_negative": "AI as time-consuming or inefficient",
+      "bipolarity_complete": true,
+      "grounding_span": "it helped cut down the time significantly that I would ordinarily spend on research"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Personal voice and personalized anecdotes in sermon",
+      "label_negative": "Generic or AI-generated sermon content",
+      "bipolarity_complete": true,
+      "grounding_span": "ensure it is in my own voice"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI approximation of personal writing voice",
+      "label_negative": "AI inability to capture personal voice",
+      "bipolarity_complete": true,
+      "grounding_span": "AI would get better at approximating a person's writing or speaking voice"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Personal connection and authenticity in ministry",
+      "grounding_span": "the personal touch is so important and this is the skill I focus on maintaining"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "it helped cut down the time significantly"
+    },
+    {
+      "id": "n7",
+      "type": "Stance",
+      "label": "Satisfaction with AI for research and time savings",
+      "valence": "positive",
+      "grounding_span": "it helped cut down the time significantly that I would ordinarily spend on research. That was satisfying"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Resistance to handing over personal voice to AI",
+      "valence": "negative",
+      "grounding_span": "I would get a basic draft but would highly edit or rewrite sections to ensure it is in my own voice"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Cautious anticipation of AI voice approximation",
+      "valence": "ambivalent",
+      "grounding_span": "This may make it tempting to hand over more of the heavy lifting to AI"
+    },
+    {
+      "id": "n10",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement with selective integration",
+      "grounding_span": "after a two or three iterations I would then take what I have and work with it on my own. I may take snippets of the various iterations I liked best"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Boundary setting around personal details and voice",
+      "grounding_span": "I may include further details about the person that I did not want to divulge to the AI"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n8",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n10",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

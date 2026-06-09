@@ -1,0 +1,169 @@
+{
+  "transcript_id": "science_0008",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as literature discovery tool",
+      "label_negative": "Traditional search alone without AI augmentation",
+      "bipolarity_complete": true,
+      "grounding_span": "additionally interrogate AI to look for any studies we may have missed"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "Human judgment over AI suggestions",
+      "label_negative": "AI as autonomous reliable source",
+      "bipolarity_complete": true,
+      "grounding_span": "The AI is used to provide suggestions"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as validation-seeking tool",
+      "label_negative": "AI inapplicability due to confidentiality and blinding",
+      "bipolarity_complete": true,
+      "grounding_span": "Data control and validation...AI seems to me well suited to validating reems of data"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Bespoke AI tool with built-in safeguards for clinical trials",
+      "label_negative": "General-purpose AI without appropriate safeguards",
+      "bipolarity_complete": true,
+      "grounding_span": "would probably require a bespoke tool with appropriate hard coded blinding and data safety"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI for detecting fabricated data patterns",
+      "label_negative": "Human-only detection of fabricated data",
+      "bipolarity_complete": true,
+      "grounding_span": "picking up fabricated data earlier, since AI can potentially spot suspicious patterns"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Clinical risk reduction and cost minimization",
+      "grounding_span": "help reduce clinical risk and cost"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Data accuracy and integrity",
+      "grounding_span": "things can be missed which causes significant delay"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Patient confidentiality and privacy",
+      "grounding_span": "Patient confidentiality when it comes to data control"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Negative stance toward AI for literature search",
+      "valence": "positive",
+      "grounding_span": "additionally interrogate AI to look for any studies we may have missed"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI's impractical suggestions",
+      "valence": "ambivalent",
+      "grounding_span": "The AI is used to provide suggestions"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Positive reliance on AI for statistical validation",
+      "valence": "positive",
+      "grounding_span": "AI seems to me well suited to validating reems of data"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Optimism about future AI adoption",
+      "valence": "negative",
+      "grounding_span": "Other potential uses of AI don't appear to have been adopted at this time"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Complementary dual-method reasoning — uses both traditional and AI approaches",
+      "grounding_span": "Essentially we do both"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic risk-averse tool adoption",
+      "grounding_span": "intensely risk averse nature of drug development"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

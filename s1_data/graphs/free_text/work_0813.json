@@ -1,0 +1,266 @@
+{
+  "transcript_id": "work_0813",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative debugger",
+      "label_negative": "Solo debugging without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I would start by providing the AI all the context I have"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as implementation tool for known tasks",
+      "label_negative": "Manual implementation of known tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I would give the task to AI, along with context, which saves me time implementing it myself"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as brainstorming partner",
+      "label_negative": "Solo brainstorming without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I would assign AI a task to brainstorm other ways it could be achieved"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Human-led creative architecture and planning",
+      "label_negative": "AI-led architecture and planning",
+      "bipolarity_complete": true,
+      "grounding_span": "A certain task I would prefer to handle myself would be code architecture or code planning"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI delegation for low-risk tasks",
+      "label_negative": "AI collaboration for low-risk tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "For low-risk tasks, such as tests, I tend to delegate the task completely to the AI"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI collaboration for high-risk tasks",
+      "label_negative": "AI delegation for high-risk tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "For high-risk tasks, I tend to collaborate much more with the AI to make sure it's correct"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI as first point of contact",
+      "label_negative": "Colleagues as first point of contact",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is the go-to person"
+    },
+    {
+      "id": "n8",
+      "type": "Construct",
+      "label": "AI as unblocker from mental loops",
+      "label_negative": "Prolonged solo debugging in loops",
+      "bipolarity_complete": true,
+      "grounding_span": "being 'unblocked' by the AI, to make progress without being stuck for a longer time"
+    },
+    {
+      "id": "n9",
+      "type": "Construct",
+      "label": "Maintaining enjoyable skills despite AI capability",
+      "label_negative": "Letting AI take over enjoyable skills",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't see any reason not to maintain the skills I have in certain areas, as long as I enjoy them"
+    },
+    {
+      "id": "n10",
+      "type": "Construct",
+      "label": "AI as director of agents",
+      "label_negative": "Hands-on coding as primary role",
+      "bipolarity_complete": true,
+      "grounding_span": "me becoming more of a 'director of agents', rather than being hands-on writing code myself"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Productivity and time savings",
+      "grounding_span": "saves me time implementing it myself"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Creative fulfillment and enjoyment",
+      "grounding_span": "solving these tasks are fun"
+    },
+    {
+      "id": "n13",
+      "type": "Value",
+      "label": "Reliability and correctness",
+      "grounding_span": "make sure it's correct"
+    },
+    {
+      "id": "n14",
+      "type": "Value",
+      "label": "Continuous progress and unblocking",
+      "grounding_span": "being 'unblocked' by the AI"
+    },
+    {
+      "id": "n15",
+      "type": "Value",
+      "label": "Skill preservation and autonomy",
+      "grounding_span": "maintain the skills I have in certain areas"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Satisfaction with AI debugging collaboration",
+      "valence": "positive",
+      "grounding_span": "I have felt very satisfied from figuring out tricky bugs when using AI"
+    },
+    {
+      "id": "n17",
+      "type": "Stance",
+      "label": "Preference for human creativity in architecture",
+      "valence": "negative",
+      "grounding_span": "I would prefer to handle myself would be code architecture or code planning"
+    },
+    {
+      "id": "n18",
+      "type": "Stance",
+      "label": "Positive outlook on increasing AI use",
+      "valence": "positive",
+      "grounding_span": "the amount of AI I use will continue to go up"
+    },
+    {
+      "id": "n19",
+      "type": "Stance",
+      "label": "Acceptance of AI as first contact",
+      "valence": "positive",
+      "grounding_span": "AI is the go-to person"
+    },
+    {
+      "id": "n20",
+      "type": "CognitiveStyleMarker",
+      "label": "Risk-based delegation calibration",
+      "grounding_span": "It depends on a how 'risky' the task is"
+    },
+    {
+      "id": "n21",
+      "type": "CognitiveStyleMarker",
+      "label": "Intentional skill preservation based on enjoyment",
+      "grounding_span": "I don't see any reason not to maintain the skills I have in certain areas, as long as I enjoy them"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n13",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n14",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n15",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n16",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n8",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n17",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n18",
+      "target": "n10",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n19",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n5",
+      "target": "n20",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n20",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n9",
+      "target": "n21",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

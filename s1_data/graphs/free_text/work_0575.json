@@ -1,0 +1,181 @@
+{
+  "transcript_id": "work_0575",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as drafting assistant for emails and reports",
+      "label_negative": "AI as unreliable for report drafting from scratch",
+      "bipolarity_complete": true,
+      "grounding_span": "AI performs email drafting tasks fairly well, concise and in professional tone. When it comes to report drafting, it can sometimes misunderstand the requirements"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as coding and debugging aid",
+      "label_negative": "AI providing ineffective code fixes",
+      "bipolarity_complete": true,
+      "grounding_span": "Most frustrating is when AI comes in to help write a code or debug and issue, it says that the issue would be fixable with a certain code, but the issue still persists"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as search tool for simple queries",
+      "label_negative": "Manual search for simple queries",
+      "bipolarity_complete": true,
+      "grounding_span": "I sometimes use it to search for simple issues such as what does certain terms means in insurance context"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as collaborative iterative partner",
+      "label_negative": "AI as one-shot independent tool",
+      "bipolarity_complete": true,
+      "grounding_span": "back and forth most of the time, to ensure the content is satisfactory"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI capability and integration for time savings",
+      "label_negative": "AI inability to free up time due to poor performance",
+      "bipolarity_complete": true,
+      "grounding_span": "Hopefully AI could perform tasks better and it can be better integrated into my work to free up my time"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "free up my time"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional communication quality",
+      "grounding_span": "concise and in professional tone"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Task reliability and correctness",
+      "grounding_span": "the issue still persists"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for email drafting",
+      "valence": "positive",
+      "grounding_span": "AI performs email drafting tasks fairly well, concise and in professional tone"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI for report drafting from scratch",
+      "valence": "negative",
+      "grounding_span": "it can sometimes misunderstand the requirements, hence works better only focusing on paraphrasing the content rather than starting form scratch, which can be slightly annoying"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI for coding debugging",
+      "valence": "negative",
+      "grounding_span": "Most frustrating is when AI comes in to help write a code or debug and issue, it says that the issue would be fixable with a certain code, but the issue still persists"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Openness to AI handling more tasks",
+      "valence": "positive",
+      "grounding_span": "I'm fairly happy for AI to handle more task if they are capable off it"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Hope for better AI integration and performance",
+      "valence": "positive",
+      "grounding_span": "Hopefully AI could perform tasks better and it can be better integrated into my work to free up my time"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative back-and-forth refinement",
+      "grounding_span": "back and forth most of the time, to ensure the content is satisfactory"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Blank slate approach with AI first draft",
+      "grounding_span": "I usually start with a blank slate, describing the context in 2-3 liners, and then obtain the first draft from AI"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n4",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

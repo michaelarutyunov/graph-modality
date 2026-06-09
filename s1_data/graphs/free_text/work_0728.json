@@ -1,0 +1,194 @@
+{
+  "transcript_id": "work_0728",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as creative ideation and drafting partner",
+      "label_negative": "AI as final decision-maker or executor",
+      "bipolarity_complete": true,
+      "grounding_span": "I use it frequently in helping me come up with ideas and refining the first or second draft of written content"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for preliminary research and strategy",
+      "label_negative": "AI for sensitive or confidential information",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI to help me identify what competitors are doing in that space and what they've created"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability for simple analytical tasks",
+      "label_negative": "AI unreliability for simple analytical tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I needed AI to help me analyze some data...the AI kept making errors"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as knowledge bridge in unfamiliar domains",
+      "label_negative": "AI as unhelpful or irrelevant in unfamiliar domains",
+      "bipolarity_complete": true,
+      "grounding_span": "When I explained generally what I was looking for, the AI produced super helpful resources"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as automation of routine marketing tasks",
+      "label_negative": "AI as threat to entry-level jobs",
+      "bipolarity_complete": true,
+      "grounding_span": "I have a lot of routine tasks that would be great to automate with some prompt engineering"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as augmenting human creativity and strategy",
+      "label_negative": "AI as replacing human creativity and strategy",
+      "bipolarity_complete": true,
+      "grounding_span": "I enjoy strategy and creation, both of which need a lot of human input"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Creative autonomy and final control",
+      "grounding_span": "When it comes to final execution of creative content I would prefer to do that myself"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "It cut down my time on that task by hours I'd say"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Knowledge acquisition and domain expertise",
+      "grounding_span": "It was on an area in finance that I am not very familiar with...the AI produced super helpful resources"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Data privacy and security",
+      "grounding_span": "I don't want to put any sensitive company information on there"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Career advancement and skill development",
+      "grounding_span": "I am at the manager level so it will only augment my career"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI as knowledge resource",
+      "valence": "positive",
+      "grounding_span": "One time that I was very satisfied was when I was helping a colleague create content"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Frustration with AI on simple analytical tasks",
+      "valence": "negative",
+      "grounding_span": "That was frustrating because it was just counting sums and grouping lists"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Optimism about future AI integration",
+      "valence": "positive",
+      "grounding_span": "I anticipate that I will continue to use it even more"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Resistance to AI for final creative execution",
+      "valence": "negative",
+      "grounding_span": "When it comes to final execution of creative content I would prefer to do that myself"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Phase-dependent collaboration pattern — batch for early ideation, iterative for refinement",
+      "grounding_span": "I'll go back and forth when I'm close to finishing something...I use batch approach when I'm early in the brainstorming"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Privacy-conscious task segmentation — separates sensitive from non-sensitive work",
+      "grounding_span": "I can't use it much past preliminary stages right now because I don't want to put any sensitive company information on there"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

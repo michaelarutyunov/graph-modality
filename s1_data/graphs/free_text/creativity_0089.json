@@ -1,0 +1,181 @@
+{
+  "transcript_id": "creativity_0089",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative brainstorming partner",
+      "label_negative": "AI as autonomous creator",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "It's definitely a collaboration. I would say I lead the process even though the AI gives me ideas."
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for ideation and diversity of ideas",
+      "label_negative": "AI for direct generation of final products",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I have a more extensive brainstorming and ideation process, and I end up with more diverse kits as a result."
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as reference and inspiration source",
+      "label_negative": "AI as direct content producer",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I will download one I like and use it as a reference for my artwork."
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI for quality review and feedback",
+      "label_negative": "AI-generated content without human oversight",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I will typically upload it to AI and ask it to tell me what it is missing or what would make it look better."
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI for automating administrative tasks",
+      "label_negative": "AI for automating creative core",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I'd like to see the AI being able to really help me automate the boring parts of my job."
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "Human-crafted artistry vs AI shortcuts",
+      "label_negative": "AI-generated art as cheap substitute",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I definitely think it detracts from what I like about art - the fact that someone created that and now I am using it."
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Creative fulfillment and enjoyment",
+      "grounding_span": "my creation process is now longer, but it's also more fun I'd say"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Artistic authenticity and quality",
+      "grounding_span": "I definitely think it detracts from what I like about art - the fact that someone created that and now I am using it."
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Efficiency and productivity",
+      "grounding_span": "automate the boring parts of my job"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Positive appreciation of AI as ideation partner",
+      "valence": "positive",
+      "grounding_span": "I think usually we work together well, and it is extremely helpful for me."
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Concern about AI undermining artistry",
+      "valence": "negative",
+      "grounding_span": "I definitely think it detracts from what I like about art"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Aspiration for AI to handle administrative tasks",
+      "valence": "positive",
+      "grounding_span": "I'd like to see the AI being able to really help me automate the boring parts of my job."
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through feedback",
+      "grounding_span": "I always provide it with feedback and get more clear on what I want it to produce."
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Human-led creative direction with AI as tool",
+      "grounding_span": "I would say I lead the process even though the AI gives me ideas."
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

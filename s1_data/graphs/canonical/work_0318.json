@@ -1,0 +1,157 @@
+{
+  "transcript_id": "work_0318",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as quick information lookup tool",
+      "label_negative": "Deep research or complex analysis",
+      "bipolarity_complete": true,
+      "grounding_span": "I can get a quick answer with at least some detailed information for those types of queries"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as collaborative conversational partner",
+      "label_negative": "AI as independent task delegator",
+      "bipolarity_complete": true,
+      "grounding_span": "I collaborate with it. I'll ask a question or feed it some data for it to interpret and then have a conversation about it"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for administrative tasks",
+      "label_negative": "AI for tasks requiring human intuition and expertise",
+      "bipolarity_complete": true,
+      "grounding_span": "I would use it for time-consuming and repetitive tasks such as reading timesheets"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Human expertise in intuitive customer insights",
+      "label_negative": "AI-driven analysis of customer habits",
+      "bipolarity_complete": true,
+      "grounding_span": "Tasks that involve a deep dive on customer habits I would save for myself because there might be intuitive connections about style and spending habits that I think need human expertise"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI autonomy in task execution",
+      "label_negative": "Lack of autonomy restricting AI use",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't have enough autonomy in my role to make use of it as much as I'd like to"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "I don't have the time to do all the searching to find the information"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Human judgment and nuanced understanding",
+      "grounding_span": "intuitive connections about style and spending habits that I think need human expertise"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency in administrative tasks",
+      "grounding_span": "time-consuming and repetitive tasks such as reading timesheets"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI as collaborative partner",
+      "valence": "positive",
+      "grounding_span": "This was satisfying"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Cautious approach to AI autonomy",
+      "valence": "positive",
+      "grounding_span": "I don't have enough autonomy in my role to make use of it as much as I'd like to"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Confidence in human irreplaceability in teaching",
+      "valence": "positive",
+      "grounding_span": "I'm not worried AI could replace me"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative collaborative problem-solving",
+      "grounding_span": "I collaborate with it. I'll ask a question or feed it some data for it to interpret and then have a conversation about it"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based task allocation — creative vs. mundane",
+      "grounding_span": "Tasks that involve a deep dive on customer habits I would save for myself"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

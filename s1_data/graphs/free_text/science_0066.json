@@ -1,0 +1,149 @@
+{
+  "transcript_id": "science_0066",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as data visualization guide",
+      "label_negative": "Self-navigation through overwhelming data",
+      "bipolarity_complete": true,
+      "grounding_span": "I asked AI the best ways to form graphs for my specific data"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as time-saving resource under constraints",
+      "label_negative": "Time-consuming independent struggle",
+      "bipolarity_complete": true,
+      "grounding_span": "AI was the most readily available option. I was really pressed for time"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as data collection and preprocessing tool",
+      "label_negative": "Manual data sorting and filtering",
+      "bipolarity_complete": true,
+      "grounding_span": "I really wish I could have used AI to find the information I needed"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI output reliability and need for critical evaluation",
+      "label_negative": "Blind trust in AI outputs",
+      "bipolarity_complete": true,
+      "grounding_span": "I made sure to critically analyze the graphs myself, since AI isn't always accurate"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Research efficiency and time management",
+      "grounding_span": "time was very limited"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Research integrity and accuracy",
+      "grounding_span": "I made sure to critically analyze the graphs myself"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Data-driven insight and understanding",
+      "grounding_span": "I ended up researching velocity and spin rates of pitchers who were injured"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Positive satisfaction with AI for visualization",
+      "valence": "positive",
+      "grounding_span": "the graphs were perfect for my analysis"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Regret over missed AI opportunity for data collection",
+      "valence": "negative",
+      "grounding_span": "I really wish I could have used AI to find the information I needed"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Cautious trust in AI with verification",
+      "valence": "ambivalent",
+      "grounding_span": "I made sure to critically analyze the graphs myself, since AI isn't always accurate"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic problem-driven tool selection",
+      "grounding_span": "AI was the most readily available option"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Critical evaluation and verification habit",
+      "grounding_span": "I made sure to critically analyze the graphs myself"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

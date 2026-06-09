@@ -1,0 +1,175 @@
+{
+  "transcript_id": "work_0056",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as ideation partner",
+      "label_negative": "AI as sole content producer",
+      "bipolarity_complete": true,
+      "grounding_span": "I will give the AI the topic of the interview...ask the AI to draft a list of questions for me"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as research assistant",
+      "label_negative": "AI as fully reliable research source",
+      "bipolarity_complete": true,
+      "grounding_span": "The AI sent over statistics very quickly, but upon double checking them for accuracy, many of them were not correct"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI use for tasks lacking personal excitement",
+      "label_negative": "AI use for personally exciting creative tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "If it's a creative or writing task that I am excited about...I will tackle it myself instead of asking AI"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Workplace pressure to adopt AI for efficiency",
+      "label_negative": "Autonomous choice in AI adoption",
+      "bipolarity_complete": true,
+      "grounding_span": "My boss tends to use AI a lot, so I feel like I need to as well in order to stay efficient"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Human writing as deeply human and nuanced",
+      "label_negative": "AI-generated impersonal writing",
+      "bipolarity_complete": true,
+      "grounding_span": "ensuring that the writing I create always has a connection to the audience from a human perspective"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative autonomy",
+      "grounding_span": "If it's a creative or writing task that I am excited about...I will tackle it myself"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Trustworthiness and accuracy",
+      "grounding_span": "many of them were not correct and so I needed to do some additional research"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and speed in work",
+      "grounding_span": "I feel like I need to as well in order to stay efficient and get my tasks completed quicker"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Authenticity and personal integrity",
+      "grounding_span": "ensuring that the writing I create always has a connection to the audience from a human perspective"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI as collaborative partner",
+      "valence": "positive",
+      "grounding_span": "I tend to collaborate with it...ask for it to come with more that are similar to those"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI errors",
+      "valence": "negative",
+      "grounding_span": "That was frustrating, especially since I doubt my boss or all of my colleagues are fact checking"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Preference for human-led ideation",
+      "valence": "positive",
+      "grounding_span": "If it's a creative or writing task that I am excited about...I will tackle it myself"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Indifference to workplace AI pressure",
+      "valence": "ambivalent",
+      "grounding_span": "I feel like I need to as well in order to stay efficient"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Curatorial mindset — uses AI for ideation then curates",
+      "grounding_span": "I'll select the questions I like the most and think are the most relevant"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Verification-oriented — cross-checks AI outputs against other sources",
+      "grounding_span": "upon double checking them for accuracy"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

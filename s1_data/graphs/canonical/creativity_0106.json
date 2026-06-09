@@ -1,0 +1,183 @@
+{
+  "transcript_id": "creativity_0106",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as brainstorming and idea generator",
+      "label_negative": "AI as creator of original ideas",
+      "bipolarity_complete": true,
+      "grounding_span": "I like to use it to hone ideas I have already worked on rather than developing ideas"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as shortcut for technical/monotonous tasks",
+      "label_negative": "Traditional time-consuming research methods",
+      "bipolarity_complete": true,
+      "grounding_span": "research to short cut when I need some obscure or arcane information"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as creative copywriting assistant",
+      "label_negative": "Subjective self-editing without external perspective",
+      "bipolarity_complete": true,
+      "grounding_span": "using it as a copy editor made redrafting far faster"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI-generated content quality and validity",
+      "label_negative": "AI-generated content feeling lifeless and generic",
+      "bipolarity_complete": true,
+      "grounding_span": "It felt a little rushed and didn't have the right personality for the genre"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as tool for self-interrogation of assumptions",
+      "label_negative": "AI as autonomous creative decision-maker",
+      "bipolarity_complete": true,
+      "grounding_span": "using it to interrogate my own awareness and assumptions"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as writing substitute",
+      "label_negative": "AI use that replaces human jobs",
+      "bipolarity_complete": true,
+      "grounding_span": "using AI when I know it is not affecting anything outside of my usage of it"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Creative control and originality",
+      "grounding_span": "I always try to drive creative decisions"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "making better use of my time"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Quality of creative output",
+      "grounding_span": "the second draft can now be the quality that a third draft might have been"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Creative integrity and human artistry",
+      "grounding_span": "not taking work from anyone else"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI as editing aid",
+      "valence": "positive",
+      "grounding_span": "I find it most rewarding using AI when I know it is not affecting anything outside of my usage of it"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Negative stance toward AI-generated content lacking personality",
+      "valence": "negative",
+      "grounding_span": "It felt a little lifeless"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Concern about market flooding and devaluation of writing",
+      "valence": "negative",
+      "grounding_span": "the flooding of the market"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Intent to maintain balanced AI use",
+      "valence": "mixed",
+      "grounding_span": "I hope to keep it much the same. A useful tool I can employ when it is needed, but not too often"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through back-and-forth questioning",
+      "grounding_span": "asking targeted questions about the reality of a situation"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Ethical boundary-setting around AI use",
+      "grounding_span": "using AI when I know it is not affecting anything outside of my usage of it"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

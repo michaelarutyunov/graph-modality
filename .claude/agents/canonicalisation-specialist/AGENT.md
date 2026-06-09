@@ -26,11 +26,11 @@ After extraction, the same cognitive construct may appear under different labels
 
 | File | Role |
 |---|---|
-| `canonicalisation/clusterer.py` | Embedding + clustering pipeline |
-| `canonicalisation/canonical_map.json` | Locked canonical vocabulary — source of truth |
-| `canonicalisation/apply_canonical.py` | Applies the map to all free-text graphs |
+| `s3_canonicalisation/clusterer.py` | Embedding + clustering pipeline |
+| `s3_canonicalisation/canonical_map.json` | Locked canonical vocabulary — source of truth |
+| `s3_canonicalisation/apply_canonical.py` | Applies the map to all free-text graphs |
 | `.claude/context/graph-schema.md` | Entity type enumeration used by clusterer |
-| `encoding/graph_stats.py` | Downstream consumer — relies on canonical vocabulary |
+| `s4_encoding/graph_stats_encoder.py` | Downstream consumer — relies on canonical vocabulary |
 
 ## Conventions
 

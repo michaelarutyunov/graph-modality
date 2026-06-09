@@ -1,0 +1,162 @@
+{
+  "transcript_id": "work_0336",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as tool for market and business perspective",
+      "label_negative": "AI as limited to simple tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I use it for 'how to' questions as it relates to work. I use it to replace using calculators as it would relate to any calculations. I use it to analyze documents. I use it to seek advice regarding management situations"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI errors and omissions",
+      "bipolarity_complete": true,
+      "grounding_span": "there have been times when AI has been wrong when providing something such as a calculation or reviewing a financial document"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as independent delegate",
+      "bipolarity_complete": true,
+      "grounding_span": "I would say I more likely collaborate with it. I do delegate at times but since I'm involved in it and review it's accuracy, that's still somewhat collaborating with it I guess"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI for time-sensitive or flexible tasks",
+      "label_negative": "Self-handling of time-sensitive tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "If it relates to anything time sensitive or that may be flexible, like the time a location closes or setting up an appointment, many times that can be searched online and AI can find that information for me but I do like to do that myself"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI for role-playing and preparation",
+      "label_negative": "Unprepared direct conversation",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI to role play conversations with an employee. Let's say it's a challenging conversation"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "This is something that would've taken an extremely long time for me to do but it did it quickly"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Accuracy and reliability",
+      "grounding_span": "double check for accuracy and to make sure I didn't overlook anything"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Informed decision-making",
+      "grounding_span": "It allows me to fully do my due diligence so I'm prepared prior to kicking off that conversation with the employee"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "Very satisfied when using it to search the web and gather business reviews on my small business"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Concern about AI becoming competitor",
+      "valence": "negative",
+      "grounding_span": "It did so however missed a few competitors which was frustrating"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Cautious trust with verification",
+      "valence": "ambivalent",
+      "grounding_span": "I use AI for that too but sometimes, do it myself too. Same with anything financial related, I use AI but do double check"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative back-and-forth collaboration",
+      "grounding_span": "It was a back and forth but a good exercise to learn about where my opportunities are"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Systematic verification through source checking",
+      "grounding_span": "double check for accuracy and to make sure I didn't overlook anything when providing the information to AI"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n3",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

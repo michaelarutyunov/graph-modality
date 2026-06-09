@@ -1,0 +1,163 @@
+{
+  "transcript_id": "work_0498",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as brainstorming and idea generator",
+      "label_negative": "AI as non-collaborative answer giver",
+      "bipolarity_complete": true,
+      "grounding_span": "I would give AI examples of things she does like/can have and help guide it to giving more helpful suggestions"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI repetitiveness and lack of novelty",
+      "bipolarity_complete": true,
+      "grounding_span": "its recommendations for meal ideas are kind of repetitive"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as skill development enabler",
+      "label_negative": "AI as impractical or unhelpful",
+      "bipolarity_complete": true,
+      "grounding_span": "help me explain in simple terms how to do a basic massage on a tendon in her foot"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Human nurturing approach in caregiving",
+      "label_negative": "AI-mediated entertainment or care",
+      "bipolarity_complete": true,
+      "grounding_span": "I prefer the more human/nurturing approach to my work"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI for repetitive simple tasks",
+      "label_negative": "AI for complex or relational tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "simple questions or research"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Effective caregiving outcomes",
+      "grounding_span": "It was easy to follow and ended up being super helpful"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Human connection and nurturing",
+      "grounding_span": "the human connection and hands-on element are essential when dealing with the elderly"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "It was easy to follow and ended up being super helpful"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Frustration with AI errors",
+      "valence": "negative",
+      "grounding_span": "its recommendations for meal ideas are kind of repetitive"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Preference for AI on simple tasks only",
+      "valence": "negative",
+      "grounding_span": "I do not use AI to entertain her as I prefer the more human/nurturing approach"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Contentment with current AI use",
+      "valence": "positive",
+      "grounding_span": "I do not personally see me adding more AI use or changing anything"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative iterative refinement — works back and forth with AI",
+      "grounding_span": "I would give AI examples of things she does like/can have and help guide it"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Principled boundary setting — preserves human touch in communication",
+      "grounding_span": "I do not use AI to entertain her as I prefer the more human/nurturing approach"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,162 @@
+{
+  "transcript_id": "work_0121",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as quick time-filler for classroom management",
+      "label_negative": "AI as unreliable for accurate content creation",
+      "bipolarity_complete": true,
+      "grounding_span": "AI gives me a quick way to fill time when I'm subbing"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as content generator requiring accuracy",
+      "label_negative": "AI as error-prone for detailed content",
+      "bipolarity_complete": true,
+      "grounding_span": "it often got some pretty important information wrong"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as tool for immediate use vs. refinement",
+      "label_negative": "AI requiring iterative refinement",
+      "bipolarity_complete": true,
+      "grounding_span": "I'm using what it produces right away"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as assistive for differentiated instruction",
+      "label_negative": "AI as unnecessary for subjective judgment tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "it could really help with creating differentiated assignments"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Classroom management and student engagement",
+      "grounding_span": "students were engaging in a really meaningful way"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Accuracy and reliability in teaching materials",
+      "grounding_span": "it often got some pretty important information wrong"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "it never takes more than a couple of minutes"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Personal professional competence",
+      "grounding_span": "I have to practice these all of the time"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for quick classroom activities",
+      "valence": "positive",
+      "grounding_span": "Any time AI gives me a quick way to fill time when I'm subbing, I feel very satisfied!!"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI inaccuracies for detailed content",
+      "valence": "negative",
+      "grounding_span": "it would mess this up all the time"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Openness to using AI for long-term planning",
+      "valence": "positive",
+      "grounding_span": "I can imagine it being really helpful with creating differentiated assignments"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Confidence in maintaining skills without AI",
+      "valence": "positive",
+      "grounding_span": "I'm not at all worried about skills getting rusty"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Situational adaptability — adjusts AI use based on immediacy and accuracy needs",
+      "grounding_span": "It depends on the situation"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic efficiency — prefers quick, direct use over iterative refinement",
+      "grounding_span": "Most of the time, very little refinement happens"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

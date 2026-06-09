@@ -1,0 +1,218 @@
+{
+  "transcript_id": "work_0421",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as research orientation tool",
+      "label_negative": "AI as unreliable or unhelpful for research",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI to do research and ask it questions to help orient my own internal research"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for quick consultation vs ongoing collaboration",
+      "label_negative": "AI as ongoing collaborative partner",
+      "bipolarity_complete": true,
+      "grounding_span": "More the second one, I might ask a follow-up question or two but usually it's just general information"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Personal touch in client communication",
+      "label_negative": "AI-generated robotic responses",
+      "bipolarity_complete": true,
+      "grounding_span": "I find that a personal touch is needed and that the responses might be too robotic if I were to use AI to write them"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI for repetitive task automation",
+      "label_negative": "Manual handling of repetitive tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "My company hasn't implemented AI to do any of the repetitive work tasks and that would be useful to free up some time"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI usage limits and tool switching",
+      "label_negative": "Seamless uninterrupted AI access",
+      "bipolarity_complete": true,
+      "grounding_span": "when I hit the use limit on chatgpt and it requested payment, then I had to move to gemini"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "Human judgment vs AI in high-stakes roles",
+      "label_negative": "AI replacing human judgment",
+      "bipolarity_complete": true,
+      "grounding_span": "there was too much human judgment required, such as unforeseen circumstances and nuance"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI as information aggregator and efficiency advisor",
+      "label_negative": "AI as autonomous decision-maker",
+      "bipolarity_complete": true,
+      "grounding_span": "it would be good if they used them to enhance situational awareness by providing data in real-time to assist"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficient information access",
+      "grounding_span": "help orient my own internal research"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Personal authenticity in communication",
+      "grounding_span": "a personal touch is needed"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Productivity and time savings",
+      "grounding_span": "free up some time"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Reliability and continuity of tool access",
+      "grounding_span": "when I hit the use limit on chatgpt and it requested payment"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Human judgment and adaptability",
+      "grounding_span": "too much human judgment required"
+    },
+    {
+      "id": "n13",
+      "type": "Value",
+      "label": "Situational awareness and optimal performance",
+      "grounding_span": "enhance situational awareness by providing data in real-time"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Satisfaction with AI as research starting point",
+      "valence": "positive",
+      "grounding_span": "I use AI to do research and ask it questions to help orient my own internal research"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Preference for personal touch over AI in emails",
+      "valence": "negative",
+      "grounding_span": "I'd rather write e-mails myself"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Frustration with AI usage limits",
+      "valence": "negative",
+      "grounding_span": "when I hit the use limit on chatgpt and it requested payment"
+    },
+    {
+      "id": "n17",
+      "type": "Stance",
+      "label": "Optimism about AI for data aggregation in new role",
+      "valence": "positive",
+      "grounding_span": "it would be good if they used them to enhance situational awareness"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic career planning with AI awareness",
+      "grounding_span": "I asked the question- did they foresee AI taking over the work anytime soon?"
+    },
+    {
+      "id": "n19",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic tool switching to maintain workflow",
+      "grounding_span": "I had to move to gemini which hasn't stopped working yet"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n13",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n14",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n17",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n19",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n6",
+      "target": "n7",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

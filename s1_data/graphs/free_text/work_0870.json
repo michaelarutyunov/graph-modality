@@ -1,0 +1,175 @@
+{
+  "transcript_id": "work_0870",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as brainstorming collaborator for engaging class sessions",
+      "label_negative": "AI as inadequate for understanding pedagogical nuance",
+      "bipolarity_complete": true,
+      "grounding_span": "I really enjoy using AI to brainstorm ideas about classroom discussion questions and activities"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as clerical and organizational assistant",
+      "label_negative": "AI as unable to create satisfactory syllabi independently",
+      "bipolarity_complete": true,
+      "grounding_span": "it was able to look over what I created and find holes"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI understanding of speaking engagement vs reading engagement",
+      "label_negative": "AI conflating speaking and reading engagement",
+      "bipolarity_complete": true,
+      "grounding_span": "AI doesn't necessarily understand speaking engagement versus reading engagement"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI reliability on specialized cultural topics",
+      "label_negative": "AI misrepresentation and oversimplification of Indigenous cultures",
+      "bipolarity_complete": true,
+      "grounding_span": "the information LLMs have on this topic is so broad as to be useless"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Openness to AI use in academia",
+      "label_negative": "Fear and avoidance of AI in academia",
+      "bipolarity_complete": true,
+      "grounding_span": "People in academia are still pretty scared of AI"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Student engagement and understanding",
+      "grounding_span": "make more engaging class sessions"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Teaching efficiency and accuracy",
+      "grounding_span": "saved my time in editing, but also in student questions"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Pedagogical authenticity and expertise",
+      "grounding_span": "I know that it does not understand that sometimes when things are too heavy or depressing students need a way to release"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Cultural accuracy and ethical representation",
+      "grounding_span": "Indigenous people have been misrepresented since the 15th century. I'd hate for AI to continue that"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for clerical error-checking",
+      "valence": "positive",
+      "grounding_span": "This was great and it saved my time in editing"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI's lack of cultural nuance",
+      "valence": "negative",
+      "grounding_span": "the information LLMs have on this topic is so broad as to be useless in many instances"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Ambivalence toward AI in academia due to fear culture",
+      "valence": "ambivalent",
+      "grounding_span": "People in academia are still pretty scared of AI"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Optimistic intention to integrate AI ethically in classroom",
+      "valence": "positive",
+      "grounding_span": "I would like my students to have a deeper understanding of how to use it ethically and well"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative iterative refinement — back-and-forth negotiation with AI",
+      "grounding_span": "Sometimes I don't agree and then there is more back and forth exchange"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-specific expertise-driven boundary setting",
+      "grounding_span": "My lecture content. Especially in subjects like Native American Religions and culture"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

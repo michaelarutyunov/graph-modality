@@ -1,0 +1,204 @@
+{
+  "transcript_id": "creativity_0111",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as brainstorming and research accelerator",
+      "label_negative": "AI as insufficiently innovative or too generic",
+      "bipolarity_complete": true,
+      "grounding_span": "I'll first tell AI the general outline for the project I have in my head and ask the model to identify any gaps and expand on my outline"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as proofreading and editing assistant",
+      "label_negative": "AI as unreliable or introducing errors",
+      "bipolarity_complete": true,
+      "grounding_span": "sent my finished text back to be polished and placed into the outline"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Human creative control and decision-making",
+      "label_negative": "AI-driven creative decisions",
+      "bipolarity_complete": true,
+      "grounding_span": "I'm definitely in charge of all of the creative decisions"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as creative companion to combat isolation",
+      "label_negative": "Working alone without AI interaction",
+      "bipolarity_complete": true,
+      "grounding_span": "I find the AI assistant incredibly valuable for bouncing ideas off of and for really having something to talk through roadblocks with"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI's impact on writing job roles",
+      "label_negative": "AI preserving traditional writing roles",
+      "bipolarity_complete": true,
+      "grounding_span": "AI assistants are going to make jobs like mine completely obsolete"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI's ability to produce human-like text",
+      "label_negative": "AI's inability to produce genuinely human text",
+      "bipolarity_complete": true,
+      "grounding_span": "People can spot AI because it isn't capable of adding that distinctly human element to the text"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Creative fulfillment and passion",
+      "grounding_span": "I love writing and it is really my passion"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and overcoming creative blocks",
+      "grounding_span": "It really speeds up the entire process"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Human connection and authenticity in writing",
+      "grounding_span": "writing needs a human element to really connect with readers"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Positive appreciation for AI as efficiency tool",
+      "valence": "positive",
+      "grounding_span": "It really speeds up the entire process"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Concern about AI making writing jobs obsolete",
+      "valence": "negative",
+      "grounding_span": "AI assistants are going to make jobs like mine completely obsolete"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Concern about AI reducing creative thinking",
+      "valence": "negative",
+      "grounding_span": "It will take some of the fun and creativity out of my job"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Confidence in ability to adapt to AI-driven roles",
+      "valence": "positive",
+      "grounding_span": "I hope I will be able to transition into one of those new editing and prompting roles easily"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Belief in irreplaceable human element in writing",
+      "valence": "positive",
+      "grounding_span": "People can spot AI because it isn't capable of adding that distinctly human element to the text"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement — uses AI to generate outline, then adjusts and writes sections",
+      "grounding_span": "I would realize the next section of the outline was too broad or too deeply technical, and I would issue the corrections to the model"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Maintaining creative ownership — drives project and identifies when outline no longer fits purpose",
+      "grounding_span": "I have to be the one driving the project and identifying when the outline no longer fits my purpose"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

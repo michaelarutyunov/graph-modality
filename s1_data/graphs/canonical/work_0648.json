@@ -1,0 +1,186 @@
+{
+  "transcript_id": "work_0648",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as supplement to creative process",
+      "label_negative": "Manual handling of creative and administrative tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "AI to create my logo and come up with a good business name"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for scaling calculations",
+      "label_negative": "Manual calculation for large batches",
+      "bipolarity_complete": true,
+      "grounding_span": "AI calculates my wax to fragrance oil ratios for large batches of candles"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI-generated listing descriptions",
+      "label_negative": "Writing product descriptions manually",
+      "bipolarity_complete": true,
+      "grounding_span": "AI to create my product descriptions"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Personal touch in client communications",
+      "label_negative": "AI-handled customer service",
+      "bipolarity_complete": true,
+      "grounding_span": "I like to add the personal touch so the customer feels special"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Hands-on candle making",
+      "label_negative": "Automated candle making with robots",
+      "bipolarity_complete": true,
+      "grounding_span": "I will always be making the candles obviously"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI for administrative tasks",
+      "label_negative": "Manual administrative work",
+      "bipolarity_complete": true,
+      "grounding_span": "The administrative tasks are not my favorite"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "it is so much quicker with AI"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional accuracy and reliability",
+      "grounding_span": "the descriptions are always professional"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Personal connection and customer relationships",
+      "grounding_span": "the customer feels special"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Passion for candle making",
+      "grounding_span": "my love is making the candles"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI-generated descriptions that need no changes",
+      "valence": "positive",
+      "grounding_span": "It has been so helpful for AI to create my product descriptions"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Preference for personal customer service",
+      "valence": "negative",
+      "grounding_span": "I like to handle the customer service issues and inquiries myself"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Openness to future AI use for inventory and social media",
+      "valence": "positive",
+      "grounding_span": "I would love to utilize AI for inventory and ordering"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Detailed upfront specification",
+      "grounding_span": "I usually describe what I need in very descriptive detail"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Learning from external sources (YouTube, newsletters)",
+      "grounding_span": "I watch YouTube videos of other candlemakers and use any tips and tricks"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

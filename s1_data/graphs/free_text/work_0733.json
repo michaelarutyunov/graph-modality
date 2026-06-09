@@ -1,0 +1,193 @@
+{
+  "transcript_id": "work_0733",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as wise sounding board for creative ideation",
+      "label_negative": "AI as autonomous creator that thinks for me",
+      "bipolarity_complete": true,
+      "grounding_span": "I want it to be a wise sounding board"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as support for writing mechanics and confidence",
+      "label_negative": "AI as crutch that undermines authentic skill",
+      "bipolarity_complete": true,
+      "grounding_span": "I use it as a support because I'm not fully confident in my writing"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as impartial mediator in team creative gridlock",
+      "label_negative": "AI as source of fully adopted output that overrides team",
+      "bipolarity_complete": true,
+      "grounding_span": "we turned to AI...we didn't fully adopt its output, it got us moving"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Mastering AI as a strategic leadership skill",
+      "label_negative": "Relying on AI as a branding faux pas",
+      "bipolarity_complete": true,
+      "grounding_span": "Being the EP who knows how to effectively implement AI is a different story"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as additive partner in human-centered management",
+      "label_negative": "AI as replacement for human judgment in management",
+      "bipolarity_complete": true,
+      "grounding_span": "I see it as additive, not a replacement...partner in dealing with very human, employee focused realms"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Authentic creative ownership and self-expression",
+      "grounding_span": "I like to take ownership of them"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Confidence and lowered psychological barriers in writing",
+      "grounding_span": "it has boosted my confidence a little, and lowered the psychological barriers"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Team collaboration and project completion",
+      "grounding_span": "we were able to customize the idea to our project and get it finished"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Professional reputation and strategic positioning",
+      "grounding_span": "being known as the EP relying on AI would be a branding faux pas"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Human-centric management and team development",
+      "grounding_span": "identifying strengths, teambuilding, task delegation and scheduling"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Affection for AI as confidence booster and creative enabler",
+      "valence": "positive",
+      "grounding_span": "it has made me kind of fall back in love with writing"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Resistance to AI overshadowing authentic voice",
+      "valence": "negative",
+      "grounding_span": "I dont want it to think FOR me"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Satisfaction with AI as impartial gridlock breaker",
+      "valence": "positive",
+      "grounding_span": "it got us moving and we were able to customize the idea"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Strategic concealment of AI reliance from clients",
+      "valence": "negative",
+      "grounding_span": "I certainly dont want to communicate...that everything Im doing is heavily reliant on support form AI"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Optimistic openness to expanding AI use in management",
+      "valence": "positive",
+      "grounding_span": "I fully expect to integrate into my processes...Really understanding how to incorporate it is a goal"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Bouncing ideas back and forth — iterative co-creation",
+      "grounding_span": "I prefer to bounce bounce ideas back and forth"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Protective possessiveness over core ideas — boundary setting",
+      "grounding_span": "I do tend to feel possessive of the core idea or premise of any project"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

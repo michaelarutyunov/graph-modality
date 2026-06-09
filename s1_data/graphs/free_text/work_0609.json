@@ -1,0 +1,175 @@
+{
+  "transcript_id": "work_0609",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI for simple time-consuming tasks",
+      "label_negative": "AI for complex or nuanced tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "simple tasks that would be time consuming for me but easy for an AI model"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as creative inspiration source",
+      "label_negative": "AI as complete creative replacement",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI to supplement it and have it list ideas that give me a general idea"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Personal enjoyment and meaningful engagement",
+      "label_negative": "Efficiency-driven automation of enjoyable tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "Tasks that I find fun or tasks that I want to busy my time with"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI reliability in specialized domains",
+      "label_negative": "AI misunderstanding of complex financial concepts",
+      "bipolarity_complete": true,
+      "grounding_span": "Some AI models have a hard time understanding complex issues in the financial space"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Collaborative refinement with AI",
+      "label_negative": "One-shot delegation to AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I tend to work through problems with it and sharpen the responses"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative autonomy and personal expression",
+      "grounding_span": "draw out different aspects of the idea and make it into my own"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Personal connection and human touch",
+      "grounding_span": "I enjoy the personal feeling of going through those surveys and reading them thoroughly"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "simple tasks that would be time consuming for me but easy for an AI model"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Accuracy and reliability in specialized work",
+      "grounding_span": "Some AI models have a hard time understanding complex issues in the financial space"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for simple tasks",
+      "valence": "positive",
+      "grounding_span": "I try to only delegate simple tasks to it and that usually works out well"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI in complex financial domains",
+      "valence": "negative",
+      "grounding_span": "Some AI models have a hard time understanding complex issues in the financial space and that has made me frustrated"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Preference for personal handling of enjoyable tasks",
+      "valence": "positive",
+      "grounding_span": "Tasks that I find fun or tasks that I want to busy my time with rather than doing nothing usually end up being done by me rather than AI"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Openness to future change in AI use",
+      "valence": "mixed",
+      "grounding_span": "I think I have a good system and I don't feel the need to change it, however times change and likely my use of AI could change along side it"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through back-and-forth",
+      "grounding_span": "I tend to work through problems with it and sharpen the responses of the model"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Selective delegation based on task complexity",
+      "grounding_span": "I try to only delegate simple tasks to it"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n5",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

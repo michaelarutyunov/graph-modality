@@ -1,0 +1,175 @@
+{
+  "transcript_id": "work_0982",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI for repetitive simple tasks",
+      "label_negative": "Manual execution of repetitive tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI to help me automate these tasks or give me ideas to simplify them"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as autonomous agent trusted without verification",
+      "bipolarity_complete": true,
+      "grounding_span": "I work on tasks together. I have to verify everything I do myself"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability and accuracy in generated content",
+      "label_negative": "AI unreliability with imperfect inputs",
+      "bipolarity_complete": true,
+      "grounding_span": "it was unable to due to the low quality of some of the images or the handwriting"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Personal touch in client communications",
+      "label_negative": "AI-generated impersonal communication",
+      "bipolarity_complete": true,
+      "grounding_span": "I do not copy emails verbatim because I like to have my own personal voice"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as tool requiring human oversight",
+      "label_negative": "Blind trust in AI-generated official documents",
+      "bipolarity_complete": true,
+      "grounding_span": "people need to closely pay attention to anything they publish as official documents"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "make them quicker to do when they come up"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Financial accuracy and trust",
+      "grounding_span": "I am handling payments and money and its critical that I understand what I'm doing"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Authenticity and personal integrity",
+      "grounding_span": "I like to have my own personal voice"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Quality and editorial trust",
+      "grounding_span": "anything that reaches the public or the company as a whole needs to be vetted"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "I was particularly satisfied when I wrote a script in google sheets"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI limitations in PDF parsing and formatting",
+      "valence": "negative",
+      "grounding_span": "A frustrating time was when I had a bunch of scanned documents that I wanted AI to pull the name from, but it was unable"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI uncovering blind spots",
+      "valence": "negative",
+      "grounding_span": "I have seen others I work with seemingly use AI blindly"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Optimistic anticipation of AI evolution in pattern making",
+      "valence": "positive",
+      "grounding_span": "I think I will learn patterns from AI so that I can figure things out a little quicker"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Verification-oriented approach",
+      "grounding_span": "I work on tasks together. I have to verify everything I do myself"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Process optimization mindset",
+      "grounding_span": "I was always thinking 'how can I make this quicker/better?'"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,200 @@
+{
+  "transcript_id": "work_0375",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as emotional support and confidence booster",
+      "label_negative": "Solo stewing in frustration and anxiety",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I used to just stew in the frustration and it was making me hate my job and feel very alone"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as collaborative thinking partner",
+      "label_negative": "AI as mere delegation tool",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "More often is a collab, where I'm trying to either work out a plan, research something specific"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for administrative efficiency",
+      "label_negative": "Manual time-consuming admin tasks",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "boring tasks that I know could be sped up with the help of AI"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI reliability and accuracy",
+      "label_negative": "AI misunderstanding or jumbling things",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "sometimes they won't quite do what I ask, or things get jumbled"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Industry concern about AI replacing creative jobs",
+      "label_negative": "AI as harmless productivity tool",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "there is a big movement against the use of AI, particularly because it can be used so creatively"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "Personal knowledge and relationship in client representation",
+      "label_negative": "AI automating client representation",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "it requires physically knowing the person you are representing and their quirks"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Emotional wellbeing and reduced stress",
+      "grounding_span": "reduce the stress I feel"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional competence and successful advocacy",
+      "grounding_span": "I found confidence in the information and key notes that we came up with together"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Productivity and time savings",
+      "grounding_span": "sped up with the help of AI"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Protection of creative industry and client interests",
+      "grounding_span": "try to get our clients to steer clear of contracts where there are clauses that the footage or voice can be used for AI"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Job security and irreplaceability",
+      "grounding_span": "if AI could do that aspect I think that my job would be made entirely redundant"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI as confidence builder",
+      "valence": "positive",
+      "grounding_span": "the time I felt most satisfied was the situation discussed with the commercial buyout issue"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Frustration with AI misunderstanding or jumbling",
+      "valence": "negative",
+      "grounding_span": "sometimes they won't quite do what I ask, or things get jumbled"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Cautious concern about AI in creative industry",
+      "valence": "ambivalent",
+      "grounding_span": "I understand the worry and am cautious about what information I add to the system"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Positive anticipation of AI as adaptive collaborator",
+      "valence": "positive",
+      "grounding_span": "I like to think of AI as a collaborator so in the future as my business needs change it will adapt"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Emotionally-driven task delegation — uses AI to manage anxiety and frustration",
+      "grounding_span": "I can get a bit nervous when faced with confrontation and sometimes my job relies on me arguing a point so I would use AI"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative brainstorming and iterative dialogue",
+      "grounding_span": "bounce my ideas off for future business plans or just to chat things through to affirm my point"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n5",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

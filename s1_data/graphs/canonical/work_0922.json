@@ -1,0 +1,187 @@
+{
+  "transcript_id": "work_0922",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as writing assistant for drafting",
+      "label_negative": "AI missing the point in drafting",
+      "bipolarity_complete": true,
+      "grounding_span": "I prepare a rough draft of what I am trying to say and then ask AI to redraft it"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability and accuracy for product info",
+      "label_negative": "AI making mistakes in product searches",
+      "bipolarity_complete": true,
+      "grounding_span": "AI makes too many mistakes for me to be confident in the output"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as fully autonomous delegate",
+      "bipolarity_complete": true,
+      "grounding_span": "I would always collaborate with it. That's because I find AI output almost always needs checking and refining"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI accuracy in numerical tasks",
+      "label_negative": "AI ignoring specific instructions",
+      "bipolarity_complete": true,
+      "grounding_span": "some models just ignore the instructions given"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI reliability and honesty",
+      "label_negative": "AI confidently giving wrong answers",
+      "bipolarity_complete": true,
+      "grounding_span": "all the models I've used are far too keen to give an answer when it would be better to say 'I don't know'"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Effective professional communication",
+      "grounding_span": "AI helped draft the email in a tone that would encourage her to do that"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Accurate information retrieval",
+      "grounding_span": "AI makes too many mistakes for me to be confident in the output"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "AI usually gets me 80% of the way there with simple tasks"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Trust and reliability in AI outputs",
+      "grounding_span": "it would be better to say 'I don't know'"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for routine correspondence",
+      "valence": "positive",
+      "grounding_span": "AI was particularly good at drafting an email to a customer"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI inaccuracies in product searches",
+      "valence": "negative",
+      "grounding_span": "AI makes too many mistakes for me to be confident in the output"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Preference for collaborative AI use",
+      "valence": "ambivalent",
+      "grounding_span": "I would always collaborate with it. That's because I find AI output almost always needs checking and refining"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Frustration with AI errors",
+      "valence": "negative",
+      "grounding_span": "some models just ignore the instructions given"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Desire for AI to admit uncertainty",
+      "valence": "positive",
+      "grounding_span": "it would be better to say 'I don't know'"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative iterative refinement — works back and forth with AI",
+      "grounding_span": "I prepare a rough draft of what I am trying to say and then ask AI to redraft it"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based boundary setting — clear separation of AI-appropriate vs. human-only tasks",
+      "grounding_span": "I normally only use AI for writing tasks e.g. drafting correspondence or summarising information"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,192 @@
+{
+  "transcript_id": "work_0908",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as emotional support in difficult situations",
+      "label_negative": "Unfiltered personal emotion in messages",
+      "bipolarity_complete": true,
+      "grounding_span": "having AI to help proofread and rewrite to ensure messages are nice, concise, and easy to understand"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as brainstorming and idea generator",
+      "label_negative": "Solo brainstorming without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "Having AI to help brainstorm has reduced time in brainstorming sessions"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI use for sensitive procedural documents",
+      "label_negative": "Avoiding AI for sensitive documents due to security risk",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't want to risk having any information about my place of employment... in a repository"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as time-saving tool",
+      "label_negative": "Time-consuming manual effort without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "it saves time when helping with messages and brainstorming"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as professional development tool",
+      "label_negative": "Over-reliance on AI eroding skills",
+      "bipolarity_complete": true,
+      "grounding_span": "I think it is essential to maintain those skills"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Effective communication",
+      "grounding_span": "I was left with an email that was nice, while also rejecting their request"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "reduced time in brainstorming sessions and helped free up time for other tasks"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Skill maintenance and self-reliance",
+      "grounding_span": "You need to be able to confidently perform your duties"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Privacy and data security",
+      "grounding_span": "I don't want to risk having any information about my place of employment... in a repository"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for messaging variation",
+      "valence": "positive",
+      "grounding_span": "I was extremely happy with the end result"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI in chaotic meetings",
+      "valence": "negative",
+      "grounding_span": "At first, I didn't utilize AI and thought it was silly"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Changed positive view after seeing colleagues' use",
+      "valence": "positive",
+      "grounding_span": "It wasn't until I saw how much time it saves... that I finally started to use it"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Caution about AI for sensitive data",
+      "valence": "negative",
+      "grounding_span": "I prefer to do them on my own because I don't want to risk having any information... in a repository"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Commitment to maintaining skills independently",
+      "valence": "positive",
+      "grounding_span": "I think it is essential to maintain those skills"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative iterative refinement — works back and forth with AI",
+      "grounding_span": "I go back and forth collaborating on the task until I have everything the way I want it"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Privacy-conscious compartmentalization — separating AI use from identifiable data",
+      "grounding_span": "I alter my documents to create fictitious people and places before seeing help"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

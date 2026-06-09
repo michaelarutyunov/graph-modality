@@ -1,0 +1,170 @@
+{
+  "transcript_id": "work_0309",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as time-saving tool for repetitive tasks",
+      "label_negative": "AI as threat to educational integrity and teacher autonomy",
+      "bipolarity_complete": true,
+      "grounding_span": "Anything I can do to cut down on that time spent while still making sure the students are getting the content they need, I'll do it."
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "Teacher control over content decisions",
+      "label_negative": "AI making decisions about what content is taught",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't want AI making decisions about what content is taught."
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI output quality and appropriateness",
+      "label_negative": "AI output that is off-grade-level or nonsensical",
+      "bipolarity_complete": true,
+      "grounding_span": "Sometimes it doesn't write questions on the correct grade level, or sometimes it will say things that don't make sense at all."
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Institutional guidance on AI use",
+      "label_negative": "Lack of clear district expectations and training",
+      "bipolarity_complete": true,
+      "grounding_span": "It would be nice to get some guidance from admin, and also some training or professional development so we aren't guessing about what's appropriate."
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Student academic integrity with AI",
+      "label_negative": "Student misuse of AI to bypass learning",
+      "bipolarity_complete": true,
+      "grounding_span": "The most frustration comes from when you can tell that students are using AI to complete assignments, such as not reading an assigned book and instead asking AI directly each question and copying the answer."
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Work-life balance and reduced workload",
+      "grounding_span": "Sometimes I'm up until midnight writing an assignment, or grading, or entering grades into powerschool."
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Educational integrity and teacher professionalism",
+      "grounding_span": "I don't want AI making decisions about what content is taught."
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Institutional support and clarity",
+      "grounding_span": "It would be nice to get some guidance from admin, and also some training or professional development so we aren't guessing about what's appropriate."
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Student learning and genuine engagement",
+      "grounding_span": "students are using AI to complete assignments, such as not reading an assigned book and instead asking AI directly each question and copying the answer."
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Pragmatic acceptance of AI for time-saving",
+      "valence": "positive",
+      "grounding_span": "Anything I can do to cut down on that time spent while still making sure the students are getting the content they need, I'll do it."
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Resistance to AI in content decisions",
+      "valence": "negative",
+      "grounding_span": "I don't want AI making decisions about what content is taught."
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with student AI misuse",
+      "valence": "negative",
+      "grounding_span": "The most frustration comes from when you can tell that students are using AI to complete assignments"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Desire for institutional guidance",
+      "valence": "positive",
+      "grounding_span": "It would be nice to get some guidance from admin, and also some training or professional development"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement and quality checking",
+      "grounding_span": "I'll definitely check it and refine it if it isn't what I need."
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Proactive self-education seeking",
+      "grounding_span": "I guess it's time to seek out books about integrating AI into classrooms"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

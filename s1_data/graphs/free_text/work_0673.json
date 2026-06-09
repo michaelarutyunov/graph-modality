@@ -1,0 +1,149 @@
+{
+  "transcript_id": "work_0673",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as quick answer provider for legal questions",
+      "label_negative": "AI as unreliable source requiring verification",
+      "bipolarity_complete": true,
+      "grounding_span": "I would use the AI to determine an answer to a question more easily"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability and source accuracy",
+      "label_negative": "AI unreliability and incorrect information",
+      "bipolarity_complete": true,
+      "grounding_span": "it sometimes does not use reliable sources"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as privacy risk in sensitive work",
+      "label_negative": "AI integrated with secure platforms for privacy",
+      "bipolarity_complete": true,
+      "grounding_span": "it runs the risk of creating a privacy breach"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as complement to human-centered work",
+      "label_negative": "AI replacing human aspects of work",
+      "bipolarity_complete": true,
+      "grounding_span": "it cannot do the other aspects of my job"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Accuracy and reliability of information",
+      "grounding_span": "it is much more important that the information I have is accurate"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Client privacy and confidentiality",
+      "grounding_span": "it runs the risk of creating a privacy breach"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Human connection and person-centered care",
+      "grounding_span": "it is person-centred, human-to-human work"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Cautious verification-focused approach",
+      "valence": "ambivalent",
+      "grounding_span": "I do prefer to double check the information being given by the AI"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Frustration with AI unreliability",
+      "valence": "negative",
+      "grounding_span": "Sometimes the AI will provide an answer, but will be citing an unreliable source"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Openness to AI if privacy safeguards exist",
+      "valence": "positive",
+      "grounding_span": "if the AI was integrated into the secure platform that we use for case notes"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Single-query verification pattern — asks one question then verifies elsewhere",
+      "grounding_span": "Ask one question and then move on elsewhere"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Privacy-conscious boundary setting — limits AI use due to confidentiality concerns",
+      "grounding_span": "it runs the risk of creating a privacy breach"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n3",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

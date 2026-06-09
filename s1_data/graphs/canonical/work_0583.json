@@ -1,0 +1,187 @@
+{
+  "transcript_id": "work_0583",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as speed tool for discrete tasks",
+      "label_negative": "Manual time-consuming task execution",
+      "bipolarity_complete": true,
+      "grounding_span": "speeding up some of my tasks"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI errors and hallucinations",
+      "bipolarity_complete": true,
+      "grounding_span": "they are still prone to errors, and hallucinations"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as autonomous delegator",
+      "bipolarity_complete": true,
+      "grounding_span": "I tend more to collaborate with it"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI for human enrichment at work",
+      "label_negative": "AI for efficiency at human cost",
+      "bipolarity_complete": true,
+      "grounding_span": "use AI to really, truly benefit humans at work"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI requiring context explanation",
+      "label_negative": "AI in decontextualized technical tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "human-to-human, contextual work"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "speeding up some of my tasks"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional accountability",
+      "grounding_span": "I don't want my name to be associated with errors"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Meaningful and enriched work",
+      "grounding_span": "make work more fun, more enriched, worthwhile"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Human judgment and relationship skills",
+      "grounding_span": "understanding people's feelings and the 'political landscape'"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "still faster than having to find the resources online"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI errors",
+      "valence": "negative",
+      "grounding_span": "it's irritating sometimes"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Cautious approach to AI autonomy",
+      "valence": "negative",
+      "grounding_span": "I don't feel comfortable with letting AI do entire tasks for me"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "positive",
+      "grounding_span": "use AI to really, truly benefit humans at work"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Concern about job security due to AI",
+      "valence": "negative",
+      "grounding_span": "very wary of the future impacts that it could have"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Evaluative and selective acceptance of AI suggestions",
+      "grounding_span": "I'll always 'vet it' by thinking about how it might apply to my case first"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based boundary setting — clear separation of AI-appropriate vs. human-only tasks",
+      "grounding_span": "human-to-human, contextual work"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

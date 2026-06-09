@@ -1,0 +1,210 @@
+{
+  "transcript_id": "creativity_0071",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as research and ideation starter",
+      "label_negative": "AI as sole content generator",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI in the early stages of the article process"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as blank page remedy for introductions",
+      "label_negative": "Struggling with blank page without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I always struggle to come up with the first lines of an article, and staring at a blank page is not helpful"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as repetitive task accelerator",
+      "label_negative": "Manual struggle with repetitive tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I struggled to come up with varied pro/cons for each product each time"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as creative autonomy preserver in novel writing",
+      "label_negative": "AI encroaching on core creative work",
+      "bipolarity_complete": true,
+      "grounding_span": "I do not use AI for anything to do with story or plot, as I would then not feel that it was all my own work"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as minor detail unblocker in fiction",
+      "label_negative": "Getting stuck on minor details without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "Getting stuck because I can't think of a name for the local sheriff who is only in one scene"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI reliability and need for fact-checking",
+      "label_negative": "AI trustworthiness without verification",
+      "bipolarity_complete": true,
+      "grounding_span": "the need for constant fact-checking and double-checking prevents me from using them in certain ways"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI as job role transformer",
+      "label_negative": "AI as job eliminator",
+      "bipolarity_complete": true,
+      "grounding_span": "my role will perhaps be to craft the prompt for the AI to work with and to fact-check and edit once it's done"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Creative ownership and authenticity",
+      "grounding_span": "I would then not feel that it was all my own work"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "sped up my editing process considerable"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Professional adaptability and career resilience",
+      "grounding_span": "I am a flexible worker and believe that my role will change rather than be eradicated"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Positive embrace of AI as productivity tool",
+      "valence": "positive",
+      "grounding_span": "I found this method sped up my editing process considerable"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Cautious reliance on AI due to fact-checking burden",
+      "valence": "ambivalent",
+      "grounding_span": "the need for constant fact-checking and double-checking prevents me from using them in certain ways"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Optimistic acceptance of role evolution",
+      "valence": "positive",
+      "grounding_span": "I think - ethical businesses at least - will still want some human eyes on their content"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Resistance to AI in core creative work",
+      "valence": "negative",
+      "grounding_span": "I do not use AI for anything to do with story or plot"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Structured prompt engineering and iterative refinement",
+      "grounding_span": "I spent a substantial amount of time crafting the ideal prompt for the model"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based boundary setting for AI use",
+      "grounding_span": "I use AI far more in my work as a content writer than when working on my novels"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n4",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

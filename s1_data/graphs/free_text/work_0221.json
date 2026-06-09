@@ -1,0 +1,170 @@
+{
+  "transcript_id": "work_0221",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as eager junior developer in pair programming",
+      "label_negative": "AI as autonomous unreliable agent",
+      "bipolarity_complete": true,
+      "grounding_span": "My mental model of claude code is that it is an eager but very junior developer, and our conversations are like pair programming, with me calling the shots, reviewing and approving each step"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for code generation only",
+      "label_negative": "AI for written communication",
+      "bipolarity_complete": true,
+      "grounding_span": "I do not use claude to write emails, commit messages, documentation, anything like that. Code only"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability and error patterns",
+      "label_negative": "AI making inhuman errors",
+      "bipolarity_complete": true,
+      "grounding_span": "sometimes it makes mistakes a human would not"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI use as career adaptation",
+      "label_negative": "AI causing industry shrinkage and unemployment",
+      "bipolarity_complete": true,
+      "grounding_span": "my efforts using ai are sort of a 'if you can't beat em, join em'"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI for learning and professional development",
+      "label_negative": "AI replacing skill acquisition",
+      "bipolarity_complete": true,
+      "grounding_span": "I also use claude when doing 'professional development', ie learning new skills or libraries or features"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and code quality",
+      "grounding_span": "it is so effective that i super don't care"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Authentic self-expression and professional identity",
+      "grounding_span": "I have strong language and communication skills, so I do not use claude to write emails"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Career resilience and future employability",
+      "grounding_span": "to keep my job/career i need to switch my focus from learning language specific stuff to knowing these tools"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Continuous learning and skill development",
+      "grounding_span": "Working outside of my exact expertise, I actually learn and improve that area when using AI"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI's problem-solving ability",
+      "valence": "positive",
+      "grounding_span": "when claude surprised me with a solution, i was very satisfied"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI-caused bugs",
+      "valence": "negative",
+      "grounding_span": "god dammit, i vibe coded this thing and it's broken and i'm not sure how to fix it"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Bleak outlook on industry and employment",
+      "valence": "negative",
+      "grounding_span": "I think its eventually leading to a shrinking of my industry and unemployment for me"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Cautious optimism about AI-enabled app boom",
+      "valence": "mixed",
+      "grounding_span": "I hope for a 'boom' in AI enabled applications"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative step-by-step review and approval",
+      "grounding_span": "I make claude ask before each code change, and often iterate a couple times (option 3) before allowing the edit to be made"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic concealment of AI usage",
+      "grounding_span": "I also underreport how much I use it. I work remote and would prefer people not know how much I use AI"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

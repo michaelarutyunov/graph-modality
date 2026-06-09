@@ -1,0 +1,212 @@
+{
+  "transcript_id": "work_0845",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as documentation summarizer for efficiency",
+      "label_negative": "Traditional manual reading of documentation",
+      "bipolarity_complete": true,
+      "grounding_span": "instead of spending 1-2 hours reading individual web pages, an LLM can do it in seconds and give me the answer"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "Understanding underlying systems for competence",
+      "label_negative": "Using AI solutions without understanding (being a wizard)",
+      "bipolarity_complete": true,
+      "grounding_span": "I need to understand how my systems operate to act professionally with them"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as iterative problem-solving partner",
+      "label_negative": "AI as unreliable hallucinator requiring abandonment",
+      "bipolarity_complete": true,
+      "grounding_span": "I will keep a conversation going so that I keep all of the references under the same conversation name, but I still often have to abandon specific ideas or trains of thought"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as another tool in the toolbox",
+      "label_negative": "AI as a silver bullet or replacement",
+      "bipolarity_complete": true,
+      "grounding_span": "LLMs are another tool in the toolbox, so let's see what it can do with this idea or problem that I have"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Organizational standardized AI adoption",
+      "label_negative": "Siloed individual AI implementations",
+      "bipolarity_complete": true,
+      "grounding_span": "I am not creating siloed AI implementations within my department, but rather working with the organization as a whole"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as efficiency and relevance enhancer for career",
+      "label_negative": "AI as threat to job roles",
+      "bipolarity_complete": true,
+      "grounding_span": "engineers who stay in touch with AI solutions will end up being more efficient and relevant in the workforce"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "Secure localized AI with organizational knowledge",
+      "label_negative": "Insecure or generic AI without tailored access",
+      "bipolarity_complete": true,
+      "grounding_span": "secure RAG type solutions, where we can run local models that have access to all of our documentation and environment"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional competence and understanding",
+      "grounding_span": "I need to understand how my systems operate to act professionally with them"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "instead of spending 1-2 hours reading individual web pages, an LLM can do it in seconds"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Problem-solving effectiveness",
+      "grounding_span": "I don't know how long or if I ever would have found this on my own"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Career relevance and adaptability",
+      "grounding_span": "engineers who stay in touch with AI solutions will end up being more efficient and relevant in the workforce"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Security and organizational integrity",
+      "grounding_span": "without fear of exposing anything or compromising security"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Satisfaction with AI as problem-solving aid",
+      "valence": "positive",
+      "grounding_span": "I had a particularly satisfying moment with a major LLM"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Frustration with AI hallucination and abandonment",
+      "valence": "negative",
+      "grounding_span": "LLMs will often hallucinate commands or menu options that don't exist"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Pragmatic acceptance of AI limitations",
+      "valence": "mixed",
+      "grounding_span": "If it can't find anything, I still have to figure it out on my own, and that's okay"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Optimism about future secure localized AI",
+      "valence": "positive",
+      "grounding_span": "One thing I would like to see more of is secure RAG type solutions"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Two-step verification approach: understand before applying",
+      "grounding_span": "I need to first ask the model how the system works, before asking for a solution"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement with solo work breaks",
+      "grounding_span": "I will work on it solo for a bit, then come back with a more refined prompt"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n13",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,165 @@
+{
+  "transcript_id": "work_0484",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as communication condenser for presentations",
+      "label_negative": "Verbose self-generated summaries",
+      "bipolarity_complete": true,
+      "grounding_span": "Using AI to shorten it while keeping the key points has made it so that my presentations go smoother"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI availability and accessibility",
+      "label_negative": "AI not readily available when needed",
+      "bipolarity_complete": true,
+      "grounding_span": "It does not feel like AI as readily available as I need though too"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as resume tailoring tool",
+      "label_negative": "Generic one-size-fits-all resume",
+      "bipolarity_complete": true,
+      "grounding_span": "I was able to create a few different iterations that were geared towards different jobs"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as planning and organizing assistant",
+      "label_negative": "Manual planning without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "planning/organizing my work for better time management"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as tool not replacement",
+      "label_negative": "AI replacing human skills",
+      "bipolarity_complete": true,
+      "grounding_span": "used as a tool and not completely replace me"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Effective communication and audience engagement",
+      "grounding_span": "presentations go smoother and do not bore the listeners"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional advancement through tailored applications",
+      "grounding_span": "geared towards different jobs I was applying for"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and time management",
+      "grounding_span": "planning/organizing my work for better time management"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Skill preservation and human autonomy",
+      "grounding_span": "not completely replace me in those tasks"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for resume creation",
+      "valence": "positive",
+      "grounding_span": "I have used AI to create resumes in the past and it has been amazing!"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI unavailability",
+      "valence": "negative",
+      "grounding_span": "It does not feel like AI as readily available as I need"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Optimistic openness to future AI use",
+      "valence": "positive",
+      "grounding_span": "It is something I will try more!"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Confidence in AI as tool not replacement",
+      "valence": "positive",
+      "grounding_span": "used as a tool and not completely replace me"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through back-and-forth editing",
+      "grounding_span": "ask for the AI to shorten it. Then I would ask for some edits"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Gradual integration and exploration of AI",
+      "grounding_span": "I think using it to plan out my week with my different tasks for the week is the start"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,182 @@
+{
+  "transcript_id": "work_0314",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as autonomous delegator without human input",
+      "bipolarity_complete": true,
+      "grounding_span": "I usually like to collaborate and add my own insight to what the AI generates"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI alignment with educational standards and rigor",
+      "label_negative": "AI misalignment with required standards",
+      "bipolarity_complete": true,
+      "grounding_span": "targeted lessons that are aligned to New York State learning standards"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI-generated student work",
+      "label_negative": "AI failing to produce effective teaching examples",
+      "bipolarity_complete": true,
+      "grounding_span": "I used AI to generate a short story as an exemplar"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI integration in teaching profession",
+      "label_negative": "AI exclusion from teaching practice",
+      "bipolarity_complete": true,
+      "grounding_span": "The school culture promotes the integration of technology and AI into teacher development"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI role in teaching irreplaceable by AI",
+      "label_negative": "AI replacing human teacher role",
+      "bipolarity_complete": true,
+      "grounding_span": "AI can never be a nurturing and caring watchful teacher in a physical classroom"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI for professional communication",
+      "label_negative": "Manual handling of professional communication and planning",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI to help me write professional emails, to plan lessons"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Student progress and learning",
+      "grounding_span": "they had a better understanding of what was expected"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Teacher professional growth",
+      "grounding_span": "made me feel very comfortable integrating AI into my practice and pedagogy"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Human connection and relationship",
+      "grounding_span": "understand my students' cultural background and references"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI as exemplar generator",
+      "valence": "positive",
+      "grounding_span": "this left me feeling particularly satisfied"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Comfort with AI integration due to school culture",
+      "valence": "positive",
+      "grounding_span": "made me feel very comfortable integrating AI into my practice and pedagogy"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Confidence in human irreplaceability in teaching",
+      "valence": "positive",
+      "grounding_span": "I don't feel threatened at all by AI"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Preference for grading manually due to practical and cultural reasons",
+      "valence": "negative",
+      "grounding_span": "I prefer to grade things myself"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative iterative refinement — works back and forth with AI",
+      "grounding_span": "I usually like to collaborate and add my own insight to what the AI generates"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Contextual adaptation — tailors AI suggestions to specific classroom realities",
+      "grounding_span": "I also added in my own ideas based on what programs and resources I have"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

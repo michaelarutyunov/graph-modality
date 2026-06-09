@@ -1,0 +1,210 @@
+{
+  "transcript_id": "work_0772",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as Excel formula assistant",
+      "label_negative": "Manual reliance on basic Excel knowledge",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "the rise of AI has allowed me to use more complex functions that I had never heard of before"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as time-saving tool",
+      "label_negative": "Manual time-consuming data processing",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "There's probably a macro or something that can save me a lot of time with this"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI errors and debugging frustration",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "The formula returns a bunch of # symbols"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as one-shot solution provider",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I will happily collaborate until it is resolved"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI for complex tasks vs. self for simple tasks",
+      "label_negative": "AI for all tasks indiscriminately",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "If it only concerns a few rows, or is something exceedingly simple... I will do it myself"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI integration into existing software",
+      "label_negative": "AI limited to common tools like Excel",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I hope I could use it to discover functions in SAP the way I have been able to with Excel"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "managed to complete it after 30 minutes of trial and error with an AI"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional competence",
+      "grounding_span": "I have confidence in being able to articulate the situation in a way that the AI will understand"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Personal autonomy and skill preservation",
+      "grounding_span": "I will do it myself"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "It was fantastic, and I knew at that moment that AI could help me do almost anything"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Initial self-doubt and anxiety",
+      "valence": "negative",
+      "grounding_span": "I had a slight feeling of 'Maybe my Excel is the wrong version'... anxious thoughts related to my potential incompetence"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Resistance to AI for personal communication",
+      "valence": "positive",
+      "grounding_span": "I no longer have any doubts about whether it will get sorted out or not"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Frustration with iterative collaboration",
+      "valence": "positive",
+      "grounding_span": "If it doesn't pan out immediately, no big deal, I will happily collaborate until it is resolved"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Skepticism about AI for non-standardized systems",
+      "valence": "negative",
+      "grounding_span": "My 'super dumbed down' approach to explaining my objective would not work as well in such a use-case"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Systematic decomposition and contextualization",
+      "grounding_span": "I'll start from a 'zoomed out' perspective of the entire task before delving into the minutiae"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement and testing",
+      "grounding_span": "I will let it know 'The formula returns a bunch of # symbols' or 'Nothing happened' and we take it from there"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

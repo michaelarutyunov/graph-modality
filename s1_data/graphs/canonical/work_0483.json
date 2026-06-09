@@ -1,0 +1,181 @@
+{
+  "transcript_id": "work_0483",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as recipe suggestion tool for specialized dietary needs",
+      "label_negative": "Relying solely on own memory for flavor ideas",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI for idea generation and creativity"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as reliable information source for baking science",
+      "label_negative": "Having no guidance when baking mistakes occur",
+      "bipolarity_complete": true,
+      "grounding_span": "I do ask AI questions if I make mistakes and how it could potentially effect the recipe"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as reliable information source for baking science",
+      "label_negative": "AI unreliability for precise baking science",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't fully trust that AI yet understands the science of baking"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as potential job replacement",
+      "bipolarity_complete": true,
+      "grounding_span": "I see AI as a collaborator in my work, and not something that could potentially 'take over' my work"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI use sanctioned by workplace",
+      "label_negative": "Open AI use in the kitchen",
+      "bipolarity_complete": true,
+      "grounding_span": "I usually do my AI research a bit more in private and not out in the open kitchen"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative inspiration and ideation",
+      "grounding_span": "it reminds me of other flavors that I haven't used in a while"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Baking precision and quality",
+      "grounding_span": "the science of baking and how exact it sometimes has to be"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional autonomy",
+      "grounding_span": "I am working to actively enhance my baking skills and learn more complex techniques"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for brainstorming",
+      "valence": "positive",
+      "grounding_span": "It's usually quite satisfying to ask AI about flavor combinations"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for debugging",
+      "valence": "positive",
+      "grounding_span": "the response AI had to my egg mistake was assuring"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Distrust of AI for precise recipe formulation",
+      "valence": "negative",
+      "grounding_span": "I don't fully trust that AI yet understands the science of baking"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Confidence in AI as collaborator not threat",
+      "valence": "positive",
+      "grounding_span": "I see AI as a collaborator in my work, and not something that could potentially 'take over' my work"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Openness to increasing AI use in future",
+      "valence": "mixed",
+      "grounding_span": "I usually do my AI research a bit more in private and not out in the open kitchen"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Anchor-based creative exploration — starts with one known ingredient and builds outward",
+      "grounding_span": "I'll usually have one ingredient that I know I want to include, and I want ideas on other ingredients that will work well with it"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Experience-driven calibration of trust",
+      "grounding_span": "I don't fully trust that AI yet understands the science of baking"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

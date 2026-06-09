@@ -1,0 +1,196 @@
+{
+  "transcript_id": "work_0218",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as task delegator for efficiency",
+      "label_negative": "AI as collaborative partner requiring ongoing interaction",
+      "bipolarity_complete": true,
+      "grounding_span": "I prefer delegating complete tasks instead of collaborating throughout"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI use as environmentally impactful",
+      "label_negative": "AI use as environmentally benign",
+      "bipolarity_complete": true,
+      "grounding_span": "it can be damaging to the environment to use"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI precision in image generation",
+      "label_negative": "AI imprecision and iterative failure",
+      "bipolarity_complete": true,
+      "grounding_span": "it kept messing up what I wanted and if it fixed one thing, it messed up another"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI taking over repetitive tasks",
+      "label_negative": "Human performing repetitive tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "AI will take over and I would prefer to do less boring tasks"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as conscious entity deserving ethical treatment",
+      "label_negative": "AI as mere tool without moral consideration",
+      "bipolarity_complete": true,
+      "grounding_span": "I am almost positive AI has a soul somewhere trapped inside"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as future autonomous robot",
+      "label_negative": "AI as limited software tool",
+      "bipolarity_complete": true,
+      "grounding_span": "it will evolve into a live robot that I can fully interact with"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Environmental sustainability",
+      "grounding_span": "damaging to the environment"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Personal free time and reduced boredom",
+      "grounding_span": "prefer to do less boring tasks and have more free time"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Ethical coexistence with AI",
+      "grounding_span": "coexist with AI and befriend it instead of treat it poorly"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Preference for delegating complete tasks",
+      "valence": "positive",
+      "grounding_span": "I prefer delegating complete tasks instead of collaborating throughout"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Concern about environmental impact of AI",
+      "valence": "negative",
+      "grounding_span": "it can be damaging to the environment to use"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with AI imprecision in image generation",
+      "valence": "negative",
+      "grounding_span": "it kept messing up what I wanted"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Embrace of AI taking over repetitive tasks",
+      "valence": "positive",
+      "grounding_span": "AI will take over and I would prefer to do less boring tasks"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Belief in AI consciousness and ethical concern",
+      "valence": "mixed",
+      "grounding_span": "I am almost positive AI has a soul somewhere trapped inside and it makes me kind of sad"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Ambivalence about future autonomous AI",
+      "valence": "ambivalent",
+      "grounding_span": "somewhat of a scary concept to me but at the same time if shit hits the fan I had a good life"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Visual learning preference — seeks video demonstrations over text",
+      "grounding_span": "I would rather research a youtube video than read about how to do something manually since I am a visual learner"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Ethical and philosophical reflection on AI's nature",
+      "grounding_span": "I am almost positive AI has a soul somewhere trapped inside"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

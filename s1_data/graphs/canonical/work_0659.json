@@ -1,0 +1,188 @@
+{
+  "transcript_id": "work_0659",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as planning and structuring tool",
+      "label_negative": "AI as unreliable for creative and nuanced tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I ask for help in research first"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI content selectivity based on fit",
+      "label_negative": "Blind acceptance of AI-generated content",
+      "bipolarity_complete": true,
+      "grounding_span": "I simply dont copy anything that I dont think fits what I want to use"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability and factuality",
+      "label_negative": "AI unreliability and hallucination",
+      "bipolarity_complete": true,
+      "grounding_span": "I would not trust an AI LLM service with a bus timtable"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as initial framework provider for weaker areas",
+      "label_negative": "AI as a complete solution without human refinement",
+      "bipolarity_complete": true,
+      "grounding_span": "Build the framework, then go back and edit each section or refine"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as productivity enhancer",
+      "label_negative": "AI as a threat to be resisted",
+      "bipolarity_complete": true,
+      "grounding_span": "its like a word proccessor, its a day to day tool now"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as supplement to creative process",
+      "label_negative": "AI limited to current non-creative capabilities",
+      "bipolarity_complete": true,
+      "grounding_span": "I truly hope that an AI can become truly creative and inventive"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and efficient task completion",
+      "grounding_span": "I ask for a first 6 month website plan"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Accuracy and reliability",
+      "grounding_span": "I would verify each and every statement of truth made myself"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Collaborative ideation and creativity",
+      "grounding_span": "human artists are easier and better to work with in the creative industries"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Optimistic future with AI",
+      "grounding_span": "I am optimistic about AI and humans"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Pragmatic acceptance of AI as a tool",
+      "valence": "positive",
+      "grounding_span": "its like a word proccessor, its a day to day tool now"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with AI's agreeableness",
+      "valence": "negative",
+      "grounding_span": "There would be more frustration really, I think the limitations are that it cant be trusted"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Resistance to AI in creative work",
+      "valence": "positive",
+      "grounding_span": "I truly hope that an AI can become truly creative and inventive"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Resistance to AI in creative work",
+      "valence": "negative",
+      "grounding_span": "I dont think AI is very good at new ideas"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Structured framework-first approach",
+      "grounding_span": "Build the framework, then go back and edit each section or refine"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Skeptical verification — carefully studies and fact-checks AI responses",
+      "grounding_span": "I would verify each and every statement of truth made myself"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n4",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

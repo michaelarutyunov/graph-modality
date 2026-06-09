@@ -1,0 +1,219 @@
+{
+  "transcript_id": "work_0042",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as time-saving content generation tool",
+      "label_negative": "Manual content creation requiring staging and recording",
+      "bipolarity_complete": true,
+      "grounding_span": "I save time not having to stage and record my own videos/take my own photos"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as strategic analytics assistant",
+      "label_negative": "AI unable to provide actionable analytics",
+      "bipolarity_complete": true,
+      "grounding_span": "it would be able to tell me the optimum time to post content, which content to post, who to target"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as creative brainstorming partner",
+      "label_negative": "AI as purely transactional tool",
+      "bipolarity_complete": true,
+      "grounding_span": "I had a conversation with a chatbot and we bounced ideas back and forth"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Human-written captions for authentic voice",
+      "label_negative": "AI-generated text that stands out as artificial",
+      "bipolarity_complete": true,
+      "grounding_span": "I prefer to write my own captions and comments, I feel that whenever I use an AI generated piece of text it stands out like a sore thumb"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI-generated image realism",
+      "label_negative": "AI-generated images looking artificial or anachronistic",
+      "bipolarity_complete": true,
+      "grounding_span": "I often have trouble getting the generated images to look realistic, they often look like a picture instead of a photo"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as low-cost startup enabler",
+      "label_negative": "High-cost traditional content creation requiring equipment",
+      "bipolarity_complete": true,
+      "grounding_span": "It also allows for a low cost startup. You may need to purchase a subscription, but you don't need to purchase a high quality camera, studio space, props"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI as creative assistant across devices",
+      "label_negative": "AI as limited to single-device tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "a personal AI account will be like an assistant. So it's on my phone, smart watch, PC"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "I save time not having to stage and record my own videos"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Profitability and business growth",
+      "grounding_span": "make it quicker and, therefore, more profitable"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Creative authenticity and human touch",
+      "grounding_span": "I think I can hook people more efficiently with that human-touch"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Creative inspiration and ideation",
+      "grounding_span": "I had an A4 page of ideas that will last me weeks"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Value and recognition of content creators",
+      "grounding_span": "it would somewhat decrease the value of what content creators do"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Satisfaction with AI for content generation",
+      "valence": "positive",
+      "grounding_span": "It helps me massively because I save time"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Frustration with AI analytics limitations",
+      "valence": "negative",
+      "grounding_span": "At present I have not found a model that can do this for me"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Frustration with AI image generation inaccuracies",
+      "valence": "negative",
+      "grounding_span": "the model was constantly adding wall-mounted televisions or other modern references"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Satisfaction with AI as creative partner",
+      "valence": "positive",
+      "grounding_span": "I had an A4 page of ideas that will last me weeks"
+    },
+    {
+      "id": "n17",
+      "type": "Stance",
+      "label": "Resistance to AI replacing human creativity entirely",
+      "valence": "negative",
+      "grounding_span": "I don't think I support that"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic boundary-setting between AI and human tasks",
+      "grounding_span": "I prefer to write my own captions and comments"
+    },
+    {
+      "id": "n19",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through back-and-forth prompting",
+      "grounding_span": "I often need to parrot their idea back to them with some specifics"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n13",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n17",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n4",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n19",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

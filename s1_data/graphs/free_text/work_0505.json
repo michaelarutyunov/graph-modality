@@ -1,0 +1,181 @@
+{
+  "transcript_id": "work_0505",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative partner in task completion",
+      "label_negative": "AI as autonomous task delegator",
+      "bipolarity_complete": true,
+      "grounding_span": "Always collaborate through a task. It's important for me to feel like I actually did the task with help. I don't like letting AI completely do my work"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as mental load reducer for planning",
+      "label_negative": "AI as source of impractical or irrelevant suggestions",
+      "bipolarity_complete": true,
+      "grounding_span": "AI has made some good, detailed daily and weekly training plans for me that need minimal adjustment. Really helps take the mental load off"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as administrative assistant for nuisance tasks",
+      "label_negative": "AI as encroaching on core athletic performance",
+      "bipolarity_complete": true,
+      "grounding_span": "AI takes over the tasks I consider a nuisance and would usually be delegated to another person entirely"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as visual/graphic design tool for sponsorship",
+      "label_negative": "AI as inadequate for visual design tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I'd hope AI is able to create better visuals and graphic designs. Securing sponsorships is a major part of the work as an athlete"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Personal ownership of reflective debrief reports",
+      "label_negative": "AI-generated debrief reports",
+      "bipolarity_complete": true,
+      "grounding_span": "Some other work I prefer to do on my own are debrief reports from a training day or regatta. It's important to me that all these reports are my own thoughts"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Personal agency and ownership of work",
+      "grounding_span": "It's important for me to feel like I actually did the task with help"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Mental efficiency and reduced cognitive load",
+      "grounding_span": "Really helps take the mental load off so I can just focus on going out and training"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Athletic performance focus",
+      "grounding_span": "My role as an athlete is to perform on the water"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Effective sponsorship acquisition",
+      "grounding_span": "Securing sponsorships is a major part of the work as an athlete"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Authentic self-reflection and learning",
+      "grounding_span": "It's also an important part of the learning process for me to actually critically think about the day and process what happened"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Preference for collaboration over delegation",
+      "valence": "positive",
+      "grounding_span": "Always collaborate through a task. It's important for me to feel like I actually did the task with help"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI for planning",
+      "valence": "positive",
+      "grounding_span": "AI has made some good, detailed daily and weekly training plans for me that need minimal adjustment"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Frustration with AI for visual design",
+      "valence": "negative",
+      "grounding_span": "The ai model spent over half an hour generating a sponsorship package and when it was finally done, all it outputted was a single PDF page of black and white text"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Resistance to AI for reflective tasks",
+      "valence": "negative",
+      "grounding_span": "Some other work I prefer to do on my own are debrief reports from a training day or regatta"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through back-and-forth",
+      "grounding_span": "I usually go back and forth. Sometimes the suggestions don't make any sense practically and I have to ask the model to adjust"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Task boundary setting based on personal ownership",
+      "grounding_span": "It's important to me that all these reports are my own thoughts. It's also an important part of the learning process"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

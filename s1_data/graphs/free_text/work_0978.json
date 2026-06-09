@@ -1,0 +1,167 @@
+{
+  "transcript_id": "work_0978",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as inspiration and creativity booster",
+      "label_negative": "AI as source of inaccuracy and misdirection",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI mostly for inspiration, summarisation and creativity"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as collaborative tool requiring human oversight",
+      "label_negative": "AI as autonomous standalone tool",
+      "bipolarity_complete": true,
+      "grounding_span": "I always use it as a helpful tool rather than a standalone tool, I always adapt what it gives me rather than just trusting it"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI accuracy in transcription and factual details",
+      "label_negative": "AI hallucination and mishearing",
+      "bipolarity_complete": true,
+      "grounding_span": "many times the AI will get the transcript wrong as it doesn't 'hear' the same as a human"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI creative vision alignment",
+      "label_negative": "AI inability to steer toward user's creative vision",
+      "bipolarity_complete": true,
+      "grounding_span": "if the model doesn't provide you with something you like, it's hard to steer it away"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Human emotional and experiential creativity vs AI",
+      "label_negative": "AI replicating human creativity",
+      "bipolarity_complete": true,
+      "grounding_span": "creatively wise, it does not seem to get the emotional or creative aspects quite the same"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative authenticity and originality",
+      "grounding_span": "What makes humans unique is their originality"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and time saving",
+      "grounding_span": "I will use AI to summarise certain parts for me so I can gauge a generalised understanding first of all"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Accuracy and truthfulness",
+      "grounding_span": "if I didn't double check myself I would have handed in the work wrong"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI creative inspiration",
+      "valence": "positive",
+      "grounding_span": "One thing I felt particularly satisifed with is the creativity that some models can provide"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI inaccuracies",
+      "valence": "negative",
+      "grounding_span": "the model has misheard a place that was mentioned and gave me an incorrect meaning and acronym"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Optimism about future AI collaboration",
+      "valence": "positive",
+      "grounding_span": "I think it can only get better"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement and verification",
+      "grounding_span": "I always adapt what it gives me rather than just trusting it"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Comparative human-AI reasoning",
+      "grounding_span": "AI is smarter than a human as it is built to process a shit tonne of information but creatively wise, it does not seem to get the emotional or creative aspects"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n4",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

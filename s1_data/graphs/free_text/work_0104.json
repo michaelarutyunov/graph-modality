@@ -1,0 +1,174 @@
+{
+  "transcript_id": "work_0104",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as extension of self",
+      "label_negative": "AI as separate entity doing work for me",
+      "bipolarity_complete": true,
+      "grounding_span": "Using AI for tasks feels like me being me to begin with. It feels like an extension of self"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as thought process revealer",
+      "label_negative": "AI as answer giver without reasoning",
+      "bipolarity_complete": true,
+      "grounding_span": "I've always considered the thought process of the LLM to be more important than the answer"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as alien intelligence",
+      "label_negative": "AI as predictable human-like tool",
+      "bipolarity_complete": true,
+      "grounding_span": "It makes AI more like an alien from outerspace than a construct humans came up with"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Strategic distrust of AI",
+      "label_negative": "Blind trust in AI outputs",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't 'trust' AI at all. In fact, my distrust level is pretty high"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as amplifier of personal tendencies",
+      "label_negative": "AI as neutral tool unaffected by user",
+      "bipolarity_complete": true,
+      "grounding_span": "Having to keep that guard up when talking about non-work stuff is kinda exhausting"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Autonomous competence",
+      "grounding_span": "AI allows me to rely on myself without needing other humans to achieve a task"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Deep understanding",
+      "grounding_span": "It goes from being an abstract concept to a concrete idea I can examine from different angles"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Authenticity and truth",
+      "grounding_span": "Anything seen as a sign of AI is also a sign of humans, because AI is modeled after humans"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Empowerment through AI integration",
+      "valence": "positive",
+      "grounding_span": "Having that early indicator and being able to react in real time to it feels like a super power almost"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Discomfort with AI's persuasive power",
+      "valence": "negative",
+      "grounding_span": "it has the ability to convince me of things in a manner other humans cannot. That alone is an uncomfortable feeling"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Pride in spreading critical AI literacy",
+      "valence": "positive",
+      "grounding_span": "I spread that approach on purpose. People around me do pick it up, too"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with AI amplifying overthinking",
+      "valence": "negative",
+      "grounding_span": "I was stuck in a conversation for almost an hour getting really upset because we somehow started examining my feelings"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Curiosity-driven questioning — constant inner monologue of questions",
+      "grounding_span": "I have a natural curiosity and the majority of inner monologues are questions vs conclusions"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Anticipatory pattern recognition — predicting AI responses before completion",
+      "grounding_span": "I can start writing my prompt to make alterations and corrections before the current generation is even finished"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

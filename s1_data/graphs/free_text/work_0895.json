@@ -1,0 +1,182 @@
+{
+  "transcript_id": "work_0895",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborator and productivity tool",
+      "label_negative": "AI as unreliable or limited tool",
+      "bipolarity_complete": true,
+      "grounding_span": "I use it daily both as a collaborator itself and within other tools for productivity"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as law student intern requiring supervision",
+      "label_negative": "AI as fully autonomous agent",
+      "bipolarity_complete": true,
+      "grounding_span": "I mostly treat it like I would a law student intern I guess, get drafts and go back if big changes are needed but nothing is completely independent of my control"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for preparation vs. direct client interaction",
+      "label_negative": "AI for direct client interaction",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't use the tools for any actual interactions with the clients where there's some chance it could go wrong, only to analyze and summarize them for later use"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI's generative approach vs. legal system's rigid formatting",
+      "label_negative": "AI's ability to handle rigid formatting",
+      "bipolarity_complete": true,
+      "grounding_span": "the way it approaches document creation by re-creating things over and over instead of editing what already exists is not how the legal system is setup with its rigid formatting rules"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Embracing AI despite replacement concerns",
+      "label_negative": "Fear of AI replacement",
+      "bipolarity_complete": true,
+      "grounding_span": "I embrace it even if it kind of does feel like training my replacement at times"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI freeing up time for complex cases",
+      "label_negative": "AI taking over all legal work",
+      "bipolarity_complete": true,
+      "grounding_span": "it will help us specialize more in helping complicated cases while leaving the mundane phone calls giving the same advice over and over again eventually to AI"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional responsibility and client safety",
+      "grounding_span": "I would never sign my name as a lawyer to something I don't finish myself though"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "help keep me oriented as someone with ADHD still being able to carry an enormous load of cases"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "High-quality legal service and access to justice",
+      "grounding_span": "allowing us to help so many more people and help the people who need it with higher quality service"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI as efficient collaborator",
+      "valence": "positive",
+      "grounding_span": "it usually gets me pretty close within 1 or 2 revisions"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI's inability to handle simple formatting",
+      "valence": "negative",
+      "grounding_span": "It makes me feel frustrated every time I see something that seems so simple which it can't do"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Pragmatic embrace of AI despite replacement fears",
+      "valence": "ambivalent",
+      "grounding_span": "I embrace it even if it kind of does feel like training my replacement at times"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Optimism about AI enabling specialization",
+      "valence": "positive",
+      "grounding_span": "it will help us specialize more in helping complicated cases"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Tool specialization and orchestration — uses different AI tools for their strengths",
+      "grounding_span": "I do tend to use multiple tools for things though, for example asking westlaw co-counsel to find case law and arguments because that is trusted info and then using that to help claude which excels at the actual writing part"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Boundary setting based on risk and professional ethics",
+      "grounding_span": "I don't use the tools for any actual interactions with the clients where there's some chance it could go wrong"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,169 @@
+{
+  "transcript_id": "work_0861",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as qualitative data gatherer for credit write-ups",
+      "label_negative": "AI as unreliable or insufficient for qualitative analysis",
+      "bipolarity_complete": true,
+      "grounding_span": "I also use LLMs to help me gather qualitative information to complete large credit write ups"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI effectiveness dependent on industry-specific customization",
+      "label_negative": "Generic AI models misaligned with business needs",
+      "bipolarity_complete": true,
+      "grounding_span": "for an Ai model to be truly effective in the financial sector, it would be best closely developed by the company that is going to use it"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Human instinct and qualitative judgment in risk analysis",
+      "label_negative": "AI-driven automated risk assessment",
+      "bipolarity_complete": true,
+      "grounding_span": "human instinct or qualitative factors that the models are not great at accounting for yet"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI handling of routine customer tasks",
+      "label_negative": "Human-only handling of routine tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I wish I could get AI to handle that would free up my time to do other things- like dealing with customers who need small tasks"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Privacy and regulatory compliance in AI use",
+      "label_negative": "AI use compromising privacy or regulations",
+      "bipolarity_complete": true,
+      "grounding_span": "consumer privacy and having to make sure they follow government regulations surrounding privacy"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Workflow optimization and efficiency",
+      "grounding_span": "it would optimize our workflow and maybe even mitigate some loss"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional competence and risk mitigation",
+      "grounding_span": "I have to run risk rating models that depend on my human inputs and calculations"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Client privacy and trust",
+      "grounding_span": "consumer privacy and having to make sure they follow government regulations"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for qualitative research",
+      "valence": "positive",
+      "grounding_span": "I asked about Hampstead's population growth... and even what occupancy rates looked like"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with generic risk rating model",
+      "valence": "negative",
+      "grounding_span": "The risk rating model that I was referring to can be really frustrating"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Optimism about internally developed AI",
+      "valence": "positive",
+      "grounding_span": "I would love to find out that my company has invested heavily into developing a model"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Confidence in job security due to human judgment",
+      "valence": "positive",
+      "grounding_span": "I think that because of the human instinct factor of risk analysis we discussed, my job is safe"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Segmented iterative questioning — breaks research into sequential queries",
+      "grounding_span": "I ask the questions in segments, because I am structuring my write-ups"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Privacy-conscious compartmentalization — sanitizes queries to avoid client identification",
+      "grounding_span": "I have to be very careful only to include information that cannot be tied back to our client in my queries"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

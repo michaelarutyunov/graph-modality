@@ -1,0 +1,161 @@
+{
+  "transcript_id": "work_0689",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as tool for lesson planning",
+      "label_negative": "AI writing exercises directly",
+      "bipolarity_complete": true,
+      "grounding_span": "quickly create a basic structure for a class lesson plan that I then fill in with my own exercises"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as professional polish tool",
+      "label_negative": "AI for creative or technical dance advice",
+      "bipolarity_complete": true,
+      "grounding_span": "use AI to check the grammar/spelling/flow of things I need to write"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI trustworthiness and verification",
+      "label_negative": "AI trustworthiness for unverifiable expertise",
+      "bipolarity_complete": true,
+      "grounding_span": "I'm really hesitant to trust the AI to develop progressions of exercises"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as writing assistant",
+      "label_negative": "AI as replacement for human teaching",
+      "bipolarity_complete": true,
+      "grounding_span": "I see it mostly as a helper for writing/editing/organizing"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Professional autonomy",
+      "grounding_span": "I really didn't like that (it doesn't know my students!)"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Student well-being and mental health",
+      "grounding_span": "this could be really damaging to students"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and cost reduction",
+      "grounding_span": "just helps me stay organized in the classroom"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Satisfaction with AI for design tasks",
+      "valence": "positive",
+      "grounding_span": "The basic structure is usually ok"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Distrust of AI reliability",
+      "valence": "negative",
+      "grounding_span": "I'm really hesitant to trust the AI to develop progressions of exercises"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Reluctance to use AI for writing",
+      "valence": "negative",
+      "grounding_span": "the text was overly flowery and it added details that weren't in the notes"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Optimism about expanding AI use in lesson planning",
+      "valence": "positive",
+      "grounding_span": "I could see myself using it more with my lesson planning/curriculum design"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement with limited back-and-forth",
+      "grounding_span": "I tend to go back and forth a few rounds to perfect it"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based boundary setting",
+      "grounding_span": "I draw a clear line between structural tasks versus the expertise-based content"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

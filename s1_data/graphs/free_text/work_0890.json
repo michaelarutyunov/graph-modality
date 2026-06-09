@@ -1,0 +1,169 @@
+{
+  "transcript_id": "work_0890",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as debugging assistant for large projects",
+      "label_negative": "AI as unreliable source of fixes",
+      "bipolarity_complete": true,
+      "grounding_span": "AI to write and fix code... debugging errors in large projects"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as context-dependent collaborator requiring curated information",
+      "label_negative": "AI overwhelmed by unnecessary information",
+      "bipolarity_complete": true,
+      "grounding_span": "make sure that the AI has access to the code, terminal output... not feed any unnecessary information"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Human control over high-level architecture and integration",
+      "label_negative": "AI involvement in high-level design and integration",
+      "bipolarity_complete": true,
+      "grounding_span": "Design of high level architecture... 100% done manually"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as persistent but sometimes misleading problem solver",
+      "label_negative": "AI as accurate and reliable problem solver",
+      "bipolarity_complete": true,
+      "grounding_span": "AI rarely ever get things right the first time, but almost always goes in the correct direction"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI conversation continuity for team knowledge sharing",
+      "label_negative": "Isolated AI conversations without shared context",
+      "bipolarity_complete": true,
+      "grounding_span": "we know how to continue their AI conversations to fix their problems"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and time savings",
+      "grounding_span": "saved a significant amount of time"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "System integrity and consistency",
+      "grounding_span": "ensure that all team members working on different software packages are on the same page"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Team coordination and shared understanding",
+      "grounding_span": "we know how to continue their AI conversations to fix their problems"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for debugging efficiency",
+      "valence": "positive",
+      "grounding_span": "saved a significant amount of time"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI misleading during debugging",
+      "valence": "negative",
+      "grounding_span": "AI made me very frustrated... AI repeatedly pointed to our configuration file"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Preference for human control over architecture and integration",
+      "valence": "negative",
+      "grounding_span": "Design of high level architecture... 100% done manually"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Positive view of team AI practices for continuity",
+      "valence": "positive",
+      "grounding_span": "we know how to continue their AI conversations to fix their problems"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative back-and-forth problem decomposition",
+      "grounding_span": "go back and forth multiple times"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Systematic conversation structuring for knowledge reuse",
+      "grounding_span": "rules on when to start a new conversation with and when to continue an existing conversation"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

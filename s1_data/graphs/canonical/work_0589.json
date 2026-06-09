@@ -1,0 +1,167 @@
+{
+  "transcript_id": "work_0589",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as debugging assistant",
+      "label_negative": "AI as unreliable source requiring full verification",
+      "bipolarity_complete": true,
+      "grounding_span": "I'll ask it the question and give what I already have and then ask how to fix an issue"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as junior colleague with mistakes",
+      "label_negative": "AI as first resort without prior effort",
+      "bipolarity_complete": true,
+      "grounding_span": "If I am stuck for a while and don't know how to handle programming it myself and my colleagues also do not have good suggestions then I will ask AI"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as code analysis and error detection tool",
+      "label_negative": "AI introducing new errors in code",
+      "bipolarity_complete": true,
+      "grounding_span": "Cleaning up the code for handling line pays and pays in general by replacing all the series of if then else statements with a cleaner method"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as enhancer of mathematical expertise",
+      "label_negative": "AI as replacement for mathematical skills",
+      "bipolarity_complete": true,
+      "grounding_span": "I think that it will always be a tool a trained mathematician uses"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as supplement to creative process",
+      "label_negative": "AI limited to simple coding tasks only",
+      "bipolarity_complete": true,
+      "grounding_span": "potential in some of the creative aspects with coming up with ideas for bonus games or other game features"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Code quality and correctness",
+      "grounding_span": "making it much more difficult to make mistakes when using the code for future games"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional autonomy",
+      "grounding_span": "I do think its important to maintain those programming skills so I can aid the AI in those steps"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Innovation in game design",
+      "grounding_span": "coming up with ideas for bonus games or other game features based on parameters it gets fed"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "It was a combination of the cleaner code and the process"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Cautious reliance on AI",
+      "valence": "ambivalent",
+      "grounding_span": "If I am stuck for a while and don't know how to handle programming it myself and my colleagues also do not have good suggestions then I will ask AI"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Resistance to AI in creative work",
+      "valence": "positive",
+      "grounding_span": "potential in some of the creative aspects with coming up with ideas for bonus games"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Hierarchical problem-solving: self first, then colleagues, then AI",
+      "grounding_span": "I tend to prefer to start programming it myself and then if I can program it myself I will ask an AI if there are any suggestions it has for improvements"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Systematic iterative verification — works independently first, then checks with AI",
+      "grounding_span": "I will then go through its code to make sure it works and doesn't have any bugs and if I do find bugs and I cannot easily fix them on my own I'll ask the AI to fix them"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

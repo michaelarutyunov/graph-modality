@@ -1,0 +1,166 @@
+{
+  "transcript_id": "work_0455",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as time management and scheduling assistant",
+      "label_negative": "AI as unreliable scheduler that misses constraints",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI for time management to help me stay on task with projects"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as communication aid for email editing",
+      "label_negative": "AI as unnecessary interference in personal expression",
+      "bipolarity_complete": true,
+      "grounding_span": "Any work related emails are also helped by AI to make sure I am not being to wordy or over explaining"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as tool for core job tasks (outlining, projects)",
+      "label_negative": "AI as cheating that removes personal touch and job security",
+      "bipolarity_complete": true,
+      "grounding_span": "I feel like its cheating and also taking away from a personal touch"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI accuracy and completeness in handling complex prompts",
+      "label_negative": "AI selective focus missing key details",
+      "bipolarity_complete": true,
+      "grounding_span": "it can focus on key things in my prompt and its frustrating because I need the whole prompt recognized"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Productivity and time efficiency",
+      "grounding_span": "It really helps me stay on task without being overwhelmed"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Personal authenticity and ownership of work",
+      "grounding_span": "the actual tasks of my job are mine and I enjoy getting them done"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Job security and professional value",
+      "grounding_span": "I also get paid to do these things and I dont want AI to take that from me"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Satisfaction with AI for scheduling and email",
+      "valence": "positive",
+      "grounding_span": "It really helps me stay on task without being overwhelmed"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Resistance to AI for core job tasks",
+      "valence": "negative",
+      "grounding_span": "I feel like its cheating and also taking away from a personal touch"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI's selective focus",
+      "valence": "negative",
+      "grounding_span": "it can focus on key things in my prompt and its frustrating"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Optimism about evolving AI use for automatable tasks",
+      "valence": "positive",
+      "grounding_span": "I think it will evolve because it can be such a time saver"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative adjustment and recalibration",
+      "grounding_span": "I usually have AI adjust to account for that time so it adjusts my day/week when needed"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Upfront comprehensive input with post-hoc tweaking",
+      "grounding_span": "I give it all upfront and tweak it if it comes back with something that doesnt fit"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n8",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

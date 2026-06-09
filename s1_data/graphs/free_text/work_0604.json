@@ -1,0 +1,180 @@
+{
+  "transcript_id": "work_0604",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as code scaffolding tool",
+      "label_negative": "AI as unreliable code generator",
+      "bipolarity_complete": true,
+      "grounding_span": "AI gives working skeleton for me to adapt"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as collaborative pair programmer",
+      "label_negative": "AI as autonomous replacement",
+      "bipolarity_complete": true,
+      "grounding_span": "I'll go through step-by-step adapting and expanding on what it gave me"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as delegated task executor",
+      "label_negative": "AI as requiring constant supervision",
+      "bipolarity_complete": true,
+      "grounding_span": "I treat it more as a hands-off than a collaboration"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI use transparency and team guidelines",
+      "label_negative": "Individual uncoordinated AI use",
+      "bipolarity_complete": true,
+      "grounding_span": "we started talking more openly about how we were using AI and agreed on some informal guidelines"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Human oversight of AI-generated code",
+      "label_negative": "Blind reliance on AI output",
+      "bipolarity_complete": true,
+      "grounding_span": "I can't rely on AI blindly, it's a tool not a replacement for careful work"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI for professional communication",
+      "label_negative": "Manual drafting of professional communication",
+      "bipolarity_complete": true,
+      "grounding_span": "I love automating communication so that it sounds professional"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "speeds things up and gave me a sense of progress"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Code quality and reliability",
+      "grounding_span": "run all AI generated code through our standard review process"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Team cohesion and shared standards",
+      "grounding_span": "we started talking more openly about how we were using AI and agreed on some informal guidelines"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI as productivity booster",
+      "valence": "positive",
+      "grounding_span": "I felt really satisfied when I used AI to help me outline a tricky feature"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI's hidden assumptions",
+      "valence": "negative",
+      "grounding_span": "I got frustrated when AI generated code that looks fine at first but later caused issues"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Cautious optimism about future AI use",
+      "valence": "mixed",
+      "grounding_span": "I plan to continue carefully, delegating work and collaborating when small details require a more careful hand"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Task decomposition into verifiable sub-tasks",
+      "grounding_span": "I can just run the test afterwards and see which one's pass or fail"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Contextual judgment for delegation vs collaboration",
+      "grounding_span": "I tend to collaborate with AI during projects that have a lot of small moving parts but still need my judgment"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

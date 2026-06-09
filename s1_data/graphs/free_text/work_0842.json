@@ -1,0 +1,212 @@
+{
+  "transcript_id": "work_0842",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as enhancer of human voice and authenticity",
+      "label_negative": "AI as diluter of personal tone and authenticity",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I usually have to edit these email responses to ensure that they firstly sound like they have come from a human, and secondly have the exact tone that it looks and feels like it has come from me."
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as strategic overview generator",
+      "label_negative": "AI as generic strategy producer",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I sometimes find the responses slightly generic, but they tend to give a good overview"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as iterative collaborator requiring human guidance",
+      "label_negative": "AI as autonomous task completer",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I never delegate complete tasks, I like to provide an overview of the work I have done first and ask for opinions, improvements or a starting point. I then make edits, send it back through the AI and work in an iterative pattern."
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as productivity multiplier for time-consuming tasks",
+      "label_negative": "AI as substitute for core understanding",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I am very happy for AI to do them jobs that I feel take a lot of time, such as refining and editing emails and grants."
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as threat to jobs lacking deep understanding",
+      "label_negative": "AI as safe tool for those with expertise",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I do think that it is a threat to a large number of very specific jobs."
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as continuous consultant with broad knowledge",
+      "label_negative": "AI as unreliable for specific precision tasks",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I imagine I will more or less use AI as a continuous consultant, which has a much broader knowledge and understanding than I do in most topics."
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Authentic human connection and rapport",
+      "valence": null,
+      "grounding_span": "building a relationship with another human, who you are likely to interact with in the real world, should be built on true human-human interactions."
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Deep understanding and expertise",
+      "valence": null,
+      "grounding_span": "it is important to have a strong understanding of the tasks that are being carried out"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "valence": null,
+      "grounding_span": "I am very happy for AI to do them jobs that I feel take a lot of time"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Strategic control and business success",
+      "valence": null,
+      "grounding_span": "I expect it will help our company keep our team small and agile for longer."
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI for creative visual tasks",
+      "valence": "positive",
+      "grounding_span": "I felt particularly satisfied when I used AI to create a visual representation of a LinkedIn post that I wanted."
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with AI image generation precision",
+      "valence": "negative",
+      "grounding_span": "I have been frustrated at the image generation quality and lack of ability to follow simple requests"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Frustration with AI handling large information",
+      "valence": "negative",
+      "grounding_span": "The AI fails to handle such large quantities of information, and the outcome becomes quite tangential to the initial prompt."
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Disapproval of colleagues' heavy AI reliance",
+      "valence": "negative",
+      "grounding_span": "I do not particularly like that they rely heavily on AI, as I feel I send them a brief that I have spent a good quantity of time focusing on, and they run it through an AI to create their ideas."
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Optimistic vision of AI as continuous consultant",
+      "valence": "positive",
+      "grounding_span": "I imagine I will more or less use AI as a continuous consultant"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement with human-in-the-loop",
+      "valence": null,
+      "grounding_span": "I then make edits, send it back through the AI and work in an iterative pattern."
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based boundary setting for AI use",
+      "valence": null,
+      "grounding_span": "I do not use AI to make final decisions, to make legal decisions, or to advise on safety regulations relating to the product."
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n3",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

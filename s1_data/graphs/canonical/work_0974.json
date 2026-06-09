@@ -1,0 +1,206 @@
+{
+  "transcript_id": "work_0974",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as force multiplier for efficiency",
+      "label_negative": "AI as insufficient or requiring rework",
+      "bipolarity_complete": true,
+      "grounding_span": "using it as a force multiplier to boost efficiency"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as coding assistant",
+      "label_negative": "Manual coding effort without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't know how to code well...this has added value because I know the kinds of tools I want to create and use"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI use for personal communication",
+      "label_negative": "AI failing to match tone and phrasing",
+      "bipolarity_complete": true,
+      "grounding_span": "Copilot doesn't seem to get things right well enough for me, in terms of better understanding my tone and phrasing patterns"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as independent agent with mixed results",
+      "bipolarity_complete": true,
+      "grounding_span": "I tend to be more collaborative, but I have tested out ChatGPT's Agent capability...results have been mixed"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Belief in AI capability improvement over time",
+      "label_negative": "Stagnant or insufficient model capability",
+      "bipolarity_complete": true,
+      "grounding_span": "the release of a new model to crack the problem...when OpenAI released o1, and it was able to solve a coding issue that 4o hadn't been able to solve"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI for high-attention and complex tasks",
+      "label_negative": "AI causing skill obsolescence",
+      "bipolarity_complete": true,
+      "grounding_span": "AI could alleviate the burdens of addressing the more common issues...in order for my teammates and me to focus on more advanced things"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "force multiplier to boost efficiency"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Technical capability and problem-solving",
+      "grounding_span": "I know the kinds of tools I want to create and use"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Authentic personal expression",
+      "grounding_span": "better understanding my tone and phrasing patterns"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Continuous improvement and innovation",
+      "grounding_span": "the release of a new model to crack the problem"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Professional growth and skill maintenance",
+      "grounding_span": "focus on more advanced things that the AI can't handle"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "It was amazing...the output was easily over 100 lines of code"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Satisfaction with AI for email drafting",
+      "valence": "negative",
+      "grounding_span": "Copilot doesn't seem to get things right well enough for me"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Impressed but cautious about AI agent capability",
+      "valence": "mixed",
+      "grounding_span": "Some were good, others not so much, but I came away impressed"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Frustration with iterative coding failures",
+      "valence": "negative",
+      "grounding_span": "I would get frustrated when I would work on developing a script, and despite many turns and iterations, it wouldn't work"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Optimism about future AI integration",
+      "valence": "positive",
+      "grounding_span": "my dream is to have a chatbot integrated into all of the project chats"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement — upfront specification then back-and-forth adjustment",
+      "grounding_span": "I try to be as specific and comprehensive as possible in the beginning...but there's always bound to be some iteration"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Model-switching strategy to overcome limitations",
+      "grounding_span": "I'd hop between different models and sometimes one model would find a solution where the previous one was unable to"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

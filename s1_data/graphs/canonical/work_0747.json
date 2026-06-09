@@ -1,0 +1,169 @@
+{
+  "transcript_id": "work_0747",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as direct implementer vs AI as instruction giver",
+      "label_negative": "AI as instruction giver requiring manual execution",
+      "bipolarity_complete": true,
+      "grounding_span": "I would prefer that the AI do the work directly"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as direct implementer vs AI as instruction giver",
+      "label_negative": "AI as code strategist making architectural decisions",
+      "bipolarity_complete": true,
+      "grounding_span": "The AI is the implementer more than the code strategist"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI use hidden from management vs AI use openly shared among devs",
+      "label_negative": "AI use openly shared among devs",
+      "bipolarity_complete": true,
+      "grounding_span": "We completely hide it from management and our product people"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as productivity enhancer",
+      "label_negative": "AI productivity gains returned to employer",
+      "bipolarity_complete": true,
+      "grounding_span": "I kept the day to myself to give myself an extra long weekend"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Maintaining obsolete skills vs adapting to new AI-driven roles",
+      "label_negative": "Maintaining obsolete skills",
+      "bipolarity_complete": true,
+      "grounding_span": "Maintaining present skills that are declining in value and relevance is a trap"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "The productivity boost is insane"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Autonomy and personal control",
+      "grounding_span": "I kept the day to myself to give myself an extra long weekend"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional competence and future-proofing",
+      "grounding_span": "You have to learn to drive the combine"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Preference for manual over AI in accuracy tasks",
+      "valence": "positive",
+      "grounding_span": "I would prefer that the AI do the work directly"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "The productivity boost is insane"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Strategic concealment of AI use",
+      "valence": "positive",
+      "grounding_span": "I kept the day to myself to give myself an extra long weekend"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Rejection of maintaining obsolete skills",
+      "valence": "negative",
+      "grounding_span": "Maintaining present skills that are declining in value and relevance is a trap"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic concealment and selective disclosure",
+      "grounding_span": "We completely hide it from management and our product people"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic acceptance of technological change",
+      "grounding_span": "You have to learn to drive the combine"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

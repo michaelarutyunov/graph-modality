@@ -1,0 +1,175 @@
+{
+  "transcript_id": "work_0744",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as marketing content generator",
+      "label_negative": "Manual content creation without AI",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I asked an AI to review our company website and put together a plan of weekly LinkedIn posts and monthly blogs"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI conversational memory reliability",
+      "label_negative": "AI forgetting context across gaps",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "When I went back to the conversation I found it had forgotten what we were talking about"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI output authenticity and brand voice",
+      "label_negative": "AI-generated sounding content",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I want to make sure that the tone of voice sounds like our company"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as conversational thinking partner for complex tasks",
+      "label_negative": "AI as simple answer provider",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I found it very helpful to have the conversational aspect with the AI to check things and ask questions"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI data privacy and platform control",
+      "label_negative": "Unrestricted AI use with real data",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I am very cautious about using any of our real company data"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "It helps save time and money"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Authentic brand representation",
+      "grounding_span": "I want to make sure that the tone of voice sounds like our company"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Accuracy and correctness in calculations",
+      "grounding_span": "I was able to see that what I had calculated was correct"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Data security and privacy",
+      "grounding_span": "I am very cautious about using any of our real company data"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI as thinking partner for HR calculations",
+      "valence": "positive",
+      "grounding_span": "I found it very helpful to have the conversational aspect with the AI to check things and ask questions"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI forgetting context",
+      "valence": "negative",
+      "grounding_span": "When I went back to the conversation I found it had forgotten what we were talking about"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Cautious optimism about increased AI use",
+      "valence": "mixed",
+      "grounding_span": "I think we will use it more and more as people get more confident"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Need for human review of AI-generated content",
+      "valence": "negative",
+      "grounding_span": "I feel I will have to review them and edit/tweak them anyway"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through conversational prompting",
+      "grounding_span": "It was an ongoing conversation as I was refining what I needed to ask"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Cautious boundary-setting around data and platform use",
+      "grounding_span": "We are very mindful though about not having the team use any platform they want"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

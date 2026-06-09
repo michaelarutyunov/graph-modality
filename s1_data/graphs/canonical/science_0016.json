@@ -1,0 +1,148 @@
+{
+  "transcript_id": "science_0016",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as code generation assistant",
+      "label_negative": "Manual code development from scratch",
+      "bipolarity_complete": true,
+      "grounding_span": "It created a skeleton that I just had to verify and modify, rather than building from scratch"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI trustworthiness and verification",
+      "label_negative": "Distrust in AI for open-ended or unverifiable tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I had a lack of understanding and low level of trust for AI during the time"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI use sanctioned by workplace",
+      "label_negative": "Workplace policy ambiguity restricting AI use",
+      "bipolarity_complete": true,
+      "grounding_span": "the workplace had rules on the use of AI that I did not fully understand, which caused some additional hesitation"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Specialized AI tools for specific pipeline stages",
+      "label_negative": "Manual step-by-step analysis workflow",
+      "bipolarity_complete": true,
+      "grounding_span": "input a CAD model and all of the requirements and specifications the part must meet into AI, then it determines what type of analysis to run"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "Time is my biggest driver"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Control and accuracy",
+      "grounding_span": "I tested it by giving it an input variable to output to excel and stepping line by line to see if it would create the spreadsheet and output that variable where I wanted"
+    },
+    {
+      "id": "n7",
+      "type": "Stance",
+      "label": "Satisfaction with AI for code generation",
+      "valence": "positive",
+      "grounding_span": "It definitely cut down on the time it would've taken me to develop the code if I did not use it"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Hesitation due to trust and policy concerns",
+      "valence": "negative",
+      "grounding_span": "I had a lack of understanding and low level of trust for AI during the time"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Aspirational desire for full pipeline automation",
+      "valence": "positive",
+      "grounding_span": "It would be nice if I was able to input a CAD model and all of the requirements and specifications the part must meet into AI"
+    },
+    {
+      "id": "n10",
+      "type": "CognitiveStyleMarker",
+      "label": "Methodical step-by-step verification",
+      "grounding_span": "I tested it by giving it an input variable to output to excel and stepping line by line"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic tool adoption based on labor intensity",
+      "grounding_span": "Choosing AI to help with this seemed like a great idea after I realized how labor intensive it was to read through the guides"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n8",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n8",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n10",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n10",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

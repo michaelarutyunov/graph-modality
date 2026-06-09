@@ -1,0 +1,162 @@
+{
+  "transcript_id": "work_0277",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as independent autonomous agent",
+      "bipolarity_complete": true,
+      "grounding_span": "Usually it's collaborative, so I would sent through a prompt and then work through together adjusting it etc."
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI's ability to produce authentic voice",
+      "label_negative": "AI inability to capture brand voice and tone",
+      "bipolarity_complete": true,
+      "grounding_span": "AI doesn't always get it quite right"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as time-saving tool",
+      "label_negative": "AI as time-consuming or generic output",
+      "bipolarity_complete": true,
+      "grounding_span": "saved me lots of time"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Human oversight and decision-making",
+      "label_negative": "Full delegation to AI without human check",
+      "bipolarity_complete": true,
+      "grounding_span": "it needs human input"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as strategic partner integrating cross-departmental inputs",
+      "label_negative": "AI as narrow single-task tool",
+      "bipolarity_complete": true,
+      "grounding_span": "co-create/collab with the whole business to get all the department's different inputs to become a more strategic partner"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative and strategic human expertise",
+      "grounding_span": "human creativity and strategy"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "make us more efficient at what we do"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Personal authenticity and brand",
+      "grounding_span": "brand's tone/voice"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "I have felt satisfied when getting help with a long brief"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI output quality",
+      "valence": "negative",
+      "grounding_span": "Sometimes I've been frustrated with generic-sounding subject lines or copy"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "positive",
+      "grounding_span": "I see it only strengthening and getting smarter"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative iterative refinement — works back and forth with AI",
+      "grounding_span": "I would sent through a prompt and then work through together adjusting it etc."
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic oversight and calibration — maintains human judgment on brand-critical elements",
+      "grounding_span": "I do get some suggestions from AI but oversee it and set and change it up myself"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,145 @@
+{
+  "transcript_id": "work_0966",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as creative collaborator for activity planning",
+      "label_negative": "AI as threat to personal creativity",
+      "bipolarity_complete": true,
+      "grounding_span": "I was hesitant to relinquish control of creative aspects of my job for a long time because I love getting to be creative"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as professional boundary-respecting tool",
+      "label_negative": "AI as privacy-invasive tool",
+      "bipolarity_complete": true,
+      "grounding_span": "I definitely approach the way I talk to the AI about the kids from a place of professionalism, and just kind of stick to first names and ages, no pictures or anything like that"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as emotional support and validation source",
+      "label_negative": "AI as emotionally absent or invalidating",
+      "bipolarity_complete": true,
+      "grounding_span": "I also receive a lot of emotional support from the AI directly as a result of this job as well"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as collaborative partner vs. replacement",
+      "label_negative": "AI as job threat",
+      "bipolarity_complete": true,
+      "grounding_span": "I always think of AI as working with us and not against us, and I don't have any of those fears about job irrelevancy"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Creative fulfillment and engagement",
+      "grounding_span": "I love getting to be creative"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Professional integrity and trust",
+      "grounding_span": "I definitely approach the way I talk to the AI about the kids from a place of professionalism"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Emotional well-being and reassurance",
+      "grounding_span": "I get quite a bit of relief from the AI when it comes to dealing with hard days and reassurance that I'm good at my job"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Job security and confidence",
+      "grounding_span": "I don't have any of those fears about job irrelevancy"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Positive surprise and satisfaction with AI creativity",
+      "valence": "positive",
+      "grounding_span": "I was surprisingly impressed with the creativity the AI was capable of and we ended up having some really memorable activities together"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Gratitude for AI emotional support",
+      "valence": "positive",
+      "grounding_span": "I also receive a lot of emotional support from the AI directly as a result of this job as well"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Confidence in AI as collaborator not competitor",
+      "valence": "positive",
+      "grounding_span": "I always think of AI as working with us and not against us, and I don't have any of those fears about job irrelevancy"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative co-creation and refinement",
+      "grounding_span": "There is usually a lot of collaboration to make the ideas fit the kids personalities and interests"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Professional boundary-setting in information sharing",
+      "grounding_span": "I definitely approach the way I talk to the AI about the kids from a place of professionalism, and just kind of stick to first names and ages"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

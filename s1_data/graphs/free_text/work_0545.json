@@ -1,0 +1,175 @@
+{
+  "transcript_id": "work_0545",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as initial orientation tool for complex documents",
+      "label_negative": "AI as sole source of understanding without human review",
+      "bipolarity_complete": true,
+      "grounding_span": "summarizing complex legislation so I have an idea of the topic before I dive into it myself"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI accuracy and source verifiability",
+      "label_negative": "AI inaccuracy and lack of source citation",
+      "bipolarity_complete": true,
+      "grounding_span": "accuracy and citing sources, especially since we work with legislation where truth and verifiability are key"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI understanding of complex nuanced tasks",
+      "label_negative": "AI failure to grasp complex questions and provide lacking information",
+      "bipolarity_complete": true,
+      "grounding_span": "it felt like it didn't fully understand the (admittedly complex) question, which then led to lacking information"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Human retention of core competencies",
+      "label_negative": "Over-reliance on AI leading to skill atrophy",
+      "bipolarity_complete": true,
+      "grounding_span": "If a meteor hit every data center tomorrow, I need to still be able to do my job"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI for routine data organization tasks",
+      "label_negative": "AI for creative and fun tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I like handling the creative tasks myself. I like writing and flexing my creative muscles"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficient comprehension and time-saving",
+      "grounding_span": "I can do the research and condensing myself, but it's timely"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Truth and verifiability in legislative work",
+      "grounding_span": "truth and verifiability are key"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional autonomy and skill independence",
+      "grounding_span": "I need to still be able to do my job"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Personal creative fulfillment",
+      "grounding_span": "I like writing and flexing my creative muscles"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for initial summaries",
+      "valence": "positive",
+      "grounding_span": "I use AI a moderate amount during my typical workday"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI's inability to handle complex research",
+      "valence": "negative",
+      "grounding_span": "I felt like the model just wasn't getting the type of information I was hoping for"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Cautious optimism about expanding AI use if improved",
+      "valence": "mixed",
+      "grounding_span": "I could see expanding my usage if it improved in its ability to do research"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Preference for human handling of creative tasks",
+      "valence": "negative",
+      "grounding_span": "I don't really want to outsource the 'fun' tasks"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Sequential layering: AI summary then human deep-dive",
+      "grounding_span": "I'll take a bill summary and have our in-house AI model provide a summary... Then, I'll go through the bill line by line"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Independence-preserving tool use: AI as time-saver for own capabilities",
+      "grounding_span": "I can do the research and condensing myself, but it's timely"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

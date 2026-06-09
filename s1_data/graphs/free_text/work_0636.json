@@ -1,0 +1,180 @@
+{
+  "transcript_id": "work_0636",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as mundane task handler",
+      "label_negative": "AI as high-stakes task handler",
+      "bipolarity_complete": true,
+      "grounding_span": "I tend to use AI mostly for the more mundane aspects of my job"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI output authenticity",
+      "label_negative": "AI output lacking personal voice",
+      "bipolarity_complete": true,
+      "grounding_span": "the writing isn't 'me'"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as interactive problem-solving partner",
+      "label_negative": "AI as one-shot answer provider",
+      "bipolarity_complete": true,
+      "grounding_span": "Being able to talk through a problem with a 'person' often leads me to solving my own problems"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI reliability and trustworthiness",
+      "label_negative": "AI unreliability and inconsistency",
+      "bipolarity_complete": true,
+      "grounding_span": "overall not 100% trusting the output of any AI model"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as learning and comprehension tool",
+      "label_negative": "AI as black-box solution provider",
+      "bipolarity_complete": true,
+      "grounding_span": "using it as a learning tool"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "Human oversight and accountability",
+      "label_negative": "AI autonomy without human check",
+      "bipolarity_complete": true,
+      "grounding_span": "there will always be some need for human oversight"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Personal authenticity and voice",
+      "grounding_span": "the writing isn't 'me'"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Understanding and epistemic confidence",
+      "grounding_span": "If I don't understand the code, how can I explain it to my superiors"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Job security and professional growth",
+      "grounding_span": "anyone would be forgiven for questioning their job security"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Skeptical trust in AI outputs",
+      "valence": "ambivalent",
+      "grounding_span": "overall not 100% trusting the output of any AI model"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI as baseline expectation",
+      "valence": "mixed",
+      "grounding_span": "when the AI does it's job well, that's the bare minimum I'd expect"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Openness to AI as learning tool",
+      "valence": "positive",
+      "grounding_span": "using it as a learning tool, especially as it gets more reliable"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement and back-and-forth interaction",
+      "grounding_span": "I'll go back and forth tweaking paragraphs"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Decomposition of complex problems into manageable chunks",
+      "grounding_span": "break the problem down into some chunks that I'll throw at the AI"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

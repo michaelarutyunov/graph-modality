@@ -1,0 +1,193 @@
+{
+  "transcript_id": "work_0509",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as step-by-step guidance tool",
+      "label_negative": "AI as unreliable or unhelpful for reasoning",
+      "bipolarity_complete": true,
+      "grounding_span": "I have it give me reasoning pertaining to transmission line standards and which location might be the best fit"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as learning tool for terminology and understanding",
+      "label_negative": "Self-reliance for communication and learning",
+      "bipolarity_complete": true,
+      "grounding_span": "I use it to handle putting together emails to clients... explaining terminology since I am somewhat new to the job"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for menial tasks",
+      "label_negative": "Manual performance of menial tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I would like to be able to start to use it for more menial tasks like checking the fit for products, creating reports"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI integration into existing software",
+      "label_negative": "AI inability to integrate with specialized software",
+      "bipolarity_complete": true,
+      "grounding_span": "I hope AI will be able to integrate into software program uses, especially ones without large amounts of info online like the one I use"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Trust in AI for client communication",
+      "label_negative": "Distrust in AI with confidential client standards",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't trust giving those standards into AI"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI requiring context explanation",
+      "label_negative": "Iterative back-and-forth with AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I like to give it everything upfront... to reduce misunderstandings"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "without having to waste time of my higher ups"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional competence",
+      "grounding_span": "explaining terminology since I am somewhat new to the job"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Trust and reliability in task execution",
+      "grounding_span": "I prefer to do them myself because it would take longer and harder to set up for an AI to do, when I already know where to look"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Privacy and data security",
+      "grounding_span": "I don't trust giving those standards into AI"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "I have it give me reasoning pertaining to transmission line standards and which location might be the best fit"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with AI errors",
+      "valence": "negative",
+      "grounding_span": "It wasn't giving me useful information"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Optimism about future AI integration",
+      "valence": "positive",
+      "grounding_span": "I hope AI will be able to integrate into software program uses"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Preference for hands-on verification over AI alone",
+      "valence": "negative",
+      "grounding_span": "I prefer to do them myself because it would take longer and harder to set up for an AI to do"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Front-loading context to minimize back-and-forth",
+      "grounding_span": "I like to give it everything upfront... to reduce misunderstandings"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Selective delegation based on task nature",
+      "grounding_span": "I prefer to do them myself because it would take longer and harder to set up for an AI to do"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

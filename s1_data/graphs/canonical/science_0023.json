@@ -1,0 +1,171 @@
+{
+  "transcript_id": "science_0023",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as debugging assistant",
+      "label_negative": "Manual debugging and tedious coding",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is much faster for things like debugging than manually combing through a large codebase"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as writing and grammar assistant",
+      "label_negative": "AI-generated verbose or imprecise scientific prose",
+      "bipolarity_complete": true,
+      "grounding_span": "AI hasn't quite mastered scientific writing yet, as it often isn't concise enough and tends to add unnecessary fluff"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as formatting and synthesizing tool",
+      "label_negative": "Manual LaTeX formatting",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is a fantastic resource for LaTeX formatting in physics and maths research"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as brainstorming and idea generator",
+      "label_negative": "AI limited to grounded existing science without creative leaps",
+      "bipolarity_complete": true,
+      "grounding_span": "AI's approach is very grounded in existing science, but doesn't seem to be able to take the creative step in theoretical research"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Research efficiency",
+      "grounding_span": "AI is much faster for things like debugging"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Scientific rigor and accuracy",
+      "grounding_span": "AI hasn't quite mastered scientific writing yet, as it often isn't concise enough"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Creativity and innovation",
+      "grounding_span": "take the creative step in theoretical research"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Positive toward AI for coding tasks",
+      "valence": "positive",
+      "grounding_span": "AI is much faster for things like debugging"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Reluctance to use AI for writing",
+      "valence": "negative",
+      "grounding_span": "AI hasn't quite mastered scientific writing yet"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI formatting",
+      "valence": "positive",
+      "grounding_span": "AI is a fantastic resource for LaTeX formatting"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Resistance to AI in creative work",
+      "valence": "positive",
+      "grounding_span": "I'd like it if AI were able to help explore new ideas theoretically"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic task decomposition — assigns routine tasks to AI, retains creative control",
+      "grounding_span": "AI is much faster for things like debugging... but doesn't seem to be able to take the creative step"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Verification-oriented — cross-checks AI outputs against other sources",
+      "grounding_span": "checking the code runs, that its result makes physical sense, and is sensible compared to other outputs"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

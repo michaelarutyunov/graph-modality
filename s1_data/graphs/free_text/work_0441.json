@@ -1,0 +1,151 @@
+{
+  "transcript_id": "work_0441",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as insight provider for design decisions",
+      "label_negative": "AI as implementation generator",
+      "bipolarity_complete": true,
+      "grounding_span": "I compare its solutions with my own and decide on the best solution with its new insight"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI suitability for bounded tasks with clear context",
+      "label_negative": "AI suitability for tasks requiring holistic project understanding",
+      "bipolarity_complete": true,
+      "grounding_span": "Code tests require understanding and goals of the project as a whole which cannot be fully conveyed to the AI"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI image manipulation capability",
+      "label_negative": "AI image manipulation limitation",
+      "bipolarity_complete": true,
+      "grounding_span": "AI isn't quite good at image manipulation yet"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Personal coding skill preservation",
+      "label_negative": "Delegation of coding to AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I love coding and I will keep coding even if people are trying to replace that skill with AI"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Effective problem-solving",
+      "grounding_span": "Instead of wasting time figuring out the pros and cons, I ask the AI for advice to see if I've missed anything"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Project integrity and correctness",
+      "grounding_span": "Code tests require understanding and goals of the project as a whole which cannot be fully conveyed to the AI"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Personal fulfillment and skill mastery",
+      "grounding_span": "I love coding and I will keep coding even if people are trying to replace that skill with AI"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Satisfaction with AI for design insight",
+      "valence": "positive",
+      "grounding_span": "I compare its solutions with my own and decide on the best solution with its new insight"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Frustration with AI image manipulation limitations",
+      "valence": "negative",
+      "grounding_span": "I tried several different AI with image manipulation capabilities but none worked"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Resistance to AI replacing coding skill",
+      "valence": "negative",
+      "grounding_span": "I will keep coding even if people are trying to replace that skill with AI"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Openness to increased reliance on AI",
+      "valence": "positive",
+      "grounding_span": "I'll be learning to rely on it a little more to help assist me"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Comparative evaluation — weighs AI suggestions against own ideas",
+      "grounding_span": "I compare its solutions with my own and decide on the best solution"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Boundary setting — distinguishes tasks suitable for AI from those requiring human judgment",
+      "grounding_span": "Code tests require understanding and goals of the project as a whole which cannot be fully conveyed to the AI"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

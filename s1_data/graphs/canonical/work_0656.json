@@ -1,0 +1,218 @@
+{
+  "transcript_id": "work_0656",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as writing assistant",
+      "label_negative": "AI as unreliable or insufficient collaborator",
+      "bipolarity_complete": true,
+      "grounding_span": "Definitely a collaborative process"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as brainstorming and idea generator",
+      "label_negative": "AI for actual writing or final output",
+      "bipolarity_complete": true,
+      "grounding_span": "I will use AI to help brainstorm ideas and especially for outlining"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as quick reference for literacy knowledge",
+      "label_negative": "AI literacy as separate or unnecessary",
+      "bipolarity_complete": true,
+      "grounding_span": "AI literacy as an extension of the info literacy work we are already doing"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Openness about AI use with colleagues",
+      "label_negative": "AI tool avoidance or resistance",
+      "bipolarity_complete": true,
+      "grounding_span": "I'm pretty open to exploring different aspects of AI"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as tool for critical thinking about AI",
+      "label_negative": "Uncritical acceptance of AI outputs",
+      "bipolarity_complete": true,
+      "grounding_span": "apply a critical and skeptical lens on AI tool"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI fabrication and generic responses",
+      "bipolarity_complete": true,
+      "grounding_span": "AI chatbots will just make up citations or provide way too generic information"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI for data analysis",
+      "label_negative": "Manual data analysis without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I haven't used an AI for data analysis"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional efficiency",
+      "grounding_span": "That's hands down my least favorite part of writing, so having access to AI to help collate my thoughts and put it all together is super helpful"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Critical thinking and skill development",
+      "grounding_span": "teaching users how to use the tools and apply a critical lens on the outputs"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Research integrity and accuracy",
+      "grounding_span": "I'd have to double check all the outputs anyway"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Professional growth and skill maintenance",
+      "grounding_span": "how to continue advancing my own search skills, but also like--can I work on the next step of the search"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI for planning",
+      "valence": "positive",
+      "grounding_span": "super helpful"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Frustration with AI fabrications",
+      "valence": "negative",
+      "grounding_span": "That' gets really frustrating"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Hesitation toward AI for data analysis",
+      "valence": "negative",
+      "grounding_span": "I'm a little hesitant"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Openness to increasing AI use in future",
+      "valence": "positive",
+      "grounding_span": "I definitely see it becoming more integrated in my work"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Empowerment from workplace culture",
+      "valence": "positive",
+      "grounding_span": "I've been more empowered to explore different tools"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement with limited back-and-forth",
+      "grounding_span": "required some back and forth"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Critical evaluation across all information sources",
+      "grounding_span": "I tend to take the same view with AI--just because a AI can generate content, doesn't necessarily make it good or useful"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

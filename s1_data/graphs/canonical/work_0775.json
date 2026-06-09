@@ -1,0 +1,210 @@
+{
+  "transcript_id": "work_0775",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as quick information lookup tool",
+      "label_negative": "Traditional search or memory reliance",
+      "bipolarity_complete": true,
+      "grounding_span": "I use it to find quick reference information while providing bedside nursing care"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as meeting note-taking tool",
+      "label_negative": "Unaided writing of chart notes",
+      "bipolarity_complete": true,
+      "grounding_span": "if I don't know how to word a chart note the way I want to I might use it to help me get the information across"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI integration into hospital systems",
+      "label_negative": "AI not integrated into hospital systems",
+      "bipolarity_complete": true,
+      "grounding_span": "right now so isn't integrated into our systems"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI for patient monitoring and alerts",
+      "label_negative": "Manual monitoring without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "a system that monitored the patients temp, breathing, vitals and can alert the care team to subtle changes"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI for infection control",
+      "label_negative": "Current infection control without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "an infection control AI to monitor things and complete actions to reduce spread"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "Maintaining core nursing skills",
+      "label_negative": "Over-reliance on AI leading to skill loss",
+      "bipolarity_complete": true,
+      "grounding_span": "it's important to maintain that knowledge in case systems go down"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI improving working conditions for nurses",
+      "label_negative": "AI not improving working conditions",
+      "bipolarity_complete": true,
+      "grounding_span": "I hope it improves working conditions for nurses"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional efficiency",
+      "grounding_span": "I am seen as more efficient and competent"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Patient safety and quality of care",
+      "grounding_span": "almost eliminate hospital acquired infections"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Career resilience and adaptability",
+      "grounding_span": "position myself in a better position if AI does make my job obsolete"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "I am seen as more efficient and competent"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Optimism about future AI integration",
+      "valence": "negative",
+      "grounding_span": "right now so isn't integrated into our systems"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "positive",
+      "grounding_span": "I hope it improves working conditions for nurses"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Intentional skill maintenance",
+      "valence": "ambivalent",
+      "grounding_span": "it's important to maintain that knowledge in case systems go down"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Proactive future-oriented planning",
+      "grounding_span": "I am retraining to learn and understand AI engineering so I can hopefully position myself in a better position"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic task differentiation based on context",
+      "grounding_span": "Usually one specific question"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n7",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

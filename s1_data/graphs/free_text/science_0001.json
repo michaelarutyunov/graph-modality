@@ -1,0 +1,199 @@
+{
+  "transcript_id": "science_0001",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as efficiency tool for peripheral tasks",
+      "label_negative": "AI as threat to deep understanding",
+      "bipolarity_complete": true,
+      "grounding_span": "I would use AI when it would solve a problem quicker than a traditional approach"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as assistant for communication and writing",
+      "label_negative": "AI as full writer of personal communication",
+      "bipolarity_complete": true,
+      "grounding_span": "I would never ask AI to write emails for me"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as coding aid for debugging and simple tasks",
+      "label_negative": "AI as writer of complex code needing deep understanding",
+      "bipolarity_complete": true,
+      "grounding_span": "AI helped massively with getting me back into the coding mindset"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as peer reviewer for written work",
+      "label_negative": "AI as replacement for own writing process",
+      "bipolarity_complete": true,
+      "grounding_span": "I used AI models to look for: mistakes, synonyms, incorrect grammar, better explanations"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Deep engagement with ideas through struggle",
+      "label_negative": "Passive consumption of AI-generated answers",
+      "bipolarity_complete": true,
+      "grounding_span": "I need to interact with researched ideas and play with them"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as bypass for tedious writing",
+      "label_negative": "AI as tool requiring human involvement in writing",
+      "bipolarity_complete": true,
+      "grounding_span": "I would like AI to take the ideas from my brain and write my entire report for me"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and time efficiency",
+      "grounding_span": "solve a problem quicker than a traditional approach"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional communication quality",
+      "grounding_span": "sound professional while getting my intended point across"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Deep understanding and knowledge integration",
+      "grounding_span": "I need to interact with researched ideas and play with them in order for me to be able to create links between big ideas"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Ownership and comprehension of code",
+      "grounding_span": "I needed to know my own code like the back of my hand"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Effortless completion of disliked tasks",
+      "grounding_span": "I don't even want to be a part of it"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Positive toward AI for quick problem-solving",
+      "valence": "positive",
+      "grounding_span": "AI helped massively with getting me back into the coding mindset"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Negative toward AI for tasks requiring deep understanding",
+      "valence": "negative",
+      "grounding_span": "Getting an AI to write this code would not be useful for me, as I would not understand it as well"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Positive toward AI for writing assistance but not full delegation",
+      "valence": "mixed",
+      "grounding_span": "I would never ask AI to write emails for me"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Desire for AI to fully automate report writing",
+      "valence": "positive",
+      "grounding_span": "I would like AI to take the ideas from my brain and write my entire report for me"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Interactive learning through manipulation and struggle",
+      "grounding_span": "I need to interact with researched ideas and play with them"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Methodical verification through testing and line-by-line review",
+      "grounding_span": "I go through the new code, line-by-line, to check if it is logical"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n5",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

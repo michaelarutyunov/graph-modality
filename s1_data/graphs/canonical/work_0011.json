@@ -1,0 +1,169 @@
+{
+  "transcript_id": "work_0011",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI customization and adaptability",
+      "label_negative": "AI as complete solution without adjustment",
+      "bipolarity_complete": true,
+      "grounding_span": "I will typically start with using AI as a template or providing a foundation and then will adjust or complete to fit the needs of our business"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as fully autonomous delegate",
+      "bipolarity_complete": true,
+      "grounding_span": "Typically I will collaborate with AI at the beginning / middle of the task then complete the task independently"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as skill amplifier",
+      "label_negative": "AI as skill replacement",
+      "bipolarity_complete": true,
+      "grounding_span": "I see AI as an enabler of being able to be better at the existing skill sets to come up with a better output"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Thorough verification of AI outputs",
+      "label_negative": "AI output trust without verification",
+      "bipolarity_complete": true,
+      "grounding_span": "I always need to validate the output and double check if I am using this type of feature"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as efficiency tool for data analysis",
+      "label_negative": "Manual time-consuming data creation",
+      "bipolarity_complete": true,
+      "grounding_span": "creating specific data samples or data sets for testing ... AI has made it almost effortless"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Business-specific accuracy and relevance",
+      "grounding_span": "there is terminology, acronyms etc that is bespoke to our business and requires adjustment"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "AI has made it almost effortless"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Skill relevance",
+      "grounding_span": "put the time in to learn how to use these AI tools to provide even more value"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "AI has made it almost effortless"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI requiring multiple rewordings",
+      "valence": "negative",
+      "grounding_span": "has completely removed the context as part of the solution"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "positive",
+      "grounding_span": "I see AI as an enabler of being able to be better at the existing skill sets"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Optimism about future AI delegation",
+      "valence": "ambivalent",
+      "grounding_span": "I have not yet found many use cases where I would delegate AI to completely handle a task independently"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement with limited back-and-forth",
+      "grounding_span": "collaborate with AI at the beginning / middle of the task then complete the task independently"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Contextual layering of business knowledge",
+      "grounding_span": "providing AI with the technical context and then applying the specific business and industry context after the fact"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

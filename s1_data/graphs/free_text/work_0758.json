@@ -1,0 +1,205 @@
+{
+  "transcript_id": "work_0758",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as content generator for engaging examples",
+      "label_negative": "AI as source of irrelevant or unengaging content",
+      "bipolarity_complete": true,
+      "grounding_span": "I often use AI to find examples for things I'm teaching e.g. I might be teaching biodiversity and want some unique real world examples to keep the students engaged"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as collaborative problem generator and checker",
+      "label_negative": "AI as unreliable or incorrect checker",
+      "bipolarity_complete": true,
+      "grounding_span": "I could use the AI to help me generate similar but different problems and provide me wth solutions to check my own answers. If the answers differed to mine, I would then review my own answer (although sometimes the AI is wrong!)"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as time-saving tool for administrative tasks",
+      "label_negative": "AI as time-consuming or inefficient tool",
+      "bipolarity_complete": true,
+      "grounding_span": "Saving time e.g. asking it to make a spreadsheet from loads of handwritten note about university destinations of students on Alevel results day"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as personalized guidance assistant for student admissions",
+      "label_negative": "AI as impersonal or inaccurate guidance tool",
+      "bipolarity_complete": true,
+      "grounding_span": "I've started to use it to help gather admissions data about UK universities e.g. a student could tell me what grades they have... and the AI can rank which medical schools might be the best fit"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Human-only domain for student mentoring and relationship",
+      "label_negative": "AI involvement in student mentoring",
+      "bipolarity_complete": true,
+      "grounding_span": "Yes, that would be talking to / mentoring students"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as future eliminator of mundane tasks enabling focus on personalization",
+      "label_negative": "AI as threat to jobs for future generations",
+      "bipolarity_complete": true,
+      "grounding_span": "I will use it more and more and it will eliminate some of the more mundane tasks so that I can focus on personalising learning more"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Student engagement and interest",
+      "grounding_span": "keep the students engaged"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Teaching accuracy and reliability",
+      "grounding_span": "provide me wth solutions to check my own answers"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Time efficiency and productivity",
+      "grounding_span": "Saving time"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Personalized student guidance",
+      "grounding_span": "personalised advice"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Human relationship and trust in mentoring",
+      "grounding_span": "I've built up a relationship with the students"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Personalized learning focus",
+      "grounding_span": "focus on personalising learning more"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Satisfaction with AI as time-saver",
+      "valence": "positive",
+      "grounding_span": "Saving time e.g. asking it to make a spreadsheet from loads of handwritten note about university destinations of students on Alevel results day"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Cautious trust in AI as checker (aware of errors)",
+      "valence": "ambivalent",
+      "grounding_span": "If the answers differed to mine, I would then review my own answer (although sometimes the AI is wrong!)"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Optimistic anticipation of increased AI use for personalization",
+      "valence": "positive",
+      "grounding_span": "I will use it more and more and it will eliminate some of the more mundane tasks so that I can focus on personalising learning more"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Concern about AI replacing jobs for future generations",
+      "valence": "negative",
+      "grounding_span": "It concerns me more for my childrens generation than my own"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Experiential filtering — uses classroom experience to curate AI output",
+      "grounding_span": "I'm very experienced in the classroom, so I know what will engage the students"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative iterative refinement — works with AI in back-and-forth manner",
+      "grounding_span": "I tend to collaborate as I go"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n13",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n5",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

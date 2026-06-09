@@ -1,0 +1,184 @@
+{
+  "transcript_id": "work_0523",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as creative brainstorming and organization tool",
+      "label_negative": "AI as source of generic, unoriginal content",
+      "bipolarity_complete": true,
+      "grounding_span": "I love to word salad concepts and ideas into an ai and have it organize my thoughts"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI ability to handle complex scheduling and logistics",
+      "label_negative": "AI inability to handle complex scheduling and logistics",
+      "bipolarity_complete": true,
+      "grounding_span": "ai was able to stagger 6 perfomers, plus two performance areas, plus different costume change windows"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI writing style and tone",
+      "label_negative": "Human writing nuance and originality",
+      "bipolarity_complete": true,
+      "grounding_span": "ai tends to have a tone or a feel to it? The writing is distinct to me"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI reliability and trustworthiness for independent tasks",
+      "label_negative": "AI unreliability requiring human oversight",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't really trust ai to handle anything independently"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as time-saving tool for business tasks",
+      "label_negative": "AI as time-wasting due to corrections",
+      "bipolarity_complete": true,
+      "grounding_span": "Business tasks I try to finish as quickly as possible so it's usually a collaboration"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative originality and uniqueness",
+      "grounding_span": "it's important to me that my company/performances are unique and not generic"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "It saves so much time and makes it easy to get more work done"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional competence and client satisfaction",
+      "grounding_span": "Clients like well written descriptions and set schedules"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Enthusiasm for AI in brainstorming and scheduling",
+      "valence": "positive",
+      "grounding_span": "I love how ai can point out options though when schedules get complicated"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI's lack of originality and tone",
+      "valence": "negative",
+      "grounding_span": "ai has so much recycled content"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Distrust of AI for independent handling of tasks",
+      "valence": "negative",
+      "grounding_span": "I don't really trust ai to handle anything independently"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Aspiration for AI that can handle client communications in personal style",
+      "valence": "positive",
+      "grounding_span": "I would LOVE to have an ai that could handle clients though but in my style of writing"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement and abandonment strategy",
+      "grounding_span": "I usually swap to a different ai if stuff gets too jumbled because it's easier to start over"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-specific delegation based on task nature",
+      "grounding_span": "For business stuff, Ai is wonderful... but when I'm printing backdrops or themed banners with quotes about the performers or performances, I always write them myself"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

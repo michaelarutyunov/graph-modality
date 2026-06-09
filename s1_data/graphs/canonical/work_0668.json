@@ -1,0 +1,190 @@
+{
+  "transcript_id": "work_0668",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as brainstorming and idea generator",
+      "label_negative": "AI generating boring, expected suggestions",
+      "bipolarity_complete": true,
+      "grounding_span": "I am usually using AI to create lesson plans when I am stuck or want something out of the box"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as collaborator for iterative refinement",
+      "label_negative": "AI as one-shot delegation tool",
+      "bipolarity_complete": true,
+      "grounding_span": "I am more likely to collaborate with it"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for personalized, aesthetic resources",
+      "label_negative": "AI for generic, impersonal outputs",
+      "bipolarity_complete": true,
+      "grounding_span": "I want to make sure that those are aesthetic and well-formatted"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI adherence to instructions",
+      "label_negative": "AI inability to follow exact specifications",
+      "bipolarity_complete": true,
+      "grounding_span": "If I am giving exact measurements I believe that this should be easy for the model"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as complement to human-centered work",
+      "label_negative": "AI as replacement for human skills",
+      "bipolarity_complete": true,
+      "grounding_span": "I feel that the way I currently use AI is more to compliment what I am already doing in the classroom rather than replace"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Novelty and creative insight",
+      "grounding_span": "I am usually using AI to create lesson plans when I am stuck or want something out of the box"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Workflow efficiency",
+      "grounding_span": "use AI to simplify the process"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Student engagement and learning",
+      "grounding_span": "having personalized resources is something that I think can set apart teachers"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Control over quality and aesthetics",
+      "grounding_span": "I want to make sure that those are aesthetic and well-formatted"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for content creation",
+      "valence": "positive",
+      "grounding_span": "It was very satisfying because having personalized resources is something that I think can set apart teachers"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI limitations",
+      "valence": "negative",
+      "grounding_span": "that was definitely frustrating because it felt like I couldn't get through to the model"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Openness to increasing AI use in future",
+      "valence": "positive",
+      "grounding_span": "I definitely see my relationship with AI continuing to grow and evolve"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Preference for manual handling of enjoyable tasks",
+      "valence": "negative",
+      "grounding_span": "I definitely like to handle myself"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative iterative refinement — works back and forth with AI",
+      "grounding_span": "I will ask for refinements to increase the level of challenge or complexity"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Selective delegation based on task nature",
+      "grounding_span": "I know that there are AI models that can create slide shows, but this is something that I definitely like to handle myself"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

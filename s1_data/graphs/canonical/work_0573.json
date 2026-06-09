@@ -1,0 +1,174 @@
+{
+  "transcript_id": "work_0573",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as assistant for complex work",
+      "label_negative": "AI as untrustworthy or irrelevant for personal queries",
+      "bipolarity_complete": true,
+      "grounding_span": "I typically use AI most when I'm around the house to help questions that come up"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI integration into hospital systems",
+      "label_negative": "AI integration hindered by privacy and system fragmentation",
+      "bipolarity_complete": true,
+      "grounding_span": "I would love to just spend my time with the client/patient rather than with the overhead of documentation, appointment scheduling, and billing"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI use for sensitive data",
+      "label_negative": "AI lacking HIPAA compliance and security",
+      "bipolarity_complete": true,
+      "grounding_span": "HIPAA is a big concern in our healthcare space - we definitely need to keep client/patient information secure and private"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as supplementary aide to human expertise",
+      "label_negative": "AI as complementary tool preserving human role",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't see my particular role being replaced by AI anytime soon"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Digitization of healthcare workflows enabling AI",
+      "label_negative": "Paper-based workflows blocking AI integration",
+      "bipolarity_complete": true,
+      "grounding_span": "It would be nice to have everything digitized already"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Client confidentiality and data security",
+      "grounding_span": "HIPAA is a big concern in our healthcare space"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and cost reduction",
+      "grounding_span": "I would love to just spend my time with the client/patient rather than with the overhead"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Human connection and person-centered care",
+      "grounding_span": "There is no AI that can replace that human connection and deep care"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Positive reliance on AI for everyday queries",
+      "valence": "positive",
+      "grounding_span": "I really use it instead of a search engine like I used to"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Positive stance toward AI for administrative tasks",
+      "valence": "positive",
+      "grounding_span": "I would love to just spend my time with the client/patient rather than with the overhead"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Hesitation due to HIPAA and system fragmentation",
+      "valence": "negative",
+      "grounding_span": "HIPAA is a big concern in our healthcare space"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with AI's assumption of expertise",
+      "valence": "positive",
+      "grounding_span": "I don't see my particular role being replaced by AI anytime soon"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Routine-based workflow with manual processes",
+      "grounding_span": "I do have the workflow/process all written out and I do it often, so it has become routine"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Preference for tactile/hands-on methods over digital",
+      "grounding_span": "it is just a little easier for me too in some ways"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n4",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

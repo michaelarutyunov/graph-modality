@@ -1,0 +1,187 @@
+{
+  "transcript_id": "work_0569",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as cost-saving tool for visual content",
+      "label_negative": "Traditional expensive filmmaking",
+      "bipolarity_complete": true,
+      "grounding_span": "significant cost savings it offers to clients"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI blended creatively with traditional filmmaking",
+      "label_negative": "Fully AI-generated content",
+      "bipolarity_complete": true,
+      "grounding_span": "blended in with traditional filmmaking"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as practical necessity for budget constraints",
+      "label_negative": "AI as threat to creative fulfillment",
+      "bipolarity_complete": true,
+      "grounding_span": "if all you need are some simple b-roll shots that might not even be noticed by the audience, why not just generate with AI and save hundreds or thousands of dollars?"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as inevitable industry disruption",
+      "label_negative": "AI as resisted change",
+      "bipolarity_complete": true,
+      "grounding_span": "it's also still heavily frowned upon, especially by the filmmakers themselves"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI precision and control improvement",
+      "label_negative": "AI reliance on vague text prompts",
+      "bipolarity_complete": true,
+      "grounding_span": "These features allow a more precise generation of what one imagined, as to back then, when everything was relying on sophisticated text prompts"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "Adaptation to technological change",
+      "label_negative": "Resistance to technological change",
+      "bipolarity_complete": true,
+      "grounding_span": "I think it's important to adapt with it rather than to fight it"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Creative fulfillment and audience appreciation",
+      "grounding_span": "This allows a bit more appreciation by the audience"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Cost efficiency",
+      "grounding_span": "save hundreds or thousands of dollars"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Professional adaptability",
+      "grounding_span": "There's a constant need to learn and adapt to new changes"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Preference for traditional filmmaking as fun",
+      "valence": "positive",
+      "grounding_span": "I would prefer to focus only on traditional filmmaking, because that's what makes filmmaking fun"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Pragmatic acceptance of AI for cost reasons",
+      "valence": "mixed",
+      "grounding_span": "why not just generate with AI and save hundreds or thousands of dollars?"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with early AI limitations diminishing",
+      "valence": "positive",
+      "grounding_span": "The frustration continues to diminish as AI-generated content continues to improve"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Resolve to adapt rather than fight AI",
+      "valence": "positive",
+      "grounding_span": "I only plan to adapt to it rather than fight it"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Historical analogical reasoning — draws parallels to past technological shifts",
+      "grounding_span": "I've been in this situation before, like when developing film in dark rooms became obsolete"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic cost-benefit analysis — weighs creative value against financial practicality",
+      "grounding_span": "if all you need are some simple b-roll shots that might not even be noticed by the audience, why not just generate with AI and save hundreds or thousands of dollars?"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n3",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

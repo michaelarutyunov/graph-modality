@@ -3,7 +3,7 @@
 import pytest
 from sentence_transformers import SentenceTransformer
 
-from canonicalisation.clusterer import (
+from s3_canonicalisation.clusterer import (
     build_canonical_map,
     cluster_labels,
     load_all_labels,

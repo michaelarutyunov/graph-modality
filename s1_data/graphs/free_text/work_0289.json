@@ -1,0 +1,181 @@
+{
+  "transcript_id": "work_0289",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as coding accelerator for non-expert domains",
+      "label_negative": "Manual struggle with documentation and parameters",
+      "bipolarity_complete": true,
+      "grounding_span": "AI has helped me tremendously in this aspect - I no longer need to know exactly how to implement the ideas in my head"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as collaborative partner preserving human agency",
+      "label_negative": "AI as replacement threatening job security",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI in a collaborative manner, which means it's still me doing the work, while AI just assists me"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Personal writing as domain of self-expression and ownership",
+      "label_negative": "AI-generated writing lacking personal touch",
+      "bipolarity_complete": true,
+      "grounding_span": "I feel like writing is a place where someone can really 'express' themselves"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI dependency and skill atrophy",
+      "label_negative": "Self-reliance and skill maintenance",
+      "bipolarity_complete": true,
+      "grounding_span": "I honestly don't think I could do that anymore"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI limitations due to user knowledge gaps",
+      "label_negative": "AI as sufficient despite knowledge gaps",
+      "bipolarity_complete": true,
+      "grounding_span": "my limited knowledge of frontend development led to me being unable to collaboratively solve this issue using AI"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "speeds up that process considerably"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Personal autonomy and self-expression",
+      "grounding_span": "I like using my own little quirks (such as the Oxford comma) in my writing"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional competence and job security",
+      "grounding_span": "It made me feel very replaceable, which in turn pushed me to work harder"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for coding tasks",
+      "valence": "positive",
+      "grounding_span": "AI has helped me tremendously in this aspect"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Resistance to AI for personal writing",
+      "valence": "negative",
+      "grounding_span": "I try to avoid using AI for writing"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Concern about AI dependency and skill loss",
+      "valence": "negative",
+      "grounding_span": "I honestly don't think I could do that anymore"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with AI limitations due to knowledge gap",
+      "valence": "negative",
+      "grounding_span": "This was an experience that made me frustrated"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Anxiety about job replaceability due to AI progress",
+      "valence": "negative",
+      "grounding_span": "It made me feel very replaceable"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through back-and-forth feedback",
+      "grounding_span": "I often have to go back and forth quite a bit, iterating until I'm happy with the outcome"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain compartmentalisation — reserving writing for personal expression",
+      "grounding_span": "I try to avoid using AI for writing. It's an entirely personal reason"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,185 @@
+{
+  "transcript_id": "science_0092",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as literature review starting point when lacking domain vocabulary",
+      "label_negative": "Traditional keyword-based search without domain knowledge",
+      "bipolarity_complete": true,
+      "grounding_span": "i don't actually know that much about convex analysis... i don't really know what keywords to use while searching traditionally"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as thought partner for logic checking",
+      "label_negative": "AI as unreliable for proof work",
+      "bipolarity_complete": true,
+      "grounding_span": "i do use ai a bit, mostly to talk through my logic"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability in proof generation",
+      "label_negative": "AI hallucination of non-existent theorems",
+      "bipolarity_complete": true,
+      "grounding_span": "sometimes ai does produce theorems that don't actually seem to exist"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI reliability in proof generation",
+      "label_negative": "AI requiring extensive handholding for proofs",
+      "bipolarity_complete": true,
+      "grounding_span": "i don't think ai is capable enough to do the proof work; i've tried lobbing some questions... it took a lot of handholding"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI for generating diagrams in Overleaf",
+      "label_negative": "Manual diagram creation with tweaking",
+      "bipolarity_complete": true,
+      "grounding_span": "making nice looking diagrams in overleaf? it does an okay job but needs a lot of tweaking"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficient literature processing",
+      "grounding_span": "hunt down relevant theorems/papers/books for me"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Sound reasoning and error detection",
+      "grounding_span": "ask it to look for any flaws"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Research integrity and accuracy",
+      "grounding_span": "i just go find the books and look for the theorems"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Productivity in presentation",
+      "grounding_span": "it would just generate the tikz that would represent it"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Negative stance toward AI for literature search",
+      "valence": "positive",
+      "grounding_span": "a lot of the time it does a decent enough job, and finds stuff i had found independently"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Negative toward AI for proof generation due to errors",
+      "valence": "negative",
+      "grounding_span": "i don't think ai is capable enough to do the proof work"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Cautious trust in AI",
+      "valence": "ambivalent",
+      "grounding_span": "i do use ai a bit, mostly to talk through my logic"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Satisfaction with AI for simple diagram creation",
+      "valence": "positive",
+      "grounding_span": "i'd especially like it if i could just give it the CRN i'm working with and it would just generate the tikz"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Verification-oriented — cross-checks AI outputs against other sources",
+      "grounding_span": "i just go find the books and look for the theorems"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Peer-like interaction with AI — treats AI as a sounding board",
+      "grounding_span": "mostly i just treat it like one of my peers"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

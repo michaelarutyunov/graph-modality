@@ -1,0 +1,228 @@
+{
+  "transcript_id": "creativity_0092",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as rubber-ducky troubleshooting plus",
+      "label_negative": "AI as source of subpar ideas",
+      "bipolarity_complete": true,
+      "grounding_span": "I use it as a sort of rubber-ducky troubleshooting Plus, where I can bounce ideas off it. It usually doesn't have ideas that are quite up to snuff"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as instant subject matter expert",
+      "label_negative": "AI as requiring double-checking",
+      "bipolarity_complete": true,
+      "grounding_span": "chat GPT can become a sort of instant subject matter expert about anything I need it to be"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as improvisational crutch for mental grunt work",
+      "label_negative": "AI as source of generic unoriginal output",
+      "bipolarity_complete": true,
+      "grounding_span": "AI works as an improvisational crutch, so I don't have to be quite so quick with my thinking"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as calculator-like tool vs true collaborator",
+      "label_negative": "AI as genuine creative partner",
+      "bipolarity_complete": true,
+      "grounding_span": "it is no more a collaboration than doing math on a calculator is"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI enabling laziness vs quality craftsmanship",
+      "label_negative": "AI as enabler of poor quality work",
+      "bipolarity_complete": true,
+      "grounding_span": "AI has allowed me to be lazier. This is not necessarily a pro or con about AI itself, but rather how you use it"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as threat to linguistic reasoning and societal quality",
+      "label_negative": "AI as harmless productivity tool",
+      "bipolarity_complete": true,
+      "grounding_span": "an LLM more insidiously lets us export our linguistic reasoning"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI as future collaborative partner and ambiance generator",
+      "label_negative": "AI as limited to current tool-like role",
+      "bipolarity_complete": true,
+      "grounding_span": "I am hopeful, optimistic even, that AI will actually be closer to a collaborative partner"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Creative efficiency and time saving",
+      "grounding_span": "it is a time saver when used correctly"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Creative quality and authenticity",
+      "grounding_span": "I would not be happy with the reduction in quality of my work"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Societal cognitive health and linguistic competence",
+      "grounding_span": "knowing how to speak and what to speak, is integral to being a functioning adult"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Immersive storytelling and player experience",
+      "grounding_span": "create some amazing ambiance on the future"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI as time-saving tool for grunt work",
+      "valence": "positive",
+      "grounding_span": "it is a time saver when used correctly"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Frustration with AI's generic output and need for refinement",
+      "valence": "negative",
+      "grounding_span": "It requires a lot of specific prompting, otherwise it tends to cycle through the same annoying generic names"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Skepticism about AI as true collaborator",
+      "valence": "negative",
+      "grounding_span": "I would hesitate to call it a collaboration at all"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Concern about AI-induced laziness and societal harm",
+      "valence": "negative",
+      "grounding_span": "AI is going to make people lazy if we aren't exceedingly careful"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Optimism about future AI as collaborative partner",
+      "valence": "positive",
+      "grounding_span": "I am hopeful, optimistic even, that AI will actually be closer to a collaborative partner"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Learning-by-doing with just-in-time expert consultation",
+      "grounding_span": "I prefer to just jump into a system and learn it on the go, preferably from someone who already knows it"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through externalization and reflection",
+      "grounding_span": "with further refinements of the ideas, both by careful AI prompting and good old fashioned thinking about it in the shower"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n7",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

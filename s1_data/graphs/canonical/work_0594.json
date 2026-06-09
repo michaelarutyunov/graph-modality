@@ -1,0 +1,242 @@
+{
+  "transcript_id": "work_0594",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI for summarization and research",
+      "label_negative": "Manual handling of complex documents",
+      "bipolarity_complete": true,
+      "grounding_span": "standardising CVs, historically that takes up a lot of time with weird fonts and boxes etc, secondly I like to save time with documents, I'll get TL:DRs from things like acronym laden job specs"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI refinement and finessing of copy",
+      "label_negative": "AI-generated copy with artificial tells",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI for generating advertising copy for vacancies, but I will typically end up editing or tweaking manually, and I use AI for generating BD copy but again the time spent finessing to remove AI tells is almost not quite worth it atm"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI use for personal communication",
+      "label_negative": "AI for personal representation feels disrespectful",
+      "bipolarity_complete": true,
+      "grounding_span": "I still can't hand the reigns over to a bot for communications that represent ME, and I guess that applies to all avenues of my life, not just work, at the back of my mind it feels disrespectful to the recipient in a way"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as collaborator for iterative refinement",
+      "label_negative": "AI as independent delegator without collaboration",
+      "bipolarity_complete": true,
+      "grounding_span": "for generating copy we tend to ping and pong between the two of us until I'm happy"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as knowledge resource for unfamiliar domains",
+      "label_negative": "Relying on own limited knowledge in unfamiliar domains",
+      "bipolarity_complete": true,
+      "grounding_span": "I was able to take suitable CVs, and analyse them for weaknesses using AI. Then, I was able to dilute these concerns into a few targeted questions the candidates could address. This resulted in one candidate in particular returning a set of bulleted refutations of the concerns, including examples of how and why the concerns are addressed. Then I was able to incorporate these BACK into the CV, rewrite the whole thing and tailor it to the role perfectly."
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as skill gap filler",
+      "label_negative": "Feeling left behind by technology",
+      "bipolarity_complete": true,
+      "grounding_span": "what I love about AI is it bridges that gap that has built up over the years, it's reactivated dormant skills I thought had sadly consigned to the past, and I feel quite immersed in the future rather than left behind by it."
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI for social media content automation",
+      "label_negative": "AI-generated social media posts not meeting personal standards",
+      "bipolarity_complete": true,
+      "grounding_span": "Social media/Linkedin posts. I know I'm fussy, but I haven't seen anything within a million miles of what I'd want to put my name to."
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "the bot has already saved me eons of time compared to what I had to deal with"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Authentic personal expression",
+      "grounding_span": "I feel like I owe people in my close circle thoughts directly from my brain rather than bowdlerised by a bot"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Professional competence",
+      "grounding_span": "got an intervew within the hour for a role that we can charge three times as much for, in a role we don't really fully grasp yet"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Personal growth and future immersion",
+      "grounding_span": "I feel quite immersed in the future rather than left behind by it"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI for document analysis",
+      "valence": "positive",
+      "grounding_span": "the bot has already saved me eons of time compared to what I had to deal with"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Frustration with AI inaccuracies in data copying",
+      "valence": "negative",
+      "grounding_span": "the time spent finessing to remove AI tells is almost not quite worth it atm"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Resistance to AI for personal representation",
+      "valence": "negative",
+      "grounding_span": "I still can't hand the reigns over to a bot for communications that represent ME"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Positive discovery of AI's engagement potential",
+      "valence": "positive",
+      "grounding_span": "for generating copy we tend to ping and pong between the two of us until I'm happy"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Resistance to AI in creative work",
+      "valence": "positive",
+      "grounding_span": "got an intervew within the hour for a role that we can charge three times as much for"
+    },
+    {
+      "id": "n17",
+      "type": "Stance",
+      "label": "Positive reliance on AI for bridging knowledge gaps",
+      "valence": "positive",
+      "grounding_span": "what I love about AI is it bridges that gap that has built up over the years"
+    },
+    {
+      "id": "n18",
+      "type": "Stance",
+      "label": "Frustration with AI for social media content",
+      "valence": "negative",
+      "grounding_span": "I really can't see me attempting that again using AI for a while"
+    },
+    {
+      "id": "n19",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement and ping-pong collaboration",
+      "grounding_span": "for generating copy we tend to ping and pong between the two of us until I'm happy"
+    },
+    {
+      "id": "n20",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based boundary setting — clear separation of AI-appropriate vs. human-only tasks",
+      "grounding_span": "if it's an admin/box ticking thing, yeah sure, I'll use a bot- but if I'm expressing something, no"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n17",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n18",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n4",
+      "target": "n19",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n20",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

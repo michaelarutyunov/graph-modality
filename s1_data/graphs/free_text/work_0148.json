@@ -1,0 +1,183 @@
+{
+  "transcript_id": "work_0148",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as strategic planning partner for workforce allocation",
+      "label_negative": "AI as unreliable or missing key constraints",
+      "bipolarity_complete": true,
+      "grounding_span": "I will ask AI how to best utilize my headcount based on outgoing needs"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as communication tone adjuster and proofreader",
+      "label_negative": "Manual communication without AI assistance",
+      "bipolarity_complete": true,
+      "grounding_span": "I use it to adjust the tone of my slack messages, help me write menial emails"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as data analysis tool for operational insights",
+      "label_negative": "Manual data analysis without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I fed the CSV, roughly a month worth of usage, asked it compare that to recent purchase orders"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as delegation tool for physical tasks",
+      "label_negative": "AI replacing human analytical work",
+      "bipolarity_complete": true,
+      "grounding_span": "unless we automate the movement aspect... it's less likely to be anything more than a delegation tool"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "User responsibility for AI output quality",
+      "label_negative": "Blaming AI for errors without self-reflection",
+      "bipolarity_complete": true,
+      "grounding_span": "I am responsible for what I tell it and unless it hallucinates, the error is usually human"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "Context-dependent AI use for communication",
+      "label_negative": "Uniform AI use regardless of audience",
+      "bipolarity_complete": true,
+      "grounding_span": "I tend to examine the audience of the message before making the decision"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Operational efficiency and productivity",
+      "grounding_span": "divide the team in the most efficient way where both floors are being serviced efficiently"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional credibility and effective communication",
+      "grounding_span": "If it is senior management, I will make sure my messages are short, to the point, and professional"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Data-driven decision making and problem solving",
+      "grounding_span": "show trends so I could address the issue with ordering team"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Personal accountability and skill development",
+      "grounding_span": "I am responsible for what I tell it"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI for data analysis and reporting",
+      "valence": "positive",
+      "grounding_span": "When I brought that to the meeting, management was more than happy to address the issue"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with AI missing constraints or going off script",
+      "valence": "negative",
+      "grounding_span": "it allocated no one to the first floor at all despite me inputting the volume"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Acceptance of AI limitations and user responsibility",
+      "valence": "mixed",
+      "grounding_span": "AI is a tool. Tools help the user and if I see a tool being used incorrectly, it is something I can fix"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Optimism about future AI integration and automation",
+      "valence": "positive",
+      "grounding_span": "I am currently trying to figure out a way to integrate it into our yard management system"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement and rephrasing",
+      "grounding_span": "I will ask it to redo it so in a way that allocates more staff upstairs"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Audience-aware tailoring of communication",
+      "grounding_span": "I tend to examine the audience of the message before making the decision"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

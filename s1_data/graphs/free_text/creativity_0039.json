@@ -1,0 +1,173 @@
+{
+  "transcript_id": "creativity_0039",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as inspiration source for creative ideas",
+      "label_negative": "AI as complete idea generator replacing human creativity",
+      "bipolarity_complete": true,
+      "grounding_span": "I took inspiration from 3 of the ideas it came up with and adapted them into my own offering"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as business and marketing tool",
+      "label_negative": "AI as creative process replacement",
+      "bipolarity_complete": true,
+      "grounding_span": "I have found it really helpful with social media tips and content ideas to generate passive income"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI in therapeutic context",
+      "label_negative": "AI as online counsellor",
+      "bipolarity_complete": true,
+      "grounding_span": "AI can essentially become an online counsellor, which I don't believe it is nearly ready for"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Human creative autonomy",
+      "label_negative": "AI takeover of creative thinking",
+      "bipolarity_complete": true,
+      "grounding_span": "I want them to come from my own creative thought process"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Creative authenticity and personal expression",
+      "grounding_span": "Humans are innately creative and have used art to communicate since the beginning of time"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Critical thinking and communication skills",
+      "grounding_span": "leads to a break down of critical thinking skills, and communication skills"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Therapeutic safety and responsibility",
+      "grounding_span": "AI can essentially become an online counsellor, which I don't believe it is nearly ready for"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Positive appreciation for AI as inspiration",
+      "valence": "positive",
+      "grounding_span": "I found it actually very helpful and was impressed by the ideas"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Hesitation toward AI for creative ideas",
+      "valence": "negative",
+      "grounding_span": "I admit I feel hesitant when using AI for creative ideas"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Concern about AI in therapeutic role",
+      "valence": "negative",
+      "grounding_span": "AI can essentially become an online counsellor, which I don't believe it is nearly ready for"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Fear of AI replacing human creativity",
+      "valence": "negative",
+      "grounding_span": "I am concerned that AI will take over the creative thinking process for humans"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Resolve to maintain current AI use boundaries",
+      "valence": "positive",
+      "grounding_span": "I will continue to use AI strictly for inspiration or refinement of my own ideas"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Adaptive integration — combines AI ideas with own existing concepts",
+      "grounding_span": "I took another idea I had previously and combined it with the AI one"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Boundary setting — maintains clear separation between AI use domains",
+      "grounding_span": "I do not use AI for my actual art prompts"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

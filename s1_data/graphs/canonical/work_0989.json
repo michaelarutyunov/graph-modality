@@ -1,0 +1,192 @@
+{
+  "transcript_id": "work_0989",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as research starting point",
+      "label_negative": "AI as sole research source",
+      "bipolarity_complete": true,
+      "grounding_span": "I like to use AI as a starting point for my research, but I still like to conduct the thorough research myself"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as coding assistant",
+      "label_negative": "AI as full code replacement",
+      "bipolarity_complete": true,
+      "grounding_span": "I like to use it for help, but I still like to write some of the code myself"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as coding assistant",
+      "label_negative": "AI inefficiency in research",
+      "bipolarity_complete": true,
+      "grounding_span": "satisfied, when it writes an efficient coding component that would have taken me a much longer time to write"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI accuracy and contextual relevance",
+      "label_negative": "AI generic irrelevant responses",
+      "bipolarity_complete": true,
+      "grounding_span": "gives me some 'non-context specific' response that's irrelevant to my use case"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as independent delegator",
+      "bipolarity_complete": true,
+      "grounding_span": "it's usually a very collaborative process, where I copy and paste a lot from different sources into the AI to ask it questions"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI impact on skill maintenance",
+      "label_negative": "Over-reliance on AI leading to skill atrophy",
+      "bipolarity_complete": true,
+      "grounding_span": "I try to maintain my skills somewhat by practicing my skills often, even if AI is becoming superior in that area"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Accuracy and reliability",
+      "grounding_span": "I still like to conduct the thorough research myself, often I'll notice AI missed some things"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "it saves me a lot of time, and I'm able to iterate quickly on the solution I'm working on"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Personal competence and skill development",
+      "grounding_span": "I try to maintain my skills somewhat by practicing my skills often"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "satisfied, when it writes an efficient coding component that would have taken me a much longer time to write"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI's verbose responses",
+      "valence": "negative",
+      "grounding_span": "frustrated, when I'm using it for research or idea generation, and gives me some 'non-context specific' response"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Preference for collaborative interaction",
+      "valence": "positive",
+      "grounding_span": "it's usually a very collaborative process"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Intentional skill maintenance",
+      "valence": "positive",
+      "grounding_span": "I try to maintain my skills somewhat by practicing my skills often"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative prompt refinement",
+      "grounding_span": "then iterate if it doesn't do exactly what I want, so ask for modifications to that component"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Contextual skill deployment — prioritizes real-time capability",
+      "grounding_span": "it doesn't make sense to go back and forth with AI during a client meeting, I have to be able to deploy these skills quickly"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

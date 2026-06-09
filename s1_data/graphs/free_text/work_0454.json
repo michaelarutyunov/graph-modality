@@ -1,0 +1,181 @@
+{
+  "transcript_id": "work_0454",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as step-by-step teacher for complex tasks",
+      "label_negative": "Struggling alone with complex tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "It was like having a teacher right next to me"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as creative starting point for writer's block",
+      "label_negative": "Starting from blank page with writer's block",
+      "bipolarity_complete": true,
+      "grounding_span": "I get bad writer's block. So, when I need to make ads or social posts, I will definitely use it as a starting point"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as source of diverse perspectives",
+      "label_negative": "Single perspective from own thinking",
+      "bipolarity_complete": true,
+      "grounding_span": "just getting a variety of perspectives by posing the questions to different AI's or even the same one multiple times has helped me change my perspective"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI adherence to specific instructions",
+      "label_negative": "AI making unintended changes",
+      "bipolarity_complete": true,
+      "grounding_span": "I said, please don't change anything but this and it said it didn't, but it did. That was frustrating"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as accessible tool vs. gatekept expertise",
+      "label_negative": "AI as gatekept secret knowledge",
+      "bipolarity_complete": true,
+      "grounding_span": "people are trying to use it to take advantage of other people's ignorance or insecurities"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Task completion and overcoming obstacles",
+      "grounding_span": "I had been trying for literally over a year off and on"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Creative productivity and output quantity",
+      "grounding_span": "Quantity is my goal right now"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Open-mindedness and perspective broadening",
+      "grounding_span": "this is a different angle that other people might appreciate"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Reliability and control in AI interactions",
+      "grounding_span": "please don't change anything but this and it said it didn't, but it did"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Equitable access to AI knowledge",
+      "grounding_span": "people are trying to use it to take advantage of other people's ignorance or insecurities"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI as teacher for difficult tasks",
+      "valence": "positive",
+      "grounding_span": "Satisfied was getting the SSL certificate set up because it was such a mess"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with AI making unintended changes",
+      "valence": "negative",
+      "grounding_span": "it kept changing a lot of things when I would ask for just one or two small changes"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Annoyance at gatekeeping of AI knowledge",
+      "valence": "negative",
+      "grounding_span": "people are trying to use it to take advantage of other people's ignorance or insecurities"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Openness to accepting AI proactive suggestions",
+      "valence": "positive",
+      "grounding_span": "I think it might evolve to where I let it do more of the things it suggests"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative step-by-step problem solving with external guidance",
+      "grounding_span": "I was able to say 'no, please don't tell me more than one step at a time'"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Perspective-seeking through multiple AI queries",
+      "grounding_span": "just getting a variety of perspectives by posing the questions to different AI's or even the same one multiple times"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,243 @@
+{
+  "transcript_id": "work_0571",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as lesson planning assistant for initial ideas",
+      "label_negative": "AI as source of inappropriate or unrealistic suggestions",
+      "bipolarity_complete": true,
+      "grounding_span": "AI will usually give me lesson ideas that are not appropriate for my classroom specifically"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as content fact-checker",
+      "label_negative": "AI as provider of inaccurate information",
+      "bipolarity_complete": true,
+      "grounding_span": "fact check content information when I am unsure"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as practice problem generator",
+      "label_negative": "AI as poor worksheet formatter",
+      "bipolarity_complete": true,
+      "grounding_span": "I will just use it to generate practice problems since that is what it is best at"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as diagram creator for simple images",
+      "label_negative": "AI as incapable of complex accurate diagrams",
+      "bipolarity_complete": true,
+      "grounding_span": "AI can often create those quickly for me. However, it has been incapable of making accurate images that require any complexity"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as efficiency tool for time-consuming tasks",
+      "label_negative": "AI as threat to human connection and authority in teaching",
+      "bipolarity_complete": true,
+      "grounding_span": "It may help speed up some of the more time-consuming tasks, but it cannot engage with students in the same way as a person"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI use for grading and student feedback",
+      "label_negative": "Human-only grading to respect privacy and provide genuine feedback",
+      "bipolarity_complete": true,
+      "grounding_span": "I do not use AI for grading, as I feel that it would infringe on privacy as well as an obligation for me to give students the respect of looking at their work and providing genuine feedback"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI-generated material transparency for students",
+      "label_negative": "Undisclosed AI-generated material in education",
+      "bipolarity_complete": true,
+      "grounding_span": "students need to understand the difference between AI generated material and human creations"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Effective lesson planning and content accuracy",
+      "grounding_span": "fact check content information when I am unsure"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Student privacy and respect",
+      "grounding_span": "infringe on privacy as well as an obligation for me to give students the respect of looking at their work and providing genuine feedback"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Student critical thinking and discernment",
+      "grounding_span": "students need to understand the difference between AI generated material and human creations, and they should be able to critically examine work accordingly"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Human connection and relationship in teaching",
+      "grounding_span": "Human connection and relationships are needed in order to genuinely reach these students and encourage them to learn"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI for simple diagram creation",
+      "valence": "positive",
+      "grounding_span": "AI can often create those quickly for me"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Frustration with AI for complex diagrams",
+      "valence": "negative",
+      "grounding_span": "it has been incapable of making accurate images that require any complexity and/or labeling, and it can be frustrating"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Reluctance to use AI for grading due to privacy and respect concerns",
+      "valence": "negative",
+      "grounding_span": "I do not use AI for grading, as I feel that it would infringe on privacy"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Preference for iterative chunked interaction over single prompts",
+      "valence": "positive",
+      "grounding_span": "I find it to be more efficient to work in little chunks"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Skepticism about AI replacing teachers due to need for human connection",
+      "valence": "negative",
+      "grounding_span": "I do not believe that AI could reasonably take over the duties of a public school teacher"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement and chunking — breaks tasks into small back-and-forth steps",
+      "grounding_span": "I find it to be more efficient to work in little chunks"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Contextual adaptation — tailors AI suggestions to specific classroom realities",
+      "grounding_span": "I have to tweak them significantly before implementation"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n7",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,215 @@
+{
+  "transcript_id": "work_0385",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as editorial proofreader",
+      "label_negative": "AI as autonomous writer",
+      "bipolarity_complete": true,
+      "grounding_span": "I have been using AI to do proofreading and sometimes help when I'm having difficulty with awkward sentences"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI alignment with personal voice",
+      "label_negative": "AI deviation from personal voice",
+      "bipolarity_complete": true,
+      "grounding_span": "Do I think it matches my 'voice'"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI factual reliability for research",
+      "label_negative": "AI factual unreliability for research",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't trust AI research to be 100% factual"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as collaborative tool preserving human authorship",
+      "label_negative": "AI as replacement for human authorship",
+      "bipolarity_complete": true,
+      "grounding_span": "the review is still mine; I'm simply using an available tool to improve the product"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI efficiency in editing",
+      "label_negative": "AI inefficiency due to misalignment",
+      "bipolarity_complete": true,
+      "grounding_span": "Most of the time, it goes seamlessly"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI capability to capture voice in longer form",
+      "label_negative": "AI inability to capture voice in longer form",
+      "bipolarity_complete": true,
+      "grounding_span": "If the AI learned to effectively capture my voice in longer form, I'd be happy to take a step back"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Authentic self-expression",
+      "grounding_span": "Do I think it matches my 'voice'"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Credibility and accuracy",
+      "grounding_span": "it would be embarrassing if I had a reader contact me and tell me something wasn't correct"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Productivity and time savings",
+      "grounding_span": "50 minutes writing and 20 minutes editing"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Human autonomy and ownership",
+      "grounding_span": "The opinion is mine. The reasoning is mine."
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI as editor when aligned",
+      "valence": "positive",
+      "grounding_span": "I feel that my using the AI as an editor resulted in a better review"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with AI when it deviates from tone",
+      "valence": "negative",
+      "grounding_span": "AI has deviated too far from my tone and even changed the meaning"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Openness to future AI collaboration in writing",
+      "valence": "positive",
+      "grounding_span": "I would hope that as AI becomes more advanced, I will be able to gradually cede more of the nuts-and-bolts writing to it"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Skepticism toward AI research due to accuracy concerns",
+      "valence": "negative",
+      "grounding_span": "I don't trust AI research to be 100% factual"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Defensiveness against AI replacement fears",
+      "valence": "mixed",
+      "grounding_span": "I don't ascribe to that because the review is still mine"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Case-by-case selective acceptance — evaluates AI suggestions individually",
+      "grounding_span": "decided on a case-by-case basis what to accept and what to reject"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Incremental paragraph-by-paragraph workflow",
+      "grounding_span": "I send the review through on a paragraph by paragraph basis"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

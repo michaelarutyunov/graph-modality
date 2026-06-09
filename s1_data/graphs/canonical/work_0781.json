@@ -1,0 +1,157 @@
+{
+  "transcript_id": "work_0781",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as time-saving tool",
+      "label_negative": "Manual time-consuming research",
+      "bipolarity_complete": true,
+      "grounding_span": "AI takes away some of the research that I used to do. It can do it infinitely quicker than I can."
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as supplement to creative process",
+      "label_negative": "AI taking over the creative process",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI to bounce ideas off, help me find different ways of constructing a sentence or paragraph and brainstorm ideas."
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Authorial control and creative ownership",
+      "label_negative": "AI dominating the creative narrative",
+      "bipolarity_complete": true,
+      "grounding_span": "I want the story to be mine... that is my voice, my creativity at work and it is important to me that that is not taken away by letting AI take over the creative process."
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI image generation for book covers and promotion",
+      "label_negative": "Manual image creation (which I was never good at)",
+      "bipolarity_complete": true,
+      "grounding_span": "I use it to help me with designing book covers and generating image for online my online content to promote my books."
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as compromise to creative integrity",
+      "label_negative": "Unrestricted AI access for creative tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "Sometimes I have to be careful how I word things because it trips the AI safety systems and I can't get back on track."
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative autonomy",
+      "grounding_span": "that is my voice, my creativity at work and it is important to me that that is not taken away"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "AI takes away some of the research that I used to do. It can do it infinitely quicker than I can."
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Creative satisfaction and enjoyment",
+      "grounding_span": "That really makes me satisfied and excited about using AI."
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Frustration with AI image generation",
+      "valence": "positive",
+      "grounding_span": "When an AI generates the exact image that I wanted is the most satisfying thing."
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Resistance to over-reliance on AI",
+      "valence": "negative",
+      "grounding_span": "it can be frustrating that it mistakes my intentions."
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Confidence in AI as collaborator not threat",
+      "valence": "positive",
+      "grounding_span": "I would like to think of AI as a collaborator rather than a threat."
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Contextual adaptation based on AI response quality",
+      "grounding_span": "Sometimes I will take the suggestions as it is. Sometimes the suggestion will inspire me to do something along the same lines and sometimes I will go back to the AI and give more details or ask for a different approach."
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Flow-preserving delegation of research to AI",
+      "grounding_span": "I use the AI when I am in the middle of a writing session and breaking off to search information would disrupt the flow."
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

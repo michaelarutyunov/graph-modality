@@ -1,0 +1,169 @@
+{
+  "transcript_id": "work_0047",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as writing assistant",
+      "label_negative": "AI as independent task executor",
+      "bipolarity_complete": true,
+      "grounding_span": "I tend to use AI more collaboratively than assigning it entire tasks"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as confidence-building assistant",
+      "label_negative": "AI as crutch that undermines personal achievement",
+      "bipolarity_complete": true,
+      "grounding_span": "My hope is that as I gain more experience and confidence in myself that I will feel the need to use AI less"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability and honesty",
+      "label_negative": "AI hallucination and misleading information",
+      "bipolarity_complete": true,
+      "grounding_span": "I often challenge it with leading questions or alternative lines of thinking to ensure that it is not hallucinating or being misleading"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as assistant vs AI as expert",
+      "label_negative": "AI as digital coworker performing bulk of work",
+      "bipolarity_complete": true,
+      "grounding_span": "as long as it is not performing the bulk of the work and is used as a tool rather than viewed as a digital coworker"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Personal ownership of final product",
+      "label_negative": "AI-generated work lacking personal achievement",
+      "bipolarity_complete": true,
+      "grounding_span": "part of me does regret using AI as it is not my own work and therefore not my own achievement"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Professional competence",
+      "grounding_span": "My hope is that as I gain more experience and confidence in myself that I will feel the need to use AI less"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Creative authenticity and human expression",
+      "grounding_span": "I want the document to reflect myself and my business"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Regulatory compliance and accuracy",
+      "grounding_span": "ensure that anything the AI has suggested I include complies with local regulations and legislations"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for document analysis",
+      "valence": "positive",
+      "grounding_span": "I used AI to help me construct a letter of engagement, which was very helpful"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Regret over diminished personal achievement",
+      "valence": "negative",
+      "grounding_span": "part of me does regret using AI as it is not my own work and therefore not my own achievement"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Cautious skepticism toward AI reliability",
+      "valence": "negative",
+      "grounding_span": "I don't think AI is at a place yet where we should be entrusting it completely as it does tend to provide false information"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Preference for self-reliance when capable",
+      "valence": "positive",
+      "grounding_span": "If I feel like I can complete a task by myself, for example an email or more recently a cover letter and resume, I will"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative iterative refinement — works back and forth with AI",
+      "grounding_span": "I will typically write a draft documents then run it through AI to find areas I need to improve"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Skeptical verification — carefully studies and fact-checks AI responses",
+      "grounding_span": "I often challenge it with leading questions or alternative lines of thinking to ensure that it is not hallucinating"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

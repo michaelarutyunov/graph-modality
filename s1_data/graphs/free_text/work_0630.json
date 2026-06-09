@@ -1,0 +1,179 @@
+{
+  "transcript_id": "work_0630",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as efficient content generator for routine tasks",
+      "label_negative": "Manual research and writing for routine tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "The benefit of the AI is the ability to create quick list of options a specific vehicle might have, without having to research myself"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI that allows human editing and control",
+      "label_negative": "AI that operates autonomously without human oversight",
+      "bipolarity_complete": true,
+      "grounding_span": "I will typically trim out 'salesy' filler material in the provided descriptions"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Personal, conversational customer outreach",
+      "label_negative": "Impersonal, verbose, rigid automated outreach",
+      "bipolarity_complete": true,
+      "grounding_span": "I try to keep my outreach sounding conversational"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI that can be trained to adopt user's personal style",
+      "label_negative": "AI that cannot be customized to user's style",
+      "bipolarity_complete": true,
+      "grounding_span": "the sales professional should be able to train the AI in the CRM with their own personal touch"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI that handles specific customer queries responsively",
+      "label_negative": "AI that ignores specific questions and gives generic responses",
+      "bipolarity_complete": true,
+      "grounding_span": "This particular customer was asking a specific question about financing, and the AI kept ignoring and just reiterating that the dealership has many financing options available"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "The benefit of the AI is the ability to create quick list of options"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Personal connection and trust in customer relationships",
+      "grounding_span": "I would rather come across as an individual reaching out in a friendly and humble way"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Sales effectiveness and customer retention",
+      "grounding_span": "The automatic outreach ... has confused a customer to the point where they have cancelled a scheduled appointment"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for content generation with editing",
+      "valence": "positive",
+      "grounding_span": "The benefit of the AI is the ability to create quick list of options"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with impersonal automated CRM outreach",
+      "valence": "negative",
+      "grounding_span": "I am not a fan of the way the AI within our CRM reaches out to customers"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI ignoring specific customer queries",
+      "valence": "negative",
+      "grounding_span": "This particular customer was asking a specific question about financing, and the AI kept ignoring"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Desire for customizable AI that learns personal style",
+      "valence": "positive",
+      "grounding_span": "the sales professional should be able to train the AI in the CRM with their own personal touch"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through successive prompting",
+      "grounding_span": "I will give tweaks (successive prompts) when crafting Marketplace Descriptions"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Preference for personal touch and conversational tone in customer interactions",
+      "grounding_span": "I try to keep my outreach sounding conversational"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n5",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

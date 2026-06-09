@@ -1,0 +1,184 @@
+{
+  "transcript_id": "work_0366",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI for robotic repetitive tasks",
+      "label_negative": "AI for complex judgmental tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I try to use it for more robotic, repetitive tasks that can be quickly/easily checked and verified"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI verifiability and accuracy",
+      "label_negative": "AI hallucination and wrong conclusions",
+      "bipolarity_complete": true,
+      "grounding_span": "I am aware of the susceptibilities of AI models to hallucination or other methods by which they often come to the wrong conclusion"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as productivity enhancer",
+      "label_negative": "AI as job replacement threat",
+      "bipolarity_complete": true,
+      "grounding_span": "AI will help me to efficiently and effortlessly complete the manual, robotic and rules-based elements of my job"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Iterative prompt refinement",
+      "label_negative": "Static one-shot prompting",
+      "bipolarity_complete": true,
+      "grounding_span": "I've almost built up over time a more step-by-step set of prompt instructions to allow marginal improvements"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as fundamental workplace tool",
+      "label_negative": "AI as optional niche tool",
+      "bipolarity_complete": true,
+      "grounding_span": "AI will quickly develop into one of those tools that workers are just expected to know how to use"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Professional competence and accuracy",
+      "grounding_span": "I do always try to sense-check any AI summary, to ensure it is actually accurate"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "AI will help me to efficiently and effortlessly complete the manual, robotic and rules-based elements"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Job security and professional identity",
+      "grounding_span": "I will always be responsible for the judgemental pieces that require more complex thinking"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for practical help",
+      "valence": "positive",
+      "grounding_span": "It has made me feel satisfied multiple times when I have asked for help in optimising my excel worksheets"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI's inability to troubleshoot",
+      "valence": "negative",
+      "grounding_span": "I can feel frustrated with AI when I ask for help on how to do something, where perhaps the 'standard' process isn't working"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Cautious trust in AI for bounded tasks",
+      "valence": "ambivalent",
+      "grounding_span": "AI is a helpful tool, I think it still gets far too much wrong, and therefore cannot be blindly trusted"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Optimistic expectation of AI integration",
+      "valence": "positive",
+      "grounding_span": "I can definitely see AI becoming more and more important and integral to my job role"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through repeated task cycles",
+      "grounding_span": "I've almost built up over time a more step-by-step set of prompt instructions to allow marginal improvements"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Task decomposition into verifiable vs. judgmental",
+      "grounding_span": "I try to use it for more robotic, repetitive tasks that can be quickly/easily checked and verified for accuracy by myself"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

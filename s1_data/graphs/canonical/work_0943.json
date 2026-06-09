@@ -1,0 +1,153 @@
+{
+  "transcript_id": "work_0943",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as computational partner for reconciliation",
+      "label_negative": "Manual trial-and-error reconciliation",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I fed some individual invoice and credit note totals into an AI chatbot, and asked it if any combination of those figures equaled a separate figure"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as writing assistant",
+      "label_negative": "Personal, authentic writing without AI",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I'm reluctant to employ AI to help with this"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI errors and hallucinations",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "AI is still very susceptible to errors and hallucinations"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI writing style naturalness",
+      "label_negative": "AI robotic writing",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "if an AI were able to study my own writing style and emulate it to a reasonable degree"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "it saved me a decent amount of time"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Competence and control over work",
+      "grounding_span": "I've always taken pride in my writing abilities"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Authenticity and personal integrity",
+      "grounding_span": "people like to feel valued and heard"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Satisfaction with AI for cleanup tasks",
+      "valence": "positive",
+      "grounding_span": "I felt satisfied after having used AI for this"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Reluctance to use AI for writing",
+      "valence": "negative",
+      "grounding_span": "I'm reluctant to employ AI to help with this"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Conditional openness to future AI use if style matching improves",
+      "valence": "mixed",
+      "grounding_span": "I may gradually acquiesce and start using it to help me with composing the odd email"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Structured data preparation — line-separated lists for clarity",
+      "grounding_span": "I do this as a line separated list"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Principled boundary setting — preserves human touch in communication",
+      "grounding_span": "I've always taken pride in my writing abilities"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

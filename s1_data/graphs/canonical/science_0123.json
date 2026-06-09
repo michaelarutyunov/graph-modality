@@ -1,0 +1,156 @@
+{
+  "transcript_id": "science_0123",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as learning bridge for new programming languages",
+      "label_negative": "Traditional self-study without AI assistance",
+      "bipolarity_complete": true,
+      "grounding_span": "I figured if I could get the R code through ChatGPT, check it against what my student was doing, and understand how it worked, I'd be starting to learn more of the nuance"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability in citations",
+      "label_negative": "AI missing relevant papers or providing inaccurate annotations",
+      "bipolarity_complete": true,
+      "grounding_span": "My only worry with that is whether it has found all of the relevant papers and whether the information in the annotations are accurate"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI practicality of experimental designs",
+      "label_negative": "Traditional intuition-based experimental design",
+      "bipolarity_complete": true,
+      "grounding_span": "I am interested in seeing what AI would say and how it can help me think about analysis BEFORE the experiments are done"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI use as cheating vs. legitimate tool",
+      "label_negative": "AI as a scary thing that helps students cheat",
+      "bipolarity_complete": true,
+      "grounding_span": "I think it's necessary that we start thinking about AI as a helpful tool and not a scary thing that helps students cheat"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Skill development and learning",
+      "grounding_span": "I've wanted to learn R for a long time"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Research integrity and accuracy",
+      "grounding_span": "ensuring that my work is entirely original"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Scientific rigor and critical evaluation",
+      "grounding_span": "so I don't include or exclude things mistakenly"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Positive stance toward AI as research tool",
+      "valence": "positive",
+      "grounding_span": "I figured if I could get the R code through ChatGPT, check it against what my student was doing, and understand how it worked, I'd be starting to learn more of the nuance"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Negative stance toward AI for literature search",
+      "valence": "ambivalent",
+      "grounding_span": "My only worry with that is whether it has found all of the relevant papers and whether the information in the annotations are accurate"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Cautious reliance on AI for experimental design",
+      "valence": "positive",
+      "grounding_span": "I am interested in seeing what AI would say and how it can help me think about analysis BEFORE the experiments are done"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Advocacy for responsible AI use with caution",
+      "valence": "positive",
+      "grounding_span": "I think it's necessary that we start thinking about AI as a helpful tool and not a scary thing that helps students cheat"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Verification-oriented — cross-checks AI outputs against other sources",
+      "grounding_span": "I had a gut feeling based on visuals what the results should be. I plotted all of the data first so I sort of knew what to expect. I was also able to verify the results against Matlab"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Proactive planning mindset — thinks about analysis before experiments to avoid missing important elements",
+      "grounding_span": "I am interested in seeing what AI would say and how it can help me think about analysis BEFORE the experiments are done so I don't miss anything important like appropriate controls and ranges of variables"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

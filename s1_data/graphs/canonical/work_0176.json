@@ -1,0 +1,197 @@
+{
+  "transcript_id": "work_0176",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as practical problem solver",
+      "label_negative": "AI as opaque solution provider",
+      "bipolarity_complete": true,
+      "grounding_span": "I asked the AI to focus only on the specific section I was inquiring about. However, it continued to provide a 'solution' that didn't work, and I didn't fully understand how it arrived at it."
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as coding suggestion tool",
+      "label_negative": "AI as crutch for fundamental skills",
+      "bipolarity_complete": true,
+      "grounding_span": "I ask it to remind me, and it usually does so very quickly and effectively."
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Personal enjoyment of manual implementation",
+      "label_negative": "AI-automated implementation",
+      "bipolarity_complete": true,
+      "grounding_span": "I really enjoy doing the things I already know how to do. For example, creating a fairly simple new functionality for the ERP system I work on—I enjoy the whole process."
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI use visibility and workplace perception",
+      "label_negative": "AI use hidden from colleagues",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't like it when they see me asking questions to the AI."
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Personal expertise and self-reliance",
+      "label_negative": "Dependence on AI for difficult problems",
+      "bipolarity_complete": true,
+      "grounding_span": "I think it's important to know how to read documentation and find answers on my own."
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Deep understanding",
+      "grounding_span": "I focus on using it to aid my understanding rather than to do everything for me."
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Skill preservation and professional adaptability",
+      "grounding_span": "I feel that if I stop, I'll forget how to do them myself."
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Autonomy and personal control",
+      "grounding_span": "I enjoy creating all the templates and building the full functionality."
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Professional reputation and social acceptance",
+      "grounding_span": "I don't like them seeing me rely on AI for that, since I feel it diminishes my own ability to solve problems independently."
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI's lack of error transparency",
+      "valence": "negative",
+      "grounding_span": "I was very frustrated. At some point, I asked it how it had determined that the 'root' of the problem was what it was suggesting. It started giving me more 'reasons' for why that was the cause; however, although they kind of 'made sense,' they didn't really—they were just nonsense."
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI as reference tool",
+      "valence": "positive",
+      "grounding_span": "I ask it to remind me, and it usually does so very quickly and effectively."
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Preference for manual implementation",
+      "valence": "positive",
+      "grounding_span": "I really enjoy doing the things I already know how to do."
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Guilt about secret AI use",
+      "valence": "negative",
+      "grounding_span": "I don't like it when they see me asking questions to the AI."
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Skepticism toward AI for complex tasks",
+      "valence": "negative",
+      "grounding_span": "I'd like to reduce my reliance on AI in this regard."
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative step-by-step problem decomposition",
+      "grounding_span": "I tried to be more specific: since I was trying to understand the problem so I could solve it, I asked the AI to focus only on the specific section I was inquiring about."
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based compartmentalization of AI use",
+      "grounding_span": "I purposely use a text editor that doesn't have any AI assistance."
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n3",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,175 @@
+{
+  "transcript_id": "work_0503",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as communication assistant for tone and wording",
+      "label_negative": "Manual drafting of communications",
+      "bipolarity_complete": true,
+      "grounding_span": "I let the AI select the correct wording and formatting to have a ready to send message"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as co-pilot for tasks requiring validation",
+      "label_negative": "Full delegation without oversight",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI as a co-pilot for most tasks, it helps me with certain aspects of the task and I always validate the work afterwards"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for tasks with transferable context",
+      "label_negative": "AI for tasks requiring broad non-transferable context",
+      "bipolarity_complete": true,
+      "grounding_span": "Any task that requires a broader context to be properly achieved and where the context is not easily transferrable to the AI model's context, I prefer to handle on my own"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI for creative brainstorming",
+      "label_negative": "Human-led creative brainstorming",
+      "bipolarity_complete": true,
+      "grounding_span": "I stopped using AI for creative brainstorming"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as integrated life co-pilot",
+      "label_negative": "AI as limited task-specific tool",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is aware of both my calendar, my code bases, legal documents and can act like a true co-pilot in my life"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and productivity",
+      "grounding_span": "I let the AI select the correct wording and formatting to have a ready to send message"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Quality and accuracy",
+      "grounding_span": "I always validate the work afterwards"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Creative control and originality",
+      "grounding_span": "I stopped using AI for creative brainstorming"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Seamless integration and convenience",
+      "grounding_span": "AI is aware of both my calendar, my code bases, legal documents and can act like a true co-pilot in my life"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for communications",
+      "valence": "positive",
+      "grounding_span": "I let the AI select the correct wording and formatting to have a ready to send message"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Preference for human handling of context-heavy tasks",
+      "valence": "negative",
+      "grounding_span": "Any task that requires a broader context to be properly achieved and where the context is not easily transferrable to the AI model's context, I prefer to handle on my own"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with AI for creative brainstorming",
+      "valence": "negative",
+      "grounding_span": "I stopped using AI for creative brainstorming"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Optimism about AI as integrated co-pilot",
+      "valence": "positive",
+      "grounding_span": "I could see a near future where AI is aware of both my calendar, my code bases, legal documents and can act like a true co-pilot in my life"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Validation-oriented oversight — always checks AI output",
+      "grounding_span": "I always validate the work afterwards"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Context-driven task delegation — evaluates transferability of context",
+      "grounding_span": "Any task that requires a broader context to be properly achieved and where the context is not easily transferrable to the AI model's context, I prefer to handle on my own"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

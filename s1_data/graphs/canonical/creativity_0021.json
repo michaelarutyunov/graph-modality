@@ -1,0 +1,161 @@
+{
+  "transcript_id": "creativity_0021",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as research starting point",
+      "label_negative": "AI as threat to personal learning enjoyment",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is essentially doing that initial Google search and general reading and compiling it for me"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI inaccuracy and hallucination",
+      "bipolarity_complete": true,
+      "grounding_span": "it's still prone to inaccuracy and hallucination"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as brainstorming and idea generator",
+      "label_negative": "AI as source of incorrect details",
+      "bipolarity_complete": true,
+      "grounding_span": "It provided me with a list of suggestions and, most importantly, reasons for those suggestions"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Human-driven creative agency",
+      "label_negative": "AI-driven creative decisions",
+      "bipolarity_complete": true,
+      "grounding_span": "I am definitely the decision-maker"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Personal learning and curiosity",
+      "grounding_span": "I enjoy learning about things for myself, so I don't want to give up that part of the process"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and cost reduction",
+      "grounding_span": "makes the process a little more efficient and convenient"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Creative autonomy",
+      "grounding_span": "I am definitely the decision-maker"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Pragmatic acceptance of AI as a tool",
+      "valence": "positive",
+      "grounding_span": "it's sometimes convenient for rounding up general information and giving me a starting point"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Skepticism and caution toward AI",
+      "valence": "negative",
+      "grounding_span": "it's still prone to inaccuracy and hallucination"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Resistance to over-reliance on AI",
+      "valence": "negative",
+      "grounding_span": "I don't necessarily want my information summarized and spoon fed to me"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Confidence in human creative superiority",
+      "valence": "positive",
+      "grounding_span": "I am definitely the decision-maker"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Self-directed learning preference — enjoys independent discovery",
+      "grounding_span": "I enjoy learning about things for myself, so I don't want to give up that part of the process"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Historical analogical reasoning — draws parallels to past technological shifts",
+      "grounding_span": "In much the same way that pre-computer, I had to go to the library...now using AI makes the process a little more efficient"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

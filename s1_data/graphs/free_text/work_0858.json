@@ -1,0 +1,193 @@
+{
+  "transcript_id": "work_0858",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as idea generator for content creation",
+      "label_negative": "AI as source of generic, robotic output",
+      "bipolarity_complete": true,
+      "grounding_span": "It's a good way to generate ideas that I hadn't thought of, though I find the captions to be pretty generic"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as structural foundation for writing",
+      "label_negative": "AI as lacking personal details and sounding robotic",
+      "bipolarity_complete": true,
+      "grounding_span": "AI has a good format and layout but lacks the personal details and it sounds pretty robotic"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as emotional buffer for difficult communications",
+      "label_negative": "AI as unable to capture nuanced tone",
+      "bipolarity_complete": true,
+      "grounding_span": "knowing that it was an AI that initially wrote the words made it easier for me to send the bad news"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI reliability in organizational tasks",
+      "label_negative": "AI unreliability risking missed details",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't fully trust AI with most organizational tasks because I'm worried it will miss something important"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as collaborative partner requiring step-by-step verification",
+      "label_negative": "AI as fully autonomous delegator",
+      "bipolarity_complete": true,
+      "grounding_span": "I tend to collaborate throughout a task, that way I can ensure everything is accurate at each step"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as tool for skill adaptation and growth",
+      "label_negative": "AI as threat to human skills",
+      "bipolarity_complete": true,
+      "grounding_span": "adapting my skills to incorporate AI and make me better and more efficient at my job"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Authentic human connection and storytelling",
+      "grounding_span": "there will always be a need for human influence like through authentic interactions and storytelling"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional reputation and accountability",
+      "grounding_span": "it would reflect poorly on me or the business I'm representing"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "AI saved me a lot of time"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Emotional ease in difficult tasks",
+      "grounding_span": "saving me a lot of anxiety about crafting a helpful email"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI not listening to feedback",
+      "valence": "negative",
+      "grounding_span": "I kept telling it that, but it still kept suggesting holidays that weren't helpful"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI-generated email tone",
+      "valence": "positive",
+      "grounding_span": "it generated a very helpful email in exactly the tone I was looking for"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Excitement about AI's future potential",
+      "valence": "positive",
+      "grounding_span": "I'm excited at how AI can improve things in the future"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Distrust of AI for organizational tasks",
+      "valence": "negative",
+      "grounding_span": "I don't fully trust AI with most organizational tasks"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative feedback refinement — provides feedback and adjusts based on AI output",
+      "grounding_span": "Depending on what it sends me I give it feedback (need more business posts, need a humorous post, etc)"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Task-dependent delegation — collaborates step-by-step for some tasks, delegates fully for others",
+      "grounding_span": "I tend to collaborate throughout a task... The exception to that is usually writing profiles or news stories"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n5",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

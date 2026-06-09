@@ -1,0 +1,237 @@
+{
+  "transcript_id": "science_0013",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as brainstorming and idea generator",
+      "label_negative": "AI as unreliable or inefficient collaborator",
+      "bipolarity_complete": true,
+      "grounding_span": "I asked it to come up with a table of contents without any kind of guidance. I used that as my 'rough draft.'"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI memory and context retention",
+      "label_negative": "AI forgetting previous decisions",
+      "bipolarity_complete": true,
+      "grounding_span": "it does a LOT is not remember previous parts of our conversation"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI adherence to user specifications",
+      "label_negative": "AI inability to follow complex constraints",
+      "bipolarity_complete": true,
+      "grounding_span": "if I give the AI too many guidelines, it has a hard time"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as practical problem solver",
+      "label_negative": "AI inconsistent problem-solving patterns",
+      "bipolarity_complete": true,
+      "grounding_span": "Write solutions to problems that are CONSISTENT"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Human writing and creative control",
+      "label_negative": "AI taking over writing tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I avoid using it for specific writing tasks, like actually writing the content of the lesson"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI reliability and accuracy in generated content",
+      "label_negative": "AI generating incorrect or misaligned content",
+      "bipolarity_complete": true,
+      "grounding_span": "it gave me problems that would not fulfill a certain objective correctly"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "it was helpful to have a starting point"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Client trust and credibility",
+      "grounding_span": "I do not want to get in trouble with the client for plagiarism"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Personal fulfillment and skill mastery",
+      "grounding_span": "I am a writer, and I enjoy the writing process"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Educational quality and accuracy",
+      "grounding_span": "I need consistency in process and formatting"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI for brainstorming",
+      "valence": "positive",
+      "grounding_span": "AI is also extremely helpful for quickly getting solutions"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI as memory aid",
+      "valence": "negative",
+      "grounding_span": "it is no longer efficient to take the time to remind the AI"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Frustration with AI's failure to follow rules",
+      "valence": "negative",
+      "grounding_span": "Instead of figuring out how to reword... it decides to split the offending objective into 2"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Desire for AI consistency in problem-solving",
+      "valence": "positive",
+      "grounding_span": "I need consistency in process and formatting"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Reluctance to use AI for writing",
+      "valence": "negative",
+      "grounding_span": "I avoid using it for specific writing tasks"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Confidence in AI as a key skill",
+      "valence": "positive",
+      "grounding_span": "I don't think AI will ever replace a trained educator in creating curriculum"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Systematic iterative verification — works independently first, then checks with AI",
+      "grounding_span": "I usually start out by asking AI. If it gives a good answer, I will usually continue the conversation."
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain expertise as primary filter",
+      "grounding_span": "I have a lot of education and experience in high school curriculum. I can pretty easily spot when there is something awry."
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n3",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n4",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n5",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,220 @@
+{
+  "transcript_id": "work_0480",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as communication refinement tool",
+      "label_negative": "Manual drafting without AI assistance",
+      "bipolarity_complete": true,
+      "grounding_span": "use AI LLM's to help revise and clarify emails to be professional, friendly, and clear"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as data processing and analysis tool",
+      "label_negative": "Manual data processing without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "use AI programs to sift through wildlife camera trap data (photos) to remove blank photos and categorize different wildlife pictures"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as research and learning accelerator",
+      "label_negative": "Traditional research without AI assistance",
+      "bipolarity_complete": true,
+      "grounding_span": "I will go to the LLM's to give a quick breakdown of the main components of the thing I am studying"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as fully autonomous agent",
+      "bipolarity_complete": true,
+      "grounding_span": "I would say it is more collaborative at this point"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as future autonomous agent",
+      "label_negative": "AI as non-autonomous tool",
+      "bipolarity_complete": true,
+      "grounding_span": "I am interested in having more AI Agent work in the near future where I could delegate complete tasks to the AI"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI implementation complexity",
+      "label_negative": "AI implementation simplicity",
+      "bipolarity_complete": true,
+      "grounding_span": "it can be difficult not having clearly defined steps to set up AI workflows"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "Foundational skill maintenance alongside AI",
+      "label_negative": "Complete reliance on AI without foundational skills",
+      "bipolarity_complete": true,
+      "grounding_span": "we always need to know the correct ways to do things, even if AI starts to do most of the work"
+    },
+    {
+      "id": "n8",
+      "type": "Construct",
+      "label": "AI for field data collection and identification",
+      "label_negative": "Traditional field methods with paper and field guides",
+      "bipolarity_complete": true,
+      "grounding_span": "we use AI programs for identifying birds, plants, animals, which in the past would require having books and field guides"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Professional communication quality",
+      "grounding_span": "give a consistently professional voice to all my emails"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Efficiency and productivity",
+      "grounding_span": "streamline data evaluation and reporting"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Epistemic understanding and verified knowledge",
+      "grounding_span": "ensure the information I am getting is backed by science"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Human connection and strategic collaboration",
+      "grounding_span": "face to face meetings with people to strategize"
+    },
+    {
+      "id": "n13",
+      "type": "Value",
+      "label": "Competence and reliability",
+      "grounding_span": "How will we know if the AI went wrong if we don't know ourselves what is right?"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Satisfaction with AI for communication refinement",
+      "valence": "positive",
+      "grounding_span": "use AI LLM's to help revise and clarify emails to be professional, friendly, and clear"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Frustration with AI implementation complexity",
+      "valence": "negative",
+      "grounding_span": "it can be difficult not having clearly defined steps to set up AI workflows"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Optimism about future AI agent delegation",
+      "valence": "positive",
+      "grounding_span": "I am interested in having more AI Agent work in the near future"
+    },
+    {
+      "id": "n17",
+      "type": "Stance",
+      "label": "Cautious value on maintaining foundational skills",
+      "valence": "positive",
+      "grounding_span": "we always need to know the correct ways to do things, even if AI starts to do most of the work"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Systematic hierarchical inquiry — starts broad then drills down",
+      "grounding_span": "I start with a general overview question... Then dig deeper into the subject on follow-ups"
+    },
+    {
+      "id": "n19",
+      "type": "CognitiveStyleMarker",
+      "label": "Verification-oriented approach — seeks sources and knowledge bases",
+      "grounding_span": "I will generally always ask for sources of scientific articles... set up the scientific articles as a Knowledge Base"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n13",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n14",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n17",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n3",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n19",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

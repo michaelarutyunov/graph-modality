@@ -1,0 +1,144 @@
+{
+  "transcript_id": "work_0555",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative brainstorming partner",
+      "label_negative": "AI as autonomous writer",
+      "bipolarity_complete": true,
+      "grounding_span": "I use the AI almost as a white board to talk out ideas, get options"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as research and information retrieval tool",
+      "label_negative": "AI as creative decision-maker",
+      "bipolarity_complete": true,
+      "grounding_span": "If i'm doing research, I more ask direct questions such as 'tell me about Russia in the 1990s brief overview'"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as beta reader for constructive criticism",
+      "label_negative": "AI as primary author",
+      "bipolarity_complete": true,
+      "grounding_span": "I may try to use the AI as a 'beta reader' and see if there is good constructive critism from it"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI understanding of user's intent",
+      "label_negative": "AI misunderstanding or lack of imagination",
+      "bipolarity_complete": true,
+      "grounding_span": "the AI seems to understand what I mean which is helpful when I can't articulate"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Creative autonomy and personal expression",
+      "grounding_span": "Fiction writing is about letting others see the idea/story/scenes in my imagination"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficient ideation and decision-making",
+      "grounding_span": "It's also nice to see everything laid out so I can choose"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Understanding and being understood",
+      "grounding_span": "the AI seems to understand what I mean which is helpful when I can't articulate"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Comfortable and satisfied with AI as brainstorming tool",
+      "valence": "positive",
+      "grounding_span": "I think i'm comfortable with this"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Firm boundary against AI doing actual writing",
+      "valence": "negative",
+      "grounding_span": "I do not use the AI to do any of the actual writing"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Openness to trying AI as beta reader",
+      "valence": "positive",
+      "grounding_span": "I may try to use the AI as a 'beta reader'"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through layered questioning",
+      "grounding_span": "I usually go about 3 levels deep with the AI"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Clear domain separation between ideation and execution",
+      "grounding_span": "I do not use the AI to do any of the actual writing"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

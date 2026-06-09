@@ -1,0 +1,192 @@
+{
+  "transcript_id": "work_0112",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI accuracy in numerical tasks",
+      "label_negative": "AI inaccuracy and hallucination",
+      "bipolarity_complete": true,
+      "grounding_span": "gemini pro is overall more correct most of the time"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI integration into existing software",
+      "label_negative": "AI distraction and unnecessary changes",
+      "bipolarity_complete": true,
+      "grounding_span": "copilot is convenient when just providing the files as context and sometimes it gets distracted by irrelevant parts of the code"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as implementation executor",
+      "label_negative": "AI as autonomous decision-maker",
+      "bipolarity_complete": true,
+      "grounding_span": "I would come up with a basic idea of how I want to implement it... and provide this to AI"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as knowledge resource for unfamiliar domains",
+      "label_negative": "AI irrelevance in familiar domains",
+      "bipolarity_complete": true,
+      "grounding_span": "AI really helped me go over all the details and actually create the playbook with the correct tasks"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Human creative direction and strategic judgment",
+      "label_negative": "AI-delegated creative work",
+      "bipolarity_complete": true,
+      "grounding_span": "Tasks like organizing notes, coming up with ideas, designing products or anything in general I prefer to do myself"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "Skill preservation through personal practice",
+      "label_negative": "Skill atrophy due to AI reliance",
+      "bipolarity_complete": true,
+      "grounding_span": "I try to practice my own skills by working on my own side projects/apps in my downtime"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "AI makes our workflow significantly faster with few mistakes"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Personal competence and skill development",
+      "grounding_span": "I try to practice my own skills by working on my own side projects"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Creative autonomy",
+      "grounding_span": "these are things I enjoy doing and also want to put more effort in, as they do often require a bit more subjective perspective"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "A time I was very satisfied with AI was when I worked on a yaml playbook"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Hesitation overcome by experience",
+      "valence": "positive",
+      "grounding_span": "I was hesitant at first because I wasnt sure how reliable it would be but my colleagues encourage me to use it"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Resistance to AI in creative work",
+      "valence": "negative",
+      "grounding_span": "Tasks like organizing notes, coming up with ideas, designing products or anything in general I prefer to do myself"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Cautious reliance on AI",
+      "valence": "ambivalent",
+      "grounding_span": "I also try to not fully rely on it, making sure to double check everything because I know it can hallucinate or make mistakes"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Architectural planning before execution",
+      "grounding_span": "I would come up with a basic idea of how I want to implement it... identify which files I want to create in which folders"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic context-based tool selection",
+      "grounding_span": "I enjoy copilot for quick/easier tasks... But gemini pro is overall more correct most of the time"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

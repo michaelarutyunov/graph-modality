@@ -1,0 +1,169 @@
+{
+  "transcript_id": "work_0301",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as learning bridge for technical communication",
+      "label_negative": "Independent struggle with technical jargon",
+      "bipolarity_complete": true,
+      "grounding_span": "I use it to learn about some of the engineering terms and technology"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as interactive learning partner",
+      "label_negative": "AI as black-box task completer",
+      "bipolarity_complete": true,
+      "grounding_span": "I usually go back and forth, because I am wanting to fully learn and understand"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability in competitive analysis",
+      "label_negative": "AI hallucination in competitive analysis",
+      "bipolarity_complete": true,
+      "grounding_span": "AI sometimes hallucinate quite a bit here and does not tell us that it is hallucinating"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI for proof-of-concept creation",
+      "label_negative": "AI limited to administrative tasks only",
+      "bipolarity_complete": true,
+      "grounding_span": "using AI to create proof-of-concepts of the features themselves"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI for administrative task automation",
+      "label_negative": "Manual handling of administrative tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "some administrative tasks like generating user stories or tasks or even create powerpoint decks"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Technical competence and career relevance",
+      "grounding_span": "I would like to develop more and more of my technical skills"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "It is just faster at the moment"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Trustworthy and accurate information",
+      "grounding_span": "we pretty much failed to generate a response that either did not have any hallucinations"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for learning technical concepts",
+      "valence": "positive",
+      "grounding_span": "I like to be able to hold a decent conversation with the team"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI hallucinations in competitive analysis",
+      "valence": "negative",
+      "grounding_span": "It was pretty frustrating because we thought it was a great way"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Strategic embrace of AI for future-proofing",
+      "valence": "positive",
+      "grounding_span": "I want to use it more as I believe that if I don't master this skill now, my current skills will no longer be relevant"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Resignation toward IP restrictions on AI use",
+      "valence": "negative",
+      "grounding_span": "My work unfortunately takes its IP very seriously and so it takes time to use the latest versions"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative back-and-forth learning approach",
+      "grounding_span": "I usually go back and forth, because I am wanting to fully learn and understand"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic skill development focus",
+      "grounding_span": "I would like to develop more and more of my technical skills"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,184 @@
+{
+  "transcript_id": "creativity_0032",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as writing and grammar assistant",
+      "label_negative": "AI as invasive style homogenizer",
+      "bipolarity_complete": true,
+      "grounding_span": "In the case of grammar or spelling mistakes it is very useful"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as brainstorming and idea generator",
+      "label_negative": "AI as creative substitute",
+      "bipolarity_complete": true,
+      "grounding_span": "I also sometimes use it for brainstorming, a change in perspective can really help"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as research assistant",
+      "label_negative": "AI as unreliable information source",
+      "bipolarity_complete": true,
+      "grounding_span": "I usually disregard the actual content of that overview and just check the cited webpages instead"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Preservation of human writing voice",
+      "label_negative": "Homogenized writing style due to AI suggestions",
+      "bipolarity_complete": true,
+      "grounding_span": "I do try to limit my use of AI, so it's my voice and writing style and not someone else's"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI customization and adaptability",
+      "label_negative": "Invasive AI forced into software",
+      "bipolarity_complete": true,
+      "grounding_span": "when it is forced into software it's invasive, encouraging over-reliance"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative authenticity and human expression",
+      "grounding_span": "everyone's style would be the same. No one would have a unique writing style anymore"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Creative productivity and efficiency",
+      "grounding_span": "I still feel like I was a little more productive than I would have been otherwise"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Epistemic accuracy and understanding",
+      "grounding_span": "providing more accurate responses and even being able to accurately delve into more obscure topics"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for simple syntax issues",
+      "valence": "positive",
+      "grounding_span": "In the case of grammar or spelling mistakes it is very useful"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Negative stance toward invasive AI suggestions",
+      "valence": "negative",
+      "grounding_span": "when it is forced into software it's invasive, encouraging over-reliance"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI for brainstorming",
+      "valence": "positive",
+      "grounding_span": "I think the different perspective provided really helps with that"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Ambivalence about AI's future role",
+      "valence": "ambivalent",
+      "grounding_span": "If I'm optimistic, I see AI being more useful... I am, unfortunately, not a very optimistic person"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Intentional limitation and selective use of AI",
+      "grounding_span": "I do try to limit my use of AI"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Catalytic ideation — uses AI suggestions to trigger own ideas",
+      "grounding_span": "let them act as a guide to slingshot my mind to an adjacent idea"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n5",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

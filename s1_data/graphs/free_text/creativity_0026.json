@@ -1,0 +1,149 @@
+{
+  "transcript_id": "creativity_0026",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as advanced search/indexing tool",
+      "label_negative": "AI as independent creative collaborator",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't think I would really describe it as a collaboration, more a more advanced search/indexing"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as creative catalyst for inspiration",
+      "label_negative": "Waiting passively for inspiration",
+      "bipolarity_complete": true,
+      "grounding_span": "Rather than wait for inspiration to come to me, I can make my creative process move faster"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as proof-of-concept and pitch support",
+      "label_negative": "AI replacing physical production",
+      "bipolarity_complete": true,
+      "grounding_span": "using AI tools to create proof-of-concepts for pitches"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI impact on industry economics and originality",
+      "label_negative": "AI creating homogeneous baseline and undervaluing originality",
+      "bipolarity_complete": true,
+      "grounding_span": "AI's presence in writing will create a more homogenous and good/okay base playing field"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Creative efficiency and active pursuit",
+      "grounding_span": "Rather than wait for inspiration to come to me, I can make my creative process move faster"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Authorial control and creative independence",
+      "grounding_span": "I am the sole driver of creative decisions"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Originality and groundbreaking storytelling",
+      "grounding_span": "the importance of originality would likely be downplayed"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Pragmatic acceptance of AI as non-collaborative tool",
+      "valence": "positive",
+      "grounding_span": "I don't think I would really describe it as a collaboration, more a more advanced search/indexing"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Concern about AI devaluing writer compensation and originality",
+      "valence": "negative",
+      "grounding_span": "stiffing them on the money they would have received"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Optimistic anticipation of AI for pitching",
+      "valence": "positive",
+      "grounding_span": "I can totally see myself doing a work-in-progress AI generated short/scenes/sequence as a way to sell a project"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through elimination",
+      "grounding_span": "it will send me on a path towards what I actually want by giving some examples and eliminating what I don't want"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Active targeted seeking over passive waiting",
+      "grounding_span": "Rather than wait for inspiration to come to me, I can make my creative process move faster by trying to be more active/targeted"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

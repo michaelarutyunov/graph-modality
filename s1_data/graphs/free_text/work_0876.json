@@ -1,0 +1,188 @@
+{
+  "transcript_id": "work_0876",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as time-saving content creation tool",
+      "label_negative": "Manual content creation without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "AI makes this task a lot easier and saves me a lot of time"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI output quality and appropriateness",
+      "label_negative": "AI output requiring revision for grade-level fit",
+      "bipolarity_complete": true,
+      "grounding_span": "the texts are usually either too easy for the grade level I am requesting content for, or too challenging"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as quick results provider",
+      "label_negative": "AI as collaborative ongoing partner",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't usually have the time to collaborate in that way, and so I usually just need quick results"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Workplace-sanctioned AI use",
+      "label_negative": "Workplace stigma against AI use",
+      "bipolarity_complete": true,
+      "grounding_span": "in my workplace, we are often encouraged to use AI to help create content"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as supplement when lacking ideas or time",
+      "label_negative": "AI as replacement for core teaching skills",
+      "bipolarity_complete": true,
+      "grounding_span": "AI would just help in situations where I cannot create my own because of a lack of ideas or time"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI potential for expanded tasks (grading, communication)",
+      "label_negative": "AI limited to content creation only",
+      "bipolarity_complete": true,
+      "grounding_span": "I hope that in the future, AI can also be used for things like grading student responses and communicating with families"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Time efficiency",
+      "grounding_span": "saves me a lot of time"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional competence and student-appropriate content",
+      "grounding_span": "I know that a kindergarten student likely wouldn't know the word 'particularly'"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Professional sustainability and manageable workload",
+      "grounding_span": "help make teaching a more manageable and sustainable profession"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Teacher autonomy and skill preservation",
+      "grounding_span": "I'm not worried about losing that skill because it's still something I would do often without AI"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI as time-saver",
+      "valence": "positive",
+      "grounding_span": "I ended up being pretty satisfied with the results, and it really saved me a lot of time"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with AI's inability to adjust grade level appropriately",
+      "valence": "negative",
+      "grounding_span": "it can be a little frustrating at times if I ask for a change in vocabulary level or overall complexity and the AI just gives a different story that's mostly at the same level as before"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Optimistic hope for expanded AI use in future",
+      "valence": "positive",
+      "grounding_span": "I hope to be able to use AI in other ways in the years ahead"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Awareness of workplace stigma against AI use",
+      "valence": "negative",
+      "grounding_span": "Sometimes it seems as if teachers are viewed as 'lazy' if they use AI"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through revision requests",
+      "grounding_span": "I will ask for revisions to make it more in line with what I need"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Experience-driven calibration of AI output",
+      "grounding_span": "Experience and time in the classroom"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

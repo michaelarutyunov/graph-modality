@@ -1,0 +1,157 @@
+{
+  "transcript_id": "work_0875",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as replacement doing work for you",
+      "bipolarity_complete": true,
+      "grounding_span": "I like it to be just that, something that assists or enhances my own work"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as resource for refining and improving output",
+      "label_negative": "AI producing generic unpersonalized output",
+      "bipolarity_complete": true,
+      "grounding_span": "running it through AI to see if I prefer any of the suggestions offered"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI accuracy in information extraction",
+      "label_negative": "Manual inefficient information processing",
+      "bipolarity_complete": true,
+      "grounding_span": "searching documents quickly and retaining key points"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Human empathy and authentic connection in mental health",
+      "label_negative": "AI lacking human empathy and personalization",
+      "bipolarity_complete": true,
+      "grounding_span": "only a person can truly know human interaction, feelings, body language, tone and most importantly empathy"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI responsiveness to iterative adjustments",
+      "label_negative": "Frustration with AI due to poor prompting",
+      "bipolarity_complete": true,
+      "grounding_span": "I have developed a skill set in order to refine my requests detail by detail"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Personalized and human-centered communication",
+      "grounding_span": "the wording or personalization that a human who knows how each person prefers things worded or formatted"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "searching documents quickly and retaining key points"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Human connection and empathy",
+      "grounding_span": "only a person can truly know human interaction, feelings, body language, tone and most importantly empathy"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI as collaborative partner",
+      "valence": "positive",
+      "grounding_span": "I am on board 100 percent. I am excited and looking forward to working hand in hand with AI"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Concern about colleagues' over-reliance on AI",
+      "valence": "negative",
+      "grounding_span": "they use it to do their work for them not as a resource. I find this can produce generic work"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with iterative refinement needed",
+      "valence": "positive",
+      "grounding_span": "This does not frustrate me at all. I enjoy working like that"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative prompt refinement",
+      "grounding_span": "I have developed a skill set in order to refine my requests detail by detail"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-expertise-driven verification of AI outputs",
+      "grounding_span": "creating what I need, then running it through AI to see if I prefer any of the suggestions offered"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

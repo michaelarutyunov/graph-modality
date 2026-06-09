@@ -1,0 +1,144 @@
+{
+  "transcript_id": "work_0487",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as creative springboard for phrasing and ideas",
+      "label_negative": "Independent struggle with wording and inspiration",
+      "bipolarity_complete": true,
+      "grounding_span": "If I'm struggling with figuring out how I want to word things"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as output provider for independent refinement",
+      "label_negative": "AI as collaborative back-and-forth partner",
+      "bipolarity_complete": true,
+      "grounding_span": "I tend to use AI in the manner of taking the output and working independently"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Human domain for emotional and feeling-based interactions",
+      "label_negative": "AI-mediated emotional interactions",
+      "bipolarity_complete": true,
+      "grounding_span": "general aspects where I may need to message with a user and bring in feeling, I usually handle that myself"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as situational advisor for handling difficult messages",
+      "label_negative": "Unaided handling of difficult messages",
+      "bipolarity_complete": true,
+      "grounding_span": "I briefly described the situation to AI, and got not only advice on the situation, but help with the phrase I was thinking of"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Creative expression and inspiration",
+      "grounding_span": "need to be creative and don't have that idea already at hand"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Authentic human connection in communication",
+      "grounding_span": "wanting that human interaction and oversight"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and overcoming mental blocks",
+      "grounding_span": "the days I'm feeling less inspired or more mentally jumbled, I'm more likely to use AI"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a creative aid",
+      "valence": "positive",
+      "grounding_span": "got not only advice on the situation, but help with the phrase I was thinking of"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Preference for human handling of emotional interactions",
+      "valence": "negative",
+      "grounding_span": "general aspects where I may need to message with a user and bring in feeling, I usually handle that myself"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Neutral acceptance of current AI use pattern",
+      "valence": "mixed",
+      "grounding_span": "Not really, I think it will stay pretty much the same for now"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Inspiration-dependent tool engagement — uses AI when mentally jumbled or uninspired",
+      "grounding_span": "the days I'm feeling less inspired or more mentally jumbled, I'm more likely to use AI"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Output-then-refine approach — prefers independent tweaking over iterative collaboration",
+      "grounding_span": "I tend to use AI in the manner of taking the output and working independently"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

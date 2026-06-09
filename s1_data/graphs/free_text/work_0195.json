@@ -1,0 +1,187 @@
+{
+  "transcript_id": "work_0195",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as code writing assistant",
+      "label_negative": "Manual code writing without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI to help me write code"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for general programming tasks",
+      "label_negative": "AI for business-critical data tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I tend to use AI more for general programming"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI collaboration on existing projects",
+      "label_negative": "AI delegation on new projects",
+      "bipolarity_complete": true,
+      "grounding_span": "For existing projects, I collaborate with AI throughout tasks"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI efficiency and speed",
+      "label_negative": "AI mistakes and inefficiencies",
+      "bipolarity_complete": true,
+      "grounding_span": "AI definitely increased efficiency and sped up the process"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Human control over business-critical data",
+      "label_negative": "AI handling business-critical data",
+      "bipolarity_complete": true,
+      "grounding_span": "I feel I have better control over the data"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI integration into daily work",
+      "label_negative": "Limited AI use",
+      "bipolarity_complete": true,
+      "grounding_span": "I will use AI more and more, AI shall be integrated into my daily work"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "AI definitely increased efficiency and sped up the process"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Control and reliability",
+      "grounding_span": "I feel I have better control over the data"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Continuous learning and skill development",
+      "grounding_span": "I would always try to expand my knowledge into new technologies"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Positive satisfaction with AI for learning new technologies",
+      "valence": "positive",
+      "grounding_span": "AI definitely increased efficiency and sped up the process"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI mistakes in upgrades",
+      "valence": "negative",
+      "grounding_span": "AI failed to detect that and decided to update maven plugins"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Preference for human control over data tasks",
+      "valence": "negative",
+      "grounding_span": "I prefer to work by myself when dealing data"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Optimistic future adoption of AI",
+      "valence": "positive",
+      "grounding_span": "I will use AI more and more"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Task-context differentiation — distinguishes between existing and new projects",
+      "grounding_span": "For existing projects, I collaborate with AI throughout tasks. For new projects, I tend to give AI complete tasks"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic skill development — focuses on business and architecture over programming",
+      "grounding_span": "I would always try to expand my knowledge into new technologies... develop skills in relating technology to business"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

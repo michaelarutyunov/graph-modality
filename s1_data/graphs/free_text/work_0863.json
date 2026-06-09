@@ -1,0 +1,224 @@
+{
+  "transcript_id": "work_0863",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as junior writer/editor requiring iterative refinement",
+      "label_negative": "AI as autonomous flawless writer",
+      "bipolarity_complete": true,
+      "grounding_span": "I use it as a junior writer/editor"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI adherence to user-provided rules and style",
+      "label_negative": "AI deviation from user rules and style",
+      "bipolarity_complete": true,
+      "grounding_span": "the AI is not following my rules"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI accuracy and truthfulness in content generation",
+      "label_negative": "AI fabrication and hallucination",
+      "bipolarity_complete": true,
+      "grounding_span": "it made up a whole internal method for a business"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI temporal relevance in research",
+      "label_negative": "AI providing outdated information",
+      "bipolarity_complete": true,
+      "grounding_span": "I'll end up receiving articles or information from articles from 2022, 2023"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as brainstorming partner for creative ideas",
+      "label_negative": "AI as inadequate storyteller",
+      "bipolarity_complete": true,
+      "grounding_span": "brainstorm ideas of things to do with students"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI conversation length limitation",
+      "label_negative": "Unlimited conversation length",
+      "bipolarity_complete": true,
+      "grounding_span": "suddenly the conversation is too long, which seems especially unfair"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional quality and accuracy",
+      "grounding_span": "the collaboration between AI and me usually creates a better final article"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Time efficiency",
+      "grounding_span": "I could have done it myself in 1/10th the time"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Creative inspiration and pedagogical support",
+      "grounding_span": "brainstorm ideas of things to do with students"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with collaborative editing role",
+      "valence": "positive",
+      "grounding_span": "I'm normally more satisfied now that I have worked with AI so much"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI's failure to follow rules",
+      "valence": "negative",
+      "grounding_span": "it constantly went back to using them. That's been super frustrating"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with AI fabrications",
+      "valence": "negative",
+      "grounding_span": "it made up a whole internal method for a business"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Frustration with outdated research results",
+      "valence": "negative",
+      "grounding_span": "I would sometimes lose 2-3 hours of work before I realized it was irrelevant"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Acceptance of AI limitations in creative writing",
+      "valence": "mixed",
+      "grounding_span": "unless I'm doing creative writing, which AI totally sucks at, I'm happy to not do the actual writing"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative rule-based refinement — develops explicit rules from repeated failures",
+      "grounding_span": "Most of these I already state in my list of rules (which came about because of recognizing issues while working with AI)"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic tool switching — uses different AIs for different strengths",
+      "grounding_span": "I use two different AIs ... Each has certain strengths and weaknesses and I work to the strengths of each"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n3",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n4",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

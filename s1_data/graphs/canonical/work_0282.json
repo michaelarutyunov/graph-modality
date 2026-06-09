@@ -1,0 +1,255 @@
+{
+  "transcript_id": "work_0282",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as initial draft generator",
+      "label_negative": "Manual creation without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I use it to create first drafts of action plans, to create questions for surveys, to take data from surveys and create drafts of executive level summaries and PowerPoint presentations"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for large-scale data handling",
+      "label_negative": "Manual problem solving without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I will load data from our survey company and ask the program to determine if there are any overarching themes"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for repetitive simple tasks",
+      "label_negative": "Personal handling of quick turnaround tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "when she asks for a quick turnaround (less than six hours), I will personally handle the project from start to finish without AI assistance"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI competence in data reformatting",
+      "label_negative": "AI handling data correctly",
+      "bipolarity_complete": true,
+      "grounding_span": "there are usually corrections that need to be made with the data which has to do with the how the data was formatted to begin with"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as collaborator for iterative refinement",
+      "label_negative": "Complete delegation to AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I am more likely to collaborate with AI than completely delegate"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI for high-leverage activities",
+      "label_negative": "AI for low-leverage tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "excited to see everything it can do to automate tasks and allow me focus on higher leverage activities"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI for culture survey analysis",
+      "label_negative": "Manual survey analysis without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I used Microsoft Forms to collect the data and then was able to use AI to collect the data, create an executive level summary of the findings"
+    },
+    {
+      "id": "n8",
+      "type": "Construct",
+      "label": "AI as enhancer of personal service",
+      "label_negative": "AI as threat to personal service",
+      "bipolarity_complete": true,
+      "grounding_span": "AI has and will continue to help better serve our customers"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "I was able to do this in a short period of time with a high quality output thanks to AI"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Accuracy and reliability",
+      "grounding_span": "I had to go back and manually correct those"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Human relationships and personal touch",
+      "grounding_span": "The last manual touch ups are more of a personal choice and usually limited to a couple of sentences that I feel could flow better"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Team morale and customer satisfaction",
+      "grounding_span": "it improved the morale of the Team and significantly improve our sales results and KPIs"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Positive about AI for first drafts and analysis",
+      "valence": "positive",
+      "grounding_span": "I use it to create first drafts of action plans, to create questions for surveys"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Positive toward AI for quick problem-solving",
+      "valence": "negative",
+      "grounding_span": "when she asks for a quick turnaround (less than six hours), I will personally handle the project from start to finish without AI assistance"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Frustration with AI errors",
+      "valence": "negative",
+      "grounding_span": "The AI model I was using scored those as 0s when averaging the data. I had to go back and manually correct those"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Positive about collaborative refinement",
+      "valence": "positive",
+      "grounding_span": "I am more likely to collaborate with AI than completely delegate"
+    },
+    {
+      "id": "n17",
+      "type": "Stance",
+      "label": "Positive about AI for high-leverage activities",
+      "valence": "positive",
+      "grounding_span": "excited to see everything it can do to automate tasks and allow me focus on higher leverage activities"
+    },
+    {
+      "id": "n18",
+      "type": "Stance",
+      "label": "Frustration with AI's lack of cultural nuance",
+      "valence": "positive",
+      "grounding_span": "I was able to do this in a short period of time with a high quality output thanks to AI"
+    },
+    {
+      "id": "n19",
+      "type": "Stance",
+      "label": "Positive about AI enhancing personal service",
+      "valence": "positive",
+      "grounding_span": "AI has and will continue to help better serve our customers"
+    },
+    {
+      "id": "n20",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative prompt refinement",
+      "grounding_span": "I will give it multiple prompts as I work on a project to continually refine the output"
+    },
+    {
+      "id": "n21",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic delegation with oversight",
+      "grounding_span": "I will use AI on projects where I have more time to double and triple check all the numbers"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n13",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n17",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n18",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n19",
+      "target": "n8",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n5",
+      "target": "n20",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n21",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n21",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

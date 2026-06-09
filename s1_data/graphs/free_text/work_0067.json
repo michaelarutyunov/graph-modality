@@ -1,0 +1,174 @@
+{
+  "transcript_id": "work_0067",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as content creation tool for teaching materials",
+      "label_negative": "AI as lesson planner or structural decision-maker",
+      "bipolarity_complete": true,
+      "grounding_span": "I use ai to generate gap fill exercises for my students"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as linguistic consultant for language-specific challenges",
+      "label_negative": "AI as generic or unhelpful for nuanced language issues",
+      "bipolarity_complete": true,
+      "grounding_span": "ask it to help me tailor lessons to students with a particular native language"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability and accuracy in generated content",
+      "label_negative": "AI errors in generated content",
+      "bipolarity_complete": true,
+      "grounding_span": "found errors in it while trying to use it with a student"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI personalization and tailoring to student needs",
+      "label_negative": "AI generic or impersonal output",
+      "bipolarity_complete": true,
+      "grounding_span": "give me a story very tailored to my student's specific job"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Human touch in language teaching for engagement",
+      "label_negative": "AI replacing human interaction in language learning",
+      "bipolarity_complete": true,
+      "grounding_span": "the human touch is very valuable in this realm for keeping students engaged"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Teaching efficiency and time savings",
+      "grounding_span": "it will be faster"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Pedagogical autonomy and control",
+      "grounding_span": "I don't generally like to follow schedules imposed from the outside"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Student engagement and human connection",
+      "grounding_span": "the human touch is very valuable in this realm for keeping students engaged"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI's personalized content creation",
+      "valence": "positive",
+      "grounding_span": "the time I was most impressed was when I asked it to give me a story very tailored to my student's specific job"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI errors in teaching materials",
+      "valence": "negative",
+      "grounding_span": "found errors in it while trying to use it with a student"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Preference for human-led lesson planning over AI",
+      "valence": "negative",
+      "grounding_span": "I don't generally ask AI to plan my lessons"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Skepticism about AI replacing human teachers currently",
+      "valence": "negative",
+      "grounding_span": "I think it could potentially take over if AI developed more human simulating characteristics"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement — back-and-forth with AI to correct and adjust",
+      "grounding_span": "I sometimes go back and forth. For example, in a gap fill, I'll ask it to correct errors or change the mix"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Selective delegation — prefers AI for content creation, retains control over structure",
+      "grounding_span": "I'm more interested in having it create content than a structure"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

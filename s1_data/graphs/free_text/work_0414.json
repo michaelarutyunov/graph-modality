@@ -1,0 +1,156 @@
+{
+  "transcript_id": "work_0414",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as expert logistics consultant for research and lead generation",
+      "label_negative": "AI as unreliable source requiring verification",
+      "bipolarity_complete": true,
+      "grounding_span": "It's is like my expert logistics person that I can get info from"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI-generated information accuracy",
+      "label_negative": "AI-generated information outdated or incorrect",
+      "bipolarity_complete": true,
+      "grounding_span": "I've had a few out-of-date phone numbers or numbers that go to a part of the business that isn't directly related"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Personalized human approach in relationship building",
+      "label_negative": "AI-mediated or scripted interactions",
+      "bipolarity_complete": true,
+      "grounding_span": "I try to use a personalized human approach whenever I'm calling or reaching out to a person"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as tool for skill-building and career strategy",
+      "label_negative": "AI as threat to human skills and job security",
+      "bipolarity_complete": true,
+      "grounding_span": "I want to use AI to tell me ways to approach skill-building for things that are essentially 'AI-proof'"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Business success and contract acquisition",
+      "grounding_span": "I was able to get a contract with 11 loads a month from one of the prospects I found from using an AI-generated list"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Authentic human connection and trust",
+      "grounding_span": "I've had the most success with just genuinely engaging with potential partners or customers"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Career resilience and future-proofing",
+      "grounding_span": "I'm still trying to figure out what skills would be good to work on that AI can't 'take over'"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Satisfaction with AI for lead generation success",
+      "valence": "positive",
+      "grounding_span": "I was able to get a contract with 11 loads a month from one of the prospects I found from using an AI-generated list so I was very satisfied with that"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Frustration with outdated AI information",
+      "valence": "negative",
+      "grounding_span": "there have been times when the list that it has provided had a few businesses that were no longer in business, so the information was outdated"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Concern about AI replacing human skills",
+      "valence": "negative",
+      "grounding_span": "it is definitely a concern. I'm always trying to figure out things that human offer to the industry that can't be automated"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Strategic optimism about using AI for career development",
+      "valence": "positive",
+      "grounding_span": "I want to use AI to tell me ways to approach skill-building for things that are essentially 'AI-proof'"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement from broad to narrow",
+      "grounding_span": "I start with a broad request... From there, I will start to be more specific and ask for revisions"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic verification and cross-referencing",
+      "grounding_span": "I usually take the business names and google them to get more details about the company"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

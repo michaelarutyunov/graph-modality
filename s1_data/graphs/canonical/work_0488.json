@@ -1,0 +1,169 @@
+{
+  "transcript_id": "work_0488",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as tool for lesson planning",
+      "label_negative": "AI as unreliable for specialized language",
+      "bipolarity_complete": true,
+      "grounding_span": "I usually use AI to help me come up with ideas for lesson plans"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as direct student feedback provider",
+      "label_negative": "AI feedback replacing human feedback",
+      "bipolarity_complete": true,
+      "grounding_span": "I have also started using an AI program for student writing and feedback"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI inaccuracy and unreliability",
+      "bipolarity_complete": true,
+      "grounding_span": "I have yet to find an AI tool that is always correct"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI use in education",
+      "label_negative": "AI used without teaching basic skills",
+      "bipolarity_complete": true,
+      "grounding_span": "teach students how to best use AI, rather than having them use it without ever learning the basic skills"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI reliability for grading and assessment",
+      "label_negative": "AI grading replacing teacher grading",
+      "bipolarity_complete": true,
+      "grounding_span": "I prefer grading to be something I do on my own"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Teaching effectiveness and student learning",
+      "grounding_span": "what skills I want my students to learn"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Student skill development and independence",
+      "grounding_span": "if students never learn how to write correctly and why editing is important, they will lose out on essential communication skills"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional efficiency",
+      "grounding_span": "figure out how to leverage AI to help me complete my job duties"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for lesson creation",
+      "valence": "positive",
+      "grounding_span": "it can help me figure out ways to deliver the same topic to different age ranges or skill levels"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI's inability to reconsider grading",
+      "valence": "negative",
+      "grounding_span": "it can be frustrating"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Reluctance to use AI for writing",
+      "valence": "negative",
+      "grounding_span": "I prefer grading to be something I do on my own"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Openness to increasing AI use in future",
+      "valence": "ambivalent",
+      "grounding_span": "I am somewhat resistant to AI in education, but as with all things, I hope to learn how to co-exist and work with it responsibly"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative prompt refinement",
+      "grounding_span": "I always go back and forth with the AI"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based boundary setting — clear separation of AI-appropriate vs. human-only tasks",
+      "grounding_span": "I prefer grading to be something I do on my own"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

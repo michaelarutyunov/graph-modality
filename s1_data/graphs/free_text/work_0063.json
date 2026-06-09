@@ -1,0 +1,157 @@
+{
+  "transcript_id": "work_0063",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative decision-making partner",
+      "label_negative": "AI as unreliable or error-prone tool",
+      "bipolarity_complete": true,
+      "grounding_span": "the collaboration between me and the chatbot can lead to better and more confident decisions on my end"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as expertise complement for unfamiliar domains",
+      "label_negative": "AI as unnecessary crutch for familiar domains",
+      "bipolarity_complete": true,
+      "grounding_span": "stuff such as health topics, or in-depth financial claims are not my expertise. So I am more likely to collab with the chatbot"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI accuracy and reliability",
+      "label_negative": "AI basic factual errors",
+      "bipolarity_complete": true,
+      "grounding_span": "when I occasionally see an error in the chatbots response that I believe shouldn't exist. Such as common sense or basic facts"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as time-saving efficiency tool",
+      "label_negative": "AI as time-wasting or untrustworthy",
+      "bipolarity_complete": true,
+      "grounding_span": "It saves me time on research, but also cuts out the middle man"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Human irreplaceability in understanding human complexity",
+      "label_negative": "AI potential to replace human judgment",
+      "bipolarity_complete": true,
+      "grounding_span": "it takes a human to understand a human. Until that isn't true, I don't worry about it"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Confidence in decision-making",
+      "grounding_span": "better and more confident decisions on my end"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and productivity",
+      "grounding_span": "saves me time on research"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Human autonomy and irreplaceability",
+      "grounding_span": "it takes a human to understand a human"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI collaboration for broader perspectives",
+      "valence": "positive",
+      "grounding_span": "the chatbot includes perspectives that I didn't originally think of"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI basic factual errors",
+      "valence": "negative",
+      "grounding_span": "when I occasionally see an error in the chatbots response that I believe shouldn't exist"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Confidence in human irreplaceability",
+      "valence": "positive",
+      "grounding_span": "it takes a human to understand a human. Until that isn't true, I don't worry about it"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-dependent collaboration — leverages AI selectively based on expertise",
+      "grounding_span": "stuff such as health topics, or in-depth financial claims are not my expertise. So I am more likely to collab with the chatbot"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Independent verification tendency — cross-checks AI outputs against own knowledge",
+      "grounding_span": "If I feel confident enough, I will make the decision independently"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

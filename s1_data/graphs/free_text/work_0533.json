@@ -1,0 +1,293 @@
+{
+  "transcript_id": "work_0533",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as better internet search",
+      "label_negative": "Traditional web search",
+      "bipolarity_complete": true,
+      "grounding_span": "normally I use it as a better form of internet searching"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for technical reference and brainstorming",
+      "label_negative": "Manual research and writing",
+      "bipolarity_complete": true,
+      "grounding_span": "figuring out the appropriate git commands to do things, deciding between SQL approaches, etc. I also use it to brainstorm wording"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability for mission-critical accuracy",
+      "label_negative": "AI unreliability for critical tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "mission critical and needs to be 100% accurate like if a SQL version supports certain features"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI for internal infrastructure",
+      "label_negative": "Internal search engines for proprietary knowledge",
+      "bipolarity_complete": true,
+      "grounding_span": "questions related to technical internal infrastructure or patterns are when I'll use our internal search engines and tools since AI wont know anything about that"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI for code writing",
+      "label_negative": "Manual code writing for enjoyment",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't use things like copilot or other AI tools to write code"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI for writing documentation and communication",
+      "label_negative": "Manual writing to maintain skill and pride",
+      "bipolarity_complete": true,
+      "grounding_span": "another task I like to do myself is writing technical documentation or internal communication/emails"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI for creative tasks like presentations",
+      "label_negative": "Manual creative work for enjoyment",
+      "bipolarity_complete": true,
+      "grounding_span": "creating a powerpoint presentation - I enjoy being a little creative with presentations"
+    },
+    {
+      "id": "n8",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as independent task delegator",
+      "bipolarity_complete": true,
+      "grounding_span": "I think more of collaborating, like I'll ask for a SQL approach, and then follow up with modifications"
+    },
+    {
+      "id": "n9",
+      "type": "Construct",
+      "label": "AI honesty about limitations",
+      "label_negative": "AI overpromising or not admitting inability",
+      "bipolarity_complete": true,
+      "grounding_span": "the AI refused to say it was impossible until I pressured it"
+    },
+    {
+      "id": "n10",
+      "type": "Construct",
+      "label": "AI for problem solving buffering",
+      "label_negative": "Manual problem solving for independence",
+      "bipolarity_complete": true,
+      "grounding_span": "I'm wiling to use AI to buff my problem solving"
+    },
+    {
+      "id": "n11",
+      "type": "Construct",
+      "label": "AI for summarization and investigation",
+      "label_negative": "Manual reading of documents",
+      "bipolarity_complete": true,
+      "grounding_span": "I do intend to use AI for more summarization and investigation"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Efficiency and convenience",
+      "grounding_span": "better form of internet searching"
+    },
+    {
+      "id": "n13",
+      "type": "Value",
+      "label": "Accuracy and reliability",
+      "grounding_span": "mission critical and needs to be 100% accurate"
+    },
+    {
+      "id": "n14",
+      "type": "Value",
+      "label": "Personal enjoyment and identity",
+      "grounding_span": "I enjoy the physical act of typing to write code"
+    },
+    {
+      "id": "n15",
+      "type": "Value",
+      "label": "Skill preservation and pride",
+      "grounding_span": "I pride myself a little bit on my writing skills"
+    },
+    {
+      "id": "n16",
+      "type": "Value",
+      "label": "Independence and self-reliance",
+      "grounding_span": "I really don't like having to rely on things or people other than myself"
+    },
+    {
+      "id": "n17",
+      "type": "Stance",
+      "label": "Preference for AI over web search for common queries",
+      "valence": "positive",
+      "grounding_span": "if its something that I would google/web search to find the answer, i will just use AI instead"
+    },
+    {
+      "id": "n18",
+      "type": "Stance",
+      "label": "Reluctance to use AI for mission-critical accuracy",
+      "valence": "negative",
+      "grounding_span": "mission critical and needs to be 100% accurate like if a SQL version supports certain features"
+    },
+    {
+      "id": "n19",
+      "type": "Stance",
+      "label": "Resistance to AI for code writing due to enjoyment",
+      "valence": "negative",
+      "grounding_span": "I don't use things like copilot or other AI tools to write code"
+    },
+    {
+      "id": "n20",
+      "type": "Stance",
+      "label": "Resistance to AI for writing to maintain skill",
+      "valence": "negative",
+      "grounding_span": "another task I like to do myself is writing technical documentation or internal communication/emails"
+    },
+    {
+      "id": "n21",
+      "type": "Stance",
+      "label": "Frustration with AI not admitting limitations",
+      "valence": "negative",
+      "grounding_span": "the AI refused to say it was impossible until I pressured it"
+    },
+    {
+      "id": "n22",
+      "type": "Stance",
+      "label": "Openness to using AI for summarization and investigation",
+      "valence": "positive",
+      "grounding_span": "I do intend to use AI for more summarization and investigation"
+    },
+    {
+      "id": "n23",
+      "type": "CognitiveStyleMarker",
+      "label": "Decision-tree based tool selection",
+      "grounding_span": "if its something that I would google/web search to find the answer, i will just use AI instead"
+    },
+    {
+      "id": "n24",
+      "type": "CognitiveStyleMarker",
+      "label": "Skill preservation prioritization",
+      "grounding_span": "I want to maintain some skills myself (coding, writing)"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n13",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n14",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n15",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n14",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n13",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n16",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n17",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n18",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n19",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n20",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n21",
+      "target": "n9",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n22",
+      "target": "n11",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n23",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n24",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n24",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n6",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

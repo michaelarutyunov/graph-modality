@@ -1,0 +1,184 @@
+{
+  "transcript_id": "science_0003",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI accuracy in numerical tasks",
+      "label_negative": "AI inaccuracy and unreliability",
+      "bipolarity_complete": true,
+      "grounding_span": "my main concern is correctness and quality of work"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI transparency and reproducibility",
+      "label_negative": "AI opacity and black-box reasoning",
+      "bipolarity_complete": true,
+      "grounding_span": "You can't really see its reasoning process or thoughts about some aspects"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as debugging assistant",
+      "label_negative": "AI as unreliable for core analytical tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "AI was mostly used to debug code"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as brainstorming and idea generator",
+      "label_negative": "AI as insufficient for independent decision-making",
+      "bipolarity_complete": true,
+      "grounding_span": "it is sometimes used almost as a brainstorming tool for inspiration"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI up-to-date knowledge",
+      "label_negative": "AI as unreliable information source",
+      "bipolarity_complete": true,
+      "grounding_span": "Being able to correctly tell me about any concept in my field when I ask it to"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Quality and correctness",
+      "grounding_span": "my main concern is correctness and quality of work"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "This would save so much time"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Understanding and insight",
+      "grounding_span": "it inspires us and we think of a new and better way to do it"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Cautious skepticism about AI accuracy",
+      "valence": "negative",
+      "grounding_span": "I worry about it's accuracy in my work"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for debugging",
+      "valence": "ambivalent",
+      "grounding_span": "we just give it a few examples trying to come up with all the edge cases we can think of and see if the code correctly handles that or not"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI for brainstorming",
+      "valence": "positive",
+      "grounding_span": "it is sometimes used almost as a brainstorming tool for inspiration"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Aspirational hope for AI as practical assistant",
+      "valence": "positive",
+      "grounding_span": "Being able to correctly tell me about any concept in my field when I ask it to"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Thorough verification through isolated testing",
+      "grounding_span": "We try to always write modular style code, so we can test small parts together pretty easily"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic experimentation and abandonment of unworkable approaches",
+      "grounding_span": "we didn't want to commit too many resources to learning how to effectively set up and use AI this time around"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

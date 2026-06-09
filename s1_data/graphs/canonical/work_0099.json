@@ -1,0 +1,188 @@
+{
+  "transcript_id": "work_0099",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as tone checker for professional communication",
+      "label_negative": "AI's overly professional tone",
+      "bipolarity_complete": true,
+      "grounding_span": "I primarily use AI to rewrite emails and paragraphs in reports for clarity and tone"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as research starting point",
+      "label_negative": "AI as complete research substitute",
+      "bipolarity_complete": true,
+      "grounding_span": "if there is an engineering topic I don't know about I'll ask AI and it will give a good overview"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as sophisticated tool vs AGI",
+      "label_negative": "AI as fully integrated Excel calculator builder",
+      "bipolarity_complete": true,
+      "grounding_span": "I'd like it to be able to design the Excel sheets themselves instead of me having to paste formulas"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as skill development enabler",
+      "label_negative": "AI as skill replacement",
+      "bipolarity_complete": true,
+      "grounding_span": "I prefer to do everything myself in order to improve, but sometimes I'm aware my ability to communicate clearly is lacking"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as sophisticated tool vs AGI",
+      "label_negative": "AI as potential job replacement",
+      "bipolarity_complete": true,
+      "grounding_span": "I think of it as a really good spell check/ calculator/search engine and nothing more"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI trustworthiness without double-checking",
+      "bipolarity_complete": true,
+      "grounding_span": "I always double check everything it does so it doesn't save too much time"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Effective communication",
+      "grounding_span": "the client was impressed with the clear writing"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional growth and skill maintenance",
+      "grounding_span": "I prefer to do everything myself in order to improve"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "it doesn't save too much time"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Professional autonomy",
+      "grounding_span": "I don't think it was ever take over my job"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI for obituary writing",
+      "valence": "positive",
+      "grounding_span": "after a few iterations it came it really good"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with AI when it deviates from tone",
+      "valence": "negative",
+      "grounding_span": "the rest of the suggestion is overly professional and not how I communicate at all"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Concern about AI replacing jobs",
+      "valence": "negative",
+      "grounding_span": "I don't think it was ever take over my job"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Optimism about future AI integration",
+      "valence": "positive",
+      "grounding_span": "I would like to be able to use it in Civil 3d and to be able to make it write clear complete specifications"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through conversation",
+      "grounding_span": "I generally go sentence by sentence mixing and matching"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Selective delegation based on task nature",
+      "grounding_span": "I usually give it specific tasks and refine the answers if necessary"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

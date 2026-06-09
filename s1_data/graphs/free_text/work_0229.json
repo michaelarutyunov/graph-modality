@@ -1,0 +1,149 @@
+{
+  "transcript_id": "work_0229",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI for efficient creation of targeted reflection sheets",
+      "label_negative": "Manual creation of reflection sheets from scratch",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI mostly to help me quickly make a targeted reflection sheet"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for personal communication with parents and colleagues",
+      "label_negative": "Personal, authentic communication without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't feel like I should use it"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI-generated reflection sheets as formal documentation",
+      "label_negative": "Personalized, warm reflection sheets",
+      "bipolarity_complete": true,
+      "grounding_span": "I want the sheets to sound a little bit stiff and formal"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI for administrative tasks (spreadsheets, repetitive comments)",
+      "label_negative": "Manual handling of administrative tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "if it can copy and paste things from different shared areas onto my spread sheet that would be great"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Student-centered personalized intervention",
+      "grounding_span": "the reflection can fit the needs of the student"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Authentic personal connection with students and parents",
+      "grounding_span": "I want it to be personal"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional efficiency and time saving",
+      "grounding_span": "I wouldn't have time to write one from scratch each time"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Satisfaction with AI for reflection sheets",
+      "valence": "positive",
+      "grounding_span": "I am often satisfied with how quickly I can get these sheets made"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Reluctance to use AI for personal messages",
+      "valence": "negative",
+      "grounding_span": "I don't feel like I should use it"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Openness to AI for administrative tasks",
+      "valence": "positive",
+      "grounding_span": "if it can copy and paste things from different shared areas onto my spread sheet that would be great"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Systematic task decomposition and customization",
+      "grounding_span": "I will copy this into a word document and spend a moment making how I want it"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based boundary setting for AI use",
+      "grounding_span": "I don't feel like I should use it"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,169 @@
+{
+  "transcript_id": "work_0213",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI for production tasks (clipping, transcribing)",
+      "label_negative": "Manual production tasks without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I mostly use it for social media content creation"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for writing tasks (emails, captions, blogs)",
+      "label_negative": "Human-written content with personal touch",
+      "bipolarity_complete": true,
+      "grounding_span": "Anything to do with writing, I always do myself"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI glitches and errors",
+      "bipolarity_complete": true,
+      "grounding_span": "Opus will glitch out and combine two different interview clips"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI integration into workflow",
+      "label_negative": "Time-consuming manual processes",
+      "bipolarity_complete": true,
+      "grounding_span": "it has expedited processes that previously took a lot longer"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Personal touch in observational write-ups",
+      "label_negative": "AI-generated impersonal content",
+      "bipolarity_complete": true,
+      "grounding_span": "I like to have a human touch on all our written content"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "created more free time for me to engage with other work tasks"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Personal connection with students",
+      "grounding_span": "the students deserve more nuanced, cultivated, and personal written content"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional writing skill preservation",
+      "grounding_span": "maintaining the personal element of my writing"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "both consistently make me feel satisfied for the most part"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI glitches",
+      "valence": "negative",
+      "grounding_span": "Opus will glitch out... That is frustrating"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Reluctance to use AI for writing",
+      "valence": "negative",
+      "grounding_span": "I never use AI for"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Openness to increasing AI use in future",
+      "valence": "positive",
+      "grounding_span": "it has made me re-evaluate my relationship with AI in a more positive light"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Batch processing approach — uses AI intensively in phases",
+      "grounding_span": "I go through phases where I'd use Opus a lot on a specific day/week"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Trust-but-verify — sets parameters then reviews output",
+      "grounding_span": "I usually just trust both softwares to do an accurate job, and I feel that I'd spot any mistakes"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

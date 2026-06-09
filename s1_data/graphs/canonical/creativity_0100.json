@@ -1,0 +1,199 @@
+{
+  "transcript_id": "creativity_0100",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI for administrative tasks",
+      "label_negative": "AI as distraction from creative core",
+      "bipolarity_complete": true,
+      "grounding_span": "I primarily engage AI tools to help me deal with administrative tasks and paperwork"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for client communication",
+      "label_negative": "AI as source of miscommunication and frustration",
+      "bipolarity_complete": true,
+      "grounding_span": "I transferred my drawing into a AI and was able to make it into a realistic, 3d image and was able to convince the client"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI requiring skill and attention to use well",
+      "label_negative": "AI as easy shortcut producing 'good enough' flawed work",
+      "bipolarity_complete": true,
+      "grounding_span": "they have not bothered to learn how to prompt engineer and will either become frustrated or end up producing work that is 'good enough' but contains other flaws"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as sounding board for ideas",
+      "label_negative": "AI as autonomous idea generator replacing human creativity",
+      "bipolarity_complete": true,
+      "grounding_span": "I very rarely ever use AI to generate unique ideas or concepts. Rather I prefer to use it to tell my ideas to and to try to identify gaps or inconsistencies"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as threat to artistic endeavors",
+      "label_negative": "AI suppressing human potential in arts",
+      "bipolarity_complete": true,
+      "grounding_span": "how do we use this tool to maximize human potential rather than suppressing it"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as cost-cutting tool by executives",
+      "label_negative": "AI as tool for creative enhancement",
+      "bipolarity_complete": true,
+      "grounding_span": "I am afraid it will be used by unscrupulous parties (especially executives) to cut corners, cheat workers and de-value traditional film-making techniques"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Creative control and originality",
+      "grounding_span": "maximize human potential rather than suppressing it"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional efficiency",
+      "grounding_span": "keeping on top of my paperwork for my union membership, tailoring my resume and portfolio, managing my calendar"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Authentic skill and craftsmanship",
+      "grounding_span": "neglect details that the end user will see and judge them on"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Positive stance toward AI for administrative tasks",
+      "valence": "positive",
+      "grounding_span": "I primarily engage AI tools to help me deal with administrative tasks and paperwork"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI's literal interpretation and 'pink elephant' problem",
+      "valence": "negative",
+      "grounding_span": "It is a rather specific thing, but when you mention to a model to NOT include some element, it would invariably show up"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Concern about improper AI use by others",
+      "valence": "negative",
+      "grounding_span": "I caution a lot of people to be careful and sparing in using AI tools because of this"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Positive appreciation for AI as research catalyst",
+      "valence": "positive",
+      "grounding_span": "I prefer to use it to tell my ideas to and to try to identify gaps or inconsistencies in my own work"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Proactive adaptation to AI rather than fear of replacement",
+      "valence": "negative",
+      "grounding_span": "I am afraid it will be used by unscrupulous parties (especially executives) to cut corners, cheat workers and de-value traditional film-making techniques"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Analogical reasoning — uses concrete analogies to evaluate AI",
+      "grounding_span": "It's like dealing with humans and you tell them to not think of a pink elephant"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic adaptation — uses AI for specific tasks while maintaining core skills",
+      "grounding_span": "Elements that I didn't want included, I did not even mention"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

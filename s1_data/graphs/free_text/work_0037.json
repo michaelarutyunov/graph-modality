@@ -1,0 +1,169 @@
+{
+  "transcript_id": "work_0037",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative sounding board for creative work",
+      "label_negative": "AI as autonomous task completer",
+      "bipolarity_complete": true,
+      "grounding_span": "I collaborate with it throughout – as a sounding-board"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as grammar and syntax checker for experimental language",
+      "label_negative": "AI as writer of creative content",
+      "bipolarity_complete": true,
+      "grounding_span": "checking grammar and syntax"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as brainstorming partner for plot and character development",
+      "label_negative": "AI as stale or clichéd idea generator",
+      "bipolarity_complete": true,
+      "grounding_span": "brainstorming ideas"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as confidence booster in work quality",
+      "label_negative": "AI as source of doubt or uncertainty",
+      "bipolarity_complete": true,
+      "grounding_span": "it gives me greater confidence in my work"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as tool for commercial copywriting and journalism",
+      "label_negative": "AI as threat to human roles in commercial writing",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is fast making that kind of role redundant"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative self-expression and love of writing",
+      "grounding_span": "I write fiction to express myself and because I love to write"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional confidence and validation",
+      "grounding_span": "it gives me greater confidence in my work"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Productivity and efficiency in commercial writing",
+      "grounding_span": "AI is fast making that kind of role redundant"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI's understanding of creative intent",
+      "valence": "positive",
+      "grounding_span": "incredibly gratifying when the AI recognises what I am trying to reach for"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI's clichéd brainstorming ideas",
+      "valence": "negative",
+      "grounding_span": "what it comes back can sometimes feel stale or clichéd"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Optimistic anticipation of deeper collaboration",
+      "valence": "positive",
+      "grounding_span": "looking forward to developing an even greater understanding of how I can use it as a collaborative tool"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Resistance to using AI for fiction writing",
+      "valence": "negative",
+      "grounding_span": "I never ask the AI to do that for me"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative collaborative questioning — uses AI as sounding board through back-and-forth",
+      "grounding_span": "I might ask it a series of questions that help me focus my thoughts"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain differentiation — separates creative expression from commercial tasks",
+      "grounding_span": "I write fiction to express myself and because I love to write"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

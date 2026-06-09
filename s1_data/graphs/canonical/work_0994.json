@@ -1,0 +1,198 @@
+{
+  "transcript_id": "work_0994",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as co-coder for knowledge augmentation and speed",
+      "label_negative": "AI as replacement that undermines learning",
+      "bipolarity_complete": true,
+      "grounding_span": "using the AI as a co-coder to help me augment my knowledge and speed up general development"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "One-shot delegation without learning",
+      "bipolarity_complete": true,
+      "grounding_span": "I like to go back and forth and iterate through the development alongside the model"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as coding suggestion tool",
+      "label_negative": "AI as unreliable or incomplete assistant",
+      "bipolarity_complete": true,
+      "grounding_span": "It can be extremely useful to have a second set of eyes on your work"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI laziness and incomplete outputs",
+      "bipolarity_complete": true,
+      "grounding_span": "it gave me something that looked good and somewhat fuctioned, but it was incomplete in main areas"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as junior developer or coworker",
+      "label_negative": "AI as replacement for human staff",
+      "bipolarity_complete": true,
+      "grounding_span": "I see it becoming more like my own Jr dev that can do more independently or like a coworker, rather than a replacement"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as junior developer or coworker",
+      "label_negative": "AI causing skill atrophy or replacement",
+      "bipolarity_complete": true,
+      "grounding_span": "It's allowing them to do more work without needing to stop their or the more Sr dev's workflow"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Skill development and learning",
+      "grounding_span": "I'm actually learning at the same time rather than just blindly copying and pasting"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "significantly cut down on development time"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Code quality and correctness",
+      "grounding_span": "make sure I'm doing it to the best of my ability"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Human collaboration and team interaction",
+      "grounding_span": "we still hold regular code review meetings and one on one development sessions"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI as collaborative partner",
+      "valence": "positive",
+      "grounding_span": "I like to go back and forth and iterate through the development alongside the model"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with AI output quality",
+      "valence": "negative",
+      "grounding_span": "the fact that I basically put in 'to do later' placeholders was really frustrating"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "positive",
+      "grounding_span": "I see it becoming more like my own Jr dev that can do more independently or like a coworker"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Concern about AI replacing junior roles",
+      "valence": "negative",
+      "grounding_span": "There is a slight fear that eventually the models might get good enough to replace some of the staff"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement with limited back-and-forth",
+      "grounding_span": "I like to go back and forth and iterate through the development alongside the model"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic reuse of existing code and selective AI use",
+      "grounding_span": "I try to reuse my own code, especially if it's been commented and already optimized, whenever possible"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

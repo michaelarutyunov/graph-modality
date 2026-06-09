@@ -1,0 +1,193 @@
+{
+  "transcript_id": "work_0754",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as time-saving tool",
+      "label_negative": "Manual data processing",
+      "bipolarity_complete": true,
+      "grounding_span": "Using AI for this saved me some time"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as writing assistant",
+      "label_negative": "AI as independent task completer",
+      "bipolarity_complete": true,
+      "grounding_span": "collaborative: editing writing ... stress testing my arguments"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as brainstorming and idea generator",
+      "label_negative": "AI as final authority",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is helpful for giving me a starting pool that I can filter"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI memory reliability in long conversations",
+      "label_negative": "AI forgetting or misremembering context",
+      "bipolarity_complete": true,
+      "grounding_span": "frustrating when the model begins to forget or misremember things"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Human judgment over AI suggestions",
+      "label_negative": "Deferring to AI suggestions",
+      "bipolarity_complete": true,
+      "grounding_span": "ultimately I like to decide"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "Human understanding of nuance and subculture",
+      "label_negative": "AI inability to grasp irony, sarcasm, evolving language",
+      "bipolarity_complete": true,
+      "grounding_span": "understanding of irony, sarcasm, and code/language common in specific alt spaces"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "speed up our work"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Personal judgment and autonomy",
+      "grounding_span": "ultimately I like to decide"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Trustworthy and accurate information",
+      "grounding_span": "rely on the AI to be an accurate memory bank"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Cultural and contextual expertise",
+      "grounding_span": "understanding of irony, sarcasm, and code/language common in specific alt spaces"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "satisfying when the model has fully and correctly executed tasks"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI as memory aid",
+      "valence": "negative",
+      "grounding_span": "frustrating when the model begins to forget or misremember things"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Preference for human control over final decisions",
+      "valence": "positive",
+      "grounding_span": "ultimately I like to decide"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Confidence in human skills for nuance and subculture",
+      "valence": "positive",
+      "grounding_span": "I think that I'll be secure for a good while"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative iterative refinement — works back and forth with AI",
+      "grounding_span": "collaborative: editing writing ... stress testing my arguments"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-specific boundary setting — delegates data processing but retains judgment and sensitive tasks",
+      "grounding_span": "I prefer to write certain things myself ... cannot use AI for assignments containing things like PII"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

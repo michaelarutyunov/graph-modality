@@ -1,0 +1,157 @@
+{
+  "transcript_id": "work_0286",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as creative springboard for lesson planning",
+      "label_negative": "AI as replacement for teacher's own ideas",
+      "bipolarity_complete": true,
+      "grounding_span": "thinking outside of the box when coming up with lesson plans"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as time-saving collaborator for non-core tasks",
+      "label_negative": "AI as crutch that stifles creativity",
+      "bipolarity_complete": true,
+      "grounding_span": "if I'm short on time, I would rather put my ego aside and get some help"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as enhancement to teacher's expertise",
+      "label_negative": "AI as core of instruction",
+      "bipolarity_complete": true,
+      "grounding_span": "I really want what I receive from the AI to be an enhancement to what I'm doing rather than the core"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI for student engagement and motivation",
+      "label_negative": "AI for generic, uninspiring content",
+      "bipolarity_complete": true,
+      "grounding_span": "The lyrics went over really well with him and because they engaged him so much"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Preserving personal teaching style and creativity",
+      "label_negative": "AI-driven instruction that dilutes teacher's style",
+      "bipolarity_complete": true,
+      "grounding_span": "I want my own style and personality to shine"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Student benefit and learning outcomes",
+      "grounding_span": "giving my student the best possible instruction"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional pride and identity",
+      "grounding_span": "I still pride myself as a good teacher"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and time management",
+      "grounding_span": "I didn't really have the time to come up with a set of lyrics"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for engaging student",
+      "valence": "positive",
+      "grounding_span": "I was particularly satisfied"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Mixed feelings about AI integration",
+      "valence": "mixed",
+      "grounding_span": "there are times I feel mixed about integrating AI into my approach"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Resistance to AI in core instruction",
+      "valence": "negative",
+      "grounding_span": "I don't need the AI to handle telling me how to actually instruct the students"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through back-and-forth with AI",
+      "grounding_span": "I just keep asking it to tweak things or change things until I'm satisfied"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based boundary setting for AI use",
+      "grounding_span": "I don't want to feel like I'm simply giving my students AI based lessons"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

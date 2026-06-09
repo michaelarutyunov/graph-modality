@@ -1,0 +1,210 @@
+{
+  "transcript_id": "work_0070",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as research and planning assistant",
+      "label_negative": "AI as unreliable or misrepresenting source",
+      "bipolarity_complete": true,
+      "grounding_span": "I turn to AI soon after receiving my assignments so I can perform some initial research"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI accuracy and verifiability",
+      "label_negative": "AI hallucination and misrepresentation",
+      "bipolarity_complete": true,
+      "grounding_span": "I've had some instances where the LLM either misinterpreted the data or miscalculated it"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Human creative control over final content",
+      "label_negative": "AI-generated drafts replacing human creativity",
+      "bipolarity_complete": true,
+      "grounding_span": "I love using my creativity, so I would still want to play a major role in the content creation process"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as collaborative partner throughout task",
+      "label_negative": "AI as fully delegated independent executor",
+      "bipolarity_complete": true,
+      "grounding_span": "Most of the time, I am collaborating with the model for research, planning, and revision purposes"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Workplace acceptance of AI use",
+      "label_negative": "Workplace stigma and restrictions on AI",
+      "bipolarity_complete": true,
+      "grounding_span": "Many of my colleagues in the journalism field have taken a position against AI"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as efficiency booster",
+      "label_negative": "AI as threat to job security",
+      "bipolarity_complete": true,
+      "grounding_span": "AI can help me do my job more efficiently, so I want to take advantage of the technology as much as possible"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional competence and accuracy",
+      "grounding_span": "I follow those links to make sure that statistic is actually on the page and isn't misrepresented"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Creative autonomy and self-expression",
+      "grounding_span": "I love using my creativity, so I would still want to play a major role in the content creation process"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "AI saved my day since it was able to give me an outline of what were the key points to address"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Career adaptability and future-proofing",
+      "grounding_span": "I have definitely started focusing on improving my domain-specific knowledge and tech skills"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI as research aid",
+      "valence": "positive",
+      "grounding_span": "AI saved my day since it was able to give me an outline of what were the key points to address"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with AI miscalculations",
+      "valence": "negative",
+      "grounding_span": "I kept getting contradicting numbers since the AI was making various assumptions"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Preference for human creativity over AI drafts",
+      "valence": "negative",
+      "grounding_span": "I love using my creativity, so I would still want to play a major role in the content creation process"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Openness to expanding AI use despite workplace stigma",
+      "valence": "positive",
+      "grounding_span": "I want to take advantage of the technology as much as possible"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Privacy about AI use due to false accusation fears",
+      "valence": "negative",
+      "grounding_span": "I do keep it more private, mainly because I've heard of other writers being falsely accused"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Systematic verification and iterative refinement",
+      "grounding_span": "I follow those links to make sure that statistic is actually on the page and isn't misrepresented"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Proactive skill diversification toward technical domains",
+      "grounding_span": "I have definitely started focusing on improving my domain-specific knowledge and tech skills"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

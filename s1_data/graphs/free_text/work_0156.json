@@ -1,0 +1,149 @@
+{
+  "transcript_id": "work_0156",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as advisory tool for feasibility and suggestions",
+      "label_negative": "AI as autonomous executor of work",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't involve AI in actually building any process and simply ask for suggestions"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as learning aid for unfamiliar domains",
+      "label_negative": "AI as black-box output provider",
+      "bipolarity_complete": true,
+      "grounding_span": "I asked AI to provide me with the code and copy pasted it. I also asked it to provide a fully commented code which helped me understand each line"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI thoroughness and domain knowledge",
+      "label_negative": "AI generic and misleading suggestions",
+      "bipolarity_complete": true,
+      "grounding_span": "AI did provide a detailed feasibility analysis and technical initiation document, it also suggested that SNOW has a framework called 'Predictive Intelligence'"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as enabler of human paradigm shift",
+      "label_negative": "AI as replacement for human work",
+      "bipolarity_complete": true,
+      "grounding_span": "the work we do today will mostly be replaced by AI but it does not imply that we won't have any more work to do but it will just elevate the tables"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Innovation and proactive problem-solving",
+      "grounding_span": "proactive ideas are often encouraged"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Data security and client confidentiality",
+      "grounding_span": "since it involves client data, I do it completely myself"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Human intellectual growth and skill evolution",
+      "grounding_span": "humanity can work towards changing the age from bronze to 'industrial'"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Satisfaction with AI's insightful suggestions",
+      "valence": "positive",
+      "grounding_span": "This really changed my perspective about using AI as they are thorough on knowledge and can provide amazing suggestions"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Frustration with AI's generic troubleshooting",
+      "valence": "negative",
+      "grounding_span": "AI sometimes provides generic suggestions in niche areas"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Optimistic view of AI elevating human work",
+      "valence": "positive",
+      "grounding_span": "it will just elevate the tables"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Context-rich abstraction before AI interaction",
+      "grounding_span": "I provide the AI with a lot of context after abstracting away any PII or client centric details"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Hands-on verification and independent troubleshooting",
+      "grounding_span": "after I analyzed it myself, the real reason turned out to be that the credential file had a lot of earlier credentials merged into it which I manually deleted"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

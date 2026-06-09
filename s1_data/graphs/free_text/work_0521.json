@@ -1,0 +1,187 @@
+{
+  "transcript_id": "work_0521",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as obituary writing assistant",
+      "label_negative": "Manual obituary writing without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "help with obituary writing"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as case consultation tool for unfamiliar medical conditions",
+      "label_negative": "Relying solely on own expertise without AI confirmation",
+      "bipolarity_complete": true,
+      "grounding_span": "a resource to learn about new cases that I'm unfamiliar with"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability and memory accuracy",
+      "label_negative": "AI misquoting or forgetting information",
+      "bipolarity_complete": true,
+      "grounding_span": "its memory isn't always the most reliable"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI flagging of sensitive queries",
+      "label_negative": "Unflagged appropriate queries",
+      "bipolarity_complete": true,
+      "grounding_span": "my queries are erroneously flagged"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI impact on job security and uniqueness",
+      "label_negative": "AI enhancing rather than threatening job role",
+      "bipolarity_complete": true,
+      "grounding_span": "it makes me feel somewhat replaceable"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI adoption by coworkers and company",
+      "label_negative": "Limited AI adoption by coworkers",
+      "bipolarity_complete": true,
+      "grounding_span": "my coworkers only utilize when required"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Time efficiency and productivity",
+      "grounding_span": "saved me an immense amount of time"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional competence and informed decision-making",
+      "grounding_span": "resulted in a positive outcome"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Personal uniqueness and irreplaceable human skills",
+      "grounding_span": "my interpersonal skills are something that make me unique"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for obituary writing",
+      "valence": "positive",
+      "grounding_span": "beyond pleased with the outcomes"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI flagging and memory issues",
+      "valence": "negative",
+      "grounding_span": "it does get frustrating when I'm asking a potentially sensitive question"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Concern about replaceability due to AI",
+      "valence": "negative",
+      "grounding_span": "it makes me feel somewhat replaceable"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Optimism about future AI adoption in the field",
+      "valence": "positive",
+      "grounding_span": "I definitely see AI becoming more of an asset in my field"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through back-and-forth interaction",
+      "grounding_span": "I'll do a little bit of back and forth just so I can get the wording and tone just right"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Role-based persona prompting to guide AI responses",
+      "grounding_span": "I oftentimes remember to tell the AI to take on the persona of a funeral director"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

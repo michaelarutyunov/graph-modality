@@ -1,0 +1,181 @@
+{
+  "transcript_id": "work_0579",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as email writing assistant preserving personal voice",
+      "label_negative": "AI rewriting that sounds robotic and perfect",
+      "bipolarity_complete": true,
+      "grounding_span": "AI sometimes sounds too robotic or perfect. I am not perfect and don't want to sound perfect to my coworkers"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for data organization and efficiency",
+      "label_negative": "Manual data sorting taking hours",
+      "bipolarity_complete": true,
+      "grounding_span": "I remember making an inventory list off a old very disorganized excel document, if I wouldn't of had ai it would have taken me hours to go through it"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for idea generation in creative tasks",
+      "label_negative": "AI taking over creative execution",
+      "bipolarity_complete": true,
+      "grounding_span": "creativity tasks I generally like to do so I am less likely to use AI. Maybe I will use AI to get ideas but then will do the actual task myself"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI use for tasks without sensitive data",
+      "label_negative": "AI use for tasks with PII",
+      "bipolarity_complete": true,
+      "grounding_span": "I sometimes handle tasks that have alot of PII that I don't feel comfortable using ai for"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI dependency affecting writing skills",
+      "label_negative": "Active mental engagement in writing",
+      "bipolarity_complete": true,
+      "grounding_span": "I feel as though my writing skills may suffer if I am always using ai to rewrite my work and make it better"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Authentic self-expression at work",
+      "grounding_span": "I am not perfect and don't want to sound perfect to my coworkers"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and time efficiency",
+      "grounding_span": "if I wouldn't of had ai it would have taken me hours to go through it"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Personal creativity and ownership",
+      "grounding_span": "creativity tasks I generally like to do so I am less likely to use AI"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Data privacy and security",
+      "grounding_span": "I don't feel comfortable using ai for"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Skill development and cognitive engagement",
+      "grounding_span": "I am not actively using my brain to find better words or ensure my grammar is the best it can be"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI for data organization",
+      "valence": "positive",
+      "grounding_span": "This was satisfying"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Concern about AI dependency affecting writing skills",
+      "valence": "negative",
+      "grounding_span": "I feel as though my writing skills may suffer"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Preference for personal involvement in creative tasks",
+      "valence": "negative",
+      "grounding_span": "creativity tasks I generally like to do so I am less likely to use AI"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Openness to increasing AI use in future",
+      "valence": "positive",
+      "grounding_span": "I think I will slowly use it more and more"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement with AI to preserve personal voice",
+      "grounding_span": "I will normally read it and then ask ai to change things or add things. I often find myself saying rewrite using more of my original language"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based delegation: personal tasks involve more, impersonal tasks delegated",
+      "grounding_span": "emails are something that is more personal so I guess I involve myself more, wit other tasks I don't feel like that so I tend to let AI take over"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

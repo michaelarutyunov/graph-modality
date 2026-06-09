@@ -1,0 +1,217 @@
+{
+  "transcript_id": "work_0556",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as creative phrasing assistant",
+      "label_negative": "Independent creative composition",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't have creative intuition, so I know that AI cuts down on the time I would normally spend trying to come up with ideas or how to appropriately phrase things"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI grasp of user intent",
+      "label_negative": "AI misunderstanding of user intent",
+      "bipolarity_complete": true,
+      "grounding_span": "it just couldn't grasp what I was asking"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI output naturalness",
+      "label_negative": "AI robotic tone",
+      "bipolarity_complete": true,
+      "grounding_span": "I also prefer that in the general back-and-forth with customers that it doesn't sound as robotic as AI makes it seem sometimes"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI for analytical and detail-oriented tasks",
+      "label_negative": "Human control over analytical tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "Any of the analytical tasks or tasks that require attention to detail I am more comfortable completing myself"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI advanced reasoning capability",
+      "label_negative": "AI lack of advanced reasoning",
+      "bipolarity_complete": true,
+      "grounding_span": "Tasks like scheduling and payroll require the advanced reasoning that I don't think AI has quite mastered yet"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI up-to-date knowledge",
+      "label_negative": "AI outdated knowledge",
+      "bipolarity_complete": true,
+      "grounding_span": "to have more up-to-date and current events capabilities in AI"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "AI cuts down on the time I would normally spend"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional communication quality",
+      "grounding_span": "phrase it professionally and appropriately"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Personal competence and trust in own judgment",
+      "grounding_span": "I still trust my judgement and ability to double-check everything over the automation of AI"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Social media relevance and engagement",
+      "grounding_span": "it's incredibly valuable to know what type of content, topics, or hashtags are popular in the moment to maintain relevance"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI for creative tasks",
+      "valence": "positive",
+      "grounding_span": "I don't have creative intuition, so I know that AI cuts down on the time"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with AI misunderstanding",
+      "valence": "negative",
+      "grounding_span": "it just couldn't grasp what I was asking"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Preference for human tone in customer communication",
+      "valence": "negative",
+      "grounding_span": "I also prefer that in the general back-and-forth with customers that it doesn't sound as robotic"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Trust in own judgment over AI for analytical tasks",
+      "valence": "negative",
+      "grounding_span": "I still trust my judgement and ability to double-check everything over the automation of AI"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Skepticism about AI advanced reasoning",
+      "valence": "negative",
+      "grounding_span": "Tasks like scheduling and payroll require the advanced reasoning that I don't think AI has quite mastered yet"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Desire for up-to-date AI capabilities",
+      "valence": "positive",
+      "grounding_span": "to have more up-to-date and current events capabilities in AI"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement and persistence",
+      "grounding_span": "there is a bit of back and forth to tailor the message or clear up a chatbot misunderstanding"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based task delegation",
+      "grounding_span": "it's really only the creative things that I need help with"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

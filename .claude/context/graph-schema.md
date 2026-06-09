@@ -1,6 +1,6 @@
 # graph-schema.md
 
-> **This is the data contract.** All modules — extraction, validation, canonicalisation, encoding — derive from this document. Any schema change requires simultaneous updates to `extraction/validator.py` and all affected encoding modules. Never modify downstream code without updating this document first.
+> **This is the data contract.** All modules — extraction, validation, canonicalisation, encoding — derive from this document. Any schema change requires simultaneous updates to `s2_extraction/validator.py` and all affected encoding modules. Never modify downstream code without updating this document first.
 
 ---
 
@@ -86,7 +86,7 @@ All relations are directed source → target unless noted.
 
 ## structural constraints
 
-These are enforced by `extraction/validator.py`. Violations are logged and the graph is flagged; extraction continues.
+These are enforced by `s2_extraction/validator.py`. Violations are logged and the graph is flagged; extraction continues.
 
 | id | constraint | enforcement |
 |---|---|---|
@@ -108,7 +108,7 @@ Required on every graph, populated by `extractor.py`.
 | `transcript_id` | string | matches source CSV `transcript_id` column |
 | `split` | string | one of: `"workforce"`, `"creatives"`, `"scientists"` |
 | `extraction_model` | string | e.g. `"claude-sonnet-4-6"`, `"deepseek-v3"` |
-| `prompt_version` | string | e.g. `"v1"` — matches filename in `extraction/prompts/` |
+| `prompt_version` | string | e.g. `"v1"` — matches filename in `s2_extraction/prompts/` |
 | `node_count` | int | total nodes |
 | `edge_count` | int | total edges |
 | `bipolarity_score` | float | mean of per-Construct bipolarity scores (1.0 complete, 0.5 incomplete); null if no Constructs |
@@ -187,8 +187,8 @@ Any value outside these sets is a validation error.
 ## change protocol
 
 1. Update this document
-2. Update `extraction/validator.py` to enforce or relax the changed constraint
-3. Update the extraction prompt in `extraction/prompts/` (increment version)
-4. If node fields change: update `encoding/gnn/dataset.py` (node feature construction)
-5. If the change affects canonicalised graphs: re-run `canonicalisation/clusterer.py` and treat as a new experiment
+2. Update `s2_extraction/validator.py` to enforce or relax the changed constraint
+3. Update the extraction prompt in `s2_extraction/prompts/` (increment version)
+4. If node fields change: update `s4_encoding/graph_dataset.py` (node feature construction)
+5. If the change affects canonicalised graphs: re-run `s3_canonicalisation/clusterer.py` and treat as a new experiment
 6. Record the change and rationale in `.claude/context/extraction-log.md`

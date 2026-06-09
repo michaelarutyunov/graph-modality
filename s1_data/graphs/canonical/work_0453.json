@@ -1,0 +1,144 @@
+{
+  "transcript_id": "work_0453",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as practical problem solver",
+      "label_negative": "Reliance on human experts for troubleshooting",
+      "bipolarity_complete": true,
+      "grounding_span": "immediate access to a resource that can help me solve the problem instead of having to find a team leader or another employee"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as step-by-step guidance tool",
+      "label_negative": "Unclear or incomplete step-by-step instructions",
+      "bipolarity_complete": true,
+      "grounding_span": "it will give me the step-by-step process"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as systematic troubleshooter",
+      "label_negative": "Limited to routine questions only",
+      "bipolarity_complete": true,
+      "grounding_span": "You are able to ask it just about anything"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as training tool for new employees",
+      "label_negative": "Traditional manual training methods",
+      "bipolarity_complete": true,
+      "grounding_span": "having an AI tool specifically tailored for a 'learning' environment can be very useful"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "It can save time for me and that other employee"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Autonomy and personal control",
+      "grounding_span": "instead of having to find a team leader or another employee"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Knowledge retention and skill maintenance",
+      "grounding_span": "a great training tool for new employees"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "It was very satisfying"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for time-saving",
+      "valence": "positive",
+      "grounding_span": "It can save time for me and that other employee"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "positive",
+      "grounding_span": "I can see it evolving to be a great training tool for new employees"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic task-oriented reasoning — focuses on concrete step-by-step solutions",
+      "grounding_span": "it will give me the step-by-step process"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Role-based perspective taking — considers how AI affects different roles (self, leaders, new employees)",
+      "grounding_span": "My leaders seem to really like it because it also helps them solve more complicated problems"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

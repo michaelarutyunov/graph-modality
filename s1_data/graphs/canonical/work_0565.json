@@ -1,0 +1,187 @@
+{
+  "transcript_id": "work_0565",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as detection tool for student writing",
+      "label_negative": "AI as unreliable or ineffective detection tool",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI semi-regularly for AI detection in student writing"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as tool for lesson planning",
+      "label_negative": "AI as insufficient for creative lesson planning",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is a great tool for lesson planning"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as research assistant",
+      "label_negative": "AI as unnecessary for expert domains",
+      "bipolarity_complete": true,
+      "grounding_span": "research for course content"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as tool to address academic dishonesty",
+      "label_negative": "AI as manageable tool for integrity",
+      "bipolarity_complete": true,
+      "grounding_span": "five minutes of minimal work and thinking could create a B+ essay that would trigger no Ai checkers"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as enhancer of teaching creativity",
+      "label_negative": "AI as replacement of teacher creativity",
+      "bipolarity_complete": true,
+      "grounding_span": "AI has helped me to find new ways to represent the concept visually"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "Teacher control over content decisions",
+      "label_negative": "AI ceding control to AI facilitation",
+      "bipolarity_complete": true,
+      "grounding_span": "I would not want to cede more control of what I do right now to AI"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Academic integrity",
+      "grounding_span": "AI detection in student writing"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Effective and engaging instruction",
+      "grounding_span": "find new and creative ways to present the same idea"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Teacher professional autonomy",
+      "grounding_span": "I would not want to cede more control"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for lesson creation",
+      "valence": "positive",
+      "grounding_span": "AI is a great tool for lesson planning"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Positive reliance on AI for bridging knowledge gaps",
+      "valence": "negative",
+      "grounding_span": "I was disappointed to find that five minutes of minimal work and thinking could create a B+ essay that would trigger no Ai checkers"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Assertion of authorial control over AI",
+      "valence": "negative",
+      "grounding_span": "I would not want to cede more control of what I do right now to AI"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "positive",
+      "grounding_span": "AI is, has been, and will continue to be a useful tool for teachers to broaden their horizons"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative exploration — uses back-and-forth to refine understanding and generate ideas",
+      "grounding_span": "Usually, it is a back-and-forth process as I ask for examples, examine them, and then request more"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based boundary setting",
+      "grounding_span": "I enjoy the challenge of structuring lesson plans on writing as that is my favorite part of teaching ELA"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,170 @@
+{
+  "transcript_id": "work_0543",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as brainstorming and idea generator",
+      "label_negative": "AI for composing entire external-facing articles",
+      "bipolarity_complete": true,
+      "grounding_span": "brainstorming, refining our language, changing our writing for different audiences"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as persona adapter for audience tailoring",
+      "label_negative": "AI as one-size-fits-all communicator",
+      "bipolarity_complete": true,
+      "grounding_span": "adapt different personas within the same conversation"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as overenthusiastic intern requiring oversight",
+      "label_negative": "AI as autonomous fully trusted agent",
+      "bipolarity_complete": true,
+      "grounding_span": "treat AI like an overenthusiastic intern"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI for internal tasks not reaching external audience",
+      "label_negative": "AI for direct donor communication",
+      "bipolarity_complete": true,
+      "grounding_span": "they're helpful to my work, but they wouldn't ever fully reach an external audience without thorough checking"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as professional development tool",
+      "label_negative": "AI as replacement for human learning experience",
+      "bipolarity_complete": true,
+      "grounding_span": "AI has been great for taking the transcript of an existing webinar, summarizing it"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as leveler for non-native English speakers",
+      "label_negative": "AI as crutch that undermines authentic communication",
+      "bipolarity_complete": true,
+      "grounding_span": "AI has been a boon for my colleagues in fundraising who do not speak English as a first language"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Authentic donor relationship and human touch",
+      "grounding_span": "so much of that involves the human touch"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional efficiency",
+      "grounding_span": "this makes it much faster"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Inclusivity and diversity in fundraising",
+      "grounding_span": "help them accomplish it"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI summaries",
+      "valence": "positive",
+      "grounding_span": "AI has been great for taking the transcript of an existing webinar"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Concern about AI replacing junior roles",
+      "valence": "negative",
+      "grounding_span": "the question is whether institutions decide that a major gifts officer + AI Model could replace people"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Optimism about AI enabling non-native speakers",
+      "valence": "positive",
+      "grounding_span": "AI has been a boon for my colleagues in fundraising who do not speak English as a first language"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Persona-switching and perspective-taking",
+      "grounding_span": "adapt different personas within the same conversation"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based boundary setting — clear separation of AI-appropriate vs. human-only tasks",
+      "grounding_span": "there really is no direct communication with a donor that I'd ever feel comfortable fully outsourcing to an AI"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

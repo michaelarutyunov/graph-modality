@@ -1,0 +1,162 @@
+{
+  "transcript_id": "work_0492",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as communication refinement tool",
+      "label_negative": "AI as source of overly formal or flourished language",
+      "bipolarity_complete": true,
+      "grounding_span": "I will type the main message I want to say into an AI and ask it to write the email for me"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI use constrained by data sensitivity",
+      "label_negative": "Unrestricted AI use exposing proprietary data",
+      "bipolarity_complete": true,
+      "grounding_span": "I err on the side of caution because our workflow is proprietary"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as threat to engaging manual work",
+      "label_negative": "AI as preserver of meaningful manual tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I fear that AI will take away some of those times where we must manually intervene"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as future business enabler in creative career",
+      "label_negative": "AI as irrelevant or hindrance in creative work",
+      "bipolarity_complete": true,
+      "grounding_span": "I imagine I'll be interacting more personally with AI in the future for business tasks like website design"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Professional communication effectiveness",
+      "grounding_span": "I need to write an email to say that this sample failed"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Data security and confidentiality",
+      "grounding_span": "I wouldn't want to expose any of our data to an AI"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Job engagement and skill preservation",
+      "grounding_span": "which is what makes the job interesting"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Creative autonomy and independence",
+      "grounding_span": "I am looking to change careers into a more creative field and work for myself"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for communication tasks",
+      "valence": "positive",
+      "grounding_span": "I'm usually satisfied"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Caution toward AI due to data sensitivity",
+      "valence": "negative",
+      "grounding_span": "I err on the side of caution because our workflow is proprietary"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Fear of AI reducing manual troubleshooting",
+      "valence": "negative",
+      "grounding_span": "I fear that AI will take away some of those times where we must manually intervene"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Optimistic anticipation of AI in future creative career",
+      "valence": "positive",
+      "grounding_span": "I imagine I'll be interacting more personally with AI in the future"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement — adjusts AI output to match personal style",
+      "grounding_span": "I almost always have to refine the language"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Risk-averse boundary setting — limits AI use to safe domains",
+      "grounding_span": "I err on the side of caution because our workflow is proprietary"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,162 @@
+{
+  "transcript_id": "work_0921",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as efficiency tool for ambiguous text clarification",
+      "label_negative": "Manual deciphering of unclear writing",
+      "bipolarity_complete": true,
+      "grounding_span": "The AI assistant has been very helpful in helping me clarify the meaning of some information he provides in paperwork"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as treatment plan suggestion generator",
+      "label_negative": "Independent generation of treatment objectives",
+      "bipolarity_complete": true,
+      "grounding_span": "ask the AI to assist me with suggestions of different objectives to work on in order to reach those goals"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Confidentiality in AI use",
+      "label_negative": "Unrestricted AI access to client information",
+      "bipolarity_complete": true,
+      "grounding_span": "I am limited in the information I can provide the AI due to privacy concerns"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as collaborative partner vs delegator",
+      "label_negative": "One-shot AI output without iteration",
+      "bipolarity_complete": true,
+      "grounding_span": "I will collaborate with the AI to fine tune the results"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Irreplaceable human touch in mental health",
+      "label_negative": "Full AI takeover of mental health work",
+      "bipolarity_complete": true,
+      "grounding_span": "when it comes to mental health, a human touch will always be necessary"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and speed in work",
+      "grounding_span": "It has drastically improved the amount of time I have to spend on his treatment plans"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Client confidentiality and data security",
+      "grounding_span": "very strict confidentiality policies that regulate the information that we share"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Human connection and person-centered care",
+      "grounding_span": "a human touch will always be necessary"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for clarifying ambiguous text",
+      "valence": "positive",
+      "grounding_span": "The AI assistant has been very helpful in helping me clarify the meaning"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Acceptance of privacy-imposed limitations",
+      "valence": "ambivalent",
+      "grounding_span": "I am limited in the information I can provide the AI due to privacy concerns"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Belief in irreplaceable human element",
+      "valence": "positive",
+      "grounding_span": "a human touch will always be necessary"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative iterative refinement — works back and forth with AI",
+      "grounding_span": "I will collaborate with the AI to fine tune the results"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Privacy-conscious boundary setting",
+      "grounding_span": "I am limited in the information I can provide the AI due to privacy concerns"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

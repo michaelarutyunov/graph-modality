@@ -1,0 +1,169 @@
+{
+  "transcript_id": "work_0154",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as efficient scanning and summarization tool",
+      "label_negative": "Manual scanning and summarization",
+      "bipolarity_complete": true,
+      "grounding_span": "I use OpenAI to scan provided text for keywords related to banking and finance and list anything related. Also summarize the key provisions."
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability and accuracy",
+      "label_negative": "AI hallucination and incompleteness",
+      "bipolarity_complete": true,
+      "grounding_span": "I review the information myself in case there are any obvious hallucinations. I will spot check and confirm anything that appears incomplete."
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as competence amplifier",
+      "label_negative": "AI as threat to perceived competence",
+      "bipolarity_complete": true,
+      "grounding_span": "My AI assisted reports are always well received by management, and they are impressed with the detailed information. It makes me appear very competent and using my time efficiently."
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as tool for experienced professionals",
+      "label_negative": "AI as replacement for experience",
+      "bipolarity_complete": true,
+      "grounding_span": "AI cannot replace my 35 years of experience. There are things that must be learned over time, and not just fact based."
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Gradual trust expansion for AI use",
+      "label_negative": "Premature trust in AI for critical tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I think as I get more familiar with it, I assume I will find more ways to use it to help me. Such as reviewing loan documents for errors. But for now I don't have that level of confidence."
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Professional competence and efficiency",
+      "grounding_span": "It makes me appear very competent and using my time efficiently."
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Accuracy and reliability",
+      "grounding_span": "I review the information myself in case there are any obvious hallucinations."
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Autonomy and self-reliance",
+      "grounding_span": "I work very independently so how I perform my role is entirely up to me."
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI as efficiency tool",
+      "valence": "positive",
+      "grounding_span": "My AI assisted reports are always well received by management, and they are impressed with the detailed information."
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Cautious oversight due to hallucination risk",
+      "valence": "ambivalent",
+      "grounding_span": "I review the information myself in case there are any obvious hallucinations."
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Confidence in irreplaceability of experience",
+      "valence": "positive",
+      "grounding_span": "AI cannot replace my 35 years of experience."
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Cautious optimism for future expanded use",
+      "valence": "positive",
+      "grounding_span": "I think as I get more familiar with it, I assume I will find more ways to use it to help me."
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Consistency-driven reuse of prompts",
+      "grounding_span": "I provide the same prompt to maintain consistency and get the information back in the correct format."
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Verification-oriented oversight",
+      "grounding_span": "I review the information myself in case there are any obvious hallucinations. I will spot check and confirm anything that appears incomplete."
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

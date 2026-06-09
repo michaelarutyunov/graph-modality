@@ -1,0 +1,186 @@
+{
+  "transcript_id": "creativity_0065",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as brainstorming and idea generator",
+      "label_negative": "AI as creative collaborator",
+      "bipolarity_complete": true,
+      "grounding_span": "I typically use AI tools in the brainstorming step"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as supplement to creative process",
+      "label_negative": "AI-generated creative quality",
+      "bipolarity_complete": false,
+      "grounding_span": "AI has been quite disappointing in the creative department. The responses are generic and contrived"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as curiosity-driven exploration tool",
+      "label_negative": "Manual narrow search",
+      "bipolarity_complete": true,
+      "grounding_span": "I would not had looked at all of the systems that AI put together"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as democratizing tool for independent creators",
+      "label_negative": "AI democratization of content creation",
+      "bipolarity_complete": false,
+      "grounding_span": "AI is really impowering people who are comfortable with meh quality work to heavily automate their processes"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI's future capability in video editing",
+      "label_negative": "Manual multimedia production",
+      "bipolarity_complete": true,
+      "grounding_span": "I would like to integrate more multimedia into my projects. Not just images, but sound and possibly light video. I see AI helping with that"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative productivity and efficiency",
+      "grounding_span": "It really saved time when got started"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Quality of creative output",
+      "grounding_span": "those of us who have higher standards really stand out"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Novelty and creative insight",
+      "grounding_span": "I have more ideas, and a bigger backlog of things to get started on"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for brainstorming",
+      "valence": "positive",
+      "grounding_span": "I typically use AI tools in the brainstorming step"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Resistance to AI in creative work",
+      "valence": "negative",
+      "grounding_span": "AI has been quite disappointing in the creative department"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Positive stance toward AI as research tool",
+      "valence": "positive",
+      "grounding_span": "I would not had looked at all of the systems that AI put together"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Concern about market flooding by AI-generated works",
+      "valence": "negative",
+      "grounding_span": "the field is absolutely flooded with this work and that makes finding quality resources harder"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Optimistic anticipation of AI's video editing capabilities",
+      "valence": "positive",
+      "grounding_span": "I see AI helping with that"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic task delegation — uses AI only for specific, bounded tasks",
+      "grounding_span": "I drive the creative decisions, AI has been quite disappointing in the creative department"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-specific quality control — uses familiarity to verify AI output",
+      "grounding_span": "I feel like it is helping those of us who have higher standards really stand out"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,168 @@
+{
+  "transcript_id": "work_0605",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI reliability and factuality",
+      "label_negative": "AI as creative partner in problem-solving",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is a reference for me like a deeper google search not a creative partner"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI use for quick, bounded tasks",
+      "label_negative": "AI use for extended, open-ended inquiry",
+      "bipolarity_complete": true,
+      "grounding_span": "I tend to just ask the question and move on without further questions"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Preserving hands-on, intuitive work as core of job",
+      "label_negative": "Delegating creative problem-solving to AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I do prefer generally to figure most things out myself"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as supplement to creative process",
+      "label_negative": "AI integrated into creative process",
+      "bipolarity_complete": true,
+      "grounding_span": "AI feels wholly separate from that process"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI stigma in workplace culture",
+      "label_negative": "AI acceptance in workplace culture",
+      "bipolarity_complete": true,
+      "grounding_span": "it is slightly taboo to use AI"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Expertise and experiential knowledge",
+      "grounding_span": "Working with my hands is very important to me"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Creative problem-solving",
+      "grounding_span": "the curiosity to find a solution is the most stimulating part of the job"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency in factual tasks",
+      "grounding_span": "for the sake of efficiency I will sometimes request help from AI"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Artistic authenticity and economic sustainability",
+      "grounding_span": "we do such physical labor and are very environmentally based"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for identification",
+      "valence": "positive",
+      "grounding_span": "That was satisfying for sure"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Resistance to AI in creative work",
+      "valence": "negative",
+      "grounding_span": "I don't want AI to infringe anymore on the process of problem solving"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with AI's inability to maintain context",
+      "valence": "ambivalent",
+      "grounding_span": "it's way more gray than just using AI or not and my habits could definitely change"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Preference for single-query, reference-style interaction",
+      "grounding_span": "I tend to just ask the question and move on without further questions"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based boundary setting — clear separation of AI-appropriate vs. human-only tasks",
+      "grounding_span": "I would rarely integrate AI into that problem-solving process"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

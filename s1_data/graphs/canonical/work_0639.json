@@ -1,0 +1,153 @@
+{
+  "transcript_id": "work_0639",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as verification-requiring tool",
+      "label_negative": "AI as autonomous solution generator",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I used the AI as a means to verify my own information and rough math"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as supplement to creative process",
+      "label_negative": "AI as step-by-step instruction giver",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "AI is good at providing the initial inspiration of a direction to take a task in"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI memory reliability in long conversations",
+      "label_negative": "One-shot delegation to AI",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I prefer to have a more back-and-forth approach similar to having a conversation with an intelligent friend or teacher"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as augmenting human role",
+      "label_negative": "AI replacement of craft expertise",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I can see AI augmenting a lot of work in that field"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Professional reputation and credibility",
+      "grounding_span": "I finally had my idea validated"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative integrity and human artistry",
+      "grounding_span": "I never follow the instructions as they are laid out, rather take the idea and run with it"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and cost reduction",
+      "grounding_span": "AI to do the heavy lifting of crunching numbers and analyzing or presenting data"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Satisfaction with AI for brainstorming",
+      "valence": "positive",
+      "grounding_span": "The situation involving the dispute about my garlic knot process felt very satisfying to me"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Confidence in AI as collaborator not threat",
+      "valence": "positive",
+      "grounding_span": "I wont be using AI to create new products or replace my expertise, but I can use it as a right hand man"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Indifference to workplace AI pressure",
+      "valence": "mixed",
+      "grounding_span": "My colleagues do not use it to my knowledge, they are content running the business as it has always been run"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Experimental testing — systematically tests AI's behavior by changing variables",
+      "grounding_span": "I had a hunch that my process was beneficial to the business and had voiced my feelings regarding the situation but was not prepared to do all the math myself so I used AI to do the heavy lifting"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative conversational reasoning",
+      "grounding_span": "The back-and-forth approach allows me to navigate the problem/solution in a more natural way"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

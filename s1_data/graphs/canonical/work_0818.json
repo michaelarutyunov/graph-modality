@@ -1,0 +1,188 @@
+{
+  "transcript_id": "work_0818",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as quick reference for literacy knowledge",
+      "label_negative": "AI as fobbing off or avoidance",
+      "bipolarity_complete": true,
+      "grounding_span": "I really want to show them how to resolve it. Generative AI is particularly good for this"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as guide of zeitgeist to be subverted",
+      "label_negative": "AI for local collection-specific knowledge",
+      "bipolarity_complete": true,
+      "grounding_span": "I like to check what is happening in the book zeitgeist so I know what might have broad appeal"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for niche expertise",
+      "label_negative": "AI for tasks where I have expertise",
+      "bipolarity_complete": true,
+      "grounding_span": "I mainly use it for very specific things that I might not have knowledge about"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as problem-solving resource after self-exhaustion",
+      "label_negative": "AI as direct answer provider without learning",
+      "bipolarity_complete": true,
+      "grounding_span": "I like to give them the tools to be self guided so they can figure out future problems themselves"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI adoption in workplace",
+      "label_negative": "AI adoption hindered by low technical fluency",
+      "bipolarity_complete": true,
+      "grounding_span": "I'm probably more likely to use generative AI just because of my familiarity with the tools"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as practical labor-saving tool",
+      "label_negative": "AI as benign tool without social consequences",
+      "bipolarity_complete": true,
+      "grounding_span": "I have been worried about social effects with corporations and organisations moving away from human labor"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Community empowerment and digital literacy",
+      "grounding_span": "I really want to show them how to resolve it"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Curated collection relevance",
+      "grounding_span": "There is nothing worse than buying four copies of a book that no-one wants to read"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Professional autonomy",
+      "grounding_span": "I write all my own emails and do genuinely prefer to do most of my writing myself"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Social responsibility and awareness",
+      "grounding_span": "I have been worried about social effects with corporations and organisations moving away from human labor"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI for content creation",
+      "valence": "positive",
+      "grounding_span": "I love the moment when introduce it to someone who will find it genuinely helpful"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with AI errors",
+      "valence": "negative",
+      "grounding_span": "Sometimes you'll find someone resistant philosophically and they take it as you trying to fob them off"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Worry about AI's negative impact on jobs",
+      "valence": "negative",
+      "grounding_span": "I have been worried about social effects with corporations and organisations moving away from human labor"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "positive",
+      "grounding_span": "I really think that them being able to use generative AI is actually a life skill"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic delegation with oversight",
+      "grounding_span": "I mainly use it for very specific things that I might not have knowledge about"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Teaching-oriented scaffolding approach",
+      "grounding_span": "I like to give them the tools to be self guided so they can figure out future problems themselves"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

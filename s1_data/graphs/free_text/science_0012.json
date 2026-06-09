@@ -1,0 +1,149 @@
+{
+  "transcript_id": "science_0012",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as supplementary tool for data processing and literature identification",
+      "label_negative": "AI as primary or sole research executor",
+      "bipolarity_complete": true,
+      "grounding_span": "AI was used as a tool - helping me quickly process data"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability and consistency in literature synopsis",
+      "label_negative": "AI unreliability and inconsistency in literature synopsis",
+      "bipolarity_complete": true,
+      "grounding_span": "It's not reliable or consistent"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Research ownership and personal intellectual contribution",
+      "label_negative": "AI-mediated or AI-dominated research output",
+      "bipolarity_complete": true,
+      "grounding_span": "I would like my research to be my own - my own ideas, analyses, and conclusions"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as first step requiring human verification",
+      "label_negative": "AI output used without verification",
+      "bipolarity_complete": true,
+      "grounding_span": "I consider AI to be the first step of many, I always go in and run any calculations and read any materials thoroughly myself"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Research integrity and ethical scientific practice",
+      "grounding_span": "it's integral to the scientific process to follow certain steps and ensure that my research is all of my own work"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and productivity in research",
+      "grounding_span": "helping me quickly process data"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Epistemic accuracy and reliable knowledge",
+      "grounding_span": "the synopses that it provides are often missing key details and misquoting information"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Cautious instrumentalism toward AI as supplement",
+      "valence": "ambivalent",
+      "grounding_span": "I decided to utilize AI to supplement the traditional approaches"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Frustration with AI's poor literature synopsis",
+      "valence": "negative",
+      "grounding_span": "it does a very poor job of it"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Aspirational desire for reliable AI literature analysis",
+      "valence": "positive",
+      "grounding_span": "If AI could consistently identify papers that would be relevant to my research and take the most important parts, creating an accurate synopsis"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Systematic verification and iterative refinement",
+      "grounding_span": "I always go in and run any calculations and read any materials thoroughly myself"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Boundary-setting for intellectual ownership",
+      "grounding_span": "I would like my research to be my own - my own ideas, analyses, and conclusions"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,196 @@
+{
+  "transcript_id": "science_0081",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as conceptual pattern matcher for forum searches",
+      "label_negative": "AI as literal keyword matcher",
+      "bipolarity_complete": true,
+      "grounding_span": "its recognition for 'similar concepts' vs 'similar words or phrasing' can really help narrow down some tidbits"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability in source attribution",
+      "label_negative": "AI hallucination of fake papers with real author names",
+      "bipolarity_complete": true,
+      "grounding_span": "AI adores hallucinating the relationships in sources between Author and Title"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as time-saving filter for mundane tasks",
+      "label_negative": "AI as unreliable for thorough critical work",
+      "bipolarity_complete": true,
+      "grounding_span": "How much time will this take? And, how utterly mundane is this task?"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI trustworthiness for delicate hands-on tasks",
+      "label_negative": "AI unreliability for delicate lab work",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't trust the AI to be thorough"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as literature review accelerator despite hallucination",
+      "label_negative": "AI as unreliable literature search tool",
+      "bipolarity_complete": true,
+      "grounding_span": "The reason I still continue to use AI for literature reviews though, is that while it is alarmingly faking real scientists' names with non-existent papers, it usually does lead me to a scientist/scientists that are in the field"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Research efficiency and time savings",
+      "grounding_span": "This ultimately still cuts down on a lot of time"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Scientific accuracy and trustworthiness",
+      "grounding_span": "I don't trust the AI to be thorough"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Deep scientific investigation and core project progress",
+      "grounding_span": "I'd love to spend more time doing actual scientific investigations into my core projects"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Positive appreciation for AI's conceptual matching in forums",
+      "valence": "positive",
+      "grounding_span": "its recognition for 'similar concepts' vs 'similar words or phrasing' can really help narrow down some tidbits"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI hallucination in paper searches",
+      "valence": "negative",
+      "grounding_span": "AI adores hallucinating the relationships in sources between Author and Title"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Pragmatic acceptance of AI's limitations for literature review",
+      "valence": "ambivalent",
+      "grounding_span": "The reason I still continue to use AI for literature reviews though, is that while it is alarmingly faking real scientists' names with non-existent papers, it usually does lead me to a scientist/scientists that are in the field"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Distrust of AI for delicate lab tasks",
+      "valence": "negative",
+      "grounding_span": "I don't trust the AI to be thorough"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Aspirational desire for reliable AI literature search",
+      "valence": "positive",
+      "grounding_span": "if I could trust AI to be able to search scientific papers for relevant and related and related topics, not just a workaround to look up scientists in their fields, it would be a game-changer"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative cross-model verification — uses multiple AI models to cross-check summaries",
+      "grounding_span": "I usually run them through a few different models to help fish out points any of them might have missed"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic cost-benefit calibration — decides AI use based on time vs. mundanity trade-off",
+      "grounding_span": "How much time will this take? And, how utterly mundane is this task?"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n4",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

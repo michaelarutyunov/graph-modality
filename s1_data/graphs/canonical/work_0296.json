@@ -1,0 +1,185 @@
+{
+  "transcript_id": "work_0296",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as tool for routine legal work",
+      "label_negative": "AI as unreliable source requiring verification",
+      "bipolarity_complete": true,
+      "grounding_span": "I collaborate with AI heavily when asking for help with drafting"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as tool for routine legal work",
+      "label_negative": "AI hallucinated citations leading to sanctions",
+      "bipolarity_complete": true,
+      "grounding_span": "help me find cases in Maryland where a continuance was granted"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Personal client communication as human domain",
+      "label_negative": "AI-generated impersonal client emails",
+      "bipolarity_complete": true,
+      "grounding_span": "I tend to write e-mails to clients myself"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Thorough verification of AI outputs",
+      "label_negative": "Blind trust in AI outputs",
+      "bipolarity_complete": true,
+      "grounding_span": "I am reviewing the case to locate those exact quotes"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as supplemental tool",
+      "label_negative": "AI replacing legal support staff",
+      "bipolarity_complete": true,
+      "grounding_span": "it has allowed me to keep my overhead costs low"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Professional competence",
+      "grounding_span": "ensure that everything accurately aligns with the position I want to present"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Client trust and credibility",
+      "grounding_span": "I want them to be personalized thoughtful and really sound like it is coming from me"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "saved so much time because it quickly found relevant statues and or case law"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Judicial integrity and trust in legal system",
+      "grounding_span": "People want to feel like they can truly trust the judicial system"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for time-saving",
+      "valence": "positive",
+      "grounding_span": "I have felt satisfied mostly when AI has helped me to save so much time"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI hallucination in legal research",
+      "valence": "negative",
+      "grounding_span": "many lawyers have been getting fined or sanctioned by the court system for using AI generated legal citations"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "positive",
+      "grounding_span": "I hope Ai will continue to get smarter and brighter"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Resistance to AI in client communication",
+      "valence": "negative",
+      "grounding_span": "I tend to write e-mails to clients myself"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative iterative refinement — works back and forth with AI",
+      "grounding_span": "I will start section by section or paragraph by paragraph"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Verification-oriented — cross-checks AI outputs against other sources",
+      "grounding_span": "I am reviewing the case to locate those exact quotes and then I am reading the context"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n2",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,201 @@
+{
+  "transcript_id": "work_0238",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as clinical decision verification tool",
+      "label_negative": "AI as unreliable or nonsensical responder",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I use LLM such as ChatGPT to validate my decisions or seek another opinion on the topic"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI use with patient confidentiality",
+      "label_negative": "AI use risking privacy breach",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I sometimes use LLM/AI to double check my clinical assessment but am always careful not to release patient identifiers"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as independent verification vs blind following",
+      "label_negative": "Blindly following AI response",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I don't just blindly follow the AI's response in making those decisions"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI for routine documentation and consults",
+      "label_negative": "AI for complex or non-routine tasks",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "AI models can definitely take over that! Also for patient counselling, I see that AI models can be used for common routine consults"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI-generated content for patient education",
+      "label_negative": "Personalized content from healthcare provider",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "using AI generated content instead of producing their own content shows they are less focused in putting in the time to provide patient care"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Patient safety and optimal clinical outcomes",
+      "valence": null,
+      "grounding_span": "ensure the prescribed medications are indicated, effective, safe, at the right dose, and convenient for the patient"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Patient confidentiality and privacy",
+      "valence": null,
+      "grounding_span": "I need to uphold patient confidentiality"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional autonomy and clinical judgment",
+      "valence": null,
+      "grounding_span": "I generally will do everything independently"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Efficiency in busy work environment",
+      "valence": null,
+      "grounding_span": "creates more work in an already busy work environment"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Personalized patient care",
+      "valence": null,
+      "grounding_span": "less focused in putting in the time to provide patient care"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction when AI confirms clinical reasoning",
+      "valence": "positive",
+      "grounding_span": "I feel satisfied when AI produces an answer that matches one of my references/thought process"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with nonsensical or unexpected AI answers",
+      "valence": "negative",
+      "grounding_span": "I get frustrated when AI produces a nonsensical answer or when it gives an unexpected answer"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Disapproval of doctors using AI-generated content for patient education",
+      "valence": "negative",
+      "grounding_span": "I know some of the doctors I work with use AI generated content to explain a use of a medication (which I frown upon)"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Cautious optimism about AI integration in pharmacy",
+      "valence": "mixed",
+      "grounding_span": "I see AI getting more integrated in pharmacy like in other industries"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Independent verification with selective AI consultation",
+      "grounding_span": "I generally will do everything independently but sometimes when there are conflicting information from different sources, I will use AI to verify my thought process"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-specific interaction pattern: specific question for work, back-and-forth for pleasure",
+      "grounding_span": "For work, I tend to ask a specific question... For pleasure, yes I love back-and-forth conversations with LLM"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

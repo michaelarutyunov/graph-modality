@@ -1,0 +1,169 @@
+{
+  "transcript_id": "work_0161",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI verifiability and accuracy",
+      "label_negative": "AI for tasks requiring deep understanding",
+      "bipolarity_complete": true,
+      "grounding_span": "I normally chose to have copilot perform tasks that are easy to verify the changes to or that I already know how to do"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI unreliability and errors",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't feel like I can 100% trust AI's work"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for repetitive simple tasks",
+      "label_negative": "AI for novel or complex tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I primarily use copilot for doing repetitive work"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as an autonomous agent",
+      "bipolarity_complete": true,
+      "grounding_span": "For smaller tasks and things that aren't as clear cut I tend to use it more collaboratively"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI adoption in workplace",
+      "label_negative": "AI adoption driven by personal conviction",
+      "bipolarity_complete": true,
+      "grounding_span": "Senior leadership in my workplace is pushing more for the use of AI within the teams"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "updating data sets, replacing references in codebases and producing boilerplate code"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Trustworthiness and accuracy",
+      "grounding_span": "I don't feel like I can 100% trust AI's work"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Skill preservation and professional adaptability",
+      "grounding_span": "I'm very aware that my line of work could be replaced by AI entirely"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Skepticism and caution toward AI",
+      "valence": "negative",
+      "grounding_span": "I have had issues in the past with suggestions which aren't correct or invalid"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "mixed",
+      "grounding_span": "I believe my use of AI will continue to grow, as models improve I may feel less sceptical"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI errors",
+      "valence": "negative",
+      "grounding_span": "despite me trying to direct it to do it correctly it continued to make the same errors"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "for very large and very repetitive tasks I would normally delegate entirely to copilot"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Verification-oriented approach",
+      "grounding_span": "I normally chose to have copilot perform tasks that are easy to verify"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Systematic iterative decomposition of tasks",
+      "grounding_span": "breaking it down into smaller steps"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

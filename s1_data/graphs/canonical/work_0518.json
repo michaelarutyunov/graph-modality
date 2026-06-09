@@ -1,0 +1,181 @@
+{
+  "transcript_id": "work_0518",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as efficiency tool for content creation",
+      "label_negative": "AI as unreliable source requiring fact-checking",
+      "bipolarity_complete": true,
+      "grounding_span": "I personally use AI to research topics related to my ethical fashion business"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as writing and grammar assistant",
+      "label_negative": "AI for writing personal messages from scratch",
+      "bipolarity_complete": true,
+      "grounding_span": "If I use AI for anything on the task, it would be for simple grammatical corrections and suggestions"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as brainstorming and idea generator",
+      "label_negative": "AI as primary creative source",
+      "bipolarity_complete": true,
+      "grounding_span": "The founder of our company has suggested that we use AI to help us brainstorm if we are stuck with wording"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI reliability and factuality",
+      "label_negative": "AI hallucination and fabrication",
+      "bipolarity_complete": true,
+      "grounding_span": "The AI model hallucinated a made up name for the yellow mold"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI for simple customer issues",
+      "label_negative": "AI for human connection in sales",
+      "bipolarity_complete": true,
+      "grounding_span": "Automating a set schedule for this would help so I don't have to try to remember when something was purchased"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Authentic personal expression",
+      "grounding_span": "It's really important for the message to sound like me rather than canned"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Trust and credibility with customers",
+      "grounding_span": "I don't want to get caught in an unintentional lie or for fabricating anything for my customers"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "Automating a set schedule for this would help so I don't have to try to remember"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for content creation",
+      "valence": "positive",
+      "grounding_span": "I personally use AI to research topics related to my ethical fashion business"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Reluctance to use AI for writing",
+      "valence": "negative",
+      "grounding_span": "I prefer to write my own letters and emails to make sure that it comes from my heart"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Openness to AI as creative catalyst",
+      "valence": "positive",
+      "grounding_span": "it has been a good suggestion for getting out of a rut"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Distrust due to hallucination experience",
+      "valence": "negative",
+      "grounding_span": "The AI model hallucinated a made up name for the yellow mold"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Excitement about AI's potential for automation",
+      "valence": "positive",
+      "grounding_span": "If automation becomes something that is offered in the future, it's definitely something I would get on board with"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement with limited back-and-forth",
+      "grounding_span": "I'll go back and forth adjusting it with the model"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative verification and manual fact-checking",
+      "grounding_span": "I'll usually do a quick google check to see the accuracy of the statement"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

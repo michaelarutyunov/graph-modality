@@ -1,0 +1,179 @@
+{
+  "transcript_id": "work_0560",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as writing assistant for drafting",
+      "label_negative": "AI as intrusive force in writing",
+      "bipolarity_complete": true,
+      "grounding_span": "gemini is very pushy sometimes, like it is trying to force me to allow it to write an email for me"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for internal/technical work",
+      "label_negative": "AI for creative brand-facing work",
+      "bipolarity_complete": true,
+      "grounding_span": "Anything that is internal and dry, I don't mind chucking to AI"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as time-saving tool",
+      "label_negative": "AI as threat to human skill development",
+      "bipolarity_complete": true,
+      "grounding_span": "She is very busy so likes AI to help her save time"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as threat to professional writing career",
+      "label_negative": "AI as harmless productivity tool",
+      "bipolarity_complete": true,
+      "grounding_span": "People don't bother to think for themselves anymore"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as meeting note-taking tool",
+      "label_negative": "AI for creative writing",
+      "bipolarity_complete": true,
+      "grounding_span": "I will also continue to embrace the AI meeting notetakers"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Personal authenticity and unique voice",
+      "grounding_span": "our brand personality is carried through all comms"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "She is very busy so likes AI to help her save time"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Critical thinking and skill development",
+      "grounding_span": "People don't bother to think for themselves anymore"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Frustration with Gemini's pushiness",
+      "valence": "negative",
+      "grounding_span": "I find this SO ANNOYING, I have been known to say loudly 'LEAVE ME ALONE, I DON'T NEED YOU!'"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "I just give them the table and ask them to give me the gist"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Reluctance to maintain writing skills",
+      "valence": "negative",
+      "grounding_span": "As a writer by trade, it makes me very sad"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI for meeting notes",
+      "valence": "positive",
+      "grounding_span": "I will also continue to embrace the AI meeting notetakers etc, I forgot to mention those. Amazing!"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-specific delegation based on task nature",
+      "grounding_span": "Anything that needs creativity and our brand voice, I write myself"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Preference for human agency in writing — values personal control over output",
+      "grounding_span": "I really LIKE writing, so I prefer to do it myself"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n3",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,179 @@
+{
+  "transcript_id": "creativity_0056",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as strategic thinking partner",
+      "label_negative": "AI as mere entertainment or casual buddy",
+      "bipolarity_complete": true,
+      "grounding_span": "shifted from a less serious collaborative partner to an actual asset to the process"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as generator of diverse ideas",
+      "label_negative": "AI as source of generic or misaligned suggestions",
+      "bipolarity_complete": true,
+      "grounding_span": "Ai was useful here to find a wide range of angels to tackle it from"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as editor and flow checker",
+      "label_negative": "AI as unpredictable and stiff editor",
+      "bipolarity_complete": true,
+      "grounding_span": "the editing process has become too unpredictable"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI imitation of personal style and humor",
+      "label_negative": "AI as unable to grasp humor and nuance",
+      "bipolarity_complete": true,
+      "grounding_span": "Ai could not understand humor almost at all, but now it can pick it up more effectively"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Market saturation from AI-generated content",
+      "label_negative": "AI as enabler of challenging, boundary-pushing content",
+      "bipolarity_complete": true,
+      "grounding_span": "being used to flood markets...with Ai generated videos designed to hold attention"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative control and originality",
+      "grounding_span": "I have to carefully direct the process"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Creative expression and quality",
+      "grounding_span": "content that is challenging or pushes the boundaries"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Creative exploration and ideation",
+      "grounding_span": "find a wide range of angels to tackle it from"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Positive view of AI as thinking partner",
+      "valence": "positive",
+      "grounding_span": "shifted from a less serious collaborative partner to an actual asset to the process"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI making unintended changes",
+      "valence": "negative",
+      "grounding_span": "the editing process has become too unpredictable"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Optimism about AI's improving nuance and humor",
+      "valence": "positive",
+      "grounding_span": "I definitely can see the quality shifting to understand the nuances every year"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Concern about market flooding by AI-generated works",
+      "valence": "negative",
+      "grounding_span": "worried about...being used to flood markets...with Ai generated videos"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement and testing",
+      "grounding_span": "I try and make small changes at a time, or ask for a few suggestions before committing"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic challenge and verification of AI responses",
+      "grounding_span": "I tend to challenge the responses to see if they hold water"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

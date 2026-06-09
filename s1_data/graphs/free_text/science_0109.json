@@ -1,0 +1,167 @@
+{
+  "transcript_id": "science_0109",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as second opinion for critical decisions",
+      "label_negative": "AI as sole decision-maker",
+      "bipolarity_complete": true,
+      "grounding_span": "AI was often used as a second opinion in this case, to either agree with or disagree with my findings"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for experimental design simulation",
+      "label_negative": "Inefficient trial and error without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "AI tools helped me simulate different approaches to dosing and timing, which saved us from pursuing less efficient trial and error paths"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for nuanced imaging analysis",
+      "label_negative": "Human-only analysis missing subtle changes",
+      "bipolarity_complete": true,
+      "grounding_span": "AI assisted analysis proved to be a great addition to QC, where any diagnostic images that had unclear or ambiguous features were analyzed by AI as a secondary check to detect subtle changes"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI for behavioral vision testing",
+      "label_negative": "Manual observation with human bias",
+      "bipolarity_complete": true,
+      "grounding_span": "I would want AI to handle the behavioral side of vision testing, where we track eye movements in response to light therapy and moving patterns"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI reliability and error-proneness",
+      "label_negative": "AI making meaningful errors",
+      "bipolarity_complete": true,
+      "grounding_span": "It did not replace our expertise, and often made meaningful errors"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Experimental accuracy and ethical integrity",
+      "grounding_span": "it was incredibly important that the right conclusions were drawn from the imaging stage of the study"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Research efficiency and resource optimization",
+      "grounding_span": "saved us from pursuing less efficient trial and error paths"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Precision and consistency in measurement",
+      "grounding_span": "capture micro-movements with high precision and quantify them consistently"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Trust in AI as complementary tool with verification",
+      "valence": "positive",
+      "grounding_span": "AI was often used as a second opinion in this case, to either agree with or disagree with my findings"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Skepticism toward AI due to errors",
+      "valence": "negative",
+      "grounding_span": "It did not replace our expertise, and often made meaningful errors"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Aspiration for AI in behavioral testing",
+      "valence": "positive",
+      "grounding_span": "I would want AI to handle the behavioral side of vision testing"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Systematic validation and verification approach",
+      "grounding_span": "I often would treat the AI as a blinded second reader and verify its calls against masked human grading and predefined QC thresholds"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-specific selective adoption of AI",
+      "grounding_span": "I never leaned on AI as much for this aspect of our study. The main reason is that these tests heavily rely on direct observation of eye movement"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

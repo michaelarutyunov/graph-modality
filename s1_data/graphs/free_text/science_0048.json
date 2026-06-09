@@ -1,0 +1,159 @@
+{
+  "transcript_id": "science_0048",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as guidance for model evaluation and tuning",
+      "label_negative": "Traditional manual approach to model evaluation",
+      "bipolarity_complete": true,
+      "grounding_span": "I used AI tools to guide me through the process of model evaluation"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "Domain expertise in feature selection",
+      "label_negative": "AI-driven feature selection lacking domain context",
+      "bipolarity_complete": true,
+      "grounding_span": "I felt comfortable selecting features based on my knowledge of the material"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI's ability to apply domain-specific knowledge",
+      "label_negative": "AI's lack of domain-specific knowledge",
+      "bipolarity_complete": true,
+      "grounding_span": "AI often doesn't do a great job applying whatever knowledge it has about the subject matter"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI suggestion of accessible vs. sophisticated metrics",
+      "label_negative": "AI suggestion of simple, less valuable metrics",
+      "bipolarity_complete": true,
+      "grounding_span": "AI gravitates toward the more commonly discussed, surface-level stats"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Efficiency in model validation",
+      "grounding_span": "AI provided the code to efficiently do this throughout my model result analysis"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Domain-informed accuracy",
+      "grounding_span": "more complex statistics are more valuable features as they do a better job of quantifying player or team performance"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Hands-on learning and skill development",
+      "grounding_span": "wanted to gain experience doing so"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Positive toward AI for model evaluation guidance",
+      "valence": "positive",
+      "grounding_span": "AI provided the code to efficiently do this"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Negative toward AI's lack of domain knowledge",
+      "valence": "negative",
+      "grounding_span": "AI often doesn't do a great job applying whatever knowledge it has about the subject matter"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Negative toward AI's suggestion of simple metrics",
+      "valence": "negative",
+      "grounding_span": "AI gravitates toward the more commonly discussed, surface-level stats"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-expertise-driven decision making",
+      "grounding_span": "I felt comfortable selecting features based on my knowledge of the material"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Verification through mathematical output checking",
+      "grounding_span": "I saw the output of the code cell it produced and the math supported its conclusion"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

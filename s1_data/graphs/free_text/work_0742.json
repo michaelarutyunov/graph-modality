@@ -1,0 +1,161 @@
+{
+  "transcript_id": "work_0742",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative writing assistant",
+      "label_negative": "AI as autonomous writing delegator",
+      "bipolarity_complete": true,
+      "grounding_span": "I'm more likely to collaborate with it"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI authenticity in communication",
+      "label_negative": "AI-generated inauthentic writing",
+      "bipolarity_complete": true,
+      "grounding_span": "make it sound less 'AI' and more like me"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI understanding of personal priorities",
+      "label_negative": "AI inability to grasp nuanced priorities",
+      "bipolarity_complete": true,
+      "grounding_span": "struggles to really understand what's most important"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI integration in workplace culture",
+      "label_negative": "AI use discouraged or unsupported",
+      "bipolarity_complete": true,
+      "grounding_span": "My colleagues promote the use of AI for client communication"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Authentic self-expression",
+      "grounding_span": "make it sound less 'AI' and more like me"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Professional competence and skill preservation",
+      "grounding_span": "maintained some level of written communication skill"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and productivity",
+      "grounding_span": "help me organize my day"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Preference for collaborative AI use",
+      "valence": "positive",
+      "grounding_span": "I'm more likely to collaborate with it"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Frustration with AI's inauthentic writing patterns",
+      "valence": "negative",
+      "grounding_span": "dead giveaways you're using AI verbatim and it comes off less authentic"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Skepticism about AI's ability to prioritize",
+      "valence": "negative",
+      "grounding_span": "struggles to really understand what's most important"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Optimism about future AI authenticity",
+      "valence": "positive",
+      "grounding_span": "writing quality of AI becoming more authentic overtime"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement — drafts then edits AI output",
+      "grounding_span": "write emails and messages and then copy and paste the draft to an AI for revisions"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative rather than delegative approach",
+      "grounding_span": "I'm more likely to collaborate with it"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

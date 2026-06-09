@@ -1,0 +1,176 @@
+{
+  "transcript_id": "work_0274",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative iterative partner",
+      "label_negative": "AI as independent task delegator",
+      "bipolarity_complete": true,
+      "grounding_span": "I'm more collaborative. I'll put Github Copilot on Agent mode, give it plenty of context and detail, watch its initial efforts and understanding, and work with it to iterate."
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI adherence to user instructions",
+      "label_negative": "AI disregarding user instructions",
+      "bipolarity_complete": true,
+      "grounding_span": "I get frustrated when working with a GHCP agent in a longer session and it starts disregarding previous instructions."
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as learning accelerator",
+      "label_negative": "AI as skill replacement threat",
+      "bipolarity_complete": true,
+      "grounding_span": "AI has accelerated my rate of learning because it's so good at generating samples and documentations and explaining difficult concepts, so I'm not particularly worried."
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Authentic personal communication",
+      "label_negative": "AI-generated inauthentic communication",
+      "bipolarity_complete": true,
+      "grounding_span": "I still do most writing of emails and teams messages myself. I feel that AI is capable of doing this, but feels inauthentic."
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Cautious trust in AI integration",
+      "label_negative": "Overly trusting AI integration",
+      "bipolarity_complete": true,
+      "grounding_span": "I'm still being cautious, however, to not jump too quickly to trusting AI integration into new procedures."
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "I use AI through Github Copilot daily to code up quick but trivial changes or prototype ideas."
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Epistemic growth and skill development",
+      "grounding_span": "AI has accelerated my rate of learning because it's so good at generating samples and documentations and explaining difficult concepts"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Authentic self-expression",
+      "grounding_span": "I personally have a specific level of detail and specific verbiage that I like my messages to have."
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with collaborative AI workflow",
+      "valence": "positive",
+      "grounding_span": "I'm more collaborative. I'll put Github Copilot on Agent mode, give it plenty of context and detail, watch its initial efforts and understanding, and work with it to iterate."
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI disregarding instructions",
+      "valence": "negative",
+      "grounding_span": "I get frustrated when working with a GHCP agent in a longer session and it starts disregarding previous instructions."
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Optimism about AI as learning tool",
+      "valence": "positive",
+      "grounding_span": "AI has accelerated my rate of learning because it's so good at generating samples and documentations and explaining difficult concepts, so I'm not particularly worried."
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Resistance to AI in personal communication",
+      "valence": "negative",
+      "grounding_span": "I still do most writing of emails and teams messages myself. I feel that AI is capable of doing this, but feels inauthentic."
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Cautious optimism about future AI integration",
+      "valence": "ambivalent",
+      "grounding_span": "I expect it to get involved in more and more complicated processes at work. I expect to generate more complex code with AI and have it become a part of more workflows. I'm still being cautious, however, to not jump too quickly to trusting AI integration into new procedures."
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative chunking and feedback loops",
+      "grounding_span": "I usually give tasks in small chunks at a time because I find that creates a better result than giving it the entire task at once and creates openings for feedback."
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Self-directed experimentation",
+      "grounding_span": "I've discovered most of my own processes myself, however."
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

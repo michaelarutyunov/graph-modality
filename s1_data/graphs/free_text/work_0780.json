@@ -1,0 +1,195 @@
+{
+  "transcript_id": "work_0780",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as efficiency and learning tool",
+      "label_negative": "AI as unreliable or frustrating tool",
+      "bipolarity_complete": true,
+      "grounding_span": "help me learn different software programs better or provide suggestions on how to implement those programs into my tasks to gain efficiency"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI accuracy and reliability",
+      "label_negative": "AI inaccuracy and hallucination",
+      "bipolarity_complete": true,
+      "grounding_span": "double checking the information provided by AI to confirm accuracy"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI memory and context awareness",
+      "label_negative": "AI forgetting and looping",
+      "bipolarity_complete": true,
+      "grounding_span": "the AI just kept providing a loop of the same instructions or suggestions, forgetting it had already provided that information"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI access and licensing limitations",
+      "label_negative": "Full AI capability access",
+      "bipolarity_complete": true,
+      "grounding_span": "the version of the AI program that my employer allows...our particular license does not allow"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Skill maintenance vs. AI delegation",
+      "label_negative": "Skill atrophy through AI reliance",
+      "bipolarity_complete": true,
+      "grounding_span": "I choose not to atrophy skills even if I think it is likely AI may completely take them over"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "Deep institutional knowledge as AI-resistant",
+      "label_negative": "Shallow or codified knowledge easily replaced by AI",
+      "bipolarity_complete": true,
+      "grounding_span": "Gaining nuanced knowledge of my business and our processes...is an example of knowledge AI is less likely to be involved in"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "gain efficiency"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Accuracy and trustworthiness",
+      "grounding_span": "confirm accuracy"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Personal competence and skill preservation",
+      "grounding_span": "I choose not to atrophy skills"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Unique human expertise",
+      "grounding_span": "Gaining nuanced knowledge of my business and our processes"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI for learning and efficiency",
+      "valence": "positive",
+      "grounding_span": "help me learn different software programs better or provide suggestions on how to implement those programs into my tasks to gain efficiency"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with AI looping and forgetting",
+      "valence": "negative",
+      "grounding_span": "the AI just kept providing a loop of the same instructions or suggestions, forgetting it had already provided that information"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Cautious trust requiring verification",
+      "valence": "ambivalent",
+      "grounding_span": "double checking the information provided by AI to confirm accuracy"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Intentional skill maintenance despite AI capability",
+      "valence": "positive",
+      "grounding_span": "I choose not to atrophy skills even if I think it is likely AI may completely take them over"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Acceptance of AI integration as inevitable",
+      "valence": "mixed",
+      "grounding_span": "I imagine it will continue to become more and more engrained into my daily work"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Step-by-step procedural learning with iterative clarification",
+      "grounding_span": "I usually follow step by step so I can ask clarifying questions or alert the AI when a specific step isn't working"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic skill preservation and future-proofing",
+      "grounding_span": "I choose not to atrophy skills even if I think it is likely AI may completely take them over"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n4",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

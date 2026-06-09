@@ -1,0 +1,179 @@
+{
+  "transcript_id": "work_0273",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as comprehensive search tool",
+      "label_negative": "Conventional search without context understanding",
+      "bipolarity_complete": true,
+      "grounding_span": "it can help to find files just using context"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as passive background tool",
+      "label_negative": "AI as interactive collaborative partner",
+      "bipolarity_complete": true,
+      "grounding_span": "passively takes place in the background without having to think about it"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Human capability and enjoyment in email writing",
+      "label_negative": "AI delegation of email writing",
+      "bipolarity_complete": true,
+      "grounding_span": "I feel like I am capable to do them myself and I enjoy having something to do"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Human accountability in review work",
+      "label_negative": "Full AI automation of review work",
+      "bipolarity_complete": true,
+      "grounding_span": "we need to have a human sign off that things have been done correctly"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI adoption in workplace",
+      "label_negative": "Active seeking of AI integration",
+      "bipolarity_complete": true,
+      "grounding_span": "I likely won't seek to use it more than I currently do"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Accurate information retrieval",
+      "grounding_span": "it makes it easier to find files when I don't know the exact name"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Personal agency and satisfaction",
+      "grounding_span": "I enjoy having something to do"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Organizational trust and accountability",
+      "grounding_span": "we need to have a human sign off that things have been done correctly"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "the AI search tool has been very good at understanding what I am looking for"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Preference for human-written emails",
+      "valence": "negative",
+      "grounding_span": "I feel like I am capable to do them myself and I enjoy having something to do"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Acceptance of human sign-off requirement",
+      "valence": "positive",
+      "grounding_span": "we need to have a human sign off that things have been done correctly"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Openness to increasing AI use in future",
+      "valence": "ambivalent",
+      "grounding_span": "I'll probably use it more as it becomes more pertinent in my role but I likely won't seek to use it more"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Balanced integration — AI as option, not necessity",
+      "grounding_span": "passively takes place in the background without having to think about it"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic boundary-setting based on task importance",
+      "grounding_span": "I feel like I am capable to do them myself and I enjoy having something to do"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

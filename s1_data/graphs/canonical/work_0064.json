@@ -1,0 +1,214 @@
+{
+  "transcript_id": "work_0064",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as time-saving tool",
+      "label_negative": "Manual effort on low-value tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "things that would take far to long other wise and wouldn't add enough value to be worth it"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as tone checker for professional communication",
+      "label_negative": "Navigating tone without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "check if the tone of my work is what I think it it"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI glitches and errors",
+      "bipolarity_complete": true,
+      "grounding_span": "AI still has a lot of small glitches in it that in a work space make me wary"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI environmental impact",
+      "label_negative": "AI use without environmental concern",
+      "bipolarity_complete": true,
+      "grounding_span": "I also do worry about the impact of AI on the environment"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as professional polish tool",
+      "label_negative": "AI as collaborative partner throughout task",
+      "bipolarity_complete": true,
+      "grounding_span": "I tend to only give AI final polishing tasks"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI staying within requested boundaries",
+      "label_negative": "AI deviating from request",
+      "bipolarity_complete": true,
+      "grounding_span": "some times when I ask it to fix formatting issues it will also change the sentences around"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI as augmenting human role",
+      "label_negative": "AI replacing human creativity",
+      "bipolarity_complete": true,
+      "grounding_span": "AI will never be infallible in our lifetime. It's a tool to me like a computer was"
+    },
+    {
+      "id": "n8",
+      "type": "Construct",
+      "label": "AI energy consumption",
+      "label_negative": "AI unethical or energy-intensive",
+      "bipolarity_complete": true,
+      "grounding_span": "able to run on less energy like most tech does as it grows it will become more viable for me to use it in an ethical way"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Efficiency and speed in work",
+      "grounding_span": "wouldn't add enough value to be worth it"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Accurate communication",
+      "grounding_span": "tone is some times hard for me to navigate"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Professional accuracy and reliability",
+      "grounding_span": "make sure any material we are putting out is 100 percent correct and validated"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Environmental responsibility",
+      "grounding_span": "worry about the impact of AI on the environment"
+    },
+    {
+      "id": "n13",
+      "type": "Value",
+      "label": "Understanding and control over outputs",
+      "grounding_span": "it will also change the sentences around and that isn't what I wanted"
+    },
+    {
+      "id": "n14",
+      "type": "Value",
+      "label": "Creative integrity and human artistry",
+      "grounding_span": "having it create art and creative works feels more like stealing"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Satisfaction with AI for photo editing",
+      "valence": "positive",
+      "grounding_span": "I was really happy when AI was able to extend the background of an image"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Frustration with AI deviating from request",
+      "valence": "negative",
+      "grounding_span": "it will also change the sentences around and that isn't what I wanted and it gets annoying"
+    },
+    {
+      "id": "n17",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "mixed",
+      "grounding_span": "As AI changes and becomes more reliable and hopefully able to run on less energy"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Selective delegation based on task nature",
+      "grounding_span": "I tend to only give AI final polishing tasks"
+    },
+    {
+      "id": "n19",
+      "type": "CognitiveStyleMarker",
+      "label": "Ethical and environmental consideration in tool adoption",
+      "grounding_span": "I also do worry about the impact of AI on the environment"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n13",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n14",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n15",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n17",
+      "target": "n8",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n5",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n19",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

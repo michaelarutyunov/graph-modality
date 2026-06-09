@@ -1,0 +1,167 @@
+{
+  "transcript_id": "science_0032",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI unreliability for novel or complex tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "Common ML models like random forrest, XGBoost, etc. have lots of documentation on the internet, which means the AI can do a very good job"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as efficiency tool",
+      "label_negative": "Manual effort and time cost",
+      "bipolarity_complete": true,
+      "grounding_span": "AI can just do it much quicker"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as execution tool vs. interpretive partner",
+      "label_negative": "AI as interpretive partner generating hypotheses",
+      "bipolarity_complete": true,
+      "grounding_span": "the AI can model the data, but the AI has absolutely no ability to interpret the data"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Personal satisfaction in manual formula crafting",
+      "label_negative": "Delegation to AI for derivation",
+      "bipolarity_complete": true,
+      "grounding_span": "it's more satisfying"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Thorough verification of AI outputs",
+      "label_negative": "Trustworthy AI without verification",
+      "bipolarity_complete": true,
+      "grounding_span": "after I have to spend the time verifying the AI output, it basically ends up being the same time"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "AI can just do it much quicker"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Intellectual engagement and deeper understanding",
+      "grounding_span": "it's more satisfying"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Research insight and interpretation",
+      "grounding_span": "come up with some reasonable conjectures about patterns in the data"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Positive toward AI for coding tasks",
+      "valence": "positive",
+      "grounding_span": "Common ML models like random forrest, XGBoost, etc. have lots of documentation on the internet, which means the AI can do a very good job"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Skepticism and caution toward AI",
+      "valence": "negative",
+      "grounding_span": "the AI normally gets it wrong"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Aspirational hope for AI as practical assistant",
+      "valence": "positive",
+      "grounding_span": "It would be great if it could create the random forrest model AND then use that model to come up with some reasonable conjectures"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Verification-oriented — cross-checks AI outputs against other sources",
+      "grounding_span": "I have to verify a few of these values by hand though usually"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain intuition guided pattern seeking",
+      "grounding_span": "intuitively that was something that could reasonably happen based on my understanding"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n4",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

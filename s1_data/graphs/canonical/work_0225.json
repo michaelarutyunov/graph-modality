@@ -1,0 +1,156 @@
+{
+  "transcript_id": "work_0225",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as writing assistant for drafting",
+      "label_negative": "AI as independent task performer",
+      "bipolarity_complete": true,
+      "grounding_span": "I collaborate with it throughout the process, and often will draft it myself and then see what AI comes up with"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as tool for routine legal work",
+      "label_negative": "AI hallucination and fabricated citations",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't have a lot of confidence with AI performing legal research and case law analysis at this time"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as tool for routine legal work",
+      "label_negative": "AI as source of inaccuracy and risk",
+      "bipolarity_complete": true,
+      "grounding_span": "we are all trying to find ways that we can incorporate AI into our practice to improve efficiency"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Human irreplaceability in litigation",
+      "label_negative": "AI replacement of human lawyer in litigation",
+      "bipolarity_complete": true,
+      "grounding_span": "it cannot replace the human element required to represent an injured client and take their case all the way to trial"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Professional competence",
+      "grounding_span": "issues with hallucinations with case law and made up citations"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "AI helped me cut my brief length down to the maximum words allowed"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Human judgment and advocacy",
+      "grounding_span": "it cannot replace the human element required to represent an injured client"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Satisfaction with AI as editing aid",
+      "valence": "positive",
+      "grounding_span": "AI helped me cut my brief length down to the maximum words allowed"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Frustration with AI hallucination",
+      "valence": "negative",
+      "grounding_span": "there is hesitancy in general given the issues with hallucinations with case law"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Cautious trust in AI for legal research",
+      "valence": "positive",
+      "grounding_span": "I would like to see AI continue to develop in the legal field and become better at research and have fewer hallucinations"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Confidence in human irreplaceability in teaching",
+      "valence": "positive",
+      "grounding_span": "it cannot replace the human element required to represent an injured client"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative iterative refinement — works back and forth with AI",
+      "grounding_span": "I collaborate with it throughout the process, and often will draft it myself and then see what AI comes up with"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Experience-driven calibration of trust",
+      "grounding_span": "I still handle legal research myself because I don't have a lot of confidence with AI performing legal research"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

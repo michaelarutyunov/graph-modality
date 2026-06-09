@@ -1,0 +1,194 @@
+{
+  "transcript_id": "creativity_0116",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as research and ideation tool",
+      "label_negative": "AI as creative replacement",
+      "bipolarity_complete": true,
+      "grounding_span": "I will use AI for purely for research, ideation and editing recorded audio"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as editing assistant",
+      "label_negative": "AI as autonomous editor",
+      "bipolarity_complete": true,
+      "grounding_span": "My audio editing software does have AI features which does help smooth out the AI process, but I will often have to double check their work"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Human creative control and authenticity",
+      "label_negative": "AI-driven creative decisions",
+      "bipolarity_complete": true,
+      "grounding_span": "I am 100% driving the creative decisions"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as supplement to human work",
+      "label_negative": "AI as replacement of human work",
+      "bipolarity_complete": true,
+      "grounding_span": "It is very important to me that AI is only a supplement to my work, never a replacement"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI voice quality and authenticity",
+      "label_negative": "Synthesized voice inauthenticity",
+      "bipolarity_complete": true,
+      "grounding_span": "Synthesized voices are on the rise and with their rising quality"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative authenticity",
+      "grounding_span": "maintain my integrity as an actor"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "The greatest conveniences have been during editing where the AI can do work that would have taken me a fair bit of time"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Human employment and opportunity",
+      "grounding_span": "lessening opportunities for many voice actors"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Positive stance toward AI as research tool",
+      "valence": "positive",
+      "grounding_span": "It just truly felt like the AI was simply a better search engine"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Cautious stance toward AI editing",
+      "valence": "ambivalent",
+      "grounding_span": "I will often have to double check their work to make sure they didn't do anything unnatural"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Negative stance toward AI replacement in voice acting",
+      "valence": "negative",
+      "grounding_span": "I do indeed have major concerns about AI's presence in the voice acting industry"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Hopeful stance toward AI as supplement",
+      "valence": "positive",
+      "grounding_span": "Ideally, I would hope that AI voices can be used for proof of concepts, ideation and help with the more technical aspects"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Boundary-setting — clear delineation of AI vs human roles",
+      "grounding_span": "I will not use AI much during the middle of the recording process"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Verification-oriented — double-checks AI outputs",
+      "grounding_span": "I will often have to double check their work"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

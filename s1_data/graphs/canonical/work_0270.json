@@ -1,0 +1,149 @@
+{
+  "transcript_id": "work_0270",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative conversational partner",
+      "label_negative": "AI as one-shot answer provider",
+      "bipolarity_complete": true,
+      "grounding_span": "being able to ask followup questions (for continuity) in having an actual conversation is nice"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as clinical information source",
+      "label_negative": "AI unreliability and inaccuracy",
+      "bipolarity_complete": true,
+      "grounding_span": "Sometimes I need a quick answer and it needs to be reliable"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as supplementary aide to human expertise",
+      "label_negative": "AI as replacement for human expertise",
+      "bipolarity_complete": true,
+      "grounding_span": "I rely on my medical knowledge first and foremost, but having AI as a resource-rich tool is helpful"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI for documentation efficiency",
+      "label_negative": "AI for sensitive and hands-on tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "AI can be helpful at times with repetitive tasks such as charting and spelling"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Efficient access to information",
+      "grounding_span": "The satisfaction comes with the ease of helpful information at my fingertips"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Professional autonomy",
+      "grounding_span": "I do not believe AI will ever be able to take over my work. There is too much human touch that is required"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and speed in work",
+      "grounding_span": "it has made things easier and less time-consuming"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "There has not been any real frustration with AI, as it has simply been a helpful tool"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Confidence in human irreplaceability in teaching",
+      "valence": "positive",
+      "grounding_span": "I do not believe AI will ever be able to take over my work"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Conditional continued use based on helpfulness and accuracy",
+      "valence": "positive",
+      "grounding_span": "As long as it is helpful and accurate, I will continue to use it"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative follow-up questioning for continuity",
+      "grounding_span": "I will ask a question and then followup questions from there if necessary"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-specific delegation based on task nature",
+      "grounding_span": "I handle all sensitive tasks myself, but I prefer to use AI for some general guidance"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n8",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

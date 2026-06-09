@@ -1,0 +1,205 @@
+{
+  "transcript_id": "work_0666",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as idea generation and task breakdown partner",
+      "label_negative": "Independent struggle with task planning",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI for idea generation mainly. Sometimes I have a starting idea, but not sure where to go next"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as error checker and rewriter",
+      "label_negative": "Manual error checking and rewriting",
+      "bipolarity_complete": true,
+      "grounding_span": "ask AI to rewrite things for me sometimes, and to check for any errors"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI adherence to specific instructions",
+      "label_negative": "AI deviation from requested constraints",
+      "bipolarity_complete": true,
+      "grounding_span": "I get frustrated when I ask it to NOT do something, but it does it anyway"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI use in academia vs. other roles",
+      "label_negative": "Unrestricted AI use in academia",
+      "bipolarity_complete": true,
+      "grounding_span": "in academia, yes, because it is frowned upon, so I do not use it. In my other role, I use it freely"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Preserving personal cognitive skills",
+      "label_negative": "Over-reliance on AI leading to skill loss",
+      "bipolarity_complete": true,
+      "grounding_span": "I get worried that I will become reliant on AI and not be able to use my own thinking"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as collaborative partner vs. delegator",
+      "label_negative": "AI as independent task completer",
+      "bipolarity_complete": true,
+      "grounding_span": "I am more likely to collaborate, and generate ideas then go and do the tasks it suggests myself"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and time savings",
+      "grounding_span": "satisfied when I am given a workaround that saves me hours"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Cognitive autonomy and skill maintenance",
+      "grounding_span": "I try to make sure I do things myself so that I don't forget the skills"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Authenticity and personal connection to work",
+      "grounding_span": "more deeply connected with the content, and have it committed to memory"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Compliance with workplace norms",
+      "grounding_span": "academia is strict on AI use, so I am careful to follow rules"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI for task breakdown and time savings",
+      "valence": "positive",
+      "grounding_span": "satisfied when I am given a workaround that saves me hours"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with AI not following instructions",
+      "valence": "negative",
+      "grounding_span": "I get frustrated when I ask it to NOT do something, but it does it anyway"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Concern about over-reliance and skill loss",
+      "valence": "negative",
+      "grounding_span": "I get worried that I will become reliant on AI and not be able to use my own thinking"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Preference for collaboration over delegation",
+      "valence": "positive",
+      "grounding_span": "I am more likely to collaborate, and generate ideas then go and do the tasks it suggests myself"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Optimism about future AI capabilities",
+      "valence": "positive",
+      "grounding_span": "I feel I will be able to delegate more tasks, and ask it to do more"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative strategic questioning — breaks problems into sub-questions",
+      "grounding_span": "I will say something like 'I am thinking of designing a new product, but I don't know whether to niche it by design, or by function. What do you suggest?'"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-sensitive rule adherence — adjusts AI use based on context",
+      "grounding_span": "in academia, yes, because it is frowned upon, so I do not use it. In my other role, I use it freely"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

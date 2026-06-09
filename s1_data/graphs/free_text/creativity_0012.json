@@ -1,0 +1,169 @@
+{
+  "transcript_id": "creativity_0012",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as technical advisor for writing craft",
+      "label_negative": "AI as ghostwriter or content generator",
+      "bipolarity_complete": true,
+      "grounding_span": "What I do use AI for is discussing some more technical aspects of writing"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as brainstorming and problem-solving partner",
+      "label_negative": "AI as replacement for human creativity",
+      "bipolarity_complete": true,
+      "grounding_span": "I might also use it for brainstorming ideas"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as research tool replacing traditional search",
+      "label_negative": "AI as transformative force in creative process",
+      "bipolarity_complete": true,
+      "grounding_span": "Before I might have googled something and read blog posts or something. Now I'll have a conversation with an AI model"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI-generated fiction quality and depth",
+      "label_negative": "Human-authored fiction emotional nuance",
+      "bipolarity_complete": true,
+      "grounding_span": "A novel written by AI might have a great plot and be technically brilliant. But it won't have the deeper nuances that only a human can weave"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI manuscript critique for structural issues",
+      "label_negative": "Uploading full manuscript to AI due to data privacy concerns",
+      "bipolarity_complete": true,
+      "grounding_span": "I would expect to be able to feed it a longer piece of text...and have it critique it"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative authenticity and integrity",
+      "grounding_span": "I'd feel a fraud"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Human emotional depth in storytelling",
+      "grounding_span": "the slow burn emotional response a reader might feel from reading a book by an accomplished author"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Intellectual property protection",
+      "grounding_span": "I don't know how the model will use that material"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Firm rejection of AI as ghostwriter",
+      "valence": "negative",
+      "grounding_span": "I will never use AI for is getting it to write or re-write a section of text for me"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Positive embrace of AI as technical sounding board",
+      "valence": "positive",
+      "grounding_span": "What I do use AI for is discussing some more technical aspects of writing"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Concern about AI-generated fiction quality",
+      "valence": "negative",
+      "grounding_span": "I'm super concerned about the use of AI to write stories"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Ambivalence toward AI manuscript critique",
+      "valence": "ambivalent",
+      "grounding_span": "I would find the advice useful, I'm sure. But I'm not sure I'd be comfortable uploading a finished piece"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Boundary-driven selective tool use",
+      "grounding_span": "there are certain approaches I do/don't want to take"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Problem-solving through structured technical discussion",
+      "grounding_span": "discussing some more technical aspects of writing"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,169 @@
+{
+  "transcript_id": "work_0239",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as communication and policy interpretation aid",
+      "label_negative": "Manual handling of complex communication and policy",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI to reply to complex emails, to check my responses, to summarise complex policy"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as advisor for nuanced scenarios",
+      "label_negative": "Self-reliance for straightforward cases",
+      "bipolarity_complete": true,
+      "grounding_span": "Only when it requires a more considered response or unpicking detailed scenarios do I ask AI"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI response quality and professionalism",
+      "label_negative": "AI inability to articulate nuances",
+      "bipolarity_complete": true,
+      "grounding_span": "AI did a really good job of curating the response, correctly referencing the relevant parts of the policy in a professional manner"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Workplace AI adoption pace",
+      "label_negative": "Rapid AI adoption",
+      "bipolarity_complete": true,
+      "grounding_span": "My workplace is fairly slow to adopt it"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI reliance for communication and policy interpretation",
+      "label_negative": "Limited AI reliance due to job constraints",
+      "bipolarity_complete": true,
+      "grounding_span": "In terms of communication and policy interpretation I envisage relying on it more frequently"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Professional communication effectiveness",
+      "grounding_span": "AI did a really good job of curating the response, correctly referencing the relevant parts of the policy in a professional manner"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency in handling complex tasks",
+      "grounding_span": "Only when it requires a more considered response or unpicking detailed scenarios do I ask AI"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Job security and irreplaceability",
+      "grounding_span": "there are elements of my job that can't be carried out by AI so that wouldn't change"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI in complex communication",
+      "valence": "positive",
+      "grounding_span": "AI did a really good job of curating the response, correctly referencing the relevant parts of the policy in a professional manner"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Selective reliance on AI for complex tasks",
+      "valence": "positive",
+      "grounding_span": "Only when it requires a more considered response or unpicking detailed scenarios do I ask AI"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Indifference to skill maintenance due to slow adoption",
+      "valence": "mixed",
+      "grounding_span": "No, it's not something I've thought about. My line of work isn't particularly swift in adapting new technology"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Optimistic expectation of increased AI reliance",
+      "valence": "positive",
+      "grounding_span": "In terms of communication and policy interpretation I envisage relying on it more frequently"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic task selection — uses AI only for complex, nuanced tasks",
+      "grounding_span": "Only when it requires a more considered response or unpicking detailed scenarios do I ask AI"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Contextual awareness of workplace adoption pace",
+      "grounding_span": "My workplace is fairly slow to adopt it"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

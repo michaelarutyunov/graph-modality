@@ -1,0 +1,231 @@
+{
+  "transcript_id": "work_0887",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as tone checker for professional communication",
+      "label_negative": "AI-generated text requiring heavy personalization",
+      "bipolarity_complete": true,
+      "grounding_span": "I find it particularly useful for editing emails or other communications I'm going to send out, for tone and clarity"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as brainstorming and idea generator",
+      "label_negative": "AI as unreliable for domain-specific knowledge",
+      "bipolarity_complete": true,
+      "grounding_span": "I also sometimes use it for book recommendations when I don't know much about the genre"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as supplement to creative process",
+      "label_negative": "Human-sourced or manually created visuals",
+      "bipolarity_complete": true,
+      "grounding_span": "I like to source my own images from open source websites rather than generating them via AI"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI use for personalized student instruction",
+      "label_negative": "Strict avoidance of AI for student personal information",
+      "bipolarity_complete": true,
+      "grounding_span": "I also don't use AI for anything that includes students' personal information"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as autonomous task delegator",
+      "bipolarity_complete": true,
+      "grounding_span": "I generally dip in and out of it to tweak stuff, or edit things I've already made a start on"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI use in education",
+      "label_negative": "Colleague negativity and academic dishonesty concerns",
+      "bipolarity_complete": true,
+      "grounding_span": "Generally my colleagues are very negative re. AI"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI capability in image editing",
+      "label_negative": "AI unreliability for precise image edits",
+      "bipolarity_complete": true,
+      "grounding_span": "No matter how many times I asked it, it kept changing other things about the image"
+    },
+    {
+      "id": "n8",
+      "type": "Construct",
+      "label": "AI as neutral advisor for customer disputes",
+      "label_negative": "Human subjective judgment without AI input",
+      "bipolarity_complete": true,
+      "grounding_span": "Being able to plug in a shelf-s with of titles to an LLM and have it do a quick sanity check"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Effective professional communication",
+      "grounding_span": "I want to get the tone just right"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Student engagement and learning",
+      "grounding_span": "Students (particularly the creative ones) have an aversion to AI images and won't use them"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Privacy and data security",
+      "grounding_span": "distrust of where the data will end up"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Personal authenticity and unique voice",
+      "grounding_span": "making it sound more 'me'"
+    },
+    {
+      "id": "n13",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "The LLM gave me a nice, polished, slightly warmer version of the email that I didn't need to edit at all"
+    },
+    {
+      "id": "n14",
+      "type": "Value",
+      "label": "Professional judgment and expertise",
+      "grounding_span": "I always check / refine the output myself"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Satisfaction with AI for email drafting",
+      "valence": "positive",
+      "grounding_span": "The LLM gave me a nice, polished, slightly warmer version of the email that I didn't need to edit at all"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Frustration with AI image generation",
+      "valence": "negative",
+      "grounding_span": "No matter how many times I asked it, it kept changing other things about the image"
+    },
+    {
+      "id": "n17",
+      "type": "Stance",
+      "label": "Frustration with student AI misuse",
+      "valence": "negative",
+      "grounding_span": "I also don't use AI for anything that includes students' personal information"
+    },
+    {
+      "id": "n18",
+      "type": "Stance",
+      "label": "Positive appreciation of AI as neutral arbiter",
+      "valence": "positive",
+      "grounding_span": "Being able to plug in a shelf-s with of titles to an LLM and have it do a quick sanity check"
+    },
+    {
+      "id": "n19",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement and personalization",
+      "grounding_span": "I generally dip in and out of it to tweak stuff"
+    },
+    {
+      "id": "n20",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based boundary setting",
+      "grounding_span": "I also don't use AI for anything that includes students' personal information"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n14",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n14",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n13",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n14",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n15",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n17",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n18",
+      "target": "n8",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n19",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n20",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

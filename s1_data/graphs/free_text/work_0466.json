@@ -1,0 +1,169 @@
+{
+  "transcript_id": "work_0466",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as practical problem-solving guide for hands-on tasks",
+      "label_negative": "AI as unreliable for tasks requiring local knowledge or trust",
+      "bipolarity_complete": true,
+      "grounding_span": "I've used AI to help me find the right toilet seat I need to buy for the toilet we have, asked it how to properly restick a tile to the wall"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability and accuracy",
+      "label_negative": "AI hallucination and obvious errors",
+      "bipolarity_complete": true,
+      "grounding_span": "AI knowledge and interpretations aren't always completely accurate"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as upfront information provider with step-by-step instructions",
+      "label_negative": "AI requiring iterative back-and-forth for basic information",
+      "bipolarity_complete": true,
+      "grounding_span": "I prefer to get all of the information upfront presented in an organized list of logical steps"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI integration into clerical and inventory tasks",
+      "label_negative": "Manual handling of clerical and inventory tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "Perhaps we could someday integrate our inventory sheets and somehow have AI automatically order everything on the list from the correct suppliers"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI adoption in workplace culture",
+      "label_negative": "Resistance to AI adoption by colleagues",
+      "bipolarity_complete": true,
+      "grounding_span": "My boyfriend handles pretty much everything else that I don't... but he's not as open-minded on the tech front"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Practical competence and task completion",
+      "grounding_span": "I have the physical ability to complete those simple-enough tasks even though I wasn't sure of the processes"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Trust and reliability in information",
+      "grounding_span": "AI knowledge and interpretations aren't always completely accurate"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and reduced manual workload",
+      "grounding_span": "lighten his manual work load"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for practical problem-solving",
+      "valence": "positive",
+      "grounding_span": "Most of the time, AI usage works out for me without giving me grief"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI's obvious errors",
+      "valence": "negative",
+      "grounding_span": "I have been frustrated by AI's occasional failings... it kept referring to the colors in the photo I sent as shades of red when they were shades of dark and light greens"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Nervousness about using AI for vendor selection",
+      "valence": "negative",
+      "grounding_span": "Using AI to try out new companies would make me nervous"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Optimism about AI for inventory automation",
+      "valence": "positive",
+      "grounding_span": "Perhaps we could someday integrate our inventory sheets and somehow have AI automatically order everything"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Preference for upfront structured information before execution",
+      "grounding_span": "I prefer to get all of the information upfront presented in an organized list of logical steps"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Reliance on established relationships and word-of-mouth over AI recommendations",
+      "grounding_span": "word-of-mouth between restauranteurs in this town is everything"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

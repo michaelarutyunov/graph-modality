@@ -1,0 +1,174 @@
+{
+  "transcript_id": "work_0317",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as productivity tool for routine content generation",
+      "label_negative": "AI as crutch leading to skill atrophy",
+      "bipolarity_complete": true,
+      "grounding_span": "I admittedly have gotten a bit lazy with it, and tend to generate entire articles based on an outline"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as ideation and research partner",
+      "label_negative": "AI as full content generator",
+      "bipolarity_complete": true,
+      "grounding_span": "Ideally, I would be mostly using AI for ideation and research"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Human writing quality and authenticity",
+      "label_negative": "Stilted and repetitive AI writing",
+      "bipolarity_complete": true,
+      "grounding_span": "AI writing is much too stilted and repetitive to be okay to submit to clients"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Engaging craft in freelance writing",
+      "label_negative": "Mechanical AI-assisted writing at day job",
+      "bipolarity_complete": true,
+      "grounding_span": "It's much more fun for me to do my own research and really delve into some of the topics"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Skill maintenance and personal writing ability",
+      "label_negative": "Skill atrophy from AI reliance",
+      "bipolarity_complete": true,
+      "grounding_span": "I sometimes feel like I can barely write by myself anymore"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "I have to be quick in the interest of productivity"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Creative satisfaction and craft",
+      "grounding_span": "It feels like putting a puzzle together"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional competence and autonomy",
+      "grounding_span": "I've really had to be intentional about not using it in my freelance work"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Resignation to AI inevitability in writing profession",
+      "valence": "negative",
+      "grounding_span": "I think the inclusion of AI in the writing profession is inevitable"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Enjoyment of freelance writing without AI",
+      "valence": "positive",
+      "grounding_span": "It's much more fun for me to do my own research"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Concern about skill atrophy from AI use",
+      "valence": "negative",
+      "grounding_span": "I sometimes feel like I can barely write by myself anymore"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with AI misunderstanding prompts",
+      "valence": "negative",
+      "grounding_span": "the AI to misunderstand what I was going for and give me something useless"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Comparative evaluation of AI vs human writing patterns",
+      "grounding_span": "I see words repeated all the time-'elevate' and 'transform' are big offenders"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Intentional skill preservation through deliberate non-use",
+      "grounding_span": "I've really had to be intentional about not using it in my freelance work"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

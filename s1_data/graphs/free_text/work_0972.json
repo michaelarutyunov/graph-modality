@@ -1,0 +1,157 @@
+{
+  "transcript_id": "work_0972",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as quick fact lookup and concept explainer",
+      "label_negative": "AI as unreliable hallucinator for precise code requirements",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI search engines to help interpret sections of code, explain engineering concepts, and remind me of design procedures"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as learning tool to bridge experience gap",
+      "label_negative": "AI as unnecessary crutch for fundamental knowledge",
+      "bipolarity_complete": true,
+      "grounding_span": "Usually for explanation of engineering concepts. My coworkers are significantly further along in their careers"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability and accuracy",
+      "label_negative": "AI hallucination and fabrication",
+      "bipolarity_complete": true,
+      "grounding_span": "it hallucinated sections of the code several times"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as sporadic information resource",
+      "label_negative": "AI as autonomous task performer",
+      "bipolarity_complete": true,
+      "grounding_span": "No tasks are to be performed by AI as it currently stands. I only refer to AI for information sporadically"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Preservation of practical hands-on skills",
+      "label_negative": "Over-reliance on AI for design tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I make sure to familiarize myself with construction techniques and become highly proficient at detailing so that I have practical knowledge and skills that will more slowly be taken over by AI"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Professional competence and accuracy",
+      "grounding_span": "I checked the answers. It turned out that the sections it referenced were completely unrelated"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficient knowledge acquisition",
+      "grounding_span": "it would take much longer to do a search and synthesize the information from articles or videos"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Career resilience and skill preservation",
+      "grounding_span": "practical knowledge and skills that will more slowly be taken over by AI"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Frustration with AI hallucination",
+      "valence": "negative",
+      "grounding_span": "It was frustrating to use AI to try and nail down a specific requirement in the code but it hallucinated sections of the code several times"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Skeptical acceptance of AI limitations",
+      "valence": "ambivalent",
+      "grounding_span": "I was not surprised as it was the free version of ChatGPT by which I have experienced this same thing in the past"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Strategic optimism about AI's future role",
+      "valence": "positive",
+      "grounding_span": "We currently are in a business relationship with an investor in the development of AI-powered engineering modeling and design computer programs"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Verification-oriented reasoning — checks AI outputs against authoritative sources",
+      "grounding_span": "I checked the answers"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Experience-based calibration of trust — adjusts expectations based on past failures",
+      "grounding_span": "I was not surprised as it was the free version of ChatGPT by which I have experienced this same thing in the past"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,167 @@
+{
+  "transcript_id": "work_0162",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as efficiency tool for mundane tasks",
+      "label_negative": "AI for personally meaningful creative tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "If it's mundane then I might get AI to help me"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as collaborative partner maintaining user control",
+      "label_negative": "AI as autonomous agent reducing user control",
+      "bipolarity_complete": true,
+      "grounding_span": "I'll work with the AI until we've created the final product that I need"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI accuracy and reliability for detailed tasks",
+      "label_negative": "AI error risk in detailed financial work",
+      "bipolarity_complete": true,
+      "grounding_span": "detailed things like financial reports I do myself due to the concern of AI making errors"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as time-saving summarization tool",
+      "label_negative": "Manual line-by-line reading of reports",
+      "bipolarity_complete": true,
+      "grounding_span": "I used AI to summarize some of those reports so I could save myself the time of reading them line by line"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Efficiency and reduced mental load",
+      "grounding_span": "I like to use AI to improve efficiency and to lighten my mental load"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Personal autonomy and control",
+      "grounding_span": "I also like to still feel in control of my work"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Accuracy and trustworthiness in work",
+      "grounding_span": "due to the concern of AI making errors"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Personal fulfillment through creative engagement",
+      "grounding_span": "If it's something that I'm personally passionate about then I do it myself"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for efficiency gains",
+      "valence": "positive",
+      "grounding_span": "it saved me hours of reading and let me get to more important work"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Preference for human control in creative tasks",
+      "valence": "negative",
+      "grounding_span": "If it's something that I'm personally passionate about then I do it myself"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Caution toward AI for detailed financial tasks",
+      "valence": "negative",
+      "grounding_span": "detailed things like financial reports I do myself due to the concern of AI making errors"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Optimism about future AI use if accuracy improves",
+      "valence": "positive",
+      "grounding_span": "if accuracy became less of a concern then it could maybe become more helpful with detailed/financial related tasks"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative collaborative refinement — works with AI through multiple rounds",
+      "grounding_span": "I'll work with the AI until we've created the final product that I need"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based task allocation — distinguishes mundane vs. passionate tasks",
+      "grounding_span": "If it's mundane then I might get AI to help me. If it's something that I'm personally passionate about then I do it myself"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

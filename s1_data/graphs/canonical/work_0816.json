@@ -1,0 +1,169 @@
+{
+  "transcript_id": "work_0816",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as assistant for complex work",
+      "label_negative": "AI as final product generator",
+      "bipolarity_complete": true,
+      "grounding_span": "My use for AI, in all tasks, tends to be very much in the prep work"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as checker vs generator",
+      "label_negative": "AI as content generator",
+      "bipolarity_complete": true,
+      "grounding_span": "I very much use the tools as checkers, rather than generators"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability and hallucination",
+      "label_negative": "AI hallucination of fake papers",
+      "bipolarity_complete": true,
+      "grounding_span": "the problem of hallucinated journals"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI capacity for genuine innovation",
+      "label_negative": "AI conservatism and inability to think outside the box",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is pretty useless at genuinely innovating"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as literature search assistant across interdisciplinary fields",
+      "label_negative": "AI limited to single-domain tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "one of my great hopes for AI is that we can have some sort of 'always on' researcher"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Research integrity and accuracy",
+      "grounding_span": "I'd be checking those thoroughly"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Creativity and innovation",
+      "grounding_span": "thinking outside that 'box'"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficient interdisciplinary understanding",
+      "grounding_span": "look for ways the data could help people in unrelated fields"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "AI helps with the stuff I don't want to do"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI hallucination",
+      "valence": "negative",
+      "grounding_span": "a frustration that we face a lot is the problem of hallucinated journals"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Skepticism toward AI industry's vision",
+      "valence": "negative",
+      "grounding_span": "AI is pretty useless at genuinely innovating"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Hope for AI as definitive research tool",
+      "valence": "positive",
+      "grounding_span": "one of my great hopes for AI is that we can have some sort of 'always on' researcher"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic task delegation — uses AI only for specific, bounded tasks",
+      "grounding_span": "It's very much employed in a piecemeal fashion"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Lateral thinking — values cross-disciplinary connections",
+      "grounding_span": "thinking somewhat laterally"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

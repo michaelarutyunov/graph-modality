@@ -1,0 +1,182 @@
+{
+  "transcript_id": "work_0325",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as proofreading assistant",
+      "label_negative": "AI as unreliable for tricky grammar",
+      "bipolarity_complete": true,
+      "grounding_span": "use AI to proofread, answer grammar questions"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI adaptation to audience and market nuances",
+      "label_negative": "AI as overly academic and not simple enough",
+      "bipolarity_complete": true,
+      "grounding_span": "generate really simple definitions for vocabulary words"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as implementation executor",
+      "label_negative": "AI as deviating from requested format",
+      "bipolarity_complete": true,
+      "grounding_span": "list out very specific instructions for the AI, and it doesn't produce the content in the way I requested"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as ideation partner",
+      "label_negative": "AI as biased to agree with user",
+      "bipolarity_complete": true,
+      "grounding_span": "I feel as though it lends itself to agree with me, rather than being critical"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as tool requiring human oversight",
+      "label_negative": "AI as fully autonomous replacement",
+      "bipolarity_complete": true,
+      "grounding_span": "AI needs to be managed and used critically in order to optimize its results"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as thought partner for logic checking",
+      "label_negative": "AI as inappropriate for generating whole essays",
+      "bipolarity_complete": true,
+      "grounding_span": "using it to quickly check grammar or provide examples is a great use of it, but using it to generate whole essays or chunks of text might not be"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Data accuracy and integrity",
+      "grounding_span": "make sure that the basic integrity of the word is still accurately described"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "let the AI do as much as it can before I take over"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Personal autonomy and skill preservation",
+      "grounding_span": "I do try to challenge myself to not hand over every task I can to AI"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI errors",
+      "valence": "negative",
+      "grounding_span": "When I take the time to list out very specific instructions for the AI, and it doesn't produce the content in the way I requested, that can be frustrating"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI's agreeableness",
+      "valence": "negative",
+      "grounding_span": "I feel as though it lends itself to agree with me, rather than being critical"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "using it to quickly check grammar or provide examples is a great use of it"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "positive",
+      "grounding_span": "I think I'll get better at writing meaningful prompts to get the most out of my work with AI"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative prompt refinement and manual takeover",
+      "grounding_span": "I'll try different prompts like simplify the syntax or swap out difficult vocabulary words with more basic terms but sometimes it's just easier for me to manually make those changes"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic reframing to elicit objectivity",
+      "grounding_span": "I find myself having to trick it into being objective by wording questions like, What could be done to make this sentence clearer?"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

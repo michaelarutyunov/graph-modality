@@ -1,0 +1,184 @@
+{
+  "transcript_id": "work_0745",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as practical problem solver",
+      "label_negative": "AI as unnecessary or irrelevant",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "it has been really useful for identifying plants for customers"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as verification tool for simple calculations",
+      "label_negative": "AI for writing and emotional tasks",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I like having advanced reasoning in my pocket"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as efficiency tool",
+      "label_negative": "Management resistance to AI due to hubris",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "they'd save so much time if they added essentially another manager to delegate"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as thinking partner for reasoning",
+      "label_negative": "AI as threat to traditional skills",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "AI is most effectively used by holistic thinkers"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI for impersonal tasks",
+      "label_negative": "AI for personal and emotional tasks",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "tasks that involve emotion or passion... I do myself"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "valence": null,
+      "grounding_span": "they'd save so much time"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Authenticity and personal integrity",
+      "valence": null,
+      "grounding_span": "texting family, or writing for fun, I do myself"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Learning and intellectual growth",
+      "valence": null,
+      "grounding_span": "I like to use it to engage in Socratic questioning"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "it was genuinely satisfying and felt like a 'we're living in the future' moment"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Optimism about future AI adoption",
+      "valence": "negative",
+      "grounding_span": "they don't know what they're missing"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "positive",
+      "grounding_span": "AI will usher in an age for people with brains like mine"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Resistance to AI in interpersonal tasks",
+      "valence": "negative",
+      "grounding_span": "the idea of having AI text on behalf of me to a family member is very weird"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Fragmented associative thinking — prefers non-linear, image-based connections",
+      "valence": null,
+      "grounding_span": "holistic thinkers"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative experimentation and trial-and-error",
+      "valence": null,
+      "grounding_span": "I'd love to just experiment with it and see what things could be sped up"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

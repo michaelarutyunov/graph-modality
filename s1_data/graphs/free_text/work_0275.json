@@ -1,0 +1,197 @@
+{
+  "transcript_id": "work_0275",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative thinking partner for lesson planning",
+      "label_negative": "AI as independent task delegator",
+      "bipolarity_complete": true,
+      "grounding_span": "I rarely delegate tasks for AI to complete independently. I always provide examples of what I've already done, ask it for feedback"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for generating engaging and differentiated materials",
+      "label_negative": "AI producing generic or inappropriate content",
+      "bipolarity_complete": true,
+      "grounding_span": "I would ask the Model to come up with an activity which is based on real life, so the students can relate to it"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for bridging generational teaching methods",
+      "label_negative": "Traditional methods without AI adaptation",
+      "bipolarity_complete": true,
+      "grounding_span": "it allows me to understand other people's teaching methods and how I can apply their ideas to my own work, but in a modern and more appropriate way"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI for technical problem solving in math and engineering",
+      "label_negative": "Self-learning and human consultation for technical problems",
+      "bipolarity_complete": true,
+      "grounding_span": "For technical questions, such as problem solving and geometry, I prefer to learn this myself, rather than asking the Model"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI for enhancing practical craft expertise",
+      "label_negative": "AI replacing hands-on teaching of practical skills",
+      "bipolarity_complete": true,
+      "grounding_span": "I wouldn't want that to happen, as I feel that this is my expertise. But I wouldn't mind it helping me to be better and more confident"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI use by students hindering creativity",
+      "label_negative": "Students using AI to enhance creativity",
+      "bipolarity_complete": true,
+      "grounding_span": "I would prefer if students did not use AI as this could hinder their creativity"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Student engagement and effective learning",
+      "grounding_span": "All students would be busy and enjoying their work this way"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Deep personal understanding and consistency",
+      "grounding_span": "I prefer to fully understand how to tackle a problem, rather than taking a shortcut to ask AI"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Professional growth and leadership",
+      "grounding_span": "Perhaps AI could help me to understand how to become a great head teacher"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for exceptional lesson",
+      "valence": "positive",
+      "grounding_span": "Satisfied - when it came up with exciting material for my lesson. Ofsted visiting that day and stating that it was an exceptional lesson"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI when unable to explain technical content",
+      "valence": "negative",
+      "grounding_span": "Frustrated - when I have used AI and a student asks me for clarification, but I'm struggling to understand it myself as it's too technical"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Preference for human consultation over AI for technical problems",
+      "valence": "negative",
+      "grounding_span": "I prefer to learn this myself, rather than asking the Model"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Openness to future AI use and leadership",
+      "valence": "positive",
+      "grounding_span": "I see myself using it more and more"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement and collaborative co-creation",
+      "grounding_span": "I would use my findings and the Model's findings to come up with something even better"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-specific boundary setting for AI use",
+      "grounding_span": "I prefer to learn this myself, rather than asking the Model"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

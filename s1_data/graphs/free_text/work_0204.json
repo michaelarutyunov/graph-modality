@@ -1,0 +1,214 @@
+{
+  "transcript_id": "work_0204",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as research consultant providing options",
+      "label_negative": "AI as autonomous task completer",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't like using AI to just do the work for me, instead I like to use it to give me the pieces and let me put them together"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as semantic search and explanation tool",
+      "label_negative": "AI as literal search tool",
+      "bipolarity_complete": true,
+      "grounding_span": "Having it as a semantic search instead of a literal search has been extremely useful"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as machine-like tool with factual output",
+      "label_negative": "AI with human-like conversational mannerisms",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't want a person helping me the whole value is that it is a machine processing data"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI for uninteresting placeholder tasks",
+      "label_negative": "AI for core creative or interesting tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "Stuff that I could probably figure out, but isn't all that interesting to me"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as tool for learning and understanding",
+      "label_negative": "AI as replacement for learning",
+      "bipolarity_complete": true,
+      "grounding_span": "I hope that by using AI to learn about things I am passionate about, and not let it just do all the work for me"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as creator of new data vs user of historical data",
+      "label_negative": "AI as user of historical data",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is really good at using historical data, so I want to be someone who is creating new data instead of using old data"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Personal accomplishment and satisfaction",
+      "grounding_span": "I want to feel the sense of accomplishing a task"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Understanding and maintainability",
+      "grounding_span": "if I don't understand how the code is working ... then it becomes much hard to refer back to it"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Efficiency and time saving",
+      "grounding_span": "the time to relearn it and debug it is just not something I want to do"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Reliable factual output",
+      "grounding_span": "I don't want a person helping me the whole value is that it is a machine processing data"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Innovation and creating new knowledge",
+      "grounding_span": "I want to be someone who is creating new data instead of using old data"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI as semantic search",
+      "valence": "positive",
+      "grounding_span": "Having it as a semantic search instead of a literal search has been extremely useful"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Frustration with AI's human-like overconfidence",
+      "valence": "negative",
+      "grounding_span": "If it makes a mistake then it says 'Oops' ... I don't want a person helping me"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Preference for AI as consultant not doer",
+      "valence": "positive",
+      "grounding_span": "I don't like using AI to just do the work for me, instead I like to use it to give me the pieces"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Hope that AI helps not replaces",
+      "valence": "mixed",
+      "grounding_span": "I can only hope its here to help and not replace"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Modular task decomposition — breaks tasks into small, testable components",
+      "grounding_span": "I just give it what the input is, and what I need the output to be, and let it handle it. Test it to make sure its working"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Contextual boilerplate approach — provides fresh context per query to avoid history issues",
+      "grounding_span": "I find it easier to just have a boilerplate copy paste of the context it needs, then give it a question with that context"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n3",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

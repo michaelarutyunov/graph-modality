@@ -1,0 +1,181 @@
+{
+  "transcript_id": "work_0198",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI for data analysis and report writing",
+      "label_negative": "Stale repetitive report creation",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "AI has helped me freshen things up on the creative side"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as verification-requiring tool",
+      "label_negative": "Unverified findings leading to errors",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I use AI to verify what I have found and suggest changes"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as workload reducer for repetitive tasks",
+      "label_negative": "Overburdened with repetitive tasks",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "tasking AI with the processing of repetitive, daily tasks that just take time, not brainpower"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Personal authenticity in client communication",
+      "label_negative": "AI doing all work leading to lack of authenticity",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "doing the groundwork yourself to maintain authenticity in client interactions"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Company policy restricting AI tool use",
+      "label_negative": "Free AI adoption across business",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "restricted to using AI the way the company allows"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Professional confidence and validation",
+      "grounding_span": "gives me the highest confidence when I am entering presentations, negotiations or contract reviews"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Work-life balance",
+      "grounding_span": "if AI can help to shed some workload and free up mental capacity, that can only be a good thing"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Authentic human interaction and accountability",
+      "grounding_span": "having that genuine interaction means a lot"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Resistance to AI in creative work",
+      "valence": "positive",
+      "grounding_span": "AI has helped me freshen things up on the creative side which has helped with both my interest in doing the work, and user engagement"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Confidence in AI as a key skill",
+      "valence": "positive",
+      "grounding_span": "using AI to verify, which is unbelievably helpful and reassuring that my findings were correct"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with company restrictions on AI",
+      "valence": "negative",
+      "grounding_span": "restricted to using AI the way the company allows"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Optimism about future AI adoption",
+      "valence": "positive",
+      "grounding_span": "if the dynamic were to shift with these new appointments, it could see AI adopted more freely across the business"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Mixed concern about AI replacing human authenticity",
+      "valence": "negative",
+      "grounding_span": "using AI to do all of the work would lead to a stale presentation and ... I would likely stumble over my words"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Verification-oriented — cross-checks AI outputs against other sources",
+      "grounding_span": "I then upload the document ... and ask a series of questions ... to confirm that my findings ... are accurate"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic patience — waiting for organizational change to expand AI use",
+      "grounding_span": "We do have 3 senior management members due for retirement ... if the dynamic were to shift ... it could see AI adopted more freely"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,198 @@
+{
+  "transcript_id": "work_0902",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as research assistant for legislation and best practices",
+      "label_negative": "AI as unreliable source of fabricated specifics",
+      "bipolarity_complete": true,
+      "grounding_span": "I use it to research topics such as legislation and best practice in records management"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as confidential thinking partner",
+      "label_negative": "AI as untrustworthy for sensitive situations",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is a good substitute to talk through the idea if there is noone around I can talk to, or if the situation is confidential"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as communication enhancer for professional writing",
+      "label_negative": "AI as unnecessary crutch for writing",
+      "bipolarity_complete": true,
+      "grounding_span": "I use it to rewrite emails so they sound more professional"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI factual accuracy and verification",
+      "label_negative": "AI hallucination and fabrication of specifics",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't want to present information in a work environment that is not factually correct"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Workplace culture openness toward AI",
+      "label_negative": "Workplace snobbishness and resistance toward AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I have also found a bit of snobbishness around the use of AI"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as framework provider for problem-solving",
+      "label_negative": "AI as source of fabricated information requiring full verification",
+      "bipolarity_complete": true,
+      "grounding_span": "I really just use AI to point me in the right direction"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional competence and accuracy",
+      "grounding_span": "I don't want to present information in a work environment that is not factually correct"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Confidentiality and trust in sensitive work",
+      "grounding_span": "if the situation is confidential and I shouldn't talk to anyone else about it"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Effective communication and confidence",
+      "grounding_span": "It has improved my confidence with communication"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Human expertise and emotional intelligence",
+      "grounding_span": "My work also requires a fair bit of human experience, handling sensitive situations and peoples emotions"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI for email rewriting",
+      "valence": "positive",
+      "grounding_span": "I feel satisfied every time I get it to rewrite an email for me!"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with AI fabricating legislation specifics",
+      "valence": "negative",
+      "grounding_span": "I do find it frustrating when the AI quotes specific sections of legislation that do not exist"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Cautious trust in AI as starting point",
+      "valence": "ambivalent",
+      "grounding_span": "I would not trust 100% what a model says unfortunately but it does give me the framework"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Openness to increased AI use due to workplace shift",
+      "valence": "positive",
+      "grounding_span": "I feel like I can be more open and positive about the use of AI"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative verification and source-checking",
+      "grounding_span": "I often ask models to check thoroughly now because I have learnt this gets a more researched response"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Contextual calibration of trust based on task sensitivity",
+      "grounding_span": "I really just use AI to point me in the right direction. I would not trust 100% what a model says"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,138 @@
+{
+  "transcript_id": "work_0823",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as project organization tool",
+      "label_negative": "AI as unnecessary for routine tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I collaborated with AI, pitching the issue to AI since I was unfamiliar with these new HP server models"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI use as sign of weakness vs valuable tool",
+      "label_negative": "AI use as sign of weakness",
+      "bipolarity_complete": true,
+      "grounding_span": "Using AI could be seen as a sign of 'weakness' so-to-speak, if that makes any sense (even if I don't agree with it and consider it a valuable tool)"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI unreliability for unfamiliar technical domains",
+      "bipolarity_complete": true,
+      "grounding_span": "AI assisted with helping me navigate Linux command line really well"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as pressure reliever for significant tasks",
+      "label_negative": "AI as unnecessary for routine tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "It really took a lot of the pressure off of me"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Professional efficiency",
+      "grounding_span": "accomplish something significant for a single person to do"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Professional reputation and social acceptance",
+      "grounding_span": "Using AI could be seen as a sign of 'weakness'"
+    },
+    {
+      "id": "n7",
+      "type": "Stance",
+      "label": "Satisfaction with AI as collaborative partner",
+      "valence": "positive",
+      "grounding_span": "I got to feel like I was working with an expert in the field"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Discretion about AI use due to stigma",
+      "valence": "negative",
+      "grounding_span": "Using AI could be seen as a sign of 'weakness'"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Confidence in AI for unfamiliar operating systems",
+      "valence": "positive",
+      "grounding_span": "I imagine a lot of future collaboration projects would be for operating systems I'm not familiar with"
+    },
+    {
+      "id": "n10",
+      "type": "CognitiveStyleMarker",
+      "label": "Process-oriented debugging — asks AI to show steps",
+      "grounding_span": "we went through each troubleshooting step together"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Selective disclosure — compartmentalizes AI use based on social context",
+      "grounding_span": "I haven't really told anyone that I've used AI before"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n8",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n10",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

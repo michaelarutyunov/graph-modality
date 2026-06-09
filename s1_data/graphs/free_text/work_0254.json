@@ -1,0 +1,191 @@
+{
+  "transcript_id": "work_0254",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as writing assistant for professional tone",
+      "label_negative": "Writing without AI assistance",
+      "bipolarity_complete": true,
+      "grounding_span": "If I need to write a longer email that needs to be in a professional tone, I will often use AI to give me a basic outline"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI output authenticity and personal voice",
+      "label_negative": "AI output sounding generic or inauthentic",
+      "bipolarity_complete": true,
+      "grounding_span": "I will change little things to make it sound more authentic and human"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI use for personal information tasks",
+      "label_negative": "AI use for tasks involving personal information",
+      "bipolarity_complete": true,
+      "grounding_span": "Generally anything involving personal information, I will do myself"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Effort-benefit ratio of AI use",
+      "label_negative": "Effort of using AI outweighing benefit for small tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "Short emails and reports I will write myself because I feel it is more work to open an AI to do it"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as organizational tool for complex writing",
+      "label_negative": "Disorganized manual writing process",
+      "bipolarity_complete": true,
+      "grounding_span": "When writing a cover letter I found it particularly helpful. It helped me organize all my experiences in a coherent way"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "Skill maintenance with AI use",
+      "label_negative": "Skill atrophy due to AI reliance",
+      "bipolarity_complete": true,
+      "grounding_span": "Sometimes I think about losing skills because AI is doing it for me. But I do a lot of writing on my own as well so I feel that helps keep my skills"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Authentic professional communication",
+      "grounding_span": "make it sound more authentic and human"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Privacy and compliance",
+      "grounding_span": "My company has a strict policy for not using anyone's personal information"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Efficiency and time saving",
+      "grounding_span": "it is more work to open an AI to do it"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Personal skill preservation",
+      "grounding_span": "I do a lot of writing on my own as well so I feel that helps keep my skills"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI for structured writing",
+      "valence": "positive",
+      "grounding_span": "When writing a cover letter I found it particularly helpful"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Concern about skill loss",
+      "valence": "negative",
+      "grounding_span": "Sometimes I think about losing skills because AI is doing it for me"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Optimism about future AI use",
+      "valence": "positive",
+      "grounding_span": "I imagine I will use it more as it gets better and better"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Effort-benefit pragmatic calculus",
+      "grounding_span": "I feel it is more work to open an AI to do it"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Authenticity-driven customization",
+      "grounding_span": "I will change little things to make it sound more authentic and human"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n2",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

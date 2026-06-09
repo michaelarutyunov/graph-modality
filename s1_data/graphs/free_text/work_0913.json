@@ -1,0 +1,188 @@
+{
+  "transcript_id": "work_0913",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as editing aid for writing improvement",
+      "label_negative": "AI as full task performer replacing human skill",
+      "bipolarity_complete": true,
+      "grounding_span": "Grammarly's suggestions help me quickly fix it, whilst making me a stronger writer"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability in research tasks",
+      "label_negative": "AI unreliability with hallucinations and miscontextualization",
+      "bipolarity_complete": true,
+      "grounding_span": "AI has proven unreliability in deep research tasks, such as hallucinations"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI integration preserving human skills",
+      "label_negative": "AI reliance causing skill atrophy",
+      "bipolarity_complete": true,
+      "grounding_span": "integration, not reliance"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Human control over writing process",
+      "label_negative": "AI taking over writing entirely",
+      "bipolarity_complete": true,
+      "grounding_span": "Ultimately, I am still in control of the writing process"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Contextual appropriateness of AI suggestions",
+      "label_negative": "AI's one-size-fits-all grammatical correctness",
+      "bipolarity_complete": true,
+      "grounding_span": "context largely determines whether or not I accept Grammarly's suggestions"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as assistant vs AI as expert",
+      "label_negative": "AI as expert replacing human judgment",
+      "bipolarity_complete": true,
+      "grounding_span": "innovations in AI that prioritize their roles as assistants rather than experts"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Personal skill development and learning",
+      "grounding_span": "my own knowledge of grammar and vocabulary is increasing at the same time"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Authentic self-expression in writing",
+      "grounding_span": "I want my creative writing to be as much an expression of myself as possible"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Personal connection with students",
+      "grounding_span": "I want to retain a personal connection to my students as much as possible"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Human interdependence and meaning",
+      "grounding_span": "the exchange of information amongst ourselves binds us to one another"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Positive stance toward AI as learning tool",
+      "valence": "positive",
+      "grounding_span": "I find using AI as an aid really helpful"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Negative stance toward AI reliance",
+      "valence": "negative",
+      "grounding_span": "I don't want to be reliant on AI for basic tasks"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Ambivalent stance toward AI in education",
+      "valence": "ambivalent",
+      "grounding_span": "I'm unsure how to resolve this tension"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Cautious openness to future AI use",
+      "valence": "mixed",
+      "grounding_span": "I'm just going to proceed with further AI use cautiously, but not refuse to embrace it at all"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Context-sensitive judgment — evaluates AI suggestions based on purpose and audience",
+      "grounding_span": "context largely determines whether or not I accept Grammarly's suggestions"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Deliberate skill-preservation reasoning — prioritizes learning over efficiency",
+      "grounding_span": "integration, not reliance"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

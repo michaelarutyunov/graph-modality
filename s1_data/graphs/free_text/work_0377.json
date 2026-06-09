@@ -1,0 +1,221 @@
+{
+  "transcript_id": "work_0377",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI for repetitive and mundane tasks",
+      "label_negative": "Human focus on repetitive tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "AI can take on the bulk of the repetitive and mundane tasks"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for meeting notes and summaries",
+      "label_negative": "Manual meeting notes and summaries",
+      "bipolarity_complete": true,
+      "grounding_span": "capturing meeting notes, summarising those meeting notes"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for drafting communication",
+      "label_negative": "Manual drafting of communication",
+      "bipolarity_complete": true,
+      "grounding_span": "drafting communication to stakeholders and my team"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Human oversight of AI outputs",
+      "label_negative": "Unchecked AI outputs",
+      "bipolarity_complete": true,
+      "grounding_span": "nothing that doesn't go past my eyes"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI for non-critical communication",
+      "label_negative": "AI for critical stakeholder communication",
+      "bipolarity_complete": true,
+      "grounding_span": "I probably wouldn't let AI handle any critical communication with stakeholders"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "Collaborative back-and-forth with AI",
+      "label_negative": "Complete delegation to AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I will go back and forth with the model until I get the desired results"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI adoption driven by workplace culture",
+      "label_negative": "Resistance to AI adoption in workplace",
+      "bipolarity_complete": true,
+      "grounding_span": "great push for the adoption of AI internally"
+    },
+    {
+      "id": "n8",
+      "type": "Construct",
+      "label": "AI reliability in chaotic meetings",
+      "label_negative": "AI failure in chaotic meetings",
+      "bipolarity_complete": true,
+      "grounding_span": "the model just can't quite understand what is going on in a meeting"
+    },
+    {
+      "id": "n9",
+      "type": "Construct",
+      "label": "AI freeing time for human-centric work",
+      "label_negative": "AI encroaching on human-centric work",
+      "bipolarity_complete": true,
+      "grounding_span": "free me to have more time to do what matters, which is my communication with various stakeholders"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "saves so much time"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Human connection and stakeholder management",
+      "grounding_span": "looks after other people and essentially that is what I fundamentally do as a PM"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Accuracy and reliability",
+      "grounding_span": "check the notes afterwards for accuracy"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Positive toward AI for repetitive tasks",
+      "valence": "positive",
+      "grounding_span": "AI can take on the bulk of the repetitive and mundane tasks"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Cautious toward AI for critical communication",
+      "valence": "negative",
+      "grounding_span": "I probably wouldn't let AI handle any critical communication with stakeholders"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Frustration with AI in chaotic meetings",
+      "valence": "negative",
+      "grounding_span": "the meeting notes can be a mess"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Optimistic about AI's growing role",
+      "valence": "positive",
+      "grounding_span": "I can only seeing its influence growing"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through back-and-forth",
+      "grounding_span": "I will go back and forth with the model until I get the desired results"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Thorough review and oversight",
+      "grounding_span": "nothing that doesn't go past my eyes"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n13",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n8",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n9",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n6",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n9",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

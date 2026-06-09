@@ -1,0 +1,157 @@
+{
+  "transcript_id": "work_0361",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as grammar and style checker",
+      "label_negative": "Manual proofreading without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "double-check grammar and punctuation"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as rewriting assistant for phrasing",
+      "label_negative": "Solely human rewriting",
+      "bipolarity_complete": true,
+      "grounding_span": "rewrite passages that don't sound right"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as collaborative partner for blending",
+      "label_negative": "AI as replacement for human effort",
+      "bipolarity_complete": true,
+      "grounding_span": "blend my work with AI's for the optimal result"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI use as professional cheating",
+      "label_negative": "AI use as legitimate tool",
+      "bipolarity_complete": true,
+      "grounding_span": "I feel like I'm cheating a bit otherwise"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI's inability to replace human judgment and empathy",
+      "label_negative": "AI's potential to replace human editors",
+      "bipolarity_complete": true,
+      "grounding_span": "so much of it is about human judgement, empathy and lived experience"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Professional quality and accuracy",
+      "grounding_span": "double-check grammar and punctuation"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Personal integrity and professional ethics",
+      "grounding_span": "The author is paying me to edit their work, so using AI sometimes feels like the easy route"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Human connection and empathy",
+      "grounding_span": "human judgement, empathy and lived experience"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for repetitive phrasing",
+      "valence": "positive",
+      "grounding_span": "AI was good for finding unique ways to say the same thing"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Guilt about using AI as cheating",
+      "valence": "negative",
+      "grounding_span": "I feel like I'm cheating a bit otherwise"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Confidence that AI won't replace human editors",
+      "valence": "positive",
+      "grounding_span": "I don't think AI will ever completely take over copyediting"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative self-first then AI approach",
+      "grounding_span": "I always try to do it myself first, but if I'm not happy... I will use AI"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Gut-feel blending of human and AI output",
+      "grounding_span": "it's just a gut feel for what is going to work better"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

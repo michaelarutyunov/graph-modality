@@ -1,0 +1,179 @@
+{
+  "transcript_id": "work_0515",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as time-saving enabler for large-scale solo projects",
+      "label_negative": "AI as insufficient for project scale without it",
+      "bipolarity_complete": true,
+      "grounding_span": "without AI I couldn't really do what I'm doing, since it would take forever"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as precise executor of clear instructions",
+      "label_negative": "AI as overconfident fixer causing irreparable damage",
+      "bipolarity_complete": true,
+      "grounding_span": "instruct the AI to do precisely what I want, so that the results appear as if I've chanted a magic spell"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as maintainer of context and memory",
+      "label_negative": "AI as context-losing misinterpretation source",
+      "bipolarity_complete": true,
+      "grounding_span": "loss of context meaning the plan couldn't be executed as it was in my head"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as creative collaborator respecting unique vision",
+      "label_negative": "AI as assumption-driven misinterpreter of unique vision",
+      "bipolarity_complete": true,
+      "grounding_span": "the problem with AI's is that they tend to make lots of assumptions about what the actual vision is"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as debugging assistant with fine-detail speed",
+      "label_negative": "AI as unreliable when overconfident in fixes",
+      "bipolarity_complete": true,
+      "grounding_span": "when it comes to debugging, the AI is invaluable since it has knowledge of and access to fine details"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and project feasibility",
+      "grounding_span": "a project of this magnitude done from scratch by a single person in a 1-year timeframe would be inconceivable without AI support"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Creative autonomy and vision integrity",
+      "grounding_span": "the unique vision of what I am developing, which only I can have"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Quality of output",
+      "grounding_span": "help me focus more and more on quality of output"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction from precise instruction execution",
+      "valence": "positive",
+      "grounding_span": "Satisfaction comes from my being able to instruct the AI to do precisely what I want"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration from AI overconfidence and misinterpretation",
+      "valence": "negative",
+      "grounding_span": "frustration comes from when things aren't working as planned, or from loss of context"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Optimistic confidence in growing AI partnership",
+      "valence": "positive",
+      "grounding_span": "I see it growing over the short term anyway, as I develop the confidence to handle more complex projects"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Firm resistance to AI suggestions that compromise vision",
+      "valence": "negative",
+      "grounding_span": "I am quite firm about what I want, and don't feel the pressure to accept suggestions, which mostly aren't very good anyway"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative back-and-forth refinement with AI",
+      "grounding_span": "this requires a bit of back and forth, but I find that it's worth it"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Meta-level creative focus over technical details",
+      "grounding_span": "there is a meta-level layer that my attention goes to, around the creative process of development"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

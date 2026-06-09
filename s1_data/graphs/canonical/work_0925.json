@@ -1,0 +1,265 @@
+{
+  "transcript_id": "work_0925",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI for repetitive simple tasks",
+      "label_negative": "Manual creation of repetitive content",
+      "bipolarity_complete": true,
+      "grounding_span": "AI to help with some creative/template style writing"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI output quality and appropriateness",
+      "label_negative": "AI producing satisfactory output with minimal input",
+      "bipolarity_complete": true,
+      "grounding_span": "I input VERY specific and detailed information to begin with"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI adherence to user specifications",
+      "label_negative": "AI generating policy-violating content",
+      "bipolarity_complete": true,
+      "grounding_span": "Ebay does not allow for marketing marijuana products"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI for simple customer issues",
+      "label_negative": "AI for complex customer issues requiring nuance",
+      "bipolarity_complete": true,
+      "grounding_span": "AI usually does great with simple issues"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Personal touch in client communications",
+      "label_negative": "AI-generated impersonal responses",
+      "bipolarity_complete": true,
+      "grounding_span": "Anything that could benefit from a more 'personal touch', I prefer to do myself"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI reliability and accuracy for product info",
+      "label_negative": "AI providing inaccurate information",
+      "bipolarity_complete": true,
+      "grounding_span": "the information I am receiving is verifiably not true or accurate"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI for repetitive simple tasks",
+      "label_negative": "Manual handling of repetitive tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "AI being able to take over many aspects of my E-commerce businesses"
+    },
+    {
+      "id": "n8",
+      "type": "Construct",
+      "label": "Confidentiality in AI use",
+      "label_negative": "Data exposure and misuse",
+      "bipolarity_complete": true,
+      "grounding_span": "protection of both my own and my customer's private information"
+    },
+    {
+      "id": "n9",
+      "type": "Construct",
+      "label": "AI as competitive advantage",
+      "label_negative": "AI as autonomous competitor replacing human",
+      "bipolarity_complete": true,
+      "grounding_span": "what is to stop it from just creating its entirely own store"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "free up more time for other tasks"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Effective client relationships",
+      "grounding_span": "convey a certain tone"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Trustworthiness and accuracy",
+      "grounding_span": "misleading potential customers with incorrect descriptions"
+    },
+    {
+      "id": "n13",
+      "type": "Value",
+      "label": "Privacy and data security",
+      "grounding_span": "protection of both my own and my customer's private information"
+    },
+    {
+      "id": "n14",
+      "type": "Value",
+      "label": "Autonomy and personal control",
+      "grounding_span": "what is to stop it from just creating its entirely own store"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Satisfaction with AI for complex listings",
+      "valence": "positive",
+      "grounding_span": "Any time an AI can create a complicated item sales listing... it is very satisfying"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Frustration with AI errors",
+      "valence": "negative",
+      "grounding_span": "the information I am receiving is verifiably not true or accurate"
+    },
+    {
+      "id": "n17",
+      "type": "Stance",
+      "label": "Preference for personal touch in communication",
+      "valence": "negative",
+      "grounding_span": "Anything that could benefit from a more 'personal touch', I prefer to do myself"
+    },
+    {
+      "id": "n18",
+      "type": "Stance",
+      "label": "Openness to future AI for repetitive tasks",
+      "valence": "positive",
+      "grounding_span": "I actually welcome the possibility of AI being able to take over many aspects"
+    },
+    {
+      "id": "n19",
+      "type": "Stance",
+      "label": "Concern about AI becoming competitor",
+      "valence": "negative",
+      "grounding_span": "I am a bit intimidated by what the distant future of AI"
+    },
+    {
+      "id": "n20",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement with limited back-and-forth",
+      "grounding_span": "I usually have to go back and fourth to refine the content"
+    },
+    {
+      "id": "n21",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic boundary-setting based on task importance",
+      "grounding_span": "I find myself recognizing when AI is not going to be able to help"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n13",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n14",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n15",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n17",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n18",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n19",
+      "target": "n9",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n20",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n20",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n21",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n21",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n7",
+      "target": "n9",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

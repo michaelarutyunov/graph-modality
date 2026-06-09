@@ -1,0 +1,222 @@
+{
+  "transcript_id": "work_0081",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as workload reducer",
+      "label_negative": "AI as workload increaser",
+      "bipolarity_complete": true,
+      "grounding_span": "it felt like doubling the workload"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI adherence to instructions",
+      "label_negative": "AI deviation from instructions",
+      "bipolarity_complete": true,
+      "grounding_span": "Lack of instruction following is annoying and frustrating"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability and accuracy",
+      "label_negative": "AI hallucination and fabrication",
+      "bipolarity_complete": true,
+      "grounding_span": "hallucinated a source for example"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as learning facilitator",
+      "label_negative": "AI as learning inhibitor",
+      "bipolarity_complete": true,
+      "grounding_span": "using the AI takes away the 'learning' aspect of summarising information"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as creative inspiration tool",
+      "label_negative": "AI as final output generator",
+      "bipolarity_complete": true,
+      "grounding_span": "I've used it a few times to come up with logo ideas - but then I refine it in software like illustrator"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as emotional buffer for communication",
+      "label_negative": "AI as unnecessary intermediary",
+      "bipolarity_complete": true,
+      "grounding_span": "If I was having a tough time in writing a response for example, especially if feeling emotionally charged"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Personal learning and knowledge retention",
+      "grounding_span": "the information tends to stick more"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Time efficiency",
+      "grounding_span": "could have just done it from the get go"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Creative control and personal expression",
+      "grounding_span": "it's me making the final decisions in how the sentence sounds"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Emotional regulation and measured communication",
+      "grounding_span": "craft a more measured response"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI increasing workload",
+      "valence": "negative",
+      "grounding_span": "it felt like doubling the workload"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Annoyance with AI not following instructions",
+      "valence": "negative",
+      "grounding_span": "Lack of instruction following is annoying and frustrating"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Distrust due to AI hallucination",
+      "valence": "negative",
+      "grounding_span": "hallucinated a source for example"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Positive view of AI for brainstorming",
+      "valence": "positive",
+      "grounding_span": "I've used it a few times to come up with logo ideas"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Openness to using AI for emotionally charged writing",
+      "valence": "positive",
+      "grounding_span": "If I was having a tough time in writing a response"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Dislike of AI summaries in search results",
+      "valence": "negative",
+      "grounding_span": "I really dislike the AI summaries in search results"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Preference for hands-on learning and doing",
+      "grounding_span": "By doing the writing and creative projects myself"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Systematic information gathering and synthesis",
+      "grounding_span": "gather all the informaiton into a doc - then have that doc open side by side with the doc/space I'm using to write my article"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n4",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n5",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,190 @@
+{
+  "transcript_id": "work_0935",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI for routine technical tasks",
+      "label_negative": "AI for subjective, interpretive tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "The more 'technical' and definitively right/wrong skills are where I find it saves time"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as time-saving tool",
+      "label_negative": "Manual resource creation for knowledge retention",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI for things like SPaG worksheets, so that I can tailor a specific revision lesson"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Corporate outsourcing to AI for profit",
+      "label_negative": "Preserving personal cognitive engagement",
+      "bipolarity_complete": true,
+      "grounding_span": "I am reluctant to outsource too much of my thinking, because I feel like it causes brainrot"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as efficiency tool for data analysis",
+      "label_negative": "AI use for core teaching and assessment",
+      "bipolarity_complete": true,
+      "grounding_span": "I'm hoping that I can figure out ways to use it to streamline e.g. for data management, creating resources for EAL students, or for helping with report writing"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI-generated student work",
+      "label_negative": "Authentic student work",
+      "bipolarity_complete": true,
+      "grounding_span": "when you ask a student to write a paragraph for homework with very strict instructions and they just write out what ChatGPT gave them"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Teacher expertise and subject knowledge",
+      "grounding_span": "it's really important for me to maintain and develop my subject knowledge"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Student progress and learning",
+      "grounding_span": "if I don't read any of my students' work, I can't adapt my teaching effectively to help them make progress"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Creative satisfaction and enjoyment",
+      "grounding_span": "I also quite enjoy making resources, so it's a task I don't want to give up completely"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Academic integrity",
+      "grounding_span": "the inability to trust the academic honesty of student work"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for resource creation",
+      "valence": "positive",
+      "grounding_span": "One thing I found satisfying was when I needed a creative writing exercise for students, and I was able to ask ChatGPT to write me a story with very specific criteria"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with student AI misuse",
+      "valence": "negative",
+      "grounding_span": "one thing I find really frustrating is when you ask a student to write a paragraph for homework with very strict instructions and they just write out what ChatGPT gave them"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Resistance to over-reliance on AI",
+      "valence": "negative",
+      "grounding_span": "this is going to cause serious problems for humanity in the long run because they do not often think to question the validity of the response"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Preventative caution about cognitive decline",
+      "valence": "negative",
+      "grounding_span": "I've noticed that I'm not as familiar with the content I'm teaching and therefore don't feel as effective in teaching it"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Deliberate hands-on resource creation for knowledge retention",
+      "grounding_span": "I am deliberately creating as many resources as I can myself because it's really important for me to maintain and develop my subject knowledge"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Selective delegation based on task nature",
+      "grounding_span": "The more 'technical' and definitively right/wrong skills are where I find it saves time"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n3",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

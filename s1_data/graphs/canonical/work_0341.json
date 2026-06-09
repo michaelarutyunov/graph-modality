@@ -1,0 +1,169 @@
+{
+  "transcript_id": "work_0341",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as creative copywriting assistant",
+      "label_negative": "AI for tasks requiring accuracy and final product",
+      "bipolarity_complete": true,
+      "grounding_span": "I have used it for brainstorming wording/titles/ copywriting type stuff mostly"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as source of fragments to be massaged",
+      "label_negative": "AI as provider of final product",
+      "bipolarity_complete": true,
+      "grounding_span": "Just using it to get fragments I can massage into something really good"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI trustworthiness and verification",
+      "label_negative": "AI unreliability and hallucination",
+      "bipolarity_complete": true,
+      "grounding_span": "don't trust the summaries automatically"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Personal creation vs. editing/delegation",
+      "label_negative": "Delegating creation to AI and editing its output",
+      "bipolarity_complete": true,
+      "grounding_span": "The more satisfying part of the work is the creation, not the editing/fixing"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI for administrative tasks",
+      "label_negative": "AI for creative or analytical work",
+      "bipolarity_complete": true,
+      "grounding_span": "I wouldn't be mad about an AI personal assistant for keeping a to-do list with deadlines"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative satisfaction and enjoyment",
+      "grounding_span": "I can get into a more focused and 'flow'-like state doing the work myself"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Accuracy and reliability",
+      "grounding_span": "very aware of the drawbacks of using a tool that can't be trusted to accurately cite its sources"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and cost reduction",
+      "grounding_span": "I am not always great at being concise, so I can find it helpful for that"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for copywriting and ideation",
+      "valence": "positive",
+      "grounding_span": "I have used AI to help me come up with catchy titles and copywriting for library programs"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI summaries",
+      "valence": "negative",
+      "grounding_span": "don't trust the summaries automatically"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Preference for delegating most tasks to AI",
+      "valence": "negative",
+      "grounding_span": "I prefer to do things myself rather than reviewing and fixing someone else's work"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Openness to increasing AI use in future",
+      "valence": "positive",
+      "grounding_span": "I wouldn't be mad about an AI personal assistant for keeping a to-do list with deadlines"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Preference for direct creation and flow state",
+      "grounding_span": "I can get into a more focused and 'flow'-like state doing the work myself"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Hyper-focused discernment based on deep knowledge of AI limitations",
+      "grounding_span": "I hyper-focus on the things I know that I can properly judge the AI's responses on"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n4",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

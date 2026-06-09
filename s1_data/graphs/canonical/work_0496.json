@@ -1,0 +1,193 @@
+{
+  "transcript_id": "work_0496",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as knowledge refresher for unfamiliar topics",
+      "label_negative": "AI for researching unfamiliar topics",
+      "bipolarity_complete": true,
+      "grounding_span": "I do not use it to research a topic that I do not know about"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI hallucination and misinterpretation",
+      "bipolarity_complete": true,
+      "grounding_span": "there were a lot of hallucinations, misinterpretation of the data"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as independent task delegator",
+      "bipolarity_complete": true,
+      "grounding_span": "I tend to do a lot more collaboration"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as efficiency booster in healthcare",
+      "label_negative": "AI use without regulatory oversight",
+      "bipolarity_complete": true,
+      "grounding_span": "there are standards of practice and stuff that I have to abide by"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as brainstorming and idea generator",
+      "label_negative": "AI for factual research",
+      "bipolarity_complete": true,
+      "grounding_span": "I use it more creatively for things like social media brainstorming"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI for mundane tasks",
+      "label_negative": "AI for core professional tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "it could take over mundane day-to-day tasks like charting"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Accuracy and factual reliability",
+      "grounding_span": "it is very important that the evidence that I am pulling from is solid"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional competence",
+      "grounding_span": "I then learn the presentation as I make it"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Regulatory compliance and accuracy",
+      "grounding_span": "for regulatory reasons, it's better that I don't use AI for charting"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "I can scan pretty quickly and easily make sure that everything is correct"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI for brainstorming",
+      "valence": "positive",
+      "grounding_span": "It actually provided really good ideas once I clarified what it was that I wanted"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Distrust of AI for factual accuracy",
+      "valence": "negative",
+      "grounding_span": "It kept giving me information that I knew was blatantly wrong"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Cautious trust in AI",
+      "valence": "ambivalent",
+      "grounding_span": "I have found that it's more work for me to double check AI's work than to do the research myself"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Guilt about secret AI use",
+      "valence": "negative",
+      "grounding_span": "Sometimes I am hesitant to tell them that I have used AI"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-specific quality control — uses familiarity to verify AI output",
+      "grounding_span": "If I'm using it to synthesize information on familiar topics, I can scan pretty quickly and easily make sure that everything is correct"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative iterative refinement — works back and forth with AI",
+      "grounding_span": "I generally come back and review it with AI afterwards"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n5",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

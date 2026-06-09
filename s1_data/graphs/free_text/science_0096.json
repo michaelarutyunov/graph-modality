@@ -1,0 +1,144 @@
+{
+  "transcript_id": "science_0096",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as gap-filler for missing data",
+      "label_negative": "AI as unreliable for core expertise",
+      "bipolarity_complete": true,
+      "grounding_span": "help bridge the gap in estimation between what is recorded in databases/literature vs. what could help with estimation"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as method suggestion tool",
+      "label_negative": "AI as direct answer provider",
+      "bipolarity_complete": true,
+      "grounding_span": "I have received helpful methods of estimating based on the functional group(s) of the unknown molecule"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as refresher for unfamiliar topics",
+      "label_negative": "AI as deep analysis tool for core expertise",
+      "bipolarity_complete": true,
+      "grounding_span": "I will use AI tools give me quick recaps or summaries of terms or methods when I am either unfamiliar or rusty on the topic"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI preference for literature-based estimation",
+      "label_negative": "AI reliance on numerical computation",
+      "bipolarity_complete": true,
+      "grounding_span": "it would be helpful for AI tools to use literature based results for estimation as opposed to numerical estimations"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Practical estimation accuracy",
+      "grounding_span": "even if the estimations are horribly off, the overall CO2eq scores should still be within reason"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficient knowledge acquisition",
+      "grounding_span": "quick recaps or summaries of terms or methods when I am either unfamiliar or rusty on the topic"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Empirical grounding in research",
+      "grounding_span": "it would be much simpler if it first decided to scan literature sources to see if there are tabulated literature records"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Pragmatic acceptance of AI for estimation",
+      "valence": "positive",
+      "grounding_span": "It is helpful to have estimations of these for internal and sometimes external reporting"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Skepticism toward AI for core expertise",
+      "valence": "negative",
+      "grounding_span": "I have not had the need to use them for frameworks for deep AI analysis"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Desire for AI to prioritize literature over computation",
+      "valence": "positive",
+      "grounding_span": "it would be much simpler if it first decided to scan literature sources"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Rationalization and team validation",
+      "grounding_span": "I do however rationalize whether the results are reasonable and confirm it with my team as well"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Preference for empirical literature over computation",
+      "grounding_span": "it would be much simpler if it first decided to scan literature sources"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

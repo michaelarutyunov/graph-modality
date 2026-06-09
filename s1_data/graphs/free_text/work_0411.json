@@ -1,0 +1,150 @@
+{
+  "transcript_id": "work_0411",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI for cleanup and removal tasks",
+      "label_negative": "AI for creative generation from scratch",
+      "bipolarity_complete": true,
+      "grounding_span": "I wouldn't generally use Generative Fill to create things that aren't there in pictures per se"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability and predictability",
+      "label_negative": "AI producing odd or unexpected results",
+      "bipolarity_complete": true,
+      "grounding_span": "Sometimes I feel the AI knows exactly what I need right away"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI authenticity and client trust",
+      "label_negative": "AI creating fakes that could anger clients",
+      "bipolarity_complete": true,
+      "grounding_span": "I wouldn't want a client to be angry that something has been 'faked'"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as workflow efficiency booster",
+      "label_negative": "AI requiring manual rework",
+      "bipolarity_complete": true,
+      "grounding_span": "it really improved my workflow for that particular set of images"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Professional authenticity and client satisfaction",
+      "grounding_span": "I wouldn't want a client to be angry that something has been 'faked'"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Workflow efficiency and productivity",
+      "grounding_span": "it really improved my workflow"
+    },
+    {
+      "id": "n7",
+      "type": "Stance",
+      "label": "Satisfaction with AI for cleanup tasks",
+      "valence": "positive",
+      "grounding_span": "I was impressed by its ability to remove text from backgrounds"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Frustration with AI creative generation",
+      "valence": "negative",
+      "grounding_span": "I was less impressed by some of its more, say, surreal approaches"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Caution about AI creating fakes",
+      "valence": "negative",
+      "grounding_span": "I am nervous about it creating anything entirely from whole cloth"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Optimism about future AI applications",
+      "valence": "positive",
+      "grounding_span": "I would be interested to see how AI tools can assist with my video work"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative prompt refinement and manual fallback",
+      "grounding_span": "I might change the way I phrase the prompt and see if this produces different results. Failing that, I would need to do the cleanup manually."
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative testing and boundary exploration",
+      "grounding_span": "we noticed its rollout with interest and had a play around with the tool when we got the update, testing its abilities and limitations"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n8",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

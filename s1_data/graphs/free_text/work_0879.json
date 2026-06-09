@@ -1,0 +1,188 @@
+{
+  "transcript_id": "work_0879",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as comprehension aid for unfamiliar requests",
+      "label_negative": "Independent struggle with unfamiliar terminology",
+      "bipolarity_complete": true,
+      "grounding_span": "I often use AI to help me understand what my employer or a third party is asking for"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as guide for form filling",
+      "label_negative": "Unguided form completion",
+      "bipolarity_complete": true,
+      "grounding_span": "I also often use AI to guide me when filling out a form like an export permit"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability in mathematical calculations",
+      "label_negative": "AI errors in mathematical calculations",
+      "bipolarity_complete": true,
+      "grounding_span": "they sometimes making shocking errors when it comes to mathematical calculations"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as step-by-step collaborator",
+      "label_negative": "AI as black-box delegator",
+      "bipolarity_complete": true,
+      "grounding_span": "I like to take it step-by-step, to ensure that I understand everything it's doing"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as time-saver for uninteresting tasks",
+      "label_negative": "AI as threat to skill development",
+      "bipolarity_complete": true,
+      "grounding_span": "I try to get AI to help me complete them more efficiently, so that I'll ideally have more time to do things that more interest me"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as threat to entry-level jobs",
+      "label_negative": "AI as harmless to senior R&D roles",
+      "bipolarity_complete": true,
+      "grounding_span": "AI may eventually eliminate entry level positions, but I think there'll always be humans in senior positions"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Understanding and clarity",
+      "grounding_span": "to ensure that I understand everything it's doing"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Accuracy and reliability",
+      "grounding_span": "reducing the error by over 100% wasn't possible, physically or mathematically"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Career advancement and meaningful work",
+      "grounding_span": "advance my career opportunities"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Learning and skill growth",
+      "grounding_span": "It's important to keep one's skills sharp and moreover to grow and learn new skills"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI error",
+      "valence": "negative",
+      "grounding_span": "That entire experience was a total waste of my time and deeply frustrating"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Cautious adoption after error",
+      "valence": "ambivalent",
+      "grounding_span": "Months based before I tried using a LLM to help me with my job a second time"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Strategic use for administrative tasks",
+      "valence": "positive",
+      "grounding_span": "I try to get AI to help me complete them more efficiently"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Confidence in human senior roles",
+      "valence": "positive",
+      "grounding_span": "I think there'll always be humans in senior positions"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Step-by-step probing and verification",
+      "grounding_span": "I like to take it step-by-step, to ensure that I understand everything it's doing"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-specific trust calibration",
+      "grounding_span": "I try to avoid using AI for tasks that I'm completely familiar with"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n4",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

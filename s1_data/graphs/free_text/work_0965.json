@@ -1,0 +1,142 @@
+{
+  "transcript_id": "work_0965",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI for repetitive monotonous tasks",
+      "label_negative": "AI for engaging enjoyable tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "less monotonous tasks because I find more enjoyment in those tasks"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI independence in task completion",
+      "label_negative": "AI requiring human oversight and iteration",
+      "bipolarity_complete": true,
+      "grounding_span": "I tend to let it handle it independently probably 90% of the time"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI output quality and uniqueness",
+      "label_negative": "AI output generic or low quality",
+      "bipolarity_complete": true,
+      "grounding_span": "amazed with how well and unique it was able to make the descriptions"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI for data entry tasks",
+      "label_negative": "AI for strategic trend analysis and decision-making",
+      "bipolarity_complete": true,
+      "grounding_span": "data entry is the most time-consuming part of the job"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Work efficiency and time savings",
+      "grounding_span": "free up more time for other tasks"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Work enjoyment and engagement",
+      "grounding_span": "I find more enjoyment in those tasks"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Work-life balance and happiness",
+      "grounding_span": "improving my work/life balance while increasing happiness at work"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Positive amazement at AI output quality",
+      "valence": "positive",
+      "grounding_span": "amazed with how well and unique it was able to make the descriptions"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Optimistic outlook on AI improving work life",
+      "valence": "positive",
+      "grounding_span": "it will only help better my workload while also improving my work/life balance"
+    },
+    {
+      "id": "n10",
+      "type": "CognitiveStyleMarker",
+      "label": "Delegation-oriented task management — prefers to offload tasks to AI for independent completion",
+      "grounding_span": "I tend to let it handle it independently probably 90% of the time"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based task partitioning — separates repetitive from engaging work",
+      "grounding_span": "less monotonous tasks because I find more enjoyment in those tasks"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n10",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

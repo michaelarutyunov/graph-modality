@@ -1,0 +1,192 @@
+{
+  "transcript_id": "work_0051",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as fully autonomous content creator",
+      "bipolarity_complete": true,
+      "grounding_span": "I tell the AI the type of account I am working on and have it recommend generic post ideas for me"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as writing reviewer and editor",
+      "label_negative": "AI as primary writer replacing human authorship",
+      "bipolarity_complete": true,
+      "grounding_span": "I typically write the job descriptions myself and then ask the AI to review and make suggestions"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Authenticity in creative work",
+      "label_negative": "Fully AI-generated work lacking originality",
+      "bipolarity_complete": true,
+      "grounding_span": "I value authenticity in my work. It's okay with me morally if AI helps make improvements but the original product is my own"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as time-saving tool",
+      "label_negative": "AI as unnecessary or inefficient for routine tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I had a social media project dropped in my lap last minute that needed content to post ASAP"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as tool for understanding AI limitations",
+      "label_negative": "AI capability to fully automate project management",
+      "bipolarity_complete": true,
+      "grounding_span": "AI tools are useful but ultimately fallible"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI adoption in workplace",
+      "label_negative": "Workplace-influenced or discouraged AI use",
+      "bipolarity_complete": true,
+      "grounding_span": "I am not influenced by any of my colleagues in my AI usage"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Authenticity and personal integrity",
+      "grounding_span": "I value authenticity in my work"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "I was able to get content posted relatively quickly"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Skill preservation and professional adaptability",
+      "grounding_span": "actively pursue continuing education to make sure I am up-to-date in my field"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "I liked 2 of them enough to move forward"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "No personal concern about AI in own work",
+      "valence": "negative",
+      "grounding_span": "It's not cool if I have AI do every step of the process for me- it's lazy and unoriginal"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Confidence in ability to adapt to AI-driven roles",
+      "valence": "positive",
+      "grounding_span": "I don't see AI being able to 'take over' my job"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Resistance to over-reliance on AI",
+      "valence": "negative",
+      "grounding_span": "I'm much more concerned about people becoming overly reliant on AI tools to the detriment of their own skills"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative iterative refinement — works back and forth with AI",
+      "grounding_span": "I typically write the job descriptions myself and then ask the AI to review and make suggestions"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Independent exploration and self-directed learning about AI",
+      "grounding_span": "I like to stay on top of news related to evolving AI capabilities and will research and explore different AI tools"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

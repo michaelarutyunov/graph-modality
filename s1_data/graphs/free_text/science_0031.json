@@ -1,0 +1,131 @@
+{
+  "transcript_id": "science_0031",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as time-saving data processing tool",
+      "label_negative": "Manual time-intensive data processing",
+      "bipolarity_complete": true,
+      "grounding_span": "AI was incredibly useful for quickly organising raw data and comparing the models"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability for simple, verifiable tasks",
+      "label_negative": "AI unreliability for complex or unverifiable tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "The Sips equation is fairly simple and it provided fits very similar to the Freundlich model"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as experimental design assistant for novices",
+      "label_negative": "Trial-and-error learning without AI guidance",
+      "bipolarity_complete": true,
+      "grounding_span": "Experimental design at the early stages of my PhD when I was less experienced - it would have saved a lot of mistakes"
+    },
+    {
+      "id": "n4",
+      "type": "Value",
+      "label": "Research efficiency and time savings",
+      "grounding_span": "it was so lengthy to do it all manually, so I just experimented with uploading the data to AI"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Research accuracy and confidence",
+      "grounding_span": "I compared with my manually fitted Freundlich model"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Accelerated learning and reduced errors for novices",
+      "grounding_span": "it would have saved a lot of mistakes"
+    },
+    {
+      "id": "n7",
+      "type": "Stance",
+      "label": "Positive evaluation of AI for data processing",
+      "valence": "positive",
+      "grounding_span": "AI was incredibly useful for quickly organising raw data"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Cautious trust in AI for simple tasks",
+      "valence": "ambivalent",
+      "grounding_span": "The Sips equation is fairly simple and it provided fits very similar to the Freundlich model"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Positive aspiration for AI in experimental design",
+      "valence": "positive",
+      "grounding_span": "Experimental design at the early stages of my PhD when I was less experienced - it would have saved a lot of mistakes"
+    },
+    {
+      "id": "n10",
+      "type": "CognitiveStyleMarker",
+      "label": "Verification through manual benchmarking",
+      "grounding_span": "I compared with my manually fitted Freundlich model"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic experimentation with AI for time constraints",
+      "grounding_span": "I just experimented with uploading the data to AI and asking it to fit the data"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n8",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n10",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n10",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

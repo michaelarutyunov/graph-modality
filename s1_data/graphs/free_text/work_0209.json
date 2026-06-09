@@ -1,0 +1,179 @@
+{
+  "transcript_id": "work_0209",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as practice student for teaching explanations",
+      "label_negative": "AI as passive yes-man without challenge",
+      "bipolarity_complete": true,
+      "grounding_span": "I have it pretend that it is a student who is at the given grade level and proficiency in the topic"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI setup time vs. manual task completion",
+      "label_negative": "AI setup time outweighing efficiency gains",
+      "bipolarity_complete": true,
+      "grounding_span": "it takes a good amount of time to setup these kinds of conversations and ensure the AI is doing everything properly"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability with complex instructions",
+      "label_negative": "AI forgetting parts of long instructions",
+      "bipolarity_complete": true,
+      "grounding_span": "it forgets to do a portion of the instructions. this happens more often the longer and more complex the instructions are"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Workplace normalization of AI use",
+      "label_negative": "Workplace discouragement of AI use",
+      "bipolarity_complete": true,
+      "grounding_span": "my boss saying that I can use AI to help make problem sets made me feel more comfortable"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as collaborative partner vs. independent delegator",
+      "label_negative": "AI as independent task completer",
+      "bipolarity_complete": true,
+      "grounding_span": "i am much more likely to collaborate with it throughout the task"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Teaching effectiveness and student understanding",
+      "grounding_span": "practice how I would verbalize the topic once I feel as if the model knows what is going on"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "if I think that it will end up taking more time to explain everything to the AI before I get my help compared to just doing it myself I will do it my own faster"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Job security and professional relevance",
+      "grounding_span": "the mix of there being low skill and trust for certain tasks to be completed by AI will keep my role a necessary one"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI as practice tool after trial and error",
+      "valence": "positive",
+      "grounding_span": "the AI model does a good job asking questions about common areas of confusion"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI forgetting instructions",
+      "valence": "negative",
+      "grounding_span": "it forgets to do a portion of the instructions"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Optimism about future AI integration in tutoring",
+      "valence": "positive",
+      "grounding_span": "there will be new inventive ways to use AI at my workspace in the future"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Concern about AI replacing tutoring role",
+      "valence": "mixed",
+      "grounding_span": "even eventually fully replacing tutoring"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative trial-and-error refinement of AI prompts",
+      "grounding_span": "I have gone through a good amount of trial and error with training/prepping the model"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Efficiency-driven cost-benefit analysis of AI use",
+      "grounding_span": "if I think that it will end up taking more time to explain everything to the AI before I get my help compared to just doing it myself I will do it my own faster"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

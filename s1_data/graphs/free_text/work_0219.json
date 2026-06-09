@@ -1,0 +1,169 @@
+{
+  "transcript_id": "work_0219",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative problem-solving partner",
+      "label_negative": "AI as independent task executor without collaboration",
+      "bipolarity_complete": true,
+      "grounding_span": "I tend to collaborate with the AI model throughout the problem-solving process"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for holistic thinking and abstraction",
+      "label_negative": "AI for narrow, hyper-focused coding",
+      "bipolarity_complete": true,
+      "grounding_span": "it has allowed me to abstract certain coding challenges further"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability and need for human vetting",
+      "label_negative": "AI as fully autonomous and trustworthy",
+      "bipolarity_complete": true,
+      "grounding_span": "the solution these AI models provide are far from perfect"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as junior assistant for admin tasks",
+      "label_negative": "AI as replacement for human role",
+      "bipolarity_complete": true,
+      "grounding_span": "working with a junior assistant"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Proper AI use with fact-checking",
+      "label_negative": "Uncritical AI use without verification",
+      "bipolarity_complete": true,
+      "grounding_span": "my biggest concern here is for them to use these tools properly by fact-checking all claims"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Professional competence and quality",
+      "grounding_span": "fact-checking all claims and code it provides before pushing this code into production"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Strategic focus and broader perspective",
+      "grounding_span": "push my focus on a much more broader perspective in my role"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and productivity",
+      "grounding_span": "help me deal with admin tasks in my day to day job much more quickly"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Frustration when AI fails to follow intended direction",
+      "valence": "negative",
+      "grounding_span": "I know I feel frustrated using AI tools when I attempt to prompt the AI models to think in a certain way ... but the model does not go anywhere with it"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Positive outlook on AI enabling holistic thinking",
+      "valence": "positive",
+      "grounding_span": "it has allowed me to abstract certain coding challenges further"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Concern about colleagues' uncritical AI use",
+      "valence": "negative",
+      "grounding_span": "my biggest concern here is for them to use these tools properly by fact-checking all claims"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Optimistic vision of AI as junior assistant",
+      "valence": "positive",
+      "grounding_span": "I envision my relationship with AI to be almost like working with a junior assistant"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative context refinement — provides initial context then adds more to refine",
+      "grounding_span": "providing as much initial context as possible in my initial prompt, and then sprinkle in further context to refine potential solutions further"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Metacognitive reflection on prompting — attributes failures to own prompting rather than AI",
+      "grounding_span": "I believe it is always a human problem, when I reach these stages I usually try and cool off and find a different approach"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

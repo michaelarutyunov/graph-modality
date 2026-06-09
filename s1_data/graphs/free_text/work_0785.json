@@ -1,0 +1,171 @@
+{
+  "transcript_id": "work_0785",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as quick identification tool",
+      "label_negative": "AI as unreliable source requiring full verification",
+      "bipolarity_complete": true,
+      "grounding_span": "I often use image search to identify a product and rely on the ai generated description to guide further research"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI-generated description accuracy",
+      "label_negative": "AI-generated description inaccuracy",
+      "bipolarity_complete": true,
+      "grounding_span": "I verify the data from the ai generated description across multiple sources because that is often not wholly accurate"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI-generated listing description style",
+      "label_negative": "Concise factual description style",
+      "bipolarity_complete": true,
+      "grounding_span": "I do not use ai to help generate my listing description because it tends to be too wordy"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as time-saving research assistant",
+      "label_negative": "AI as time-consuming due to verification overhead",
+      "bipolarity_complete": true,
+      "grounding_span": "I could see asking ai to do the further research on pricing and demand for me in the future"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "Without the ai generated description, I have to rely solely on the similar images returned by google, which means clicking on multiple images to find the same information that the description gives me in a fraction of the time"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Accuracy and trustworthiness of information",
+      "grounding_span": "I verify the data from the ai generated description across multiple sources because that is often not wholly accurate"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Personal autonomy in listing creation",
+      "grounding_span": "I create a short description on my own without the help of ai"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Satisfaction with AI for initial identification",
+      "valence": "positive",
+      "grounding_span": "I love the ai generated description that my image searches return"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Distrust of AI-generated details due to inaccuracy",
+      "valence": "negative",
+      "grounding_span": "I never fully trust the ai generated product description"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Preference for concise factual descriptions over AI verbosity",
+      "valence": "negative",
+      "grounding_span": "I do not use ai to help generate my listing description because it tends to be too wordy"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Openness to future AI use for deeper research",
+      "valence": "positive",
+      "grounding_span": "I could see asking ai to do the further research on pricing and demand for me in the future"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Cross-referencing verification — triangulates across multiple sources",
+      "grounding_span": "I am cross referencing multiple sources"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic efficiency — uses AI minimally for quick info, avoids over-engagement",
+      "grounding_span": "I do not further engage with ai because most often I get enough information from the short description"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n3",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

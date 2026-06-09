@@ -1,0 +1,174 @@
+{
+  "transcript_id": "work_0804",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as quick factual answer provider",
+      "label_negative": "AI as unreliable for complex tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI mostly to obtain quick factual answers"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as starting point for research",
+      "label_negative": "AI as final authority without verification",
+      "bipolarity_complete": true,
+      "grounding_span": "as a starting point for research into technical topics"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability for data-heavy tasks",
+      "label_negative": "AI unreliability for data-heavy tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "the results are usually mixed at best or poor and outright unusable at worst"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI capability for complex iterative tasks",
+      "label_negative": "AI incapability for complex iterative tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I am still of the opinion AI isn't all that capable at handling complex tasks just yet"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI accuracy and truthfulness",
+      "label_negative": "AI confidently presenting false information",
+      "bipolarity_complete": true,
+      "grounding_span": "it gives answers which I know for sure are false, but they are presented as absolute fact"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "I find myself satisfied with AI when I find an obscure piece of information in seconds"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Accuracy and reliability",
+      "grounding_span": "I almost always do a bit of my own independent research after getting an answer to fact-check and verify for accuracy"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Trustworthiness of AI outputs",
+      "grounding_span": "it gives answers which I know for sure are false, but they are presented as absolute fact"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for quick factual answers",
+      "valence": "positive",
+      "grounding_span": "I find myself satisfied with AI when I find an obscure piece of information in seconds"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI's confident falsehoods and loops",
+      "valence": "negative",
+      "grounding_span": "I find myself frustrated with AI when I can reiterate and state my question extremely clearly and the AI either gets stuck in a loop giving a wrong answer"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Skepticism about AI's current capability for complex tasks",
+      "valence": "negative",
+      "grounding_span": "I am still of the opinion AI isn't all that capable at handling complex tasks just yet"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Optimism about future AI improvements for coding and data analysis",
+      "valence": "positive",
+      "grounding_span": "Hopefully going forward the models can advance to the point I can trust them to work out tougher coding-related tasks or in deeper data analysis"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Independent verification habit — fact-checks AI outputs",
+      "grounding_span": "I almost always do a bit of my own independent research after getting an answer to fact-check and verify for accuracy"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic task-scoping — limits AI to bounded, verifiable tasks",
+      "grounding_span": "I tend to stick to the short and sweet Q&A"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,149 @@
+{
+  "transcript_id": "work_0259",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as tone and delivery optimizer for patient/staff communication",
+      "label_negative": "Natural, unassisted communication",
+      "bipolarity_complete": true,
+      "grounding_span": "I use it to help deliver a subject matter than can be perceived in a certain way and I do not want it to be received like that"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as efficiency booster for administrative tasks",
+      "label_negative": "Manual, time-consuming administrative processes",
+      "bipolarity_complete": true,
+      "grounding_span": "I do wish AI could help with gathering patient information or their intake so we can streamline it faster"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as clinical decision support for symptom assessment",
+      "label_negative": "Human-only clinical judgment for symptom evaluation",
+      "bipolarity_complete": true,
+      "grounding_span": "I prefer to handle patient phone calls or messages that are related to their symptoms as I do not want something missed"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as coding and authorization assistant for surgeries",
+      "label_negative": "Manual surgery coding and insurance authorization",
+      "bipolarity_complete": true,
+      "grounding_span": "I also schedule surgeries and it would be nice if AI can code the surgery's and obtain authorization from the insurance company"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Patient safety and quality of care",
+      "grounding_span": "I do not want something missed that could be detrimental to the patient"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Operational efficiency and time savings",
+      "grounding_span": "decreases the time it would normally take me to do it myself"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Financial maximization through clean billing",
+      "grounding_span": "processing clean billing claims to insurance companies to maximize reimbursement"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Satisfaction with AI for communication tasks",
+      "valence": "positive",
+      "grounding_span": "I am satisfied when it helps me answer patients' questions and decreases the time"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Reservation about AI for clinical symptom assessment",
+      "valence": "negative",
+      "grounding_span": "I prefer to handle patient phone calls or messages that are related to their symptoms"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Aspirational openness toward AI for intake and billing",
+      "valence": "positive",
+      "grounding_span": "Biggest opportunities would be patient intake and processing clean billing claims"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement — upfront specification then back-and-forth adjustment",
+      "grounding_span": "I try to give it as much info upfront and then go back and forth as needed"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-specific boundary setting — clear separation of clinical vs. administrative AI use",
+      "grounding_span": "I prefer to handle patient phone calls or messages that are related to their symptoms"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

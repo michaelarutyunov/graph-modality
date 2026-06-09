@@ -1,0 +1,185 @@
+{
+  "transcript_id": "work_0145",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as creative collaborator for engaging content",
+      "label_negative": "AI as sole creator of formulaic content",
+      "bipolarity_complete": true,
+      "grounding_span": "I want them to be as exciting/humorous/eye catching as possible so sometimes the AI will provide me with a caption that gives me a new idea"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as efficient professional writing assistant",
+      "label_negative": "AI as unnecessary for straightforward tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "with the product descriptions, there isn't as much creativity required as I just need a description of a product that is grammatically sound and sounds professional"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI trustworthiness for business decisions",
+      "label_negative": "AI unreliability for business accuracy",
+      "bipolarity_complete": true,
+      "grounding_span": "I'm not ready to trust an AI to help me with it just yet"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI content authenticity and viewer perception",
+      "label_negative": "AI content appearing obviously generated",
+      "bipolarity_complete": true,
+      "grounding_span": "people are still wary that AI content can still be quite obvious and they don't want it to impact their viewership"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Personal enjoyment of hands-on creative tasks",
+      "label_negative": "Delegating creative tasks to AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I prefer to do this myself as I enjoy taking photos and staging content so I wouldn't want to stop doing it"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative expression and authenticity",
+      "grounding_span": "I want them to be as exciting/humorous/eye catching as possible"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "it saved me about 2 hours of work"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional accuracy and control",
+      "grounding_span": "I like to know that I have done it accurately and correctly"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Personal fulfillment and skill retention",
+      "grounding_span": "I still enjoy it and I work with the AI to create social media captions which keeps my skills involved"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for time-sensitive bulk tasks",
+      "valence": "positive",
+      "grounding_span": "it was very satisfying as it provided which caption would suit each day of the week and varied them completely"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Resistance to delegating enjoyable creative tasks to AI",
+      "valence": "negative",
+      "grounding_span": "I prefer to do this myself as I enjoy taking photos and staging content so I wouldn't want to stop doing it"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Cautious openness to future AI use for business tasks",
+      "valence": "ambivalent",
+      "grounding_span": "I'm not ready to trust an AI to help me with it just yet. That isn't to mean I don't ever see myself using it for that stuff as there is a high chance I could"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Awareness of authenticity concerns in social media field",
+      "valence": "mixed",
+      "grounding_span": "people are still wary that AI content can still be quite obvious and they don't want it to impact their viewership"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Task-dependent collaboration vs delegation — adapts approach based on creativity required",
+      "grounding_span": "With the caption generation, I come with a post in mind... With the product description, I state what the item is and let it write the whole description"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Enjoyment-driven task retention — keeps tasks that provide personal satisfaction",
+      "grounding_span": "I prefer to do this myself as I enjoy taking photos and staging content so I wouldn't want to stop doing it"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

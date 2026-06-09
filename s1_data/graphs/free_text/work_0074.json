@@ -1,0 +1,168 @@
+{
+  "transcript_id": "work_0074",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative planning partner",
+      "label_negative": "AI as independent task completer",
+      "bipolarity_complete": true,
+      "grounding_span": "Typically I am working with the AI collaboratively"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for efficient research and education",
+      "label_negative": "Traditional time-consuming research methods",
+      "bipolarity_complete": true,
+      "grounding_span": "AI has really helped to reduce my time planning"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for customer communication and education",
+      "label_negative": "Inability to explain concepts to customers",
+      "bipolarity_complete": true,
+      "grounding_span": "use AI to help me better explain concepts and ideas to customers"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Environmental impact of AI",
+      "label_negative": "Environmental benefit of AI use",
+      "bipolarity_complete": true,
+      "grounding_span": "My main concern with AI is the environmental impact it has in the areas around its plants"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Manual drawing and writing for memory retention",
+      "label_negative": "AI delegation of drawing and writing",
+      "bipolarity_complete": true,
+      "grounding_span": "by drawing and writing the names I am better able to remember what I am doing"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "AI has really helped to reduce my time planning"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Customer trust and business growth",
+      "grounding_span": "built better bonds and a more trusting relationship which has only helped my business grow"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Environmental stewardship",
+      "grounding_span": "plan garden beds that are meant to improve the very environment"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Personal knowledge and memory",
+      "grounding_span": "better able to remember what I am doing when I am actually working on it"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for on-the-spot learning",
+      "valence": "positive",
+      "grounding_span": "I was very satisfied with this because I was able to do it while pulled over on the side of the road"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Concern about AI's environmental footprint",
+      "valence": "negative",
+      "grounding_span": "I struggle with using it to plan garden beds that are meant to improve the very environment that the AI plants are destroying"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Intent to maintain balanced AI use",
+      "valence": "ambivalent",
+      "grounding_span": "I would like to maintain a balance for the environment. This means I will be making conscious decisions on when to use it and when not to"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative collaborative refinement — adjusts plans based on AI feedback",
+      "grounding_span": "my plans change depending on the information the AI gives me typically"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Contextual task delegation — switches between collaboration and independent completion based on task phase",
+      "grounding_span": "If I am in the beginning phases of planning and just need list or straight forward answers then I will have the AI complete task on its own, but more often I am using it collaboratively"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n4",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,138 @@
+{
+  "transcript_id": "work_0297",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as tool for lesson planning",
+      "label_negative": "AI as problem-solving substitute",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI to come up with sample problems for students. I also use AI to research curriculum and plan lessons around them."
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "Human pedagogical creativity and empathy",
+      "label_negative": "AI-driven standardized instruction",
+      "bipolarity_complete": true,
+      "grounding_span": "I like to think of ways to explain the process to students that might resonate with them and their learning style."
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for broad tasks vs. human for decisions",
+      "label_negative": "AI problem-solving process aligned with human approach",
+      "bipolarity_complete": true,
+      "grounding_span": "the process the AI uses to solve a problem might be different than the way a human would go about solving the problem"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as tutor for learning and understanding",
+      "label_negative": "AI as replacement for tutor's role",
+      "bipolarity_complete": true,
+      "grounding_span": "using AI helps me be extra prepared for each session I teach"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Student progress and learning",
+      "grounding_span": "I like to think of ways to explain the process to students that might resonate with them and their learning style"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Professional competence",
+      "grounding_span": "I typically feel satisfied when I feel that I have prepared well for a session"
+    },
+    {
+      "id": "n7",
+      "type": "Stance",
+      "label": "Satisfaction with AI for lesson creation",
+      "valence": "positive",
+      "grounding_span": "I typically feel satisfied when I feel that I have prepared well for a session. I feel that using AI helps me be extra prepared for each session I teach."
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Frustration with student AI misuse",
+      "valence": "negative",
+      "grounding_span": "I don't like asking the AI to solve the problems because I like to think of ways to explain the process to students"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Confidence in human irreplaceability in teaching",
+      "valence": "positive",
+      "grounding_span": "I feel that teaching requires a human element and sometimes creativity in order to get certain points across when students are struggling."
+    },
+    {
+      "id": "n10",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative iterative refinement — works back and forth with AI",
+      "grounding_span": "I will typically start broad and ask it to generate around 10 practice problems... I then might start to refine the process by picking out the ones I think will be more helpful"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Boundary-setting around core teaching responsibilities",
+      "grounding_span": "I don't like asking the AI to solve the problems because I like to think of ways to explain the process to students"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n8",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n10",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

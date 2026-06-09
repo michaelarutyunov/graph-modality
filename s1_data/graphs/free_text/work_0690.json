@@ -1,0 +1,151 @@
+{
+  "transcript_id": "work_0690",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative partner for creative and teaching tasks",
+      "label_negative": "AI as inefficient for highly specific document formatting",
+      "bipolarity_complete": true,
+      "grounding_span": "My typical interactions involve a more collaborative approach"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability in maintaining details across revisions",
+      "label_negative": "AI tendency to forget details and fail to include all requested revisions",
+      "bipolarity_complete": true,
+      "grounding_span": "it seems to have trouble remembering every details needed and fails to include everything"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI accessibility and availability",
+      "label_negative": "AI unavailability due to outages or security risks",
+      "bipolarity_complete": true,
+      "grounding_span": "it is not always accessible"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as productivity enhancer for mundane tasks",
+      "label_negative": "AI as threat to work-life balance if not adopted",
+      "bipolarity_complete": true,
+      "grounding_span": "I see myself become more reliant on AI to complete more of the mundane tasks"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Effective teaching and student comprehension",
+      "grounding_span": "AI helps me convert the lessons into understandable texts"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and productivity",
+      "grounding_span": "quickly finish projects"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Human oversight and skill maintenance",
+      "grounding_span": "Human oversight is critical to validate outputs and catch any inaccuracies"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Satisfaction with AI for brainstorming and lesson planning",
+      "valence": "positive",
+      "grounding_span": "I use AI to help develop creative ideas on how to teach subjects"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Frustration with AI's inability to handle multiple revisions",
+      "valence": "negative",
+      "grounding_span": "After numerous failed attempts to have AI combine the sections, I gave up and did it myself"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Cautious reliance on AI due to accessibility and security concerns",
+      "valence": "ambivalent",
+      "grounding_span": "There is always a risk that AI may not be readily available"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Anticipated increased reliance on AI for productivity",
+      "valence": "positive",
+      "grounding_span": "I see myself become more reliant on AI to complete more of the mundane tasks"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative collaborative refinement — breaks tasks into steps and manually integrates",
+      "grounding_span": "I will have the model start by building me a basic template... I will then input the details manually into the original template myself"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic contingency planning — maintains skills for when AI is unavailable",
+      "grounding_span": "It is important to maintain knowledge of skills AI could potentially take over"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

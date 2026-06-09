@@ -1,0 +1,157 @@
+{
+  "transcript_id": "work_0474",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as report comparison assistant",
+      "label_negative": "AI as sole solution generator without learning",
+      "bipolarity_complete": true,
+      "grounding_span": "I mainly use AI to generate another solution. This is mostly for coding tasks."
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI adherence to user specifications",
+      "label_negative": "AI deviation from design requirements",
+      "bipolarity_complete": true,
+      "grounding_span": "if the design have a carousel that displays the sponsors, where it automatically scrolls through each sponsor, and the AI's code attempts to improve it by adding a navigation control, then I will not use this"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI code quality and reliability",
+      "label_negative": "AI unreliability causing broken code",
+      "bipolarity_complete": true,
+      "grounding_span": "The AI was incapable of replicating the implementation, even though it found where it was and often modifies my existing code unnecessarily."
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Independent coding for understanding",
+      "label_negative": "AI-generated code without understanding",
+      "bipolarity_complete": true,
+      "grounding_span": "I prefer to handle any coding task on my own first, and then use the AI for improvements."
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as mentor for learning",
+      "label_negative": "AI as crutch hindering learning",
+      "bipolarity_complete": true,
+      "grounding_span": "AI has became a mentor that shows me the way, and I've become reliant on it to learn how things work."
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Continuous learning and skill development",
+      "grounding_span": "I want to learn continuously."
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and reduced workload",
+      "grounding_span": "it helps my workflow as it reduces the repetitive tasks I need to do."
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Client success and satisfaction",
+      "grounding_span": "this is not something my client wants."
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "The comparison allows me to improve my code."
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI's agreeableness",
+      "valence": "negative",
+      "grounding_span": "This was a frustrating process because unrelated code was being modified and it completely broken the website."
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Optimistic expectation for AI to speed workflow",
+      "valence": "positive",
+      "grounding_span": "Most likely getting more reliant on it as I figure that it's pretty good at it."
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Independent-first then AI comparison approach",
+      "grounding_span": "I prefer to handle any coding task on my own first, and then use the AI for improvements."
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Ongoing back-and-forth interaction with AI",
+      "grounding_span": "I typically have an ongoing back and forth conversation with it."
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

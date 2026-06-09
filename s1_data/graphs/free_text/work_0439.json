@@ -1,0 +1,177 @@
+{
+  "transcript_id": "work_0439",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as pair programmer/coding agent for routine tasks",
+      "label_negative": "AI for novel or unfamiliar tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI as a pair programmer/coding agent"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as feedback provider for complex problems",
+      "label_negative": "AI as autonomous solution generator",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI for feedback about specific approaches to solving problems with code"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI autocomplete helpfulness vs annoyance",
+      "label_negative": "AI autocomplete interference",
+      "bipolarity_complete": true,
+      "grounding_span": "autocomplete is a helpful feature that speeds up getting what's in my head into the computer"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI capability for cycle-accurate systems",
+      "label_negative": "AI inability to handle non-state-based systems",
+      "bipolarity_complete": true,
+      "grounding_span": "AI are naturally good at working with state based systems and they have no way of interpreting or debugging an FDE cycle"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Iterative collaboration vs delegation",
+      "label_negative": "Delegation of complete tasks to AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I'm far more likely to collaborate with it throughout a task"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "speeds up getting what's in my head into the computer"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Learning and mastery",
+      "grounding_span": "I enjoy tackling new problems that I've never encountered"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Quality and correctness",
+      "grounding_span": "save a lot of time intensive refactoring in the future rather than just blindly coding"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Adaptability and career resilience",
+      "grounding_span": "I consider myself multitalented and able to adapt to the job market"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for routine coding tasks",
+      "valence": "positive",
+      "grounding_span": "autocomplete is a helpful feature that speeds up getting what's in my head into the computer"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI for cycle-accurate emulation",
+      "valence": "negative",
+      "grounding_span": "It's a bit frustrating to use AI with because AI are naturally good at working with state based systems"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Preference for iterative collaboration",
+      "valence": "positive",
+      "grounding_span": "I'm far more likely to collaborate with it throughout a task"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Confidence in personal adaptability",
+      "valence": "positive",
+      "grounding_span": "I consider myself multitalented and able to adapt to the job market"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement — prefers step-by-step collaboration",
+      "grounding_span": "Iterative prompting usually yields far better results"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Benchmarking — systematically tests AI on challenging tasks",
+      "grounding_span": "I constantly test new models as they are released almost like a benchmark"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n9",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n5",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": [
+    "[work_0439] direct Stance→Value edge disallowed: n13 --[EXPRESSED_VIA]--> n9"
+  ]
+}

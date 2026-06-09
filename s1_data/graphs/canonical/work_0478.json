@@ -1,0 +1,223 @@
+{
+  "transcript_id": "work_0478",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI for documentation efficiency",
+      "label_negative": "Manual note-taking without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "Notes would take upwards of 40 minutes to complete after a session. With using AI, even with reviewing and changing some details that were misinterpreted, notes now take about 5-10 minutes."
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI accuracy in numerical tasks",
+      "label_negative": "AI misinterpretation due to domain mismatch",
+      "bipolarity_complete": true,
+      "grounding_span": "The AI was designed for human healthcare, so the niche market of canine rehab does have some struggles. For example, if we are talking about Range of Motion, the AI thinks if we say 180° then it must be a mistake"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI customization and adaptability",
+      "label_negative": "Rigid AI lacking customization",
+      "bipolarity_complete": true,
+      "grounding_span": "I hope that going forward more products allow for that type of customization to make the products more useful, especially for our purposes where we aren't using the same lingo as a typical healthcare worker."
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI integration into existing software",
+      "label_negative": "Fragmented multi-system workflow",
+      "bipolarity_complete": true,
+      "grounding_span": "Having one integrated program would save a lot of the duplicate work of saving the notes to the appointment as well as the client file"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI adoption in workplace",
+      "label_negative": "Resistance to AI adoption",
+      "bipolarity_complete": true,
+      "grounding_span": "only half of us really like the AI and see its benefit. Others do not use it to it's potential."
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as admin streamliner vs core work",
+      "label_negative": "AI replacing core therapeutic work",
+      "bipolarity_complete": true,
+      "grounding_span": "AI will not be able to replace the work that I do, working with dogs, but it can streamline the admin side of the business incredibly."
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "it's still much faster"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Accuracy and reliability in documentation",
+      "grounding_span": "We have to correct that manually when we are reviewing our notes after a session"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Seamless workflow integration",
+      "grounding_span": "Having one integrated program would save a lot of the duplicate work"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Team productivity and consistency",
+      "grounding_span": "Those of us who are on board with the AI and know how to use it have tried to teach them how much more efficient they could be"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Focus on core therapeutic work",
+      "grounding_span": "The more time I have to help clients and not do the paperwork, the better for everyone"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI for time-saving",
+      "valence": "positive",
+      "grounding_span": "it's still much faster"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Frustration with AI errors",
+      "valence": "negative",
+      "grounding_span": "The AI was designed for human healthcare, so the niche market of canine rehab does have some struggles."
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Desire for better customization",
+      "valence": "positive",
+      "grounding_span": "I hope that going forward more products allow for that type of customization"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Frustration with fragmented systems",
+      "valence": "negative",
+      "grounding_span": "Having one integrated program would save a lot of the duplicate work"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Frustration with team resistance",
+      "valence": "negative",
+      "grounding_span": "they either don't understand or are reluctant to change"
+    },
+    {
+      "id": "n17",
+      "type": "Stance",
+      "label": "Confidence in ability to adapt to AI-driven roles",
+      "valence": "positive",
+      "grounding_span": "AI will not be able to replace the work that I do, working with dogs, but it can streamline the admin side"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Real-time narration and description during work",
+      "grounding_span": "We wear microphones and describe each step of what we are doing"
+    },
+    {
+      "id": "n19",
+      "type": "CognitiveStyleMarker",
+      "label": "Trial-and-error template development",
+      "grounding_span": "Right now it is a trial and error approach that can take a lot of time, until the template is achieved."
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n17",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n19",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

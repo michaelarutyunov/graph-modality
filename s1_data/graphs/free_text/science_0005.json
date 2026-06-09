@@ -1,0 +1,205 @@
+{
+  "transcript_id": "science_0005",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as coding assistant for low-level tasks",
+      "label_negative": "AI as autonomous decision-maker in data analysis",
+      "bipolarity_complete": true,
+      "grounding_span": "I used AI to assist with coding: to provide example code snippets and to discuss alternative coding solutions"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as efficiency tool for busywork",
+      "label_negative": "Traditional time-consuming manual approach",
+      "bipolarity_complete": true,
+      "grounding_span": "I figured it would be much smarter and more efficient to converse with a language model"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Researcher's critical thinking and interpretation",
+      "label_negative": "AI-driven analysis and conclusion drawing",
+      "bipolarity_complete": true,
+      "grounding_span": "the critical thinking should be done solely by me"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as manuscript writer",
+      "label_negative": "Human-authored scientific communication",
+      "bipolarity_complete": true,
+      "grounding_span": "having an AI tool handle the actual scientific communication is ethically unacceptable"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as future PhD-level analyst",
+      "label_negative": "Human scientific literacy and oversight",
+      "bipolarity_complete": true,
+      "grounding_span": "if scientists are not proactive in responsible use of AI now, then no one will have the scientific literacy or experience"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Research productivity and efficiency",
+      "grounding_span": "I could spend more of my time analyzing the relationship between the data rather than wrestling with it"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Scientific understanding and expertise",
+      "grounding_span": "If I rely too heavily on someone else's thoughts on my data, I run the risk of failing to properly understand it myself"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Ethical integrity in science",
+      "grounding_span": "having an AI tool handle the actual scientific communication is ethically unacceptable"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Scientific literacy and critical evaluation",
+      "grounding_span": "no one will have the scientific literacy or experience to tell if an AI scientist is reasonable or accurate"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Positive embrace of AI for coding efficiency",
+      "valence": "positive",
+      "grounding_span": "I figured it would be much smarter and more efficient to converse with a language model"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Resistance to AI in critical thinking and interpretation",
+      "valence": "negative",
+      "grounding_span": "the critical thinking should be done solely by me"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Ethical rejection of AI for manuscript writing",
+      "valence": "negative",
+      "grounding_span": "having an AI tool handle the actual scientific communication is ethically unacceptable"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Cautious openness to future AI capabilities",
+      "valence": "ambivalent",
+      "grounding_span": "it would be nice if AI could perform PhD-level analysis, and I'm sure it will some day"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Task decomposition and abstraction",
+      "grounding_span": "I proposed a generic coding problem and used AI to help me develop the code to solve my proposed problem (somewhat abstracting my own work out of the process)"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Boundary-setting and ethical deliberation",
+      "grounding_span": "I think clear distinctions need to be made between using AI as a tool or resource and having AI replace all aspects of scientific research"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n4",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n5",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

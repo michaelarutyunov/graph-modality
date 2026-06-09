@@ -1,0 +1,211 @@
+{
+  "transcript_id": "creativity_0070",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as research accelerator",
+      "label_negative": "Traditional slow research without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "my research time is cut down significantly"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI hallucination and fabrication",
+      "bipolarity_complete": true,
+      "grounding_span": "I've caught many hallucinations in my research"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI memory reliability in long conversations",
+      "label_negative": "AI's apologetic reversal without evidence",
+      "bipolarity_complete": true,
+      "grounding_span": "Oh my gosh! You're so right, and I apologize for my mistake"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as creative partner for dramatic/character input",
+      "label_negative": "Human-only creative expression",
+      "bipolarity_complete": true,
+      "grounding_span": "I never ask AI for dramatic or character input"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as threat to artistic endeavors",
+      "label_negative": "AI as benign tool that preserves human art",
+      "bipolarity_complete": true,
+      "grounding_span": "AI will replace human artists"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as supplement to creative process",
+      "label_negative": "Deep dive research without prior filtering",
+      "bipolarity_complete": true,
+      "grounding_span": "AI helps me rule out concepts or subjects that just won't work much faster"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Creative autonomy",
+      "grounding_span": "That's the fun part for me -- it's why I'm a writer"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Epistemic accuracy and understanding",
+      "grounding_span": "I've caught many hallucinations in my research"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Preservation of human artistic value",
+      "grounding_span": "I don't want to consume my art from something that can't feel"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Positive appreciation of AI for efficiency",
+      "valence": "positive",
+      "grounding_span": "my research time is cut down significantly"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI hallucination",
+      "valence": "negative",
+      "grounding_span": "It's very annoying"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Distrust of AI's apologetic reversal behavior",
+      "valence": "negative",
+      "grounding_span": "The way it handles mistakes and the certainty with which it presents information is very disconcerting"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Firm boundary against AI writing",
+      "valence": "negative",
+      "grounding_span": "I never ask AI for dramatic or character input"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Concern for artists directly impacted by AI",
+      "valence": "negative",
+      "grounding_span": "I am concerned that AI will replace human artists"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Positive view of AI as feasibility filter",
+      "valence": "positive",
+      "grounding_span": "AI helps me rule out concepts or subjects that just won't work much faster"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Boundary-setting between research and creative domains",
+      "grounding_span": "I deliberately keep a boundary there"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative verification through external sources",
+      "grounding_span": "I will do traditional research of Googling or reaching out to an expert"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n4",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

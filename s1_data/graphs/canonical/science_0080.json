@@ -1,0 +1,125 @@
+{
+  "transcript_id": "science_0080",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI ability to find specific materials matching precise criteria",
+      "label_negative": "AI suggesting common but unsuitable materials",
+      "bipolarity_complete": true,
+      "grounding_span": "It suggested common materials such as PIDT-BT and MEH-PPV that did not match my criteria"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI unreliability for tasks where verification is hard",
+      "bipolarity_complete": true,
+      "grounding_span": "I was hesitant to use AI after the previous bad experience as it would be harder to check its work for a mistake"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as time-saving tool",
+      "label_negative": "AI as ineffective for specialized tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "Literature reviews as they are tedious and time consuming to perform but it is relatively easy and quick for me to verify their findings by hand"
+    },
+    {
+      "id": "n4",
+      "type": "Value",
+      "label": "Research efficiency",
+      "grounding_span": "tedious and time consuming to perform"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Scientific rigor and accuracy",
+      "grounding_span": "it would be harder to check its work for a mistake"
+    },
+    {
+      "id": "n6",
+      "type": "Stance",
+      "label": "Frustration with AI's inability to handle complex constraints",
+      "valence": "negative",
+      "grounding_span": "It suggested common materials such as PIDT-BT and MEH-PPV that did not match my criteria"
+    },
+    {
+      "id": "n7",
+      "type": "Stance",
+      "label": "Hesitancy to use AI in other tasks due to prior bad experience",
+      "valence": "negative",
+      "grounding_span": "I was hesitant to use AI after the previous bad experience"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Negative stance toward AI for literature search",
+      "valence": "positive",
+      "grounding_span": "Literature reviews as they are tedious and time consuming to perform but it is relatively easy and quick for me to verify their findings by hand"
+    },
+    {
+      "id": "n9",
+      "type": "CognitiveStyleMarker",
+      "label": "Verification-oriented approach — prioritizes tasks where outputs can be easily checked",
+      "grounding_span": "it is relatively easy and quick for me to verify their findings by hand"
+    },
+    {
+      "id": "n10",
+      "type": "CognitiveStyleMarker",
+      "label": "Experience-driven calibration of trust",
+      "grounding_span": "I was hesitant to use AI after the previous bad experience"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n4",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n7",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n8",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n9",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n10",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

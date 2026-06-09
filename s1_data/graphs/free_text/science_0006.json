@@ -1,0 +1,167 @@
+{
+  "transcript_id": "science_0006",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI for non-publishable personal work",
+      "label_negative": "AI for publishable work",
+      "bipolarity_complete": true,
+      "grounding_span": "I only use the AI when it's not going to be publishable work"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability in familiar domain",
+      "label_negative": "AI reliability in unfamiliar domain",
+      "bipolarity_complete": true,
+      "grounding_span": "For personal work, I know very easily if there has been a mistake through the AI process"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as substitute for experience",
+      "label_negative": "AI as tool augmenting experience",
+      "bipolarity_complete": true,
+      "grounding_span": "I'm not convinced that AI can be a substitute for experience"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI trained on published data vs. unpublished tacit knowledge",
+      "label_negative": "AI trained on comprehensive data including unpublished knowledge",
+      "bipolarity_complete": true,
+      "grounding_span": "So much of science is unpublished... so I would not rely on an AI model which has been trained with published data alone"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI for data extraction from graphs and tables",
+      "label_negative": "Manual data extraction from graphs and tables",
+      "bipolarity_complete": true,
+      "grounding_span": "Compiling data sets from multiple papers into complex tables... if I could drop a graph PNG into a model and the AI returned a table of the data my life would be so much easier"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "my life would be so much easier"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Epistemic trust and accuracy",
+      "grounding_span": "I may not notice any errors, so I would have to fact check anyway"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Expertise and experiential knowledge",
+      "grounding_span": "I have years of experience behind me looking at strange data sets"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Cautious selective use of AI for personal notes",
+      "valence": "positive",
+      "grounding_span": "I've used AI to summarize notes I've made during the literature review phase"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Skepticism toward AI for unfamiliar or complex tasks",
+      "valence": "negative",
+      "grounding_span": "I'm not convinced that AI can be a substitute for experience"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Aspirational desire for AI in data extraction",
+      "valence": "positive",
+      "grounding_span": "if I could drop a graph PNG into a model and the AI returned a table of the data my life would be so much easier"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-expertise-based verification — relies on own knowledge to check AI outputs",
+      "grounding_span": "For personal work, I know very easily if there has been a mistake through the AI process"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Experience-driven pattern recognition — uses tacit knowledge from past experiments",
+      "grounding_span": "I have years of experience behind me looking at strange data sets, so I can make inferences on data quality"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n2",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

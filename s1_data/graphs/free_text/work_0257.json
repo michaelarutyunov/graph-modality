@@ -1,0 +1,202 @@
+{
+  "transcript_id": "work_0257",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as foundational structure provider",
+      "label_negative": "AI as unreliable for complex context",
+      "bipolarity_complete": true,
+      "grounding_span": "AI will often not understand the context correctly and might make assumptions which are either not useful or entirely invalid"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability by domain/language",
+      "label_negative": "AI unreliability in unfamiliar domains",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is great for implementations in Python... but it might struggle even with simple implementations for Power BI in DAX"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as collaborative iterative partner",
+      "label_negative": "AI as autonomous end-to-end executor",
+      "bipolarity_complete": true,
+      "grounding_span": "It needs nudges along the way, where you adjust the approach, disambiguate areas of confusion and approve or reject the suggested changes"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI use in early brainstorming",
+      "label_negative": "Self-directed early brainstorming",
+      "bipolarity_complete": true,
+      "grounding_span": "I also don't like to use AI at the early brainstorming stages of an implementation and prefer to come up with an approach myself"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as time-saving productivity tool",
+      "label_negative": "AI as time-consuming when unreliable",
+      "bipolarity_complete": true,
+      "grounding_span": "AI saves me time and allows me to be more productive at work"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI lacking human ingenuity and creativity",
+      "label_negative": "AI possessing human-like creativity",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is lacking the human ingenuity and creativity needed to come up with novel ideas"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficient task completion",
+      "grounding_span": "saving you the time to research, come up with an implementation approach"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional autonomy and skill preservation",
+      "grounding_span": "I try to be as involved as possible in the space and learn how AI models operate"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Quality and correctness of work",
+      "grounding_span": "find a solution that works as intended"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI communication breakdowns",
+      "valence": "negative",
+      "grounding_span": "no matter how well I try to explain something to the AI, it just doesn't seem to get it"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI delivering efficient solutions",
+      "valence": "positive",
+      "grounding_span": "A concise and elegant solution to a complex prompt in one go, saving you the time"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Confidence in current AI usage level",
+      "valence": "positive",
+      "grounding_span": "I believe that I have reached a satisfactory level"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Skepticism about near-term AI advancement",
+      "valence": "negative",
+      "grounding_span": "I believe that the capabilities of AI models have reached a plateau"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through sequential prompting",
+      "grounding_span": "start off with a straight-forward prompt and give more hints along the way"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic domain-based delegation",
+      "grounding_span": "AI is great for implementations in Python... but it might struggle even with simple implementations for Power BI in DAX"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

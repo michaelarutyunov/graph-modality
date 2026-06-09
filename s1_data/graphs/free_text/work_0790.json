@@ -1,0 +1,138 @@
+{
+  "transcript_id": "work_0790",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as brainstorming partner for business strategy",
+      "label_negative": "AI as sole decision-maker for creative work",
+      "bipolarity_complete": true,
+      "grounding_span": "treating AI as a colleague to bounce ideas off"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as assistant for planning and content",
+      "label_negative": "AI as creator of client-facing design",
+      "bipolarity_complete": true,
+      "grounding_span": "as an assistant for planning, strategising, helping with engaging content for social media"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Authenticity in creative work",
+      "label_negative": "AI-generated or AI-assisted creative output",
+      "bipolarity_complete": true,
+      "grounding_span": "Authenticity really. As a creative person, I'm not comfortable selling something I haven't created"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as option generator",
+      "label_negative": "AI as final decision-maker",
+      "bipolarity_complete": true,
+      "grounding_span": "It's a hugely valuable tool in providing options that I may not have thought of"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Creative authenticity and personal ownership",
+      "grounding_span": "I'm not comfortable selling something I haven't created"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Business growth and efficiency",
+      "grounding_span": "how to grow the business, things I can do to get more traction in retail"
+    },
+    {
+      "id": "n7",
+      "type": "Stance",
+      "label": "Positive view of AI as brainstorming colleague",
+      "valence": "positive",
+      "grounding_span": "treating AI as a colleague to bounce ideas off is for sure the most useful way"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Negative view of AI in client-facing design",
+      "valence": "negative",
+      "grounding_span": "I definitely like to handle the design process myself, anything that is likely to end up with a client, I need to be sure it comes from me"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Ambivalent view of AI's role in creative work",
+      "valence": "ambivalent",
+      "grounding_span": "I don't see it ever dictating what I do with my art"
+    },
+    {
+      "id": "n10",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative collaborative refinement — back-and-forth idea exchange",
+      "grounding_span": "I'll generally start with a few ideas... then we bounce ideas around"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain boundary enforcement — clear separation between AI-assisted and human-only tasks",
+      "grounding_span": "I actively make sure that I am striving to think of new ways to develop my work"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n8",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n10",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

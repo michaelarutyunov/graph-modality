@@ -1,0 +1,159 @@
+{
+  "transcript_id": "work_0450",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as tool for routine legal work",
+      "label_negative": "AI inaccuracy and hallucination in legal topics",
+      "bipolarity_complete": true,
+      "grounding_span": "The Researcher agents are more accurate than the general Chat functions"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI suitability for complex vs routine tasks",
+      "label_negative": "AI unsuitability for routine drafting",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is most helpful with large research questions about telecommunications policy and regulation"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as time-saving tool",
+      "label_negative": "AI as threat to billable hour model",
+      "bipolarity_complete": true,
+      "grounding_span": "I was able to upload my notes directly from [REDACTED] into Copilot's Researcher agent and generate a proposal to the client that was around 80% complete in 10 minutes"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as tool for routine legal work",
+      "label_negative": "AI inability to match firm style",
+      "bipolarity_complete": true,
+      "grounding_span": "it is still not quite up to par when it comes to legal drafting"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Professional competence",
+      "grounding_span": "As a lawyer, it is important that I verify AI output"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "this allowed us to get a proposal out the door to the client within a single workday instead of a week"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Economic sustainability of law practice",
+      "grounding_span": "The rise of AI is threatening the billable hour like never before"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "I was very satisfied as this allowed us to get a proposal out the door to the client within a single workday"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for drafting",
+      "valence": "negative",
+      "grounding_span": "I find that AI is less helpful when drafting short correspondence"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "positive",
+      "grounding_span": "I would hope that as it improves in legal drafting, I will be able to use it to cut down on drafting time"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Systematic verification through source checking",
+      "grounding_span": "I would never rely on AI without verifying the underlying sources for its claims"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Task-dependent delegation vs. collaboration",
+      "grounding_span": "AI is most helpful with large research questions about telecommunications policy and regulation"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n8",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

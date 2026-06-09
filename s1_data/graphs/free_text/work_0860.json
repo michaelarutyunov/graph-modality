@@ -1,0 +1,169 @@
+{
+  "transcript_id": "work_0860",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as analytical tool for parsing documents",
+      "label_negative": "AI as unreliable or error-prone analyst",
+      "bipolarity_complete": true,
+      "grounding_span": "Using AI to parse through large documents or large amounts of data is very helpful and satisfying"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as collaborative drafting assistant",
+      "label_negative": "AI as replacement for human judgment",
+      "bipolarity_complete": true,
+      "grounding_span": "I collaborate back and forth during the drafting process. I am looking for the assistant to help me rather than replace me"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Trust in AI output",
+      "label_negative": "Distrust due to AI errors",
+      "bipolarity_complete": true,
+      "grounding_span": "The more you trust the output the bigger role it will have in my work place"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI ability to capture nuanced language",
+      "label_negative": "AI inability to capture nuanced language",
+      "bipolarity_complete": true,
+      "grounding_span": "AI still isn't good enough to capture nuanced language"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Confidentiality constraints on AI use",
+      "label_negative": "Open access to AI platforms",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is not allowed to be used on the company platform... anything written on an AI platform becomes open access"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and time savings",
+      "grounding_span": "AI being used for this purpose provides a huge time savings"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional credibility and quality",
+      "grounding_span": "I prefer to do my own final draft writing... I can also better incorporate strategy and messaging"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Human relationships and personal touch",
+      "grounding_span": "AI still can't replace customer relationships and the human element of the job"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for data parsing",
+      "valence": "positive",
+      "grounding_span": "Using AI to parse through large documents or large amounts of data is very helpful and satisfying"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Preference for human final draft writing",
+      "valence": "negative",
+      "grounding_span": "I prefer to do my own final draft writing"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Cautious trust in AI output",
+      "valence": "ambivalent",
+      "grounding_span": "The output created by AI still must be checked. It does make errors at time that must be caught"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Optimism about future AI role with increased trust",
+      "valence": "positive",
+      "grounding_span": "As AI becomes more intelligent it will play a much bigger role in my day to day production"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Verification-oriented reasoning — tests AI output against data",
+      "grounding_span": "Once the assistant calls out a trend I dig deeper into the data to confirm that trend"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Adaptive boundary-setting — distinguishes tasks for AI vs. self",
+      "grounding_span": "Being adaptable and flexible are key. AI is meant to make you more productive rather than put you out of a job altogether"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

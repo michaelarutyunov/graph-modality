@@ -1,0 +1,229 @@
+{
+  "transcript_id": "work_0027",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as emotion filter in professional communication",
+      "label_negative": "Unfiltered emotional expression in professional communication",
+      "bipolarity_complete": true,
+      "grounding_span": "ensure that there is no emotion tied to my response and it is just straightforward"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as efficiency tool for time-intensive tasks",
+      "label_negative": "Manual execution of time-intensive tasks without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "before the support from AI, it would take me hours and hours"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as creative brainstorming partner",
+      "label_negative": "Sole reliance on own creativity for brainstorming",
+      "bipolarity_complete": true,
+      "grounding_span": "brainstorm activities and games that I can incorporate into the classroom"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI-generated document formatting quality",
+      "label_negative": "Visually appealing, personalized document formatting",
+      "bipolarity_complete": true,
+      "grounding_span": "I find it bland, and I want things to be visually appealing"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI reliance vs. human independence",
+      "label_negative": "Complete independence from AI",
+      "bipolarity_complete": true,
+      "grounding_span": "it is important to be able to complete tasks independent of AI"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI integration in education for student engagement",
+      "label_negative": "Traditional methods without AI for student engagement",
+      "bipolarity_complete": true,
+      "grounding_span": "creating new fun and engaging activities for students that I never would have been able to come up with on my own"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI impact on social skills of next generation",
+      "label_negative": "Healthy social interaction without AI reliance",
+      "bipolarity_complete": true,
+      "grounding_span": "worried about the social skills of the next generation, and that some students may rely on AI for their social interactions"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional competence and effective communication",
+      "grounding_span": "ensure that there is no emotion tied to my response and it is just straightforward"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Time efficiency and productivity",
+      "grounding_span": "the time saved by using it is priceless"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Creative and engaging teaching",
+      "grounding_span": "creating new fun and engaging activities for students"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Personal autonomy and skill maintenance",
+      "grounding_span": "it is important to be able to complete tasks independent of AI"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Human connection and social development",
+      "grounding_span": "worried about the social skills of the next generation"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Satisfaction with AI for individualized program plans",
+      "valence": "positive",
+      "grounding_span": "I was very satisfied and appreciative of the help from AI when I was creating my individualized program plans"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Frustration with AI document formatting",
+      "valence": "negative",
+      "grounding_span": "I find it bland, and I want things to be visually appealing"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Excitement about AI for creative activities",
+      "valence": "positive",
+      "grounding_span": "I am excited at the possibility of creating new fun and engaging activities"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Worry about AI impact on social skills",
+      "valence": "negative",
+      "grounding_span": "I am worried about the social skills of the next generation"
+    },
+    {
+      "id": "n17",
+      "type": "Stance",
+      "label": "Mixed feelings about increasing AI reliance",
+      "valence": "ambivalent",
+      "grounding_span": "I can see myself becoming more reliant on AI, which both scares and excites me"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through back-and-forth interaction",
+      "grounding_span": "I then will often go back and forth making small changes so that it matches my tone"
+    },
+    {
+      "id": "n19",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-specific delegation with personal control over aesthetics",
+      "grounding_span": "I still prefer to create my own assessments... the actual formatting and organizing I do on my own"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n13",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n17",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n19",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n19",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n6",
+      "target": "n7",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

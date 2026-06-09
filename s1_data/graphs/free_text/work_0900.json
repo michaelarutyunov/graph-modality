@@ -1,0 +1,152 @@
+{
+  "transcript_id": "work_0900",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as just-in-time learning tool for quick understanding",
+      "label_negative": "AI as insufficient for deep understanding",
+      "bipolarity_complete": true,
+      "grounding_span": "I like how AI collates many sources into quickly digestible output"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as research tool for customer service",
+      "label_negative": "AI as unreliable for customer-facing information",
+      "bipolarity_complete": true,
+      "grounding_span": "AI helps me get answers to customer questions quickly"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI information reliability and need for verification",
+      "label_negative": "AI information taken at face value without checking",
+      "bipolarity_complete": true,
+      "grounding_span": "make sure it makes sense and double check it if you have doubts"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as non-collaborative research tool",
+      "label_negative": "AI as collaborative partner throughout task",
+      "bipolarity_complete": true,
+      "grounding_span": "I tend to use AI to do the research and then take that information back to the task myself. It's not collaborative."
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as time-saver in fast-paced environment",
+      "label_negative": "AI as time-waster due to inaccuracy",
+      "bipolarity_complete": true,
+      "grounding_span": "it certainly has its value if it's helping you save time"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficient task completion",
+      "grounding_span": "it certainly has its value if it's helping you save time"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Customer satisfaction",
+      "grounding_span": "I enjoy being able to provide customers with answers to their questions"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Personal learning and understanding",
+      "grounding_span": "better help me learn and understand new things"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for customer service",
+      "valence": "positive",
+      "grounding_span": "I enjoy being able to provide customers with answers to their questions"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Cautious trust in AI information",
+      "valence": "ambivalent",
+      "grounding_span": "make sure it makes sense and double check it if you have doubts"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Optimism about future AI implementation",
+      "valence": "positive",
+      "grounding_span": "I do hope that it is further implemented in my work place"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Just-in-time problem-driven learning — seeks AI help when encountering specific unknowns",
+      "grounding_span": "I typically use it when I run into something I don't understand"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative prompt refinement — narrows broad AI responses with more details",
+      "grounding_span": "fine tuning usually involves providing more details in order to get a response more specific"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

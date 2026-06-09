@@ -1,0 +1,182 @@
+{
+  "transcript_id": "work_0144",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as independent one-shot tool",
+      "bipolarity_complete": true,
+      "grounding_span": "I tend to collaborate, as ive found thats the way to get high quality work"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI errors and need for correction",
+      "bipolarity_complete": true,
+      "grounding_span": "If I give the AI a task to handle independently then it gets riddled with little errors"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI ability to differentiate difficulty levels",
+      "label_negative": "AI inability to differentiate difficulty (bigger numbers not harder)",
+      "bipolarity_complete": true,
+      "grounding_span": "i hope AIs ability to accurately determine difficulty level in maths improves"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as tutor for learning and understanding",
+      "label_negative": "AI replacing human tutoring",
+      "bipolarity_complete": true,
+      "grounding_span": "i dont think AI can replace tutoring. The personal connection is too vital"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI transparency and reproducibility",
+      "label_negative": "AI flustered response when errors occur",
+      "bipolarity_complete": true,
+      "grounding_span": "when i ask the AI what happened on their end they get 'flustered' and keep unsuccessfully trying to fix the issue"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as writing assistant",
+      "label_negative": "AI as unreliable content generator",
+      "bipolarity_complete": true,
+      "grounding_span": "I regularly use AI for social media posts, blog posts, and email newsletter content"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Quality of output",
+      "grounding_span": "thats the way to get high quality work"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Student learning and skill development",
+      "grounding_span": "i need the student to be able to indentify the steps as we go through examples for themselves so they learn"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "its the repetative worksheets i will continue to get help creating"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with collaborative workflow",
+      "valence": "mixed",
+      "grounding_span": "I get frustrated, push though, and then am extra satisfied when the task gets done"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI's lack of error transparency",
+      "valence": "negative",
+      "grounding_span": "I do find it very frustrating when something goes wrong and i want to step back and analyse what caused the error"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Positive expectation for AI improvement in difficulty differentiation",
+      "valence": "positive",
+      "grounding_span": "i hope AIs ability to accurately determine difficulty level in maths improves"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Resistance to AI in tutoring decisions",
+      "valence": "positive",
+      "grounding_span": "i dont think AI can replace tutoring. The personal connection is too vital"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative iterative refinement — works back and forth with AI",
+      "grounding_span": "I tend to collaborate, as ive found thats the way to get high quality work"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Systematic iterative decomposition of tasks",
+      "grounding_span": "work with the AI to plot out the specific subsections of that topic that would be appropriate for different levels, and then finalise one level at a time"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

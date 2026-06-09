@@ -1,0 +1,163 @@
+{
+  "transcript_id": "work_0764",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as supplement to creative process",
+      "label_negative": "AI as autonomous creative producer",
+      "bipolarity_complete": true,
+      "grounding_span": "I mostly use it for marketing ideation"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "Human-created artwork value",
+      "label_negative": "AI-generated artwork",
+      "bipolarity_complete": true,
+      "grounding_span": "I prefer to have a human design album covers"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI unreliability for creative tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "The roll out was realistic and it worked out great"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as independent task delegator",
+      "bipolarity_complete": true,
+      "grounding_span": "Collaborate for sure"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Preserving unique artistic identity",
+      "label_negative": "AI homogenization of sound",
+      "bipolarity_complete": true,
+      "grounding_span": "I just try to remain creative and hone my own sound"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Effective marketing outcomes",
+      "grounding_span": "The roll out was realistic and it worked out great"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Authentic personal expression",
+      "grounding_span": "I love the human feel of human-created artwork"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Creative autonomy",
+      "grounding_span": "I can take the AI's advice, leave it, or adjust it to make it my own"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Artistic differentiation and market success",
+      "grounding_span": "My sound is my brand and I'm confident that my listeners will recognize my art"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for marketing research",
+      "valence": "positive",
+      "grounding_span": "I was satisfied with the rollout plan for my 'loops' album for sure"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Concern for artists directly impacted by AI",
+      "valence": "negative",
+      "grounding_span": "I've gotten frustrated in the past when trying to use AI to help me design cover art"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Optimism about future AI delegation",
+      "valence": "positive",
+      "grounding_span": "I can see myself experimenting with delegating and automating AI tasks in the future"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based boundary setting — clear separation of AI-appropriate vs. human-only tasks",
+      "grounding_span": "I mostly use AI for marketing ideation"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative iterative refinement — works back and forth with AI",
+      "grounding_span": "I can take the AI's advice, leave it, or adjust it to make it my own"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

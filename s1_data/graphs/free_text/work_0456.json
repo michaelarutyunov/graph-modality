@@ -1,0 +1,216 @@
+{
+  "transcript_id": "work_0456",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as brainstorming and idea generation partner",
+      "label_negative": "AI as unreliable for current information",
+      "bipolarity_complete": true,
+      "grounding_span": "I mainly use AI for brainstorming and gathering information"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as collaborative refinement tool",
+      "label_negative": "AI as one-shot output generator",
+      "bipolarity_complete": true,
+      "grounding_span": "I like to colaborate and make suggestions to refine the ideas"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI writing style naturalness",
+      "label_negative": "AI writing style stuffy and unnatural",
+      "bipolarity_complete": true,
+      "grounding_span": "The style of writing is a bit too 'stuffy' if that makes sense"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI reliability for current information",
+      "label_negative": "AI unreliability due to outdated information",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't trust AI to generate correct answers"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as cost and time saving tool",
+      "label_negative": "AI as failing to produce acceptable output",
+      "bipolarity_complete": true,
+      "grounding_span": "we are saving a huge amount of time and money"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as threat to eLearning development jobs",
+      "label_negative": "AI as tool to adapt and specialize in",
+      "bipolarity_complete": true,
+      "grounding_span": "A lot of eLearning development is being phased out by AI models"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Creative productivity and overcoming blocks",
+      "grounding_span": "very satisfying when you have some sort of a creative block and the AI model provides some relevant ideas"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Authentic and natural communication",
+      "grounding_span": "It just doesn't seem 'natural'"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Accuracy and trustworthiness of information",
+      "grounding_span": "I don't trust AI to generate correct answers"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Efficiency and cost savings",
+      "grounding_span": "saving a huge amount of time and money"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Professional adaptability and future-proofing",
+      "grounding_span": "we decided to become experts at how AI can be used in our field"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI for brainstorming",
+      "valence": "positive",
+      "grounding_span": "very satisfying when you have some sort of a creative block and the AI model provides some relevant ideas"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Preference for human writing over AI",
+      "valence": "negative",
+      "grounding_span": "I personally prefer to write myself"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Distrust of AI for current information",
+      "valence": "negative",
+      "grounding_span": "I don't trust AI to generate correct answers"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Satisfaction with AI for cost and time savings",
+      "valence": "positive",
+      "grounding_span": "we are saving a huge amount of time and money"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Proactive adaptation to AI disruption",
+      "valence": "positive",
+      "grounding_span": "we decided to become experts at how AI can be used in our field"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative iterative refinement — back-and-forth prompting to shape outputs",
+      "grounding_span": "I like to colaborate and make suggestions to refine the ideas"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic specialization — focusing on areas where AI is weak while mastering AI tools",
+      "grounding_span": "we decided to become experts at how AI can be used in our field"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

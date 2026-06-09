@@ -1,0 +1,174 @@
+{
+  "transcript_id": "creativity_0082",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as assistant for secondary/business tasks",
+      "label_negative": "AI involvement in core creative process",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is not involved in the actual creative process for making a terrain carving"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as useful tool for lookup and reference tasks",
+      "label_negative": "AI as generator of creative content",
+      "bipolarity_complete": true,
+      "grounding_span": "AI has been consistently helpful for these assistant-type of tasks"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability and usefulness for constrained tasks",
+      "label_negative": "AI unreliability and uselessness for creative generation",
+      "bipolarity_complete": true,
+      "grounding_span": "most attempts returned uninspired and essentially useless results"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as safety monitor for physical tools",
+      "label_negative": "AI as creative collaborator in art generation",
+      "bipolarity_complete": true,
+      "grounding_span": "I'd love to have an AI that can monitor the active machine"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Human creativity as accessing external stream",
+      "label_negative": "Human creativity as internal generation",
+      "bipolarity_complete": true,
+      "grounding_span": "the source of the creativity is something 'other'"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative authenticity and ownership",
+      "grounding_span": "I maintain control and ownership over my artworks"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "deliver helpful lists of potentially satisfying words of the requested type"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Safety and peace of mind",
+      "grounding_span": "free up my time and allow some amount of peace of mind"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for secondary tasks",
+      "valence": "positive",
+      "grounding_span": "I'd consider them to be generally successful, satisfying, and reliable"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Dissatisfaction with AI for creative generation",
+      "valence": "negative",
+      "grounding_span": "most attempts returned uninspired and essentially useless results"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Openness to AI as safety monitor",
+      "valence": "positive",
+      "grounding_span": "I'd love to have an AI that can monitor the active machine"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Resistance to AI in core creative process",
+      "valence": "negative",
+      "grounding_span": "I have no intention of involving it directly in the creative generation of art"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain separation — clear boundary between creative and practical tasks",
+      "grounding_span": "AI is not involved in the actual creative process for making a terrain carving"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Experiential calibration — learning from repeated attempts",
+      "grounding_span": "I've gradually learned the creative process is something that I allow to happen"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

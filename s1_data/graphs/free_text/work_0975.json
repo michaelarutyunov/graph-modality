@@ -1,0 +1,190 @@
+{
+  "transcript_id": "work_0975",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as creative partner for titles and rewriting",
+      "label_negative": "AI as untrustworthy for key point extraction",
+      "bipolarity_complete": true,
+      "grounding_span": "AI great at either improving what I've written or helping me come up with gripping engaging content"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI trustworthiness for information extraction",
+      "label_negative": "AI unreliability for key point extraction",
+      "bipolarity_complete": true,
+      "grounding_span": "I can't trust the AI to not miss something important or to correctly extract the correct information"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Human-centered vs AI-assisted show notes",
+      "label_negative": "AI-dominated show notes production",
+      "bipolarity_complete": true,
+      "grounding_span": "Some colleagues are adamant at keeping the show notes as a human centred process"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as job replacement threat",
+      "label_negative": "AI as job enabler",
+      "bipolarity_complete": true,
+      "grounding_span": "my job will be almost completely replaced by AI in the next year or 2"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Skill shift from creation to curation",
+      "label_negative": "Skill obsolescence without replacement",
+      "bipolarity_complete": true,
+      "grounding_span": "the skill of coming up with gripping titles is less important for me to have and instead I need to have the skill of creating an effective prompt and reviewing/editing"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative satisfaction and enjoyment",
+      "grounding_span": "I also really enjoy this part of the process of my work"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "High quality output",
+      "grounding_span": "the output wouldn't be quite as high quality as if I do it myself"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "took one minute of easy work"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Job security",
+      "grounding_span": "I will probably lose my job"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for title creation",
+      "valence": "positive",
+      "grounding_span": "I felt particularly satisfied to be honest that's with almost every interaction I have specifically in Title creation"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Distrust of AI for key point extraction",
+      "valence": "negative",
+      "grounding_span": "I can't trust the AI to not miss something important"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Resignation toward job displacement",
+      "valence": "negative",
+      "grounding_span": "my job will be almost completely replaced by AI in the next year or 2"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Acceptance of skill evolution",
+      "valence": "mixed",
+      "grounding_span": "the skill of coming up with gripping titles is less important for me to have and instead I need to have the skill of creating an effective prompt"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative iterative refinement — works with AI in back-and-forth cycles",
+      "grounding_span": "It's definitely a collaborative process throughout the task"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic concealment of AI use due to social norms",
+      "grounding_span": "it is better that I keep them unaware that I am using it"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n3",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

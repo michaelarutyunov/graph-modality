@@ -1,0 +1,182 @@
+{
+  "transcript_id": "work_0473",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as coding suggestion tool",
+      "label_negative": "Traditional search for simple syntax",
+      "bipolarity_complete": true,
+      "grounding_span": "look up coding concepts or syntax that I already know, but is not necessarily proficient (enough) in"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as practical problem solver",
+      "label_negative": "AI leading astray due to lack of proficiency",
+      "bipolarity_complete": true,
+      "grounding_span": "when I am stuck trying to solve a coding problem"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Preserving analytical challenge for oneself",
+      "label_negative": "Delegating analytical tasks to AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I do prefer to work as much as I can on more 'problem solving'/analytically demanding tasks myself"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as coding suggestion tool",
+      "label_negative": "Manual handling of routine syntax",
+      "bipolarity_complete": true,
+      "grounding_span": "say I need a nested CASE-statement with various NULLIFs and CASTs with different formats (less analytically stimulating, lets be honest)- sure, I give that to the AI"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI occasional aha moments vs frequent frustrations",
+      "label_negative": "AI leading astray in unfamiliar areas",
+      "bipolarity_complete": true,
+      "grounding_span": "AI gives you that much needed 'A-HA' moment"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "Maintaining skills despite AI takeover",
+      "label_negative": "Letting skills atrophy due to AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I still find it worthwhile to maintain those skills"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Analytical skill sharpening",
+      "grounding_span": "sharpen my analytical skills"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency in problem-solving",
+      "grounding_span": "you have both accomplished quite a bit yourself and received much needed on-point help"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Skill maintenance and self-reliance",
+      "grounding_span": "I still find it worthwhile to maintain those skills"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Ambivalent awe at AI's human-like attunement",
+      "valence": "positive",
+      "grounding_span": "AI gives you that much needed 'A-HA' moment"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI errors",
+      "valence": "negative",
+      "grounding_span": "AI leads you astray, typically in areas where you are not proficient enough"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Preference for self-reliance when capable",
+      "valence": "positive",
+      "grounding_span": "I do prefer to work as much as I can on more 'problem solving'/analytically demanding tasks myself"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Openness to increasing AI use in future",
+      "valence": "positive",
+      "grounding_span": "I guess I will be using it more agentically when coding"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Verbal description first, then code examples",
+      "grounding_span": "I start out by describing in as much detail as I can, using words. I then move on to providing code examples"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic delegation with oversight",
+      "grounding_span": "I do prefer to work as much as I can on more 'problem solving'/analytically demanding tasks myself"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

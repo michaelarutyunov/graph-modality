@@ -1,0 +1,154 @@
+{
+  "transcript_id": "work_0687",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative assistant for planning and creation",
+      "label_negative": "AI as autonomous delegator without human input",
+      "bipolarity_complete": true,
+      "grounding_span": "i do not delegate complete tasks to AI"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI ability to incorporate human nuance and adaptability",
+      "label_negative": "AI lack of human nuance for child-specific needs",
+      "bipolarity_complete": true,
+      "grounding_span": "AI lack human nuance necesary for working with very young children and requiring constant pivots and adaptation"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as source of new ideas and research",
+      "label_negative": "AI as unhelpful or irrelevant suggestions",
+      "bipolarity_complete": true,
+      "grounding_span": "discover new initiatives through the references it provides"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI support for individualized child care",
+      "label_negative": "AI providing generic one-size-fits-all plans",
+      "bipolarity_complete": true,
+      "grounding_span": "it has allowed me to treat each one of them in my care as unique individuals"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Child development and well-being",
+      "grounding_span": "blending what children need for their emotional development with what they need for basic function"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Professional effectiveness and efficiency",
+      "grounding_span": "i use AI to stay in line with recent research"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Authentic human connection and attachment",
+      "grounding_span": "The connection and relationship that i develop with the children is my most valuable resource"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Trust in AI as collaborative partner but not autonomous",
+      "valence": "ambivalent",
+      "grounding_span": "i do not trust AI to handle tasks entirely alone without my collaboration or continual input"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for individualized planning",
+      "valence": "positive",
+      "grounding_span": "AI has been particularly helpful in managing the needs of individual children"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Concern about over-reliance on AI without human collaboration",
+      "valence": "negative",
+      "grounding_span": "My concern are those who may over use it without collaboration"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative co-creation with detailed prompts and feedback",
+      "grounding_span": "i usually start by giving the model as much detail as possible about what i am searching for"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Individualized tailoring based on child-specific needs",
+      "grounding_span": "i make one for each child based on their needs and development"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n8",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

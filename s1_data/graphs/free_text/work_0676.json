@@ -1,0 +1,174 @@
+{
+  "transcript_id": "work_0676",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as recipe suggestion tool for specialized dietary needs",
+      "label_negative": "AI as unreliable for complex multi-constraint tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I usually ask for recipes that are specialized to my needs and current ingredients"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI memory and context retention",
+      "label_negative": "AI forgetting prior constraints",
+      "bipolarity_complete": true,
+      "grounding_span": "the model would forget previous instructions"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability for complex organizational tasks",
+      "label_negative": "AI unreliability for complex tasks requiring oversight",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't really don't trust that the models can handle a complex task such as organizing an employee schedule"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as tool for operational tasks (cleaning, spice mixes)",
+      "label_negative": "Self-reliance for operational tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't typically ask for cleaning suggestions"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as customer service assistant",
+      "label_negative": "AI not taking over cooking tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I'd love if we had the option for AI to take over all customer assistance"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Culinary creativity and menu variety",
+      "grounding_span": "it feels hard to find new and exciting recipes"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and reduced workload",
+      "grounding_span": "not necessary for AI help"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Trust in human expertise",
+      "grounding_span": "I trust that people who have tested spice mixes know better than a computer"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Frustration with AI's inability to handle complex constraints",
+      "valence": "negative",
+      "grounding_span": "I have been really frustrated trying to find vegetarian dishes that are both exciting and suit my needs"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Skepticism toward AI for complex organizational tasks",
+      "valence": "negative",
+      "grounding_span": "I don't really don't trust that the models can handle a complex task such as organizing an employee schedule"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Openness to AI for customer service",
+      "valence": "positive",
+      "grounding_span": "I'd love if we had the option for AI to take over all customer assistance"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Cautious optimism for expanding AI use to techniques",
+      "valence": "positive",
+      "grounding_span": "I might start evolving to ask about new cooking techniques"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative constraint specification — refines requests through conversation",
+      "grounding_span": "I will work with the AI across a conversation"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based boundary setting — distinguishes tasks for AI vs. self",
+      "grounding_span": "I don't typically ask for cleaning suggestions"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

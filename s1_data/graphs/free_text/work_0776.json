@@ -1,0 +1,163 @@
+{
+  "transcript_id": "work_0776",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as time-saving tool for routine tasks",
+      "label_negative": "AI as unnecessary for quick tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI to save time generally"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as collaborator for iterative refinement",
+      "label_negative": "AI as independent task completer",
+      "bipolarity_complete": true,
+      "grounding_span": "I usually have it collaborate with me on tasks"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as sounding board for sensitive communication",
+      "label_negative": "AI as unreliable for nuanced tone",
+      "bipolarity_complete": true,
+      "grounding_span": "I then asked AI how it might be interpreted by the student"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI use in a skeptical workplace culture",
+      "label_negative": "Openly embraced AI use",
+      "bipolarity_complete": true,
+      "grounding_span": "My workplace on the whole looks down on using AI"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI encroachment on personal expertise and judgment",
+      "label_negative": "AI augmentation of personal expertise",
+      "bipolarity_complete": true,
+      "grounding_span": "I trust my thirty years of teaching experience more than AI"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "I use AI to save time generally"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Student engagement and learning",
+      "grounding_span": "increase engagement with my middle school students"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional integrity and authenticity",
+      "grounding_span": "I would be mortified if my supervisor thought I used AI for it"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Scientific accuracy and evidence-based teaching",
+      "grounding_span": "we study the evidence in science class"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for refining sensitive emails",
+      "valence": "positive",
+      "grounding_span": "I was extremely satisfied"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Reluctance to use AI for tasks requiring personal touch",
+      "valence": "negative",
+      "grounding_span": "I certainly would not have it grade any student work"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Cautious optimism about future AI efficiency",
+      "valence": "mixed",
+      "grounding_span": "I can definitely imagine that my use will evolve by allowing me to spend less time per task"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through specific instructions",
+      "grounding_span": "I input my original boring text and I have it refine the output with instructions"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Selective disclosure and boundary setting",
+      "grounding_span": "I only share the extent of my use with a few people at work"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

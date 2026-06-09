@@ -1,0 +1,193 @@
+{
+  "transcript_id": "work_0929",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as casual language understanding tool",
+      "label_negative": "Web search requiring precise keywords",
+      "bipolarity_complete": true,
+      "grounding_span": "how I can word a question with casual language which is not precise or perfectly correct but the AI understands"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as speed and flow preserver",
+      "label_negative": "Web search causing frustration and flow loss",
+      "bipolarity_complete": true,
+      "grounding_span": "prevents losing the 'flow state' that is easy to lose when searching the web"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as precision tool for small issues",
+      "label_negative": "AI handling large architectural decisions",
+      "bipolarity_complete": true,
+      "grounding_span": "focus only on smaller, precise issues"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI output correctness and adaptability",
+      "label_negative": "AI stubbornness when incorrect",
+      "bipolarity_complete": true,
+      "grounding_span": "it refuses to change its code/output even though I have pointed out it is incorrect"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as threat to software engineering",
+      "label_negative": "AI as insufficient for secure code",
+      "bipolarity_complete": true,
+      "grounding_span": "it is a threat to software engineers but I don't think it will be capable of delivering well-structured but more importantly secure code"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "Workplace AI usage boundaries",
+      "label_negative": "Unrestricted AI code input",
+      "bipolarity_complete": true,
+      "grounding_span": "We do not input our own code into the models"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and flow state",
+      "grounding_span": "prevents losing the 'flow state'"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Understanding and clarity",
+      "grounding_span": "it immediately gives me clarity"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Code quality and security",
+      "grounding_span": "well-structured but more importantly secure code"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Personal skill maintenance",
+      "grounding_span": "maintain my ability to write good code"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI for quick clarity",
+      "valence": "positive",
+      "grounding_span": "It has made me feel satisfied when I have been struggling on a problem for a while and it immediately gives me clarity"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with AI stubbornness",
+      "valence": "negative",
+      "grounding_span": "It has been frustrating sometimes though when it refuses to change its code/output even though I have pointed out it is incorrect"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Skepticism about AI replacing developers",
+      "valence": "negative",
+      "grounding_span": "I don't think it will be capable of delivering well-structured but more importantly secure code for quite a long time"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Acceptance of workplace AI limits",
+      "valence": "mixed",
+      "grounding_span": "I don't think we will be allowed to put our code in it anytime soon, but I don't mind that"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Adaptive interaction based on output quality",
+      "grounding_span": "if I look at the output of the model and it immediately makes more sense to me what I have to do then I will just use the first output"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Preference for maintaining control over architecture",
+      "grounding_span": "I like to structure my code to fit my work's repo and style"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

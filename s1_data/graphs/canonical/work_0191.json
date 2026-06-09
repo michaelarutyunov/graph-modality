@@ -1,0 +1,200 @@
+{
+  "transcript_id": "work_0191",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as task-specific tool",
+      "label_negative": "AI as ineffective for broad, unconstrained tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is not generally useful yet for many tasks. I feel it is currently only effective when given relatively narrowly constrained tasks."
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI hallucination and error",
+      "bipolarity_complete": true,
+      "grounding_span": "the output would probably not be useful... contained unusable information (hallucinated web addresses, for instance)"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI integration into existing software",
+      "label_negative": "AI integration difficulty",
+      "bipolarity_complete": true,
+      "grounding_span": "Often the limitation is integration. I need to integrate our systems... with the LLM in order for it to handle the work."
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as independent automated tool",
+      "bipolarity_complete": true,
+      "grounding_span": "When coding I work collaboratively with the AI, sometimes asking it to write something for me, sometimes asking question about the code"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI integration into workflow",
+      "label_negative": "AI requiring human interaction",
+      "bipolarity_complete": true,
+      "grounding_span": "The content generation tasks I have placed in an automated workflow so there isn't any interaction"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "Management enthusiasm for AI",
+      "label_negative": "Staff skepticism about AI errors",
+      "bipolarity_complete": true,
+      "grounding_span": "management is very gung-ho about implementing AI... staff is concerned about potential errors"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "Belief in AI capability improvement over time",
+      "label_negative": "Belief in AI limitations persisting",
+      "bipolarity_complete": true,
+      "grounding_span": "even if they don't work today because of model limitations, 6 months from now those limitations may not exist"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "it can be faster to explain the code I want than to think about it and type it manually"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Accuracy and reliability",
+      "grounding_span": "the output would probably not be useful... contained unusable information"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Autonomy and personal control",
+      "grounding_span": "I just go off on my own"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with management's unrealistic expectations",
+      "valence": "negative",
+      "grounding_span": "This was a very frustrating situation."
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Openness to increasing AI use in future",
+      "valence": "positive",
+      "grounding_span": "I can't really think of many tasks that I would not delegate to AI if I thought it could effectively handle them."
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Skepticism and caution toward AI",
+      "valence": "negative",
+      "grounding_span": "AI is not generally useful yet for many tasks."
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "positive",
+      "grounding_span": "6 months from now those limitations may not exist"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Proactive automation and system-building",
+      "grounding_span": "I have developed a web app which uses an LLM API and web scraping tools to do this, in order to streamline the process."
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic expectation-setting based on experience",
+      "grounding_span": "I agreed to set up an AI to check pricing and send an email, giving the caveat that initially this would be just to demonstrate where the technology is at and that the output would probably not be useful."
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n6",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

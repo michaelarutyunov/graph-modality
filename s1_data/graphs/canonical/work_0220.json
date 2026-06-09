@@ -1,0 +1,157 @@
+{
+  "transcript_id": "work_0220",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI for administrative tasks",
+      "label_negative": "AI as unreliable for sensitive or expert tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI for multiple administrative tasks"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as productivity enhancer",
+      "label_negative": "AI as time-wasting due to inaccuracy",
+      "bipolarity_complete": true,
+      "grounding_span": "I am all about working smarter not harder"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI trustworthiness and verification",
+      "label_negative": "AI unreliability for niche or sensitive topics",
+      "bipolarity_complete": true,
+      "grounding_span": "If the topic is not well known I feel like it becomes an extra step to verify"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as fully autonomous delegator",
+      "bipolarity_complete": true,
+      "grounding_span": "80 percent collaboration and 20 percent delegation"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as enhancement tool not replacement",
+      "label_negative": "AI as threat to human skills",
+      "bipolarity_complete": true,
+      "grounding_span": "I like to think of AI as my assistant, not my replacement"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "I am all about working smarter not harder"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional integrity and ethical practice",
+      "grounding_span": "I do not want the AI to editorialize or offer suggests"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Work-life balance",
+      "grounding_span": "I am not working as much outside my contracted hours"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "When I am able to use AI to delegate certain tasks and finish all I need to it is very satisfying"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI for niche problems",
+      "valence": "negative",
+      "grounding_span": "I have had to go back and research independently"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "mixed",
+      "grounding_span": "I hope accuracy will continue to improve and also the natural language will improve"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Task segmentation — separates simple repetitive tasks from complex judgment tasks",
+      "grounding_span": "If I am communicating about highly sensitive or complicated information I generally do not want to input that into AI"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Curiosity-driven exploration when at baseline performance",
+      "grounding_span": "It was curiosity! I am all about working smarter not harder"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

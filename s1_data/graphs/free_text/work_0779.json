@@ -1,0 +1,157 @@
+{
+  "transcript_id": "work_0779",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as refinement tool for messaging",
+      "label_negative": "AI as autonomous content creator",
+      "bipolarity_complete": true,
+      "grounding_span": "Definitely a refinement tool for me to optimize messaging at this point!"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI efficiency for large summarization tasks",
+      "label_negative": "AI inefficiency for niche or context-heavy tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "AI really accelerated delivery of an initial draft"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI context limitations for personalized communication",
+      "label_negative": "AI ability to integrate context seamlessly",
+      "bipolarity_complete": true,
+      "grounding_span": "The models can't integrate a conversation into my email without me telling it about it"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as accelerator for collaborative work",
+      "label_negative": "AI as threat to job security",
+      "bipolarity_complete": true,
+      "grounding_span": "AI really accelerated delivery of an initial draft"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Human critical thinking and domain expertise",
+      "label_negative": "Over-reliance on AI leading to skill atrophy",
+      "bipolarity_complete": true,
+      "grounding_span": "there will always be a need for truly critical thinking"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and productivity",
+      "grounding_span": "AI really accelerated delivery of an initial draft"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Personalized and context-aware communication",
+      "grounding_span": "The models can't integrate a conversation into my email without me telling it about it"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional competence and expertise",
+      "grounding_span": "my aim is to continue to bring expertise in my domain"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI as accelerator",
+      "valence": "positive",
+      "grounding_span": "AI really accelerated delivery of an initial draft"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Preference for human control in personalized tasks",
+      "valence": "negative",
+      "grounding_span": "I still prefer to write my emails myself"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Proactive adoption to learn boundaries",
+      "valence": "positive",
+      "grounding_span": "my plan is to embrace it and become an early adopter"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement approach",
+      "grounding_span": "asking the model to refine piece by piece vs a holistic overhaul"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic domain compartmentalization",
+      "grounding_span": "my efforts are focused on optimizing those areas while not getting complacent with my technical expertise"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

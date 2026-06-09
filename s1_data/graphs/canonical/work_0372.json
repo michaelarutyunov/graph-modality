@@ -1,0 +1,181 @@
+{
+  "transcript_id": "work_0372",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as data analysis assistant for pattern identification",
+      "label_negative": "AI as opaque black box",
+      "bipolarity_complete": true,
+      "grounding_span": "I do find AI helpful when looking at what is selling at what time of day"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "Human control over critical decisions",
+      "label_negative": "AI taking over ordering decisions",
+      "bipolarity_complete": true,
+      "grounding_span": "I would prefer to do all of my ordering myself"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI requiring context explanation",
+      "label_negative": "AI ignorance of local context",
+      "bipolarity_complete": true,
+      "grounding_span": "the system sometimes doesn't understand case counts"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as supplement to creative process",
+      "label_negative": "AI as crutch hindering critical thinking",
+      "bipolarity_complete": true,
+      "grounding_span": "I see a huge value in AI in helping to boost creativity"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI transparency and reproducibility",
+      "label_negative": "AI system opacity and errors",
+      "bipolarity_complete": true,
+      "grounding_span": "When you get a restock list that tells you to put 2 out of something it shows you only have 1 of, you start to wonder who is running the thing"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Autonomy and personal control",
+      "grounding_span": "It is comforting to have that control"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and cost reduction",
+      "grounding_span": "improving our efficiency"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Critical thinking and skill development",
+      "grounding_span": "makes it harder for people to use their own imagination or to look at what AI gives them in a critical way"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Preference for manual ordering despite AI",
+      "valence": "negative",
+      "grounding_span": "I would prefer to do all of my ordering myself"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Appreciation for AI in pattern analysis",
+      "valence": "positive",
+      "grounding_span": "I do find AI helpful when looking at what is selling at what time of day"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI errors and opacity",
+      "valence": "negative",
+      "grounding_span": "When you get a restock list that tells you to put 2 out of something it shows you only have 1 of, you start to wonder who is running the thing"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Resistance to AI in creative work",
+      "valence": "positive",
+      "grounding_span": "I see a huge value in AI in helping to boost creativity"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Concern about AI as crutch",
+      "valence": "negative",
+      "grounding_span": "I also could see it as a crutch that makes it harder for people to use their own imagination"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Experience-based manual reasoning — relies on past practice and local knowledge",
+      "grounding_span": "I'm old school. I would prefer to do all of my ordering myself because, before technology became so prevalent, I did it all anyway"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Systematic cross-referencing — uses AI as starting point then verifies with multiple sources",
+      "grounding_span": "It involves looking at reports we can generate that show our high sellers"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

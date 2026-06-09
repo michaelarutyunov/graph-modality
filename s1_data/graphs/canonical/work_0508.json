@@ -1,0 +1,114 @@
+{
+  "transcript_id": "work_0508",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as efficiency tool",
+      "label_negative": "AI as threat to learning and development",
+      "bipolarity_complete": true,
+      "grounding_span": "I would gladly allow AI to take over the more repetitive tasks"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "Preserving thinking-heavy tasks for self",
+      "label_negative": "Delegating thinking-heavy tasks to AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I like to handle the tasks that require more thinking on my own"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI integration in workplace",
+      "label_negative": "Old-school workplace culture resisting AI",
+      "bipolarity_complete": true,
+      "grounding_span": "The workplace culture is more old-schooled so the urgency to integrate AI is very low"
+    },
+    {
+      "id": "n4",
+      "type": "Value",
+      "label": "Personal competence and skill development",
+      "grounding_span": "it may hamper with my own learning and development"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "increase my efficiency"
+    },
+    {
+      "id": "n6",
+      "type": "Stance",
+      "label": "Openness to future AI for repetitive tasks",
+      "valence": "positive",
+      "grounding_span": "I would gladly allow AI to take over the more repetitive tasks"
+    },
+    {
+      "id": "n7",
+      "type": "Stance",
+      "label": "Cautious reliance on AI",
+      "valence": "negative",
+      "grounding_span": "I try not to be overly dependent on AI as it may hamper with my own learning and development"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Pragmatic acceptance of AI as a tool",
+      "valence": "mixed",
+      "grounding_span": "The only time I ever use AI is if I'm using it to figure out stock tickers in bulk"
+    },
+    {
+      "id": "n9",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based task differentiation",
+      "grounding_span": "I like to handle the tasks that require more thinking on my own"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n4",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n7",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n8",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n9",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n9",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

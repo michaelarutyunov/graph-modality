@@ -1,0 +1,209 @@
+{
+  "transcript_id": "work_0359",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as comprehension aid for legal jargon",
+      "label_negative": "Independent struggle with difficult legal text",
+      "bipolarity_complete": true,
+      "grounding_span": "use ChatGPT to make sentences and legal jargon that I read in case law more easy to understand"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as efficiency tool for research and editing",
+      "label_negative": "Manual time-consuming research and editing",
+      "bipolarity_complete": true,
+      "grounding_span": "find case law pretty easily using Westlaw...speeds things up which frees my day for other projects"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Human authorship for high-stakes legal arguments",
+      "label_negative": "AI drafting for legal arguments",
+      "bipolarity_complete": true,
+      "grounding_span": "I prefer writing my arguments for motions myself"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI reliability and verification",
+      "label_negative": "AI unreliability and risk of error",
+      "bipolarity_complete": true,
+      "grounding_span": "as long as I verify is not so dangerous"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Human oversight and final decision-making",
+      "label_negative": "Full AI autonomy without human control",
+      "bipolarity_complete": true,
+      "grounding_span": "I need be in charge at the end of the day and have the final decision"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "Workplace-sanctioned AI use",
+      "label_negative": "Unauthorized AI use",
+      "bipolarity_complete": true,
+      "grounding_span": "We are told not to use AI for drafting. Spell check is okay, so I make sure to follow all the rules"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Epistemic understanding",
+      "grounding_span": "make sentences and legal jargon that I read in case law more easy to understand"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional competence and accuracy",
+      "grounding_span": "I feel more safe knowing I'm writing it and not an AI"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Personal fulfillment and self-worth",
+      "grounding_span": "I feel a little more satisfied with myself when I carry out this kind of work"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Justice and human welfare",
+      "grounding_span": "Victims' lives are at stakes. I think humans need to be at the forefront"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "speeds things up which frees my day for other projects"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI for research efficiency",
+      "valence": "positive",
+      "grounding_span": "I was satisfied for sure when I am able to find case law pretty easily using Westlaw"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Preference for human authorship in legal arguments",
+      "valence": "positive",
+      "grounding_span": "I prefer writing my arguments for motions myself"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Caution toward AI due to high stakes",
+      "valence": "negative",
+      "grounding_span": "I think the legal field requires more thinking and certainty"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Compliance with workplace AI rules",
+      "valence": "positive",
+      "grounding_span": "I make sure to follow all the rules when it comes to using AI"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative comprehension checking — reads then simplifies sentence by sentence",
+      "grounding_span": "I'll go back read it a second time and stop at each sentence I may not understand, copy it, paste it on ChatGPT, then ask it to simplify it"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based boundary setting — distinguishes high-stakes from low-stakes tasks",
+      "grounding_span": "I prefer writing my arguments for motions myself...versus relying on AI for spell check or helping you find case law"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

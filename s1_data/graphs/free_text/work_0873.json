@@ -1,0 +1,169 @@
+{
+  "transcript_id": "work_0873",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as thought partner for content development",
+      "label_negative": "AI as fully autonomous content generator",
+      "bipolarity_complete": true,
+      "grounding_span": "I will use it primarily as a thought partner"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI-generated content requiring personal voice",
+      "label_negative": "AI-generated content used as-is",
+      "bipolarity_complete": true,
+      "grounding_span": "I need the end product to sounds like it is coming from my voice"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Collaborative AI interaction pattern",
+      "label_negative": "Delegative AI interaction pattern",
+      "bipolarity_complete": true,
+      "grounding_span": "I collaborate through a task"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Workplace-sanctioned AI use",
+      "label_negative": "Self-initiated AI use without official approval",
+      "bipolarity_complete": true,
+      "grounding_span": "My company does not have AI tools for us to use, so I will seek out AI tools on my own"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as productivity enhancer for starting tasks",
+      "label_negative": "AI as unnecessary crutch",
+      "bipolarity_complete": true,
+      "grounding_span": "it made generating the talking points so much easier"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Authentic self-expression",
+      "grounding_span": "I need the end product to sounds like it is coming from my voice"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "it made generating the talking points so much easier"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional autonomy and control",
+      "grounding_span": "I still need to arrange the job aid, add in specific verbiage, get buy in with stakeholders"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI as thought partner",
+      "valence": "positive",
+      "grounding_span": "I was glad I thought to do this"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Preference for maintaining personal voice",
+      "valence": "positive",
+      "grounding_span": "I need the end product to sounds like it is coming from my voice"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with lack of official AI adoption",
+      "valence": "negative",
+      "grounding_span": "My company does not have AI tools for us to use"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Optimism about future AI adoption",
+      "valence": "positive",
+      "grounding_span": "I would hope that my company will widely adopt AI tools"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through back-and-forth prompting",
+      "grounding_span": "then depending on what I receive I will tailor the response"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Proactive tool-seeking despite organizational constraints",
+      "grounding_span": "I will seek out AI tools on my own"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

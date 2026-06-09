@@ -1,0 +1,249 @@
+{
+  "transcript_id": "work_0108",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as meeting note-taking tool",
+      "label_negative": "Manual meeting notes and recaps",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI for several tasks throughout the day. I usually use it for meeting notes/recaps"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as guide for form filling",
+      "label_negative": "Manual content creation",
+      "bipolarity_complete": true,
+      "grounding_span": "filler content creation"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for scratch app generation",
+      "label_negative": "Manual app development",
+      "bipolarity_complete": true,
+      "grounding_span": "scratch app generation"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI for communication refinement",
+      "label_negative": "Unpolished messages",
+      "bipolarity_complete": true,
+      "grounding_span": "help polish a message so it is appropriate for a client"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Personal voice in email writing",
+      "label_negative": "AI-written messages and emails",
+      "bipolarity_complete": true,
+      "grounding_span": "I prefer to write my own communications when possible"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as task delegator for complete tasks",
+      "label_negative": "Collaboration with AI throughout task",
+      "bipolarity_complete": true,
+      "grounding_span": "Generally I like to delegate"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI for scratch app generation",
+      "label_negative": "Delegation of app creation to AI",
+      "bipolarity_complete": true,
+      "grounding_span": "In the case of app creation it is usually a collaboration"
+    },
+    {
+      "id": "n8",
+      "type": "Construct",
+      "label": "Workplace pressure to adopt AI for efficiency",
+      "label_negative": "Indiscriminate AI use due to workplace pressure",
+      "bipolarity_complete": true,
+      "grounding_span": "This has actually made me want to use AI only when necessary"
+    },
+    {
+      "id": "n9",
+      "type": "Construct",
+      "label": "AI as skill amplifier",
+      "label_negative": "Manual task execution",
+      "bipolarity_complete": true,
+      "grounding_span": "I was able to get the app up and running in about an hour"
+    },
+    {
+      "id": "n10",
+      "type": "Construct",
+      "label": "Preserving personal creativity",
+      "label_negative": "Over-reliance on AI diminishing human skills",
+      "bipolarity_complete": true,
+      "grounding_span": "I still want to be able to think and create"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "The app takes about 1 minute to run. I think it probably would have taken me 6+ hours"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Authenticity and personal integrity",
+      "grounding_span": "Being a remote worker I feel like the human interaction is already pretty removed from the equation"
+    },
+    {
+      "id": "n13",
+      "type": "Value",
+      "label": "Personal autonomy and skill preservation",
+      "grounding_span": "I still want to be able to think and create"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "I was able to get the app up and running in about an hour"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Preference for human writing",
+      "valence": "positive",
+      "grounding_span": "I prefer to write my own communications when possible"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Indifference to workplace AI pressure",
+      "valence": "negative",
+      "grounding_span": "This has actually made me want to use AI only when necessary"
+    },
+    {
+      "id": "n17",
+      "type": "Stance",
+      "label": "Value of maintaining human thinking and creativity",
+      "valence": "positive",
+      "grounding_span": "I still want to be able to think and create"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Task-dependent delegation vs. collaboration",
+      "grounding_span": "Generally I like to delegate. In the case of app creation it is usually a collaboration"
+    },
+    {
+      "id": "n19",
+      "type": "CognitiveStyleMarker",
+      "label": "Reactive selectivity due to social influence",
+      "grounding_span": "This has actually made me want to use AI only when necessary"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n13",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n13",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n14",
+      "target": "n9",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n8",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n17",
+      "target": "n10",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n6",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n7",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n8",
+      "target": "n19",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n6",
+      "target": "n7",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n8",
+      "target": "n9",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

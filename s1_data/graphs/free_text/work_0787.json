@@ -1,0 +1,169 @@
+{
+  "transcript_id": "work_0787",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as on-demand resource for unfamiliar tasks",
+      "label_negative": "AI as integrated system for routine tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "It is a window that I have open that I refer to when I have questions about something strange"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability for high-stakes tasks",
+      "label_negative": "AI unreliability for high-stakes tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I wouldn't fully automate until I am very confident in it becuase of the implications of something going wrong"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as collaborative partner vs. independent delegator",
+      "label_negative": "AI as independent task completer",
+      "bipolarity_complete": true,
+      "grounding_span": "I tend to collaborate. But that is a knowledge gap"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Organizational openness to AI adoption",
+      "label_negative": "Organizational resistance to AI adoption",
+      "bipolarity_complete": true,
+      "grounding_span": "our work culture is backwards with the main core group not open to change"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as skill replacement vs. human skill retention",
+      "label_negative": "Human skill retention despite AI capability",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't feel a need for that. Those skills would still be there one day in the future if I needed them"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "This meant we were able to send the product without delay"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Customer confidence and operational reliability",
+      "grounding_span": "loss of confidence by the customer, claims for lost freight, costs to correct the issue"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Personal growth and learning",
+      "grounding_span": "I just need to learn how to do it"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for research tasks",
+      "valence": "positive",
+      "grounding_span": "This was a satisfying result"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Caution toward AI for high-stakes automation",
+      "valence": "negative",
+      "grounding_span": "I wouldn't fully automate until I am very confident in it"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Optimism about future AI integration",
+      "valence": "positive",
+      "grounding_span": "I hope that it will evolve hugely and take over email monitoring and truck planning"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with organizational and IT barriers",
+      "valence": "negative",
+      "grounding_span": "IT access is very restricted so we can be blocked by what we add to the computer"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic cost-benefit reasoning",
+      "grounding_span": "If AI can do a tsk better and more efficiently than me and I can use it to improve my life, then why wouldn't I?"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Learning-by-doing approach",
+      "grounding_span": "I tend to collaborate. But that is a knowledge gap. When I learn to use it fully at work then I would be happy to leave it to complete a task"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

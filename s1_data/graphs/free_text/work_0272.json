@@ -1,0 +1,174 @@
+{
+  "transcript_id": "work_0272",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as time-saving tool for unpaid administrative tasks",
+      "label_negative": "AI as unnecessary or inefficient for paid work",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI to draft quick emails to my support team so that I don't have to use my own unpaid time"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as quick reference for literacy knowledge",
+      "label_negative": "AI as inadequate for nuanced literacy tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "Usually more of a quick reference tool"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability in basic literacy tasks",
+      "label_negative": "AI unreliability in basic literacy tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "some models have shown a complete inability to do simple literacy tasks such as counting syllables"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Human-centered tutoring decisions vs AI-driven automation",
+      "label_negative": "AI-driven automation of tutoring decisions",
+      "bipolarity_complete": true,
+      "grounding_span": "I prefer to handle actual literacy tutoring decisions myself"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI capturing nuance of child development",
+      "label_negative": "AI missing nuance of child development",
+      "bipolarity_complete": true,
+      "grounding_span": "My concern in using AI is that it doesn't capture the nuance and subtleties of working with children"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Fair compensation for labor",
+      "grounding_span": "I am not okay with working for free"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional knowledge and understanding",
+      "grounding_span": "I'm truly curious about the 'why' behind word choices"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Personalized child-centered education",
+      "grounding_span": "I use my clinical training to essentially observe the 'whole child'"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for email drafting",
+      "valence": "positive",
+      "grounding_span": "I get a lot of satisfaction from the email/message generation that AI provides"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Amused frustration at AI literacy failures",
+      "valence": "mixed",
+      "grounding_span": "I got a good laugh at how badly the models bungled simple literacy tasks"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Resistance to AI in tutoring decisions",
+      "valence": "negative",
+      "grounding_span": "I prefer to handle actual literacy tutoring decisions myself"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Openness to future AI expansion",
+      "valence": "positive",
+      "grounding_span": "I'll probably use it more in both my professional and personal life"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Task-specific compartmentalization",
+      "grounding_span": "I do tend to give it specific, practical tasks, primarily administrative ones"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Clinical observational reasoning",
+      "grounding_span": "I use my clinical training to essentially observe the 'whole child'"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n3",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

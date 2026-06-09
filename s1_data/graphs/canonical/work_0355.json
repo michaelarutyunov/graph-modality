@@ -1,0 +1,191 @@
+{
+  "transcript_id": "work_0355",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as research assistant for clinical knowledge",
+      "label_negative": "AI as unreliable for culturally specific knowledge",
+      "bipolarity_complete": true,
+      "grounding_span": "I often use AI to research different clinical aspects"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as collaborative conversational partner",
+      "label_negative": "AI as one-shot answer provider",
+      "bipolarity_complete": true,
+      "grounding_span": "more of a back and forth conversation. It's kinda like bouncing ideas off of a really smart friend"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability and honesty",
+      "label_negative": "AI eagerness to please with fabricated answers",
+      "bipolarity_complete": true,
+      "grounding_span": "my biggest qualm with AI is the lack of honesty when you don't know the answer"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Personal writing as authentic expression",
+      "label_negative": "AI-generated writing as disingenuous",
+      "bipolarity_complete": true,
+      "grounding_span": "It just feels a bit disingenuous to not do the writing myself"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as evolving tool requiring human adaptation",
+      "label_negative": "AI as threat to human thinking",
+      "bipolarity_complete": true,
+      "grounding_span": "I see it as a co-evolution of the human race and technology"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Client well-being and treatment success",
+      "grounding_span": "research different clinical aspects that clients may benefit from"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Authenticity and personal integrity",
+      "grounding_span": "It just feels a bit disingenuous to not do the writing myself"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Interpersonal trust and nuanced communication",
+      "grounding_span": "most humans would appreciate it more to just say 'I don't know the answer'"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "I was particularly satisfied when researching borderline personality disorder and finding lots of useful information"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI's lack of cultural nuance",
+      "valence": "negative",
+      "grounding_span": "AI does not have a dearth of knowledge in this area and was not very useful"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "positive",
+      "grounding_span": "I see it as a co-evolution of the human race and technology. I think it will enrich peoples lives"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with AI dishonesty",
+      "valence": "negative",
+      "grounding_span": "my biggest qualm with AI is the lack of honesty when you don't know the answer"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Reluctance to use AI for writing",
+      "valence": "negative",
+      "grounding_span": "It just feels a bit disingenuous to not do the writing myself"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Conversational back-and-forth reasoning",
+      "grounding_span": "more of a back and forth conversation. It's kinda like bouncing ideas off of a really smart friend"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Verification-oriented approach",
+      "grounding_span": "I also typically double check most everything that I get from the AI. Trust yet confirm"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

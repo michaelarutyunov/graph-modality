@@ -1,0 +1,174 @@
+{
+  "transcript_id": "work_0255",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as research assistant for fact-checking and overview",
+      "label_negative": "AI as unreliable source of factual information",
+      "bipolarity_complete": true,
+      "grounding_span": "I use it to bring up sources that I can fact check myself against its claims"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as creative intern for ideation and rewriting",
+      "label_negative": "AI as final decision-maker without human oversight",
+      "bipolarity_complete": true,
+      "grounding_span": "I use it as if it were an intern, where I'll get it to generate content or information that I'll collaborate on it with, with me making the final call"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI alignment with personal tone and style",
+      "label_negative": "AI misalignment with desired tone and style",
+      "bipolarity_complete": true,
+      "grounding_span": "I like to re-edit the suggestions I receive to ensure they align with my style and tone"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Human personal touch in communications",
+      "label_negative": "AI-generated impersonal communications",
+      "bipolarity_complete": true,
+      "grounding_span": "it's the human/personal touch that makes all the difference in this industry"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI reliability for menial tasks like invoicing",
+      "label_negative": "AI unreliability for financial tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I can see myself using it more for menial tasks like invoicing etc once it becomes reliable"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Epistemic certainty and accuracy",
+      "grounding_span": "I'm still not 100% convinced of AI's ability to produce factual information consistently"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Authentic self-expression and personal voice",
+      "grounding_span": "I've always prided myself on my command of the English language and general communication skills"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and productivity",
+      "grounding_span": "I can see myself using it more for menial tasks like invoicing etc once it becomes reliable"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for website copy rewriting",
+      "valence": "positive",
+      "grounding_span": "I recall I was pretty happy with some suggestions a LLM made in terms of re-writing/updating our website copy"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI for email tone adjustments",
+      "valence": "negative",
+      "grounding_span": "I remember being frustrated when trying to get an LLM to rewrite an email by my prompting it with tone suggestions"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Cautious optimism about future AI use for menial tasks",
+      "valence": "mixed",
+      "grounding_span": "I can see myself using it more for menial tasks like invoicing etc once it becomes reliable"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Firm commitment to human element in communications",
+      "valence": "positive",
+      "grounding_span": "I don't think I'll ever give up the human element for communications"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative back-and-forth refinement with AI",
+      "grounding_span": "I'll go back and forth with requests for rephrasing or certain sentences that I'll then incorporate"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-specific boundary setting for AI use",
+      "grounding_span": "I also don't use AI for any financial stuff"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

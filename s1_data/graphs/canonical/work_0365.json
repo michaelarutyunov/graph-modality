@@ -1,0 +1,195 @@
+{
+  "transcript_id": "work_0365",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as task decomposition tool",
+      "label_negative": "AI as monolithic code generator",
+      "bipolarity_complete": true,
+      "grounding_span": "I usually try to break tasks down to smaller pieces and have ai solve the pieces"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as premature code generator",
+      "bipolarity_complete": true,
+      "grounding_span": "I asked claude to help refine the design I had. Usually when I'm in the design stage I specifically ask claude to not give me any code"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI involvement for system understanding",
+      "label_negative": "AI delegation without understanding",
+      "bipolarity_complete": true,
+      "grounding_span": "If I let Ai do everything then I won't know the details of the system and I wont be able to fix bugs"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as code generation assistant",
+      "label_negative": "AI for core logic and design",
+      "bipolarity_complete": true,
+      "grounding_span": "unless its super repetitive boiler plate code"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI agreeability in responses",
+      "label_negative": "AI providing unbiased critical feedback",
+      "bipolarity_complete": true,
+      "grounding_span": "AI being too agreeable has made me change how I prompt"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Deep system understanding and maintainability",
+      "grounding_span": "I want to be involved with almost every part of the system"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "if it's for work, then the objective is to make as many PRs as I can"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Creative satisfaction and enjoyment",
+      "grounding_span": "If it's a personal project then I like getting the dopamine of writing some code"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Intellectual honesty and accountability",
+      "grounding_span": "I wish AI didnt care about my feelings at all"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Preference for collaborative AI use",
+      "valence": "positive",
+      "grounding_span": "I try to have a collaborative session where I do as much as I can, and I ask the AI very specific questions"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI delegation due to poor output",
+      "valence": "negative",
+      "grounding_span": "after like a week, I basically couldnt work on the project anymore because I had no idea how anything worked"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI for simple syntax issues",
+      "valence": "positive",
+      "grounding_span": "if it's a simple (maybe syntax related issue) I just ask claude because its fast and its gonna get it right"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Satisfaction with AI when specific prompts work",
+      "valence": "negative",
+      "grounding_span": "AI being too agreeable has made me change how I prompt"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Systematic iterative decomposition of tasks",
+      "grounding_span": "I usually try to break tasks down to smaller pieces and have ai solve the pieces"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Preference for deep understanding and hands-on involvement",
+      "grounding_span": "I want to be involved with almost every part of the system"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n4",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

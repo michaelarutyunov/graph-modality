@@ -1,0 +1,192 @@
+{
+  "transcript_id": "creativity_0006",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as brainstorming and ideation partner",
+      "label_negative": "AI as insufficiently creative or agency-less collaborator",
+      "bipolarity_complete": true,
+      "grounding_span": "brainstorm with AI in order to flesh out a scene"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as editing and polishing tool",
+      "label_negative": "AI as threat to authentic human craft",
+      "bipolarity_complete": true,
+      "grounding_span": "incorporate AI a lot when it comes to editing my work"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as visual concept and moodboard generator",
+      "label_negative": "Manual visual creation or reference hunting",
+      "bipolarity_complete": true,
+      "grounding_span": "use AI to generate 'moodboard' pieces, or basic diagrams"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as character roleplayer for narrative exploration",
+      "label_negative": "AI as forgetful or sycophantic roleplayer",
+      "bipolarity_complete": true,
+      "grounding_span": "asking it to assume the role of a dungeon-master or character(s)"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI authenticity and detection concerns",
+      "label_negative": "Trust in human-made art without suspicion",
+      "bipolarity_complete": true,
+      "grounding_span": "question of authenticity"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI devaluation of human creative labor",
+      "label_negative": "Fair valuation and recognition of human craft",
+      "bipolarity_complete": true,
+      "grounding_span": "devalues the hard work that creatives may put into their field"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Creative authenticity and personal expression",
+      "grounding_span": "I would never use it to generate any part of a finished piece"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and workflow streamlining",
+      "grounding_span": "helped to streamline a few things"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Narrative depth and character authenticity",
+      "grounding_span": "authenticity of character portrayals"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Positive appreciation for AI as brainstorming aid",
+      "valence": "positive",
+      "grounding_span": "nice to do some sentiment analysis and summaries"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI's lack of true agency and memory",
+      "valence": "negative",
+      "grounding_span": "frustrating. The AI would forget some information"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Ambivalence about AI's impact on human authenticity",
+      "valence": "ambivalent",
+      "grounding_span": "I also wonder if that's feeding into the ongoing existential crisis of loneliness"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Concern about AI devaluing creative work",
+      "valence": "negative",
+      "grounding_span": "devalues the hard work that creatives may put into their field"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through exclusion — generates options then discards misfits",
+      "grounding_span": "having a wide list to choose from and excluding whatever doesn't feel right"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Comparative testing — uses AI as foil to test own intuitions",
+      "grounding_span": "compare its interpretations to how I *feel* they would genuinely act"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n5",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

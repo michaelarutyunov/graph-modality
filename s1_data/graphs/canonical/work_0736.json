@@ -1,0 +1,180 @@
+{
+  "transcript_id": "work_0736",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI transcription accuracy for technical terms",
+      "label_negative": "Human transcription skill preserved",
+      "bipolarity_complete": true,
+      "grounding_span": "AI essentially replaced the core skill you and your colleagues had developed"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI errors impacting patient care",
+      "bipolarity_complete": true,
+      "grounding_span": "I've seen an uptick in errors within reports, and those do impact patient care"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI freeing time for human-centric work",
+      "label_negative": "AI causing job loss and economic disruption",
+      "bipolarity_complete": true,
+      "grounding_span": "If we can get to a point as a society that AI is able to reliably produce accurate, high quality work on menial, administrative, mathematical/data-driven etc tasks, that would free humans up to do work that is personally resonant"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as meeting note-taking tool",
+      "label_negative": "AI in therapeutic recording and summarization",
+      "bipolarity_complete": true,
+      "grounding_span": "I'm leery of the function I've seen some utilize in which the session is recorded, with AI summarizing to generate notes"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as tool requiring human oversight",
+      "label_negative": "AI used carelessly without review",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is often only as good as the user's ability to apply wisdom and discretion in its use"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Patient safety and quality of care",
+      "grounding_span": "errors within reports, and those do impact patient care"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Meaningful and resonant work",
+      "grounding_span": "free humans up to do work that is personally resonant"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Human connection and empathy",
+      "grounding_span": "empathic connection and voice...communication with an individual who seems to truly care can make a dramatic impact"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Professional pride and identity",
+      "grounding_span": "We need to maintain our pride in what we do and the ethics of putting forth quality work"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Optimism about AI for career advancement",
+      "valence": "mixed",
+      "grounding_span": "my feelings are mixed"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Skepticism about AI replacing human therapy",
+      "valence": "negative",
+      "grounding_span": "I'm leery of the function I've seen some utilize in which the session is recorded"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI for scheduling",
+      "valence": "positive",
+      "grounding_span": "I do feel AI could be an asset in scheduling, in Telehealth management and billing/coding tasks"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Concern about careless use of AI without review",
+      "valence": "negative",
+      "grounding_span": "I am concerned about the use of generative AI in the workforce and the laziness I have witnessed"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Nuanced contextual reasoning — weighs pros and cons across domains",
+      "grounding_span": "I'm torn, to be honest"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Empathic perspective-taking — focuses on human connection and care",
+      "grounding_span": "empathic connection and voice...can make a dramatic impact in morale and sense of purpose"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

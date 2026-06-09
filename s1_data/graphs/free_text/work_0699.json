@@ -1,0 +1,169 @@
+{
+  "transcript_id": "work_0699",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as creative collaborator for story generation",
+      "label_negative": "AI as insufficient for full story writing",
+      "bipolarity_complete": true,
+      "grounding_span": "I like working collaboratively with the AI chatbot to formulate the story line"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability in producing desired story length",
+      "label_negative": "AI inability to produce full-length stories",
+      "bipolarity_complete": true,
+      "grounding_span": "I initially tried asking the chatbots to write the full 4000 word story, and they just couldn't get anywhere close"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI adherence to tone and style requirements",
+      "label_negative": "AI deviation from desired tone (e.g., abrupt endings)",
+      "bipolarity_complete": true,
+      "grounding_span": "They do tend to end quite abruptly"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI use transparency with audience",
+      "label_negative": "AI use hidden from audience",
+      "bipolarity_complete": true,
+      "grounding_span": "it is not something I advertise"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as economic enabler for new creators",
+      "label_negative": "Human writers as ideal but unaffordable",
+      "bipolarity_complete": true,
+      "grounding_span": "as a new creator with limited income, I cannot afford to hire writers"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative expression and storytelling",
+      "grounding_span": "Writing is something I have really enjoyed since being a child"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and productivity",
+      "grounding_span": "The faster the story writing process is, the more I can focus on the other aspects"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Community trust and acceptance",
+      "grounding_span": "I do worry about the community being concerned about the use of AI"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI-assisted creative process",
+      "valence": "positive",
+      "grounding_span": "It surprised me how easy the process can actually be"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI length limitations",
+      "valence": "negative",
+      "grounding_span": "it was so annoying not being able to get anything like what I wanted on the first try"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Concern about community perception of AI use",
+      "valence": "negative",
+      "grounding_span": "I do worry about the community being concerned about the use of AI"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Aspiration to transition to human writers",
+      "valence": "positive",
+      "grounding_span": "I do eventually foresee no longer using AI to write my stories"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through thorough prompting and tweaking",
+      "grounding_span": "I like to be as thorough as possible with my initial prompts, see what the chatbot provides, then tweak from there"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Systematic decomposition of tasks into manageable sub-tasks",
+      "grounding_span": "I ask the chatbot to write a plan for the story in 4 parts"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,175 @@
+{
+  "transcript_id": "work_0360",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as time-saving collaborative tool",
+      "label_negative": "AI as unreliable autonomous agent",
+      "bipolarity_complete": true,
+      "grounding_span": "I like how much time AI saves me in typing and brainstorming ideas, but I know it makes mistakes"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI draft quality and accuracy",
+      "label_negative": "AI draft errors and misinformation",
+      "bipolarity_complete": true,
+      "grounding_span": "The draft incorrectly stated the meeting would be 9AM EST and 4PM their time"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI-generated text authenticity",
+      "label_negative": "AI-generated text with detectable hallmarks",
+      "bipolarity_complete": true,
+      "grounding_span": "It comes off as unprofessional and a little tacky"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as skill development partner",
+      "label_negative": "AI as crutch leading to dependency",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is currently helping me grow my communication and negotiation skills"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI for research and analysis",
+      "label_negative": "AI for legal and contractual matters",
+      "bipolarity_complete": true,
+      "grounding_span": "I was assessing market values for creative collaborations two weeks ago"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Professional competence and client relationship",
+      "grounding_span": "it could cause confusion and strain relationships with clients"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Personal authenticity and voice",
+      "grounding_span": "I always make sure to take any draft and make it my own"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Skill growth and independence",
+      "grounding_span": "I hope to change to be less dependent in those areas and learn new ways to interact"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Effective advocacy and fair compensation",
+      "grounding_span": "I was able to gain bargaining value and negotiation ideas from my research"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI as research and analysis tool",
+      "valence": "positive",
+      "grounding_span": "I was very satisfied in how information was prepared"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Distrust of AI accuracy due to mistakes",
+      "valence": "negative",
+      "grounding_span": "I don't fully trust them to not make mistakes"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Rejection of unedited AI-generated text",
+      "valence": "negative",
+      "grounding_span": "It comes off as unprofessional and a little tacky"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Optimism about AI for skill development",
+      "valence": "positive",
+      "grounding_span": "I hope to use more advanced techniques and ask more in-depth questions to grow even further"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative collaborative editing — refines drafts through back-and-forth with AI",
+      "grounding_span": "I will either collaborate with the model to make edits such as making the draft more succinct, or I will take what it has given me and make my own edits"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Context-sensitive tailoring — adapts AI use based on client and situation",
+      "grounding_span": "The biggest thing is preference and who the client is"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

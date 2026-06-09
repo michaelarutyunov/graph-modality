@@ -1,0 +1,162 @@
+{
+  "transcript_id": "work_0841",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as time-saving tool for administrative tasks",
+      "label_negative": "AI as threat to artistic jobs",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is a time saver, especially in the more monotonous parts of the job"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as creative collaborator for reference generation",
+      "label_negative": "AI as replacement for original art creation",
+      "bipolarity_complete": true,
+      "grounding_span": "creating my own reference photos... a new and exciting way to have AI as a tool"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI-generated description quality: engaging and personal",
+      "label_negative": "AI-generated description quality: boring and literal",
+      "bipolarity_complete": true,
+      "grounding_span": "the platforms AI does a good generic start... I find the descriptions are very boring"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI reliability in specialized tasks",
+      "label_negative": "AI unreliability in specialized tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "Gemini stated that it could... however when I imported the file... it was all black"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Collaborative control over AI tasks",
+      "label_negative": "Full delegation to AI without oversight",
+      "bipolarity_complete": true,
+      "grounding_span": "I like to maintain some control over most tasks so I am usually collaborating the whole time"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative autonomy and artistic integrity",
+      "grounding_span": "I do the art myself as it is what I love"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "AI is a time saver"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Artistic differentiation and market success",
+      "grounding_span": "I have actually found a boost in discovery of my art"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Positive embrace of AI as a tool",
+      "valence": "positive",
+      "grounding_span": "I now see it as a tool"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Disappointment with AI failure on color palette",
+      "valence": "negative",
+      "grounding_span": "I was super excited to try this out, however when I imported the file... it was all black"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Ambivalence about AI image generation in art community",
+      "valence": "ambivalent",
+      "grounding_span": "I am on the fence about its use as many people can abuse this feature"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through collaboration",
+      "grounding_span": "I will start with an idea for a blog post and then work through it with an AI model, refining things adding stuff, taking stuff out or changing tone"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic layering of AI tools for differentiation",
+      "grounding_span": "I just take it a step further and run the descriptions a final time through Chat GPT or a similar model to make it even more polished"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

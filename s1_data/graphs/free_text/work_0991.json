@@ -1,0 +1,169 @@
+{
+  "transcript_id": "work_0991",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as data gathering and synthesis tool",
+      "label_negative": "Manual data gathering and synthesis",
+      "bipolarity_complete": true,
+      "grounding_span": "AI gathers all this information and makes a determination"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI accuracy and reliability",
+      "label_negative": "AI inaccuracy or error",
+      "bipolarity_complete": true,
+      "grounding_span": "We accept it as fact unless it is obviously wrong"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Human clinical judgment vs AI analysis",
+      "label_negative": "AI replacing human clinical judgment",
+      "bipolarity_complete": true,
+      "grounding_span": "Human insight is needed to validate the final numbers"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as time-saving efficiency tool",
+      "label_negative": "Time-consuming manual work",
+      "bipolarity_complete": true,
+      "grounding_span": "Something that takes AI seconds could take me much longer"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as collaborative partner in patient care",
+      "label_negative": "AI as independent task completer",
+      "bipolarity_complete": true,
+      "grounding_span": "I hope to use it more collaboratively in the future"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Patient care quality and accuracy",
+      "grounding_span": "It is important that we are accurate"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional efficiency and time savings",
+      "grounding_span": "I appreciate the additional time it affords me to do other tasks"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Human touch in healthcare",
+      "grounding_span": "there will always need to be a human aspect in patient care"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI's data gathering role",
+      "valence": "positive",
+      "grounding_span": "I usually feel satisfied with AI usage"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Trust in AI with verification",
+      "valence": "ambivalent",
+      "grounding_span": "We accept it as fact unless it is obviously wrong"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Optimism about future collaborative AI use",
+      "valence": "positive",
+      "grounding_span": "I hope to use it more collaboratively in the future"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Concern about AI replacing jobs",
+      "valence": "negative",
+      "grounding_span": "It bothers some that AI will take over our job"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic validation — accepts AI output unless obviously wrong",
+      "grounding_span": "We accept it as fact unless it is obviously wrong"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Holistic patient assessment — integrates data with human interaction",
+      "grounding_span": "someone may look great on paper, but if you talk to them or assess them personally, you may find out they are sicker"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

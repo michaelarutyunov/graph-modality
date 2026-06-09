@@ -1,0 +1,216 @@
+{
+  "transcript_id": "work_0429",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI for repetitive simple tasks",
+      "label_negative": "AI for complex or high-stakes tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "tasks done quickly that aren't overly complicated"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as adjustable starting point",
+      "label_negative": "AI as final product",
+      "bipolarity_complete": true,
+      "grounding_span": "easy enough to adjust"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as brainstorming and idea generator",
+      "label_negative": "AI as sole decision-maker",
+      "bipolarity_complete": true,
+      "grounding_span": "weed out bad ideas and enhance good ones"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as one-shot tool",
+      "bipolarity_complete": true,
+      "grounding_span": "go back and forth like you're collaborating with a coworker"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI requiring context explanation",
+      "label_negative": "AI with shared context like coworker",
+      "bipolarity_complete": true,
+      "grounding_span": "you have to explain everything to a chatbot whereas your coworkers usually know"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI sounding robotic and unnatural",
+      "label_negative": "AI sounding human-like",
+      "bipolarity_complete": true,
+      "grounding_span": "sounding very robotic that day"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI as research starting point",
+      "label_negative": "AI for mimicking human tone",
+      "bipolarity_complete": true,
+      "grounding_span": "forces to think more and do more research"
+    },
+    {
+      "id": "n8",
+      "type": "Construct",
+      "label": "Workplace acceptance of AI use",
+      "label_negative": "Workplace taboo on AI",
+      "bipolarity_complete": true,
+      "grounding_span": "AI seemed a little taboo in the workplace"
+    },
+    {
+      "id": "n9",
+      "type": "Construct",
+      "label": "Human expertise in social trends",
+      "label_negative": "AI expertise in social trends",
+      "bipolarity_complete": true,
+      "grounding_span": "my quickness to know social norms and viral things on social media"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "save you hours which improves efficiency"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Quality output and SEO effectiveness",
+      "grounding_span": "SEO not being as affective as it should be"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Job security and skill relevance",
+      "grounding_span": "The value in my work comes from getting the jobs done"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "This is when I enjoy using AI"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Frustration with AI when it deviates from tone",
+      "valence": "negative",
+      "grounding_span": "sounding very robotic that day"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Relief at workplace acceptance shift",
+      "valence": "positive",
+      "grounding_span": "she became less of a stickler for it so now I tend to use it more"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Confidence in AI as a key skill",
+      "valence": "positive",
+      "grounding_span": "Where I excel over AI is my quickness to know social norms"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement with limited back-and-forth",
+      "grounding_span": "go back and forth like you're collaborating with a coworker"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Selective delegation based on task nature",
+      "grounding_span": "tasks done quickly that aren't overly complicated"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n13",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n8",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n9",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n4",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,181 @@
+{
+  "transcript_id": "work_0587",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as time-saving research assistant for complex multi-team topics",
+      "label_negative": "AI as unreliable hallucinator requiring double-checking",
+      "bipolarity_complete": true,
+      "grounding_span": "The LLM is good at summarizing the different discussions which saves time"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as generator of novel valuable references",
+      "label_negative": "AI as sole source of information without verification",
+      "bipolarity_complete": true,
+      "grounding_span": "I will look at the response from the LLM but then go through the list of references it provides for more complete information"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI trustworthiness and verification",
+      "label_negative": "AI untrustworthiness due to hallucination experience",
+      "bipolarity_complete": true,
+      "grounding_span": "I found one instance where the information it returned was wrong. That was frustrating and I still remember that"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI use as habitual practice",
+      "label_negative": "AI as novel tool for unfamiliar tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I have not yet used AI to help with drafting presentations or data analysis yet. I am just in habit of doing those myself"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as efficiency tool",
+      "label_negative": "AI as threat to job roles like data analysts",
+      "bipolarity_complete": true,
+      "grounding_span": "In the long run I'm sure AI can make things more efficient which will result in less need for data analysts"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "saves time over me going through each group discussion"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Accuracy and reliability",
+      "grounding_span": "it hallucinated an answer so it still needs to be double-checked"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Personal competence and skill development",
+      "grounding_span": "it's up to us individually to work on our skills"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI summaries",
+      "valence": "positive",
+      "grounding_span": "The LLM is good at summarizing the different discussions which saves time"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI hallucination in database query",
+      "valence": "negative",
+      "grounding_span": "I found one instance where the information it returned was wrong. That was frustrating"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Cautious trust with verification",
+      "valence": "ambivalent",
+      "grounding_span": "it still needs to be double-checked"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Openness to increasing AI use in future",
+      "valence": "positive",
+      "grounding_span": "I think I just need to get started and try it"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Frustration with research AI",
+      "valence": "negative",
+      "grounding_span": "I can do simple research myself"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic escalation from simple to complex tasks",
+      "grounding_span": "It is when I am trying to do more involved research that I will use the LLM"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Verification-oriented approach after negative experience",
+      "grounding_span": "I still remember that when doing research with the LLM"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

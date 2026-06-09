@@ -1,0 +1,163 @@
+{
+  "transcript_id": "work_0720",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as brainstorming partner for creative ideas",
+      "label_negative": "AI as insufficiently creative or basic idea generator",
+      "bipolarity_complete": true,
+      "grounding_span": "I ask AI to brainstorm more ideas"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as time-saving summarizer for administrative tasks",
+      "label_negative": "Manual detailed writing without AI assistance",
+      "bipolarity_complete": true,
+      "grounding_span": "AI to summarize my comments into one paragraph and I was so impressed because this saved me a lot of time"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI suitability for document creation and formatting",
+      "label_negative": "Manual copy-paste document creation",
+      "bipolarity_complete": true,
+      "grounding_span": "I would love to explore using AI for creating beautiful documents in PDF format"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI in individualized Montessori lesson planning",
+      "label_negative": "AI-generated generic lesson plans",
+      "bipolarity_complete": true,
+      "grounding_span": "I prefer to plan the montessori-specific lesson planning myself as the students are at different stages"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI awareness of classroom material availability",
+      "label_negative": "AI suggesting unavailable materials",
+      "bipolarity_complete": true,
+      "grounding_span": "a specific montessori activity is suggested but it is one we don't currently have in the classroom"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Time efficiency",
+      "grounding_span": "saved me a lot of time"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Creative inspiration",
+      "grounding_span": "brainstorm more ideas"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Individualized student-centered teaching",
+      "grounding_span": "the students are at different stages"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Professional presentation quality",
+      "grounding_span": "A complete document I can present to my director would be a great asset"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for summarizing comments",
+      "valence": "positive",
+      "grounding_span": "I was really satisfied with AI when I was writing comments for my students"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Preference for human-led lesson planning",
+      "valence": "negative",
+      "grounding_span": "I prefer to plan the montessori-specific lesson planning myself"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Openness to future AI use for document creation",
+      "valence": "positive",
+      "grounding_span": "I would love to explore using AI for creating beautiful documents in PDF format"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through guided prompting",
+      "grounding_span": "If the list is too basic, or not original enough, I ask AI to create a new list and offer some guidance"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Contextual adaptation based on student needs",
+      "grounding_span": "I prefer to plan the montessori-specific lesson planning myself as the students are at different stages"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,174 @@
+{
+  "transcript_id": "creativity_0077",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as editing assistant",
+      "label_negative": "Manual laborious editing without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I used Photoshop AI to generate the edits to the garment, and after some fiddling with my prompts I was finished with the edits in 15 minutes instead of hours"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI adherence to instructions",
+      "label_negative": "AI struggle with very specific instructions",
+      "bipolarity_complete": true,
+      "grounding_span": "Currently I find that image models often struggle with very specific instructions"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI photo-realism quality",
+      "label_negative": "AI inability to produce photo-realistic images",
+      "bipolarity_complete": true,
+      "grounding_span": "most of them are not very good at producing photo-realistic images as a whole"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as threat to artistic endeavors",
+      "label_negative": "Respect for artists' original work",
+      "bipolarity_complete": true,
+      "grounding_span": "I worry about the way that AI uses artist's original work to produce images"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI energy consumption",
+      "label_negative": "Low energy consumption",
+      "bipolarity_complete": true,
+      "grounding_span": "I'm concerned about the amount of power AI computing takes"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "It takes much less time to produce a realistic and high-quality result"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Creative control and precision",
+      "grounding_span": "I am driving the creative decisions most of the time"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Ethical responsibility",
+      "grounding_span": "I worry about the way that AI uses artist's original work"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Positive appreciation of AI for efficiency",
+      "valence": "positive",
+      "grounding_span": "It is great to be able to deliver high quality images to a client without as much work"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI limitations",
+      "valence": "negative",
+      "grounding_span": "it does sometimes take quite a bit of fiddling with the prompt and generating multiple options before I get something that I can use"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Concern about AI's ethical risks",
+      "valence": "negative",
+      "grounding_span": "I worry about the way that AI uses artist's original work to produce images"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Concern about AI environmental impact",
+      "valence": "negative",
+      "grounding_span": "I'm concerned about the amount of power AI computing takes"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative prompt refinement",
+      "grounding_span": "after some fiddling with my prompts I was finished with the edits"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic outcome focus — evaluates AI based on practical results",
+      "grounding_span": "It takes much less time to produce a realistic and high-quality result"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

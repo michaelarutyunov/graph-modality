@@ -1,0 +1,174 @@
+{
+  "transcript_id": "work_0727",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as strategic thinking partner",
+      "label_negative": "AI as generic, uninsightful advisor",
+      "bipolarity_complete": true,
+      "grounding_span": "AI misses a huge number of the strategic thinking elements"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as collaborative copywriting tool",
+      "label_negative": "AI as autonomous content creator",
+      "bipolarity_complete": true,
+      "grounding_span": "I use it as a refining tool similar to what you've suggested - there is lots of back and forth involved"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as admin task delegator",
+      "label_negative": "Manual admin burden",
+      "bipolarity_complete": true,
+      "grounding_span": "I would love to be able to delegate all of that to AI"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as macro creator for spreadsheets",
+      "label_negative": "AI as unreliable macro generator",
+      "bipolarity_complete": true,
+      "grounding_span": "I get particularly frustrated when I ask AI to create macros"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Balanced AI use vs over-delegation or avoidance",
+      "label_negative": "Over-delegation or complete avoidance of AI",
+      "bipolarity_complete": true,
+      "grounding_span": "Personally I use AI more than most but not for everything"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Strategic business insight",
+      "grounding_span": "strategic thinking elements that are required to make sound business decisions"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and time efficiency",
+      "grounding_span": "massive time saver"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional competence and accountability",
+      "grounding_span": "when I hold them to account in meetings"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with collaborative copywriting",
+      "valence": "positive",
+      "grounding_span": "I was particularly satisfied when I used the collaborative copywriting techniques"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with macro creation inconsistency",
+      "valence": "negative",
+      "grounding_span": "I get particularly frustrated when I ask AI to create macros"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Desire for unified admin AI tool",
+      "valence": "positive",
+      "grounding_span": "if such a tool existed where I could feed in my business bank account transactions"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Critique of over-delegators and avoiders",
+      "valence": "negative",
+      "grounding_span": "over-delegated their work to it and barely have a thought of their own"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through back-and-forth",
+      "grounding_span": "there is lots of back and forth involved"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic adaptability and future-oriented thinking",
+      "grounding_span": "better off surfing and using the waves to your advantage"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n4",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

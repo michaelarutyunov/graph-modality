@@ -1,0 +1,192 @@
+{
+  "transcript_id": "work_0627",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as formatting and editing tool for professional communication",
+      "label_negative": "AI as distorting meaning and lacking personal voice",
+      "bipolarity_complete": true,
+      "grounding_span": "I use it to organize meeting notes, reword emails, and review documents for suggested edits"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI accuracy and reliability in domain-specific knowledge",
+      "label_negative": "AI inconsistency and hallucination in specialized domains",
+      "bipolarity_complete": true,
+      "grounding_span": "giving me incorrect information on well known and established banking regulations"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as time-saving productivity tool",
+      "label_negative": "AI as time-wasting due to required review and errors",
+      "bipolarity_complete": true,
+      "grounding_span": "Its current version does not really set up that much time"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as threat to personal skills and job role",
+      "label_negative": "AI as complement preserving human expertise",
+      "bipolarity_complete": true,
+      "grounding_span": "it could become a substitute for a lot of what I do"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as collaborative step-by-step partner",
+      "label_negative": "AI as independent task completer",
+      "bipolarity_complete": true,
+      "grounding_span": "I do collaborate with it through out a task"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Professional credibility and trustworthiness",
+      "grounding_span": "why am I using AI at all if it cannot be trusted"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "it is not valuable"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Personal authenticity and brand",
+      "grounding_span": "my personal brand/reputation being embedded in the language"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Job security and skill preservation",
+      "grounding_span": "where/when my skills will be lapped by AI and be replaced"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI inaccuracy in specialized knowledge",
+      "valence": "negative",
+      "grounding_span": "giving me incorrect information on well known and established banking regulations"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Skepticism about current AI value due to error-proneness",
+      "valence": "negative",
+      "grounding_span": "it is not valuable"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Resistance to AI for personal voice tasks",
+      "valence": "negative",
+      "grounding_span": "it makes me sound like a robot instead of my personal brand"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Conditional acceptance of AI for formal communication",
+      "valence": "positive",
+      "grounding_span": "When i am communicating with upper management...it may be best to 'know the audience'"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Expectation of increased AI use despite current limitations",
+      "valence": "mixed",
+      "grounding_span": "I do expect my relationship with AI to grow at work"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative review and verification — checks AI outputs step-by-step",
+      "grounding_span": "I always review it because it is prone to errors"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Audience-aware communication tailoring — adapts style based on recipient",
+      "grounding_span": "know the audience and be more direct with my language"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,162 @@
+{
+  "transcript_id": "work_0226",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as writing assistant for communication",
+      "label_negative": "AI-generated content lacking personal voice",
+      "bipolarity_complete": true,
+      "grounding_span": "I will write what I think is a basic post... then ask Chat GPT to rewrite it for me"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for data processing and automation",
+      "label_negative": "Manual tedious data handling",
+      "bipolarity_complete": true,
+      "grounding_span": "ChatGPT did all of that in a few seconds, and this was very satisfying"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI use for coding skill development",
+      "label_negative": "AI causing loss of coding skills",
+      "bipolarity_complete": true,
+      "grounding_span": "I am a little bit concerned that the small coding skills that I have will disappear when I use ChatGPT instead"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Confidentiality in AI use",
+      "label_negative": "Sharing sensitive data with AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I am worried about sharing confidential details with an AI about my students"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Authentic communication",
+      "grounding_span": "I then amend it slightly so it sounds slightly more like me"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and productivity",
+      "grounding_span": "ChatGPT did all of that in a few seconds"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Skill growth and learning",
+      "grounding_span": "I am more likely to try and code as I now have help"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Data privacy and security",
+      "grounding_span": "I am worried about sharing confidential details with an AI"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for data tasks",
+      "valence": "positive",
+      "grounding_span": "ChatGPT did all of that in a few seconds, and this was very satisfying"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Concern about skill loss",
+      "valence": "negative",
+      "grounding_span": "I am a little bit concerned that the small coding skills that I have will disappear"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Worry about confidentiality",
+      "valence": "negative",
+      "grounding_span": "I am worried about sharing confidential details with an AI"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Preference for human touch in communication",
+      "valence": "positive",
+      "grounding_span": "I prefer to write my own content from scratch, THEN have AI adjust it, then refine it again myself"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement with personalization",
+      "grounding_span": "I will write what I think is a basic post... then ask Chat GPT to rewrite it for me... I then amend it slightly"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Risk-aware cautious adoption",
+      "grounding_span": "I do generally avoid this. I sometimes use the child's admission number rather than name"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

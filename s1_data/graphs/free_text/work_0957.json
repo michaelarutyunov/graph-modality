@@ -1,0 +1,242 @@
+{
+  "transcript_id": "work_0957",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as fast and versatile tool for diverse tasks",
+      "label_negative": "AI as limited or unreliable for complex tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "AI has a huge variety of uses in my everyday workday"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI empathy and human connection in customer service",
+      "label_negative": "AI lack of empathy in customer service",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't believe AI is capable of any sort of empathy"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI accuracy and need for human verification",
+      "label_negative": "AI error-proneness and need for specificity",
+      "bipolarity_complete": true,
+      "grounding_span": "It's easy to get things wrong using AI if you aren't VERY specific"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Collaborative AI use vs full delegation",
+      "label_negative": "Full delegation to AI without oversight",
+      "bipolarity_complete": true,
+      "grounding_span": "I am WAY more likely to collaborate it with tasks"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as job threat vs productivity aid",
+      "label_negative": "AI as job threat",
+      "bipolarity_complete": true,
+      "grounding_span": "Half of the people I know despise AI for it's ability to take away jobs"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI reliability for simple scripting tasks",
+      "label_negative": "AI failure on simple scripting tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I would have thought something so simple wouldn't have been a hard task for AI to do"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI impact on skill maintenance and job market",
+      "label_negative": "AI reducing need for human skills",
+      "bipolarity_complete": true,
+      "grounding_span": "You really have to be active in your area of expertise"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and productivity",
+      "grounding_span": "It's fast"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Human empathy and connection",
+      "grounding_span": "human connection, honestly. It makes all of the difference"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Accuracy and reliability",
+      "grounding_span": "triple-check it myself to make sure it's right"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Job security and skill relevance",
+      "grounding_span": "you're at risk of your job being replaced"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Positive embrace of AI versatility",
+      "valence": "positive",
+      "grounding_span": "AI has a huge variety of uses in my everyday workday"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Negative stance on AI in customer service",
+      "valence": "negative",
+      "grounding_span": "I don't believe AI is capable of any sort of empathy"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Cautious stance on AI accuracy",
+      "valence": "ambivalent",
+      "grounding_span": "It's easy to get things wrong using AI if you aren't VERY specific"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Preference for collaboration over delegation",
+      "valence": "positive",
+      "grounding_span": "I am WAY more likely to collaborate it with tasks"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Frustration with AI on simple scripting",
+      "valence": "negative",
+      "grounding_span": "I found this incredibly frustrating"
+    },
+    {
+      "id": "n17",
+      "type": "Stance",
+      "label": "Concern about AI impact on job market",
+      "valence": "negative",
+      "grounding_span": "It makes the job market a lot more cut-throat"
+    },
+    {
+      "id": "n18",
+      "type": "Stance",
+      "label": "Optimistic continued use of AI",
+      "valence": "positive",
+      "grounding_span": "I'm not going to stop using it"
+    },
+    {
+      "id": "n19",
+      "type": "CognitiveStyleMarker",
+      "label": "Hands-on troubleshooting and iterative testing",
+      "grounding_span": "I ended up spending the better part of two hours trying to troubleshoot"
+    },
+    {
+      "id": "n20",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic boundary-setting between AI and human tasks",
+      "grounding_span": "There are some things I'd rather a human do"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n17",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n18",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n6",
+      "target": "n19",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n20",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

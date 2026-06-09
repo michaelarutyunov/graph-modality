@@ -1,0 +1,190 @@
+{
+  "transcript_id": "work_0685",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as idea generator and organizer",
+      "label_negative": "Manual task organization without AI",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I'll often prompt different AIs to help me find those overlaps more efficiently"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability and accuracy in task tracking",
+      "label_negative": "AI forgetting or misprioritizing tasks",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "Oftentimes I find that the models will miss something or forget about previously mentioned tasks"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as pressure reliever for significant tasks",
+      "label_negative": "AI as in-the-moment assistant during busy times",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I think the AI is more useful for me in my downtime to 'get ahead' for the rest of the busy parts"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as tool for career advancement",
+      "label_negative": "Generalist skills becoming obsolete",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I'm essentially trying to make myself an expert at interacting with the AI itself"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as supplement to creative process",
+      "label_negative": "AI for creative tasks",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I think I'll always engage with AI for non-creative tasks"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "This lets me tackle routine parts of multiple projects at the same time"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Accuracy and reliability",
+      "grounding_span": "I do often find myself having to double-check everything put back to me"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Career resilience and adaptability",
+      "grounding_span": "I'm essentially trying to make myself an expert at interacting with the AI itself"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Autonomy and personal control",
+      "grounding_span": "when I'm up against it I'll often have to completely deviate from the suggested structure"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for time-saving",
+      "valence": "positive",
+      "grounding_span": "It was very satisfying"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI errors",
+      "valence": "negative",
+      "grounding_span": "I do find myself spending a lot of time correcting them"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Proactive embrace of AI as strategic tool",
+      "valence": "positive",
+      "grounding_span": "I'm essentially trying to make myself an expert at interacting with the AI itself"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Concern about AI replacing junior roles",
+      "valence": "negative",
+      "grounding_span": "the junior employees are becoming less necessary"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Proactive prompt engineering with guardrails",
+      "grounding_span": "I'll build resilience to them into the prompts I feed it"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Bulk upfront information then short refinements",
+      "grounding_span": "I try to give it as much as possible up-front"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

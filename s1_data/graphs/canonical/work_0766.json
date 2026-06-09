@@ -1,0 +1,186 @@
+{
+  "transcript_id": "work_0766",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as factual information source for specific regional knowledge",
+      "label_negative": "AI as unreliable for niche or specialized identification",
+      "bipolarity_complete": true,
+      "grounding_span": "I often am asking questions about the specific region"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as explanation aid for known concepts",
+      "label_negative": "AI as generic one-size-fits-all explainer",
+      "bipolarity_complete": true,
+      "grounding_span": "please explain the ampullae of lorenzini as if you were a fourth grade science teacher"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for practical field strategies",
+      "label_negative": "AI as impractical for context-dependent planning",
+      "bipolarity_complete": true,
+      "grounding_span": "I have used chatGPT to help me catch a specific fish in a specific location"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as curriculum enrichment and refreshment tool",
+      "label_negative": "AI as replacement for human teaching interaction",
+      "bipolarity_complete": true,
+      "grounding_span": "deepening and refining my curriculum for students"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI reliability and factuality",
+      "label_negative": "AI for open-ended conversational exploration",
+      "bipolarity_complete": true,
+      "grounding_span": "asking for very direct answers that have easy-to-spot factual information"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Student engagement and learning",
+      "grounding_span": "yielded me results that I was extremely satisfied with"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional autonomy",
+      "grounding_span": "it would just be faster and probably yield me better results to just write it myself"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and speed in work",
+      "grounding_span": "something I would have not thought of myself"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "yielded me results that I was extremely satisfied with"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI for niche problems",
+      "valence": "negative",
+      "grounding_span": "AI become entirely useless"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Appreciation for AI in field strategies learned from colleague",
+      "valence": "positive",
+      "grounding_span": "something I would have not thought of myself, but a colleague showed me"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Skepticism about AI replacing teachers",
+      "valence": "mixed",
+      "grounding_span": "I do get worried in the sense of AI taking over a lot of education"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Cautious optimism about AI in education",
+      "valence": "positive",
+      "grounding_span": "help me recycle information so that I do not myself get bored"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic outcome focus — evaluates AI based on practical results",
+      "grounding_span": "it would take a long time to get the AI to give a lesson plan that actually works for my purposes"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative learning through peer demonstration — adopts AI use after seeing colleague's success",
+      "grounding_span": "a colleague showed me"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

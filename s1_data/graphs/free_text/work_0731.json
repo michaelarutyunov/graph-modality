@@ -1,0 +1,291 @@
+{
+  "transcript_id": "work_0731",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as brainstorming and advice partner",
+      "label_negative": "AI as unhelpful or missing nuance",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI to help me with brainstorming for ideas, expert advice for tricky situations"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for drafting correspondence",
+      "label_negative": "Manual drafting of correspondence",
+      "bipolarity_complete": true,
+      "grounding_span": "helping me draft emails or phone call templates"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Privacy and sensitivity of information",
+      "label_negative": "Sharing sensitive information with AI",
+      "bipolarity_complete": true,
+      "grounding_span": "Some tasks involve particularly personal or sensitive information and I am mindful not to use AI for those tasks for privacy reasons"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI understanding of context and nuance",
+      "label_negative": "AI missing nuance or context",
+      "bipolarity_complete": true,
+      "grounding_span": "the AI model has missed some nuance of my particular situation"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Quality of AI-generated writing",
+      "label_negative": "Poor quality AI writing (wordy, terse, lacking warmth)",
+      "bipolarity_complete": true,
+      "grounding_span": "I sometimes notice a lack of warmth, sometimes the product is particularly wordy and at other times it feels too terse"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as productivity enhancer for routine tasks",
+      "label_negative": "AI as time-consuming or unhelpful",
+      "bipolarity_complete": true,
+      "grounding_span": "I am able to use the models to create lots of short, relatively simple correspondence which otherwise might be time consuming"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI as support for ADHD-related challenges",
+      "label_negative": "Struggling with task initiation without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I have ADHD myself and sometimes I get 'tongue tied' when trying to phrase things. AI can help unblock that workflow"
+    },
+    {
+      "id": "n8",
+      "type": "Construct",
+      "label": "AI as enhancer of human-centered work",
+      "label_negative": "AI as replacement for human roles",
+      "bipolarity_complete": true,
+      "grounding_span": "I hope that AI will help disability practitioners to be able to support their clients more comprehensively"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Effective support for disabled individuals",
+      "grounding_span": "supporting a disabled adult (with high functioning autism) as a mentor"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Privacy and confidentiality",
+      "grounding_span": "I am mindful not to use AI for those tasks for privacy reasons"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "High-quality professional communication",
+      "grounding_span": "it's important to me for my correspondence to be worded in a very high quality manner"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Productivity and time efficiency",
+      "grounding_span": "means I have more time to spend on the more subtle, personal support tasks"
+    },
+    {
+      "id": "n13",
+      "type": "Value",
+      "label": "Personal well-being and reduced cognitive load",
+      "grounding_span": "avoids the 'blank page' panic on starting a task that can sometimes hold me back"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Satisfaction with AI for brainstorming and advice",
+      "valence": "positive",
+      "grounding_span": "I use AI to help me with brainstorming for ideas, expert advice for tricky situations"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Caution about privacy with sensitive information",
+      "valence": "negative",
+      "grounding_span": "I am mindful not to use AI for those tasks for privacy reasons"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Frustration when AI misses nuance or context",
+      "valence": "negative",
+      "grounding_span": "the AI model has missed some nuance of my particular situation"
+    },
+    {
+      "id": "n17",
+      "type": "Stance",
+      "label": "Dissatisfaction with AI writing quality",
+      "valence": "negative",
+      "grounding_span": "I sometimes notice a lack of warmth, sometimes the product is particularly wordy and at other times it feels too terse"
+    },
+    {
+      "id": "n18",
+      "type": "Stance",
+      "label": "Satisfaction with AI for routine correspondence",
+      "valence": "positive",
+      "grounding_span": "I am able to use the models to create lots of short, relatively simple correspondence which otherwise might be time consuming"
+    },
+    {
+      "id": "n19",
+      "type": "Stance",
+      "label": "Gratitude for AI support with ADHD",
+      "valence": "positive",
+      "grounding_span": "AI can help unblock that workflow for me which is great"
+    },
+    {
+      "id": "n20",
+      "type": "Stance",
+      "label": "Optimism about AI enhancing human work",
+      "valence": "positive",
+      "grounding_span": "I hope that AI will help disability practitioners to be able to support their clients more comprehensively"
+    },
+    {
+      "id": "n21",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative back-and-forth refinement",
+      "grounding_span": "I work back and forth with the AI model"
+    },
+    {
+      "id": "n22",
+      "type": "CognitiveStyleMarker",
+      "label": "Contextual boundary-setting based on task sensitivity",
+      "grounding_span": "I am mindful not to use AI for those tasks for privacy reasons"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n13",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n14",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n17",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n18",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n19",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n20",
+      "target": "n8",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n21",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n22",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n21",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n21",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n21",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n7",
+      "target": "n21",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n8",
+      "target": "n21",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n3",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n4",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

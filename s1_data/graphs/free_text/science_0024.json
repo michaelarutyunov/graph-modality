@@ -1,0 +1,221 @@
+{
+  "transcript_id": "science_0024",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI for code translation and technical tasks",
+      "label_negative": "Manual code rewriting and library discovery",
+      "bipolarity_complete": true,
+      "grounding_span": "rewrite some code my colleague had written in matlab into python"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for debugging physically irrelevant issues",
+      "label_negative": "AI for debugging physically relevant issues",
+      "bipolarity_complete": true,
+      "grounding_span": "debugging that has to do more with eg. python specifics/conventions"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for one-off tasks vs. foundational knowledge",
+      "label_negative": "AI for tasks requiring deep understanding",
+      "bipolarity_complete": true,
+      "grounding_span": "one-off less dependable code"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI with literature context for research solutions",
+      "label_negative": "AI without literature context",
+      "bipolarity_complete": true,
+      "grounding_span": "lack of literature context is a hinderance"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI for large-scale literature review",
+      "label_negative": "Manual literature review",
+      "bipolarity_complete": true,
+      "grounding_span": "review literature for me at a large scale"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as independent researcher and credit allocation",
+      "label_negative": "AI as tool without credit concerns",
+      "bipolarity_complete": true,
+      "grounding_span": "if let's say claude becomes able to do independent research, who gets the credit"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "save a lot of time"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Scientific understanding and discovery",
+      "grounding_span": "maybe this infinity is a breakthrough"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Intellectual ownership and credit",
+      "grounding_span": "who gets the credit"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Positive toward AI for code translation and technical tasks",
+      "valence": "positive",
+      "grounding_span": "AI was able to do it cleanly using libraries I didn't know about"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Negative toward AI for debugging physically relevant issues",
+      "valence": "negative",
+      "grounding_span": "it is very difficult to trust a large language model to be able to give a physically sensible answer"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Ambivalent toward AI for foundational knowledge tasks",
+      "valence": "ambivalent",
+      "grounding_span": "it is beneficial for me to be able to manage and understand exactly what numpy linspace does"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Negative toward AI due to lack of literature context",
+      "valence": "negative",
+      "grounding_span": "lack of literature context is a hinderance"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Positive toward AI for large-scale literature review",
+      "valence": "positive",
+      "grounding_span": "I would love for AI to be able to review literature for me at a large scale"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Concerned about AI as independent researcher and credit",
+      "valence": "negative",
+      "grounding_span": "I wonder about ownership"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Task-specific pragmatic calibration — distinguishes between one-off and foundational tasks",
+      "grounding_span": "one-off less dependable code"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Contextual trust calibration — trusts AI when output is verifiable, distrusts when physical significance is at stake",
+      "grounding_span": "I ran the code and the figures were perfect"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

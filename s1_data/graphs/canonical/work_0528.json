@@ -1,0 +1,194 @@
+{
+  "transcript_id": "work_0528",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as mere automation tool",
+      "bipolarity_complete": true,
+      "grounding_span": "I use it for ideation -- developing hypotheses and building frameworks"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI solution writing capability",
+      "label_negative": "AI fully autonomous writing",
+      "bipolarity_complete": true,
+      "grounding_span": "AI doesn't come close to writing them for me, but it can take my bare bones outline and write a very rough draft"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI trustworthiness and verification",
+      "label_negative": "Distrust in AI for qualitative nuance",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't trust AI to find impactful quotes or qualitative nuance"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI distillation of extensive notes",
+      "label_negative": "Manual over-detailed note processing",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is good at distilling that into a few core points, and said well"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as quality enhancer and time saver",
+      "label_negative": "AI as pure delegation tool",
+      "bipolarity_complete": true,
+      "grounding_span": "I am interested in collaboration and finding ways to improve the quality of my work by say, 10% and reduce the time to do it by 10%"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "Human expertise and credibility in storytelling",
+      "label_negative": "AI-generated conclusions lacking credibility",
+      "bipolarity_complete": true,
+      "grounding_span": "the premise is the conclusions are by experts and they have credibility with decisionmakers in the industry"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "Organizational endorsement of AI use",
+      "label_negative": "Unrealistic AI expectations leading to failure",
+      "bipolarity_complete": true,
+      "grounding_span": "Orgs and employees alike need feasible use cases"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Accuracy and credibility in client deliverables",
+      "grounding_span": "The work I produce is expensive and for demanding clients and I take pride in it"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Personal understanding and narrative building",
+      "grounding_span": "going through the data slowly myself helps me write the story and build the framework in my mind"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "reduce the time to do it by 10%"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Trustworthiness and accuracy",
+      "grounding_span": "the conclusions are by experts and they have credibility with decisionmakers"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI distillation",
+      "valence": "positive",
+      "grounding_span": "Satisfied when it makes sense of things"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Frustration with AI writing tics",
+      "valence": "negative",
+      "grounding_span": "its incessant use of the dash to get out of tricky writing situations is frustrating"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "mixed",
+      "grounding_span": "I'm optimistic it won't hurt workers... Nevertheless, it could be very very disruptive"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement with limited back-and-forth",
+      "grounding_span": "It's a back and forth -- sometimes big picture, sometimes a narrow issue"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Deliberate hands-on engagement with raw data",
+      "grounding_span": "I like to do that myself because I don't trust AI to find impactful quotes"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,192 @@
+{
+  "transcript_id": "science_0115",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as information discovery tool for hard-to-find data",
+      "label_negative": "Traditional search engine limitations",
+      "bipolarity_complete": true,
+      "grounding_span": "AI tools were absolutely life-saving when it came to finding industrial information buried deep in business websites"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as rephrasing and proofreading aid",
+      "label_negative": "Manual writing and editing",
+      "bipolarity_complete": true,
+      "grounding_span": "rephrasing descriptions of certain phenomena...proofreading"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as creative idea generator when stuck",
+      "label_negative": "Persistent manual search without progress",
+      "bipolarity_complete": true,
+      "grounding_span": "coming up with new ideas where I was finding myself on wild goose chases"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as last resort for bridging theoretical-practical gap",
+      "label_negative": "Empirical testing as ideal but unavailable",
+      "bipolarity_complete": true,
+      "grounding_span": "desperation...the thought was entering my mind that it might not be possible with the information available"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI source verifiability enabling trust",
+      "label_negative": "Unverifiable AI outputs",
+      "bipolarity_complete": true,
+      "grounding_span": "Gemini shows sources...verify the citations used in the paper if needed"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI for code-based procedural tasks",
+      "label_negative": "Creative thinking required",
+      "bipolarity_complete": true,
+      "grounding_span": "those were more a matter of following a code-based process, there was little need for creative thinking"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Project completion under constraints",
+      "grounding_span": "this report took weeks to produce...it might not be possible with the information available"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Academic rigor and accuracy",
+      "grounding_span": "verify the citations used in the paper if needed by viewing it myself"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Efficiency and time saving",
+      "grounding_span": "life-saving when it came to finding industrial information"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Gratitude for AI as life-saving tool",
+      "valence": "positive",
+      "grounding_span": "AI tools were absolutely life-saving"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Desperation-driven reliance on AI",
+      "valence": "mixed",
+      "grounding_span": "desperation! This report took weeks to produce"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Trust in AI when sources are verifiable",
+      "valence": "positive",
+      "grounding_span": "Gemini shows sources...verify the citations"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Disinterest in AI for procedural tasks",
+      "valence": "negative",
+      "grounding_span": "those were more a matter of following a code-based process, there was little need for creative thinking"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Desperation-driven problem-solving — uses AI as last resort when stuck",
+      "grounding_span": "desperation! This report took weeks to produce...the thought was entering my mind that it might not be possible"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Verification-oriented approach — cross-checks AI outputs via source tracing",
+      "grounding_span": "Gemini shows sources...verify the citations used in the paper if needed by viewing it myself"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n4",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

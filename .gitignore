@@ -219,25 +219,24 @@ __marimo__/
 
 # ── Project-specific ──────────────────────────────────────────────
 # Data, cache, and results are never committed (see CLAUDE.md conventions)
-data/raw/**/*.csv
-data/tagged/*
-!data/tagged/.gitkeep
-data/graphs/free_text/*
-!data/graphs/free_text/.gitkeep
-data/graphs/canonical/*
-!data/graphs/canonical/.gitkeep
+s1_data/raw/**/*.csv
+s1_data/tagged/*
+!s1_data/tagged/.gitkeep
+s1_data/graphs/free_text/*
+!s1_data/graphs/free_text/.gitkeep
+s1_data/graphs/canonical/*
+!s1_data/graphs/canonical/.gitkeep
 cache/*
 !cache/.gitkeep
 results/*
 !results/.gitkeep
 *.npy
 *.pt
-extraction/failed.txt
-.claude/context/graph-schema.md:Zone.Identifier
+s2_extraction/failed.txt
 
 # Beads / Dolt files (added by bd init)
 .dolt/
 *.db
 .beads-credential-key
-extraction/model_comparison/results/
-extraction/model_comparison/validation_results/
+s2_extraction/model_comparison/results/
+s2_extraction/model_comparison/validation_results/

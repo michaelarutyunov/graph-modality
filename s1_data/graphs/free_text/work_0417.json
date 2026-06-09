@@ -1,0 +1,273 @@
+{
+  "transcript_id": "work_0417",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as email improvement tool",
+      "label_negative": "AI as impersonal communication",
+      "bipolarity_complete": true,
+      "grounding_span": "use AI to improve my emails before I send them out"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as workflow efficiency enhancer",
+      "label_negative": "AI as workflow disruptor",
+      "bipolarity_complete": true,
+      "grounding_span": "greatly improved workflows and decreased the burden on staff"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as HR search tool",
+      "label_negative": "AI as inaccurate search tool",
+      "bipolarity_complete": true,
+      "grounding_span": "AI search feature that our organization uses to search HR topics consistently frustrates me"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as personal relationship maintainer",
+      "label_negative": "AI as impersonal interaction",
+      "bipolarity_complete": true,
+      "grounding_span": "I do not use AI when it will make my interactions seem less 'personal'"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as full task delegator",
+      "bipolarity_complete": true,
+      "grounding_span": "I collaborate with AI more than delegating a full task"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as skill diminisher",
+      "label_negative": "AI as skill preserver",
+      "bipolarity_complete": true,
+      "grounding_span": "usage of AI could result in diminished skills"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI as time saver",
+      "label_negative": "AI as time waster",
+      "bipolarity_complete": true,
+      "grounding_span": "saving me a large amount of time"
+    },
+    {
+      "id": "n8",
+      "type": "Construct",
+      "label": "AI as all-encompassing integrator",
+      "label_negative": "AI as fragmented tool",
+      "bipolarity_complete": true,
+      "grounding_span": "an AI program that was all-encompassing, that could look at multiple programs to synthesize information"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Effective communication",
+      "grounding_span": "make adjustments to make them more personal"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Operational efficiency",
+      "grounding_span": "greatly improved workflows and decreased the burden on staff"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Accurate information retrieval",
+      "grounding_span": "find the correct information more quickly"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Personal relationships",
+      "grounding_span": "build real and personal relationships with staff"
+    },
+    {
+      "id": "n13",
+      "type": "Value",
+      "label": "Skill relevance",
+      "grounding_span": "do I really need those skills"
+    },
+    {
+      "id": "n14",
+      "type": "Value",
+      "label": "Time savings",
+      "grounding_span": "saving me a large amount of time"
+    },
+    {
+      "id": "n15",
+      "type": "Value",
+      "label": "Integrated workflow",
+      "grounding_span": "look at multiple programs to synthesize information"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Satisfaction with AI for email improvement",
+      "valence": "positive",
+      "grounding_span": "use AI to improve my emails"
+    },
+    {
+      "id": "n17",
+      "type": "Stance",
+      "label": "Frustration with AI HR search tool",
+      "valence": "negative",
+      "grounding_span": "consistently frustrates me"
+    },
+    {
+      "id": "n18",
+      "type": "Stance",
+      "label": "Preference for personal touch over AI",
+      "valence": "negative",
+      "grounding_span": "I do not use AI when it will make my interactions seem less 'personal'"
+    },
+    {
+      "id": "n19",
+      "type": "Stance",
+      "label": "Positive outlook on AI collaboration",
+      "valence": "positive",
+      "grounding_span": "I collaborate with AI more than delegating a full task"
+    },
+    {
+      "id": "n20",
+      "type": "Stance",
+      "label": "Ambivalence about skill loss",
+      "valence": "ambivalent",
+      "grounding_span": "do I really need those skills"
+    },
+    {
+      "id": "n21",
+      "type": "Stance",
+      "label": "Optimism about AI time savings",
+      "valence": "positive",
+      "grounding_span": "saving me a large amount of time"
+    },
+    {
+      "id": "n22",
+      "type": "Stance",
+      "label": "Desire for integrated AI",
+      "valence": "positive",
+      "grounding_span": "I would love an AI program that was all-encompassing"
+    },
+    {
+      "id": "n23",
+      "type": "CognitiveStyleMarker",
+      "label": "Phased and iterative approach to AI adoption",
+      "grounding_span": "phased approach where we roll out the AI to a limited subset of situations"
+    },
+    {
+      "id": "n24",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative fine-tuning with AI",
+      "grounding_span": "I will copy and paste my email draft and give it a very specific instruction"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n13",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n14",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n15",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n16",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n17",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n18",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n19",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n20",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n21",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n22",
+      "target": "n8",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n23",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n24",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,174 @@
+{
+  "transcript_id": "work_0753",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as writing assistant for drafting",
+      "label_negative": "Manual drafting without AI assistance",
+      "bipolarity_complete": true,
+      "grounding_span": "I typically use AI for drafting work emails and memos"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as knowledge resource for unfamiliar domains",
+      "label_negative": "Remaining uninformed about unfamiliar concepts",
+      "bipolarity_complete": true,
+      "grounding_span": "familiarize myself with engineering concepts that are outside of my scope of ability"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as tool requiring human oversight",
+      "label_negative": "AI as autonomous delegator without human scrutiny",
+      "bipolarity_complete": true,
+      "grounding_span": "I like to collaborate with AI throughout the tasks"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI for data analysis and figure creation",
+      "label_negative": "AI inconsistency with figures and timeframes",
+      "bipolarity_complete": true,
+      "grounding_span": "frustrated at inconsistencies with figures"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI use for formal stakeholder communication",
+      "label_negative": "AI use for casual team communication",
+      "bipolarity_complete": true,
+      "grounding_span": "if I am corresponding with a key stakeholder, I like to use AI to check my grammar"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Professional competence",
+      "grounding_span": "present ideas to stakeholders without feeling lost or unsure"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "It streamlines my workday tremendously"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional accountability",
+      "grounding_span": "it is my responsibility to double-check the AI model's work"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for drafting",
+      "valence": "positive",
+      "grounding_span": "It streamlines my workday tremendously"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI misalignment",
+      "valence": "negative",
+      "grounding_span": "frustrated at inconsistencies with figures"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Preference for personal touch in communication",
+      "valence": "negative",
+      "grounding_span": "When communicating with my direct team, I prefer to draft emails and memos myself"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Pragmatic acceptance of AI as a tool",
+      "valence": "mixed",
+      "grounding_span": "Honestly, this is an easy fix. It can just be cumbersome at times."
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative oversight — working alongside AI with review",
+      "grounding_span": "collaboration is the responsible course of action"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Context-dependent delegation — distinguishes formal vs casual communication",
+      "grounding_span": "if I am corresponding with a key stakeholder, I like to use AI to check my grammar"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

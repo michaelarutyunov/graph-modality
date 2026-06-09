@@ -1,0 +1,208 @@
+{
+  "transcript_id": "work_0135",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative tool for product descriptions",
+      "label_negative": "AI as independent task completer",
+      "bipolarity_complete": true,
+      "grounding_span": "I am more likely to collaborate through it"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI accuracy in product details",
+      "label_negative": "AI erroneous additions and mistakes",
+      "bipolarity_complete": true,
+      "grounding_span": "the AI description might add that it could be hand washed in hot water, which would be incorrect"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI-generated patterns feasibility",
+      "label_negative": "AI-generated patterns impossible or jumbled",
+      "bipolarity_complete": true,
+      "grounding_span": "there has been a huge influx of AI-created 'patterns' that are either impossible to recreate or result in a product that is a jumbled mess"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI consistency across listings",
+      "label_negative": "Inconsistent manual descriptions",
+      "bipolarity_complete": true,
+      "grounding_span": "the AI kept the formatting and general framework of each description uniform"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Human creative authenticity vs AI homogenization",
+      "label_negative": "AI reliance reducing creative diversity",
+      "bipolarity_complete": true,
+      "grounding_span": "I worry that this will take the nuance and diversity out of artistic works"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as brainstorming and framework tool",
+      "label_negative": "AI as source of complete ideas",
+      "bipolarity_complete": true,
+      "grounding_span": "I try to limit my use of AI by keeping it a tool to hone my own brainstorming or to create a framework for me to build on"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI for tedious numerical tasks",
+      "label_negative": "AI unreliable for numerical tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "My hope is that it will continue to be trained to work mathematics and numbers, so I could trust it to be able to take over more tedious tasks like calculating taxes and expense reports"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Creative authenticity and personal voice",
+      "grounding_span": "I edit that into something that sounds more my style"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Accuracy and reliability in product information",
+      "grounding_span": "correct any errors"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Efficiency and consistency in listing creation",
+      "grounding_span": "making what I felt was a satisfying connection that ran between each page of my online listings"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Preservation of human creativity and diversity",
+      "grounding_span": "I worry that this will take the nuance and diversity out of artistic works"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI for consistent formatting",
+      "valence": "positive",
+      "grounding_span": "I was particularly satisfied when creating a batch of product descriptions for different items all at once"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Frustration with AI erroneous additions",
+      "valence": "negative",
+      "grounding_span": "the AI description might add that it could be hand washed in hot water, which would be incorrect"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Skepticism toward AI-generated patterns",
+      "valence": "negative",
+      "grounding_span": "there has been a huge influx of AI-created 'patterns' that are either impossible to recreate"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Concern about AI reducing creative diversity",
+      "valence": "negative",
+      "grounding_span": "I worry that this will take the nuance and diversity out of artistic works"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Hope for AI to handle numerical tasks",
+      "valence": "positive",
+      "grounding_span": "My hope is that it will continue to be trained to work mathematics and numbers"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement — starts with AI draft then edits for personal voice",
+      "grounding_span": "I'll usually start be explaining the details... Once AI has generated product description text, I edit that into something that sounds more my style"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-specific skepticism — distrusts AI in pattern selection but trusts for formatting",
+      "grounding_span": "I will always do this myself, because there has been a huge influx of AI-created 'patterns' that are either impossible to recreate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

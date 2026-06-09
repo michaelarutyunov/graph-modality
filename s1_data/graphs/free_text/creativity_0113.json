@@ -1,0 +1,183 @@
+{
+  "transcript_id": "creativity_0113",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as skill gap filler and learning accelerator",
+      "label_negative": "AI as crutch that bypasses skill development",
+      "bipolarity_complete": true,
+      "grounding_span": "AI can help filling in gaps or weaknesses in a skill-set"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as creative companion (R2D2)",
+      "label_negative": "AI as autonomous creative replacement",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is like the buddy on my shoulder, my R2D2"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for administrative and logistical efficiency",
+      "label_negative": "Administrative burden without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I can focus on the creative work and leave all that boring stuff to AI"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as threat to artistic craft and human journey",
+      "label_negative": "AI as enabler of artistic growth",
+      "bipolarity_complete": true,
+      "grounding_span": "concern with it completely taking over"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as tool for creative challenges and self-motivation",
+      "label_negative": "AI as passive assistant without challenge",
+      "bipolarity_complete": true,
+      "grounding_span": "leverage AI to establish a challenge routine where it presents a task to make something"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Artistic growth and craft development",
+      "grounding_span": "it's about growing through my craft and seeking enjoyment and fulfillment"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Creative autonomy and human agency",
+      "grounding_span": "It is always me who is driving the creative process"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Productivity and time savings",
+      "grounding_span": "This has saved me so much time"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Harmonious human-AI symbiosis",
+      "grounding_span": "AI should be developed in harmony with human creativity"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Enthusiasm for AI as learning and efficiency tool",
+      "valence": "positive",
+      "grounding_span": "I find myself constantly using AI"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Concern about AI replacing human creativity and devaluing craft",
+      "valence": "negative",
+      "grounding_span": "concern with it completely taking over"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Optimism about AI enabling more creative work",
+      "valence": "positive",
+      "grounding_span": "I can essentially do even more creative work now"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through back-and-forth with AI",
+      "grounding_span": "there is deliberation and re-iteration through the process"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic delegation of weaknesses to focus on strengths",
+      "grounding_span": "fill in for my weaknesses and then focus on what I'm good at"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

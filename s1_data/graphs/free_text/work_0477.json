@@ -1,0 +1,138 @@
+{
+  "transcript_id": "work_0477",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as knowledge consolidator for customer advice",
+      "label_negative": "AI as unreliable or unnecessary for customer advice",
+      "bipolarity_complete": true,
+      "grounding_span": "The information was formatted in a concise way which consolidated the key knowledge I would need to communicate to customers"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as assistant affirming existing expertise",
+      "label_negative": "AI as replacement for personal expertise",
+      "bipolarity_complete": true,
+      "grounding_span": "using AI alongside my own expertise helps to affirm the knowledge I already know"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for filling knowledge gaps",
+      "label_negative": "AI for routine or comfortable topics",
+      "bipolarity_complete": true,
+      "grounding_span": "I tend to ask for specific information about a particular topic I may not be as comfortable approaching customers about"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as alternative explanation source",
+      "label_negative": "Company training as sole explanation source",
+      "bipolarity_complete": true,
+      "grounding_span": "summarise particular concepts that my works own training covered in a different way that I wasn't as happy with"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Customer service competence",
+      "grounding_span": "help to make sure i'm informing the customers the right information in a productive way"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Personal expertise and confidence",
+      "grounding_span": "affirm the knowledge I already know"
+    },
+    {
+      "id": "n7",
+      "type": "Stance",
+      "label": "Satisfaction with AI as concise knowledge source",
+      "valence": "positive",
+      "grounding_span": "The information was formatted in a concise way which consolidated the key knowledge"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Contentment with AI as assistant, not replacement",
+      "valence": "positive",
+      "grounding_span": "using AI alongside my own expertise helps to affirm the knowledge I already know"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Acceptance of limited future scope for AI in role",
+      "valence": "mixed",
+      "grounding_span": "I will probably use it in the same way as there is not much more scope in my position to use it any differently"
+    },
+    {
+      "id": "n10",
+      "type": "CognitiveStyleMarker",
+      "label": "Targeted gap-filling approach — seeks AI only for unfamiliar topics",
+      "grounding_span": "I tend to ask for specific information about a particular topic I may not be as comfortable approaching customers about"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Preference for concise, consolidated information",
+      "grounding_span": "The information was formatted in a concise way which consolidated the key knowledge"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n8",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n10",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

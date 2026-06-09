@@ -1,0 +1,148 @@
+{
+  "transcript_id": "work_0416",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as tool for mundane repeatable tasks",
+      "label_negative": "AI for one-off or specific projects",
+      "bipolarity_complete": true,
+      "grounding_span": "I also prefer to only use AI for mundane, repeatable tasks. Not so much for one-offs"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability and accuracy",
+      "label_negative": "AI errors and need for double-checking",
+      "bipolarity_complete": true,
+      "grounding_span": "I always double check the results, as I don't fully trust AI yet"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as time-saving efficiency tool",
+      "label_negative": "AI as requiring time-consuming back-and-forth",
+      "bipolarity_complete": true,
+      "grounding_span": "saved me days of time instead of doing it manually"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI specificity in prompting",
+      "label_negative": "Vague or unspecific prompting",
+      "bipolarity_complete": true,
+      "grounding_span": "I was sure to be very specific on this request"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Productivity and time savings",
+      "grounding_span": "saved me days of time instead of doing it manually"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Trust and reliability in work output",
+      "grounding_span": "I don't fully trust AI yet"
+    },
+    {
+      "id": "n7",
+      "type": "Stance",
+      "label": "Cautious optimism about AI expansion",
+      "valence": "ambivalent",
+      "grounding_span": "As long as AI keeps evolving & proving its value & worth, I plan on expanding my use of it"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Satisfaction with AI on successful task",
+      "valence": "positive",
+      "grounding_span": "It performed flawlessly after a few back & forth conversations & saved me days of time"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Frustration with AI errors",
+      "valence": "negative",
+      "grounding_span": "sometimes it doesn't correctly call back to certain cells, rows, columns"
+    },
+    {
+      "id": "n10",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative back-and-forth refinement",
+      "grounding_span": "I usually go back & forth with it"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Task domain compartmentalization",
+      "grounding_span": "I also prefer to only use AI for mundane, repeatable tasks. Not so much for one-offs"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n2",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n7",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n8",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n10",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n10",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,201 @@
+{
+  "transcript_id": "work_0020",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as formatting and synthesizing tool",
+      "label_negative": "AI as initial creator or writer",
+      "bipolarity_complete": true,
+      "grounding_span": "synthesising work I have already started, turning notes into comprehensive board papers or formatting"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as impartial feedback and gap identifier",
+      "label_negative": "AI as autonomous decision-maker",
+      "bipolarity_complete": true,
+      "grounding_span": "ask it to identify a suitable meeting time, or ask if there are any pieces of information I'm missing, or just break the information down into a digestible few bullet points"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Maintaining personal voice and judgment",
+      "label_negative": "AI-generated communication",
+      "bipolarity_complete": true,
+      "grounding_span": "I prefer to write my own emails. I have a personal style of writing and different relationships with my colleagues"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as resource for refining and improving output",
+      "label_negative": "Minimal or vague instructions to AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I provide quite a lot of detail upfront and present tasks when they are around 40-50% complete"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI use constrained by data security",
+      "label_negative": "Unrestricted access to best AI tools",
+      "bipolarity_complete": true,
+      "grounding_span": "We have an approved provider for AI tasks. I work for the government and some papers need to stay internal"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as supplement to creative process",
+      "label_negative": "AI as threat to job skills or autonomy",
+      "bipolarity_complete": true,
+      "grounding_span": "AI tool produced a really well thought-out Visioning document for a major project"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI as time-saving tool",
+      "label_negative": "AI as replacement for core job functions",
+      "bipolarity_complete": true,
+      "grounding_span": "it frees up my time to do important conservation repairs etc. which I really enjoy"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "enhance my efficiency"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Personal authenticity and relationship maintenance",
+      "grounding_span": "I have a personal style of writing and different relationships with my colleagues"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Creative inspiration and ideation",
+      "grounding_span": "my ideas were represented to their fullest effect"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Meaningful engagement in core work",
+      "grounding_span": "important conservation repairs etc. which I really enjoy"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with AI formatting",
+      "valence": "positive",
+      "grounding_span": "I was really happy with the resulting document"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Preference for human-written emails",
+      "valence": "negative",
+      "grounding_span": "I prefer to write my own emails"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Frustration with AI limitations",
+      "valence": "negative",
+      "grounding_span": "this discourages me from using it as much as I would as the tool is not the best"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "positive",
+      "grounding_span": "I'm hoping the models will develop further and enhance my efficiency"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement with limited back-and-forth",
+      "grounding_span": "present tasks when they are around 40-50% complete"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-specific delegation based on task nature",
+      "grounding_span": "I prefer to write my own emails"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n12",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n4",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

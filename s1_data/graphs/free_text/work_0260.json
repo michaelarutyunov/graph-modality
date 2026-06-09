@@ -1,0 +1,186 @@
+{
+  "transcript_id": "work_0260",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative guide for coding",
+      "label_negative": "AI as opaque solution dumper",
+      "bipolarity_complete": true,
+      "grounding_span": "I like to go in multiple steps like the chatbot is a colleague or supervisor"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as learning tool for terminology and understanding",
+      "label_negative": "AI as brainless shortcut leading to dependency",
+      "bipolarity_complete": true,
+      "grounding_span": "knowing at least the terminology of the things I receive assistance on"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as debugging assistant for unknown problems",
+      "label_negative": "AI as source of repetitive dead ends",
+      "bipolarity_complete": true,
+      "grounding_span": "Not knowing where to look for a solution is the frustrating part"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as substitution enabler for streamlined goals",
+      "label_negative": "AI as crutch for custom creative work",
+      "bipolarity_complete": true,
+      "grounding_span": "Substitution can mean replacing the goal with something more accessible"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as threat to job satisfaction and autonomy",
+      "label_negative": "AI as tool for maintaining control and satisfaction",
+      "bipolarity_complete": true,
+      "grounding_span": "This can lead to a lack of satisfaction with the work, and not feeling in control"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Understanding and control over work",
+      "grounding_span": "knowing at least the terminology of the things I receive assistance on"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and problem resolution",
+      "grounding_span": "it did exactly what I wanted it to do - it make the image responsive"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Creative satisfaction and enjoyment",
+      "grounding_span": "I really like the design/visual aspects of my work"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI when it teaches something new and solves problem",
+      "valence": "positive",
+      "grounding_span": "it did exactly what I wanted it to do - it make the image responsive"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI when stuck in repetitive cycles",
+      "valence": "negative",
+      "grounding_span": "Not knowing where to look for a solution is the frustrating part"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Resistance to brainless AI use",
+      "valence": "negative",
+      "grounding_span": "using a chatbot in a brainless way, in a way where I have no idea what I'm really doing"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Preference for collaborative step-by-step interaction",
+      "valence": "positive",
+      "grounding_span": "I like to go in multiple steps like the chatbot is a colleague or supervisor"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Pessimism about future career in design due to AI",
+      "valence": "negative",
+      "grounding_span": "I don't feel the desire to compete in the ways necessary to outpace AI"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative trial-and-error debugging",
+      "grounding_span": "I'll ask the question a different way till I can get something that works"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic substitution and goal redefinition",
+      "grounding_span": "Substitution can mean replacing the goal with something more accessible"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

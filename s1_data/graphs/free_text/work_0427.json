@@ -1,0 +1,170 @@
+{
+  "transcript_id": "work_0427",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative ideation partner for complex tasks",
+      "label_negative": "AI as unreliable or time-consuming for simple tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I will collaborate with the AI throughout the task whilst completing it rather than delegating"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for efficiency in database queries and test automation",
+      "label_negative": "Manual coding for simple test logic",
+      "bipolarity_complete": true,
+      "grounding_span": "I use it to write complex queries to retrieve the data that I need, making my workflow a lot more efficient"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability and robustness in problem-solving",
+      "label_negative": "AI potential to get simple tasks wrong",
+      "bipolarity_complete": true,
+      "grounding_span": "It provided a robust solution to create a file to keep track of the test data and delete it on the test setup"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Supportive workplace culture for AI adoption",
+      "label_negative": "Restrictive workplace culture hindering AI use",
+      "bipolarity_complete": true,
+      "grounding_span": "Our workplace is supportive of the use of AI and is encouraged"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Human oversight and control over code",
+      "label_negative": "Full delegation to AI without understanding",
+      "bipolarity_complete": true,
+      "grounding_span": "I like to have control of what goes in the code as I can understand it a lot better"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as a tool for overcoming blockers and generating ideas",
+      "label_negative": "AI as unnecessary for routine tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "AI has helped me to get out of numerous blockers and problems"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Workflow efficiency and productivity",
+      "grounding_span": "making my workflow a lot more efficient"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Code quality and maintainability",
+      "grounding_span": "makes the repository more readable and maintainable"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Professional competence and problem-solving",
+      "grounding_span": "expand my knowledge and thinking"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI's robust solution",
+      "valence": "positive",
+      "grounding_span": "This made me feel very satisfied as it felt like there was nothing wrong with the original cleanup, but this made it even more robust"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Preference for manual coding of simple tests",
+      "valence": "negative",
+      "grounding_span": "I prefer writing the automated tests myself as in the actual tests in the test class that will run"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Positive outlook on AI's future role",
+      "valence": "positive",
+      "grounding_span": "My relationship with AI is going onwards and upwards"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic task decomposition — delegates complex multi-layered tasks, retains simple ones",
+      "grounding_span": "I usually use AI for work when it is a new task, especially ones that are multi-layered"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative control — maintains oversight while leveraging AI",
+      "grounding_span": "I will collaborate with the AI throughout the task whilst completing it rather than delegating"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

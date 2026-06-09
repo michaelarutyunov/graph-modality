@@ -1,0 +1,170 @@
+{
+  "transcript_id": "work_0557",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as writing assistant for alternative phrasing and recommendations",
+      "label_negative": "AI as unreliable or inappropriate for clinical language",
+      "bipolarity_complete": true,
+      "grounding_span": "I often use AI to help me find alternative ways of saying things and to help me formulate recommendations"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as time-saving tool under time pressure",
+      "label_negative": "AI as requiring time-consuming refinement",
+      "bipolarity_complete": true,
+      "grounding_span": "Most of the time Im under a time crunch and I dont have the time to spend reinventing the wheel"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as source of curated recommendations",
+      "label_negative": "AI as providing irrelevant or unusable recommendations",
+      "bipolarity_complete": true,
+      "grounding_span": "I usually end up picking and choosing which ones to use based on the client"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as future synthesis tool for data and background info",
+      "label_negative": "AI as unable to handle sensitive health data ethically",
+      "bipolarity_complete": true,
+      "grounding_span": "I'd love to be able to provide data and background info and have it spit out a summary"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Clinical judgment as human domain",
+      "label_negative": "AI involvement in final diagnostic decisions",
+      "bipolarity_complete": true,
+      "grounding_span": "The final decision on diagnoses should be mine"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as skill-enhancer expanding repertoire",
+      "label_negative": "AI as skill-replacer leading to atrophy",
+      "bipolarity_complete": true,
+      "grounding_span": "Hopefully, I then can take it and incorporate it into future reports"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "save so much time and mental energy"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Clinical accuracy and ethical responsibility",
+      "grounding_span": "I'll be on the lookout for ways to do this ethically"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Professional competence and skill maintenance",
+      "grounding_span": "I think sometimes it can be helpful to be provided with a way to phrase things"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI providing usable recommendations",
+      "valence": "positive",
+      "grounding_span": "I was pleasantly surprised to have a list of items I could use"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Openness to future AI use for synthesis",
+      "valence": "positive",
+      "grounding_span": "I'd love to be able to provide data and background info and have it spit out a summary"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Reservation about AI in clinical decision-making",
+      "valence": "negative",
+      "grounding_span": "The final decision on diagnoses should be mine"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic curation — selects and adapts AI outputs to context",
+      "grounding_span": "I usually end up picking and choosing which ones to use based on the client"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Ethical boundary-setting — distinguishes tasks appropriate for AI",
+      "grounding_span": "this information is health data, so I can't just imput everything into an AI model"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

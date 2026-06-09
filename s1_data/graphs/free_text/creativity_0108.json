@@ -1,0 +1,188 @@
+{
+  "transcript_id": "creativity_0108",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as creative compass for idea sorting",
+      "label_negative": "AI as source of ready-made ideas",
+      "bipolarity_complete": true,
+      "grounding_span": "I find myself asking AI for help when I have too many ideas running and need help sorting them into one"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as validation tool for creative instincts",
+      "label_negative": "AI as replacement for personal judgment",
+      "bipolarity_complete": true,
+      "grounding_span": "I used AI to confirm that it would be possible to mix these genres"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as aid for overcoming creative block",
+      "label_negative": "AI as crutch that bypasses personal effort",
+      "bipolarity_complete": true,
+      "grounding_span": "It made my process flow smoother because I sort of hit a wall and couldn't really find the right words"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Preserving personal authenticity in music",
+      "label_negative": "AI-generated music devoid of human experience",
+      "bipolarity_complete": true,
+      "grounding_span": "I try not to use it much because I think it's important to be very personal in music"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as limited aid not creative replacement",
+      "label_negative": "AI as full generator of beats or lyrics",
+      "bipolarity_complete": true,
+      "grounding_span": "I would like to think I'd keep my stance with not overusing it and only trying to use it as an aid rather than something to completely generate beats or lyrics"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative flow and productivity",
+      "grounding_span": "It made my process flow smoother"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Personal authenticity and human expression",
+      "grounding_span": "Music and art are something that is so human and personal"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Positive reliance on AI for idea organization",
+      "valence": "positive",
+      "grounding_span": "I find myself asking AI for help when I have too many ideas running and need help sorting them into one"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Confidence boost from AI validation",
+      "valence": "positive",
+      "grounding_span": "It made me feel more confident in what I thought were 'chaotic ideas'"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Fear of losing human element in music",
+      "valence": "negative",
+      "grounding_span": "I am worried that AI will start to generate music and that people will start to lose that personal aspect"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Intentional restraint to preserve authenticity",
+      "valence": "ambivalent",
+      "grounding_span": "I try not to use it much because I think it's important to be very personal in music"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Idea clustering and synthesis — combines multiple ideas into coherent output",
+      "grounding_span": "I had many ideas going for a song, and I used AI to confirm that it would be possible to mix these genres"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Value-driven boundary setting — limits AI use to preserve personal authenticity",
+      "grounding_span": "I try not to use it much because I think it's important to be very personal in music"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n2",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n3",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,169 @@
+{
+  "transcript_id": "work_0629",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative partner for nuanced communication",
+      "label_negative": "AI as autonomous delegator for communication",
+      "bipolarity_complete": true,
+      "grounding_span": "I definitely am more likely to collaborate. I can't think of any instances where I purely delegate a task to AI."
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as objective third party in emotionally charged situations",
+      "label_negative": "AI as emotionally uninformed or detached",
+      "bipolarity_complete": true,
+      "grounding_span": "it was helpful to have a third party helping me write without all of the emotions and anxiety I had wrapped up in the situation"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as brainstorming aid for creative tasks",
+      "label_negative": "AI as sole creator without human input",
+      "bipolarity_complete": true,
+      "grounding_span": "using AI to brainstorm based on the role and the tutor resume has led me to have more dynamic and interesting interviews"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Trust in AI for high-stakes tasks (billing)",
+      "label_negative": "Distrust in AI for high-stakes tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I just don't trust the models to handle billing since it's pretty high-stakes."
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as tool for routine administrative delegation",
+      "label_negative": "AI requiring human input for routine tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I would love to be able to fully delegate routine administrative tasks rather than needing my input as much."
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Authentic personal connection and trust",
+      "grounding_span": "I don't think an AI could ever convince a client to work with us over the phone like I do and bring in that human connection"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professionalism and emotional regulation",
+      "grounding_span": "it helped me stay professional in response to a tough situation"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and productivity",
+      "grounding_span": "I would love to be able to fully delegate routine administrative tasks"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI as collaborative partner",
+      "valence": "positive",
+      "grounding_span": "I definitely am more likely to collaborate."
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI as objective third party",
+      "valence": "positive",
+      "grounding_span": "it was a really satisfying interaction"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Distrust of AI for billing tasks",
+      "valence": "negative",
+      "grounding_span": "I just don't trust the models to handle billing since it's pretty high-stakes."
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Optimism about future AI delegation",
+      "valence": "positive",
+      "grounding_span": "I definitely see myself using it in new ways in the future."
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative iterative refinement — uses AI drafts as starting point, then edits to match personal voice",
+      "grounding_span": "I will give it a few options for a response, which I then edit to suit my purposes."
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-specific trust calibration — trusts AI for some tasks but not others based on stakes",
+      "grounding_span": "I just don't trust the models to handle billing since it's pretty high-stakes."
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

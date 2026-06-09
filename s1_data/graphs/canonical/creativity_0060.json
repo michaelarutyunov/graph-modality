@@ -1,0 +1,182 @@
+{
+  "transcript_id": "creativity_0060",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI for mundane tasks",
+      "label_negative": "AI as replacer of human creativity",
+      "bipolarity_complete": true,
+      "grounding_span": "AI should truly just be helper and never a replacer"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as sounding board for ideas",
+      "label_negative": "AI as fully autonomous creator",
+      "bipolarity_complete": true,
+      "grounding_span": "I think of the AI as if I'm talking to a writing partner"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI solution writing capability",
+      "label_negative": "Struggling alone through difficult sections",
+      "bipolarity_complete": true,
+      "grounding_span": "My weakest points are the middle of the novel"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI ability to provide hard-to-find information",
+      "label_negative": "AI providing generic or fully fleshed-out concepts",
+      "bipolarity_complete": true,
+      "grounding_span": "I mostly like to get unique details rather than fully fleshed-out concepts"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Human control over creative decisions",
+      "label_negative": "Relinquishing creative decisions to AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I'm always driving the creative decisions. I never relinquish that hold"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI preserving uniqueness of self",
+      "label_negative": "AI eroding personal artistic identity",
+      "bipolarity_complete": true,
+      "grounding_span": "I want to make sure I retain the uniqueness of self"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Creative flow and momentum",
+      "grounding_span": "It feels really good to keep a steady writing pace"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Human artistic expression",
+      "grounding_span": "our greatest strength as a species is art"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Creative autonomy",
+      "grounding_span": "I'm always driving the creative decisions"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Positive view of AI as idea generator",
+      "valence": "positive",
+      "grounding_span": "It felt great to have ideas to pick from instead of sitting around trying to do the grunt work myself"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Resistance to AI in creative work",
+      "valence": "negative",
+      "grounding_span": "I have a lot of concerns. I think AI should truly just be helper and never a replacer"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Reluctance to use AI for writing",
+      "valence": "positive",
+      "grounding_span": "It feels really good to keep a steady writing pace"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Ambivalence about AI's future role",
+      "valence": "ambivalent",
+      "grounding_span": "It's hard for me envision AI doing anymore for me than it's doing now"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Intuitive non-linear writing process",
+      "grounding_span": "I don't outline and I also don't write in order"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Goal-oriented creative approach",
+      "grounding_span": "I make sure that I have a goal to shoot towards with every scene that I write"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

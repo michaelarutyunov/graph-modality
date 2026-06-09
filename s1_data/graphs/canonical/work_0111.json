@@ -1,0 +1,157 @@
+{
+  "transcript_id": "work_0111",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as writing assistant",
+      "label_negative": "Writing without AI assistance",
+      "bipolarity_complete": true,
+      "grounding_span": "AI helps me come up with more professional ways to get my ideas across"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as knowledge gap filler",
+      "label_negative": "Relying solely on memory for rare conditions",
+      "bipolarity_complete": true,
+      "grounding_span": "ask general/medical questions about topics or conditions I do not often see in the clinic so that I get a quick refresher"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for documentation efficiency",
+      "label_negative": "Manual documentation consuming patient care time",
+      "bipolarity_complete": true,
+      "grounding_span": "If AI can help me spend more time with my patients and decrease my documentation time, I am all for it"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Personalized patient communication",
+      "label_negative": "AI-generated impersonal patient communication",
+      "bipolarity_complete": true,
+      "grounding_span": "I prefer the email to sound like it is coming from me, so I like to add personal touches"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as research assistant for clinical knowledge",
+      "label_negative": "AI as threat to clinical expertise",
+      "bipolarity_complete": true,
+      "grounding_span": "I recognize that it is an asset"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Patient-centered care",
+      "grounding_span": "spend more time with my patients and decrease my documentation time"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional competence",
+      "grounding_span": "professional letters...always sound and look better when I use AI to assist"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Authentic human connection and trust",
+      "grounding_span": "patient knows that I care about"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Reluctance to use AI for writing",
+      "valence": "positive",
+      "grounding_span": "Most of the time, I am satisfied when using AI at work"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Preference for personal touch in patient emails",
+      "valence": "negative",
+      "grounding_span": "I prefer the email to sound like it is coming from me"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI for documentation",
+      "valence": "positive",
+      "grounding_span": "AI will be able to listen in on evaluations and create documents for me"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative iterative refinement — works back and forth with AI",
+      "grounding_span": "I'll ask the AI to write a draft, then I may ask it to make revisions or take out a specific word"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Principled boundary setting — preserves human touch in communication",
+      "grounding_span": "I prefer the email to sound like it is coming from me, so I like to add personal touches"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

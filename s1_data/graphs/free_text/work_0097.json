@@ -1,0 +1,187 @@
+{
+  "transcript_id": "work_0097",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative research and drafting partner",
+      "label_negative": "AI as independent task delegator",
+      "bipolarity_complete": true,
+      "grounding_span": "I collaborate with AI throughout the task, asking questions that I do not have prior knowledge on"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for text generation within approved tools",
+      "label_negative": "AI for visually creative tasks like slide design",
+      "bipolarity_complete": true,
+      "grounding_span": "my work with AI right now focuses on text generation tasks"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as efficiency booster for tight deadlines",
+      "label_negative": "AI as unreliable without human oversight",
+      "bipolarity_complete": true,
+      "grounding_span": "This gave us a really great place to start and fine-tune the draft and get it to our leadership well within the timeframe"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Human analytical and critical thinking as essential check on AI",
+      "label_negative": "Over-reliance on AI without human verification",
+      "bipolarity_complete": true,
+      "grounding_span": "it's critical to keep humans in the loop at this stage of AI use"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI adoption driven by top-down leadership push",
+      "label_negative": "AI adoption limited by generational tech-savviness",
+      "bipolarity_complete": true,
+      "grounding_span": "There is definitely a push from top down leadership to incorporate AI more into our work"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "Desire for future AI automation of formatting workflows",
+      "label_negative": "Current AI limitations due to government restrictions",
+      "bipolarity_complete": true,
+      "grounding_span": "it would be nice to have more sophisticated AI tools in the future that can automate workflows"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and time efficiency",
+      "grounding_span": "save a ton of time"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Accuracy and reliability in high-stakes work",
+      "grounding_span": "the stakes are high and accuracy is critical"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Human skill maintenance and critical thinking",
+      "grounding_span": "it's very important to maintain these skills, particularly analytical and critical thinking and writing skills"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for collaborative drafting under deadline",
+      "valence": "positive",
+      "grounding_span": "This gave us a really great place to start and fine-tune the draft and get it to our leadership well within the timeframe"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Cautious stance on AI reliability requiring human oversight",
+      "valence": "ambivalent",
+      "grounding_span": "it's critical to keep humans in the loop at this stage of AI use"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with government restrictions limiting AI tools",
+      "valence": "negative",
+      "grounding_span": "my situation is a bit different since not a lot of AI tools are approved yet for IL5 or IL6"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Optimism about future AI automation for formatting",
+      "valence": "positive",
+      "grounding_span": "it would be nice to have more sophisticated AI tools in the future that can automate workflows"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative iterative questioning — breaks down research into targeted queries",
+      "grounding_span": "I collaborate with AI throughout the task, asking questions that I do not have prior knowledge on"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic adaptation to tool constraints — works within approved boundaries",
+      "grounding_span": "my work with AI right now focuses on text generation tasks"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

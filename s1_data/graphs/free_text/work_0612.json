@@ -1,0 +1,175 @@
+{
+  "transcript_id": "work_0612",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as time-saving administrative assistant",
+      "label_negative": "AI as time-consuming or unreliable tool",
+      "bipolarity_complete": true,
+      "grounding_span": "AI really helps me to cut this time down"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as creative and pedagogical partner",
+      "label_negative": "AI as inadequate for creative lesson design",
+      "bipolarity_complete": true,
+      "grounding_span": "I prefer to actually put the slides together myself"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability and accuracy",
+      "label_negative": "AI hallucination and error",
+      "bipolarity_complete": true,
+      "grounding_span": "it started to remember/pull errors from other children's work"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as enhancer of student creativity and engagement",
+      "label_negative": "AI as threat to authentic student work",
+      "bipolarity_complete": true,
+      "grounding_span": "The children LOVED seeing their writing come to life"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as workload reducer for administrative tasks",
+      "label_negative": "AI as insufficiently private or trustworthy for sensitive data",
+      "bipolarity_complete": true,
+      "grounding_span": "If we were able to fully trust the privacy settings of AI models"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Professional efficiency and time saving",
+      "grounding_span": "AI really helps me to cut this time down"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Pedagogical quality and creative control",
+      "grounding_span": "I prefer to actually put the slides together myself"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Student learning and engagement",
+      "grounding_span": "The children LOVED seeing their writing come to life"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Teacher well-being and reduced workload",
+      "grounding_span": "AI has the potential to revolutionise teacher workload"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for marking and feedback",
+      "valence": "positive",
+      "grounding_span": "I agreed with the E1, E2 and E3 values probably 90% of the time"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI formatting limitations",
+      "valence": "negative",
+      "grounding_span": "The AI really struggled with this for some reason"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Enthusiasm for AI in creative classroom activities",
+      "valence": "positive",
+      "grounding_span": "This was a really lovely example of how AI can be used to enhance writing and creativity"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Optimism about AI's future role in reducing teacher workload",
+      "valence": "positive",
+      "grounding_span": "AI has the potential to revolutionise teacher workload"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative prompt refinement and task decomposition",
+      "grounding_span": "After tweaking my instructions though it was able to give some really helpful assistance"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based task allocation (creative vs. administrative)",
+      "grounding_span": "I prefer to actually put the slides together myself"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

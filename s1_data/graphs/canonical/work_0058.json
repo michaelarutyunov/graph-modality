@@ -1,0 +1,169 @@
+{
+  "transcript_id": "work_0058",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as brainstorming and idea generator",
+      "label_negative": "AI as full content generator",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI to generate ideas for content, but never to actually write the content from scratch"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI unreliability for important tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I used to use it for more tasks, but I realised there were too many errors and issues to delegate important stuff to AI"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as supplement to creative process",
+      "label_negative": "AI generic and formulaic output",
+      "bipolarity_complete": true,
+      "grounding_span": "The ideas suggested are often too generic for me"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Preserving personal skill and autonomy",
+      "label_negative": "Over-reliance on AI eroding skills",
+      "bipolarity_complete": true,
+      "grounding_span": "I definitely consider preserving my own abilities"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI for low-stakes tasks",
+      "label_negative": "AI for core high-stakes tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "Routine stuff like basic emails, I honestly don't care"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative authenticity and human expression",
+      "grounding_span": "I want to preserve the personality of my stuff"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "it didn't save me any time"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Skill maintenance and self-reliance",
+      "grounding_span": "It's important to maintain a real-life skill set too"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for brainstorming",
+      "valence": "positive",
+      "grounding_span": "there will be one thing where you're like, 'yes!!' that's helpful"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Resistance to AI in creative work",
+      "valence": "negative",
+      "grounding_span": "generating ideas for social media can be annoying"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Hesitation toward AI for data analysis",
+      "valence": "negative",
+      "grounding_span": "they mostly needed rewriting and recalculating so it didn't save me any time"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Openness to increasing AI use in future",
+      "valence": "positive",
+      "grounding_span": "If technology becomes better, I would definitely consider using it more"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative prompt refinement",
+      "grounding_span": "I often have to push and push for more ideas"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Experience-based boundary setting",
+      "grounding_span": "I used to use it for more tasks, but I realised there were too many errors"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

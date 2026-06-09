@@ -1,0 +1,224 @@
+{
+  "transcript_id": "work_0865",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as sounding board for ideas",
+      "label_negative": "AI as final content producer",
+      "bipolarity_complete": true,
+      "grounding_span": "it helps me see it from a different angle"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as summarizer of chaotic notes",
+      "label_negative": "Manual processing of messy notes",
+      "bipolarity_complete": true,
+      "grounding_span": "create summaries of feedback notes i'm given but haven't taken, which helps becuase the notes are often chaotic"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as brainstorming and idea generator",
+      "label_negative": "AI as autonomous decision-maker",
+      "bipolarity_complete": true,
+      "grounding_span": "use it for ideation and suggestions for writing"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Personal voice and authentic relationship maintenance",
+      "label_negative": "AI-mediated impersonal communication",
+      "bipolarity_complete": true,
+      "grounding_span": "I want to ensure my voice is maintained so that i can keep an authentic relationship"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI cross-context personalization contamination",
+      "label_negative": "Clean separation of personal and work AI contexts",
+      "bipolarity_complete": true,
+      "grounding_span": "it gets really stuck into personalization across conversations, like integrating tone, languages, and ideas from creative projects"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as writing assistant",
+      "label_negative": "AI writing quality matching or exceeding human",
+      "bipolarity_complete": true,
+      "grounding_span": "it is not as good as me yet in many respects at writing"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI market impact on content creation jobs",
+      "label_negative": "Stable demand for human content creators",
+      "bipolarity_complete": true,
+      "grounding_span": "browsing the internet and seeing so much clearly Ai generated content has shown me that that might not matter to a lot of people who used to pay money to human content creators"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Creative inspiration and ideation",
+      "grounding_span": "it helps me see it from a different angle"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Efficiency and reduced cognitive load",
+      "grounding_span": "it distilled it down to some conise ideas i was able to use"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Authentic human connection and trust",
+      "grounding_span": "keep an authentic relationship with people i mostly communicate with over email"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Professional competence",
+      "grounding_span": "it is not as good as me yet in many respects at writing"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Job security and skill relevance",
+      "grounding_span": "i work in a state job that feels slightly more secure than other content creation/marketing jobs"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Satisfaction with AI for meeting notes",
+      "valence": "positive",
+      "grounding_span": "it distilled it down to some conise ideas i was able to use to ensure i applied all the feedback"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Frustration with AI cross-context personalization",
+      "valence": "negative",
+      "grounding_span": "it gets really stuck into personalization across conversations"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Confidence in own writing superiority over AI",
+      "valence": "positive",
+      "grounding_span": "it is not as good as me yet in many respects at writing"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Concern about AI replacing human writers",
+      "valence": "negative",
+      "grounding_span": "browsing the internet and seeing so much clearly Ai generated content has shown me that that might not matter to a lot of people who used to pay money to human content creators"
+    },
+    {
+      "id": "n17",
+      "type": "Stance",
+      "label": "Satisfaction with AI summaries",
+      "valence": "positive",
+      "grounding_span": "i suspect it might at some point start using it more to read things like email threads, white papers, market research power points, etc and summarizing it"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative exploration — uses back-and-forth to refine understanding and generate ideas",
+      "grounding_span": "try variations of this a couple of times to see if anything inspires me"
+    },
+    {
+      "id": "n19",
+      "type": "CognitiveStyleMarker",
+      "label": "Curiosity-driven exploration when at baseline performance",
+      "grounding_span": "i start having it work on unrelated things just because i enjoy chasing whatever feels fun in the moment"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n13",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n17",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n19",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n5",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

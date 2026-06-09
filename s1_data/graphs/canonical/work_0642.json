@@ -1,0 +1,108 @@
+{
+  "transcript_id": "work_0642",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as systematic troubleshooter",
+      "label_negative": "Manual formatting without AI assistance",
+      "bipolarity_complete": true,
+      "grounding_span": "I occasionally use AI to find out how to properly edit documents in Microsoft Word and PDFs"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as efficient complete solution provider",
+      "label_negative": "AI requiring iterative step-by-step troubleshooting",
+      "bipolarity_complete": true,
+      "grounding_span": "I normally ask for a complete solution immediately"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI role expansion beyond current tasks",
+      "label_negative": "AI role limited to current formatting challenges",
+      "bipolarity_complete": true,
+      "grounding_span": "I do not see the role of AI at my job expanding beyond its current role"
+    },
+    {
+      "id": "n4",
+      "type": "Value",
+      "label": "Professional document quality and customer satisfaction",
+      "grounding_span": "They need to look great for receipt by the customer"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Productivity and efficient task completion",
+      "grounding_span": "Just having that completed was relieving"
+    },
+    {
+      "id": "n6",
+      "type": "Stance",
+      "label": "Frustration with AI formatting",
+      "valence": "positive",
+      "grounding_span": "It gave me tips on how to shrink the images to make the document look neater"
+    },
+    {
+      "id": "n7",
+      "type": "Stance",
+      "label": "Contentment with current AI use",
+      "valence": "positive",
+      "grounding_span": "I do not see the role of AI at my job expanding beyond its current role"
+    },
+    {
+      "id": "n8",
+      "type": "CognitiveStyleMarker",
+      "label": "Hands-on troubleshooting and iterative testing",
+      "grounding_span": "I normally ask for a complete solution immediately. However, when I troubleshoot further, I normally start asking the AI questions on a step-by-step basis"
+    },
+    {
+      "id": "n9",
+      "type": "CognitiveStyleMarker",
+      "label": "Self-reliant problem-solving with AI as last resort",
+      "grounding_span": "I generally understand the problem itself, so I ask the AI model directly what I can do to fix the document"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n7",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n9",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

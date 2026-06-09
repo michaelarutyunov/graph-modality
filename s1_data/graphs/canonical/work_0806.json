@@ -1,0 +1,189 @@
+{
+  "transcript_id": "work_0806",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as tool for lesson planning",
+      "label_negative": "AI as independent task executor without human input",
+      "bipolarity_complete": true,
+      "grounding_span": "Working with the AI it is helpful to draw on their knowledge and research to shift standard ideas and questions"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "Fluid, mood-driven AI interaction style",
+      "label_negative": "Rigid, systematic AI interaction style",
+      "bipolarity_complete": true,
+      "grounding_span": "Its really more about my mood, I find that I work different ways based upon how I'm feeling"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as accountability and follow-up assistant",
+      "label_negative": "AI as solitary, unchecked tool",
+      "bipolarity_complete": true,
+      "grounding_span": "Peer review is an essential part of academics and if AI systems are going to grow to be researchers they will need to have an awareness of their own fallibility"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI use in education",
+      "label_negative": "AI as threat to human roles and job security",
+      "bipolarity_complete": true,
+      "grounding_span": "the benefits are too vast to be ignored and the times too important to turn away from what can really create the possibility of an educational equality"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI for polished output and efficiency",
+      "label_negative": "Traditional manual methods (pencil and paper)",
+      "bipolarity_complete": true,
+      "grounding_span": "it was nice doing the clean typesetting"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "Human irreplaceability through unique experience and perspective",
+      "label_negative": "Human replaceability by AI",
+      "bipolarity_complete": true,
+      "grounding_span": "My skills are my ideas that are formed from my unique experience and perspective and no one can take that"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Student-centered education",
+      "grounding_span": "Students want more than anything to be heard and made to feel like their ideas are worthwhile"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Intellectual honesty and accountability",
+      "grounding_span": "Trusted peers and friends keep you honest and keep your head on straight and feet on the ground"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Equity and student support",
+      "grounding_span": "create the possibility of an educational equality where everyone can have access to top notch tutoring"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Professional efficiency",
+      "grounding_span": "it was nice doing the clean typesetting"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Creative autonomy",
+      "grounding_span": "My skills are my ideas that are formed from my unique experience and perspective"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with AI output quality",
+      "valence": "positive",
+      "grounding_span": "The first time we completed a problem set, coded up the Latex and produced the neat PDF was very satisfying"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Frustration with AI formatting",
+      "valence": "negative",
+      "grounding_span": "There has definitely been frustration where I could not get the formatting or sequencing correct"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Cautious optimism about AI in education",
+      "valence": "positive",
+      "grounding_span": "the benefits are too vast to be ignored and the times too important to turn away"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Confidence in human irreplaceability in teaching",
+      "valence": "positive",
+      "grounding_span": "My skills are my ideas that are formed from my unique experience and perspective and no one can take that"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Mood-dependent task delegation",
+      "grounding_span": "Its really more about my mood, I find that I work different ways based upon how I'm feeling"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through conversation",
+      "grounding_span": "I do not always know the direction at first and sometimes a conversation will help"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

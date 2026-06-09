@@ -1,0 +1,187 @@
+{
+  "transcript_id": "work_0235",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as iterative test case expander",
+      "label_negative": "Manual test case creation without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "AI can be a very helpful tool in helping to iterate test data or even test cases once I have a first test or a template for it to work off of"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as code analysis and error detection tool",
+      "label_negative": "Manual code proofreading",
+      "bipolarity_complete": true,
+      "grounding_span": "It's often faster for the AI to analyse my code than for me to proofread it myself"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as repetitive task automator",
+      "label_negative": "Manual handling of repetitive tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "scenarios where I need to create a lot of repetitive test cases, or need a large amount of varied test data, which the AI can create easily"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Maintaining personal expertise and project connection",
+      "label_negative": "Over-reliance on AI leading to skill degradation",
+      "bipolarity_complete": true,
+      "grounding_span": "if I automate the process too much, I can risk becoming well connected to my project, which makes me worse at my job"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI handling of complex contextual tasks",
+      "label_negative": "AI struggling with contextually dense scenarios",
+      "bipolarity_complete": true,
+      "grounding_span": "most of the AI models I have worked with have had difficulty working in complex context scenarios"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "Autonomous decision-making on AI use",
+      "label_negative": "Top-down directives on AI usage",
+      "bipolarity_complete": true,
+      "grounding_span": "I think it's best if I just make my own decisions, with maybe some input from management if I think it's necessary"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and time savings",
+      "grounding_span": "saves immense amounts of time, and takes a task that I hate off of my plate"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional competence and expertise",
+      "grounding_span": "I need to be challenging myself to be a subject matter expert, as well as just a more analytical and insightful engineer on my own"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Quality of work output",
+      "grounding_span": "increases my value as an employee as well"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for repetitive tasks",
+      "valence": "positive",
+      "grounding_span": "saves immense amounts of time, and takes a task that I hate off of my plate"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Initial frustration with AI limitations",
+      "valence": "negative",
+      "grounding_span": "I was frustrated when first attempting to use AI as a resource for coding, and finding a lot of limitations due to quality of returns"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Current acceptance and calibrated use",
+      "valence": "positive",
+      "grounding_span": "now that I understand the paramters better, I find I don't have frustrated feelings much at all"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Deliberate avoidance of AI for initial design",
+      "valence": "negative",
+      "grounding_span": "I never use the AI to generate that for me"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative back-and-forth refinement",
+      "grounding_span": "I will provide the test code to the AI, and request those iterations or other ideas, and see what the results are"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Self-aware calibration of AI reliance",
+      "grounding_span": "I try my best to be self-aware about how much I am relying on AI in my role in general"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

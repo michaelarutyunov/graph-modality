@@ -1,0 +1,187 @@
+{
+  "transcript_id": "work_0304",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as learning and verification partner",
+      "label_negative": "AI as opaque black box without understanding",
+      "bipolarity_complete": true,
+      "grounding_span": "I get to learn the *how* and *why* behind any type of new concept I come across, and get to verify that I truly understand it"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for monotonous and repetitive tasks",
+      "label_negative": "AI for personal and creative tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "it was saving me a few hours a week by avoiding monotonous tasks"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability in pattern recognition",
+      "label_negative": "AI failure to recognize obvious patterns",
+      "bipolarity_complete": true,
+      "grounding_span": "the model absolutely insists that it cannot find a pattern"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as junior colleague with mistakes",
+      "label_negative": "AI as fully autonomous and error-free",
+      "bipolarity_complete": true,
+      "grounding_span": "I see it as a junior colleague that will make mistakes"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Personal domain reserved from AI",
+      "label_negative": "AI involvement in personal expression",
+      "bipolarity_complete": true,
+      "grounding_span": "I enjoy writing emails in my own personality, and almost never outsource any administrative writing to AI"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "Enjoyment of 'nerdier' technical challenges",
+      "label_negative": "Delegating enjoyable technical work to AI",
+      "bipolarity_complete": true,
+      "grounding_span": "getting to enjoy the 'nerdier' aspects of my work is huge for me"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Deep understanding and mastery",
+      "grounding_span": "I get to learn the *how* and *why* behind any type of new concept"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Productivity and time savings",
+      "grounding_span": "saving me a few hours a week by avoiding monotonous tasks"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Personal authenticity and enjoyment",
+      "grounding_span": "I enjoy writing emails in my own personality"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI as learning tool",
+      "valence": "positive",
+      "grounding_span": "I get to learn the *how* and *why* behind any type of new concept"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI pattern recognition failures",
+      "valence": "negative",
+      "grounding_span": "the model absolutely insists that it cannot find a pattern"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Optimistic realism about AI growth",
+      "valence": "mixed",
+      "grounding_span": "I'm definitely optimistic, yet realistic about its growth"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Resistance to AI in personal and enjoyable tasks",
+      "valence": "negative",
+      "grounding_span": "I enjoy writing emails in my own personality, and almost never outsource any administrative writing to AI"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Step-by-step learning then verification approach",
+      "grounding_span": "I first tend to go step-by-step with it, then after I feel I understand the process correctly, I'll calculate new SPC numbers...then feed that data to an AI model to verify"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Role evolution from developer to engineer",
+      "grounding_span": "I'm more of a software engineer now, than a software developer. I work more on the 'bigger picture' and let AI do some of the smaller details"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

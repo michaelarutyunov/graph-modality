@@ -1,0 +1,205 @@
+{
+  "transcript_id": "creativity_0059",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI for administrative tasks",
+      "label_negative": "AI for core creative writing",
+      "bipolarity_complete": true,
+      "grounding_span": "I have only used AI when it comes to more administrative tasks like composing emails"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as writing assistant",
+      "label_negative": "AI as replacement for personal voice",
+      "bipolarity_complete": true,
+      "grounding_span": "I'll generally just change the wording of the sentences or the word choices"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as tool for visual innovation in pitch decks",
+      "label_negative": "AI for full creative writing",
+      "bipolarity_complete": true,
+      "grounding_span": "may outsource to AI if I have a mental block"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI reliability and factuality",
+      "label_negative": "AI unreliability and incorrect information",
+      "bipolarity_complete": true,
+      "grounding_span": "mistrust in AI's factuality prevents me from using it for research"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI response quality and professionalism",
+      "label_negative": "AI use damaging credibility",
+      "bipolarity_complete": true,
+      "grounding_span": "if it's obvious I've used AI for any part of the project it may impact my credibility"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI oversaturation reducing opportunities for newcomers",
+      "label_negative": "AI enabling new voices",
+      "bipolarity_complete": true,
+      "grounding_span": "oversaturation of low effort work may reduce opportunities for newcomers"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "it's time saving"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Creative authenticity and human expression",
+      "grounding_span": "I enjoy the process and I tend to have a clear idea of what I want"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Professional reputation and credibility",
+      "grounding_span": "it may impact my credibility when it comes to the rest of my work"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Preservation of human creativity and diversity",
+      "grounding_span": "this would disproportionately effect minority writers"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Positive stance toward AI for administrative tasks",
+      "valence": "positive",
+      "grounding_span": "it's time saving"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Guilt about secret AI use",
+      "valence": "negative",
+      "grounding_span": "there's always a little bit of shame that comes with using AI"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Distrust of AI for factual accuracy",
+      "valence": "negative",
+      "grounding_span": "mistrust in AI's factuality prevents me from using it for research"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Concern about AI oversaturation harming newcomers",
+      "valence": "negative",
+      "grounding_span": "oversaturation of low effort work may reduce opportunities for newcomers"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Openness to increasing AI use in future",
+      "valence": "positive",
+      "grounding_span": "Could see leaning into more practical implementations of AI as opposed to creative"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement with AI to preserve personal voice",
+      "grounding_span": "will always rewrite the output to sound more like 'me'"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based boundary setting — separates creative from non-creative tasks",
+      "grounding_span": "I have not found AI useful for the bulk of what I do"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

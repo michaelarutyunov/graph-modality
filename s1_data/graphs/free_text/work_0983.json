@@ -1,0 +1,158 @@
+{
+  "transcript_id": "work_0983",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative query debugger",
+      "label_negative": "AI as source of unwanted modifications",
+      "bipolarity_complete": true,
+      "grounding_span": "it feels collaborative"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as communication rephraser",
+      "label_negative": "Manual explanation drafting",
+      "bipolarity_complete": true,
+      "grounding_span": "rephrase the explanations that I send to non-technical teams"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI task suitability based on context and privacy",
+      "label_negative": "AI requiring excessive background or PII",
+      "bipolarity_complete": true,
+      "grounding_span": "too much background information to be given to AI"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as productivity enabler in supportive workplace",
+      "label_negative": "Restrictive workplace hindering AI use",
+      "bipolarity_complete": true,
+      "grounding_span": "My workplace is very pro AI"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as learning tool despite heavy lifting",
+      "label_negative": "AI as replacement for human skill",
+      "bipolarity_complete": true,
+      "grounding_span": "I learn a lot from it, despite it often doing the heavy lifting"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and productivity",
+      "grounding_span": "helps me create cleaner and more efficient queries quickly"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Clear communication with non-technical stakeholders",
+      "grounding_span": "easier to understand"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Data privacy and security",
+      "grounding_span": "too much PII to redact"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Professional growth and adaptability",
+      "grounding_span": "adapt the way I work so that I am using AI to my advantage"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI collaboration",
+      "valence": "positive",
+      "grounding_span": "I am satisfied more than I am frustrated"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI carrying over unwanted context",
+      "valence": "negative",
+      "grounding_span": "it started joining tables and adding filters that I did not ask for"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Optimism about AI enabling greater achievement",
+      "valence": "positive",
+      "grounding_span": "helping me achieve more than I could ever achieve on my own"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative back-and-forth refinement",
+      "grounding_span": "a bit of back-and-forth to get the results I'm after"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Proactive adaptation to technological change",
+      "grounding_span": "I feel I just need to adapt the way I work"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

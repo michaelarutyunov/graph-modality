@@ -1,0 +1,167 @@
+{
+  "transcript_id": "work_0222",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as time-saving tool for tedious tasks",
+      "label_negative": "Manual time-consuming effort for disliked tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "AI saves me a lot of time, which is most important to me"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI simplicity and ease of use",
+      "label_negative": "Complex or cumbersome AI interaction",
+      "bipolarity_complete": true,
+      "grounding_span": "The simpler AI is to use, the more I like it"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI output quality and accuracy",
+      "label_negative": "Poor or inaccurate AI output",
+      "bipolarity_complete": true,
+      "grounding_span": "it's spot on more times than not"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Preservation of enjoyable hands-on tasks",
+      "label_negative": "AI takeover of enjoyable tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I like to take my own photos of each book"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as enabler of creative pursuits outside work",
+      "label_negative": "AI encroaching on personal creative time",
+      "bipolarity_complete": true,
+      "grounding_span": "I can use the free time AI saves me to pursue other creative aspects outside of work"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Time efficiency",
+      "grounding_span": "I don't like wasting time"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Personal enjoyment and passion",
+      "grounding_span": "Photography is just as much a passion of mine as books are"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Creative fulfillment outside work",
+      "grounding_span": "pursue other creative aspects outside of work"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Gratitude and satisfaction with AI for descriptions",
+      "valence": "positive",
+      "grounding_span": "I'm super happy with the way AI has been able to help me accomplish so much more at work"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Openness to AI assistance in photography",
+      "valence": "positive",
+      "grounding_span": "I'd especially like to use an AI tool to help me take better pictures"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Preference for keeping photography manual",
+      "valence": "positive",
+      "grounding_span": "I like to take my own photos of each book"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic simplicity preference — values straightforward input-output processes",
+      "grounding_span": "It's a very basic process, but I like that about it"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Passion-driven task differentiation — distinguishes enjoyable from tedious tasks",
+      "grounding_span": "Photography is just as much a passion of mine as books are"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

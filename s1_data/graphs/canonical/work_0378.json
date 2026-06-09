@@ -1,0 +1,174 @@
+{
+  "transcript_id": "work_0378",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI use within corporate compliance boundaries",
+      "label_negative": "AI as tedious documentation burden",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI as a fun tool sometimes, too. Such as a reward, to make silly requests after they finish the session."
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as collaborative client education enhancer",
+      "label_negative": "AI as impersonal record-keeping system",
+      "bipolarity_complete": true,
+      "grounding_span": "I can give them the 'typical' speech... But when I suggest that we see what AI has to say, we can be creative in how we ask, and they feel more involved"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI trustworthiness and verification",
+      "label_negative": "AI as imperfect and potentially misleading",
+      "bipolarity_complete": true,
+      "grounding_span": "I still don't feel AI is perfect or right for every situation"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI use sanctioned by workplace",
+      "label_negative": "Individual creative AI use",
+      "bipolarity_complete": true,
+      "grounding_span": "My boss prefers that we use it at each session with our clients, more so to record interactions, and not as a reward, as I do."
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as enhancement tool not replacement",
+      "label_negative": "AI as potential job threat",
+      "bipolarity_complete": true,
+      "grounding_span": "It is an enhancer for me and my clients."
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Client engagement and compliance",
+      "grounding_span": "I get almost 95% compliance, and it has been instrumental in getting clients back to their lives"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional autonomy",
+      "grounding_span": "I felt I shouldn't need to use a computer program when I was trained to do my job using my own skills."
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Client success and satisfaction",
+      "grounding_span": "they are more relaxed and usually I get praised for caring for them so well"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Resistance to AI in analytical calculations",
+      "valence": "negative",
+      "grounding_span": "When I first started using it, I hated it."
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Positive discovery of AI's engagement potential",
+      "valence": "positive",
+      "grounding_span": "I really started liking some of the responses I was getting"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Skepticism about AI's perfection",
+      "valence": "ambivalent",
+      "grounding_span": "I still don't feel AI is perfect or right for every situation"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "It is an enhancer for me and my clients."
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Creative experimentation and playful adaptation",
+      "grounding_span": "I decided to try asking questions in different ways to help encourage a patient to understand more"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Individualized tailoring based on child-specific needs",
+      "grounding_span": "it is very individualized and random when and if I use AI"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

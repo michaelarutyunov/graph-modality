@@ -1,0 +1,169 @@
+{
+  "transcript_id": "creativity_0019",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as brainstorming and sounding board",
+      "label_negative": "AI as executor of design execution",
+      "bipolarity_complete": true,
+      "grounding_span": "I find myself asking for help when it comes to brainstorming"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as strategic thinking partner",
+      "label_negative": "AI as equal collaborator",
+      "bipolarity_complete": true,
+      "grounding_span": "It felt like discussing the project with a well educated coworker"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Authenticity of human-created design",
+      "label_negative": "Inauthentic AI-generated art",
+      "bipolarity_complete": true,
+      "grounding_span": "the work would come off as inauthentic if I used it for any of the actual design execution"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as efficiency tool for information gathering",
+      "label_negative": "Manual scattered research process",
+      "bipolarity_complete": true,
+      "grounding_span": "It's definitely sped things up for me"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as educator for newcomers",
+      "label_negative": "AI as replacement for foundational learning",
+      "bipolarity_complete": true,
+      "grounding_span": "play more of a role as an educator for a new grad"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative authenticity and originality",
+      "grounding_span": "the work would come off as inauthentic"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and productivity",
+      "grounding_span": "It's definitely sped things up for me"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Creative control and authorship",
+      "grounding_span": "I already have the specific vison that the model is helping me work through"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Positive stance toward AI as brainstorming aid",
+      "valence": "positive",
+      "grounding_span": "the brainstorming help it provides is very useful"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Negative stance toward AI for design execution",
+      "valence": "negative",
+      "grounding_span": "the work would come off as inauthentic if I used it for any of the actual design execution"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Positive stance toward AI as efficiency tool",
+      "valence": "positive",
+      "grounding_span": "It's definitely sped things up for me"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Concern about AI art inauthenticity",
+      "valence": "negative",
+      "grounding_span": "AI art is a growing problem in the sense of inauthenticity"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Director-like control — maintains creative vision while seeking input",
+      "grounding_span": "I feel more like a director getting input"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Dialogue-based iterative refinement — uses questioning to explore alternatives",
+      "grounding_span": "asking it questions such as if a minimalist approach could have the same impact"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,289 @@
+{
+  "transcript_id": "work_0021",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as tone and clarity enhancer for professional communication",
+      "label_negative": "AI as risk of miscommunication or loss of personal voice",
+      "bipolarity_complete": true,
+      "grounding_span": "I like to use AI to help me ensure the tone of the message is right for the audience"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as creative brainstorming partner",
+      "label_negative": "AI as insufficiently creative or context-aware",
+      "bipolarity_complete": true,
+      "grounding_span": "I also use AI as a creative tool to help me come up with ideas for engaging program and events"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as delegated task completer for well-defined outputs",
+      "label_negative": "AI as requiring ongoing collaboration for open-ended tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I will mostly delegate complete tasks for AI to handle fully and independently"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as collaborative iterative partner for complex or sensitive tasks",
+      "label_negative": "AI as one-shot tool without back-and-forth refinement",
+      "bipolarity_complete": true,
+      "grounding_span": "I tend to collaborate with AI more, having back and forth conversation about ideas"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Appropriateness of AI use in personal and evaluative contexts",
+      "label_negative": "Inappropriateness of AI use in personal and evaluative contexts",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't feel that's appropriate. For a reference of that magnitude, I prefer that it be written by me"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as timesaver enabling focus on higher-value work",
+      "label_negative": "AI as threat to skill preservation and personal writing ability",
+      "bipolarity_complete": true,
+      "grounding_span": "I tend to rely on AI as a timesaver, especially with my written communication, and I worry there may be a point that I rely too heavily on AI"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI as thinking partner for emotionally challenging workplace situations",
+      "label_negative": "AI as inadequate for nuanced human relations",
+      "bipolarity_complete": true,
+      "grounding_span": "I admittedly shared my shock and frustration with AI before finally asking it to help me brainstorm ways to speak with my supervisor"
+    },
+    {
+      "id": "n8",
+      "type": "Construct",
+      "label": "AI use as taboo or culturally sensitive in educational settings",
+      "label_negative": "AI use as accepted and openly discussed",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is still a pretty taboo topic, especially when it comes to student use"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Effective and appropriate professional communication",
+      "grounding_span": "I want to make sure my intentions are as clear as possible"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Creative and engaging program development",
+      "grounding_span": "come up with ideas for engaging program and events"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Personal integrity and authenticity in evaluative roles",
+      "grounding_span": "I don't feel that's appropriate. For a reference of that magnitude, I prefer that it be written by me"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Skill preservation and personal writing competence",
+      "grounding_span": "I worry there may be a point that I rely too heavily on AI and might lose my ability to think through and complete written tasks for myself"
+    },
+    {
+      "id": "n13",
+      "type": "Value",
+      "label": "Workplace efficiency and time management",
+      "grounding_span": "the amount of work on my plate requires that I consider how to best use my time"
+    },
+    {
+      "id": "n14",
+      "type": "Value",
+      "label": "Supportive and confident handling of sensitive interpersonal situations",
+      "grounding_span": "AI helped me figure out how to best share the information with confidence and care"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Satisfaction with AI for tone refinement",
+      "valence": "positive",
+      "grounding_span": "AI helps me do that"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Satisfaction with AI as creative brainstorming partner",
+      "valence": "positive",
+      "grounding_span": "I also use AI as a creative tool to help me come up with ideas"
+    },
+    {
+      "id": "n17",
+      "type": "Stance",
+      "label": "Resistance to using AI for personal recommendation letters",
+      "valence": "negative",
+      "grounding_span": "I don't feel that's appropriate"
+    },
+    {
+      "id": "n18",
+      "type": "Stance",
+      "label": "Resistance to using AI for student feedback",
+      "valence": "negative",
+      "grounding_span": "I don't feel that it would be appropriate to use AI to help generate feedback"
+    },
+    {
+      "id": "n19",
+      "type": "Stance",
+      "label": "Concern about over-reliance and skill loss",
+      "valence": "negative",
+      "grounding_span": "I worry there may be a point that I rely too heavily on AI and might lose my ability to think through and complete written tasks for myself"
+    },
+    {
+      "id": "n20",
+      "type": "Stance",
+      "label": "Gratitude for AI support in challenging workplace conversation",
+      "valence": "positive",
+      "grounding_span": "I credit AI with helping me figure out how to best share the information with confidence and care"
+    },
+    {
+      "id": "n21",
+      "type": "Stance",
+      "label": "Awareness of AI taboo in educational context",
+      "valence": "mixed",
+      "grounding_span": "AI is still a pretty taboo topic"
+    },
+    {
+      "id": "n22",
+      "type": "Stance",
+      "label": "Optimism about expanding AI use to administrative tasks",
+      "valence": "positive",
+      "grounding_span": "I see myself exploring other ways to use AI to save time, expanding this beyond written communication"
+    },
+    {
+      "id": "n23",
+      "type": "CognitiveStyleMarker",
+      "label": "Context-rich prompting — provides detailed background and goals",
+      "grounding_span": "I like to give it as much context as possible (explaining the background of the situation, who I'm in contact with, and the goal of the communication)"
+    },
+    {
+      "id": "n24",
+      "type": "CognitiveStyleMarker",
+      "label": "Task-adaptive interaction style — delegates for defined tasks, collaborates for open-ended ones",
+      "grounding_span": "For work like email drafting, I will mostly delegate complete tasks for AI to handle fully and independently... when I'm brainstorming ideas for a program or event, I tend to collaborate with AI more"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n14",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n13",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n14",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n15",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n17",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n18",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n19",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n20",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n21",
+      "target": "n8",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n22",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n23",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n24",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n24",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n6",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

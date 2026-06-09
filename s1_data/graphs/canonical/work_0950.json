@@ -1,0 +1,169 @@
+{
+  "transcript_id": "work_0950",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as research and synthesis tool",
+      "label_negative": "AI as unreliable or opaque information source",
+      "bipolarity_complete": true,
+      "grounding_span": "use AI as a more intelligent search engine, to compile results on sometimes quite obscure or difficult-to-find sources and then perform synthesis or process on them into a usable data format"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI trustworthiness and verification",
+      "label_negative": "AI hallucination and confident falsehoods",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't trust AI to make that level of decisions yet"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI delegation for simple tasks",
+      "label_negative": "AI delegation for unverifiable or high-stakes decisions",
+      "bipolarity_complete": true,
+      "grounding_span": "If it is something that from my experience I can immediately sense-check the result of just from looking at it then I will delegate it to AI"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI transparency and reproducibility",
+      "label_negative": "AI confident hallucination",
+      "bipolarity_complete": true,
+      "grounding_span": "if the models start stating when they are unsure of an answer rather than hallucinating"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI capability for complex tasks",
+      "label_negative": "AI limited to simple step-by-step tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I will become more confident in increasing the number of steps I give them to do in one go"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Research efficiency",
+      "grounding_span": "improves their productivity and so now wouldn't do without it"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Decision accountability and transparency",
+      "grounding_span": "the decision-making process needed to be fully understood and transparent"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Epistemic accuracy and understanding",
+      "grounding_span": "It knocks my confidence in AI each time it happens, and erodes any trustworthiness it has built up"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Cautious trust in AI",
+      "valence": "ambivalent",
+      "grounding_span": "I don't trust AI to make that level of decisions yet"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI hallucination",
+      "valence": "negative",
+      "grounding_span": "I have experienced frustration with AI when it makes up answers (hallucinates) and states them with such apparent confidence"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Cautious openness to future delegation",
+      "valence": "positive",
+      "grounding_span": "if the models start stating when they are unsure of an answer rather than hallucinating, I will become more confident in increasing the number of steps"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Reluctance to delegate high-accountability decisions",
+      "valence": "negative",
+      "grounding_span": "If it is a decision where the process would need to be understood and justified as it will potentially be questioned by stakeholders, then I will not be comfortable delegating this to AI"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Task decomposition into small verifiable steps",
+      "grounding_span": "Definitely step-by-step"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Experience-based sense-checking before delegation",
+      "grounding_span": "If it is something that from my experience I can immediately sense-check the result"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

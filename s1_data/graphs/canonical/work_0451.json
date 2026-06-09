@@ -1,0 +1,244 @@
+{
+  "transcript_id": "work_0451",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as brainstorming and idea generator",
+      "label_negative": "AI as mere content generator without human input",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI as a brainstorming tool, when ideating content, normally to break through the writers block"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as proofreading assistant",
+      "label_negative": "AI for full content generation without human editing",
+      "bipolarity_complete": true,
+      "grounding_span": "I might use writing tools for proofreading, and providing basic structure before editing it with my own flair"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for campaign planning and delegation",
+      "label_negative": "AI for creative content writing",
+      "bipolarity_complete": true,
+      "grounding_span": "the tedious part of planning was helped by the AI"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as research starting point",
+      "label_negative": "AI for generating original insights",
+      "bipolarity_complete": true,
+      "grounding_span": "Perplexity helps with research on Billboard or industry statistics"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI-generated content quality and validity",
+      "label_negative": "AI-written content quality: generic vs personal",
+      "bipolarity_complete": true,
+      "grounding_span": "the AI-written content can come out quite generic or stiff"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI for keyword research: low-hanging fruit vs long-tail",
+      "label_negative": "AI for keyword research: low-hanging fruit vs long-tail",
+      "bipolarity_complete": true,
+      "grounding_span": "the AI's suggestions were quite 'low-hanging fruit', when I wanted more long-tail keywords"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI as professional development tool",
+      "label_negative": "AI training skill as replaceable",
+      "bipolarity_complete": true,
+      "grounding_span": "I'm better at training AI than they are"
+    },
+    {
+      "id": "n8",
+      "type": "Construct",
+      "label": "Authenticity of AI-generated content",
+      "label_negative": "Human authenticity in content vs AI polish",
+      "bipolarity_complete": true,
+      "grounding_span": "the polished videos don't seem to resonate so much with followers"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Creative control and originality",
+      "grounding_span": "I prefer to add my own flair, and make it sound 'personal'"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "Sometimes we have deadlines to meet"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Professional growth and skill maintenance",
+      "grounding_span": "I'm upskilling in data and technical skills like SEO"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Audience engagement and authenticity",
+      "grounding_span": "LinkedIn boosts posts with more human interaction"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Satisfaction with AI for campaign planning",
+      "valence": "positive",
+      "grounding_span": "It produced a very comprehensive plan, with the effective dates"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Confidence in AI for research and rewording",
+      "valence": "negative",
+      "grounding_span": "I found that it was quicker to do it myself"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Preference for personal touch in communication",
+      "valence": "positive",
+      "grounding_span": "I prefer to add my own flair, and make it sound 'personal'"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Strategic upskilling to complement AI",
+      "valence": "positive",
+      "grounding_span": "I'm upskilling in data and technical skills like SEO"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative iterative refinement — works back and forth with AI",
+      "grounding_span": "Through some iteration, I'll see the suggestions ChatGPT makes"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Selective delegation based on task nature",
+      "grounding_span": "It might vary, because social media posts, sales emails, blogs and newsletters have different requirements"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n13",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

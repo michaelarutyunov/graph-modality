@@ -1,0 +1,239 @@
+{
+  "transcript_id": "work_0426",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as code generation assistant",
+      "label_negative": "Manual script writing without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "write one-use scripts that process a large amount of data with semi-variable formatting"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for documentation efficiency",
+      "label_negative": "Relying solely on official documentation",
+      "bipolarity_complete": true,
+      "grounding_span": "supplement official API and library documentation"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI bug severity and fix effort",
+      "label_negative": "AI bug requiring manual fix",
+      "bipolarity_complete": true,
+      "grounding_span": "If a bug is extremely minor such as an off-by-one or moderate such as not formatting the outputted data properly, I will handle that"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as drafting assistant for emails",
+      "label_negative": "Human-written email",
+      "bipolarity_complete": true,
+      "grounding_span": "my email account has an AI that could write emails. However, I prefer to handle them myself"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as collaborative partner vs delegator",
+      "label_negative": "AI as independent task completer",
+      "bipolarity_complete": true,
+      "grounding_span": "At the beginning, I tend to delegate complete tasks to it. ... Otherwise, I tend to collaborate with the AI throughout the task"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI effectiveness for unit test generation",
+      "label_negative": "Manual unit test writing",
+      "bipolarity_complete": true,
+      "grounding_span": "AI was able to write a suite of unit tests for me"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI as debugging assistant",
+      "label_negative": "AI helpful in specialized debugging",
+      "bipolarity_complete": true,
+      "grounding_span": "I consistently experienced a segmentation fault ... I did spend at least 2 of those hours trying to use an AI to find the issue. It didn't help"
+    },
+    {
+      "id": "n8",
+      "type": "Construct",
+      "label": "AI use sanctioned by workplace",
+      "label_negative": "Workplace discouragement of AI use",
+      "bipolarity_complete": true,
+      "grounding_span": "My workplace emphasizes AI use heavily"
+    },
+    {
+      "id": "n9",
+      "type": "Construct",
+      "label": "AI impact on skill maintenance",
+      "label_negative": "Skill atrophy due to AI reliance",
+      "bipolarity_complete": true,
+      "grounding_span": "I have to maintain those skills since AI is not yet capable of taking over"
+    },
+    {
+      "id": "n10",
+      "type": "Construct",
+      "label": "AI as supplemental tool",
+      "label_negative": "AI as primary tool",
+      "bipolarity_complete": true,
+      "grounding_span": "they will remain supplemental"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "that was still a lot faster than I could have otherwise managed"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Control and accuracy",
+      "grounding_span": "I prefer to retain control over such important tasks"
+    },
+    {
+      "id": "n13",
+      "type": "Value",
+      "label": "Skill preservation and professional adaptability",
+      "grounding_span": "I have to maintain those skills"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Satisfaction with AI for unit testing",
+      "valence": "positive",
+      "grounding_span": "I remember feeling particularly satisfied when an AI was able to write a suite of unit tests for me"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Satisfaction with AI for debugging",
+      "valence": "negative",
+      "grounding_span": "It didn't help, or even provide useful trains of thought"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Preference for human-written emails",
+      "valence": "negative",
+      "grounding_span": "I prefer to handle them myself"
+    },
+    {
+      "id": "n17",
+      "type": "Stance",
+      "label": "Openness to increasing AI use in future",
+      "valence": "positive",
+      "grounding_span": "If their competency increases noticeably, then I foresee integrating them into my job far more extensively"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement with diminishing returns awareness",
+      "grounding_span": "If the bug would require more than generally 15 minutes to manually fix, I will try another prompt"
+    },
+    {
+      "id": "n19",
+      "type": "CognitiveStyleMarker",
+      "label": "Critical evaluation and selective acceptance of AI output",
+      "grounding_span": "I'm always curious to see what it provides and whether it will serve as a good foundation"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n13",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n13",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n14",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n17",
+      "target": "n10",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n3",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n19",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n6",
+      "target": "n7",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

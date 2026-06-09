@@ -1,0 +1,169 @@
+{
+  "transcript_id": "work_0512",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as contract analysis and error detection tool",
+      "label_negative": "Manual contract review without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "AI helped me extract that information from the contract"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as collaborative drafting assistant",
+      "label_negative": "AI as fully autonomous drafter",
+      "bipolarity_complete": true,
+      "grounding_span": "I have to proofread the entire email and tell AI to fix or remove parts"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI context retention and reliability",
+      "label_negative": "AI losing context and requiring restart",
+      "bipolarity_complete": true,
+      "grounding_span": "AI goes off the rails and forgets the context of the situation"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as creative marketing partner",
+      "label_negative": "Manual creative work without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I can delegate creative tasks, such as coming up with an ad campaign"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI integration into operational workflow",
+      "label_negative": "Manual sorting and grouping of orders",
+      "bipolarity_complete": true,
+      "grounding_span": "AI can help us sort and group the orders"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Cost savings and efficiency",
+      "grounding_span": "AI really helped us fix our energy contract and save us money"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Time savings and productivity",
+      "grounding_span": "Instead of spending hours dealing with all the administrative stuff, it will take me minutes"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Understanding and control",
+      "grounding_span": "I have to proofread the entire email and tell AI to fix or remove parts"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for contract analysis",
+      "valence": "positive",
+      "grounding_span": "AI really helped us fix our energy contract and save us money"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI context loss",
+      "valence": "negative",
+      "grounding_span": "AI goes off the rails and forgets the context of the situation"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Optimism about AI as essential tool",
+      "valence": "positive",
+      "grounding_span": "I see it as becoming an essential tool in my workflow"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Resistance to AI for accounting due to digitization hassle",
+      "valence": "negative",
+      "grounding_span": "digitalizing so many documents feels like a hassle"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative iterative refinement — prefers to guide and correct AI step by step",
+      "grounding_span": "I have to proofread the entire email and tell AI to fix or remove parts"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic task delegation — delegates only when clear benefit and low risk",
+      "grounding_span": "I can delegate creative tasks, such as coming up with an ad campaign"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

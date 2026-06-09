@@ -1,0 +1,144 @@
+{
+  "transcript_id": "work_0437",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as problem-solving resource after self-exhaustion",
+      "label_negative": "AI as crutch that erodes problem-solving skills",
+      "bipolarity_complete": true,
+      "grounding_span": "I only ask for AI help once I feel like I've exhausted my problem solving skills"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "Collaborative iterative interaction with AI",
+      "label_negative": "One-shot delegation to AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I collaborate with it throughout the task"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as selective tool for mundane tasks",
+      "label_negative": "AI as comprehensive work replacement",
+      "bipolarity_complete": true,
+      "grounding_span": "clearing out some of the smaller mundane/repetitive tasks"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI reliability and accuracy",
+      "label_negative": "AI unreliability requiring back-and-forth",
+      "bipolarity_complete": true,
+      "grounding_span": "it provided my the correct list first time which I didn't expect"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Personal problem-solving enjoyment and skill preservation",
+      "grounding_span": "I personally like problem solving, it's fun and relaxing for me"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Task efficiency and overcoming daunting tasks",
+      "grounding_span": "it made it very easy to finish the task"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional competence and adaptability",
+      "grounding_span": "just keep learning and figuring things out as normal"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Satisfaction with AI as effective problem-solver",
+      "valence": "positive",
+      "grounding_span": "I was pretty happy with it because it provided my the correct list first time"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Resistance to over-reliance on AI",
+      "valence": "negative",
+      "grounding_span": "I don't want to lose my problem solving skills and become dependent on AI"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Contentment with current AI usage pattern",
+      "valence": "positive",
+      "grounding_span": "I'm pretty satisfied with the way that I currently use it"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Self-reliant problem-solving before seeking help",
+      "grounding_span": "I prefer to only reach out to AI after I've attempted to solve the problem myself"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative collaborative refinement",
+      "grounding_span": "There's usually a little back and forth as once I overcome one hurdle there's often another one"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

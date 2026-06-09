@@ -1,0 +1,187 @@
+{
+  "transcript_id": "work_0940",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as efficiency tool for routine tasks",
+      "label_negative": "Manual execution of routine tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI to speed up tasks such as calculating, data entry, and writing emails and drafts."
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as collaborative partner requiring oversight",
+      "label_negative": "AI as autonomous delegate without oversight",
+      "bipolarity_complete": true,
+      "grounding_span": "I never delegate tasks for it to handle completely. I always collaborate with AI to ensure that everything it provides is correct and factual."
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability and accuracy",
+      "label_negative": "AI unreliability and inaccuracy",
+      "bipolarity_complete": true,
+      "grounding_span": "AI often provides incorrect information and fact-checking its response takes just as much, or more time, than finding the answer myself using credible sources."
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI use for non-confidential tasks",
+      "label_negative": "AI use for confidential tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I prefer to do any tasks that include confidential information as I worry about how my data is shared."
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as writing assistant preserving skill",
+      "label_negative": "AI as writing replacement degrading skill",
+      "bipolarity_complete": true,
+      "grounding_span": "For tasks such as writing emails, what I've been trying to do as of recently is give AI a very quick and rough draft of what I would like to say and let it polish it for me, instead of relying on it to come up with the entire thing."
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and time efficiency",
+      "grounding_span": "Any time I can use AI to finish a task faster is a satisfying experience for me."
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Accuracy and factual correctness",
+      "grounding_span": "I always collaborate with AI to ensure that everything it provides is correct and factual."
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Data privacy and security",
+      "grounding_span": "I prefer to do any tasks that include confidential information as I worry about how my data is shared."
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Personal skill maintenance and growth",
+      "grounding_span": "I do worry that my writing will get worse if I rely too much on AI to complete my writing tasks for me."
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for time-saving",
+      "valence": "positive",
+      "grounding_span": "Any time I can use AI to finish a task faster is a satisfying experience for me."
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI errors in calculations",
+      "valence": "negative",
+      "grounding_span": "I once used AI to calculate budget figures and it repeatedly made mistakes. The most frustrating part was that I knew the numbers it was providing were wrong but I couldn't figure out where it was making mistakes."
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Caution due to colleagues' blind trust",
+      "valence": "negative",
+      "grounding_span": "I have seen my colleagues blindly trust AI without checking responses, which has led to issues with incorrect information being provided. This has made me be extra diligent in making sure I always fact-check and read over all AI responses if using them in my work."
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Concern about skill degradation",
+      "valence": "negative",
+      "grounding_span": "I do worry that my writing will get worse if I rely too much on AI to complete my writing tasks for me."
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Skepticism about future delegation",
+      "valence": "negative",
+      "grounding_span": "I don't think AI will get to a point in the distant future where I will feel comfortable delegating entire tasks to it rather than collaborating and fact-checking its responses."
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative collaborative problem-solving",
+      "grounding_span": "I would first state what I'm trying to accomplish and ask what formula I need. The AI would provide a list of formulas and explain why each one could work; I would pick which formula I thought would work the best and try it in my spreadsheet. Depending on whether or not it was successful, I would continue the conversation with AI and explain what was happening and ask for further help."
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Vigilant oversight and fact-checking",
+      "grounding_span": "I always collaborate with AI to ensure that everything it provides is correct and factual."
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

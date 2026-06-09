@@ -1,0 +1,156 @@
+{
+  "transcript_id": "work_0562",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI unreliability causing errors",
+      "bipolarity_complete": true,
+      "grounding_span": "I'll generally not use AI for bits I know it will make errors in"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as time-saving tool",
+      "label_negative": "AI as unnecessary for tasks without time pressure",
+      "bipolarity_complete": true,
+      "grounding_span": "I now default to ai when I need something worked out yesterday"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as skill development enabler",
+      "label_negative": "AI as requiring skill maintenance",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't see much point - if I'm certain AI will be the standard in that task soon, I don't see the point in practicing it"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as practical problem solver",
+      "label_negative": "AI as frustrating problem-generator",
+      "bipolarity_complete": true,
+      "grounding_span": "AI create a plugin that saved me a good 10 minutes every hour. That was extremely satisfying"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "saved me a good 10 minutes every hour"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Professional competence",
+      "grounding_span": "I know it will make errors in"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Adaptability to technological progress",
+      "grounding_span": "if I'm certain AI will be the standard in that task soon, I don't see the point in practicing it"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Satisfaction with AI for time-saving",
+      "valence": "positive",
+      "grounding_span": "AI create a plugin that saved me a good 10 minutes every hour. That was extremely satisfying"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for debugging",
+      "valence": "negative",
+      "grounding_span": "It kept giving me code that would crash the software... That was very frustrating"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Pragmatic acceptance of skill obsolescence",
+      "valence": "mixed",
+      "grounding_span": "I consider it in a sense of 'I spent all this time learning it for nothing', but not in a 'I should keep this up just in case'"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "positive",
+      "grounding_span": "Only increasing. As it improves, my use of it will increase"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic cost-benefit analysis of AI use",
+      "grounding_span": "I'll generally not use AI for bits I know it will make errors in"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Shorthand communication for recurring tasks",
+      "grounding_span": "I have a chat with enough history that I can just type 'd11, x14, w110' and it will give me the answer i need"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

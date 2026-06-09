@@ -1,0 +1,184 @@
+{
+  "transcript_id": "work_0567",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as brainstorming partner for abstract problems",
+      "label_negative": "AI as solutioning mode for specific tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "brainstorming ideas for abstract problems"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as reference for syntax issues",
+      "label_negative": "AI as code/text generator for copy-paste",
+      "bipolarity_complete": true,
+      "grounding_span": "if I'm stuck on a syntax issue I might go to AI to get unstuck"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for text generation",
+      "label_negative": "Maintaining personal voice in writing",
+      "bipolarity_complete": true,
+      "grounding_span": "I won't use it for text generation"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI summarization reliability",
+      "label_negative": "AI summarization inaccuracy",
+      "bipolarity_complete": true,
+      "grounding_span": "AI summarization of meeting notes is particularly frustrating"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI use for personal writing",
+      "label_negative": "Personal writing without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't think I will ever use it for personal writing"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Maintaining personal skills and voice",
+      "grounding_span": "you lose your own voice if you are just generating AI text"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and time saving",
+      "grounding_span": "It saves a lot of time solving coding or SQL syntax issues"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Accurate understanding and representation",
+      "grounding_span": "summarized what I said in a meeting completely incorrectly"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Positive stance toward AI for brainstorming and syntax help",
+      "valence": "positive",
+      "grounding_span": "I find it's useful for brainstorming ideas for abstract problems"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Negative stance toward AI for text generation",
+      "valence": "negative",
+      "grounding_span": "I won't use it for text generation"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI summarization inaccuracy",
+      "valence": "negative",
+      "grounding_span": "AI summarization of meeting notes is particularly frustrating"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Openness to future use if reliability improves",
+      "valence": "positive",
+      "grounding_span": "if summarization becomes reliably accurate, it could save time"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Intentional avoidance of AI for skill preservation",
+      "grounding_span": "I try not to use AI for tasks where I don't need it"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "General-to-specific questioning strategy",
+      "grounding_span": "the more general I keep it, the better"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,280 @@
+{
+  "transcript_id": "work_0599",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as code generation assistant with complete context",
+      "label_negative": "AI without sufficient context leading to poor output",
+      "bipolarity_complete": true,
+      "grounding_span": "If I explain my requirement in a complete way and provide enough context, it saves a lot of time"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as communication formalizer",
+      "label_negative": "Informal or unclear communication without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI a lot to phrase my ideas or what I want to send in a more formal way"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as brainstorming and ideation partner",
+      "label_negative": "Solo brainstorming without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "any kind of brainstorming or ideation sessions are greatly improved by conversations with LLMs"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as strategic sounding board for approach validation",
+      "label_negative": "AI suggesting suboptimal or overly complex changes",
+      "bipolarity_complete": true,
+      "grounding_span": "ask the AI if they think it's the most optimal idea"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as validation partner for self-implemented solutions",
+      "label_negative": "Solo implementation without AI validation",
+      "bipolarity_complete": true,
+      "grounding_span": "most of the times I validate whatever I came with with an AI"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI delegation for simple tasks",
+      "label_negative": "Manual handling of simple tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "For simple tasks I try to delegate it as much as possible"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI as iterative collaborator requiring adjustments",
+      "label_negative": "AI producing final output without iteration",
+      "bipolarity_complete": true,
+      "grounding_span": "it's about collaboration, understanding their changes, asking for adjustments if something is off"
+    },
+    {
+      "id": "n8",
+      "type": "Construct",
+      "label": "AI frustration when context is insufficient",
+      "label_negative": "AI understanding with good context",
+      "bipolarity_complete": true,
+      "grounding_span": "no matter how much context or how hard you try to explain something, the AI will not get it"
+    },
+    {
+      "id": "n9",
+      "type": "Construct",
+      "label": "AI as productivity booster with risk of cognitive decline",
+      "label_negative": "AI use without dedicated non-AI practice",
+      "bipolarity_complete": true,
+      "grounding_span": "it might decrease the 'brain' productivity"
+    },
+    {
+      "id": "n10",
+      "type": "Construct",
+      "label": "AI as evolving agent threatening job security",
+      "label_negative": "Human-specific skills to maintain job relevance",
+      "bipolarity_complete": true,
+      "grounding_span": "we will have to come with something very human-specific in order to not lose our jobs"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Productivity and time efficiency",
+      "grounding_span": "it saves a lot of time"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Effective communication with stakeholders",
+      "grounding_span": "communicating with stakeholders"
+    },
+    {
+      "id": "n13",
+      "type": "Value",
+      "label": "Creative ideation and innovation",
+      "grounding_span": "brainstorming or ideation sessions are greatly improved"
+    },
+    {
+      "id": "n14",
+      "type": "Value",
+      "label": "Optimal solution quality",
+      "grounding_span": "ask the AI if they think it's the most optimal idea"
+    },
+    {
+      "id": "n15",
+      "type": "Value",
+      "label": "Personal enjoyment and skill maintenance",
+      "grounding_span": "I like to think of them from scratch"
+    },
+    {
+      "id": "n16",
+      "type": "Value",
+      "label": "Cognitive ability and independent problem-solving",
+      "grounding_span": "spend some dedicated time without AIs, just me and a piece of paper"
+    },
+    {
+      "id": "n17",
+      "type": "Value",
+      "label": "Job security and human uniqueness",
+      "grounding_span": "in order to not lose our jobs"
+    },
+    {
+      "id": "n18",
+      "type": "Stance",
+      "label": "Satisfaction with AI for code generation with good context",
+      "valence": "positive",
+      "grounding_span": "it saves a lot of time"
+    },
+    {
+      "id": "n19",
+      "type": "Stance",
+      "label": "Frustration when AI fails despite context",
+      "valence": "negative",
+      "grounding_span": "no matter how much context or how hard you try to explain something, the AI will not get it"
+    },
+    {
+      "id": "n20",
+      "type": "Stance",
+      "label": "Preference for manual handling of enjoyable tasks",
+      "valence": "positive",
+      "grounding_span": "I like to think of them from scratch"
+    },
+    {
+      "id": "n21",
+      "type": "Stance",
+      "label": "Concern about cognitive decline from AI overuse",
+      "valence": "negative",
+      "grounding_span": "it might decrease the 'brain' productivity"
+    },
+    {
+      "id": "n22",
+      "type": "Stance",
+      "label": "Anxiety about job displacement due to AI evolution",
+      "valence": "negative",
+      "grounding_span": "we will have to come with something very human-specific in order to not lose our jobs"
+    },
+    {
+      "id": "n23",
+      "type": "CognitiveStyleMarker",
+      "label": "Contextual decomposition — breaking tasks into AI-ready components",
+      "grounding_span": "I have to add my touches and think of it like I'm giving this task to a junior"
+    },
+    {
+      "id": "n24",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement — adjusting AI output through back-and-forth",
+      "grounding_span": "understanding their changes, asking for adjustments if something is off, then again until it's a good version"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n14",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n14",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n14",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n16",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n17",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n18",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n19",
+      "target": "n8",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n20",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n21",
+      "target": "n9",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n22",
+      "target": "n10",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n23",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n7",
+      "target": "n24",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n6",
+      "target": "n7",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n9",
+      "target": "n10",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

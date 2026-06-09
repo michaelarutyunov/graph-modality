@@ -1,0 +1,157 @@
+{
+  "transcript_id": "work_0516",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as adjustable starting point",
+      "label_negative": "AI as precision refinement tool",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is good at generating a general starting point for a design, but struggles to make smaller refinements exactly the way I want them"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI delegation of complete tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I collaborate with it through a task. I don't find that AI has sufficient understanding of larger tasks for me to be able to delegate complete tasks to it yet"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI output quality and appropriateness",
+      "label_negative": "AI output inferior to human work",
+      "bipolarity_complete": true,
+      "grounding_span": "it surprised me with how good the drawing was. I felt that the drawing was better than what an artist could have created"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as professional development tool",
+      "label_negative": "Relying solely on AI for professional tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "it certainly makes sense to maintain skillsets even if at some point in the future, AI could take over"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI training and improvement",
+      "label_negative": "Passive resistance to AI changes",
+      "bipolarity_complete": true,
+      "grounding_span": "I will definitely make an effort to get more familiar with how AI can be used to boost my productivity"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative control and precision",
+      "grounding_span": "when I need more precision in design work, I find that I prefer doing it myself"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "boost my productivity"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional competence",
+      "grounding_span": "maintain skillsets even if at some point in the future, AI could take over"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for design tasks",
+      "valence": "positive",
+      "grounding_span": "it surprised me with how good the drawing was"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Preference for human precision in final refinements",
+      "valence": "negative",
+      "grounding_span": "when I need more precision in design work, I find that I prefer doing it myself"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Openness to increasing AI use in future",
+      "valence": "positive",
+      "grounding_span": "I will definitely make an effort to get more familiar with how AI can be used to boost my productivity"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through single-element edits vs. full restart",
+      "grounding_span": "If there is a single element that needs to be changed, then I would ask for an edit. ... in cases where multiple elements of the image need to be changed, then I would rather create a new prompt"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Self-directed learning and experimentation",
+      "grounding_span": "I tend to try out different ways of using AI on my own since my use cases are often different from other people"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

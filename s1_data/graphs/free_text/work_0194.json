@@ -1,0 +1,187 @@
+{
+  "transcript_id": "work_0194",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI for efficient email drafting",
+      "label_negative": "Manual email writing from scratch",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "AIs can usually incorporate a good business like tone and shoot out an email really quickly"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI with human touch",
+      "label_negative": "Pure AI-generated impersonal writing",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I'll change the intro or touch up a sentence"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for mundane tasks",
+      "label_negative": "AI for core courier work",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "Mostly doing emails, writeups, payroll, and mundane stuff"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Human pride in dispatching and courier work",
+      "label_negative": "AI takeover of dispatching",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "we have a sort of human pride for dispatching and most of the hearty 'couriery' stuff"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Worker-first culture resisting AI expansion",
+      "label_negative": "AI-driven efficiency and replacement",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "we are very 'worker first' and would heavily resist replacing a big role with AI"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI for strategic business analysis",
+      "label_negative": "Traditional intuition-based business decisions",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "it could be used for client acquisition, analyzing where we could expand our role"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and time savings",
+      "grounding_span": "getting a few emails hammered out is really helpful"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Personal authenticity and human connection",
+      "grounding_span": "I want the personal voice to come through a touch"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Worker autonomy and pride",
+      "grounding_span": "we are very grass roots and independent"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Company growth and competitiveness",
+      "grounding_span": "make us a formidable contender in the wasteland of couriers"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI for quick emails",
+      "valence": "positive",
+      "grounding_span": "there's times where the AI writeups are super helpful even unedited"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Resistance to AI in core courier tasks",
+      "valence": "negative",
+      "grounding_span": "we like to keep it human"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Openness to expanding AI for strategic tasks",
+      "valence": "positive",
+      "grounding_span": "I'd like to look into how we could use AI to automate payroll"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic delegation with personal refinement",
+      "grounding_span": "I'd rather get a generally solid writeup and then touch it up myself"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Contextual boundary-setting based on task importance and company culture",
+      "grounding_span": "For writing a very important email to a big client... I won't use an AI"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

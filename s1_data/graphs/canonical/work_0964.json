@@ -1,0 +1,210 @@
+{
+  "transcript_id": "work_0964",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as time-saving tool",
+      "label_negative": "Manual execution of repetitive tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "how much time it save me throughout the day"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as collaborative conversational partner",
+      "label_negative": "AI as purely instructional tool",
+      "bipolarity_complete": true,
+      "grounding_span": "it becomes more conversation and less instructional"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability and accuracy in generated content",
+      "label_negative": "AI failure to provide promised output",
+      "bipolarity_complete": true,
+      "grounding_span": "AI will say it generates a document for download, but does not provide a link"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI use for personal communication",
+      "label_negative": "AI use for impersonal communication",
+      "bipolarity_complete": true,
+      "grounding_span": "If an email involves a conversation that should be more personable I tend to create it myself"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI use for sensitive data",
+      "label_negative": "AI use for secure processes",
+      "bipolarity_complete": true,
+      "grounding_span": "avoid using AI to create or research anything that involves our security set up"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI resource consumption",
+      "label_negative": "AI efficiency in resource usage",
+      "bipolarity_complete": true,
+      "grounding_span": "it takes alot of computer resources to run the AI"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "how much time it save me throughout the day"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Authenticity and personal integrity",
+      "grounding_span": "conversation that should be more personable"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Privacy and data security",
+      "grounding_span": "avoid using AI to create or research anything that involves our security set up"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Trustworthiness and accuracy",
+      "grounding_span": "AI will say it generates a document for download, but does not provide a link"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with daily time savings",
+      "valence": "positive",
+      "grounding_span": "how much time it save me throughout the day"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with AI performance degradation",
+      "valence": "negative",
+      "grounding_span": "it takes alot of computer resources to run the AI"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Frustration with AI output quality",
+      "valence": "negative",
+      "grounding_span": "AI will say it generates a document for download, but does not provide a link"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Preference for personal touch in communication",
+      "valence": "negative",
+      "grounding_span": "If an email involves a conversation that should be more personable I tend to create it myself"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Caution toward AI in high-risk tasks",
+      "valence": "negative",
+      "grounding_span": "avoid using AI to create or research anything that involves our security set up"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Delegation with iterative refinement",
+      "grounding_span": "At first I will delegate the task to the AI and then as I make the search or the request more granular and streamline it to produce the output I need, it becomes more conversation and less instructional"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based boundary setting — clear separation of AI-appropriate vs. human-only tasks",
+      "grounding_span": "If an email involves a conversation that should be more personable I tend to create it myself. I also avoid using AI to create or research anything that involves our security set up"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

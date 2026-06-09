@@ -1,0 +1,164 @@
+{
+  "transcript_id": "work_0308",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as practical labor-saving tool",
+      "label_negative": "AI as encroaching on human joy and creativity",
+      "bipolarity_complete": true,
+      "grounding_span": "AI should be here to make more gentle our labor while staying out of frivolity and what brings us joy"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability and speed",
+      "label_negative": "AI unreliability and slowness",
+      "bipolarity_complete": true,
+      "grounding_span": "Companion being incredibly slow at the best of times... prone to crashing"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as redundant tool",
+      "label_negative": "AI as uniquely useful tool",
+      "bipolarity_complete": true,
+      "grounding_span": "From my experience it has seemed mostly redundant at the moment"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI in customer-facing roles requiring human touch",
+      "label_negative": "AI replacing human interaction in sales",
+      "bipolarity_complete": true,
+      "grounding_span": "it lacks the truly persuasive and personable capability a human has"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI in artistic and creative domains",
+      "label_negative": "AI in labor and practical domains",
+      "bipolarity_complete": true,
+      "grounding_span": "the current great advent of AI is in the artistic world... is something I find abhorrent"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and productivity",
+      "grounding_span": "Both of those methods have generally proven to be faster"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Human connection and persuasion",
+      "grounding_span": "it lacks the truly persuasive and personable capability a human has"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Human joy and creativity",
+      "grounding_span": "AI should be here to make more gentle our labor while staying out of frivolity and what brings us joy"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Frustration with AI unreliability",
+      "valence": "negative",
+      "grounding_span": "Frustration has come with my last few attempts to use the Companion system"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Skepticism about AI redundancy",
+      "valence": "negative",
+      "grounding_span": "From my experience it has seemed mostly redundant at the moment"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Openness to improved AI at work",
+      "valence": "positive",
+      "grounding_span": "as long as the AI we use can be improved, I'm fine with using it"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Abhorrence toward AI in creative domains",
+      "valence": "negative",
+      "grounding_span": "the current great advent of AI is in the artistic world... is something I find abhorrent"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic historical perspective on technological change",
+      "grounding_span": "Video killed the radio star, the shine of the light bulb cast a shadow over the candle industry"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based value-driven reasoning about AI's proper role",
+      "grounding_span": "AI should be here to make more gentle our labor while staying out of frivolity and what brings us joy"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

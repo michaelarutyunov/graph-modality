@@ -1,0 +1,163 @@
+{
+  "transcript_id": "work_0529",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as task expediter for tedious work",
+      "label_negative": "AI as time-consuming training burden",
+      "bipolarity_complete": true,
+      "grounding_span": "We are asking AI to expedite more tedious tasks"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability and trustworthiness",
+      "label_negative": "AI unreliability and missed outputs",
+      "bipolarity_complete": true,
+      "grounding_span": "it is not fail safe and often misses emails"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as autonomous agent for routine tasks",
+      "label_negative": "AI requiring step-by-step human guidance",
+      "bipolarity_complete": true,
+      "grounding_span": "ideally we would get it to the place where you can handle tasks on its own"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as creative collaborator in film production",
+      "label_negative": "AI as limited to simple tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "we are using AI for video generation for a large budget, mainstream film"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI impact on career pipeline and skill development",
+      "label_negative": "AI preserving entry-level positions",
+      "bipolarity_complete": true,
+      "grounding_span": "I worry that if we don't need coordinators anymore, how we will ever get a producer"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "expedite more tedious tasks"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Trust and reliability in task execution",
+      "grounding_span": "we just can't trust it right now"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Creative excellence and cinematic quality",
+      "grounding_span": "how much can the director art direct the framing, composition"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Career progression and fair opportunity",
+      "grounding_span": "how we will ever get a producer? There's no entry level position to train upwards"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI training difficulty",
+      "valence": "negative",
+      "grounding_span": "It's really frustrating to try and generate a simple response"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Optimism about AI iteration speed",
+      "valence": "positive",
+      "grounding_span": "Everyone is thrilled about the iteration turnaround time"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Concern about job displacement and career pipeline",
+      "valence": "negative",
+      "grounding_span": "I worry about how people will be replaced"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative prompt refinement",
+      "grounding_span": "it's better to try and refine the original prompt"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Systematic testing of AI capabilities",
+      "grounding_span": "We are testing how much of this beat in the script needs to be shot vs can be done completely in AI"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

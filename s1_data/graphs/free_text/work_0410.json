@@ -1,0 +1,133 @@
+{
+  "transcript_id": "work_0410",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as professional tone polisher",
+      "label_negative": "AI as full content generator",
+      "bipolarity_complete": true,
+      "grounding_span": "I write out my thoughts and the core content of what I want to communicate to the client first, and then just bring in the AI to help me phrase it professionally"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "Personal authenticity in client communication",
+      "label_negative": "AI-mediated impersonal communication",
+      "bipolarity_complete": true,
+      "grounding_span": "I want my clients to have a better sense of my personality and what I love about their pets - it feels more personal and authentic to write those myself"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI trustworthiness for tone",
+      "label_negative": "AI unreliability for tone",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't necessarily trust it enough to hit the right tone and prefer traditional email sequences I've written myself"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as emotional support in difficult situations",
+      "label_negative": "AI as emotionally detached tool",
+      "bipolarity_complete": true,
+      "grounding_span": "AI was very helpful in helping me hit a professional tone with that email at a time that I was pretty upset"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Client trust and relationship",
+      "grounding_span": "I believe that leads to more trust from my clients"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Professional competence",
+      "grounding_span": "help me write an email to a client telling them their cat is being aggressive"
+    },
+    {
+      "id": "n7",
+      "type": "Stance",
+      "label": "Satisfaction with AI for professional tone in emotional situations",
+      "valence": "positive",
+      "grounding_span": "AI was very helpful in helping me hit a professional tone with that email at a time that I was pretty upset"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Distrust of AI for tone in marketing and initial contacts",
+      "valence": "negative",
+      "grounding_span": "I don't necessarily trust it enough to hit the right tone and prefer traditional email sequences I've written myself"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Openness to expanding AI use in booking and marketing",
+      "valence": "positive",
+      "grounding_span": "I could certainly see an increase in incorporating it into my booking process and initial contact emails, and potentially for marketing"
+    },
+    {
+      "id": "n10",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement — back-and-forth editing with AI",
+      "grounding_span": "for more complicated emails or if the tone isn't quite right, I go back and forth"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain boundary setting — clear separation of AI and personal tasks",
+      "grounding_span": "I still write the bulk of my client communications myself"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n8",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n10",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

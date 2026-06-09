@@ -1,0 +1,243 @@
+{
+  "transcript_id": "work_0467",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as natural language search tool",
+      "label_negative": "Manual search through diverse documentation",
+      "bipolarity_complete": true,
+      "grounding_span": "ask a question with natural language"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI accuracy and trustworthiness",
+      "label_negative": "AI sounding accurate but needing validation",
+      "bipolarity_complete": true,
+      "grounding_span": "AI *sounds* accurate, but it still needs to have validation"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI responsiveness to iterative adjustments",
+      "label_negative": "AI failing to make intended adjustments",
+      "bipolarity_complete": true,
+      "grounding_span": "sometimes the AI doesn't make the intended adjustments"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Enterprise AI accessibility and support",
+      "label_negative": "Restrictive legal and security policies",
+      "bipolarity_complete": true,
+      "grounding_span": "greater accessibility to enterprise AI tools"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI agent reliability in achieving objectives",
+      "label_negative": "AI agent hallucinating answers",
+      "bipolarity_complete": true,
+      "grounding_span": "that same agent was hallucinating its answers"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as skill multiplier for career security",
+      "label_negative": "AI as job replacement threat",
+      "bipolarity_complete": true,
+      "grounding_span": "AI won't take my job. But someone who knows how to use AI will"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI ubiquity as essential infrastructure",
+      "label_negative": "AI as optional or niche tool",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is going to be ubiquitous in the same way"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and ease of information access",
+      "grounding_span": "it's nice to be able to ask a question with natural language"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Accuracy and reliability in work output",
+      "grounding_span": "I still have to make sure that it's wordsmithed accurately"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Productivity and goal achievement",
+      "grounding_span": "going back and forth is more effective for achieving a goal"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Career advancement and adaptability",
+      "grounding_span": "someone who knows how to use AI will"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Innovation and transformative impact",
+      "grounding_span": "more revolutionary than the iphone in 2008-ish"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Positive appreciation for natural language search",
+      "valence": "positive",
+      "grounding_span": "it's nice to be able to ask a question with natural language"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Cautious skepticism about AI accuracy",
+      "valence": "ambivalent",
+      "grounding_span": "AI *sounds* accurate, but it still needs to have validation"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Frustration with AI's failure to adjust",
+      "valence": "negative",
+      "grounding_span": "sometimes the AI doesn't make the intended adjustments"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Satisfaction with building a functional agent",
+      "valence": "positive",
+      "grounding_span": "Building an agent that *seems* to achieve the objective"
+    },
+    {
+      "id": "n17",
+      "type": "Stance",
+      "label": "Frustration with agent hallucination",
+      "valence": "negative",
+      "grounding_span": "that same agent was hallucinating its answers"
+    },
+    {
+      "id": "n18",
+      "type": "Stance",
+      "label": "Optimistic embrace of AI as career essential",
+      "valence": "positive",
+      "grounding_span": "AI won't take my job. But someone who knows how to use AI will"
+    },
+    {
+      "id": "n19",
+      "type": "Stance",
+      "label": "Forward-looking belief in AI ubiquity",
+      "valence": "positive",
+      "grounding_span": "AI is going to be ubiquitous in the same way"
+    },
+    {
+      "id": "n20",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through back-and-forth interaction",
+      "grounding_span": "going back and forth is more effective for achieving a goal"
+    },
+    {
+      "id": "n21",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic validation-oriented approach",
+      "grounding_span": "I still have to make sure that it's wordsmithed accurately"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n13",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n17",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n18",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n19",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n3",
+      "target": "n20",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n21",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

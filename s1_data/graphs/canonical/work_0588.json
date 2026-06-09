@@ -1,0 +1,247 @@
+{
+  "transcript_id": "work_0588",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as project organization tool",
+      "label_negative": "AI as source of unnatural output requiring editing",
+      "bipolarity_complete": true,
+      "grounding_span": "AI helps organize information that I give it into slides"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as brainstorming and idea generator",
+      "label_negative": "AI as misunderstanding or irrelevant responder",
+      "bipolarity_complete": true,
+      "grounding_span": "Sometimes the model provides information that may spark an idea"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability for grading and assessment",
+      "label_negative": "AI as biased or unreliable grader",
+      "bipolarity_complete": true,
+      "grounding_span": "second check grading student papers, just to see what the models say and avoid bias"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI use in academic writing and argument development",
+      "label_negative": "AI use in writing and argument development",
+      "bipolarity_complete": true,
+      "grounding_span": "the writing itself and development of an argument are something that as an academic I need to do myself"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI use for sensitive data",
+      "label_negative": "AI use in administrative tasks with sensitive data",
+      "bipolarity_complete": false,
+      "grounding_span": "I have been more hesitant to use AI in this area because of the privacy of data being used"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as tool for critical thinking about AI",
+      "label_negative": "AI as beneficial tool for discipline",
+      "bipolarity_complete": true,
+      "grounding_span": "whether LLMs ... undermines human identity as rational creatures"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI as tool for career advancement",
+      "label_negative": "AI impact on job market and career decisions",
+      "bipolarity_complete": false,
+      "grounding_span": "I've wondered about how AI will impact the job market"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Student engagement and learning",
+      "grounding_span": "help me engage my students in the classroom more"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Academic integrity",
+      "grounding_span": "Both for ethical reasons and personal development in the skill of developing my own thoughts"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Privacy and data security",
+      "grounding_span": "privacy of data being used"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Career advancement and adaptability",
+      "grounding_span": "how AI will impact the job market and impact careers"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "It has done a fairly good job so far"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Frustration with AI limitations",
+      "valence": "negative",
+      "grounding_span": "it wouldn't let me download it"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Openness to AI as creative catalyst",
+      "valence": "positive",
+      "grounding_span": "I do more of the bouncing back and forth kind of interaction"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Frustration with AI argumentation",
+      "valence": "negative",
+      "grounding_span": "the writing itself and development of an argument are something that as an academic I need to do myself"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Concern about privacy with AI",
+      "valence": "negative",
+      "grounding_span": "I have been more hesitant to use AI in this area because of the privacy of data"
+    },
+    {
+      "id": "n17",
+      "type": "Stance",
+      "label": "Concern about AI undermining human identity",
+      "valence": "negative",
+      "grounding_span": "whether LLMs ... undermines human identity as rational creatures"
+    },
+    {
+      "id": "n18",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "mixed",
+      "grounding_span": "I try my best to be a realist, understanding the gifts of the tool ... while also noting how the tool can be misused"
+    },
+    {
+      "id": "n19",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based boundary setting — clear separation of AI-appropriate vs. human-only tasks",
+      "grounding_span": "I do the writing myself when it comes to research papers for obvious reasons"
+    },
+    {
+      "id": "n20",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative exploration — uses back-and-forth to refine understanding and generate ideas",
+      "grounding_span": "I do more of the bouncing back and forth kind of interaction"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n17",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n18",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n19",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n20",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n19",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n2",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

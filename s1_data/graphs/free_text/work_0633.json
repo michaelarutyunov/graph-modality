@@ -1,0 +1,200 @@
+{
+  "transcript_id": "work_0633",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI for simple tasks",
+      "label_negative": "AI for complex tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I delegate simple tasks to AI for example, a minor UI changes etc. but for more complex tasks e.g connecting to an API and fetching data correctly etc I prefer to do them myself"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability and trustworthiness",
+      "label_negative": "AI unreliability and risk of errors",
+      "bipolarity_complete": true,
+      "grounding_span": "I find that for more complex task there is a higher chance that the AI will get it wrong then you end up spending more time debugging"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as independent delegate",
+      "bipolarity_complete": true,
+      "grounding_span": "for more complex task I collaborate with it thought the task"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI for meeting summaries and communication",
+      "label_negative": "AI causing miscommunication or errors",
+      "bipolarity_complete": true,
+      "grounding_span": "with AI taking meeting notes, communication is a lot smoother"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI adherence to user instructions",
+      "label_negative": "AI making unauthorized changes",
+      "bipolarity_complete": true,
+      "grounding_span": "it had done something that I hadn't asked it to do"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "Maintaining skills alongside AI",
+      "label_negative": "Relying solely on AI for skills",
+      "bipolarity_complete": true,
+      "grounding_span": "one still has to maintain skills that AI could potentially take over"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI handling low-level details",
+      "label_negative": "AI handling high-level strategic work",
+      "bipolarity_complete": true,
+      "grounding_span": "working on things at a high level and having AI implement the low-level details"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "productivity has also improved"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Quality and correctness of work",
+      "grounding_span": "would have been very costly if shipped to production"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Professional competence and adaptability",
+      "grounding_span": "to be a good programmer you need to be able to work with or without AI"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI for simple tasks",
+      "valence": "positive",
+      "grounding_span": "I delegate simple tasks to AI"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with AI making unauthorized changes",
+      "valence": "negative",
+      "grounding_span": "this was very frustrating because it had done something that I hadn't asked it to do"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Ambivalence about maintaining skills",
+      "valence": "ambivalent",
+      "grounding_span": "its very frustrating that one still has to maintain skills that AI could potentially take over"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Optimism about future delegation",
+      "valence": "positive",
+      "grounding_span": "I envision being able to delegate more and more work to AI"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Complexity-based task decomposition",
+      "grounding_span": "I delegate simple tasks to AI for example, a minor UI changes etc. but for more complex tasks ... I prefer to do them myself"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Cautious oversight and verification",
+      "grounding_span": "fortunately I noticed but this was very frustrating"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

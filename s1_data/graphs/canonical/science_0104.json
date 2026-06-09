@@ -1,0 +1,130 @@
+{
+  "transcript_id": "science_0104",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as pattern discovery tool revealing non-obvious relationships",
+      "label_negative": "Manual analysis limited to visible patterns",
+      "bipolarity_complete": true,
+      "grounding_span": "The tool was the only method we were able to relate both AND the time of death dosage difference"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI integration into workflow",
+      "label_negative": "Reliance on historically studied and known methods",
+      "bipolarity_complete": true,
+      "grounding_span": "Those are both historically studied and known methods"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for operational efficiency and workload balancing",
+      "label_negative": "Manual assignment leading to man hour disparities",
+      "bipolarity_complete": true,
+      "grounding_span": "I would love to AI assistance in terms of project assignment"
+    },
+    {
+      "id": "n4",
+      "type": "Value",
+      "label": "Forensic accuracy and evidentiary reliability",
+      "grounding_span": "we have incorporated them in our SOPs"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Fairness and equity in scheduling",
+      "grounding_span": "This disparity is VERY difficult to manage while the assay list is so dynamic"
+    },
+    {
+      "id": "n6",
+      "type": "Stance",
+      "label": "Appreciation for AI in pattern analysis",
+      "valence": "positive",
+      "grounding_span": "The tool was the only method we were able to relate both AND the time of death dosage difference"
+    },
+    {
+      "id": "n7",
+      "type": "Stance",
+      "label": "Cautious reliance on AI",
+      "valence": "negative",
+      "grounding_span": "Those are both historically studied and known methods"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Satisfaction with AI for workload and connections",
+      "valence": "positive",
+      "grounding_span": "I would love to AI assistance in terms of project assignment"
+    },
+    {
+      "id": "n9",
+      "type": "CognitiveStyleMarker",
+      "label": "Empirical verification through testing",
+      "grounding_span": "Once it was brought to the forefront, we could easily see the patterns"
+    },
+    {
+      "id": "n10",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic tool selection based on effectiveness",
+      "grounding_span": "We were given a 2 week license to an AI subscription, so I was trying out the tool in every capacity I was able to"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n4",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n7",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n8",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n9",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n10",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n10",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

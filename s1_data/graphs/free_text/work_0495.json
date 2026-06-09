@@ -1,0 +1,187 @@
+{
+  "transcript_id": "work_0495",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as time-saving tool during overload",
+      "label_negative": "AI as undermining rewarding research process",
+      "bipolarity_complete": true,
+      "grounding_span": "If it's a day or a week that I'm completely overloaded with tasks I'll rely on AI more for time management"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as enhancer of clinical appeals",
+      "label_negative": "AI as source of invalid or exaggerated information",
+      "bipolarity_complete": true,
+      "grounding_span": "AI will then be utilized before submission suggesting rewording, fixes or adding additional information to bolster the appeal"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Human oversight and verification of AI output",
+      "label_negative": "Unchecked AI output",
+      "bipolarity_complete": true,
+      "grounding_span": "Two people with a clinical background will review the documentation to ensure the information AI provided is valid and not exaggerated or hallucinated"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as threat to control and job security",
+      "label_negative": "AI as tool that preserves human role",
+      "bipolarity_complete": true,
+      "grounding_span": "They feel like their control is being taken away and put into the hands of robots"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as double-edged sword in eligibility verification",
+      "label_negative": "AI as eliminating rewarding treasure hunt",
+      "bipolarity_complete": true,
+      "grounding_span": "AI cuts that rewarding aspect out but gets the job done faster. So it's a double edged sword"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Time efficiency and workload management",
+      "grounding_span": "If it's a day or a week that I'm completely overloaded with tasks I'll rely on AI more for time management"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Accuracy and reliability in clinical documentation",
+      "grounding_span": "ensure the information AI provided is valid and not exaggerated or hallucinated"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Intellectual satisfaction and personal reward",
+      "grounding_span": "It's like a treasure hunt and rewarding when my research leads to savings for patient's"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Job security and human indispensability",
+      "grounding_span": "I'm confident that skilled humans will always be an integral part of every company"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Gratification when AI-assisted appeal succeeds",
+      "valence": "positive",
+      "grounding_span": "I feel gratified every time a large balance claim...gets paid"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Enjoyment of independent research despite AI availability",
+      "valence": "positive",
+      "grounding_span": "A part of me enjoys some of the eligibility and benefits verification"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Concern about AI undermining rewarding aspects",
+      "valence": "negative",
+      "grounding_span": "AI cuts that rewarding aspect out but gets the job done faster"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Confidence in human irreplaceability",
+      "valence": "positive",
+      "grounding_span": "I'm confident that skilled humans will always be an integral part of every company"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Hope for AI improvement in speed and research skill",
+      "valence": "positive",
+      "grounding_span": "I'm hoping in the next year or two it's even faster and smarter"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic delegation based on workload and complexity",
+      "grounding_span": "If it's a day or a week that I'm completely overloaded with tasks I'll rely on AI more for time management"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Two-layer verification approach to ensure quality",
+      "grounding_span": "Two people with a clinical background will review the documentation"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

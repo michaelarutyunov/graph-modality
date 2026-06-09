@@ -1,0 +1,161 @@
+{
+  "transcript_id": "creativity_0090",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as quick information lookup tool",
+      "label_negative": "AI as creative decision-maker",
+      "bipolarity_complete": true,
+      "grounding_span": "Firefly just made it easier to 'find' the images I wanted to use"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for repetitive simple tasks",
+      "label_negative": "AI attempting to replace creative work",
+      "bipolarity_complete": true,
+      "grounding_span": "I want to see more 3D tools aimed at *assisting* a 3D artist, not trying to do our work for us"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as resource for refining and improving output",
+      "label_negative": "AI output as final product",
+      "bipolarity_complete": true,
+      "grounding_span": "anything an AI produces should be treated as a reference or a part of the process, not the final product"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Specialized AI tools for specific pipeline stages",
+      "label_negative": "All-in-one AI generating entire assets",
+      "bipolarity_complete": true,
+      "grounding_span": "specialized tools to handle small parts of the process rather than a single AI trying to do all of it"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Creative autonomy",
+      "grounding_span": "it felt like I was the creative force behind the project"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative productivity and efficiency",
+      "grounding_span": "handle the less creative parts of my work"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Career sustainability",
+      "grounding_span": "companies who usually hire 3D artists... have been laying off hundreds of thousands of people"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Positive embrace of AI for reference gathering",
+      "valence": "positive",
+      "grounding_span": "Firefly just made it easier to 'find' the images I wanted to use"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Resistance to AI in creative work",
+      "valence": "negative",
+      "grounding_span": "Those tools are seemingly trying to do the fun, creative parts of the work, leaving humans to do the tedious, technical work"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Skepticism toward AI industry's vision",
+      "valence": "negative",
+      "grounding_span": "companies who usually hire 3D artists... are under the assumption that AI can do what I do"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Optimistic expectation for AI to speed workflow",
+      "valence": "positive",
+      "grounding_span": "I think we'll start to see more and more specialized tools to handle small parts of the process"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Analogical reasoning — uses concrete analogies to evaluate AI",
+      "grounding_span": "It reminds me of when Photoshop was first being adopted as an industry standard"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Hybrid workflow integration — combines AI inspiration with manual execution",
+      "grounding_span": "I personally use at least 3 different software programs on every 3D project"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

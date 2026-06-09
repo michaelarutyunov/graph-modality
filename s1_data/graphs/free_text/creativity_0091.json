@@ -1,0 +1,157 @@
+{
+  "transcript_id": "creativity_0091",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as creative jumpstarter for baseline ideas",
+      "label_negative": "AI as sole creator replacing human ideation",
+      "bipolarity_complete": true,
+      "grounding_span": "use AI for small tasks to help jumpstart my creativity or come up with some baseline ideas"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as image manipulation tool for precision and speed",
+      "label_negative": "Manual image editing requiring hours of grunt work",
+      "bipolarity_complete": true,
+      "grounding_span": "quickly extend image backgrounds, change the color of clothing, remove elements from the background"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as art director's executor",
+      "label_negative": "AI as autonomous creative decision-maker",
+      "bipolarity_complete": true,
+      "grounding_span": "I'm the one telling it WHAT to do, and the AI gets to decide HOW it's going to do it"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as threat to creative workforce",
+      "label_negative": "AI as harmless tool that does not replace jobs",
+      "bipolarity_complete": true,
+      "grounding_span": "the workforce is going to be significantly reduced because less people and less time is needed"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as omniskilled creative generalist",
+      "label_negative": "AI as limited to narrow tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "its capabilities will eventually be able to do everything a professional designer can do"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative efficiency and time savings",
+      "grounding_span": "gives me more time to focus on the creative"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Creative control and authorship",
+      "grounding_span": "I definitely feel like I'm art directing the AI"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Job security and industry viability",
+      "grounding_span": "my industry might be completely wiped out just as my career in this field is beginning"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Excitement about AI's ability to realize imagination",
+      "valence": "positive",
+      "grounding_span": "it was really exciting to see how all of this imagery was created just by simply imagining something in my head"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Fear of industry obsolescence",
+      "valence": "negative",
+      "grounding_span": "its quite scary that my industry might be completely wiped out"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI as time-saving tool",
+      "valence": "positive",
+      "grounding_span": "Now I can quickly change images to be exactly how I need them, rather than spend hours tweaking"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Art direction mindset — delegating execution while retaining vision",
+      "grounding_span": "I'm the one telling it WHAT to do, and the AI gets to decide HOW it's going to do it"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Future-oriented extrapolation — projecting current trends to extreme outcomes",
+      "grounding_span": "its capabilities will eventually be able to do everything a professional designer can do"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n3",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -4,7 +4,7 @@ import json
 
 import pytest
 
-from canonicalisation.apply_canonical import apply_all, canonicalise_graph, load_canonical_map
+from s3_canonicalisation.apply_canonical import apply_all, canonicalise_graph, load_canonical_map
 
 
 @pytest.fixture
@@ -84,7 +84,7 @@ def test_canonicalise_handles_unknown_label(sample_map):
 def test_load_canonical_map_detects_unlocked(tmp_path):
     map_path = tmp_path / "canonical_map.json"
     map_path.write_text(json.dumps({"Construct": {}, "_meta": {"locked": False}}))
-    import canonicalisation.apply_canonical as ac
+    import s3_canonicalisation.apply_canonical as ac
 
     orig = ac.MAP_PATH
     ac.MAP_PATH = map_path
@@ -117,7 +117,7 @@ def test_apply_all_output_count_matches_input(tmp_path, sample_map):
     map_path.write_text(json.dumps(cm))
 
     # Override MAP_PATH so load_canonical_map() reads our test map
-    import canonicalisation.apply_canonical as ac
+    import s3_canonicalisation.apply_canonical as ac
 
     orig_map = ac.MAP_PATH
     ac.MAP_PATH = map_path

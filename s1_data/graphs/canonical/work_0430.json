@@ -1,0 +1,210 @@
+{
+  "transcript_id": "work_0430",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as research assistant",
+      "label_negative": "Independent manual search for sources",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is really great at finding articles that mention my talking points"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as autonomous content generator",
+      "bipolarity_complete": true,
+      "grounding_span": "I like to collaborate throughout the task and I tend to talk to the AI like it is a real person"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI failure to follow specific constraints",
+      "bipolarity_complete": true,
+      "grounding_span": "telling it that I need to have 5 subsections and no subsection should have a title longer than 6 words and the model keeps returning really long title suggestions"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as threat to professional writing career",
+      "label_negative": "AI as benign tool that does not threaten career",
+      "bipolarity_complete": true,
+      "grounding_span": "I am worried about my professional future as a writer"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI writing style naturalness",
+      "label_negative": "AI using others' styles leading to plagiarism",
+      "bipolarity_complete": true,
+      "grounding_span": "I would like to be able to have an AI learn my specific style"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "Human writing and creative control",
+      "label_negative": "AI-generated writing without personal input",
+      "bipolarity_complete": true,
+      "grounding_span": "I prefer to do all the writing myself"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "cut my independent research time down by about 30%"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Creative authenticity and human expression",
+      "grounding_span": "I enjoy the writing process and don't want to lose out on the experience"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Professional integrity and ethical practice",
+      "grounding_span": "it is the appropriate thing to do"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Job security and skill relevance",
+      "grounding_span": "I am worried about my professional future as a writer"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Positive appreciation of AI for efficiency",
+      "valence": "positive",
+      "grounding_span": "AI is really great at finding articles that mention my talking points"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with AI's inability to handle complex constraints",
+      "valence": "negative",
+      "grounding_span": "I have felt frustrated with AI before when it comes to giving specific constraints it can't follow"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Reluctance to use AI for writing",
+      "valence": "negative",
+      "grounding_span": "I am worried about my professional future as a writer"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Optimism about AI learning personal style",
+      "valence": "positive",
+      "grounding_span": "I would like to be able to have an AI learn my specific style"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Firm commitment to personal writing ownership",
+      "valence": "positive",
+      "grounding_span": "I prefer to do all the writing myself"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative dialogue — engages AI in back-and-forth discussion",
+      "grounding_span": "I like to collaborate throughout the task and I tend to talk to the AI like it is a real person"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Verification-oriented — cross-checks AI outputs against other sources",
+      "grounding_span": "I don't trust anything at face value from AI and ALWAYS verify independently"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n3",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

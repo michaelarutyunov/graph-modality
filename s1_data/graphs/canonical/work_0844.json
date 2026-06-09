@@ -1,0 +1,198 @@
+{
+  "transcript_id": "work_0844",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as financial analysis assistant",
+      "label_negative": "AI as unreliable for nuanced regulatory interpretation",
+      "bipolarity_complete": true,
+      "grounding_span": "ask questions about federal regulations that I don't fully understand"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as supplement to creative process",
+      "label_negative": "AI as unhelpful for creative tasks requiring human touch",
+      "bipolarity_complete": true,
+      "grounding_span": "creative tasks needed some back and forth"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as confidence-building assistant",
+      "label_negative": "AI as undermining confidence through imposter syndrome",
+      "bipolarity_complete": true,
+      "grounding_span": "AI has helped me learn a lot and helped build my confidence"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as learning bridge for new programming languages",
+      "label_negative": "AI as insufficient for formal training needs",
+      "bipolarity_complete": true,
+      "grounding_span": "AI helping bridge that learning gap"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Confidentiality in AI use",
+      "label_negative": "Unconstrained AI use without confidentiality concerns",
+      "bipolarity_complete": true,
+      "grounding_span": "anything I ask must not contain confidential information"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Professional competence",
+      "grounding_span": "determine the answer"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Creative expression and vision realization",
+      "grounding_span": "I would have struggled with that task on my own"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional confidence and validation",
+      "grounding_span": "helped build my confidence"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Efficient learning and adaptation",
+      "grounding_span": "bridge that learning gap"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Security and compliance",
+      "grounding_span": "confidential information"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Negative stance toward AI for nuanced regulatory reasoning",
+      "valence": "positive",
+      "grounding_span": "I'm usually able to get what I need in one interaction"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Resistance to AI in creative work",
+      "valence": "positive",
+      "grounding_span": "AI really came in clutch on that one"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Confidence in AI as a key skill",
+      "valence": "positive",
+      "grounding_span": "AI has helped me learn a lot and helped build my confidence"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Caution about privacy with sensitive information",
+      "valence": "negative",
+      "grounding_span": "I have to be careful"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Preference for traditional methods for Excel formulas",
+      "valence": "negative",
+      "grounding_span": "The excel responses related to formulas often try to create things for me which isn't what I want"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative collaborative problem-solving",
+      "grounding_span": "I like to collaborate"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Experience-driven calibration of trust",
+      "grounding_span": "With financial and regulatory things I get my answers right away, but more creative tasks needed some back and forth"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

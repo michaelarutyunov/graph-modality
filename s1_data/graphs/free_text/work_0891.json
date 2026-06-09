@@ -1,0 +1,194 @@
+{
+  "transcript_id": "work_0891",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative problem-solving partner",
+      "label_negative": "AI as independent task delegator",
+      "bipolarity_complete": true,
+      "grounding_span": "collaborate throughout a task, most of my tasks are too complicated to let it handle independently"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI tool performance and reliability",
+      "label_negative": "AI tool degradation and unresponsiveness",
+      "bipolarity_complete": true,
+      "grounding_span": "the app seems to significantly degrade when you get a long context"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Context management as strategic skill",
+      "label_negative": "Context loss and fragmentation",
+      "bipolarity_complete": true,
+      "grounding_span": "context management is a key skill I have found after using lots of AI tools"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Human authenticity in code documentation",
+      "label_negative": "AI-generated impersonal documentation",
+      "bipolarity_complete": true,
+      "grounding_span": "I still prefer to document and write comments for code myself"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Workplace perception of AI use",
+      "label_negative": "Open acknowledgment of AI use",
+      "bipolarity_complete": true,
+      "grounding_span": "I want to take credit for my work, not AI tools"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI proficiency as personal skill",
+      "label_negative": "AI dependency and skill atrophy",
+      "bipolarity_complete": true,
+      "grounding_span": "I consider AI to be one of my key skills at this point in time"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "It eventually is faster and better than me researching through documentation or google"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional reputation and authenticity",
+      "grounding_span": "I want to take credit for my work, not AI tools"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Personal competence and adaptability",
+      "grounding_span": "I am a fast learner and adaptable so I believe im largely okay in the long run"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI performance degradation",
+      "valence": "negative",
+      "grounding_span": "It is frustrating"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI as faster alternative",
+      "valence": "positive",
+      "grounding_span": "It eventually is faster and better than me researching through documentation or google"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Preference for human-written documentation",
+      "valence": "negative",
+      "grounding_span": "I dislike reading AI generated comments or documentation"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Concern about workplace perception of AI use",
+      "valence": "negative",
+      "grounding_span": "it just would raise questions in my head"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Confidence in AI as a key skill",
+      "valence": "positive",
+      "grounding_span": "I consider AI to be one of my key skills at this point in time"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative context distillation across conversations",
+      "grounding_span": "I may start with the problem and in the first conversation 'waste' some of the context gathering initial insights"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic compartmentalization of AI use by context",
+      "grounding_span": "I generally avoid putting in any work related information though and try to keep my searches general"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

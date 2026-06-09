@@ -1,0 +1,187 @@
+{
+  "transcript_id": "work_0628",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as automation tool for routine tasks",
+      "label_negative": "Manual execution of routine tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI to help automate certain tasks within my job"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as knowledge resource for clarification",
+      "label_negative": "Independent research without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I also ask AI questions whenever I am confused about certain topics"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as collaborative partner in programming",
+      "label_negative": "Solo programming without AI assistance",
+      "bipolarity_complete": true,
+      "grounding_span": "AI will create the foundation of the script, and I would make small edits"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as threat to personal creative challenge",
+      "label_negative": "AI as enabler of creative work",
+      "bipolarity_complete": true,
+      "grounding_span": "I feel very lazy and unmotivated if I use AI for creative creation"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as competitive advantage in workplace",
+      "label_negative": "Not using AI, being average",
+      "bipolarity_complete": true,
+      "grounding_span": "I can be innovative and efficient compared to everyone else by incorporating AI"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and productivity",
+      "grounding_span": "I can be innovative and efficient compared to everyone else"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Epistemic confidence and accuracy",
+      "grounding_span": "if they both match I know the response is most likely good quality"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Personal intellectual growth and challenge",
+      "grounding_span": "I like challenging my brain and feel very lazy and unmotivated if I use AI for creative creation"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Professional distinctiveness and innovation",
+      "grounding_span": "I can be innovative and efficient compared to everyone else"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI as automation tool",
+      "valence": "positive",
+      "grounding_span": "AI will create the foundation of the script, and I would make small edits and finalize the script before using it"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI as knowledge resource",
+      "valence": "positive",
+      "grounding_span": "if they both match I know the response is most likely good quality"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI as programming collaborator",
+      "valence": "positive",
+      "grounding_span": "it gives a very strong blueprint for me to follow which left me very satisfied"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Resistance to AI in creative tasks",
+      "valence": "negative",
+      "grounding_span": "I feel very lazy and unmotivated if I use AI for creative creation"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Optimism about AI as collaborative partner",
+      "valence": "positive",
+      "grounding_span": "I think it will be a positive thing as I can interact with AI and use it as a help"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Verification-oriented cross-referencing",
+      "grounding_span": "search up on the web, and if they both match I know the response is most likely good quality"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic complementarity thinking",
+      "grounding_span": "I actively think how I can tie in my skills with the AI so I can work together"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,149 @@
+{
+  "transcript_id": "science_0028",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as formatting and synthesizing tool",
+      "label_negative": "Traditional manual formatting and verification",
+      "bipolarity_complete": true,
+      "grounding_span": "used AI to edit the Latex script so that the image was central"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as time-saving tool",
+      "label_negative": "Time-consuming traditional resource exploration",
+      "bipolarity_complete": true,
+      "grounding_span": "There was a deadline I felt I had to meet soon and so I had to ask AI to meet this deadline"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI unreliability for complex mathematics",
+      "bipolarity_complete": true,
+      "grounding_span": "AI tends to make common mistakes with calculus"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Human collaboration and independent learning",
+      "label_negative": "AI-mediated or AI-reliant learning",
+      "bipolarity_complete": true,
+      "grounding_span": "we both felt as though it was important to collaborate and work together as opposed to using AI"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Productivity and efficient task completion",
+      "grounding_span": "meet this deadline"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Epistemic accuracy and understanding",
+      "grounding_span": "I also have a passion for learning, we both wanted to extract this information ourselves"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Collaborative problem-solving",
+      "grounding_span": "A group interaction is a powerful skill to have as this is an expectation for many jobs"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Frustration with AI formatting",
+      "valence": "positive",
+      "grounding_span": "used AI to edit the Latex script so that the image was central"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Frustration with AI errors",
+      "valence": "negative",
+      "grounding_span": "AI tends to make common mistakes with calculus"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Preference for collaborative AI use",
+      "valence": "positive",
+      "grounding_span": "we both felt as though it was important to collaborate and work together as opposed to using AI"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic tool switching under time pressure",
+      "grounding_span": "There was a deadline I felt I had to meet soon and so I had to ask AI to meet this deadline"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-expertise-driven verification of AI outputs",
+      "grounding_span": "I checked with my group partner who had gone away and done their own research that was not AI based"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

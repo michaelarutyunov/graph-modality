@@ -1,0 +1,149 @@
+{
+  "transcript_id": "work_0760",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as initial filter for competitor research",
+      "label_negative": "Manual exhaustive competitor research",
+      "bipolarity_complete": true,
+      "grounding_span": "AI will speed up the process of filtering out the competitors we don't need to be concerned with"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability for fine details",
+      "label_negative": "AI missing nuanced billing details",
+      "bipolarity_complete": true,
+      "grounding_span": "it can be in the fine details. For instance. a monthly fee is not the same as a four week fee"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI understanding of user intent",
+      "label_negative": "AI requiring multiple rewordings",
+      "bipolarity_complete": true,
+      "grounding_span": "There are times it takes multiple turns and rewording before you finally get to where it understands what is being asked"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Hands-on verification of AI output",
+      "label_negative": "Blind reliance on AI output",
+      "bipolarity_complete": true,
+      "grounding_span": "I prefer hands on research of a specific competitor website as follow up to confirm what AI has supplied"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Competitive intelligence and market awareness",
+      "grounding_span": "providing us with the opportunity to fill any gaps in what is being offered in the industry"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Accuracy and trustworthiness in business decisions",
+      "grounding_span": "to look for any additional details it may have considered not important"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "AI will speed up the process of filtering out the competitors"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a time-saving filter",
+      "valence": "positive",
+      "grounding_span": "AI will speed up the process of filtering out the competitors we don't need to be concerned with"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Frustration with AI requiring multiple rewordings",
+      "valence": "negative",
+      "grounding_span": "There are times it takes multiple turns and rewording before you finally get to where it understands what is being asked"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Preference for hands-on verification over AI alone",
+      "valence": "negative",
+      "grounding_span": "I prefer hands on research of a specific competitor website as follow up to confirm what AI has supplied"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Proactive monitoring with periodic check-ins",
+      "grounding_span": "It is self initiated as general monitoring"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Hands-on verification after AI filtering",
+      "grounding_span": "I prefer hands on research of a specific competitor website as follow up to confirm what AI has supplied"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

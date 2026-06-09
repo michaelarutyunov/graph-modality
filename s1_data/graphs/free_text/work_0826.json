@@ -1,0 +1,169 @@
+{
+  "transcript_id": "work_0826",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as starting framework for content creation",
+      "label_negative": "AI as final polished output",
+      "bipolarity_complete": true,
+      "grounding_span": "it gives me a jumping off point"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI tone appropriateness for professional context",
+      "label_negative": "AI tone as cheesy or over-enthusiastic",
+      "bipolarity_complete": true,
+      "grounding_span": "sounds more like it is written by an over enthusiastic teenager"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI compliance with legal and ethical standards",
+      "label_negative": "AI non-compliance with real estate regulations",
+      "bipolarity_complete": true,
+      "grounding_span": "make sure nothing that is considered unethical or illegal is present"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI adaptation to audience and market nuances",
+      "label_negative": "AI generic one-size-fits-all output",
+      "bipolarity_complete": true,
+      "grounding_span": "Change it to appeal to someone mature or a first time buyer"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI assistance with Comparative Market Analysis (CMA)",
+      "label_negative": "Manual lengthy CMA process",
+      "bipolarity_complete": true,
+      "grounding_span": "It would be nice if it could improve doing CMAs"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Professional credibility and trust",
+      "grounding_span": "people are making a huge financial decision, they want to work with someone level headed"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and overcoming writer's block",
+      "grounding_span": "the minute you sit down to do a description you get writer's block... at least it can get you started"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Personalized client communication",
+      "grounding_span": "Most of what I write, outside of marketing, is tailored to someone's individual situation"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Pragmatic acceptance of AI as a starting point",
+      "valence": "positive",
+      "grounding_span": "it gives me a jumping off point"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI's cheesy tone",
+      "valence": "negative",
+      "grounding_span": "they just tend to be kind of 'cheesy'"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Cautious optimism about AI improving CMA",
+      "valence": "positive",
+      "grounding_span": "It would be nice if it could improve doing CMAs"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Resignation to AI inevitability",
+      "valence": "mixed",
+      "grounding_span": "Everyone knows it is unavoidable"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement based on initial output quality",
+      "grounding_span": "Both, it depends on the initial response"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Audience segmentation and tailoring",
+      "grounding_span": "You kind of know who your probable buyers are going to be most of the time"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

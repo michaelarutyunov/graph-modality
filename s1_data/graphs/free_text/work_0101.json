@@ -1,0 +1,203 @@
+{
+  "transcript_id": "work_0101",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as coding assistant for data manipulation",
+      "label_negative": "AI as unreliable coder requiring heavy oversight",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I use AI to help with quickly writing VBA code for issues I have"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as iterative collaborator",
+      "label_negative": "AI as one-shot task delegator",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I would start with asking a question... Once I get the output of the model I would test it"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability and error-proneness",
+      "label_negative": "AI accuracy and trustworthiness",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "9/10 it fails"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI ability to handle complex context",
+      "label_negative": "AI limitation with complex context",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "it would require significant context for what we're looking for in terms of results"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI integration with existing enterprise tools",
+      "label_negative": "AI standalone without integration",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "these models aren't readily integrated with systems we currently have in place"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "Organizational cautious adoption of AI",
+      "label_negative": "Uncritical executive enthusiasm for AI",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "Our organization's culture has embraced AI and is looking for opportunities to use it to facilitate work, but we recognize that there are limitations"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Work efficiency and automation",
+      "grounding_span": "automate a significant amount or work"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Understanding and control over outputs",
+      "grounding_span": "we like to make sure that we understand what is being built and how it was built"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Realistic assessment of AI capabilities",
+      "grounding_span": "I think we need to be cautious in our implementation of it"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for coding tasks",
+      "valence": "positive",
+      "grounding_span": "One massive success for me was having it help me build an update macro"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI on complex problems",
+      "valence": "negative",
+      "grounding_span": "One failure it has was in trying to build a Power BI graph... over 7 hours working on the issue"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Skepticism about AI replacing human work",
+      "valence": "negative",
+      "grounding_span": "I think it's overly ambitious to assume that AI can take over significant amounts of my work"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Cautious optimism about AI evolution",
+      "valence": "mixed",
+      "grounding_span": "I think AI is evolving quickly, but I think we need to be cautious in our implementation of it"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative troubleshooting — test, error, refine",
+      "grounding_span": "I would start with asking a question... Once I get the output of the model I would test it. 9/10 it fails. I usually send the error message"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic boundary-setting — knows when to step in",
+      "grounding_span": "If I've sent an error message to the AI 2 or 3 times and it starts repeating itself, it's usually a good sign it's missing context or it's time for me to step in"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

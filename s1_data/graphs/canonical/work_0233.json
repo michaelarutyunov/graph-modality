@@ -1,0 +1,189 @@
+{
+  "transcript_id": "work_0233",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI for summarization and research",
+      "label_negative": "AI as source of low-quality output requiring rework",
+      "bipolarity_complete": true,
+      "grounding_span": "I utilize AI in my daily work by leaning on it to help me with summary tasks"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "Human control over high-detail tasks",
+      "label_negative": "AI autonomy in high-stakes tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I generally prefer to do that myself. It could be a control issue"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as adjustable starting point",
+      "label_negative": "AI as complete replacement for human work",
+      "bipolarity_complete": true,
+      "grounding_span": "I generally use it to start the process and then take over from there"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI adoption in workplace",
+      "label_negative": "Voluntary AI adoption with structured support",
+      "bipolarity_complete": true,
+      "grounding_span": "forced adoption, without direction is what is frustrating"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI reliance leading to laziness and oversight",
+      "label_negative": "Human oversight maintaining quality",
+      "bipolarity_complete": true,
+      "grounding_span": "others that are relying more heavily on AI could be 'phoning it in' a bit - and that, overall, could result in quality degradation"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Quality and accuracy of work output",
+      "grounding_span": "ensuring that we have robust test cases and acceptance criteria helps us ensure that we are installing code without defects"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "I've even used it to assist in generating flowcharts, etc., where appropriate"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional accountability",
+      "grounding_span": "ultimately - I will be the one answering to the quality of products we deliver, not the AI tool I used"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI summaries",
+      "valence": "positive",
+      "grounding_span": "I utilize AI in my daily work by leaning on it to help me with summary tasks"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Optimism about future AI adoption",
+      "valence": "negative",
+      "grounding_span": "forced adoption, without direction is what is frustrating"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI performance degradation",
+      "valence": "negative",
+      "grounding_span": "others that are relying more heavily on AI could be 'phoning it in' a bit - and that, overall, could result in quality degradation"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "mixed",
+      "grounding_span": "Hopefully, the AI tools just get better and better - and I feel that I can rely on them more heavily - but, I don't foresee me removing the human aspect any time soon"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement with limited back-and-forth",
+      "grounding_span": "I will, often, utilize AI to start this process - but, will generally take a much more tactile approach in refining results"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Garbage-in-garbage-out awareness",
+      "grounding_span": "Garbage in, garbage out"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n4",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

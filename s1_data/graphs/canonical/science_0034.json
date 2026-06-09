@@ -1,0 +1,155 @@
+{
+  "transcript_id": "science_0034",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as literature discovery tool",
+      "label_negative": "AI as literature discovery failure",
+      "bipolarity_complete": true,
+      "grounding_span": "I looked to use AI to find papers to answer questions I had, however the results of this were very poor"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for summarization and research",
+      "label_negative": "Manual full-text reading without screening",
+      "bipolarity_complete": true,
+      "grounding_span": "I did however start using AI to summarise papers instead of directly finding them to speed up the decision"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as code generation assistant",
+      "label_negative": "Manual code writing without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "AI was helpful in writing the code"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Thorough verification of AI outputs",
+      "label_negative": "AI output unverifiability",
+      "bipolarity_complete": true,
+      "grounding_span": "I often had smaller sub sets of data that were of a size a human could parse them. I then ran test cases to ensure the output was correct"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Research efficiency",
+      "grounding_span": "I could skim through a greater number this way, wasting less time"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Epistemic accuracy and understanding",
+      "grounding_span": "I knew it existed and was accurate from having read it"
+    },
+    {
+      "id": "n7",
+      "type": "Stance",
+      "label": "Negative stance toward AI for literature search",
+      "valence": "negative",
+      "grounding_span": "the results of this were very poor and often more of a hinderance than a help"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Satisfaction with AI summaries",
+      "valence": "positive",
+      "grounding_span": "I did however start using AI to summarise papers"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for code generation",
+      "valence": "positive",
+      "grounding_span": "AI was helpful in writing the code"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Conditional trust based on verifiability",
+      "valence": "ambivalent",
+      "grounding_span": "I often didn't. If the AI said there was nothing of use I moved on quickly. But if it said there was useful items I went and read it myself"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Methodical verification through testing and line-by-line review",
+      "grounding_span": "I then ran test cases to ensure the output was correct. I also manually implemented print and check statements"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Probing questioning to debug AI reasoning",
+      "grounding_span": "I asked for it to summarise findings related to a small area"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n8",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n3",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

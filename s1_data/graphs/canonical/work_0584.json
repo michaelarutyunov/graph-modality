@@ -1,0 +1,162 @@
+{
+  "transcript_id": "work_0584",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as comprehensive search tool",
+      "label_negative": "Manual document searching process",
+      "bipolarity_complete": true,
+      "grounding_span": "having a chatbot does make things more streamlined instead of figuring out which key word describes the document"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability and honesty",
+      "label_negative": "AI providing incorrect information",
+      "bipolarity_complete": true,
+      "grounding_span": "it mentioned using a chemical we're not supposed to use on stainless steel"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as job threat",
+      "label_negative": "AI as tool for productivity enhancement",
+      "bipolarity_complete": true,
+      "grounding_span": "I worry about higher-ups and reduced empathy and ethical concerns of extortion"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Serendipitous discovery through manual search",
+      "label_negative": "Efficient but narrow AI lookup",
+      "bipolarity_complete": true,
+      "grounding_span": "there's something dopamine-filled about digging for the right piece of information and finding it yourself"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "having a chatbot does make things more streamlined"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Trustworthiness and accuracy",
+      "grounding_span": "that did reduce my trust in its truthfulness"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Personal autonomy and discovery",
+      "grounding_span": "there's something dopamine-filled about digging for the right piece of information and finding it yourself"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Ethical integrity",
+      "grounding_span": "I worry about higher-ups and reduced empathy and ethical concerns of extortion"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Cautious optimism toward AI chatbot",
+      "valence": "ambivalent",
+      "grounding_span": "I'm personally cautious but hopeful"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Distrust due to past accuracy failure",
+      "valence": "negative",
+      "grounding_span": "that did reduce my trust in its truthfulness"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Preference for manual implementation",
+      "valence": "positive",
+      "grounding_span": "I do like the process of digging for information"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Concern about AI's ethical risks",
+      "valence": "negative",
+      "grounding_span": "I worry about higher-ups and reduced empathy and ethical concerns of extortion"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Curiosity-driven exploration when at baseline performance",
+      "grounding_span": "I'm also just a curious person in general, so I find it fun"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Verification-oriented approach",
+      "grounding_span": "I'll definitely be cross-referencing the docs for now"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n4",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

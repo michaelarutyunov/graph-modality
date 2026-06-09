@@ -1,0 +1,174 @@
+{
+  "transcript_id": "work_0322",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as research and understanding partner",
+      "label_negative": "AI as generic content generator",
+      "bipolarity_complete": true,
+      "grounding_span": "I DON'T use them for writing tasks - more like everything else. Research, data summary, idea gen"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability and accuracy in technical domains",
+      "label_negative": "AI hallucination and inaccuracy",
+      "bipolarity_complete": true,
+      "grounding_span": "with technical subjects, the risk of hallucinations or inaccurate statements is greater"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI adherence to specified format",
+      "label_negative": "AI deviation from requested format",
+      "bipolarity_complete": true,
+      "grounding_span": "AI just didn't want to use the format I specified"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as collaborative conversational partner",
+      "label_negative": "AI as independent task completer",
+      "bipolarity_complete": true,
+      "grounding_span": "It's collaborative. I expect to have a conversation with many rounds"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as enabler and enrichier",
+      "label_negative": "AI as replacer and underminer",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is here to enable and enrich, not replace and undermine"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Deep understanding and expertise",
+      "grounding_span": "It's getting that understanding that is the hard part"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional credibility and trust",
+      "grounding_span": "Trust and authenticity may be the key to the future"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and time-saving",
+      "grounding_span": "this is where applying AI can be a greater time-saver"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI brainstorming support",
+      "valence": "positive",
+      "grounding_span": "Good experience: asking for brainstorming support... AI went the 'extra mile'"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI format non-compliance",
+      "valence": "negative",
+      "grounding_span": "Poor experience: once asked for help producing a video voiceover script and AI just didn't want to use the format I specified"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Cautious optimism about future AI reliability",
+      "valence": "ambivalent",
+      "grounding_span": "I would hope that AI models improve their output and become more reliable... but I will always be cautious"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Skepticism toward AI provider claims",
+      "valence": "negative",
+      "grounding_span": "AI companies always tell us how amazing their newest model is, but I want to see evidence of it"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative probing from high-level to deep understanding",
+      "grounding_span": "ask a basic high-level question first... and then dive deeper into any particular insights"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic diversification with niche specialization",
+      "grounding_span": "I am trying to diversify while keeping a strong niche"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,240 @@
+{
+  "transcript_id": "work_0193",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as quick troubleshooting tool",
+      "label_negative": "Manual troubleshooting without AI",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "AI can generate up more often than not very effective troubleshooting advice"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for email communication refinement",
+      "label_negative": "Self-written emails with risk of misunderstanding",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "getting an AI to rewrite it so the message is professional is key"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for dissecting complex messages",
+      "label_negative": "Struggling to understand bloated messages alone",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "AI can help dissect the message"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI accuracy in generating specific outputs",
+      "label_negative": "AI inaccuracy and unwanted changes",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "it can be very hard to get the AI to generate exactly what I'm imagining"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI for repetitive admin tasks",
+      "label_negative": "Manual handling of repetitive admin",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "repetitive admin work when I often have to go and rewrite it"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "Social acceptance of AI use",
+      "label_negative": "Stigma around using AI",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "It still feels like saying lets ask AI isn't as accepted as lets google it"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "Corporate AI restrictions vs. openness",
+      "label_negative": "Unrestricted AI use",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "company policies over AI... there is some level of restriction"
+    },
+    {
+      "id": "n8",
+      "type": "Construct",
+      "label": "AI as career advancement tool",
+      "label_negative": "AI as threat to job security",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "becoming an expert in AI usage... would have key career benefits"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Efficiency and quick problem resolution",
+      "grounding_span": "the troubleshooting is solved quicker and the user is less likely to get frustrated"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Professional communication and clarity",
+      "grounding_span": "rewrite it so the message is professional"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Control and precision in task execution",
+      "grounding_span": "specify explicitly do not change anything else and it will just change everything"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Social acceptance and professional image",
+      "grounding_span": "It still feels like saying lets ask AI isn't as accepted"
+    },
+    {
+      "id": "n13",
+      "type": "Value",
+      "label": "Career growth and adaptability",
+      "grounding_span": "becoming an expert in AI usage... would have key career benefits"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Satisfaction with AI for troubleshooting",
+      "valence": "positive",
+      "grounding_span": "very satisfying when you give an AI a problem... and it immediately solves the problem"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Frustration with AI's inability to make minor changes",
+      "valence": "negative",
+      "grounding_span": "very minor changes that seem very hard to effectively do"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Frustration with AI inaccuracies in data copying",
+      "valence": "negative",
+      "grounding_span": "minor inaccuracies when working with copying data... defeats the benefits"
+    },
+    {
+      "id": "n17",
+      "type": "Stance",
+      "label": "Strategic optimism about AI for career",
+      "valence": "positive",
+      "grounding_span": "becoming an expert in AI usage... would have key career benefits"
+    },
+    {
+      "id": "n18",
+      "type": "Stance",
+      "label": "Preference for back-and-forth interaction",
+      "valence": "positive",
+      "grounding_span": "I much rather the back and forth approach"
+    },
+    {
+      "id": "n19",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative back-and-forth problem solving",
+      "grounding_span": "I much rather the back and forth approach"
+    },
+    {
+      "id": "n20",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic career-oriented thinking about AI",
+      "grounding_span": "becoming an expert in AI usage... would have key career benefits"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n13",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n14",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n17",
+      "target": "n8",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n18",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n19",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n8",
+      "target": "n20",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

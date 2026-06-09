@@ -1,0 +1,214 @@
+{
+  "transcript_id": "work_0283",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as brainstorming and idea generator",
+      "label_negative": "Manual brainstorming and summarization without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I use it to brainstorm ideas for how to write or rewrite certain things like procedures"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI use for non-proprietary tasks",
+      "label_negative": "Avoiding AI for proprietary content due to confidentiality",
+      "bipolarity_complete": true,
+      "grounding_span": "I am hesitant to use AI for assistance. I cannot risk the details becoming public knowledge"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for data analysis",
+      "label_negative": "Manual data analysis due to uncertainty in prompting",
+      "bipolarity_complete": true,
+      "grounding_span": "I still tend to handle data analysis myself but that is largely due to my uncertainty on how to ask the AI to help"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as one-shot tool with perfect prompts",
+      "bipolarity_complete": true,
+      "grounding_span": "I still find myself going back and forth with brainstorming as I often am still trying to figure out what it is I really want to say"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI use sanctioned by workplace",
+      "label_negative": "Secretive or guilty AI use",
+      "bipolarity_complete": true,
+      "grounding_span": "In the beginning no one talked about using any form of AI and I felt like I was the only one using it. So I did not talk openly about it and almost felt guilty"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI capability for complex tasks",
+      "label_negative": "Manual overwhelming review without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I decided to use AI to help me get organized and to speed up the review process. It was amazing how quickly I could load procedures"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI as augmenting human role",
+      "label_negative": "AI augmenting human roles",
+      "bipolarity_complete": true,
+      "grounding_span": "it is very concerning to think that there are tasks where I might not be needed for in the future"
+    },
+    {
+      "id": "n8",
+      "type": "Construct",
+      "label": "AI for administrative tasks",
+      "label_negative": "AI as threat to job security",
+      "bipolarity_complete": true,
+      "grounding_span": "I can envision a partnership with AI where I utilize it for the administrative functions of my job"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "It took a daunting task and made it manageable and helped me complete the project ahead of schedule"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Privacy and data security",
+      "grounding_span": "I cannot risk the details becoming public knowledge or being used by competitors"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Job security and skill relevance",
+      "grounding_span": "it is very concerning to think that there are tasks where I might not be needed for in the future"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Human guidance and support",
+      "grounding_span": "freeing up time for us to provide more support and guidance to team members"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "I was extremely pleased with the outcome and excited to think of other ways AI could help"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Concern about AI replacing jobs",
+      "valence": "negative",
+      "grounding_span": "it is very concerning to think that there are tasks where I might not be needed for in the future"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "positive",
+      "grounding_span": "I can envision a partnership with AI where I utilize it for the administrative functions of my job"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Guilt about secret AI use",
+      "valence": "negative",
+      "grounding_span": "I did not talk openly about it and almost felt guilty for using it"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative clarification through back-and-forth",
+      "grounding_span": "I still find myself going back and forth with brainstorming as I often am still trying to figure out what it is I really want to say"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-specific delegation based on task nature",
+      "grounding_span": "I am hesitant to use AI for assistance. I cannot risk the details becoming public knowledge"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n13",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n8",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n4",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n7",
+      "target": "n8",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

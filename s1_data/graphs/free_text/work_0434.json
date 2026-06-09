@@ -1,0 +1,163 @@
+{
+  "transcript_id": "work_0434",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative idea generator and sounding board",
+      "label_negative": "AI as insufficient for nuanced tone and perspective",
+      "bipolarity_complete": true,
+      "grounding_span": "like sounding something out with an intelligent friend or colleague"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as efficiency tool for laborious tasks",
+      "label_negative": "Manual effort for complex documents",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is perfect for those types of otherwise laborious tasks"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI role-setting and context preparation",
+      "label_negative": "AI without sufficient context",
+      "bipolarity_complete": true,
+      "grounding_span": "really key to provide the model with a strong context and role"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as starting point for human adaptation",
+      "label_negative": "AI as rigid script to follow verbatim",
+      "bipolarity_complete": true,
+      "grounding_span": "I'd much rather use it as a starting point and to generate ideas for me"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI grasp of tone and perspective",
+      "label_negative": "AI tone mismatch despite context",
+      "bipolarity_complete": true,
+      "grounding_span": "occasionally the models really don't grasp the tone or perspective you're aiming for"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Effective communication and relationship building",
+      "grounding_span": "being appropriately emotionally intelligent and leveraging psychological tools where possible to try to build trust"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and time savings",
+      "grounding_span": "complex documents which would take hours to put together from scratch"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Creative inspiration and audience engagement",
+      "grounding_span": "creativity to generate ideas that might draw an audience"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Personal authenticity and natural interaction",
+      "grounding_span": "using my own tone and style of speaking"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Openness to AI for all tasks",
+      "valence": "positive",
+      "grounding_span": "There's no risk or hinderance in using AI for all manner of tasks, so why wouldn't you?"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI tone mismatch",
+      "valence": "negative",
+      "grounding_span": "occasionally the models really don't grasp the tone or perspective you're aiming for"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Optimism about future AI integration",
+      "valence": "positive",
+      "grounding_span": "I aim to continue using AI tools in my work, and learning more and more as it becomes more powerful"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Context-first preparation — invests upfront in role-setting",
+      "grounding_span": "I'll spend a couple of minutes putting together a good context paragraph, potentially asking the model to assume a role"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement — bounces back and forth after initial context",
+      "grounding_span": "bounce back and forth from that point onwards"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n1",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

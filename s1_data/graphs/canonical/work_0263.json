@@ -1,0 +1,169 @@
+{
+  "transcript_id": "work_0263",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as efficiency tool for content creation",
+      "label_negative": "AI as end-stage copy generator with vague input",
+      "bipolarity_complete": true,
+      "grounding_span": "I mostly use AI for the planning process of my work, especially in creating outlines and expanding on ideas in an outline"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as supplement to creative process",
+      "label_negative": "AI as replacement for human creative execution",
+      "bipolarity_complete": true,
+      "grounding_span": "I enjoy the creative process a lot, and usually once I read an idea given to me by AI, my mind starts running a mile a minute"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI output quality and appropriateness",
+      "label_negative": "Vague prompting yielding generic AI output",
+      "bipolarity_complete": true,
+      "grounding_span": "you get out exactly what you put into AI. If you ask for 'newsletter copy for a new product launch', you're going to get basic copy"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as productivity enhancer",
+      "label_negative": "AI as hype without proven results",
+      "bipolarity_complete": true,
+      "grounding_span": "It proved that there really is something to all this AI 'hype', and that it can be an amazing tool for productivity"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Continuous skill evolution as job security",
+      "label_negative": "Stagnation and mediocrity in the face of AI",
+      "bipolarity_complete": true,
+      "grounding_span": "one should only fear AI if they're mediocre at what they do. As a designer, I've always put effort into learning new skills"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative satisfaction and enjoyment",
+      "grounding_span": "I enjoy the creative process a lot"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "AI let's me skip the not so fun stuff like creating a schedule"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional growth and skill maintenance",
+      "grounding_span": "the need to grow and evolve has always been important for job security"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for planning",
+      "valence": "positive",
+      "grounding_span": "Seeing the results from the content schedule come to fruition was really satisfying"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Confidence in human creative superiority",
+      "valence": "positive",
+      "grounding_span": "I didn't even think about asking the AI for more details or ideas on compositions because I'm already gone and getting the photo shoot ready"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Concern about colleagues' over-reliance on AI",
+      "valence": "negative",
+      "grounding_span": "I think if these people better planned out the newsletter in the first place, they would get stronger outcomes from the models"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Optimistic aspiration for AI-driven data integration",
+      "valence": "positive",
+      "grounding_span": "I would like to see it somehow turn into a fully automated project management tool"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Structured iterative validation — uses AI to systematically check and refine work",
+      "grounding_span": "A lot of ideas given I would use as a base to do deeper research into similar products and niches to better see what is actually working"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Intentional specificity in prompting — precise instructions to guide output",
+      "grounding_span": "if you put in more effort and include things like product details, target audience, company info, and even samples of previous newsletters"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

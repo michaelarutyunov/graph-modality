@@ -1,0 +1,182 @@
+{
+  "transcript_id": "work_0748",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as research assistant for finding information",
+      "label_negative": "Manual search without AI assistance",
+      "bipolarity_complete": true,
+      "grounding_span": "I asked an AI model to look for some in the area and was able to find one"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as drafting tool for professional emails",
+      "label_negative": "Self-drafting professional emails without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "helping me write professional emails if I am not sure how to word them"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability for legal information",
+      "label_negative": "AI inaccuracy requiring verification",
+      "bipolarity_complete": true,
+      "grounding_span": "I always double check the statute and read it myself to fact check"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI collaboration for research tasks",
+      "label_negative": "AI delegation for simple drafting tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "If it's research, I guess I would say I collaborate as I tend to ask follow up questions"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI use for firm-specific document editing",
+      "label_negative": "Manual editing preserving firm-specific elements",
+      "bipolarity_complete": true,
+      "grounding_span": "There are some things in our document drafts that are specific to our firm, and the model wouldn't know to leave them as-is"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as learning tool for professional communication",
+      "label_negative": "Relying solely on own communication skills",
+      "bipolarity_complete": true,
+      "grounding_span": "I would probably only use AI for more complicated emails...I don't quite feel comfortable with that yet"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficient problem-solving",
+      "grounding_span": "I was frustrated, so when I uploaded the photo...the model did a great job presenting me with different options"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Accuracy and trustworthiness in legal work",
+      "grounding_span": "I always double check the statute and read it myself to fact check"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Professional growth and skill development",
+      "grounding_span": "I've only been in the field for a year and a half...I want to keep practicing myself"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for finding hard-to-find information",
+      "valence": "positive",
+      "grounding_span": "I was frustrated, so when I uploaded the photo...the model did a great job"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Cautious trust in AI for legal research",
+      "valence": "ambivalent",
+      "grounding_span": "I usually assume the AI is correct, but I always double check the statute"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Preference for self-drafting informal emails",
+      "valence": "negative",
+      "grounding_span": "would just continue writing more informal ones myself"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Optimism about expanding AI use in accounting",
+      "valence": "positive",
+      "grounding_span": "I want to try and think of ways to help that go faster, like uploading banking transactions"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Verification-oriented approach — double-checks AI outputs",
+      "grounding_span": "I always double check the statute and read it myself to fact check"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Task-dependent interaction style — collaborates for research, delegates for drafting",
+      "grounding_span": "If it's research, I guess I would say I collaborate...If it's just drafting emails or letters, I just let the AI do its thing"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

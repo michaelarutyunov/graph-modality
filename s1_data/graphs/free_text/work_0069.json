@@ -1,0 +1,227 @@
+{
+  "transcript_id": "work_0069",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as time-saving drafting tool",
+      "label_negative": "Manual email drafting via employer's slow system",
+      "bipolarity_complete": true,
+      "grounding_span": "This has massively cut down on time after calls for me because the tools the employer provides are no where near as swift or intuitive"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as emotional buffer in difficult customer interactions",
+      "label_negative": "Personal emotional investment and frustration",
+      "bipolarity_complete": true,
+      "grounding_span": "ChatGPT has no ego to offend, no bias to overcome so it gave a more neutral response and I could offer that without imbedding my own emotions into it"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Human detective work and empathy in understanding customer needs",
+      "label_negative": "AI's inability to interpret unspoken meaning and provide emotional validation",
+      "bipolarity_complete": true,
+      "grounding_span": "There is a great deal of difference between what people say and what they mean, and that's always an area I've been professionally interested in"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as quick delegation tool under time pressure",
+      "label_negative": "Collaborative iterative refinement with AI",
+      "bipolarity_complete": true,
+      "grounding_span": "These calls are rapid fire and I do not have time to collaborate. I take the output and its either useful or not and then I need to move on"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Covert AI use due to workplace culture",
+      "label_negative": "Open and sanctioned AI adoption",
+      "bipolarity_complete": true,
+      "grounding_span": "I now keep my use of the tools quiet as I'm sure it would be frowned upon"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as inevitable industry disruptor",
+      "label_negative": "Human agents as stable workforce",
+      "bipolarity_complete": true,
+      "grounding_span": "I know it coming for my job, and I'm not overly bothered"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and time efficiency",
+      "grounding_span": "This has massively cut down on time after calls for me"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Emotional well-being and reduced stress",
+      "grounding_span": "Felt like a weight off my shoulders"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Customer satisfaction and feeling heard",
+      "grounding_span": "the problem doesn't go away for the cx in their head until they feel heard"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Professional autonomy and problem-solving",
+      "grounding_span": "I like thinking my way out of problems"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI for email drafting",
+      "valence": "positive",
+      "grounding_span": "when I realised how much time I was saving, vs what I had been doing before"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Relief and appreciation for AI as emotional buffer",
+      "valence": "positive",
+      "grounding_span": "for me personally as a tool it was useful for that emotional distance it gave me in the situation"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Resistance to outsourcing human empathy and detective work",
+      "valence": "negative",
+      "grounding_span": "I wouldn't want to outsource that part of the experience"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Pragmatic acceptance of AI as quick delegation tool",
+      "valence": "mixed",
+      "grounding_span": "I delegate. Either what comes out works for me or it doesn't"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Frustration with need for covert AI use",
+      "valence": "negative",
+      "grounding_span": "I now keep my use of the tools quiet as I'm sure it would be frowned upon"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Calm acceptance of AI-driven job displacement",
+      "valence": "ambivalent",
+      "grounding_span": "I know it coming for my job, and I'm not overly bothered"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic problem-solving under constraints",
+      "grounding_span": "I am just trying to meet the pressures of the job with some problem solving"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Systems-level cyclical thinking about industry patterns",
+      "grounding_span": "The telecomms industry cycles through needing UK agents and then offshoring the work"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n4",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

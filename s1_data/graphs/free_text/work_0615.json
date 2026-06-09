@@ -1,0 +1,175 @@
+{
+  "transcript_id": "work_0615",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as time-saving summarization tool",
+      "label_negative": "AI as unreliable requiring double-checking",
+      "bipolarity_complete": true,
+      "grounding_span": "summarize the main points and current open actions items and unanswered questions"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI trustworthiness and truthfulness",
+      "label_negative": "AI hallucination and unreliability",
+      "bipolarity_complete": true,
+      "grounding_span": "I need it to never hallucinate and always be truthful"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI integration in familiar tools",
+      "label_negative": "AI as separate unfamiliar tool",
+      "bipolarity_complete": true,
+      "grounding_span": "My company has integrated CoPilot 365 into Microsoft tools like Teams and Outlook"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Personal satisfaction in manual formula crafting",
+      "label_negative": "AI delegation of formula tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I love excel formulas. I find it really satisfying to get an excellent formula right"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as competitive advantage for managers",
+      "label_negative": "Non-AI-using managers at disadvantage",
+      "bipolarity_complete": true,
+      "grounding_span": "Managers who do my job without working with AI will be replaced by managers who DO work with AI"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and time efficiency",
+      "grounding_span": "save a ton of time"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Reliability and accuracy",
+      "grounding_span": "never hallucinate and always be truthful"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Personal enjoyment and mastery",
+      "grounding_span": "I love excel formulas. I find it really satisfying"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Career advancement and competitiveness",
+      "grounding_span": "Managers who do my job without working with AI will be replaced by managers who DO work with AI"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Positive appreciation for AI meeting recaps",
+      "valence": "positive",
+      "grounding_span": "The ability to get a recap of what has happened already in the meeting when I join late is amazing"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Distrust of AI for Excel formulas",
+      "valence": "negative",
+      "grounding_span": "I don't trust it to do formulas for me in Excel"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Optimistic expectation of reduced need for verification",
+      "valence": "positive",
+      "grounding_span": "I look forward to having to review behind AI less"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Concern about AI hallucination",
+      "valence": "negative",
+      "grounding_span": "I need it to never hallucinate and always be truthful"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Verification-oriented — double-checks AI outputs using references",
+      "grounding_span": "I will often double check, but it has references"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Task-specific delegation — uses AI for summarization but not for personal satisfaction tasks",
+      "grounding_span": "I always dismiss those. I don't trust it to do formulas for me in Excel"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,190 @@
+{
+  "transcript_id": "work_0114",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as creative inspiration source",
+      "label_negative": "AI as unreliable creative partner",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI for giving me inspiration when designing new jewellery"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as administrative efficiency tool",
+      "label_negative": "AI as impersonal customer interaction",
+      "bipolarity_complete": true,
+      "grounding_span": "helping me write emails/automated messages to customers"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI adherence to user's creative vision",
+      "label_negative": "AI deviation from user's creative vision",
+      "bipolarity_complete": true,
+      "grounding_span": "it was struggling to use all the ideas I had listed"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Personal customer relationship",
+      "label_negative": "AI-mediated customer interaction",
+      "bipolarity_complete": true,
+      "grounding_span": "I like to speak to my customers directly still also"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Hands-on craftsmanship",
+      "label_negative": "AI-replaced craftsmanship",
+      "bipolarity_complete": true,
+      "grounding_span": "physically making the jewellery could not be replaced by AI"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative expression and personalization",
+      "grounding_span": "tweak the idea to suit my preferences"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Operational efficiency",
+      "grounding_span": "helping me write emails/automated messages to customers"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Authentic customer connection",
+      "grounding_span": "I like to speak to my customers directly still also"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Artisanal integrity",
+      "grounding_span": "physically making the jewellery could not be replaced by AI"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for creative inspiration",
+      "valence": "positive",
+      "grounding_span": "I use AI for giving me inspiration when designing new jewellery"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI's inability to fully incorporate creative concepts",
+      "valence": "negative",
+      "grounding_span": "it was struggling to use all the ideas I had listed"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Preference for direct customer communication over AI",
+      "valence": "negative",
+      "grounding_span": "I like to speak to my customers directly still also"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Openness to expanding AI use in administrative tasks",
+      "valence": "positive",
+      "grounding_span": "I would like to continue to use AI in administrative tasks as well as seeing how it could help me answering customers emails related to stock"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Task-dependent interaction style — iterative for creativity, delegative for admin",
+      "grounding_span": "I tend to go back and forth when thinking of creative ideas with AI. For writing emails, I give it a complete request and let it handle things independently."
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain boundary maintenance — preserving personal touch in craftsmanship and customer relations",
+      "grounding_span": "physically making the jewellery could not be replaced by AI"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n2",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,169 @@
+{
+  "transcript_id": "science_0087",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as springboard for literature review",
+      "label_negative": "AI as sole source for literature review",
+      "bipolarity_complete": true,
+      "grounding_span": "I would use AI suggestions as a springboard to do my own research"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as explanation aid for known concepts",
+      "label_negative": "AI as primary teacher for unknown concepts",
+      "bipolarity_complete": true,
+      "grounding_span": "I would already have some understanding so the AI just helped clear things up"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as coding assistant for new environments",
+      "label_negative": "AI as unreliable coder with outdated knowledge",
+      "bipolarity_complete": true,
+      "grounding_span": "if it could teach me to code in new environments what I wanted perfectly"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI honesty about limitations",
+      "label_negative": "AI overconfidence and hallucination",
+      "bipolarity_complete": true,
+      "grounding_span": "a truly strong AI tool that would be incredibly useful for researchers must be more honest"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Researcher responsibility for core work",
+      "label_negative": "Delegation of core research to AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I feel like that is my responsibility and I would not want to rely on an AI model to do my job"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Epistemic understanding and verification",
+      "grounding_span": "I would verify that the papers it suggested were real, relevant and reputable"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Research integrity and personal accountability",
+      "grounding_span": "I feel like that is my responsibility and I would not want to rely on an AI model to do my job"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Productivity and skill development",
+      "grounding_span": "if it could teach me to code in new environments what I wanted perfectly and fully optimised"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Cautious use of AI as starting point",
+      "valence": "ambivalent",
+      "grounding_span": "I would never solely use AI for these tasks"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for explanation of known concepts",
+      "valence": "positive",
+      "grounding_span": "the AI just helped clear things up and explain connections"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI coding performance",
+      "valence": "negative",
+      "grounding_span": "it performed very poorly"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Aspiration for AI as honest research advisor",
+      "valence": "positive",
+      "grounding_span": "a truly strong AI tool that would be incredibly useful for researchers must be more honest"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Verification-first approach — uses AI as starting point then independently verifies",
+      "grounding_span": "I would verify that the papers it suggested were real, relevant and reputable"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-boundary reasoning — distinguishes between AI-appropriate and researcher-responsibility tasks",
+      "grounding_span": "I feel like that is my responsibility and I would not want to rely on an AI model to do my job"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

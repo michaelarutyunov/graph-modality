@@ -4,7 +4,7 @@ from unittest.mock import patch
 
 import numpy as np
 
-from encoding.text_encoder import encode_transcripts
+from s4_encoding.text_encoder import encode_transcripts
 
 # ── Cache-based tests (work with real cached output) ───────────────────────
 

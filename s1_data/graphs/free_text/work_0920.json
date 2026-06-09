@@ -1,0 +1,154 @@
+{
+  "transcript_id": "work_0920",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as informational search tool for procedural clarity",
+      "label_negative": "AI as unnecessary extra step for routine tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I find the AI results on google explain a lot of what I'm going to need to do before I read the government information"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as assistant for unfamiliar domains",
+      "label_negative": "AI as redundant for familiar processes",
+      "bipolarity_complete": true,
+      "grounding_span": "as I do more research into investing into Japanese properties it has been somewhat helpful in understanding specific information and I've had back and forth from that"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as personal assistant or secretary",
+      "label_negative": "AI as unnecessary extra work for negligible quality gain",
+      "bipolarity_complete": true,
+      "grounding_span": "I can see AI working more as a personal assistant or secretary that would be able to assist me in my role at work"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI use for email and legal writing",
+      "label_negative": "Manual email writing as sufficient",
+      "bipolarity_complete": true,
+      "grounding_span": "I guess it could probably be good for writing e-mails to tenants, and for legal purposes"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Efficiency and time saving",
+      "grounding_span": "Adding on AI to refine the letter is an extra step in the process"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Understanding and knowledge acquisition",
+      "grounding_span": "I don't know what I need to know, and I've got no processes in place so I'm starting from the ground up"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Workplace role security and indispensability",
+      "grounding_span": "My job isn't something that's going to be replaced by AI because my boss relies on me for anything technical or involving computers"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Satisfaction with AI for procedural clarity",
+      "valence": "positive",
+      "grounding_span": "I've been satisfied from a AI outline from a search in google that let me know the process in setting up garbage service for a commercial tenant"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Selective avoidance of AI for routine tasks",
+      "valence": "negative",
+      "grounding_span": "A lot of it feels like I avoid using AI for it because it would involve extra work for higher quality that is of negligible importance"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Optimistic anticipation of AI as personal assistant",
+      "valence": "positive",
+      "grounding_span": "I can see AI working more as a personal assistant or secretary that would be able to assist me in my role at work"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Process-based task segmentation — distinguishes familiar vs. unfamiliar domains",
+      "grounding_span": "With my current job, as long as I follow the processes, there's few questions I need to address"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic cost-benefit evaluation of tool use",
+      "grounding_span": "Adding on AI to refine the letter is an extra step in the process"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

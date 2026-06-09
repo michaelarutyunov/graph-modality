@@ -1,0 +1,193 @@
+{
+  "transcript_id": "work_0880",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as knowledge resource for unfamiliar domains",
+      "label_negative": "Manual time-consuming search for answers",
+      "bipolarity_complete": true,
+      "grounding_span": "AI has been able to save me time from finding those answers"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as writing assistant",
+      "label_negative": "AI as independent task completer",
+      "bipolarity_complete": true,
+      "grounding_span": "It's most directed towards a collaboration"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI incorrectness and domain weakness",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is never fully correct and I find it's knowledge strength can differ depending on the domain"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as systematic troubleshooter",
+      "label_negative": "AI as premature diagnosis tool",
+      "bipolarity_complete": true,
+      "grounding_span": "Good troubleshooting involves isolating variables and narrowing down the issue"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI use for personal communication",
+      "label_negative": "Human-written text communication",
+      "bipolarity_complete": true,
+      "grounding_span": "I always choose to handle text-based communication myself"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as force multiplier for efficiency",
+      "label_negative": "AI as job replacement",
+      "bipolarity_complete": true,
+      "grounding_span": "It won't replace my job, but it will be a force multiplier"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "AI has been able to save me time from finding those answers"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional competence",
+      "grounding_span": "Given that we are touching critical systems, we usually don't give AI a task to fully handle independently"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Personal autonomy and skill preservation",
+      "grounding_span": "I will still push to learn"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Authentic human communication",
+      "grounding_span": "AI outputs have language that is very inconsistent to human text communication"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "I'm glad it was able to take all of the information I gave it and synthesize it for me"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Skepticism and caution toward AI",
+      "valence": "negative",
+      "grounding_span": "we are quite skeptic of AI addons and software, and aren't exactly jumping for joy about it unless there's a legitimate need for it"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Satisfaction with AI for debugging",
+      "valence": "negative",
+      "grounding_span": "the troubleshooting aspect is also something I do myself"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "positive",
+      "grounding_span": "It will help me gain quick and synthesized information on areas I am weak in"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative back-and-forth questioning",
+      "grounding_span": "I may ask a lot of 'why' questions to help me get the larger picture"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-specific expertise-driven boundary setting",
+      "grounding_span": "How are you able to give AI good prompts that help bring insightful responses if you don't have a good understanding of what you're talking about?"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n4",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

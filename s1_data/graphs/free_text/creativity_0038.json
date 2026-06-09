@@ -1,0 +1,212 @@
+{
+  "transcript_id": "creativity_0038",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative assistant",
+      "label_negative": "AI as autonomous replacement",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI more as a collaborator. I don't like to hand over the reins entirely!"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for efficiency on low-stakes tasks",
+      "label_negative": "AI for substantive creative work",
+      "bipolarity_complete": true,
+      "grounding_span": "Rather than spending time on things that might matter a bit less, such as headings, my time can be spent on the body of the text."
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as comprehension aid for unfamiliar topics",
+      "label_negative": "Independent research without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I asked some LLMs to explain the concepts to me in a simplified manner so that I had a clearer idea before I started writing."
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Human control over creative decisions",
+      "label_negative": "AI-driven creative decisions",
+      "bipolarity_complete": true,
+      "grounding_span": "I'd like to think it's me who is driving the decisions."
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI threat to job security",
+      "label_negative": "AI as harmless tool",
+      "bipolarity_complete": true,
+      "grounding_span": "I worry that it will make copywriting obsolete in the next few years."
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "Value of human connection and trust in client relationships",
+      "label_negative": "AI-mediated impersonal relationships",
+      "bipolarity_complete": true,
+      "grounding_span": "I hope that people will still want that human connection with writing and that relationships that have been forged with my clients based on trust will continue."
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Creative autonomy and accountability",
+      "grounding_span": "I will continue to be proactive and have a high level of accountability in my work."
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "it has helped me to become more efficient."
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Epistemic clarity",
+      "grounding_span": "it was nice to get some clarity."
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Professional sustainability and client trust",
+      "grounding_span": "relationships that have been forged with my clients based on trust will continue."
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Positive stance toward AI as collaborator",
+      "valence": "positive",
+      "grounding_span": "I use AI more as a collaborator."
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Positive stance toward AI for efficiency",
+      "valence": "positive",
+      "grounding_span": "it has helped me to become more efficient."
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Positive stance toward AI for comprehension",
+      "valence": "positive",
+      "grounding_span": "I found this really helpful and insightful."
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Negative stance toward AI replacing human control",
+      "valence": "negative",
+      "grounding_span": "I wouldn't want the AI to be doing everything for me."
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Negative stance toward AI threatening job security",
+      "valence": "negative",
+      "grounding_span": "I worry that it will make copywriting obsolete in the next few years."
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Positive stance toward preserving human connection",
+      "valence": "positive",
+      "grounding_span": "I hope that people will still want that human connection with writing."
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement — substantial editing and human input after AI output",
+      "grounding_span": "there is always substantial editing and human input."
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Proactive accountability — maintaining high level of responsibility",
+      "grounding_span": "I will continue to be proactive and have a high level of accountability in my work."
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n2",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

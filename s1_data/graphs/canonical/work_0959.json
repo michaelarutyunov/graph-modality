@@ -1,0 +1,189 @@
+{
+  "transcript_id": "work_0959",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as writing assistant",
+      "label_negative": "AI as time-consuming correction loop",
+      "bipolarity_complete": true,
+      "grounding_span": "the longer it takes to get a small piece of writing correct, the less I am getting paid"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI writing style naturalness",
+      "label_negative": "AI defaulting to generic AI patterns",
+      "bipolarity_complete": true,
+      "grounding_span": "the AI usually uses words and phrases such as 'moreover', 'add a touch of timeless style'"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability and factuality",
+      "label_negative": "AI fabrication and hallucination",
+      "bipolarity_complete": true,
+      "grounding_span": "the AI kept including examples but when I fact checked I could not find this information"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as writing assistant",
+      "label_negative": "AI as crutch for lazy writers producing subpar work",
+      "bipolarity_complete": true,
+      "grounding_span": "there are writers that have defaulted to using AI and are lazy"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI image generation capability",
+      "label_negative": "AI image generation misinterpretation",
+      "bipolarity_complete": true,
+      "grounding_span": "the AI gave me an image of a child drawing at a table with another child watering them"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Financial compensation and efficiency",
+      "grounding_span": "I get paid by the word and not by the hour"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Quality output and SEO effectiveness",
+      "grounding_span": "Google is getting clever at realising how AI writes and penalising websites"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Creative authenticity and human expression",
+      "grounding_span": "edit myself to make it sound like a human wrote it"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Frustration with AI errors",
+      "valence": "negative",
+      "grounding_span": "It is actually really frustrating because I get paid by the word"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Confidence in human superiority for quality work",
+      "valence": "positive",
+      "grounding_span": "if you want quality SEO optimized text then a human writer is the only option"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI fabrications",
+      "valence": "negative",
+      "grounding_span": "the AI kept including examples but when I fact checked I could not find this information"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with AI image generation",
+      "valence": "negative",
+      "grounding_span": "it is annoying because I will quote for the website work and then simple things like finding images are taking far too long"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement with limited back-and-forth",
+      "grounding_span": "I need to be very specific with instructions"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic task decomposition based on complexity",
+      "grounding_span": "sometimes SEO writing is easier to do myself"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

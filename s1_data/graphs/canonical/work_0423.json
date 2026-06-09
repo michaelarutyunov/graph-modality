@@ -1,0 +1,162 @@
+{
+  "transcript_id": "work_0423",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as brainstorming and idea generator",
+      "label_negative": "AI as sole creator replacing human creativity",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI regularly to help me with brainstorming different ideas"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as source of raw material for curation and synthesis",
+      "label_negative": "AI-generated output used without human editing",
+      "bipolarity_complete": true,
+      "grounding_span": "I collect a lot of different ideas and then edit them into one to kind of make it my own"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Human control over final details and customization",
+      "label_negative": "AI making final creative decisions",
+      "bipolarity_complete": true,
+      "grounding_span": "I like having the freedom to comb through any small details and make customizations as I see fit"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as research starting point",
+      "label_negative": "AI not useful when ideas are vague",
+      "bipolarity_complete": true,
+      "grounding_span": "it is nice to have AI generate some rough ideas and then go from there"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as tool for overcoming creative block",
+      "label_negative": "AI stifling creativity or providing unhelpful outputs",
+      "bipolarity_complete": true,
+      "grounding_span": "AI definitely sparked my creativity by showing me multiple ideas"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative authenticity and human expression",
+      "grounding_span": "it is important to show my own personal creativity rather than relying on the AI completely"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Client success and satisfaction",
+      "grounding_span": "it's actually been very helpful when I can show the client many different things"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Creative productivity and efficiency",
+      "grounding_span": "AI definitely sparked my creativity by showing me multiple ideas"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Resistance to AI in creative work",
+      "valence": "positive",
+      "grounding_span": "AI made me super satisfied with what it provided"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Preference for collaborative AI use",
+      "valence": "positive",
+      "grounding_span": "I definitely prefer to collaborate throughout whatever I am working on"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Dismissal of AI takeover concerns",
+      "valence": "negative",
+      "grounding_span": "I don't think I give the concept of AI taking over much thought"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative curation and synthesis — collects, selects, and customizes",
+      "grounding_span": "I collect a lot of different ideas and then edit them into one to kind of make it my own"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative dialogue — engages AI in back-and-forth discussion",
+      "grounding_span": "I definitely prefer to collaborate throughout whatever I am working on"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

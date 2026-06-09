@@ -1,0 +1,169 @@
+{
+  "transcript_id": "work_0507",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI trustworthiness and verification",
+      "label_negative": "AI hallucination and unreliability",
+      "bipolarity_complete": true,
+      "grounding_span": "I generally don't trust AI. I've had it hallucinate functions/methods before"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI training and improvement",
+      "label_negative": "AI as crutch hindering learning",
+      "bipolarity_complete": true,
+      "grounding_span": "I like to know what i'm coding, how it works, how I can apply it elsewhere"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for repetitive simple tasks",
+      "label_negative": "AI for large complex tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I'll rarely give it an independent task unless that task is small and contained"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as autonomous agent",
+      "bipolarity_complete": true,
+      "grounding_span": "I use it throughout a task, going back to it now and again if I get stuck"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI for repetitive simple tasks",
+      "label_negative": "AI for creative or non-repetitive tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "Repetitive tasks: Things like updating all of the YAML files"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Personal competence and skill development",
+      "grounding_span": "I want to keep learning and growing"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Quality and accuracy of work output",
+      "grounding_span": "I'm worried AI may make the output of my role higher"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "AI to help complete code that i'm writing"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Distrust due to hallucination experience",
+      "valence": "negative",
+      "grounding_span": "I generally don't trust AI. I've had it hallucinate functions/methods before"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "Explaining things to me in Bash that not even google could tell me"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI hallucination",
+      "valence": "negative",
+      "grounding_span": "Frustrated: That example above around it hallucinating the Airflow code"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Optimism about future AI delegation",
+      "valence": "ambivalent",
+      "grounding_span": "When we get more robust AI which I can trust more, then I'll let it do larger tasks"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative verification and learning through code inspection",
+      "grounding_span": "I like to go line by line to understand the methods being used"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Task decomposition into small verifiable steps",
+      "grounding_span": "I'll rarely give it an independent task unless that task is small and contained"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

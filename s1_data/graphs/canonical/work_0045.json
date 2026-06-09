@@ -1,0 +1,132 @@
+{
+  "transcript_id": "work_0045",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as cultural and linguistic reference tool",
+      "label_negative": "Manual lookup without AI assistance",
+      "bipolarity_complete": true,
+      "grounding_span": "reference certain phrases from different cultures, such as Scottish sayings, to ensure that I am transcribing them correctly"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as independent task delegator",
+      "bipolarity_complete": true,
+      "grounding_span": "I would first send that phrase to AI and ask if it was truly a saying somewhere"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI understanding of user intent",
+      "label_negative": "AI failure to interpret misspelled words",
+      "bipolarity_complete": true,
+      "grounding_span": "it correctly identifying my intented word"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as writing assistant for captions",
+      "label_negative": "Human irreplaceability in captioning",
+      "bipolarity_complete": true,
+      "grounding_span": "my entire job-type could be taken over by AI as word recognition through different languages and dialects improve"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Accurate transcription and cultural annotation",
+      "grounding_span": "annotate that caption so another person that was working the file in the future would have that information readily available"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficient access to information",
+      "grounding_span": "it is quicker for me to find these things out on my own"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Job security and skill relevance",
+      "grounding_span": "maintain my ability to type quickly, accurately, and study dictations"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "I am generally always satisfied"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Concern about job displacement",
+      "valence": "mixed",
+      "grounding_span": "my entire job-type could be taken over by AI"
+    },
+    {
+      "id": "n10",
+      "type": "CognitiveStyleMarker",
+      "label": "Systematic iterative verification — works independently first, then checks with AI",
+      "grounding_span": "I would first send that phrase to AI and ask if it was truly a saying somewhere"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Habit-driven tool selection — defaults to familiar methods",
+      "grounding_span": "I tend to just look them up with voice on Google because I do not always know how to spell them"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n10",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

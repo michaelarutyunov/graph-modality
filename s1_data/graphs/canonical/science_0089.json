@@ -1,0 +1,164 @@
+{
+  "transcript_id": "science_0089",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as preliminary research compass",
+      "label_negative": "AI as comprehensive solution provider",
+      "bipolarity_complete": true,
+      "grounding_span": "I used GenAI to get an overview and a basic understanding"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI idea generality vs. specificity",
+      "label_negative": "AI idea specificity and relevance",
+      "bipolarity_complete": true,
+      "grounding_span": "most - if not, all - of the ideas were very general"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI training data mismatch with user level",
+      "label_negative": "AI training data aligned with user level",
+      "bipolarity_complete": true,
+      "grounding_span": "The training data dictates the response to be perfectly industry standard / professional level, when most students ... have a barebones understanding"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI verifiability and accuracy",
+      "label_negative": "AI verification through blind trust",
+      "bipolarity_complete": true,
+      "grounding_span": "I had the GenAI tools use and cite the sources that they used, and followed the links that they provided to validate their claims"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as supplement to creative process",
+      "label_negative": "AI in ideation for complete solution generation",
+      "bipolarity_complete": true,
+      "grounding_span": "Even having a GenAI tool that assists in coming up with partially valid ideas that can spark inspiration and innovation"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Authentic engineering rigor and contextual understanding",
+      "grounding_span": "we needed concrete evidence of having done the design and understanding the community's plight"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and reduced workload",
+      "grounding_span": "it would make finding relevant sources easier"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Academic integrity",
+      "grounding_span": "The discrepency is easy to spot, even between students"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Strategic use of AI for simple tasks",
+      "valence": "positive",
+      "grounding_span": "I thought that, if I used GenAI to get an overview and a basic understanding ... it would make finding relevant sources easier"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Skepticism and caution toward AI",
+      "valence": "negative",
+      "grounding_span": "most - if not, all - of the ideas were very general and ones that the community themselves could come up with"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Concern about AI over-reliance and training data mismatch",
+      "valence": "negative",
+      "grounding_span": "an over-reliance on the tool's training data that could compromise the user's intended purpose"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Resistance to AI in creative work",
+      "valence": "positive",
+      "grounding_span": "Even having a GenAI tool that assists in coming up with partially valid ideas that can spark inspiration and innovation would be a great help"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic task decomposition based on complexity",
+      "grounding_span": "I devised a plan to have a more technical solution ... and coordinated with the team accordingly"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Systematic verification through cross-referencing",
+      "grounding_span": "I had the GenAI tools use and cite the sources ... I also searched for other reports and journals ... I used both conservative and generous guessing"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

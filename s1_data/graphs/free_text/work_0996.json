@@ -1,0 +1,179 @@
+{
+  "transcript_id": "work_0996",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as summarization and drafting tool",
+      "label_negative": "AI as unreliable or error-prone assistant",
+      "bipolarity_complete": true,
+      "grounding_span": "take large bodies of text or information and condense this down into key points or summaries"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "Human creative writing as personal expression",
+      "label_negative": "AI-generated writing as impersonal or derivative",
+      "bipolarity_complete": true,
+      "grounding_span": "rewrite it in my own voice"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability and accuracy in proofreading",
+      "label_negative": "AI unreliability and errors in proofreading",
+      "bipolarity_complete": true,
+      "grounding_span": "the AI model kept making serious mistakes"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as collaborative iterative partner",
+      "label_negative": "AI as independent one-shot tool",
+      "bipolarity_complete": true,
+      "grounding_span": "Collaboration. There's a lot of tweaking, going back and forth."
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as tool to preserve human skill set",
+      "label_negative": "AI over-reliance blunting human skills",
+      "bipolarity_complete": true,
+      "grounding_span": "avoid leaning on it too heavily in order to avoid blunting my skill set"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative authenticity and personal voice",
+      "grounding_span": "construct texts in my personal style"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional reliability and trust",
+      "grounding_span": "couldn't trust it"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Skill preservation and professional adaptability",
+      "grounding_span": "avoid blunting my skill set"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI as collaborative summarization tool",
+      "valence": "positive",
+      "grounding_span": "I tend to use AI when I need to take large bodies of text or information and condense this down into key points"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI unreliability in proofreading",
+      "valence": "negative",
+      "grounding_span": "extremely frustrating, as the AI model kept making serious mistakes"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Resistance to AI in creative writing",
+      "valence": "negative",
+      "grounding_span": "Anything truly creative, really. Otherwise, what's the point in me doing what I do?"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Cautious optimism about future AI use",
+      "valence": "ambivalent",
+      "grounding_span": "I hope to keep using it as a tool, but will avoid leaning on it too heavily"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through prompt tweaking",
+      "grounding_span": "I refine my prompt and go again. I'll keep doing this until I get closer to where I want to be."
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based boundary setting for AI use",
+      "grounding_span": "My other work as a commissioning editor feels safer, as this is interpersonal, so I will have to focus my attention more on that kind of work."
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n3",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

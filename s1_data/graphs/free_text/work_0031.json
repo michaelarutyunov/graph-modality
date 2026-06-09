@@ -1,0 +1,205 @@
+{
+  "transcript_id": "work_0031",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as communication assistant for professional tone",
+      "label_negative": "Manual crafting of professional responses",
+      "bipolarity_complete": true,
+      "grounding_span": "make my responses sound more empathetic or professional"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as cognitive load reducer on difficult days",
+      "label_negative": "Struggling to respond without AI when mentally drained",
+      "bipolarity_complete": true,
+      "grounding_span": "if I just can't come up with a nice thing to say because someone is just being so rude"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for general complaint responses",
+      "label_negative": "AI for personal requests requiring deep knowledge",
+      "bipolarity_complete": true,
+      "grounding_span": "I prefer to answer the more personal requests myself"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as project organization tool",
+      "label_negative": "Manual organization of ideas",
+      "bipolarity_complete": true,
+      "grounding_span": "I used AI to sort my thoughts into a presentation that made sense"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Human touch in guest service",
+      "label_negative": "AI-only guest service",
+      "bipolarity_complete": true,
+      "grounding_span": "my job does require a human touch, which so far, AI is not able to mimic"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Professional communication quality",
+      "grounding_span": "make sure my wording sounds professional"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Mental well-being and reduced stress",
+      "grounding_span": "if I just can't come up with a nice thing to say"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Guest satisfaction and accuracy",
+      "grounding_span": "helping the guests in an accurate way"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Team support and confidence building",
+      "grounding_span": "help my co-workers build confidence"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Personalized guest service",
+      "grounding_span": "Being able to provide special services"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI for professional tone",
+      "valence": "positive",
+      "grounding_span": "make my responses sound more empathetic or professional"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Reliance on AI on difficult days",
+      "valence": "positive",
+      "grounding_span": "if I just can't come up with a nice thing to say"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Preference for human handling of personal requests",
+      "valence": "negative",
+      "grounding_span": "I prefer to answer the more personal requests myself"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Satisfaction with AI for project organization",
+      "valence": "positive",
+      "grounding_span": "It was satisfying to see my thoughts and words put into a presentation"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Worry about AI job displacement",
+      "valence": "negative",
+      "grounding_span": "I do worry about AI taking over my job sometimes"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Confidence in irreplaceability of human touch",
+      "valence": "positive",
+      "grounding_span": "my job does require a human touch, which so far, AI is not able to mimic"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Context-dependent switching between AI and self",
+      "grounding_span": "It is entirely based off how I feel that day"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Outcome-focused pragmatism",
+      "grounding_span": "As long as we are helping the guests in an accurate way, no one cares how we get there"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

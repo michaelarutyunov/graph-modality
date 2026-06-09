@@ -1,0 +1,152 @@
+{
+  "transcript_id": "work_0424",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as resource gathering and note-writing assistant",
+      "label_negative": "Manual resource gathering and note-writing",
+      "bipolarity_complete": true,
+      "grounding_span": "I utilize AI to help me gather resources and to write notes"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as mental load reducer for documentation",
+      "label_negative": "Mental exhaustion from manual documentation",
+      "bipolarity_complete": true,
+      "grounding_span": "extremely helpful because it reduces my mental load"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as collaborative co-worker providing suggestions",
+      "label_negative": "AI as autonomous task completer",
+      "bipolarity_complete": true,
+      "grounding_span": "the model is acting like a co-worker giving a suggestion"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as skill enhancer through phrasing alternatives",
+      "label_negative": "AI as skill reducer through over-reliance",
+      "bipolarity_complete": true,
+      "grounding_span": "helps me upgrade my skills"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI adoption relative to workplace culture",
+      "label_negative": "Workplace tech backwardness limiting AI adoption",
+      "bipolarity_complete": true,
+      "grounding_span": "I utilize AI resources more than my coworkers"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and reduced cognitive load",
+      "grounding_span": "streamlined this process and made it less time consuming/exhausting"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional skill maintenance and growth",
+      "grounding_span": "It's important to me that my written and verbal communication skills aren't weakened"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Workplace innovation and productivity",
+      "grounding_span": "I think there are opportunities for AI to be very helpful in my role"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for note-writing efficiency",
+      "valence": "positive",
+      "grounding_span": "the use of AI to help me write notes more efficiently has resulted in some satisfaction"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Mindful optimism about AI expanding into new areas",
+      "valence": "positive",
+      "grounding_span": "I see it expanding"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Confidence in maintaining skills despite AI use",
+      "valence": "positive",
+      "grounding_span": "I'm not necessarily worried about my skills being reduced"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Contextual detail calibration — adjusts input detail based on situation complexity",
+      "grounding_span": "I make it as detailed as I need to for that specific situation"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Mood-dependent revision strategy — decides between AI revision and self-edit based on mood and complexity",
+      "grounding_span": "It really depends on my mood that day and the complexity of the issue"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

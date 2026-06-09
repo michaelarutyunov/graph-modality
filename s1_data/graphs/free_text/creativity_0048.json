@@ -1,0 +1,206 @@
+{
+  "transcript_id": "creativity_0048",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as research assistant for domain knowledge",
+      "label_negative": "Independent research without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I've used it to begin research into things I have limited experience with"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as plausibility checker for creative scenes",
+      "label_negative": "Unchecked creative assumptions",
+      "bipolarity_complete": true,
+      "grounding_span": "I'll write a scene and then put it into an LLM and ask if it seems plausible"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as idea generator for overlooked details",
+      "label_negative": "Relying solely on own perspective",
+      "bipolarity_complete": true,
+      "grounding_span": "ask what other parts of the scene i may have overlooked"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as structural outline provider",
+      "label_negative": "Writing without structural guidance",
+      "bipolarity_complete": true,
+      "grounding_span": "ask it to write what basically amounts to a trellis that I can build the actual story around"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as feedback mirror for creative instincts",
+      "label_negative": "Unquestioned acceptance of feedback",
+      "bipolarity_complete": true,
+      "grounding_span": "putting my writing into the model for feedback allows me to look at it critically"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as writing substitute",
+      "label_negative": "Human-authored words as art form",
+      "bipolarity_complete": true,
+      "grounding_span": "it doesn't feel fully mine because the words are my art form"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI as threat to human writer compensation",
+      "label_negative": "AI as harmless competition",
+      "bipolarity_complete": true,
+      "grounding_span": "concerned about people not paying human writers to do what AI can do more quickly"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Creative authenticity and ownership",
+      "grounding_span": "it doesn't feel fully mine because the words are my art form"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Efficiency and productivity in writing",
+      "grounding_span": "I feel like I can write faster because the research isn't as daunting"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Creative self-discovery and clarity",
+      "grounding_span": "it helps clarify how you feel about how your character should react"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Fair compensation for human writers",
+      "grounding_span": "concerned about people not paying human writers"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Positive appreciation for AI research assistance",
+      "valence": "positive",
+      "grounding_span": "It felt very helpful to be able to have a relevant conversation"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Positive embrace of AI feedback for self-clarification",
+      "valence": "positive",
+      "grounding_span": "A lot of benefit can be achieved by being mindful about how you feel about feedback"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Negative stance toward AI writing prose",
+      "valence": "negative",
+      "grounding_span": "it doesn't feel fully mine because the words are my art form"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Mild concern about AI replacing human writers",
+      "valence": "mixed",
+      "grounding_span": "I'm a little concerned about people not paying human writers"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Selective adoption — uses AI for research/feedback but not for writing",
+      "grounding_span": "The models often ask to write segments for me, but I prefer to do the writing part myself"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Reflective feedback processing — uses AI feedback to clarify own instincts",
+      "grounding_span": "if someone/something tells you, 'your character should say, wow!' and as a creator that feels wrong, it helps clarify how you feel"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n6",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

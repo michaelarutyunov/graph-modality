@@ -1,0 +1,174 @@
+{
+  "transcript_id": "work_0159",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as code completion assistant for well-defined tasks",
+      "label_negative": "AI handling open-ended or esoteric code tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "if I've broken the task down enough there's not much refining to do, but if I keep the scope quite open then I do find I need to correct things"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for document polishing and grammar refinement",
+      "label_negative": "Manual document editing without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "general smartening up documents using Gemini to refine grammar and also identify areas of improvement"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as rapid prototyping tool for business needs",
+      "label_negative": "Traditional manual development without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I wrote a whole 'who's on holiday per client project' system in a day, purely by using AI prompts"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Organizational trust in AI data security",
+      "label_negative": "Organizational paranoia about AI data handling",
+      "bipolarity_complete": true,
+      "grounding_span": "being able to get companies to trust where their data is going is important"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as learning tool for better coding patterns",
+      "label_negative": "AI as crutch that degrades coding skills",
+      "bipolarity_complete": true,
+      "grounding_span": "I still learn from the code output, things like map/reduce/filter are different to how I'd code, so the code is nicer"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "it'll increase how productive I can be outside of work"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Skill development and learning",
+      "grounding_span": "I still learn from the code output"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Organizational trust and data security",
+      "grounding_span": "being able to get companies to trust where their data is going is important"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for rapid prototyping",
+      "valence": "positive",
+      "grounding_span": "that made me very satisfied, and also solved a business need"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI when scope is too open",
+      "valence": "negative",
+      "grounding_span": "if I keep the scope quite open then I do find I need to correct things or ask for help fixing bugs"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Optimism about increasing AI use",
+      "valence": "positive",
+      "grounding_span": "I think I'll use it more and more"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Trust in AI data security despite organizational pushback",
+      "valence": "positive",
+      "grounding_span": "I suggested we should create our own shared drive in the office and mail server if we really didn't trust google...and they saw my thought process there and realised they were being paranoid"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative decomposition — breaks tasks into small verifiable steps",
+      "grounding_span": "Each step was small and a few times I had to retry but on the whole was good"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic advocacy — uses evidence to shift organizational norms",
+      "grounding_span": "I played a big part pushing for this too as I've found it useful in my own tests"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

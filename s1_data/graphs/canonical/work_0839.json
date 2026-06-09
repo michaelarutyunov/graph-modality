@@ -1,0 +1,162 @@
+{
+  "transcript_id": "work_0839",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as brainstorming and idea generator",
+      "label_negative": "AI as unreliable for subjective judgment",
+      "bipolarity_complete": true,
+      "grounding_span": "I like to collaborate with AI for tasks related to brainstorming"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as writing assistant for drafting",
+      "label_negative": "AI leading to decline in personal writing skills",
+      "bipolarity_complete": true,
+      "grounding_span": "I'll let it completely handle tasks like improving upon my written communications, or drafting a social media caption"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as sounding board for ideas",
+      "label_negative": "Handling difficult customer interactions alone",
+      "bipolarity_complete": true,
+      "grounding_span": "sometimes I use AI at work to discuss through interpersonal challenges that I may have with a customer"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as project organization tool",
+      "label_negative": "AI as limited to isolated tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "It was very satisfying because it felt like an all-encompassing approach to the issue at hand"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI impact on skill maintenance",
+      "label_negative": "Over-reliance on AI diminishing personal skills",
+      "bipolarity_complete": true,
+      "grounding_span": "I am a little worried that I may end up leaning too much on AI for things like content drafting, writing emails, etc. and then that my own quality of writing would decrease"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Business growth and profitability",
+      "grounding_span": "to help me brainstorm new inventory I could carry in my business"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Effective communication and customer satisfaction",
+      "grounding_span": "It helps me to take a breath and think through something before I respond to a difficult customer"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Personal competence and skill development",
+      "grounding_span": "my own quality of writing would decrease"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "It was very satisfying because it felt like an all-encompassing approach to the issue at hand"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Resistance to over-reliance on AI",
+      "valence": "negative",
+      "grounding_span": "I am a little worried that I may end up leaning too much on AI for things like content drafting, writing emails, etc."
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Trust in AI for brainstorming but not for subjective product selection",
+      "valence": "mixed",
+      "grounding_span": "I don't trust AI to do adequate research on those types of things"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Task-dependent delegation vs. collaboration",
+      "grounding_span": "I'd say a little bit of both. I'll let it completely handle tasks like improving upon my written communications, or drafting a social media caption. But then I like to collaborate with AI for tasks related to brainstorming"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Reflective deliberation before action",
+      "grounding_span": "It helps me to take a breath and think through something before I respond to a difficult customer"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

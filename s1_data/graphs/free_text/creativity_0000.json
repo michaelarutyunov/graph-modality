@@ -1,0 +1,216 @@
+{
+  "transcript_id": "creativity_0000",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as brainstorming and ideation partner",
+      "label_negative": "AI as non-collaborative tool",
+      "bipolarity_complete": true,
+      "grounding_span": "brainstorming is and ideation is really just a process of bouncing my ideas off a peer"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for critical analysis and perspective refinement",
+      "label_negative": "AI as source of unrefined or shallow analysis",
+      "bipolarity_complete": true,
+      "grounding_span": "using AI to critically analyse film scores... helped me refine my own perspective somewhat"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for non-creative administrative tasks",
+      "label_negative": "AI intrusion into creative core",
+      "bipolarity_complete": true,
+      "grounding_span": "general admin, copywriting, emails/comms, and also business planning"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as threat to commercial music production",
+      "label_negative": "AI as benign or non-threatening to industry",
+      "bipolarity_complete": true,
+      "grounding_span": "for composers making 'production' music it's a big problem"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI impact on streaming platform saturation",
+      "label_negative": "AI not affecting streaming platforms",
+      "bipolarity_complete": true,
+      "grounding_span": "concerned about how AI generated music might impact streaming platform saturation"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI for bucket filling and knowledge synthesis",
+      "label_negative": "AI as distraction from deep learning",
+      "bipolarity_complete": true,
+      "grounding_span": "doing a lot my 'bucket filling'... digging into broad topics and synthesising ideas"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Creative inspiration and idea generation",
+      "grounding_span": "get the creative thinking flowing"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Artistic autonomy and refined perspective",
+      "grounding_span": "helped me refine my own perspective"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Efficiency in non-creative tasks",
+      "grounding_span": "make the non-creative aspects less tedious"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Industry sustainability and fair competition",
+      "grounding_span": "for composers making 'production' music it's a big problem"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Knowledge breadth and synthesis",
+      "grounding_span": "digging into broad topics and synthesising ideas"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Positive engagement with AI for brainstorming",
+      "valence": "positive",
+      "grounding_span": "brainstorming is and ideation is really just a process of bouncing my ideas off a peer"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Positive appreciation for AI in critical analysis",
+      "valence": "positive",
+      "grounding_span": "It was fun but also it helped me refine my own perspective somewhat"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Concern about AI threat to production composers",
+      "valence": "negative",
+      "grounding_span": "for composers making 'production' music it's a big problem"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Concern about AI-generated music saturating streaming",
+      "valence": "negative",
+      "grounding_span": "concerned about how AI generated music might impact streaming platform saturation"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Optimistic expectation for AI to speed workflow",
+      "valence": "positive",
+      "grounding_span": "Hopefully it'll be able to help me refine my ideas and speed up my workflow"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Reflective synthesis — uses AI to refine own perspective through critical dialogue",
+      "grounding_span": "helped me refine my own perspective somewhat"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-specific concern — distinguishes between creative core and commercial segments",
+      "grounding_span": "for composers making 'production' music it's a big problem"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

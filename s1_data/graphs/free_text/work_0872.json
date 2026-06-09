@@ -1,0 +1,175 @@
+{
+  "transcript_id": "work_0872",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative co-creator for tailored educational materials",
+      "label_negative": "AI as autonomous generator requiring minimal input",
+      "bipolarity_complete": true,
+      "grounding_span": "I collaborate heavily. I often have to give multiple prompts in order to get AI to meet the requirements I want."
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as time-saving tool for routine tasks",
+      "label_negative": "Manual effort for routine tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "This is a task that used to take me ages to complete, so saving all this time is very satisfying."
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability and honesty in task execution",
+      "label_negative": "AI unreliability and tendency to make mistakes",
+      "bipolarity_complete": true,
+      "grounding_span": "I look forward to it being more honest, and less likely to make mistakes"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as research filter for educational literature",
+      "label_negative": "Direct reading of all educational research",
+      "bipolarity_complete": true,
+      "grounding_span": "I also use AI for summarizing educational research for me"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as sounding board for workplace relationships",
+      "label_negative": "Handling workplace dynamics without external input",
+      "bipolarity_complete": true,
+      "grounding_span": "I sometimes use AI to help me understand and work on my relationships with my colleagues."
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Student-centered education and accessibility",
+      "grounding_span": "create a really simplified text that aligns well with textbooks but is written in a simple manner that will work well for my ESL students"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional efficiency and time savings",
+      "grounding_span": "saving all this time is very satisfying"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Epistemic understanding and staying current",
+      "grounding_span": "I like to keep in touch with the latest research on how people learn"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Personal well-being and workplace harmony",
+      "grounding_span": "gives me a bit of 'therapy' and helps me manage my day"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for creating accessible materials",
+      "valence": "positive",
+      "grounding_span": "I usually like enjoy when I create a really simplified text that aligns well with textbooks but is written in a simple manner that will work well for my ESL students."
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI's inability to maintain complexity over multiple turns",
+      "valence": "negative",
+      "grounding_span": "I often get frusterated when making multiple choice tests because the AI reverts to very basic levels of questioning and does not follow prompts over many turns in the conversation"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Hopeful anticipation of improved AI reliability",
+      "valence": "positive",
+      "grounding_span": "I look forward to it being more honest, and less likely to make mistakes"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Awareness of skill atrophy but not concern",
+      "valence": "mixed",
+      "grounding_span": "I do sometimes find that it takes me longer to think through the processes that I now tend to delegate to AI. I will definitely get rusty at those things, although I dont think I will lose the ability permanently."
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through multiple prompts and examples",
+      "grounding_span": "I have to give the AI multiple prompts and examples and collaborate heavily in order to get the outcome I want."
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Calibrated trust based on task type and AI performance history",
+      "grounding_span": "At this point I have a pretty good sense for when AI will get things right, and not need as much hand holding, and when AI will make mistakes and I will need to look over that work more to double check."
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,217 @@
+{
+  "transcript_id": "work_0133",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as passive background summarizer",
+      "label_negative": "AI as active decision-maker",
+      "bipolarity_complete": true,
+      "grounding_span": "A lot of my work's AI use is actually quite passive in the background"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for summarization and research",
+      "label_negative": "AI for data input with serious consequences",
+      "bipolarity_complete": true,
+      "grounding_span": "When it comes to summarising and researching, however, I'd be comfortable outsourcing that to AI"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as supplementary collaborative tool",
+      "label_negative": "AI as autonomous task delegator",
+      "bipolarity_complete": true,
+      "grounding_span": "It is definitely a case of collaborating with it rather than delegating complete tasks"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI maintaining personal service touch",
+      "label_negative": "AI losing personal service touch",
+      "bipolarity_complete": true,
+      "grounding_span": "frustrating, and a bit concerning, given you're loosing the personal service touch"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI for menial tasks enabling skill focus",
+      "label_negative": "AI replacing skill development areas",
+      "bipolarity_complete": true,
+      "grounding_span": "If an AI tool can take over perhaps the more menial aspsects of the job allowing me to focus on more advanced areas"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as advanced editing assistant",
+      "label_negative": "AI as full message writer",
+      "bipolarity_complete": true,
+      "grounding_span": "it will be supplementary tool on the side that might suggest edits"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Accountability and human judgment",
+      "grounding_span": "From the point of view of accountability, I prefer to decide the action items myself"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and quick understanding",
+      "grounding_span": "just to get a quick overall understanding of what the customer is referring to"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Personal service and human connection",
+      "grounding_span": "There is something really to be said for having a human rep on the other side of the conversation"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Skill development and growth",
+      "grounding_span": "I definitely don't like the idea of losing out on areas to develop and learn"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI summarization capability",
+      "valence": "positive",
+      "grounding_span": "the summary is the most imporant bit and is what I used the most"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Reluctance to delegate action items to AI",
+      "valence": "negative",
+      "grounding_span": "I prefer to decide the action items myself rather than base them solely on the ai"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Concern about AI in data input due to consequences",
+      "valence": "negative",
+      "grounding_span": "I especially wouldn't want to leave data input to an AI because there can be serious consequences"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Mixed feelings about AI for customer responses",
+      "valence": "mixed",
+      "grounding_span": "it is simultaneously satisfying and impressive ... but also frustrating, and a bit concerning"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Resistance to letting skills dissipate",
+      "valence": "negative",
+      "grounding_span": "I would definitely resist the temptation to let my skills dissipate"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Optimism about AI as editing assistant",
+      "valence": "positive",
+      "grounding_span": "it will be supplementary tool on the side that might suggest edits"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Preference for human oversight and accountability",
+      "grounding_span": "I prefer to decide the action items myself rather than base them solely on the ai"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Motivated skill preservation and growth orientation",
+      "grounding_span": "I am personally a very motivated individual, and I feel I would definitely resist the temptation to let my skills dissipate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n3",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

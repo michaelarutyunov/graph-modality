@@ -1,0 +1,157 @@
+{
+  "transcript_id": "work_0811",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as brainstorming and idea generator",
+      "label_negative": "Sole reliance on own ideas without AI input",
+      "bipolarity_complete": true,
+      "grounding_span": "I will use AI to give me a variety of different concepts and ideas"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as writing assistant",
+      "label_negative": "AI as independent task delegator",
+      "bipolarity_complete": true,
+      "grounding_span": "I usually like to stick to collaborating because I like to check over everything"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as professional polish tool",
+      "label_negative": "Lack of professional guidance without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "The AI really helped guide me on this, and the finished product was great"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI imitation of personal style and humor",
+      "label_negative": "AI inability to capture personal flair",
+      "bipolarity_complete": true,
+      "grounding_span": "If I am able to make the AI imitate my style and tone and humor"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Personal domain for humor and life experience",
+      "label_negative": "AI-generated humor and personal anecdotes",
+      "bipolarity_complete": true,
+      "grounding_span": "When I write anything related to humor or adding humor, I typically like to make up the jokes"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative productivity and efficiency",
+      "grounding_span": "It may lead to helping me become even more creative too"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional competence and client satisfaction",
+      "grounding_span": "the finished product was great"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Personal authenticity and unique voice",
+      "grounding_span": "my personal flair and humor is important in my writing"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "The AI really helped guide me on this, and the finished product was great"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Preference for human control over humor and personal stories",
+      "valence": "negative",
+      "grounding_span": "When I write anything related to humor or adding humor, I typically like to make up the jokes"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Resistance to AI in creative work",
+      "valence": "positive",
+      "grounding_span": "It may lead to helping me become even more creative too"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative oversight — working alongside AI with review",
+      "grounding_span": "I usually like to stick to collaborating because I like to check over everything"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based task allocation — creative vs. mundane",
+      "grounding_span": "When I write anything related to humor or adding humor, I typically like to make up the jokes"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

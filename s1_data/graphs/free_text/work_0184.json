@@ -1,0 +1,156 @@
+{
+  "transcript_id": "work_0184",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as creative assistant for marketing content",
+      "label_negative": "AI handling critical business tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "The creative aspect is easier to let go of"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability for important tasks",
+      "label_negative": "Blind trust in AI for critical tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I do not want to blindly trust AI to do them"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as independent task handler",
+      "label_negative": "AI requiring constant correction",
+      "bipolarity_complete": true,
+      "grounding_span": "Usually I let it handle it independently"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as efficiency tool for projections",
+      "label_negative": "AI replacing personal financial control",
+      "bipolarity_complete": true,
+      "grounding_span": "I do see potentially having it run the numbers on projections"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Creative expression and marketing appeal",
+      "grounding_span": "I struggle with being creative and have a hard time making things sound fun and exciting"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Financial accuracy and business control",
+      "grounding_span": "All of the financial tasks are done by me"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Business independence and self-reliance",
+      "grounding_span": "I never want to rely on AI to the point that I could not run my business without it"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Satisfaction with AI for creative tasks",
+      "valence": "positive",
+      "grounding_span": "when the suggestions are good its great"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Frustration with AI requiring repeated corrections",
+      "valence": "negative",
+      "grounding_span": "When I have to keep asking for another idea or correct something a few times I get frustrated"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Resistance to AI taking over critical tasks",
+      "valence": "negative",
+      "grounding_span": "I honestly don't think I will ever be comfortable with it taking over some areas completely"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Openness to using AI for scheduling and emails",
+      "valence": "positive",
+      "grounding_span": "Emails, scheduling, and keeping track of things are some areas I would consider using it"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative evaluation and correction",
+      "grounding_span": "If the suggestion is bad and I do not think the flavors will taste good I will tell it so and have it try again"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based task delegation",
+      "grounding_span": "All of the financial tasks are done by me as well as the scheduling"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

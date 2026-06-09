@@ -1,0 +1,168 @@
+{
+  "transcript_id": "work_0210",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative content co-creator",
+      "label_negative": "AI as fully autonomous content producer",
+      "bipolarity_complete": true,
+      "grounding_span": "I work collaboratively with the AI, and ask it for inspiration at times, while also providing it with existing content to refine or expand"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI use for content production tasks",
+      "label_negative": "AI use for development and technical tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I mostly use AI for online content production with my work"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as skill-preserving tool",
+      "label_negative": "AI as skill-diminishing crutch",
+      "bipolarity_complete": true,
+      "grounding_span": "I perhaps feel that by asking AI to help me with these I may start to get 'rusty' and my skills might diminish somewhat"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as efficiency and time-saving tool",
+      "label_negative": "AI as unnecessary dependency",
+      "bipolarity_complete": true,
+      "grounding_span": "it does help make things easier at times, to give me more time to myself"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI acceptance in workplace culture",
+      "label_negative": "AI viewed as cheating in workplace",
+      "bipolarity_complete": true,
+      "grounding_span": "I think they would almost view using AI as cheating"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative control and personal expression",
+      "grounding_span": "I will take the content created by the AI and then go over it myself, sometimes changing it quite a bit"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional competence and skill maintenance",
+      "grounding_span": "I always prefer to handle these myself, although I know AI could help"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "it did bring the company several new sales, and a lot of attention from existing customers"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Future career relevance",
+      "grounding_span": "the skills I have developed with AI in recent times, will be of great use to the company as a whole"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI-driven campaign success",
+      "valence": "positive",
+      "grounding_span": "I was particularly pleased with this as it did bring the company several new sales"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Concern about skill atrophy from AI use",
+      "valence": "negative",
+      "grounding_span": "I may start to get 'rusty' and my skills might diminish somewhat"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Optimism about future AI integration",
+      "valence": "positive",
+      "grounding_span": "I think as we move forward, I will continue to use AI in the way that I am doing, but the results will get better"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative collaborative refinement — back-and-forth editing with AI",
+      "grounding_span": "There can be quite a bit of back and forth with the AI after this, as I try to perfect the content"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based selective delegation — distinguishes content from technical tasks",
+      "grounding_span": "I always prefer to handle these myself, although I know AI could help"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

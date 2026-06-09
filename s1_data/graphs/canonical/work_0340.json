@@ -1,0 +1,169 @@
+{
+  "transcript_id": "work_0340",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as tool for lesson planning",
+      "label_negative": "AI as independent task executor without iteration",
+      "bipolarity_complete": true,
+      "grounding_span": "heavier on collaborating throughout the task"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as efficiency tool for content creation",
+      "label_negative": "Manual planning without AI assistance",
+      "bipolarity_complete": true,
+      "grounding_span": "I try to use AI as much as I can to save on planning time"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability in layout and image tasks",
+      "label_negative": "AI unreliability in layout and image tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "AI struggles to understand those types of requests and often respond with unusable content"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI comfort and prompt proficiency",
+      "label_negative": "AI skepticism and lack of prompt skill",
+      "bipolarity_complete": true,
+      "grounding_span": "I am much more comfortable using it"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as time-saving tool for teaching focus",
+      "label_negative": "AI as threat to teacher role",
+      "bipolarity_complete": true,
+      "grounding_span": "I can spend more time teaching and less time planning"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Student engagement and learning",
+      "grounding_span": "spend more time teaching"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional efficiency",
+      "grounding_span": "save on planning time"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional competence",
+      "grounding_span": "keeping myself up to speed with AI will do nothing but benefit my future"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI as collaborative partner",
+      "valence": "positive",
+      "grounding_span": "heavier on collaborating throughout the task"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI fabrications",
+      "valence": "negative",
+      "grounding_span": "AI struggles to understand those types of requests and often respond with unusable content"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Skepticism and caution toward AI",
+      "valence": "positive",
+      "grounding_span": "I am much more comfortable using it"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Cautious optimism about AI in education",
+      "valence": "positive",
+      "grounding_span": "I can spend more time teaching and less time planning"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Systematic iterative decomposition of tasks",
+      "grounding_span": "break apart the essential skills, then build mini lessons for each of those skills"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Intentional limitation and selective use of AI",
+      "grounding_span": "Create the layouts on my own in Canva. Then copy paste the information from AI to my Canva layout"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

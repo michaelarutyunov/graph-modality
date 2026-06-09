@@ -1,0 +1,162 @@
+{
+  "transcript_id": "creativity_0049",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as brainstorming and idea generator",
+      "label_negative": "AI as unhelpful for concrete tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "Brainstorming is the most successful exchange, generally speaking, because we can bounce back and forth on ideas"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as confidence-building assistant",
+      "label_negative": "AI as discouraging or conformist",
+      "bipolarity_complete": true,
+      "grounding_span": "My self esteem regarding stranger and riskier ideas. LLMs have been great cheerleaders in that regard."
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as threat to artistic endeavors",
+      "label_negative": "AI as harmless tool",
+      "bipolarity_complete": true,
+      "grounding_span": "I worry about people automating their music so much that the artistic economy collapses"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as guide of zeitgeist to be subverted",
+      "label_negative": "AI as dominant paradigm without subversion",
+      "bipolarity_complete": true,
+      "grounding_span": "I suspect it'll soon guide the zeitgeist, and we'll get to subvert the paradigm."
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Creative inspiration and ideation",
+      "grounding_span": "Seeing what they bounced back gave me ideas to move forward"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative confidence and self-assurance",
+      "grounding_span": "My self esteem regarding stranger and riskier ideas"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Artistic authenticity and economic sustainability",
+      "grounding_span": "artistic expressions getting buried beneath it all"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Creative rebellion and paradigm subversion",
+      "grounding_span": "subvert the paradigm"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for brainstorming",
+      "valence": "positive",
+      "grounding_span": "Brainstorming is the most successful exchange"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Confidence in AI as a key skill",
+      "valence": "positive",
+      "grounding_span": "LLMs have been great cheerleaders in that regard"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Concern for artists directly impacted by AI",
+      "valence": "negative",
+      "grounding_span": "I worry about people automating their music so much that the artistic economy collapses"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Ambivalent stance toward AI guiding zeitgeist",
+      "valence": "ambivalent",
+      "grounding_span": "I suspect it'll soon guide the zeitgeist, and we'll get to subvert the paradigm"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Abstract-to-concrete iterative thinking",
+      "grounding_span": "My descriptions are generally fragmented and abstract, and they tend to coalesce and ground these into something more centralized and simplified"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Paradigm subversion orientation",
+      "grounding_span": "we'll get to subvert the paradigm"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,174 @@
+{
+  "transcript_id": "work_0100",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as brainstorming and idea generator",
+      "label_negative": "AI as sole research authority",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI as the starting point"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI trustworthiness and verification",
+      "label_negative": "AI cherry-picking sources to support predetermined views",
+      "bipolarity_complete": true,
+      "grounding_span": "I just don't trust AI to be thourough enough"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as debugging assistant",
+      "label_negative": "AI stubbornly repeating wrong solutions",
+      "bipolarity_complete": true,
+      "grounding_span": "it just kept telling me the same wrong solution over and over again"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI for tedious data processing",
+      "label_negative": "Manual checking of large datasets",
+      "bipolarity_complete": true,
+      "grounding_span": "a massive spreadsheet tens of thousands of lines long that I would have to find a way to manually check over like a month"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI dependence driven by corporate pressure",
+      "label_negative": "Autonomous choice in AI use",
+      "bipolarity_complete": true,
+      "grounding_span": "the corporate side of the work I do is always looking for buzz words and asking how we could use AI"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency in problem-solving",
+      "grounding_span": "I used gemini with system instructions to filter it down to just a few hundred lines I needed to manually check"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Epistemic accuracy and understanding",
+      "grounding_span": "I much prefer to do it myself, I just don't trust AI to be thourough enough"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "it would take a human a long time to do (they're also really boring) but AI could be purpose trained to do it quickly"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "Most satisfying is when theres a massive spreadsheet tens of thousands of lines long that I would have to find a way to manually check over like a month but I used gemini with system instructions to filter it down"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI stubbornness in XCode",
+      "valence": "negative",
+      "grounding_span": "it just kept telling me the same wrong solution over and over again until I gave up"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Distrust of AI reliability",
+      "valence": "negative",
+      "grounding_span": "I just don't trust AI to be thourough enough"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Mixed feelings about increasing AI reliance",
+      "valence": "mixed",
+      "grounding_span": "I can see my relationship with AI becoming more dependant. I don't neccesarily want it"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative verification through external sources",
+      "grounding_span": "it presents a few solutions and then i take those and do research elsewhere, academic papers, forums, blogs, everything really"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Back-to-basics problem-solving when AI fails",
+      "grounding_span": "I stopped trying to do what the AI was telling me to and just took it back to what I knew and understood and worked my way up"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n3",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

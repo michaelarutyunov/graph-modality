@@ -1,0 +1,174 @@
+{
+  "transcript_id": "work_0799",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as brainstorming and idea generator",
+      "label_negative": "AI as full content creator replacing personal voice",
+      "bipolarity_complete": true,
+      "grounding_span": "I might start a conversation with an AI to get ideas"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "Human writing and creative control",
+      "label_negative": "Delegating writing entirely to AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I still want to be doing the writing so that the material represents my perspective"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI alignment with author's vision and context",
+      "label_negative": "AI mismatch with non-mainstream views",
+      "bipolarity_complete": true,
+      "grounding_span": "the ideas I get don't quite match what I'm looking for"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Gradual adoption through habit and experimentation",
+      "label_negative": "Forced or rushed adoption without testing",
+      "bipolarity_complete": true,
+      "grounding_span": "I need time to test things and find what works for me"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI for client communication",
+      "label_negative": "Overt AI presence in client interactions",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't want to bring it too obviously into the client-facing side of my work"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Authentic professional growth and self-awareness",
+      "grounding_span": "the struggle of writing it myself actually leads me to better ideas and a better understanding of myself and my work"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "I can save time on both crystallizing the ideas and researching the minute details"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Client trust and credibility",
+      "grounding_span": "I work with a lot of clients who have objections to AI"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for brainstorming",
+      "valence": "positive",
+      "grounding_span": "I might start a conversation with an AI to get ideas"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI misalignment",
+      "valence": "negative",
+      "grounding_span": "Sometimes I get frustrated when the ideas I get don't quite match what I'm looking for"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Openness to future use if reliability improves",
+      "valence": "positive",
+      "grounding_span": "I can imagine myself eventually incorporating AI into more of my work"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Resistance to AI in client communication",
+      "valence": "negative",
+      "grounding_span": "I don't want to bring it too obviously into the client-facing side of my work"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative back-and-forth ideation with AI",
+      "grounding_span": "A bit of back and forth. First, I might use AI to get an idea... then I start writing and go back to the AI"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Slow adoption with need for personal testing",
+      "grounding_span": "I'm slow to adopt new technology because I'm a creature of habit"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n3",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

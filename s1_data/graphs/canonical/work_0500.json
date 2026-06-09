@@ -1,0 +1,167 @@
+{
+  "transcript_id": "work_0500",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI for simplifying complex jargon",
+      "label_negative": "Jargon-laden explanations that confuse clients",
+      "bipolarity_complete": true,
+      "grounding_span": "find an easy way to explain an insurance term to a client"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as writing assistant for drafting",
+      "label_negative": "AI drafting without human oversight",
+      "bipolarity_complete": true,
+      "grounding_span": "helping write correspondence"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Human oversight and decision-making",
+      "label_negative": "AI-automated policy checking",
+      "bipolarity_complete": true,
+      "grounding_span": "I like to fully see the policy and find the differences"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Personal touch in client communications",
+      "label_negative": "Impersonal AI-driven client interactions",
+      "bipolarity_complete": true,
+      "grounding_span": "you still have to have the personal touch to complete"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Client success and satisfaction",
+      "grounding_span": "if I know they really understood what I said"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Professional accountability",
+      "grounding_span": "I don't want to get in trouble for missing something"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "continue using AI to help my daily productivity"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Client trust and credibility",
+      "grounding_span": "having that long term relationship with them is very important"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "Finding a way to explain something is satisfying"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Reluctance to delegate policy checking to AI",
+      "valence": "negative",
+      "grounding_span": "I'm afraid something will get missed"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Concern about AI replacing jobs",
+      "valence": "negative",
+      "grounding_span": "AI replacing workers is always a concern these days"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Commitment to personal touch in client relations",
+      "valence": "positive",
+      "grounding_span": "you still have to have the personal touch to complete"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative iterative refinement — works back and forth with AI",
+      "grounding_span": "if I think of something that needs added in or something I forgot about in the details"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Risk-averse verification — prefers personal review to avoid errors",
+      "grounding_span": "I'm afraid something will get missed and if I didn't do it myself I don't want to get in trouble"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

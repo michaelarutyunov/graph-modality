@@ -1,0 +1,182 @@
+{
+  "transcript_id": "work_0251",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as a resource for unfamiliar or complex tasks",
+      "label_negative": "AI for routine or simple tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I prefer to limit my AI use to more complicated situations, rather than laborious tasks"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as a jumping-off platform for legal research",
+      "label_negative": "AI as a sole authoritative source for legal matters",
+      "bipolarity_complete": true,
+      "grounding_span": "An AI can be helpful with legal questions as a jumping off platform to make sure I'm not overlooking basic legislation"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as a tool for interpersonal and communication advice",
+      "label_negative": "AI for direct interpersonal interaction",
+      "bipolarity_complete": true,
+      "grounding_span": "I would use an AI for a different perspective on how to structure an email or overcome an interpersonal obstacle"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as an external memory aid",
+      "label_negative": "AI as a replacement for personal knowledge",
+      "bipolarity_complete": true,
+      "grounding_span": "I asked the AI to rattle off a list of advice from that book. The AI did this well and I was able to access that information very easily"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI use as due diligence before consulting others",
+      "label_negative": "AI use as a substitute for human consultation",
+      "bipolarity_complete": true,
+      "grounding_span": "Before turning to a colleague or friend I believe it's my job to do everything I can to do the best work possible"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "Maintaining independent thinking and verification",
+      "label_negative": "Over-reliance on AI without personal oversight",
+      "bipolarity_complete": true,
+      "grounding_span": "The final step of the process is always my own independent thinking and I take it upon myself to double check everything"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional competence and thoroughness",
+      "grounding_span": "I will go through my usual process of double checking the legislation myself"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and time management",
+      "grounding_span": "by the time I write a prompt that covers everything... I would be better off writing it myself"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Personal autonomy and skill preservation",
+      "grounding_span": "I do worry that AI could potentially leave me lazy and incapable of solving problems for myself"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI as an external memory aid",
+      "valence": "positive",
+      "grounding_span": "The AI did this well and I was able to access that information very easily"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Concern about AI-induced laziness",
+      "valence": "negative",
+      "grounding_span": "I do worry that AI could potentially leave me lazy and incapable of solving problems for myself"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Preference for doing most tasks oneself",
+      "valence": "negative",
+      "grounding_span": "I prefer to do most tasks myself"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Openness to AI for complex situations",
+      "valence": "positive",
+      "grounding_span": "I prefer to limit my AI use to more complicated situations"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Independent due diligence before seeking help",
+      "grounding_span": "Before turning to a colleague or friend I believe it's my job to do everything I can to do the best work possible"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative interaction with final independent verification",
+      "grounding_span": "I will interact with the AI until I have sufficient information to continue on my own. The final step of the process is always my own independent thinking"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

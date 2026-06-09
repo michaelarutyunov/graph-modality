@@ -1,0 +1,175 @@
+{
+  "transcript_id": "work_0471",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as time-saving assistant for data tasks",
+      "label_negative": "Manual time-consuming data processing",
+      "bipolarity_complete": true,
+      "grounding_span": "It has been significant in saving myself time"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI accuracy and reliability",
+      "label_negative": "AI inaccuracy and misunderstanding",
+      "bipolarity_complete": true,
+      "grounding_span": "there have been a few times when the information provided was not accurate"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI use constrained by data confidentiality",
+      "label_negative": "Unrestricted AI use on all data",
+      "bipolarity_complete": true,
+      "grounding_span": "some of the information we have is private therefore I cannot use AI to assist with it"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as collaborator vs delegator",
+      "label_negative": "AI as pure delegator without collaboration",
+      "bipolarity_complete": true,
+      "grounding_span": "It is more so 50/50"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI potential to automate job tasks",
+      "label_negative": "AI inability to replace human roles",
+      "bipolarity_complete": true,
+      "grounding_span": "many of the tasks I complete can be automated by AI and ultimately take over my position"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "saving myself time"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Data accuracy and integrity",
+      "grounding_span": "verify the information is accurate or it can ultimately invalidate future data"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Privacy and confidentiality",
+      "grounding_span": "some of the information we have is private"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Job security and human-centric skills",
+      "grounding_span": "I do not foresee it completely taking over those"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI outcomes",
+      "valence": "positive",
+      "grounding_span": "Majority of the time I am very pleased with the outcome"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Acceptance of minor AI errors",
+      "valence": "mixed",
+      "grounding_span": "there have been a few times when the information provided was not accurate"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Concern about AI job displacement",
+      "valence": "negative",
+      "grounding_span": "many of the tasks I complete can be automated by AI and ultimately take over my position"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Optimism about future AI productivity gains",
+      "valence": "positive",
+      "grounding_span": "it will continue to cut down on the unnecessary time"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Verification-oriented — double-checks AI outputs",
+      "grounding_span": "I do have to verify the information is accurate"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Adaptive rephrasing — adjusts prompts when AI misunderstands",
+      "grounding_span": "sometimes the AI does not understand my request so I have to rephrase it"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

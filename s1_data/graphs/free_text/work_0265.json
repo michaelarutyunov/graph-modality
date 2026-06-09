@@ -1,0 +1,174 @@
+{
+  "transcript_id": "work_0265",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as content ideation and drafting tool",
+      "label_negative": "AI as unreliable content generator requiring heavy rewriting",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI a lot to generate ideas for content for social media, blog posts, etc"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as image generation tool",
+      "label_negative": "AI as quirky and unreliable image generator",
+      "bipolarity_complete": true,
+      "grounding_span": "Image generation tends to be very quirky, especially when AI tries to incorporate text"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as client interaction tool",
+      "label_negative": "Human direct client interaction",
+      "bipolarity_complete": true,
+      "grounding_span": "I prefer to interact with my clients on my website myself rather than through AI chat"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as collaborative back-and-forth partner",
+      "label_negative": "AI as one-shot task delegator",
+      "bipolarity_complete": true,
+      "grounding_span": "I do go back and forth quite a bit"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as marketing and lead generation tool",
+      "label_negative": "AI as error-prone and not ready for full autonomy",
+      "bipolarity_complete": true,
+      "grounding_span": "I feel like AI should be able to help me significantly with marketing, generating new leads"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Professional authenticity and personal style",
+      "grounding_span": "I want my own style to be evident"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Accuracy and legal compliance",
+      "grounding_span": "AI can get a lot of the quirky NC laws wrong"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and productivity",
+      "grounding_span": "work smarter, not harder"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for content ideation",
+      "valence": "positive",
+      "grounding_span": "I use AI a lot to generate ideas for content"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI image generation quirks",
+      "valence": "negative",
+      "grounding_span": "Image generation tends to be very quirky"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Preference for human client interaction",
+      "valence": "negative",
+      "grounding_span": "I prefer to interact with my clients on my website myself rather than through AI chat"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Optimistic expectation for AI in marketing",
+      "valence": "positive",
+      "grounding_span": "I feel like AI should be able to help me significantly with marketing"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement and fact-checking",
+      "grounding_span": "I plan on rewriting the blog post for the most part, as well as making sure that the 'facts' listed there are, indeed, facts"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Continuous learning and skill diversification",
+      "grounding_span": "I am also constantly learning new skills, currently brushing up HTML and learning Python, Javascript, SQL"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

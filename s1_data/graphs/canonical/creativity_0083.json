@@ -1,0 +1,181 @@
+{
+  "transcript_id": "creativity_0083",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as supplement to creative process",
+      "label_negative": "AI as replacement for human creativity",
+      "bipolarity_complete": true,
+      "grounding_span": "I mostly just use AI for pre-planning or brainstorming for teleplays"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI feedback as useful but fallible",
+      "label_negative": "AI sycophancy and affirmation bias",
+      "bipolarity_complete": true,
+      "grounding_span": "It felt like it was just telling me what I wanted to hear, tbh, basically affirming that I did a good job"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as future music composition enabler",
+      "label_negative": "AI inability to handle complex rhyme schemes",
+      "bipolarity_complete": true,
+      "grounding_span": "For songwriting, I've asked for rhymes or if the syllable pattern makes sense"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as compromise to creative integrity",
+      "label_negative": "Unauthorized use of creative work for AI training",
+      "bipolarity_complete": true,
+      "grounding_span": "I had some reservations of 'feeding' my own creative work to the model"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as complement to human-centered work",
+      "label_negative": "AI as replacement for human workers",
+      "bipolarity_complete": true,
+      "grounding_span": "AI should only be used as a supplement to, not a replacement for, human work"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative autonomy",
+      "grounding_span": "I think I'm still driving the creative decisions"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Honest and accurate feedback",
+      "grounding_span": "I crave feedback all the time and have a thick skin"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Fair compensation and consent for creators",
+      "grounding_span": "writer's creative work being used to train models without their permission"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "It has definitely sped up my research process"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Dissatisfaction with AI sycophancy",
+      "valence": "negative",
+      "grounding_span": "It felt like it was just telling me what I wanted to hear"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Concern about AI replacing jobs",
+      "valence": "negative",
+      "grounding_span": "decision makers might use it to replace people"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Resistance to delegating creative work",
+      "valence": "negative",
+      "grounding_span": "writer's creative work being used to train models without their permission"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Hope for improved AI feedback and technical capability",
+      "valence": "positive",
+      "grounding_span": "Ideally, the models will get smarter and be able to offer constructive feedback"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Intentional boundary-setting between AI and creative work",
+      "grounding_span": "I try to have a hardline between my own creative contributions and the AI research"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Thick-skinned craving for honest critical feedback",
+      "grounding_span": "I crave feedback all the time and have a thick skin"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,179 @@
+{
+  "transcript_id": "work_0347",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as time-saving tool for repetitive tasks",
+      "label_negative": "Manual handling of repetitive tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I tends to bring the task to AI when I feel it can be time consuming when I do it myself, especially repetitive tasks"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI requiring iterative collaboration for complex tasks",
+      "label_negative": "AI executing tasks independently with high success rate",
+      "bipolarity_complete": true,
+      "grounding_span": "most of the time there will be number of back and forth cycle required depending on how complex the data is"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI efficiency threshold: simple vs overly complex tasks",
+      "label_negative": "AI inefficient for very simple or very complex tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "if the task is overly complex and it's hard to describe in the prompt or the AI just won't yield desired results"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as skill enhancer through exposure to new code",
+      "label_negative": "AI replacing or diminishing skills",
+      "bipolarity_complete": true,
+      "grounding_span": "I actually feel my skills been enhanced while using AI as it might use the code that I have not came across before"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as high-level instruction executor (Tony Stark ideal)",
+      "label_negative": "AI requiring detailed step-by-step guidance",
+      "bipolarity_complete": true,
+      "grounding_span": "he often gave instruction(s) and AI will just execute them with high success rate"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "it use to took me 4 hours, with AI it might reduce the time required to 2 hours"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Skill growth and learning",
+      "grounding_span": "my skills been enhanced while using AI as it might use the code that I have not came across before"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Seamless automation and trust",
+      "grounding_span": "AI will just execute them with high success rate"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI reducing task time",
+      "valence": "positive",
+      "grounding_span": "it is very satisfied to be able to resolving the issue for the customer in timing manner"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI not yielding desired results after iterations",
+      "valence": "negative",
+      "grounding_span": "the AI just won't yield desired results after number of iteration"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Optimism about AI adoption in workplace",
+      "valence": "positive",
+      "grounding_span": "I think eventually the whole team will embrace it"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Aspiration for AI as seamless executor",
+      "valence": "positive",
+      "grounding_span": "hopefully it help you build an AI like what Tony have"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Cost-benefit analysis of AI vs manual effort",
+      "grounding_span": "it will probably take longer to write up a prompt for AI to handle the task"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through back-and-forth",
+      "grounding_span": "most of the time there will be number of back and forth cycle required"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

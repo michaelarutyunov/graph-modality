@@ -1,0 +1,167 @@
+{
+  "transcript_id": "work_0538",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as time-saving tool",
+      "label_negative": "AI requiring excessive human intervention",
+      "bipolarity_complete": true,
+      "grounding_span": "it is a great tool that has saved me hours of time a day"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI hallucination and inconsistency",
+      "bipolarity_complete": true,
+      "grounding_span": "Gemini would fail to acquire the VIN, stock number, or some other minor details"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as research starting point",
+      "label_negative": "AI for nuanced human interaction tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "responses which require a great deal of research to ultimately just acquire knowledge"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Human handling of sensitive interpersonal communication",
+      "label_negative": "AI-mediated or robotic interaction",
+      "bipolarity_complete": true,
+      "grounding_span": "the second group of responses requires a human to human connection"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as skill development enabler",
+      "label_negative": "AI as a threat to human skills",
+      "bipolarity_complete": true,
+      "grounding_span": "I absolutely see the need for me to understand how to more effectively use A.I."
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "saved me hours of time a day"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Client trust and credibility",
+      "grounding_span": "my clients who's trust I want to keep strong"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Personal growth and knowledge",
+      "grounding_span": "grow my skill and creative understanding of how to use this tool for the greatest impact"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "it is a great tool that has saved me hours of time a day"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI errors",
+      "valence": "negative",
+      "grounding_span": "I got frustrated and went to YouTube and my coworkers to find a better human example"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "positive",
+      "grounding_span": "I absolutely see the need for me to understand how to more effectively use A.I."
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based compartmentalization of AI use",
+      "grounding_span": "there are two types of fields of response when using AI"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement and testing",
+      "grounding_span": "spent multiple conversation turns and iterated over the course of a few days until I landed on a template that felt great"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

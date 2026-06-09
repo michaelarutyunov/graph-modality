@@ -1,0 +1,164 @@
+{
+  "transcript_id": "work_0202",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as research and synthesis tool",
+      "label_negative": "AI as unreliable or unnecessary for hands-on craft",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI to quickly find the information I need about the plant and make a checklist for me so I can use it as a reference and guide as I choose the right spot to place the new plant"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as fully autonomous delegator",
+      "bipolarity_complete": true,
+      "grounding_span": "Almost always collaborative. I don't want my work to be completely done by anyone or anything else"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI unreliability in visual/spatial tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "It was fantastic at finding and summarizing information... No matter what I said, the puzzle never looked right"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Workplace acceptance of AI use",
+      "label_negative": "Organizational resistance to AI use",
+      "bipolarity_complete": true,
+      "grounding_span": "Some people at the university don't like when they see work that appears to have been done by AI"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as supplementary aide to human expertise",
+      "label_negative": "AI replacing human experience of nature",
+      "bipolarity_complete": true,
+      "grounding_span": "Having both a horticulturalist and AI to fully explain everything about a plant seems like a very full experience to me, one that compliments the other"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Authentic skill and craftsmanship",
+      "grounding_span": "I take pride in the fine detail hands-on work that I do so I want that to be all me"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Informed decision-making",
+      "grounding_span": "help me make better choices for situations that have a long-term impact"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Authentic human connection and trust",
+      "grounding_span": "the experience of enjoying nature is complimented by knowing all of the facts and information, but not the primary purpose for most"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "One time I was really satisfied with AI was when I was using it to create an information sheet for a Magnolia"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI fabrications",
+      "valence": "negative",
+      "grounding_span": "No matter what I said or how specific or general I made the prompt, the puzzle never looked right"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Preference for AI on simple tasks only",
+      "valence": "negative",
+      "grounding_span": "I prefer to make those decisions myself because I take pride in the fine detail hands-on work"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Optimism about AI integration in horticulture",
+      "valence": "positive",
+      "grounding_span": "I imagine that it will grow somewhat, with AI becoming more integrated in the information side of my job"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative externalization — uses AI as a thinking partner to structure thoughts",
+      "grounding_span": "I always try to have a hand in any work that I do"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic outcome focus — evaluates AI based on practical results",
+      "grounding_span": "whatever results in best outcome should at least be explored so if I think that using AI will result in a better outcome, I will try using AI for that task"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

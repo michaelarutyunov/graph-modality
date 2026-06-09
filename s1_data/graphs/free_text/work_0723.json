@@ -1,0 +1,216 @@
+{
+  "transcript_id": "work_0723",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as efficient tool for mechanical tasks",
+      "label_negative": "AI as unreliable for nuanced understanding",
+      "bipolarity_complete": true,
+      "grounding_span": "AI does much of the legwork for that process"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as context-blind content generator",
+      "label_negative": "Human as context-aware content creator",
+      "bipolarity_complete": true,
+      "grounding_span": "the AI doesn't understand the context of the interviews very well"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as error-prone research assistant",
+      "label_negative": "Self-directed research as reliable",
+      "bipolarity_complete": true,
+      "grounding_span": "they can be very prone to errors, oversimplifications, and confirmation bias"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as collaborative tool with human oversight",
+      "label_negative": "AI as autonomous content producer",
+      "bipolarity_complete": true,
+      "grounding_span": "the buck stops here"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as superior to human writing (business perspective)",
+      "label_negative": "Human writing as superior (personal perspective)",
+      "bipolarity_complete": true,
+      "grounding_span": "there's definitely a sense that AI is superior to human writing"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as emotionally engaging content identifier",
+      "label_negative": "AI as synthetic tone generator",
+      "bipolarity_complete": true,
+      "grounding_span": "it's surprisingly good at identifying emotionally engaging content"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI fluency without reliance",
+      "label_negative": "AI reliance without human baseline skills",
+      "bipolarity_complete": true,
+      "grounding_span": "my aim is to be AI-fluent but not AI-reliant"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and productivity",
+      "grounding_span": "what would normally be several hours of review work... can be cut down to a few minutes"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Accuracy and truthfulness",
+      "grounding_span": "fact-checking each answer is more tedious than searching online and learning the data for myself"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Creative autonomy and human expression",
+      "grounding_span": "human creativity has more room to expand and flourish"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Professional competence and skill maintenance",
+      "grounding_span": "we'll always need a certain baseline of writers and researchers who... are equally adept at doing it all 'by hand'"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI for snippet selection",
+      "valence": "positive",
+      "grounding_span": "The most satisfied would probably be the promo snippets we generate using AI"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Frustration with AI for social media content",
+      "valence": "negative",
+      "grounding_span": "it was a constant struggle to restrain the AI from using emojis"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Acceptance of business-driven AI adoption",
+      "valence": "mixed",
+      "grounding_span": "I work for my clients, and their preferences and needs come first"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Optimism about AI freeing human creativity",
+      "valence": "positive",
+      "grounding_span": "the stories we have to share will become an even more valuable commodity"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through instruction tuning",
+      "grounding_span": "I might refine the instructions to focus more tightly on a particular interview segment"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Deliberate boundary-setting between AI and human domains",
+      "grounding_span": "my aim is to be AI-fluent but not AI-reliant"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n12",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n7",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n3",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

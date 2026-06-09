@@ -1,0 +1,175 @@
+{
+  "transcript_id": "work_0001",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as writing and grammar assistant",
+      "label_negative": "AI as intrusive style editor",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI sparingly at my job. I only use it to make sure that my grammar and spelling are correct on the emails I send to clients."
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "Preservation of human writing voice",
+      "label_negative": "AI-altered impersonal writing",
+      "bipolarity_complete": true,
+      "grounding_span": "I want to preserve my voice as I am the sole owner and operator at my business."
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI unreliability and interruptions",
+      "bipolarity_complete": true,
+      "grounding_span": "Grammarly abruptly stops working"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI for practical field strategies",
+      "label_negative": "AI suitability for lab-based work",
+      "bipolarity_complete": true,
+      "grounding_span": "my industry is completely in the field so there are a lot of different factors"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as future defect-checking tool",
+      "label_negative": "AI as unreliable for nuanced inspection",
+      "bipolarity_complete": true,
+      "grounding_span": "It's possible that at some point I'll be able to use AI to double check issues I'm concerned about"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Effective professional communication",
+      "grounding_span": "make sure that my grammar and spelling are correct on the emails I send to clients"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Authenticity and personal integrity",
+      "grounding_span": "I want to preserve my voice as I am the sole owner and operator at my business."
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Workflow efficiency",
+      "grounding_span": "slows things down a little"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Professional judgment and expertise",
+      "grounding_span": "someone would still need to know what they were looking at enough to even consider it to be a problem"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for simple syntax issues",
+      "valence": "positive",
+      "grounding_span": "Grammarly catches a lot more issues than my computer does"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI's agreeableness",
+      "valence": "negative",
+      "grounding_span": "Grammarly abruptly stops working"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with AI's lack of personal voice",
+      "valence": "negative",
+      "grounding_span": "I ignore them"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Openness to increasing AI use in future",
+      "valence": "ambivalent",
+      "grounding_span": "It's possible that at some point I'll be able to use AI to double check issues"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Selective adoption based on task fit",
+      "grounding_span": "I use AI sparingly at my job. I only use it to make sure that my grammar and spelling are correct"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic workaround when tool fails",
+      "grounding_span": "I transfer it to something else, like a Google Doc, use Grammarly there, and then copy it back"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

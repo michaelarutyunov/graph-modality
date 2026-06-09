@@ -1,0 +1,157 @@
+{
+  "transcript_id": "work_0357",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as formatting and synthesizing tool",
+      "label_negative": "AI as creative content generator",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is more about formatting and synthesizing than creating"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for efficiency in record-keeping",
+      "label_negative": "Manual inefficient record-keeping",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI summaries of long email threads or other notes to keep more efficient record"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for data analysis",
+      "label_negative": "Manual time-consuming data analysis",
+      "bipolarity_complete": true,
+      "grounding_span": "I have really enjoyed using AI to help me make more complex spreadsheets for our data tracking and analysis"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as practical support tool",
+      "label_negative": "AI as substitute for learning",
+      "bipolarity_complete": true,
+      "grounding_span": "what forms of AI are reasonable parts of growing technology...versus things that replace the learning or critical thinking process"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI for generating practice materials",
+      "label_negative": "Manual time-consuming search for materials",
+      "bipolarity_complete": true,
+      "grounding_span": "AI that could provide more questions for a certain text that targets a given skill would save time"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Professional efficiency",
+      "grounding_span": "keep more efficient record"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Educational quality and accuracy",
+      "grounding_span": "ensure we're able to capture their understanding and skill set"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Teacher professional autonomy",
+      "grounding_span": "Anything produced would have to be reviewed and potentially tweaked by the expert"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "I have really enjoyed using AI to help me make more complex spreadsheets"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Concern about AI replacing skills",
+      "valence": "negative",
+      "grounding_span": "things that replace the learning or critical thinking process"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Cautious optimism about AI in education",
+      "valence": "positive",
+      "grounding_span": "AI that could provide more questions for a certain text that targets a given skill would save time"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement with limited back-and-forth",
+      "grounding_span": "roll that product into further iterations of the process"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based boundary setting — clear separation of AI-appropriate vs. human-only tasks",
+      "grounding_span": "I don't use AI to plan my lessons, but I will put large amounts of info into AI to help me better organize"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,159 @@
+{
+  "transcript_id": "science_0043",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as research accelerator",
+      "label_negative": "AI as sole source of information",
+      "bipolarity_complete": true,
+      "grounding_span": "use it as a starting point to follow up on and rework, while lessening some of the load"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI unreliability for statistical and methodological decisions",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't trust AI to say 'your data do not meet the requirements for ANOVA, therefore I recommend running a Kruskal Wallis instead'"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as literature discovery tool",
+      "label_negative": "Manual literature search and organization",
+      "bipolarity_complete": true,
+      "grounding_span": "upload PDFs of several potentially related scholarly articles and asking AI to summarize or look for certain ideas"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI practicality of experimental designs",
+      "label_negative": "AI for experimental design without human oversight",
+      "bipolarity_complete": true,
+      "grounding_span": "AI could be a powerful tool when it comes to statistics and experimental design"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Research efficiency",
+      "grounding_span": "lessening some of the load"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Trustworthiness and accuracy",
+      "grounding_span": "I don't trust AI to say 'your data do not meet the requirements for ANOVA'"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Scholarly judgment and critical thinking",
+      "grounding_span": "I won't take anything wholly from AI, rather, use it as a starting point to follow up on and rework"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Cautious trust in AI",
+      "valence": "ambivalent",
+      "grounding_span": "I'm currently at the stage with AI where I won't take anything wholly from AI, rather, use it as a starting point"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Distrust of AI reliability",
+      "valence": "negative",
+      "grounding_span": "I don't trust AI to say 'your data do not meet the requirements for ANOVA'"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Cautious reliance on AI for experimental design",
+      "valence": "positive",
+      "grounding_span": "AI could be a powerful tool when it comes to statistics and experimental design"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative verification and follow-up",
+      "grounding_span": "I would absolutely follow up on, but what is nice is the starting point"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Manual diagnostic checking before automation",
+      "grounding_span": "I usually do this manually (checking for normality, residuals vs. estimates, etc.) before running the test itself"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

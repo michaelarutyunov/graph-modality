@@ -21,7 +21,7 @@ and never deleted.
 
 ### 2.1 Prompt versioning discipline
 
-Prompts live as numbered text files in `extraction/prompts/` (v1.txt, v2.txt, v3.txt). Each version
+Prompts live as numbered text files in `s2_extraction/prompts/` (v1.txt, v2.txt, v3.txt). Each version
 is preserved immutably — no overwriting, no deletion. This made it trivial to trace which prompt
 produced which graphs and to compare versions systematically. The version number is the sole source
 of truth; there is no separate registry or database.
@@ -31,7 +31,7 @@ pipelines with <10 prompt iterations. No need for a prompt registry or database.
 
 ### 2.2 Cache-everything architecture
 
-Every extraction checks `data/graphs/free_text/{tid}.json` before making an API call. This made
+Every extraction checks `s1_data/graphs/free_text/{tid}.json` before making an API call. This made
 re-running the pipeline zero-cost — if a transcript was already extracted, it was skipped. The
 cache was also critical for recovery: when the API config was wrong (see §3.1), we could fix the
 config and re-run only the failed transcripts without re-extracting the successful ones.

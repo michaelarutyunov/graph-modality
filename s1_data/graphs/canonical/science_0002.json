@@ -1,0 +1,143 @@
+{
+  "transcript_id": "science_0002",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as efficient data sorter and information presenter",
+      "label_negative": "Manual sorting through individual documents",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is able to sort through information a lot faster than me"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability in citations",
+      "label_negative": "AI hallucination and source unreliability",
+      "bipolarity_complete": true,
+      "grounding_span": "AI tools can occasionally hallucinate analysis to give the user what the model thinks it wants"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI trustworthiness and verification",
+      "label_negative": "Human responsibility for critical analysis",
+      "bipolarity_complete": true,
+      "grounding_span": "the results were too important, and that I should do it myself"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI ability to distinguish real vs. false information",
+      "label_negative": "AI inability to verify source credibility",
+      "bipolarity_complete": true,
+      "grounding_span": "I would want it to be better at knowing what information that it finds online is real or not"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Research efficiency",
+      "grounding_span": "AI is able to sort through information a lot faster than me"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Research integrity and accuracy",
+      "grounding_span": "the results were too important, and that I should do it myself"
+    },
+    {
+      "id": "n7",
+      "type": "Stance",
+      "label": "Positive valuation of AI for data sorting",
+      "valence": "positive",
+      "grounding_span": "AI is able to sort through information a lot faster than me"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Frustration with AI hallucination",
+      "valence": "negative",
+      "grounding_span": "AI tools can occasionally hallucinate analysis to give the user what the model thinks it wants"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Positive reliance on AI for source finding",
+      "valence": "positive",
+      "grounding_span": "I would want it to be better at knowing what information that it finds online is real or not"
+    },
+    {
+      "id": "n10",
+      "type": "CognitiveStyleMarker",
+      "label": "Systematic verification through source checking",
+      "grounding_span": "I would do a control F through random material documents, spot checking the data"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-specific delegation based on task nature",
+      "grounding_span": "the results were too important, and that I should do it myself"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n8",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n8",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n10",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

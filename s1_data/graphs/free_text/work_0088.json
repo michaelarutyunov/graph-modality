@@ -1,0 +1,193 @@
+{
+  "transcript_id": "work_0088",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as analytical partner for data interpretation",
+      "label_negative": "Manual data analysis without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "upload spreadsheets, graphs, and such, to not only give an opinion, but also to give a clearer picture on lots of data"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as efficiency booster for process improvement",
+      "label_negative": "AI as unnecessary complication",
+      "bipolarity_complete": true,
+      "grounding_span": "identify where potential weaknesses are in the current process"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability and accuracy",
+      "label_negative": "AI errors and technical glitches",
+      "bipolarity_complete": true,
+      "grounding_span": "I can get frustrated if the response is too long or there's other issues that prevent it from giving me my desired response"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as source of novel insights",
+      "label_negative": "AI as regurgitator of known information",
+      "bipolarity_complete": true,
+      "grounding_span": "it gave me quite a few points that I had not thought of"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Human oversight and verification",
+      "label_negative": "Blind reliance on AI outputs",
+      "bipolarity_complete": true,
+      "grounding_span": "I typically re-run the calculation myself on paper just for reinforcement that it is correct"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as potential job replacer",
+      "label_negative": "AI as job enhancer",
+      "bipolarity_complete": true,
+      "grounding_span": "I could certainly see it doing my entire job, effectively, quicker, and cheaper"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional competence and accuracy",
+      "grounding_span": "re-run the calculation myself on paper just for reinforcement that it is correct"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Continuous improvement and strategic edge",
+      "grounding_span": "constant improvement for myself and also the strategy at work"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "allowing me to dedicate time during the day to other areas"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Job security and career sustainability",
+      "grounding_span": "Potentially, AI could take over"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI-generated novel insights",
+      "valence": "positive",
+      "grounding_span": "it gave me quite a few points that I had not thought of"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with technical glitches",
+      "valence": "negative",
+      "grounding_span": "I can get frustrated if the response is too long or there's other issues"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Optimism about future AI integration",
+      "valence": "positive",
+      "grounding_span": "I feel positive about the near future and what that might look like for me"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Concern about AI replacing job",
+      "valence": "negative",
+      "grounding_span": "Potentially, AI could take over"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement of prompts and processes",
+      "grounding_span": "I have refined the initial prompt that I ask"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Hands-on verification and oversight",
+      "grounding_span": "I typically re-run the calculation myself on paper just for reinforcement"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

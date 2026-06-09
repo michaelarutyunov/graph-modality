@@ -1,0 +1,180 @@
+{
+  "transcript_id": "work_0131",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "Human in charge vs AI as fine-tuning tool",
+      "label_negative": "AI taking over core value creation",
+      "bipolarity_complete": true,
+      "grounding_span": "I like to feel like I am 'in charge' and the one actually adding the value"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as learning partner vs AI as black box",
+      "label_negative": "AI providing answers without explanation",
+      "bipolarity_complete": true,
+      "grounding_span": "making sure I ask for explanations so I can learn and ask questions along the way"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability and accuracy",
+      "label_negative": "AI producing incorrect or mixed outputs",
+      "bipolarity_complete": true,
+      "grounding_span": "I checked it over meticulously"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as trusted advisor vs AI as autonomous executor",
+      "label_negative": "AI handling tasks without oversight",
+      "bipolarity_complete": true,
+      "grounding_span": "using AI as kind of a trusted advisor if you like"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Proactive skill development vs reliance on AI",
+      "label_negative": "Letting AI replace human skills",
+      "bipolarity_complete": true,
+      "grounding_span": "it's on me to keep my skills sharp and current"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Personal agency and control",
+      "grounding_span": "I like to feel like I am 'in charge'"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Understanding and learning",
+      "grounding_span": "ask for explanations so I can learn"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Trustworthy and accurate outputs",
+      "grounding_span": "I checked it over meticulously"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Professional growth and adaptability",
+      "grounding_span": "keep my skills sharp and current"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a fine-tuning tool",
+      "valence": "positive",
+      "grounding_span": "I am mostly satisfied if I'm honest"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with past AI inaccuracies",
+      "valence": "negative",
+      "grounding_span": "I would get crazy outputs that blended Python syntax with SQL"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Optimism about AI's evolving role",
+      "valence": "positive",
+      "grounding_span": "I think I will probably come to rely on AI more and more"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Cautious approach to AI autonomy",
+      "valence": "ambivalent",
+      "grounding_span": "I don't have anything automated yet but I envisage absolutely this will come"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement and back-and-forth",
+      "grounding_span": "most of the time it is a back and forth"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Proactive learning and skill maintenance",
+      "grounding_span": "it's on me to keep my skills sharp and current"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

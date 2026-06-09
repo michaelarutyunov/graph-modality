@@ -1,0 +1,185 @@
+{
+  "transcript_id": "work_0163",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as knowledge resource for unfamiliar domains",
+      "label_negative": "Relying on own experience for unfamiliar equipment",
+      "bipolarity_complete": true,
+      "grounding_span": "I will use ChatGPT to ask it for reviews of the item"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI use for quick, bounded tasks",
+      "label_negative": "AI for high-stakes tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "basic questions that aren't critical"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as writing assistant for drafting",
+      "label_negative": "Personal handling of sensitive communications",
+      "bipolarity_complete": true,
+      "grounding_span": "use ChatGPT to draft apology emails"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as financial analysis assistant",
+      "label_negative": "Manual handling of financial tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "AI will mostly begin to replace some of the financial burden"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Hands-on customer service and expertise",
+      "label_negative": "AI-mediated customer interactions",
+      "bipolarity_complete": true,
+      "grounding_span": "I've always been more of a hands on person and big on the in-person experience for clients"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Customer satisfaction and retention",
+      "grounding_span": "maintain customer retention"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional competence",
+      "grounding_span": "recommending the right product is critical"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "quick overview"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Professional autonomy",
+      "grounding_span": "I've always been more of a hands on person"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for technical setup",
+      "valence": "positive",
+      "grounding_span": "the Mud Mixer experience I had with ChatGPT was particularly successful"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Cautious reliance on own judgment for high-stakes tasks",
+      "valence": "negative",
+      "grounding_span": "I prefer to manage some tasks myself such as hyper specific research on concrete curing products"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Cautious approach to AI in financial tasks",
+      "valence": "positive",
+      "grounding_span": "AI will mostly begin to replace some of the financial burden"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Confidence in irreplaceability of hands-on service",
+      "valence": "positive",
+      "grounding_span": "I'm not worried"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based task differentiation",
+      "grounding_span": "basic questions that aren't critical"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Hands-on experiential learning preference",
+      "grounding_span": "I've always been more of a hands on person"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

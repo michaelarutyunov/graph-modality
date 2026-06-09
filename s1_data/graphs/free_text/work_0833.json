@@ -1,0 +1,194 @@
+{
+  "transcript_id": "work_0833",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as research aid for students",
+      "label_negative": "AI as replacement for student research skills",
+      "bipolarity_complete": true,
+      "grounding_span": "they use it as a research aid and to help design presentations"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI use for writing skills",
+      "label_negative": "AI banned for writing tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "For anything that has to do with writing skills, AI is banned"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as tool for lesson planning",
+      "label_negative": "AI not needed for lesson planning",
+      "bipolarity_complete": true,
+      "grounding_span": "I would use it mainly to help come up with ideas for lessons"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as intellectual harm without precautions",
+      "label_negative": "AI as safe tool with proper education",
+      "bipolarity_complete": true,
+      "grounding_span": "Without the right precautions, AI can be intellectually harmful"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as option, not necessity",
+      "label_negative": "AI as crutch or necessity",
+      "bipolarity_complete": true,
+      "grounding_span": "For any intelligent person, it should be an option, never a necessity"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI entertainment value for kids",
+      "label_negative": "AI as purely utilitarian tool",
+      "bipolarity_complete": true,
+      "grounding_span": "there's a lot of entertainment value in AI for kids"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Student skill development and independence",
+      "grounding_span": "kids shouldn't be taught to rely on it"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Educational effectiveness and safety",
+      "grounding_span": "give them the knowledge they need to stay safe"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Teacher efficiency and creativity",
+      "grounding_span": "help come up with ideas for lessons"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with student research without AI",
+      "valence": "positive",
+      "grounding_span": "I'm more satisfied and impressed when they do their research without using AI"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Neutral acceptance of AI as useful but unimpressive",
+      "valence": "ambivalent",
+      "grounding_span": "it's useful, but not impressive"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Openness to using AI for lesson planning if needed",
+      "valence": "positive",
+      "grounding_span": "I would use it mainly to help come up with ideas for lessons"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Concern about AI's intellectual harm without education",
+      "valence": "negative",
+      "grounding_span": "Without the right precautions, AI can be intellectually harmful"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Positive view of AI entertainment and educational games",
+      "valence": "positive",
+      "grounding_span": "I think an AI-based educational game program would be really great"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic verification — simple checks for accuracy",
+      "grounding_span": "A simple google search is fine"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Balanced integration — AI as option, not necessity",
+      "grounding_span": "it should be an option, never a necessity"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,179 @@
+{
+  "transcript_id": "work_0117",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborator for iterative refinement",
+      "label_negative": "AI as autonomous outline creator that dictates structure",
+      "bipolarity_complete": true,
+      "grounding_span": "I work with AI as a 'work partner'"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for client communication",
+      "label_negative": "AI for tasks requiring personal creative control",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI assistants for the following client-facing work"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for summarization and research",
+      "label_negative": "AI unreliability and poor research capability",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is NOT very good at this yet"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Maintaining agency over fundamental work structure",
+      "label_negative": "Letting AI determine what to include/exclude",
+      "bipolarity_complete": true,
+      "grounding_span": "I do not like having AI outline the work for me"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI adoption with transparent guardrails",
+      "label_negative": "Unchecked AI deployment at scale",
+      "bipolarity_complete": true,
+      "grounding_span": "I push back on clients who want to roar ahead with AI adoption"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative control and originality",
+      "grounding_span": "I am letting someone else decide what I keep and what I exclude"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional competence and client satisfaction",
+      "grounding_span": "I review ALL work that AI handles at this point"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Responsible innovation and risk mitigation",
+      "grounding_span": "ask them to think very carefully about what they are willing to give up"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "it absolutely nailed it"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with research AI",
+      "valence": "negative",
+      "grounding_span": "AI is NOT very good at this yet"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "No personal concern about AI in own work",
+      "valence": "negative",
+      "grounding_span": "I do not like having AI outline the work for me"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Caution about large-scale AI deployment",
+      "valence": "negative",
+      "grounding_span": "terrifying? concerning? something in that wheelhouse"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement and testing",
+      "grounding_span": "I have been working on a persistent version of the prompt for this task in markdown for almost six months"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic tool selection based on effectiveness",
+      "grounding_span": "I just keep pushing the level of complexity that I can manage with the tools as they evolve"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n2",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

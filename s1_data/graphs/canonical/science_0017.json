@@ -1,0 +1,156 @@
+{
+  "transcript_id": "science_0017",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as coding assistant",
+      "label_negative": "Traditional programming resources (Stack Overflow) requiring manual search and adaptation",
+      "bipolarity_complete": true,
+      "grounding_span": "I decided to use AI as I think it would be quicker and get me the answer faster"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for broad overview of scientific topics",
+      "label_negative": "AI for specific and complex research problems",
+      "bipolarity_complete": true,
+      "grounding_span": "AI currently does already a good job of overview topics, but I wouldn't really trust it for more specific and complex research problems"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI trustworthiness and verification",
+      "label_negative": "AI hallucination and lack of source transparency",
+      "bipolarity_complete": true,
+      "grounding_span": "I have seen many instances of AI halluncinating information when it doesn't know something"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI integration into workflow",
+      "label_negative": "Manual physical processes (e.g., microscopy sample loading)",
+      "bipolarity_complete": true,
+      "grounding_span": "when I do optical microscopy, it is just me loading each sample into the microscope and taking images"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Research efficiency",
+      "grounding_span": "quicker and get me the answer faster"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Epistemic accuracy and understanding",
+      "grounding_span": "I wouldn't really trust it for more specific and complex research problems"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Scientific rigor and methodological control",
+      "grounding_span": "I read through the code and made sure it did what it was supposed to"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Positive toward AI for coding tasks",
+      "valence": "positive",
+      "grounding_span": "I decided to use AI as I think it would be quicker and get me the answer faster"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Cautious trust in AI",
+      "valence": "ambivalent",
+      "grounding_span": "AI currently does already a good job of overview topics, but I wouldn't really trust it for more specific and complex research problems"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI hallucination",
+      "valence": "negative",
+      "grounding_span": "I have seen many instances of AI halluncinating information when it doesn't know something"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Cautious reliance on AI for experimental design",
+      "valence": "mixed",
+      "grounding_span": "I just didn't see the need for AI in these parts yet"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-specific verification and adaptation",
+      "grounding_span": "I read through the code and made sure it did what it was supposed to"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic tool selection based on effectiveness",
+      "grounding_span": "I just didn't see the need for AI in these parts yet"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

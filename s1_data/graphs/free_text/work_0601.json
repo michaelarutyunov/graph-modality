@@ -1,0 +1,203 @@
+{
+  "transcript_id": "work_0601",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as troubleshooting and learning aid for challenging tasks",
+      "label_negative": "AI as cumbersome overhead for routine or context-heavy tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I will use AI to help when I'm troubleshooting or debugging and my own troubleshooting efforts aren't getting me far"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as collaborative partner requiring extensive context sharing",
+      "label_negative": "AI as independent task delegator",
+      "bipolarity_complete": true,
+      "grounding_span": "Definitely collaboration. I find myself explaining a lot to the AI what I'm trying to achieve"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI integration into existing workflow tools",
+      "label_negative": "External general-purpose chatbots",
+      "bipolarity_complete": true,
+      "grounding_span": "Where we hope to incorporate AI into our work is with automated tools integrated into our work environment"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Narrow domain-specific AI tools",
+      "label_negative": "Broad general-purpose LLMs",
+      "bipolarity_complete": true,
+      "grounding_span": "using AI tools is much more effective and helpful when the scope of what the AI tool can handle is more narrow"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as judgment-free explainer of fundamental concepts",
+      "label_negative": "Human expert as source of explanation (with social cost)",
+      "bipolarity_complete": true,
+      "grounding_span": "Being able to ask AI stupid, basic questions to really drill in the point helped me understand in a way I'd never have been comfortable to badger a professor"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Professional competence and skill development",
+      "grounding_span": "helped me understand in a way I'd never have been comfortable to badger a professor to understand"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Workplace efficiency and reduced friction",
+      "grounding_span": "it feels impossible to explain all those little peculiarities and feels burdensome"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Job security and industry adaptation",
+      "grounding_span": "It's a scary thought... I imagine AI-Native companies in the industry will change the way employment works"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Selective pragmatic use of AI for challenging tasks",
+      "valence": "positive",
+      "grounding_span": "I will use AI to help when I'm troubleshooting or debugging and my own troubleshooting efforts aren't getting me far"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI due to context overhead",
+      "valence": "negative",
+      "grounding_span": "it feels impossible to explain all those little peculiarities and feels burdensome"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Optimism toward integrated AI tools",
+      "valence": "positive",
+      "grounding_span": "Where we hope to incorporate AI into our work is with automated tools integrated into our work environment"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI as learning aid",
+      "valence": "positive",
+      "grounding_span": "Being able to ask AI stupid, basic questions to really drill in the point helped me understand"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Anxiety about AI impact on employment",
+      "valence": "negative",
+      "grounding_span": "It's a scary thought... I imagine AI-Native companies in the industry will change the way employment works"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Preference for narrow AI over general LLMs",
+      "valence": "positive",
+      "grounding_span": "using AI tools is much more effective and helpful when the scope of what the AI tool can handle is more narrow"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Selective and context-dependent tool use — uses AI only for specific challenging or new tasks",
+      "grounding_span": "I don't use AI daily or in a typical work day, but probably once a week or every couple of weeks when I'm working on something particularly challenging or new"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative iterative problem-solving — explains context and works through problems with AI",
+      "grounding_span": "Definitely collaboration. I find myself explaining a lot to the AI what I'm trying to achieve and what is already there"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n4",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,114 @@
+{
+  "transcript_id": "work_0153",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as planning and structuring tool",
+      "label_negative": "Manual planning without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI to create schedules and meal plans for the week"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI adherence to instructions",
+      "label_negative": "AI ignoring user instructions",
+      "bipolarity_complete": true,
+      "grounding_span": "the chatbot ignores some of my requests"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as collaborator for iterative refinement",
+      "label_negative": "AI one-shot perfect output",
+      "bipolarity_complete": true,
+      "grounding_span": "it usually takes a few back and fourths before I get a final draft"
+    },
+    {
+      "id": "n4",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "I use AI for almost every task I can"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Understanding and control over outputs",
+      "grounding_span": "I will have to repeat that I did not want salmon on the menu"
+    },
+    {
+      "id": "n6",
+      "type": "Stance",
+      "label": "Satisfaction with AI for planning",
+      "valence": "positive",
+      "grounding_span": "I use it because I enjoy it"
+    },
+    {
+      "id": "n7",
+      "type": "Stance",
+      "label": "Frustration with AI deviating from request",
+      "valence": "negative",
+      "grounding_span": "the chatbot ignores some of my requests"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Openness to increasing AI use in future",
+      "valence": "positive",
+      "grounding_span": "If there were things that came up that AI could be helpful with, I would implement it"
+    },
+    {
+      "id": "n9",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement — upfront specification then back-and-forth adjustment",
+      "grounding_span": "I give it as much information as I can up front, however, it usually takes a few back and fourths"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n7",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n9",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "MODULATED_BY"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,200 @@
+{
+  "transcript_id": "work_0401",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as polishing tool for communication",
+      "label_negative": "Manual drafting and anxiety over wording",
+      "bipolarity_complete": true,
+      "grounding_span": "I mainly use chat gpt to polish up what I am already creating"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as research assistant for nuanced details",
+      "label_negative": "AI providing generic comprehensive reports",
+      "bipolarity_complete": true,
+      "grounding_span": "I'm looking for things about their childhood and where they were raised and their first jobs"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as delegation tool for routine tasks",
+      "label_negative": "AI as collaborative partner throughout task",
+      "bipolarity_complete": true,
+      "grounding_span": "I am much more likely to delegate"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI reliability and accuracy",
+      "label_negative": "AI hallucination and spinning wheel",
+      "bipolarity_complete": true,
+      "grounding_span": "when it hullacinates when i do research"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI integration into existing workflows",
+      "label_negative": "AI as separate standalone tool",
+      "bipolarity_complete": true,
+      "grounding_span": "I think my relationship with AI will become more seamless"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "Human collaboration and learning",
+      "label_negative": "AI replacing human interaction",
+      "bipolarity_complete": true,
+      "grounding_span": "I enjoy working with other people. I enjoy learning new things. I don't want to give those up"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional confidence and reduced anxiety",
+      "grounding_span": "It takes the anxiety out of it for me"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Deep contextual understanding",
+      "grounding_span": "find more nuanced, new ideas, than a comprehensive view of all the ideas"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "outsource the gritty back and forth of scheduling to maximize the meaningful conversations"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Trustworthy information",
+      "grounding_span": "when it hullacinates when i do research"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Seamless productivity",
+      "grounding_span": "AI will become more seamless"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Meaningful human connection and creativity",
+      "grounding_span": "I enjoy working with other people. I enjoy learning new things"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Satisfaction with AI for email polishing",
+      "valence": "positive",
+      "grounding_span": "I really like using it to polish up some emails"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Frustration with AI hallucination and stuckness",
+      "valence": "negative",
+      "grounding_span": "i often get frustrated when it can't create what i want"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Optimism about future seamless integration",
+      "valence": "positive",
+      "grounding_span": "I think my relationship with AI will become more seamless"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Resistance to AI replacing human interaction",
+      "valence": "negative",
+      "grounding_span": "I don't want to give those up"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Mind dump and iterative refinement",
+      "grounding_span": "I do a mind dump, where I talk about everything i am doing for 5 - 10 minutes and then have it create a summary"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Preference for conversational discovery over comprehensive reports",
+      "grounding_span": "I would much rather have a conversational research (with deep research capability, where it can take its time to reason) with a chatbot, than just one comprehensive deep research report"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n13",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,167 @@
+{
+  "transcript_id": "science_0088",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI for high-volume literature review",
+      "label_negative": "Manual literature review for small sets",
+      "bipolarity_complete": true,
+      "grounding_span": "With larger sets it can take a while, and that's where I would have the model take a first pass"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for manuscript editing and error checking",
+      "label_negative": "Manual editing without AI assistance",
+      "bipolarity_complete": true,
+      "grounding_span": "ask the model to look for anything I may have missed, errors in style, small first-draft edit type things"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for data interpretation and narrative writing",
+      "label_negative": "Human-driven cohesive narrative writing",
+      "bipolarity_complete": true,
+      "grounding_span": "my hesitation is that there's nuance that models might misapply"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI for benchtop chemistry automation",
+      "label_negative": "Human-performed benchtop chemistry",
+      "bipolarity_complete": true,
+      "grounding_span": "I would love for AI to perform benchtop chemistry on my behalf"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Research efficiency and time savings",
+      "grounding_span": "With larger sets it can take a while, and that's where I would have the model take a first pass"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Research integrity and accuracy",
+      "grounding_span": "If the model identifies specific papers or sets of papers I'll verify those first"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Cohesive scientific narrative",
+      "grounding_span": "to write a cohesive story requires constant recall of why each experiment was done"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Laboratory safety",
+      "grounding_span": "labs routinely contain hazardous materials"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Positive toward AI for high-volume literature review",
+      "valence": "positive",
+      "grounding_span": "With larger sets it can take a while, and that's where I would have the model take a first pass"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Positive toward AI for manuscript editing",
+      "valence": "positive",
+      "grounding_span": "ask the model to look for anything I may have missed, errors in style"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Hesitant toward AI for data interpretation",
+      "valence": "negative",
+      "grounding_span": "my hesitation is that there's nuance that models might misapply"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Aspirational toward AI for benchtop chemistry",
+      "valence": "positive",
+      "grounding_span": "I would love for AI to perform benchtop chemistry on my behalf"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Volume-driven selective delegation",
+      "grounding_span": "With relatively small sets of papers it doesn't take too long... With larger sets it can take a while"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Verification-oriented validation",
+      "grounding_span": "If the model identifies specific papers or sets of papers I'll verify those first"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,169 @@
+{
+  "transcript_id": "work_0065",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as time-saving tool",
+      "label_negative": "Manual time-consuming lesson planning",
+      "bipolarity_complete": true,
+      "grounding_span": "lesson plans taking only minutes instead of hours"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as supplement to creative process",
+      "label_negative": "AI as inadequate for embodied creative work",
+      "bipolarity_complete": true,
+      "grounding_span": "I collaborate. I will give it the constraints or parameters that I want and see what it generates"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI's ability to produce authentic voice",
+      "label_negative": "AI output sounding strange or cheesy",
+      "bipolarity_complete": true,
+      "grounding_span": "sometimes the verbiage sounds a bit strange"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI for social media content automation",
+      "label_negative": "AI generating cheesy captions",
+      "bipolarity_complete": true,
+      "grounding_span": "I get frustrated with getting captions for social media, as it usually comes back with very cheesy captions"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI naming suggestions quality",
+      "label_negative": "AI unable to generate dance movement",
+      "bipolarity_complete": true,
+      "grounding_span": "I do use it to help me with titles though"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "lesson plans taking only minutes instead of hours"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Creative authenticity and human expression",
+      "grounding_span": "I make some changes because sometimes the verbiage sounds a bit strange"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional identity and human creativity",
+      "grounding_span": "I have to choreograph a lot, so I like to handle that by myself"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for lesson creation",
+      "valence": "positive",
+      "grounding_span": "lesson plans taking only minutes instead of hours"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for captions",
+      "valence": "negative",
+      "grounding_span": "I get frustrated with getting captions for social media, as it usually comes back with very cheesy captions"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Preference for human choreography over AI",
+      "valence": "negative",
+      "grounding_span": "AI is not great at explaining or generating dance movement, so I do all of that"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "positive",
+      "grounding_span": "I am surprised daily with how much it is advancing"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement with limited back-and-forth",
+      "grounding_span": "I will give it the constraints or parameters that I want and see what it generates. Then I will alter it from there"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based boundary setting — clear separation of AI-appropriate vs. human-only tasks",
+      "grounding_span": "I have to choreograph a lot, so I like to handle that by myself"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

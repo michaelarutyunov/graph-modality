@@ -1,0 +1,182 @@
+{
+  "transcript_id": "work_0590",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as pair programmer for technical implementation",
+      "label_negative": "AI as unreliable implementer requiring oversight",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I will use it as a pair programmer to refine technical implementation details, then oversee and monitor its implementation"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI accuracy and up-to-date information",
+      "label_negative": "AI providing outdated or false information",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "the model will present information in the technical implementation plan that is simply not true"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as advanced research tool for business",
+      "label_negative": "AI as autonomous business planner",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I use it more as an advanced researching tool to determine market data/statistics and options for different approaches"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as delegation tool for hard skills",
+      "label_negative": "AI as skill replacement leading to dependency",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "The skills I am 'leasing out' to LLMs are things I am both confident in my ability to do on my own and comfortable with doing on my own if need be"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Trust in supervised AI vs unsupervised AI",
+      "label_negative": "Trust in unsupervised AI",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I do not currently trust agentic LLMs to handle tasks unsupervised"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "valence": null,
+      "grounding_span": "This is a way for me to save time and energy"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Business insight and strategic understanding",
+      "valence": null,
+      "grounding_span": "There are valuable business insights to be found in such things that would allow us to better align our services and products to our customers"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Control and ownership of work",
+      "valence": null,
+      "grounding_span": "I am the one driving the research, ideation and actual business"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Frustration with outdated technical suggestions",
+      "valence": "negative",
+      "grounding_span": "A strong gripe I have with coding-specific LLM's is that they do not have the habit of checking documentation"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI as delegation tool",
+      "valence": "positive",
+      "grounding_span": "This is a way for me to save time and energy"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Skepticism toward unsupervised AI",
+      "valence": "negative",
+      "grounding_span": "I do not currently trust agentic LLMs to handle tasks unsupervised"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Systematic triage of verification effort",
+      "valence": null,
+      "grounding_span": "With more abstract suggestions or business-crucial suggestions, I will check myself. I won't bother to check minor things"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic delegation with fallback confidence",
+      "valence": null,
+      "grounding_span": "I am a proficient coder on my own, and if that skill becomes dull and LLMs suddenly vanish, it would be a small and simple thing to simply relearn"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,174 @@
+{
+  "transcript_id": "work_0714",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as creative brainstorming partner",
+      "label_negative": "AI as unoriginal idea generator",
+      "bipolarity_complete": true,
+      "grounding_span": "I try and get it to think about 'out of the box' things"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as marketing and SEO optimizer",
+      "label_negative": "AI as irrelevant or low-quality suggestion provider",
+      "bipolarity_complete": true,
+      "grounding_span": "I also like to get feedback from AI on my listings and what kind of better tags I could implement for better SEO"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as collaborative iterative tool",
+      "label_negative": "AI as one-shot independent solution",
+      "bipolarity_complete": true,
+      "grounding_span": "I like to collaborate for sure. It rarely gets it right on the first try, so I have to tailor it a bit"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Human creative control over core product",
+      "label_negative": "AI-generated creative work",
+      "bipolarity_complete": true,
+      "grounding_span": "I like to do the actual designing of my listing photos and the transfers themselves, even though I could technically let an AI do it"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as tool vs. AI as overused low-quality producer",
+      "label_negative": "Overutilization of AI leading to low quality",
+      "bipolarity_complete": true,
+      "grounding_span": "There are some people who over utilize AI to an extent where the product is very low quality"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Business growth and sales",
+      "grounding_span": "I want to sell more"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Creative authenticity and quality",
+      "grounding_span": "I just don't think AI is capable of producing the same quality of work that I am"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and productivity",
+      "grounding_span": "It helps me with brainstorming too"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI's idea generation",
+      "valence": "positive",
+      "grounding_span": "For the most part I would say I end up satisfied with what it comes up with"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with obvious suggestions",
+      "valence": "negative",
+      "grounding_span": "Maybe when it was giving me a bunch of simple, obvious ideas that I already have"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Acceptance of AI as tool for business enhancement",
+      "valence": "positive",
+      "grounding_span": "I think most people see nothing wrong with using AI as a tool, like I do, to better my shop"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Resistance to AI in core creative work",
+      "valence": "negative",
+      "grounding_span": "I like to do the actual designing of my listing photos and the transfers themselves"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through back-and-forth",
+      "grounding_span": "I like to collaborate for sure. It rarely gets it right on the first try, so I have to tailor it a bit"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain boundary setting between creative and business tasks",
+      "grounding_span": "I like to do the actual designing of my listing photos and the transfers themselves, even though I could technically let an AI do it"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,175 @@
+{
+  "transcript_id": "work_0546",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as comprehension aid for unfamiliar topics",
+      "label_negative": "Independent struggle with technical material",
+      "bipolarity_complete": true,
+      "grounding_span": "use AI to help explain and break down some of the things I don't understand"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for repetitive simple tasks",
+      "label_negative": "Extended collaborative back-and-forth",
+      "bipolarity_complete": true,
+      "grounding_span": "I normally just ask a quick question and use the reply"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as skill development enabler",
+      "label_negative": "AI as complete task delegator undermining learning",
+      "bipolarity_complete": true,
+      "grounding_span": "I will try and figure it out myself so that I can learn better"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI use sanctioned by workplace",
+      "label_negative": "Unsanctioned or discouraged AI use",
+      "bipolarity_complete": true,
+      "grounding_span": "My company is pushing for AI to be used in the workplace"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as tone checker for professional communication",
+      "label_negative": "Self-crafted communication without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I use it quite often to make my emails sound better"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Epistemic accuracy and understanding",
+      "grounding_span": "help explain and break down some of the things I don't understand"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "finished that part of the site very quickly"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Personal autonomy and skill preservation",
+      "grounding_span": "I will try to solve problems myself if I have the time"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Effective professional communication",
+      "grounding_span": "make my emails sound better, either more professional or more friendly"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "finished that part of the site very quickly, which was nice"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Intentional self-reliance for learning",
+      "valence": "positive",
+      "grounding_span": "I will try and figure it out myself so that I can learn better"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with workplace AI encouragement",
+      "valence": "positive",
+      "grounding_span": "I feel more comfortable using it for lots of questions"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Preference for AI on simple tasks only",
+      "valence": "positive",
+      "grounding_span": "I will mainly use AI for more complicated things"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative problem-solving — start simple, escalate if needed",
+      "grounding_span": "I normally just ask it a basic question about what I'm doing and try to do the rest myself, if I can't I will then ask AI to do more"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Intentional learning prioritization — deliberate self-reliance for skill building",
+      "grounding_span": "I will try to solve problems myself if I have the time or it is not very complicated, so I can learn or maintain my skills"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

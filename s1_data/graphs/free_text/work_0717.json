@@ -1,0 +1,213 @@
+{
+  "transcript_id": "work_0717",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as professional writing editor",
+      "label_negative": "AI as unreliable editor requiring micromanagement",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI to review and edit professional writing like emails and proposals"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as creative brainstorming partner",
+      "label_negative": "AI as uncreative or irrelevant idea generator",
+      "bipolarity_complete": true,
+      "grounding_span": "look for ideas - appropriate images for training content that may more creatively represent the concepts"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as knowledge verifier for terminology and models",
+      "label_negative": "AI as source of mixed or incorrect information",
+      "bipolarity_complete": true,
+      "grounding_span": "If I'm unsure about definitions or models, I confirm with AI"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as first draft creator",
+      "label_negative": "AI as untrustworthy first draft generator requiring full fact-check",
+      "bipolarity_complete": true,
+      "grounding_span": "I would like to be able to use it more for creating 1st drafts as that is time-consuming, but would have to trust it more"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI consistency and reliability in iterative editing",
+      "label_negative": "AI inconsistency and regression in editing",
+      "bipolarity_complete": true,
+      "grounding_span": "the model re-edits its own work again with reason - sometimes reverting to my original draft as if it was an improvement"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI adherence to user instructions",
+      "label_negative": "AI deviation from user instructions",
+      "bipolarity_complete": true,
+      "grounding_span": "The model provided data that did not incorporate that costs as requested"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional credibility and accuracy",
+      "grounding_span": "I am an expert but don't want to lose credibility by slipping up because I'm tired or distracted"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Creative expression and engagement",
+      "grounding_span": "I received a lot of compliments for making the content more interesting than the blue and white technical stock images"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "This save me so much time sifting through thousands of stock images"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Personal style and autonomy",
+      "grounding_span": "I have a personal style of writing training materials and delivering them that is distinct from the standard approach"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI for creative image ideas",
+      "valence": "positive",
+      "grounding_span": "This save me so much time sifting through thousands of stock images and I received a lot of compliments"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with AI inconsistency in editing",
+      "valence": "negative",
+      "grounding_span": "What frustrates me most is when we go back and forth and AI makes edits, I make a new request about the same material, and the model re-edits its own work again with reason - sometimes reverting to my original draft"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Frustration with AI not following instructions",
+      "valence": "negative",
+      "grounding_span": "The model provided data that did not incorporate that costs as requested. I asked for correction - it acknowledged it had messed up - then provided the exact same table of data"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Cautious optimism about AI for first drafts",
+      "valence": "ambivalent",
+      "grounding_span": "I would like to be able to use it more for creating 1st drafts as that is time-consuming, but would have to trust it more"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through precise prompting",
+      "grounding_span": "I think I am getting better at it - wording question and giving more precise directions to get what I need in fewer rounds"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Preference for maintaining authorial control over initial drafts",
+      "grounding_span": "I generally write the first draft of everything and then ask AI for help editing"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

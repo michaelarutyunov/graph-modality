@@ -1,0 +1,157 @@
+{
+  "transcript_id": "work_0634",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI for routine programming tasks",
+      "label_negative": "AI for specialized bioinformatics tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "asking it to generate boilerplate code such as that of getting a scRNA integration pathway setup"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as quick lookup tool",
+      "label_negative": "AI as deep analytical partner",
+      "bipolarity_complete": true,
+      "grounding_span": "to quickly look up a command or syntax"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI accuracy for well-known tools",
+      "label_negative": "AI hallucination for niche tools",
+      "bipolarity_complete": true,
+      "grounding_span": "AI can be very helpful in asking it about documentation of some of the well known tools"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Data privacy boundary",
+      "label_negative": "Unrestricted data sharing with AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I mostly choose to not feed AI any private data"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as time saver for mundane tasks",
+      "label_negative": "AI as unreliable for critical tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "using it intermittedly for short, mundane, or repetitive tasks, or to save time"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "to save time"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Data security and confidentiality",
+      "grounding_span": "both for privacy and accuracy concerns"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Domain expertise and accuracy",
+      "grounding_span": "AI still is not quite accurate for bioinformatic tasks"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for documentation lookup",
+      "valence": "positive",
+      "grounding_span": "AI can be very helpful in asking it about documentation of some of the well known tools"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI hallucination",
+      "valence": "negative",
+      "grounding_span": "the responses it provided were quite off- hallucinating I would say"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Cautious optimism about future integration",
+      "valence": "ambivalent",
+      "grounding_span": "the chance of increasing the extent of relationship is quite limited until then"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative back-and-forth with AI but with limits",
+      "grounding_span": "I do go a bit back and forth with it; however, I also modify the code or use a lot of my own code"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-specific boundary setting",
+      "grounding_span": "I mostly choose to not feed AI any private data"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

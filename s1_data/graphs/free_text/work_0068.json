@@ -1,0 +1,191 @@
+{
+  "transcript_id": "work_0068",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as writing and correspondence aid",
+      "label_negative": "Manual writing without AI assistance",
+      "bipolarity_complete": true,
+      "grounding_span": "I use it predominantly for help writing emails"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as quick information lookup tool",
+      "label_negative": "Traditional research methods without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I'll ask for help calculating a student's grade or current events"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI efficiency in image search",
+      "label_negative": "Manual image search",
+      "bipolarity_complete": true,
+      "grounding_span": "using AI to find images is too slow if you don't have a paid subscription"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as tone and style enhancer",
+      "label_negative": "AI misrepresenting intended tone",
+      "bipolarity_complete": true,
+      "grounding_span": "I write it and then I ask AI to spruce it up a bit"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI understanding of specific needs",
+      "label_negative": "AI misunderstanding or failing to find desired tool",
+      "bipolarity_complete": true,
+      "grounding_span": "It kept directing me to either and EZ grader, which is not what I want"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI reliance and cognitive engagement",
+      "label_negative": "Over-reliance on AI leading to mental disuse",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't want to stop using my brain"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI grading of open-ended assignments",
+      "label_negative": "Manual grading of open-ended assignments",
+      "bipolarity_complete": true,
+      "grounding_span": "It wouldn't be awful if I could upload assignments for it to grade"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and time-saving",
+      "grounding_span": "It has made email writing and other correspondence so incredibly easy"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Effective communication with intended tone",
+      "grounding_span": "the email comes across to the recipient in the way I intend"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Cognitive engagement and mental sharpness",
+      "grounding_span": "I don't want to stop using my brain"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Workload reduction in grading",
+      "grounding_span": "It wouldn't be awful if I could upload assignments for it to grade"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI for email and correspondence",
+      "valence": "positive",
+      "grounding_span": "It has made email writing and other correspondence so incredibly easy"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Frustration with AI's inability to find specific tool",
+      "valence": "negative",
+      "grounding_span": "It kept directing me to either and EZ grader, which is not what I want"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Concern about over-reliance on AI",
+      "valence": "negative",
+      "grounding_span": "I hope I don't get too reliant on it"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Optimism about AI grading open-ended assignments",
+      "valence": "positive",
+      "grounding_span": "It wouldn't be awful if I could upload assignments for it to grade"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement — writes draft then asks AI to enhance",
+      "grounding_span": "I write it and then I ask AI to spruce it up a bit"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic tool selection — switches to manual when AI is inefficient",
+      "grounding_span": "I will image search on my own"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

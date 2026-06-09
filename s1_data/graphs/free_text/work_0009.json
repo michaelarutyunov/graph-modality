@@ -1,0 +1,179 @@
+{
+  "transcript_id": "work_0009",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI summary accuracy",
+      "label_negative": "AI summary inaccuracy",
+      "bipolarity_complete": true,
+      "grounding_span": "the outputs are not always accurate"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI research reliability",
+      "label_negative": "AI research unreliability",
+      "bipolarity_complete": true,
+      "grounding_span": "continual inaccuracies I've experienced with it"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as time-saving tool",
+      "label_negative": "AI as time-wasting distraction",
+      "bipolarity_complete": true,
+      "grounding_span": "incredibly helpful in trying to piece together why a customer may have been given wrong information"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Personal expertise and self-reliance",
+      "label_negative": "Over-reliance on AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I still pride myself on my ability to find my own answers"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI integration in workplace",
+      "label_negative": "Resistance to AI integration",
+      "bipolarity_complete": true,
+      "grounding_span": "the AI has been introduced has influenced me to try to use it more"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Customer service accuracy",
+      "grounding_span": "I pride myself on giving correct information to customers"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and productivity",
+      "grounding_span": "incredibly helpful in trying to piece together why a customer may have been given wrong information"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional competence and reputation",
+      "grounding_span": "I'm well-known at my job for being able to find answers"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI summaries",
+      "valence": "positive",
+      "grounding_span": "The call summaries have been very satisfying"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with research AI",
+      "valence": "negative",
+      "grounding_span": "My frustration has been more with the research AI"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Skepticism toward AI accuracy",
+      "valence": "negative",
+      "grounding_span": "I feel I'm personally more skeptical than many others of the AI's information"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Openness to future AI use",
+      "valence": "positive",
+      "grounding_span": "I'm hopeful at least some of it will prove useful"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Verification-oriented — double-checks AI outputs",
+      "grounding_span": "I have gone back and checked my own, which is how I'm aware they are not accurate"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Preference for direct source over AI mediation",
+      "grounding_span": "I would much rather just go to the source"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

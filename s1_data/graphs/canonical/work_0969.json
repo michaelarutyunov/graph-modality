@@ -1,0 +1,149 @@
+{
+  "transcript_id": "work_0969",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as time-saving tool",
+      "label_negative": "AI as full reliance or autonomous decision-maker",
+      "bipolarity_complete": true,
+      "grounding_span": "I generally see it more as an assistant and time-saving tool rather than relying on it fully"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as brainstorming and idea generator",
+      "label_negative": "AI as sole creative originator",
+      "bipolarity_complete": true,
+      "grounding_span": "I may use the AI if i get stuck, say with a particular ingredient I'm not sure what to do with"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Human oversight and decision-making",
+      "label_negative": "Unchecked AI delegation for critical tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I will always check things afterwards for rosters or important ordering"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as complement to human-centered work",
+      "label_negative": "AI replacement of human sensory and creative skills",
+      "bipolarity_complete": true,
+      "grounding_span": "Given the reliance on physical human skills as well as creativity, I can't see any threat from AI in the near future"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "extremely useful in saving time and helping to streamline more mundane tasks"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative autonomy",
+      "grounding_span": "I prefer to be able to develop the creative process myself"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Reliability and correctness",
+      "grounding_span": "I need to be responsible for the task and check it personally myself"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Resistance to AI in creative work",
+      "valence": "positive",
+      "grounding_span": "The ability for the AI to make some suggestions or find other peoples uses of the ingredients that I would not have immediately though of was extremely helpful"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Contentment with current AI use",
+      "valence": "positive",
+      "grounding_span": "For the time being I am pretty happy with the approach I have, AI works well for me as a collaborative tool"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Confidence in human creative superiority",
+      "valence": "positive",
+      "grounding_span": "I can't see any threat from AI in the near future"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based boundary setting — clear separation of AI-appropriate vs. human-only tasks",
+      "grounding_span": "I feel pretty comfortable with using the AI for jobs that are more administrative, although I will always check things afterwards"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Situational flexibility — adapts AI use based on creative need",
+      "grounding_span": "It can vary a lot depending on the needs I have"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

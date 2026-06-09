@@ -1,0 +1,182 @@
+{
+  "transcript_id": "work_0607",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative coding partner",
+      "label_negative": "AI as independent task executor",
+      "bipolarity_complete": true,
+      "grounding_span": "Usually, I'm collaborating. I'll start by providing the context of the app and what I already did, then I'll explain what I need to do"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for complex/hard tasks",
+      "label_negative": "AI for simple tasks it often misses",
+      "bipolarity_complete": true,
+      "grounding_span": "I prefer to hand over to the AI everything that it can do, and I prefer to be more focused on the harder parts or on the simple tasks that the AI often misses"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI debugging effectiveness",
+      "label_negative": "AI debugging frustration and loops",
+      "bipolarity_complete": true,
+      "grounding_span": "I get frustrated when I ask the AI for debugging and it provides solutions that are not working for me"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI integration with existing codebase",
+      "label_negative": "AI lack of full context causing mismatches",
+      "bipolarity_complete": true,
+      "grounding_span": "the AI lacks the full context of your entire codebase, so it makes assumptions about imports, function names"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as productivity booster",
+      "label_negative": "AI as threat to skills",
+      "bipolarity_complete": true,
+      "grounding_span": "As the AI evolves, I'm going to use it more to improve my productivity"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI expertise as career strategy",
+      "label_negative": "Traditional skill maintenance",
+      "bipolarity_complete": true,
+      "grounding_span": "I'm improving my skills on the AI side, how the AI works, how can I use it and so on"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "improve my productivity"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional growth and future-proofing",
+      "grounding_span": "if the AI is going to do my actual tasks I'm going to learn how to use the AI in ways that few people know"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Problem-solving and debugging success",
+      "grounding_span": "I was looking for a bug and I didn't know how to fix it"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with collaborative workflow",
+      "valence": "positive",
+      "grounding_span": "Usually, I'm collaborating. I'll start by providing the context of the app and what I already did"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with debugging loops",
+      "valence": "negative",
+      "grounding_span": "I get frustrated when I ask the AI for debugging and it provides solutions that are not working for me"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Optimism about future AI use",
+      "valence": "positive",
+      "grounding_span": "As the AI evolves, I'm going to use it more to improve my productivity"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Strategic embrace of AI expertise",
+      "valence": "positive",
+      "grounding_span": "I'm improving my skills on the AI side, how the AI works, how can I use it and so on"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative iterative problem-solving",
+      "grounding_span": "I'll start by providing the context of the app and what I already did, then I'll explain what I need to do"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic skill positioning",
+      "grounding_span": "I'm improving my skills on the AI side, how the AI works, how can I use it and so on"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

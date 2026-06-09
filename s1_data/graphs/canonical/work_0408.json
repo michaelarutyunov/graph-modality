@@ -1,0 +1,182 @@
+{
+  "transcript_id": "work_0408",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as efficiency tool for content creation",
+      "label_negative": "Manual content creation without AI assistance",
+      "bipolarity_complete": true,
+      "grounding_span": "use AI often for content creation- to summarize, write content, optimize writing, proof read, and to generate ideas"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI errors in math and forecasting",
+      "bipolarity_complete": true,
+      "grounding_span": "there are often errors in the math"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as collaborator for iterative refinement",
+      "label_negative": "AI as fully autonomous task completer",
+      "bipolarity_complete": true,
+      "grounding_span": "I am more likely to collaborate with it through a task, I've never been able to completely delegate the full task to AI"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Human finalization and personalization of AI outputs",
+      "label_negative": "Unedited AI-generated content",
+      "bipolarity_complete": true,
+      "grounding_span": "I prefer to finalize wording or the order of completing things myself"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as productivity enhancer",
+      "label_negative": "Procrastination without AI assistance",
+      "bipolarity_complete": true,
+      "grounding_span": "It took a task I was avoiding and gave me a full plan to start with"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI for mental load reduction",
+      "label_negative": "Manual task management without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I would love AI to help me streamline my life. Making it easier to get away from the mundane tasks"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and efficient task completion",
+      "grounding_span": "I was able to spend a few hours, create the content and schedule it all to be posted during the week"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Authenticity and personal touch",
+      "grounding_span": "changing some of the language or speech patterns to sound more like myself"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Personal well-being and reduced cognitive load",
+      "grounding_span": "It reduces the mental load"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for content creation",
+      "valence": "positive",
+      "grounding_span": "It felt satisfying to get it checked off after avoiding the task for months"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI errors",
+      "valence": "negative",
+      "grounding_span": "The calculations are sometimes wrong, so having to double check or verify. This ends up taking too much time"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Preference for human finalization",
+      "valence": "positive",
+      "grounding_span": "I prefer to finalize wording or the order of completing things myself"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Optimism about AI as future personal assistant",
+      "valence": "positive",
+      "grounding_span": "I would like to ideally have it be more integrated as an assistant"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative iterative refinement — works back and forth with AI",
+      "grounding_span": "start the task with a 'brain dump'... then add in revisions... then maybe revise a bit more"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic skill differentiation — focuses on human strengths",
+      "grounding_span": "It will force me to really focus on the things that AI may not be able to take over"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

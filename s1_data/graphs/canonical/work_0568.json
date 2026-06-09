@@ -1,0 +1,157 @@
+{
+  "transcript_id": "work_0568",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as conversational partner for reflection",
+      "label_negative": "AI as real-time intervention tool",
+      "bipolarity_complete": true,
+      "grounding_span": "Usually, it is after the fact, upon reflecting on the behavior, I will look up strategies for future handling of those events."
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI ability to provide hard-to-find information",
+      "label_negative": "AI as insufficient or generic information source",
+      "bipolarity_complete": true,
+      "grounding_span": "I chatted with AI to discover typical needs for children who have this condition, so that I might better prepare myself for their mental and physical needs."
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as efficient initial response provider with refinement",
+      "label_negative": "AI as requiring extensive back-and-forth to get useful output",
+      "bipolarity_complete": true,
+      "grounding_span": "I tend to do the ladder, present a situation then let it provide a complete response, though I do tend to refine and after the initial complete response."
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI for documentation efficiency",
+      "label_negative": "AI unsuitability for nuanced student interaction",
+      "bipolarity_complete": true,
+      "grounding_span": "I think it could be beneficial for SPED teachers to help with the plethora of forms and documentation that needs to be worked through regarding these students, like IEP forms and the like."
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI requiring context explanation",
+      "label_negative": "AI usefulness without full context",
+      "bipolarity_complete": true,
+      "grounding_span": "Some instances are too intricate to fully explain in an efficient, yet thorough way, so I would tend to use my training or ask coworkers for support."
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Student well-being and mental health",
+      "grounding_span": "to better care for our autistic or differently abled students, to understand their needs or behaviors."
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional competence",
+      "grounding_span": "so that I might better prepare myself for their mental and physical needs."
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Productivity and efficient task completion",
+      "grounding_span": "I tend to do the ladder, present a situation then let it provide a complete response"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for preparing for new student with unfamiliar condition",
+      "valence": "positive",
+      "grounding_span": "I found it fairly beneficial because I was given specific information not only about the condition itself but also things to consider when a child with this condition is in a school setting."
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Preference for human control over final decisions",
+      "valence": "negative",
+      "grounding_span": "Some instances are too intricate to fully explain in an efficient, yet thorough way, so I would tend to use my training or ask coworkers for support."
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Openness to AI for administrative tasks for SPED teachers",
+      "valence": "positive",
+      "grounding_span": "I think it could be beneficial for SPED teachers to help with the plethora of forms and documentation"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Reflective after-action analysis — learns from past situations",
+      "grounding_span": "Usually, it is after the fact, upon reflecting on the behavior, I will look up strategies for future handling of those events."
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Contextual detail orientation — provides comprehensive situational description before seeking input",
+      "grounding_span": "I usually try to describe the things that led up to the behavior, the environment in which it happened, or describe when I might typically see such a behavior."
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

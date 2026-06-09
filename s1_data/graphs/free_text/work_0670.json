@@ -1,0 +1,169 @@
+{
+  "transcript_id": "work_0670",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as learning accelerator for software",
+      "label_negative": "Manual learning through documentation",
+      "bipolarity_complete": true,
+      "grounding_span": "AI was a saviour for me here because it meant I didn't have to spend hours trawling tediously through documentation"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as proofreading assistant",
+      "label_negative": "Manual proofreading without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "act as a 'second pair of eyes' when proofreading texts"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as co-pilot under human control",
+      "label_negative": "AI as autonomous decision-maker",
+      "bipolarity_complete": true,
+      "grounding_span": "I am in charge, and I want it to stay that way"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI use in creative tasks",
+      "label_negative": "Human-only creative process",
+      "bipolarity_complete": true,
+      "grounding_span": "I will avoid using AI when it comes to the more creative aspects of my work"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI delegation of boring tasks",
+      "label_negative": "Human performance of boring tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I actually relish the idea of AI taking over the boring tasks"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and time saving",
+      "grounding_span": "cuts down on wasted time"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Human autonomy and control",
+      "grounding_span": "humans retain the power to make executive decisions"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Human creativity and originality",
+      "grounding_span": "I value human creativity above AI 'creativity'"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI as learning tool",
+      "valence": "positive",
+      "grounding_span": "AI was a saviour for me here"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Resistance to AI in creative tasks",
+      "valence": "negative",
+      "grounding_span": "I will avoid using AI when it comes to the more creative aspects of my work"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Enthusiasm for AI taking over boring tasks",
+      "valence": "positive",
+      "grounding_span": "I actually relish the idea of AI taking over the boring tasks"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Excitement about future AI delegation",
+      "valence": "positive",
+      "grounding_span": "I'm excited by the possibilities"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Deliberate creative incubation before collaboration",
+      "grounding_span": "First of all it's important to splurge my own creative ideas down onto page before I get any outside input"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Goal-oriented problem decomposition",
+      "grounding_span": "I'll have a specific goal in mind"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n4",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

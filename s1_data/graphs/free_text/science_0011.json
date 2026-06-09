@@ -1,0 +1,143 @@
+{
+  "transcript_id": "science_0011",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as rapid iteration starter for code and data tasks",
+      "label_negative": "Traditional slower manual iteration",
+      "bipolarity_complete": true,
+      "grounding_span": "AI to help clean data and also to build a basic skeleton of each model as a guiding hand"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability for data cleaning and filtering",
+      "label_negative": "AI unreliability requiring spot-checking",
+      "bipolarity_complete": true,
+      "grounding_span": "We would spot check the cleaned data to ensure it was not jargon"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI capability for critical analysis and drawing conclusions",
+      "label_negative": "AI inability to draw in-depth conclusions",
+      "bipolarity_complete": true,
+      "grounding_span": "AI was not able to draw the same in depth conclusions about the picture the statistics painted"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as a starting template requiring human customization",
+      "label_negative": "AI as a fully autonomous solution",
+      "bipolarity_complete": true,
+      "grounding_span": "For the skeleton we used it as baseline, it needed adjustments to tailor it to what we needed"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Efficiency and speed in research iteration",
+      "grounding_span": "allows you to see an overview of all potentially required sections quicker"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Research integrity and accurate conclusions",
+      "grounding_span": "drawing proper conclusions based on stats"
+    },
+    {
+      "id": "n7",
+      "type": "Stance",
+      "label": "Positive view of AI as a starting point for code and data tasks",
+      "valence": "positive",
+      "grounding_span": "We used AI because we believed it to be a great starting point for code we were writing"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Negative view of AI for critical analysis and conclusions",
+      "valence": "negative",
+      "grounding_span": "AI was not able to draw the same in depth conclusions about the picture the statistics painted"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Cautious trust requiring verification for AI outputs",
+      "valence": "ambivalent",
+      "grounding_span": "We would spot check the cleaned data to ensure it was not jargon"
+    },
+    {
+      "id": "n10",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative prototyping — uses AI to quickly see overview and iterate",
+      "grounding_span": "allows you to see an overview of all potentially required sections quicker, thus allowing you to see what is missing or needs improvement"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Verification-oriented — spot-checks and adjusts AI outputs",
+      "grounding_span": "We would spot check the cleaned data to ensure it was not jargon"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n8",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n10",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

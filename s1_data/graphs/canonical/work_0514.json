@@ -1,0 +1,257 @@
+{
+  "transcript_id": "work_0514",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as supplement to creative process",
+      "label_negative": "Manual execution of routine creative tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "brainstorming for ideas on social posts and hashtags, or writing descriptions of properties for sale"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as writing assistant for drafting",
+      "label_negative": "AI for personalized emails",
+      "bipolarity_complete": true,
+      "grounding_span": "I request help with drafting longer communications but still write all individual emails myself"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for language translation",
+      "label_negative": "Manual translation",
+      "bipolarity_complete": true,
+      "grounding_span": "I also use AI regularly to speed up translations"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as tool for generating visual and video elements",
+      "label_negative": "Self-created visuals",
+      "bipolarity_complete": true,
+      "grounding_span": "I usually create all my own visuals as I have not mastered using AI for creating visual content"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI reliability for tangible item attributes",
+      "label_negative": "AI hallucination risk",
+      "bipolarity_complete": true,
+      "grounding_span": "out of fear of AI hallucination when it comes to more sensitive material"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as independent delegate",
+      "bipolarity_complete": true,
+      "grounding_span": "I consider this collaborative work"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI as tool requiring human oversight",
+      "label_negative": "Unchecked AI outputs",
+      "bipolarity_complete": true,
+      "grounding_span": "I also perform all my own editing when I outsource written content to AI"
+    },
+    {
+      "id": "n8",
+      "type": "Construct",
+      "label": "AI use for efficiency in learning and planning",
+      "label_negative": "AI replacing human roles",
+      "bipolarity_complete": true,
+      "grounding_span": "I feel particularly satisfied when I get tasks done quicker with AI and have more time for research and learning"
+    },
+    {
+      "id": "n9",
+      "type": "Construct",
+      "label": "Human as operator in AI collaboration",
+      "label_negative": "AI replacing human entirely",
+      "bipolarity_complete": true,
+      "grounding_span": "I still feel like I'm in the driver seat"
+    },
+    {
+      "id": "n10",
+      "type": "Construct",
+      "label": "Intellectual property protection when using AI",
+      "label_negative": "Uncertain IP ownership",
+      "bipolarity_complete": true,
+      "grounding_span": "how would I know if the company behind the AI that helps me develop it would not have some claims to it"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Authenticity and personal integrity",
+      "grounding_span": "Client and colleague emails sound more authentic when written by humans"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Accuracy and reliability",
+      "grounding_span": "the quality was subpar"
+    },
+    {
+      "id": "n13",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "get tasks done quicker with AI"
+    },
+    {
+      "id": "n14",
+      "type": "Value",
+      "label": "Professional accountability",
+      "grounding_span": "Accountability in property descriptions is huge"
+    },
+    {
+      "id": "n15",
+      "type": "Value",
+      "label": "Creative autonomy",
+      "grounding_span": "my ideas can come to life with a skilled AI much faster"
+    },
+    {
+      "id": "n16",
+      "type": "Value",
+      "label": "Personal intellectual ownership",
+      "grounding_span": "the subject of intellectual property"
+    },
+    {
+      "id": "n17",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "I feel particularly satisfied when I get tasks done quicker with AI"
+    },
+    {
+      "id": "n18",
+      "type": "Stance",
+      "label": "Frustration with AI hallucination",
+      "valence": "negative",
+      "grounding_span": "out of fear of AI hallucination when it comes to more sensitive material"
+    },
+    {
+      "id": "n19",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "positive",
+      "grounding_span": "Maybe the future is that of dual human/AI collabs where humans are the operators"
+    },
+    {
+      "id": "n20",
+      "type": "Stance",
+      "label": "Concern about IP ownership",
+      "valence": "negative",
+      "grounding_span": "how would I know if the company behind the AI... would not have some claims to it"
+    },
+    {
+      "id": "n21",
+      "type": "CognitiveStyleMarker",
+      "label": "Task-dependent collaboration style",
+      "grounding_span": "It really depends on the task"
+    },
+    {
+      "id": "n22",
+      "type": "CognitiveStyleMarker",
+      "label": "Systematic verification through source checking",
+      "grounding_span": "I also perform all my own editing when I outsource written content to AI"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n14",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n15",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n13",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n15",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n16",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n17",
+      "target": "n8",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n18",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n19",
+      "target": "n9",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n20",
+      "target": "n10",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n6",
+      "target": "n21",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n7",
+      "target": "n22",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n8",
+      "target": "n9",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

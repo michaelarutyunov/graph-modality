@@ -1,0 +1,198 @@
+{
+  "transcript_id": "work_0683",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as time-saving efficiency tool for grunt work",
+      "label_negative": "AI as unnecessary for tasks I can do quickly myself",
+      "bipolarity_complete": true,
+      "grounding_span": "it saves me an hour or so every month"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as creative brainstorming partner",
+      "label_negative": "AI as threat to creative impulse",
+      "bipolarity_complete": true,
+      "grounding_span": "whether my creative impulse will be dulled"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability and accuracy",
+      "label_negative": "AI unreliability requiring verification",
+      "bipolarity_complete": true,
+      "grounding_span": "if things look weird, I'll double check using a regular web search"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI use visibility and workplace perception",
+      "label_negative": "AI use hidden to maintain creative credit",
+      "bipolarity_complete": true,
+      "grounding_span": "I'd prefer that they not know I'm using AI for half the things I do"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as social interaction enhancer",
+      "label_negative": "AI replacing human social skills",
+      "bipolarity_complete": true,
+      "grounding_span": "most of my skills have to do with running the events and activities; it's social, human-to-human interaction. AI can't replace that"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Professional efficiency and time savings",
+      "grounding_span": "it saves me an hour or so every month"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Creative autonomy and personal expression",
+      "grounding_span": "whether my creative impulse will be dulled"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Epistemic trust and accuracy",
+      "grounding_span": "if things look weird, I'll double check using a regular web search"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Social recognition and professional reputation",
+      "grounding_span": "being able to use it makes me look smart"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Human connection and social skills",
+      "grounding_span": "most of my skills have to do with running the events and activities; it's social, human-to-human interaction"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI for efficiency gains",
+      "valence": "positive",
+      "grounding_span": "it saves me an hour or so every month"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Concern about AI dulling creativity",
+      "valence": "negative",
+      "grounding_span": "whether my creative impulse will be dulled"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Cautious trust with verification",
+      "valence": "ambivalent",
+      "grounding_span": "if things look weird, I'll double check using a regular web search"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Selective disclosure of AI use for credit",
+      "valence": "mixed",
+      "grounding_span": "I'd prefer that they not know I'm using AI for half the things I do"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Confidence in irreplaceability of social skills",
+      "valence": "positive",
+      "grounding_span": "most of my skills have to do with running the events and activities; it's social, human-to-human interaction. AI can't replace that"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic cost-benefit analysis of AI use",
+      "grounding_span": "If I have to feed AI a lot of background info, it's probably not worth the time"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based selective disclosure and credit management",
+      "grounding_span": "I'd prefer that they not know I'm using AI for half the things I do"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

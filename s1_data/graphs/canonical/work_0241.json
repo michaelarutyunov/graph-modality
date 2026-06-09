@@ -1,0 +1,179 @@
+{
+  "transcript_id": "work_0241",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as brainstorming and idea generator",
+      "label_negative": "AI as impractical idea generator due to lack of real-world constraints",
+      "bipolarity_complete": true,
+      "grounding_span": "it often comes up with stuff that's impossible, either from a budgetary or logistical or other standpoint"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as tool for visual innovation in pitch decks",
+      "label_negative": "Manual pitch deck creation without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I use it to create pitch presentations, both for brainstorming the language of the pitch and for creating the images"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as competitive advantage",
+      "label_negative": "AI as threat to jobs and industry norms",
+      "bipolarity_complete": true,
+      "grounding_span": "my competition is probably using it, so why hold myself back by not taking advantage of it?"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Preserving personal creative ownership of core game rules",
+      "label_negative": "Delegating core creative conception to AI",
+      "bipolarity_complete": true,
+      "grounding_span": "i generally like to conceive the basic rules of the game myself. it almost takes some of the fun out of it if i let AI figure that part out"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as tool for visual innovation in pitch decks",
+      "label_negative": "Static traditional pitch deck visuals",
+      "bipolarity_complete": true,
+      "grounding_span": "I sometimes use AI to put motion of what I would have formally presented as still images"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative satisfaction and enjoyment",
+      "grounding_span": "that made me feel great. I felt not only creative, but a bit like a pioneer, and I think that boosted my reputation"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and speed in work",
+      "grounding_span": "it's much faster, in that AI will generally offer 5 or more different ways to potentially go in an instant"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Creative autonomy",
+      "grounding_span": "I don't want to get to the point that I'm incapable of generating an original thought or two on my own"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Pride in being an AI pioneer and helping colleagues",
+      "valence": "positive",
+      "grounding_span": "the initial response to my pitch decks with AI was really positive -- almost disbelieving -- and that made me feel great"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Resistance to over-reliance on AI",
+      "valence": "negative",
+      "grounding_span": "Becoming too dependent is definitely a concern"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Pragmatic acceptance of AI as a tool",
+      "valence": "mixed",
+      "grounding_span": "my competition is probably using it, so why hold myself back by not taking advantage of it?"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with AI's impractical suggestions",
+      "valence": "negative",
+      "grounding_span": "it often comes up with stuff that's impossible"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through friction points",
+      "grounding_span": "I'll then go slide by slide and have it help me correct and/or punch up the language"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Selective delegation — preserves core creative tasks for self",
+      "grounding_span": "i generally like to conceive the basic rules of the game myself"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

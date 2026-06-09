@@ -1,0 +1,179 @@
+{
+  "transcript_id": "work_0303",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative assistant in creative planning",
+      "label_negative": "AI as inefficient replacement for expert judgment",
+      "bipolarity_complete": true,
+      "grounding_span": "AI has been great in assisting me with coming up with creative and unique assignments"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as augmentative tool in writing process",
+      "label_negative": "AI as replacement for student work",
+      "bipolarity_complete": true,
+      "grounding_span": "show them how AI can be used at each step in the process to augment and assist their work, not replace it"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as resource expander for course planning",
+      "label_negative": "Limited personal knowledge without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "gained access to dozens of stories, movies, and novels that I would not have known about otherwise"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as time-waster for tasks requiring precise phrasing",
+      "label_negative": "AI as efficient shortcut for routine tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I find if I use AI for that, I often have to revise enough to get what I'm looking for, that it wasn't worth the time"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as future co-pilot in classroom",
+      "label_negative": "AI as threat to human teacher role",
+      "bipolarity_complete": true,
+      "grounding_span": "AI co-pilots in the classroom assisting teachers with their classes"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative and effective teaching",
+      "grounding_span": "helped immensely with planning my course"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Student development and human connection",
+      "grounding_span": "students need the guidance of people in the real world with whom they can build trusting relationships"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "it's often faster for me to write up what I'm looking for"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI in creative planning",
+      "valence": "positive",
+      "grounding_span": "I have been particularly pleased with its efforts in helping prepare for classes"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI for precise writing tasks",
+      "valence": "negative",
+      "grounding_span": "I find if I use AI for that, I often have to revise enough to get what I'm looking for, that it wasn't worth the time"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Optimism about AI's future in education",
+      "valence": "positive",
+      "grounding_span": "I'm excited about the future of AI and what it has to offer education"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Confidence in irreplaceable human elements",
+      "valence": "positive",
+      "grounding_span": "AI will not change that aspect of education"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative and iterative approach — prefers working with AI rather than delegating",
+      "grounding_span": "I by far prefer collaboration"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Proactive leadership and policy shaping — takes initiative in guiding AI integration",
+      "grounding_span": "I'm the head of the AI Board at our school, and in charge of training other teachers"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

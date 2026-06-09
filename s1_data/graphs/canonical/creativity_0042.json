@@ -1,0 +1,273 @@
+{
+  "transcript_id": "creativity_0042",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as time-saving tool",
+      "label_negative": "Manual time-consuming editing",
+      "bipolarity_complete": true,
+      "grounding_span": "Editing has been so much easier to do and takes way less time now that AI has taken over a big chunk of that"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as skill development enabler",
+      "label_negative": "Traditional learning via YouTube videos",
+      "bipolarity_complete": true,
+      "grounding_span": "I needed the help of AI to learn how to do so without having to go through multiple YouTube videos"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for communication tasks",
+      "label_negative": "Manual email campaign creation",
+      "bipolarity_complete": true,
+      "grounding_span": "I have AI help me make email campaigns to reach out to possible clients"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI's seamless object removal and replacement",
+      "label_negative": "Manual object removal with imperfect results",
+      "bipolarity_complete": true,
+      "grounding_span": "AI has helped with that process in that it removes, AND adds in background based on the surrounding image and it looks seamless"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Human control over creative decisions",
+      "label_negative": "AI taking over creative decisions",
+      "bipolarity_complete": true,
+      "grounding_span": "Initially, its me who drives what exactly I want to be removed, but after that, it is all up to the AI to 'make' the decisions"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "Low barrier to entry threatening job security",
+      "label_negative": "High barrier to entry protecting job security",
+      "bipolarity_complete": true,
+      "grounding_span": "the barrier to entry might become too low and my clients will turn to AI to do their own editing"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "Irreplaceable human expertise in photography",
+      "label_negative": "AI replacing human photographer",
+      "bipolarity_complete": true,
+      "grounding_span": "without the proper techniques for taking photos, no amount of editing can turn a horrible picture into something great"
+    },
+    {
+      "id": "n8",
+      "type": "Construct",
+      "label": "AI's future capability in video editing",
+      "label_negative": "Current difficulty in video editing",
+      "bipolarity_complete": true,
+      "grounding_span": "I see AI evolving to a place where editing videos will be as easy as editing photos"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "allows me to have more time doing other activities than just work"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Continuous learning and skill development",
+      "grounding_span": "I needed the help of AI to learn how to do so"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Client success and satisfaction",
+      "grounding_span": "allows me to get images back to my clients in a timely manner"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Professional autonomy",
+      "grounding_span": "Initially, its me who drives what exactly I want to be removed"
+    },
+    {
+      "id": "n13",
+      "type": "Value",
+      "label": "Job security and skill relevance",
+      "grounding_span": "my job will not go away any time soon"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Satisfaction with AI as editing aid",
+      "valence": "positive",
+      "grounding_span": "Editing has been so much easier to do and takes way less time"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Negative toward AI for learning new topics",
+      "valence": "positive",
+      "grounding_span": "I needed the help of AI to learn how to do so"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Positive acceptance of AI for business tasks",
+      "valence": "positive",
+      "grounding_span": "using AI allows me to have more time to actually interact with the people I currently work with"
+    },
+    {
+      "id": "n17",
+      "type": "Stance",
+      "label": "Positive satisfaction with AI's seamless object removal",
+      "valence": "positive",
+      "grounding_span": "it looks seamless"
+    },
+    {
+      "id": "n18",
+      "type": "Stance",
+      "label": "Assertion of authorial control over AI",
+      "valence": "ambivalent",
+      "grounding_span": "I'm not sure if I would be able to control the level of control in which the AI chooses to replace items with"
+    },
+    {
+      "id": "n19",
+      "type": "Stance",
+      "label": "Concern about low barrier to entry",
+      "valence": "negative",
+      "grounding_span": "the barrier to entry might become too low and my clients will turn to AI to do their own editing"
+    },
+    {
+      "id": "n20",
+      "type": "Stance",
+      "label": "Confidence in human irreplaceability in teaching",
+      "valence": "positive",
+      "grounding_span": "without the proper techniques for taking photos, no amount of editing can turn a horrible picture into something great"
+    },
+    {
+      "id": "n21",
+      "type": "Stance",
+      "label": "Optimistic anticipation of AI's video editing capabilities",
+      "valence": "positive",
+      "grounding_span": "can't wait to see how AI will help with what I've already explained"
+    },
+    {
+      "id": "n22",
+      "type": "CognitiveStyleMarker",
+      "label": "Selective delegation based on task nature",
+      "grounding_span": "I use AI through Adobe Lightroom to do so"
+    },
+    {
+      "id": "n23",
+      "type": "CognitiveStyleMarker",
+      "label": "Forward-looking anticipation — projects future AI capabilities onto current needs",
+      "grounding_span": "I see AI evolving to a place where editing videos will be as easy as editing photos"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n13",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n13",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n14",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n17",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n18",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n19",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n20",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n21",
+      "target": "n8",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n22",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n8",
+      "target": "n23",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n6",
+      "target": "n7",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

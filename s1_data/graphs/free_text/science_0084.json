@@ -1,0 +1,154 @@
+{
+  "transcript_id": "science_0084",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as knowledge bridge across disciplines",
+      "label_negative": "AI unable to convey tacit experiential knowledge",
+      "bipolarity_complete": true,
+      "grounding_span": "AI tools for explain key concepts in these fields in a less maths intensive way"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for routine technical tasks",
+      "label_negative": "AI for nuanced hands-on wet lab work",
+      "bipolarity_complete": true,
+      "grounding_span": "scripts that used global threshold (Otsu) and then created a figure with 6 subplots"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI output verifiability through visualization",
+      "label_negative": "AI output unverifiable due to lack of visual feedback",
+      "bipolarity_complete": true,
+      "grounding_span": "the output can be visualised as it is imaging/spectroscopic data"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI for nuanced literature comprehension",
+      "label_negative": "AI lacking deep field expertise for subtle findings",
+      "bipolarity_complete": true,
+      "grounding_span": "reading current literature requires a nuanced understanding of the literature in a field"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Efficient task completion",
+      "grounding_span": "quicker to use AI than write out myself"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Epistemic understanding across fields",
+      "grounding_span": "AI tools for explain key concepts in these fields"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Research integrity through verification",
+      "grounding_span": "it is clear if the correct regions have been identified simply by viewing"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Positive toward AI for bridging knowledge gaps",
+      "valence": "positive",
+      "grounding_span": "I found AI tools to be useful for performing quick calculations"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Hesitant toward AI for wet lab tasks",
+      "valence": "negative",
+      "grounding_span": "hesitant to use AI tools for this type of task"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Aspirational desire for AI in literature comprehension",
+      "valence": "positive",
+      "grounding_span": "A tool to help with this would be excellent"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Visual verification preference — relies on visual feedback to validate AI outputs",
+      "grounding_span": "the output can be visualised as it is imaging/spectroscopic data"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Experience-driven boundary setting — distinguishes tasks requiring tacit knowledge from those amenable to AI",
+      "grounding_span": "protein isolations and designing wet lab experiments are something that requires nuance and hands on experience"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n8",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

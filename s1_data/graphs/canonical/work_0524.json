@@ -1,0 +1,176 @@
+{
+  "transcript_id": "work_0524",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as occasional resource for specific tasks",
+      "label_negative": "AI as unreliable for nuanced understanding",
+      "bipolarity_complete": true,
+      "grounding_span": "I typically use it to gather examples for my students"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI unreliability for nuanced literary tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "It's not too good at that yet though"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as an external memory aid",
+      "label_negative": "AI as standalone solution without human expertise",
+      "bipolarity_complete": true,
+      "grounding_span": "If it reminds me of an applicable book, I can use my own memory"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as tool requiring human oversight",
+      "label_negative": "Blind trust in AI output",
+      "bipolarity_complete": true,
+      "grounding_span": "I always double check—I'd never trust AI to accurately know the separate sounds of words by itself"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Personalized adaptive teaching vs. AI's 'normal' answers",
+      "label_negative": "Standardized AI-generated lesson plans",
+      "bipolarity_complete": true,
+      "grounding_span": "My lesson plans aren't 'normal,' and they're fluid—changing based on last lesson and how the child is feeling today"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI imitation of personal style and humor",
+      "label_negative": "AI capable of deeper literary comprehension",
+      "bipolarity_complete": true,
+      "grounding_span": "AI was worthless when emotion, humour, or deeper understanding of literature was concerned"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Student engagement and learning",
+      "grounding_span": "I interact with students on a very personal, flexible level"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional autonomy",
+      "grounding_span": "I like the way I create them by myself"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for resource creation",
+      "valence": "positive",
+      "grounding_span": "I typically use it to gather examples for my students"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI errors",
+      "valence": "negative",
+      "grounding_span": "AI was worthless when emotion, humour, or deeper understanding of literature was concerned"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Confidence in human irreplaceability in teaching",
+      "valence": "positive",
+      "grounding_span": "I'm never worried about some AI learning platform taking over my job"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Openness to increasing AI use in future",
+      "valence": "mixed",
+      "grounding_span": "I'm open to being proved wrong"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative iterative refinement — works back and forth with AI",
+      "grounding_span": "I go back and forth a couple times"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based boundary setting — clear separation of AI-appropriate vs. human-only tasks",
+      "grounding_span": "Just a resource generator, I'd say"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

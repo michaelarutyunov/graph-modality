@@ -1,0 +1,164 @@
+{
+  "transcript_id": "work_0294",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as writing polisher for formal communications",
+      "label_negative": "AI writing in own voice without review",
+      "bipolarity_complete": true,
+      "grounding_span": "zhuzhing up emails or looking for mistakes in writing for important information"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI writing style alignment with personal voice",
+      "label_negative": "AI writing with weird quirks and overly flattering tone",
+      "bipolarity_complete": true,
+      "grounding_span": "keep it in my own voice without weird AI quirks like emdashes"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI trustworthiness for autonomous task completion",
+      "label_negative": "AI requiring human oversight and prior writing",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't trust AI to do things fully without me reviewing or having written it first"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI reliability for simple repetitive tasks",
+      "label_negative": "AI unreliability for simple tasks like link replacement",
+      "bipolarity_complete": true,
+      "grounding_span": "it kept putting the links in the wrong places"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI use for high-stakes vs low-stakes communication",
+      "label_negative": "AI use for quick informal emails",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't need it to be in a formal tone or proofreading isn't a big thing for this communication"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Professional presentation and tone control",
+      "grounding_span": "I want my writing to come off more gender neutral than feminine"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and time saving",
+      "grounding_span": "I just need a quick response"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Environmental sustainability",
+      "grounding_span": "I worry about the environmental impacts of AI"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for proofreading and tone adjustment",
+      "valence": "positive",
+      "grounding_span": "zhuzhing up emails or looking for mistakes in writing for important information"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI's inability to follow simple instructions",
+      "valence": "negative",
+      "grounding_span": "it kept putting the links in the wrong places"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Concern about AI environmental impact leading to scaling back",
+      "valence": "negative",
+      "grounding_span": "I worry about the environmental impacts of AI and honestly might further scale back"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Preference for maintaining human element in work",
+      "valence": "positive",
+      "grounding_span": "There would always need to be some human element to it"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement with specific guidelines",
+      "grounding_span": "I'll rewrite it and then put it into AI with more specific guidelines"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Vigilant instinctual detection of AI mismatches",
+      "grounding_span": "AI writing just like raises my heckles and gives the ick"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

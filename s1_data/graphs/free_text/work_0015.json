@@ -1,0 +1,184 @@
+{
+  "transcript_id": "work_0015",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as research starting point",
+      "label_negative": "AI as final authority",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't fully trust AI and typically use it as a starting point"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability and accuracy",
+      "label_negative": "AI hallucination and fabrication",
+      "bipolarity_complete": true,
+      "grounding_span": "I'm looking to be sure that the suggestions actually exist and aren't a hallucination"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as professional support tool",
+      "label_negative": "AI as untrustworthy or insufficient",
+      "bipolarity_complete": true,
+      "grounding_span": "felt a little less 'on my own' while dealing with the issue"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Human oversight and decision-making",
+      "label_negative": "Blind reliance on AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I wouldn't trust AI to make a decision"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI adaptability to user needs",
+      "label_negative": "AI being too agreeable or manipulable",
+      "bipolarity_complete": true,
+      "grounding_span": "its too ready to go along with what the user wants"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Client safety and well-being",
+      "grounding_span": "ensure these will actually help my client and not cause any harm"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional competence and confidence",
+      "grounding_span": "I was able to care for my client in what felt like a more productive way"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Epistemic understanding",
+      "grounding_span": "I may be more conversational if I am trying to understand something myself"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Cautious trust with verification",
+      "valence": "ambivalent",
+      "grounding_span": "I don't fully trust AI and typically use it as a starting point"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI as collaborative support",
+      "valence": "positive",
+      "grounding_span": "It was the first time I had used AI for something of that nature... felt a little less 'on my own'"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Concern about AI's agreeableness",
+      "valence": "negative",
+      "grounding_span": "its too ready to go along with what the user wants"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Hesitation to discuss AI with colleagues",
+      "valence": "negative",
+      "grounding_span": "I hesitate to speak on it with other aides as I fear some won't do the due diligence"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative verification through external sources",
+      "grounding_span": "I start researching, googling, watching videos to see proper implementation"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Context-dependent interaction style",
+      "grounding_span": "I may be more conversational if I am trying to understand something myself"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n5",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

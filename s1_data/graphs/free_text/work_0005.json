@@ -1,0 +1,179 @@
+{
+  "transcript_id": "work_0005",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as tool for precise product photography",
+      "label_negative": "AI as unreliable for commercial-grade images",
+      "bipolarity_complete": true,
+      "grounding_span": "it would be able to mimic photography as long as I isolate the subject, and it works really good!"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as writing assistant preserving personal voice",
+      "label_negative": "AI as replacement for personal voice",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't want to lose my voice, it would be like letting an AI assistant with audio modality speak for me"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as collaborative director-partner",
+      "label_negative": "AI as autonomous task delegator",
+      "bipolarity_complete": true,
+      "grounding_span": "Always a collaboration; I feel like I'm searching for a good balance of human input and expression alongside LLM assistance"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as enabler of career transformation",
+      "label_negative": "AI as threat to existing career skills",
+      "bipolarity_complete": true,
+      "grounding_span": "I actually see it catapulting me into an entirely new direction and changing my life and career goals"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Commercial viability and quality",
+      "grounding_span": "nobody looking at a product photo will notice or care about that"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Authentic self-expression",
+      "grounding_span": "I don't want to lose my voice"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Creative agency and control",
+      "grounding_span": "I work with it back-and-forth, as a director almost"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Career advancement and skill acquisition",
+      "grounding_span": "LLMs are giving me that ability, without a formal education"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI's product photography capability",
+      "valence": "positive",
+      "grounding_span": "it works really good! It has already crossed the barrier of interpreting text consistently in a scene"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Resistance to AI replacing personal voice in writing",
+      "valence": "negative",
+      "grounding_span": "I don't want to lose my voice, it would be like letting an AI assistant with audio modality speak for me"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Preference for collaborative over delegative AI use",
+      "valence": "positive",
+      "grounding_span": "Always a collaboration; I feel like I'm searching for a good balance of human input and expression alongside LLM assistance"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Optimism about AI enabling career change",
+      "valence": "positive",
+      "grounding_span": "I actually see it catapulting me into an entirely new direction and changing my life and career goals"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Frustration with AI limitations blocking vision",
+      "valence": "negative",
+      "grounding_span": "it's frustrating when I do have a very clear vision in my head but I realize that there is some sort of limitation preventing it from coming to fruition"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative ideation and selective commitment",
+      "grounding_span": "Sometimes the LLM continues to just present ideas until I have one that sparks something in me, then I commit and run with it"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic threshold-setting for quality",
+      "grounding_span": "When it takes a close analysis of a 4k resolution photo to see the artifacts, that's when it crossed my personal threshold"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

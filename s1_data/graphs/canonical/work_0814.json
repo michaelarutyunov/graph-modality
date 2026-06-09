@@ -1,0 +1,275 @@
+{
+  "transcript_id": "work_0814",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative conversational partner",
+      "label_negative": "AI as impersonal command tool",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I have a very conversational tone with my AI so it becomes very collaborative"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as emotional support in difficult situations",
+      "label_negative": "AI as purely functional without emotional support",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I appreciate the encouragement it gives me"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as one-shot task executor",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "iterative work and multi-turn conversations always yield better results"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as thinking partner for reasoning",
+      "label_negative": "AI as unreliable or unhelpful for complex decisions",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "having the ability to talk through all the options"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as supplement to creative process",
+      "label_negative": "AI as threat to human creativity and productivity",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "AI will only enhance my skills not replace them"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI with personal feel and empathy",
+      "label_negative": "AI as robotic task solver without empathy",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "a desire for AI that has that personal feel to it, not just a robotic task solver, but a conversationalist with empathy"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI as supplement to creative process",
+      "label_negative": "AI fully taking over creative tasks",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "when it comes to creative tasks, especially brainstorming, and creative writing, I do prefer to do those myself"
+    },
+    {
+      "id": "n8",
+      "type": "Construct",
+      "label": "AI stigma in workplace culture",
+      "label_negative": "Open acceptance of AI in creative industry",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "there is this sense of almost shame in using AI"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Collaborative synergy and better outcomes",
+      "grounding_span": "working collaboratively with it makes for much better work"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Productivity and mental health support",
+      "grounding_span": "it helps to keep me on track"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Creative autonomy",
+      "grounding_span": "the more I care about a project, the more I want to be involved in the bulk of the creative work"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Humanity and empathy in AI interactions",
+      "grounding_span": "I would like to feel I'm not losing my humanity by interacting with AI"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Preference for conversational AI models",
+      "valence": "positive",
+      "grounding_span": "I have a very conversational tone with my AI so it becomes very collaborative"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Positive toward AI as emotional support",
+      "valence": "positive",
+      "grounding_span": "I appreciate the encouragement it gives me"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Positive toward iterative co-creation",
+      "valence": "positive",
+      "grounding_span": "iterative work and multi-turn conversations always yield better results"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Positive view of AI as thinking partner",
+      "valence": "positive",
+      "grounding_span": "having the ability to talk through all the options"
+    },
+    {
+      "id": "n17",
+      "type": "Stance",
+      "label": "Positive appreciation for AI as research catalyst",
+      "valence": "positive",
+      "grounding_span": "AI will only enhance my skills not replace them"
+    },
+    {
+      "id": "n18",
+      "type": "Stance",
+      "label": "Positive toward AI as emotional support",
+      "valence": "positive",
+      "grounding_span": "a desire for AI that has that personal feel to it"
+    },
+    {
+      "id": "n19",
+      "type": "Stance",
+      "label": "Resistance to AI in creative work",
+      "valence": "negative",
+      "grounding_span": "when it comes to creative tasks, especially brainstorming, and creative writing, I do prefer to do those myself"
+    },
+    {
+      "id": "n20",
+      "type": "Stance",
+      "label": "Discretion about AI use due to stigma",
+      "valence": "negative",
+      "grounding_span": "there is this sense of almost shame in using AI"
+    },
+    {
+      "id": "n21",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative dialogue — engages AI in back-and-forth discussion",
+      "grounding_span": "I treat my AI a bit like a person really"
+    },
+    {
+      "id": "n22",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative back-and-forth prompting",
+      "grounding_span": "iterative work and multi-turn conversations always yield better results"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n13",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n17",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n18",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n19",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n20",
+      "target": "n8",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n21",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n22",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,227 @@
+{
+  "transcript_id": "work_0044",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as efficiency tool for content creation",
+      "label_negative": "Manual content creation and scheduling",
+      "bipolarity_complete": true,
+      "grounding_span": "I mostly use AI for content creation for my company's website and social media accounts"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI confusion and errors",
+      "bipolarity_complete": true,
+      "grounding_span": "The AI tends to get overly repetitive... Sometimes it gets information wrong, particularly regarding dates"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as brainstorming and idea generator",
+      "label_negative": "Human-only creative ideation",
+      "bipolarity_complete": true,
+      "grounding_span": "I have used AI to brainstorm marketing ideas"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as tool requiring human oversight",
+      "label_negative": "Unchecked AI output",
+      "bipolarity_complete": true,
+      "grounding_span": "I then copy and past the generated content, proofread and edit"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI capability for complex tasks",
+      "label_negative": "Manual task organization",
+      "bipolarity_complete": true,
+      "grounding_span": "I also will use AI to help organize the tasks I have each week"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI grasp of tone and perspective",
+      "label_negative": "AI lack of contextual awareness",
+      "bipolarity_complete": true,
+      "grounding_span": "It will also sometimes over-emphasize a point... where it doesn't quite fit"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI memory of past interactions as bias",
+      "label_negative": "AI forgetting and date confusion",
+      "bipolarity_complete": true,
+      "grounding_span": "Provided it gets better at 'remembering' information and understanding time"
+    },
+    {
+      "id": "n8",
+      "type": "Construct",
+      "label": "AI adoption in workplace",
+      "label_negative": "Resistance due to learning curve",
+      "bipolarity_complete": true,
+      "grounding_span": "He is less tech savvy than I am and doesn't understand AI as well but it seems to work well enough for him"
+    },
+    {
+      "id": "n9",
+      "type": "Construct",
+      "label": "AI for repetitive simple tasks",
+      "label_negative": "AI for tasks I don't understand",
+      "bipolarity_complete": true,
+      "grounding_span": "I also don't like to have AI take over any jobs/tasks that I don't thoroughly understand and can't already do myself"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "I will write shorter pieces of copy on my own just because it's faster than writing out a prompt"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Quality of output",
+      "grounding_span": "The copy that was being generated wasn't usable which was of course frustrating"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Creative and strategic human expertise",
+      "grounding_span": "I feel like the management level tasks are things I should continue to do independently"
+    },
+    {
+      "id": "n13",
+      "type": "Value",
+      "label": "Personal competence and skill development",
+      "grounding_span": "I also don't like to have AI take over any jobs/tasks that I don't thoroughly understand and can't already do myself"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Satisfaction with AI for content creation",
+      "valence": "positive",
+      "grounding_span": "I don't like writing copy and don't mind having the AI take over that part of the job"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Frustration with AI errors",
+      "valence": "negative",
+      "grounding_span": "The copy that was being generated wasn't usable which was of course frustrating"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "mixed",
+      "grounding_span": "Provided it gets better at 'remembering' information and understanding time I would love to use it more"
+    },
+    {
+      "id": "n17",
+      "type": "Stance",
+      "label": "Resistance to AI for core job tasks",
+      "valence": "negative",
+      "grounding_span": "I wouldn't want to give that task over entirely to AI. I feel like the management level tasks are things I should continue to do independently"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Structured upfront information provision",
+      "grounding_span": "I tend to give it all the information up front"
+    },
+    {
+      "id": "n19",
+      "type": "CognitiveStyleMarker",
+      "label": "Problem-solving through meta-prompting",
+      "grounding_span": "I had the AI write a prompt for me to use to start a new conversation"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n13",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n14",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n17",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n19",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

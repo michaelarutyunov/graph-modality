@@ -1,0 +1,169 @@
+{
+  "transcript_id": "work_0116",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as productivity assistant for software tasks",
+      "label_negative": "AI as unhelpful or incorrect for software tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI for productivity purposes and to research. For productivity, I will ask AI how to perform certain tasks in Excel"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as research assistant for compiling information",
+      "label_negative": "AI as unhelpful or refusing to compile information",
+      "bipolarity_complete": true,
+      "grounding_span": "For research, I will use AI to compile list of prospects, but I have seen challenges"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as collaborator understanding goals",
+      "label_negative": "AI as unaware of user's goals",
+      "bipolarity_complete": true,
+      "grounding_span": "I feel it is important that the AI understand what my goal is so that it can best help with my goals"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI for email drafting and inspiration",
+      "label_negative": "AI for fully automated email sending",
+      "bipolarity_complete": true,
+      "grounding_span": "I might ask for suggestions on how to phrase certain emails and then I will evaluate its suggestions and use its final copy or drafts as inspiration"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI reliability and accuracy",
+      "label_negative": "AI errors and misunderstandings",
+      "bipolarity_complete": true,
+      "grounding_span": "if the tip is correct and works for me, then I will incorporate the suggestion"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "I use AI for productivity purposes"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional competence and accuracy",
+      "grounding_span": "if the tip is correct and works for me, then I will incorporate the suggestion"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Personal connection and authenticity",
+      "grounding_span": "I don't think I trust it to send information to customers yet"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for Excel tips",
+      "valence": "positive",
+      "grounding_span": "if the tip is correct and works for me, then I will incorporate the suggestion"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI refusing to compile lists",
+      "valence": "negative",
+      "grounding_span": "It is frustrating when the AI punts on a requests"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Cautious trust in AI for email drafting",
+      "valence": "ambivalent",
+      "grounding_span": "I don't think I trust it to send information to customers yet"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Optimism about future AI productivity",
+      "valence": "positive",
+      "grounding_span": "I am hoping that AI evolves so that it can assist me with productivity"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Methodical testing and iterative refinement",
+      "grounding_span": "I will test the suggestion on dummy files to see if I am getting the correct information"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Goal-sharing and context provision",
+      "grounding_span": "I might share with the AI what my ultimate goal is with the 'final column'"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,174 @@
+{
+  "transcript_id": "work_0810",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as ideation and brainstorming partner",
+      "label_negative": "AI as sole creator without human input",
+      "bipolarity_complete": true,
+      "grounding_span": "I approach using AI as I would if I was in an in-person brainstorming session"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "Human-authored rough draft as foundation",
+      "label_negative": "AI-generated rough draft as starting point",
+      "bipolarity_complete": true,
+      "grounding_span": "I prefer to handle all rough drafts of what I'm writing on my own, before engaging AI"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI refinement and finessing of copy",
+      "label_negative": "AI generating copy from scratch",
+      "bipolarity_complete": true,
+      "grounding_span": "I'll often just paste the entire long form copy into the model and ask it to finesse or make it better"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI for administrative and redundant tasks",
+      "label_negative": "AI for core creative tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I'd also really like to explore more ways to utilize AI for some more administrative/redundant tasks"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Creative integrity and authenticity",
+      "label_negative": "AI-generated content lacking human touch",
+      "bipolarity_complete": true,
+      "grounding_span": "it's necessary to maintain creative integrity for myself and my clients and keep that real, human component"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative authenticity and human connection",
+      "grounding_span": "keeping the human element evident in creative work"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional skill development and differentiation",
+      "grounding_span": "I have to keep my skills sharp and detailed and specific to each client in order to set myself apart"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and productivity",
+      "grounding_span": "using it to create efficiencies"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for poetry rhyme schemes",
+      "valence": "positive",
+      "grounding_span": "I was pretty satisfied with was with poetry writing"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI missing the mark on simplicity",
+      "valence": "negative",
+      "grounding_span": "there are times when it really misses the mark and comes up with words and rhymes that are way too advanced for children"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Intentional commitment to writing own drafts first",
+      "valence": "positive",
+      "grounding_span": "I always make sure to write my own drafts first"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Openness to expanding AI use for admin tasks",
+      "valence": "positive",
+      "grounding_span": "I'd also really like to explore more ways to utilize AI for some more administrative/redundant tasks"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through selective adoption",
+      "grounding_span": "I then read through what the model comes up with and will revise my own copy based on things I like"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Human-first creative process with AI as enhancer",
+      "grounding_span": "By starting with original thoughts and using AI to refine and make them better"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

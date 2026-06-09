@@ -1,0 +1,175 @@
+{
+  "transcript_id": "work_0177",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as knowledge refresher for unfamiliar topics",
+      "label_negative": "Reliance on own memory without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I asked the AI model to state some of the theorems related to that topic so that I could be sure I was teaching it in the correct way"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as practical problem solver",
+      "label_negative": "Self-generated problems that are faster and better",
+      "bipolarity_complete": true,
+      "grounding_span": "it took longer for me to ask the AI model to generate those problems than it would have if I had done it myself on paper"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as knowledge gap filler",
+      "label_negative": "Independent learning and retention",
+      "bipolarity_complete": true,
+      "grounding_span": "AI can become a crutch in the classroom...causes them to have gaps in their understanding"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as tutor for learning and understanding",
+      "label_negative": "Inability to assist outside expertise without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "Without the AI model, I would not have been able to assist the student as well as I did"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as efficiency tool",
+      "label_negative": "Resistance to adopting AI in business",
+      "bipolarity_complete": true,
+      "grounding_span": "I think it would make our work more efficient and provide better outcomes for our clients"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Teaching accuracy and confidence",
+      "grounding_span": "to be sure that I was teaching the topic correctly, and my understanding was accurate"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "it took longer for me to ask the AI model to generate those problems than it would have if I had done it myself"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Student progress and learning",
+      "grounding_span": "causes them to have gaps in their understanding...they did not retain the information"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Business growth and client outcomes",
+      "grounding_span": "provide better outcomes for our clients"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for cross-subject help",
+      "valence": "positive",
+      "grounding_span": "Without the AI model, I would not have been able to assist the student as well as I did"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI for problem generation",
+      "valence": "negative",
+      "grounding_span": "it took longer for me to ask the AI model to generate those problems than it would have if I had done it myself"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with AI performance degradation",
+      "valence": "negative",
+      "grounding_span": "I am a bit concerned that AI will cause me to become complacent"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "positive",
+      "grounding_span": "I think it would make our work more efficient and provide better outcomes for our clients"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Selective delegation based on task nature",
+      "grounding_span": "Usually I will assign the AI independent tasks...I can get what I want in two or fewer turns"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Intentional restraint to avoid over-reliance",
+      "grounding_span": "I rarely use it during my job...I do actively consider the fact that my skills will become less sharp"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

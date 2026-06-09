@@ -1,0 +1,187 @@
+{
+  "transcript_id": "work_0295",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as tool for lesson planning",
+      "label_negative": "AI as autonomous replacement for teacher",
+      "bipolarity_complete": true,
+      "grounding_span": "It is mostly collaborative. I will always have specific points I wish to highlight, but I might need assistance"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI failure on formatting or comprehension",
+      "bipolarity_complete": true,
+      "grounding_span": "I give the AI fairly simply tasks which I know it can complete reasonably well"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as source of engaging content",
+      "label_negative": "AI as source of generic or unengaging content",
+      "bipolarity_complete": true,
+      "grounding_span": "When the AI suggests good conversational topics, specific questions, or an interesting word game to play, and the student engages productively"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Teacher's unique knowledge of students",
+      "label_negative": "AI's generic knowledge of students",
+      "bipolarity_complete": true,
+      "grounding_span": "I think I have a better idea of my students' weaknesses as well as which topics they might respond to best"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as job threat",
+      "label_negative": "AI as tool that preserves teaching profession",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't have much hope that my job as a language tutor will be around for much longer"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI failures as teaching opportunities",
+      "label_negative": "AI failures as frustrating obstacles",
+      "bipolarity_complete": true,
+      "grounding_span": "understanding how AI tools fail is also a component to my teaching methodology"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Student engagement and learning",
+      "grounding_span": "the student engages productively"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional autonomy",
+      "grounding_span": "I will always have specific points I wish to highlight"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Career sustainability",
+      "grounding_span": "I don't have much hope that my job as a language tutor will be around for much longer"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for content creation",
+      "valence": "positive",
+      "grounding_span": "When the AI suggests good conversational topics, specific questions, or an interesting word game to play, and the student engages productively, this is always satisfying"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI formatting",
+      "valence": "negative",
+      "grounding_span": "If I need some material specially formatted for presentation, this can get a bit frustrating if the AI fails in this regard"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Pessimism about long-term job prospects",
+      "valence": "negative",
+      "grounding_span": "I don't have much hope that my job as a language tutor will be around for much longer"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Acceptance and celebration of AI's progress despite personal cost",
+      "valence": "ambivalent",
+      "grounding_span": "But I can celebrate AI's achievement at this stage in any case. It is and will be remarkable!"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Learning-oriented reflection — extracting lessons from AI errors",
+      "grounding_span": "understanding how AI tools fail is also a component to my teaching methodology. Humans often learn more from failures."
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic career planning considering AI impact",
+      "grounding_span": "I don't have much hope that my job as a language tutor will be around for much longer. AI will simply do a better job basically for free."
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

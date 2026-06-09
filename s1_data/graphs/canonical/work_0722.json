@@ -1,0 +1,262 @@
+{
+  "transcript_id": "work_0722",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as ideation partner",
+      "label_negative": "Independent research and troubleshooting without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I mostly use it in research and troubleshooting"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as speed tool for discrete tasks",
+      "label_negative": "AI suggestions requiring verification and potential misdirection",
+      "bipolarity_complete": true,
+      "grounding_span": "If there's a significant issue that needs to be addressed quickly, typically an AI would be able to find an answer quicker than I can"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI overconfidence and blind confidence",
+      "label_negative": "AI appropriate humility and accuracy",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is a bit overly confident in what it does at times"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as autonomous agentic task completer",
+      "bipolarity_complete": true,
+      "grounding_span": "I take the collaboration approach"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI adoption in workplace",
+      "label_negative": "Workplace outright ban on AI",
+      "bipolarity_complete": true,
+      "grounding_span": "My workplace previously took the stance of absolutely no AI for anything"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI requiring context explanation",
+      "label_negative": "AI coding assistant lack of context awareness",
+      "bipolarity_complete": true,
+      "grounding_span": "the model was not context aware even though it had the context of the full repo"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI occasional aha moments vs frequent frustrations",
+      "label_negative": "AI consistent reliable success",
+      "bipolarity_complete": true,
+      "grounding_span": "I have had a few aha moments but they are far less than the frustrations I've encountered"
+    },
+    {
+      "id": "n8",
+      "type": "Construct",
+      "label": "AI requiring complex prompting techniques",
+      "label_negative": "AI understanding natural conversational language",
+      "bipolarity_complete": true,
+      "grounding_span": "I just want to be able to talk to it as myself and get what I'm looking for"
+    },
+    {
+      "id": "n9",
+      "type": "Construct",
+      "label": "AI delegation for simple tasks",
+      "label_negative": "AI delegation making skills obsolete",
+      "bipolarity_complete": true,
+      "grounding_span": "it may become a rare skill to possess which in turn could make it more valuable and marketable"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Personal enjoyment and satisfaction in work",
+      "grounding_span": "More so for the enjoyment of doing the task than anything else"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Reliability and trustworthiness in tools",
+      "grounding_span": "I am always carefully studying the responses I get and fact checking"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "If there's a significant issue that needs to be addressed quickly, typically an AI would be able to find an answer quicker than I can"
+    },
+    {
+      "id": "n13",
+      "type": "Value",
+      "label": "Skill relevance",
+      "grounding_span": "it may become a rare skill to possess which in turn could make it more valuable and marketable"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Skepticism and caution toward AI",
+      "valence": "negative",
+      "grounding_span": "I have taken a more guarded approach"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Frustration with AI's impractical suggestions",
+      "valence": "negative",
+      "grounding_span": "I have mostly frustrations using AI"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Hopeful curiosity from occasional aha moments",
+      "valence": "positive",
+      "grounding_span": "those moments capture a little hope"
+    },
+    {
+      "id": "n17",
+      "type": "Stance",
+      "label": "Resignation to AI inevitability",
+      "valence": "mixed",
+      "grounding_span": "whether I want to be a part of it or not is irrelevant"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Skeptical verification — carefully studies and fact-checks AI responses",
+      "grounding_span": "I am always carefully studying the responses I get and fact checking"
+    },
+    {
+      "id": "n19",
+      "type": "CognitiveStyleMarker",
+      "label": "Intuitive threshold-based delegation — decides to use AI based on feeling of complexity",
+      "grounding_span": "It's more just a feeling that something might take a while to figure out"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n13",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n14",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n17",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n19",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n8",
+      "target": "n19",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

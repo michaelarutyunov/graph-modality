@@ -1,0 +1,168 @@
+{
+  "transcript_id": "creativity_0098",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as patient guide and teacher",
+      "label_negative": "Absence of patient guidance",
+      "bipolarity_complete": true,
+      "grounding_span": "like having the guide or teacher in my life now that I always needed"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as corrective co-pilot",
+      "label_negative": "AI as autonomous driver",
+      "bipolarity_complete": true,
+      "grounding_span": "I'd describe it as a corrective co-pilot"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI enabling confidence in creative work",
+      "label_negative": "Self-criticism and discarding work",
+      "bipolarity_complete": true,
+      "grounding_span": "the 'most' change is probably my confidence with the work I do"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI integration leading to job displacement",
+      "label_negative": "AI preserving human jobs",
+      "bipolarity_complete": true,
+      "grounding_span": "job losses, I wouldn't be particuarly effected as its not a job for me"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Personalised adaptive AI",
+      "label_negative": "Generic one-size-fits-all AI",
+      "bipolarity_complete": true,
+      "grounding_span": "more personalised AI, that gets to know the users better and is more adaptive to their needs"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Personal understanding and self-discovery",
+      "grounding_span": "helping me understand myself and the world around me more fully"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Helping others with similar challenges",
+      "grounding_span": "creating things to help others like me, get on in the world better"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Creative productivity and output quality",
+      "grounding_span": "turning a mess of ideas into something useable"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Societal responsibility and economic fairness",
+      "grounding_span": "something has to be done about supporting people who are losing their jobs to AI"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Gratitude for AI as a guide",
+      "valence": "positive",
+      "grounding_span": "I feel gratitude"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Concern about job displacement",
+      "valence": "negative",
+      "grounding_span": "millions of jobs would no longer be needed"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Optimism about future AI personalisation",
+      "valence": "positive",
+      "grounding_span": "I think we'll see more personalised AI"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative probing and detailed questioning",
+      "grounding_span": "probe and query so many things"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Reflective integration of AI feedback into self-narrative",
+      "grounding_span": "I see those mistakes, that low quality work, as just early stepping stones"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

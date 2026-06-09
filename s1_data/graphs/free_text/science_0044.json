@@ -1,0 +1,161 @@
+{
+  "transcript_id": "science_0044",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as efficient coding assistant for routine tasks",
+      "label_negative": "Manual coding for routine tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "AI makes very quick"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability in mathematical reasoning",
+      "label_negative": "AI making frequent and heavy mistakes with more involved mathematics",
+      "bipolarity_complete": true,
+      "grounding_span": "AI making frequent and heavy mistakes with more involved mathematics"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as learning tool for new topics",
+      "label_negative": "AI as crutch hindering learning",
+      "bipolarity_complete": true,
+      "grounding_span": "I am hesitant to become reliant on AI for getting it to do stuff I am new to"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as source of creative ideas",
+      "label_negative": "Human-only creative ideation",
+      "bipolarity_complete": true,
+      "grounding_span": "ingenuity and creativity, coming up with new ideas that work"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "makes this part a lot quicker"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Epistemic understanding and learning",
+      "grounding_span": "this way I will never learn"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Scientific creativity and innovation",
+      "grounding_span": "ingenuity and creativity, coming up with new ideas that work"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Positive toward AI for coding tasks",
+      "valence": "positive",
+      "grounding_span": "it just makes this part a lot quicker so makes sense to use"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Negative toward AI for complex math",
+      "valence": "negative",
+      "grounding_span": "I am quite hesitant to get it to do this for me as it is not always right"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Negative toward AI for learning new topics",
+      "valence": "negative",
+      "grounding_span": "I am hesitant to become reliant on AI for getting it to do stuff I am new to"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Aspirational positive toward AI for creativity",
+      "valence": "positive",
+      "grounding_span": "I would say ingenuity and creativity, coming up with new ideas that work"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Verification through visual intuition and code inspection",
+      "grounding_span": "its normally pretty obvious because you have an idea of what it should look like"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Learning through independent struggle",
+      "grounding_span": "this way I will never learn and then what is the point of doing it in the first place"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n3",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

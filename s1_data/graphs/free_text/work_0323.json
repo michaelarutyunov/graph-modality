@@ -1,0 +1,172 @@
+{
+  "transcript_id": "work_0323",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as research and learning tool for evidence-based practice",
+      "label_negative": "AI as unreliable source for critical decisions",
+      "bipolarity_complete": true,
+      "grounding_span": "I have been using AI to find new ideas that i can bring into my job"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for structuring assignments and writing",
+      "label_negative": "AI writing as academic dishonesty",
+      "bipolarity_complete": true,
+      "grounding_span": "i use this to help me structure assignments"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for drug calculations and dose rates",
+      "label_negative": "Manual calculation for safety",
+      "bipolarity_complete": true,
+      "grounding_span": "i would prefer to do the calculation myself to ensure it is correct"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI reliability and accuracy",
+      "label_negative": "AI error with serious consequences",
+      "bipolarity_complete": true,
+      "grounding_span": "if the AI did the calculation wrong and i didnt notice then it could have very drastic consiquences"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as practical skill enhancer",
+      "label_negative": "AI as threat to practical skills",
+      "bipolarity_complete": true,
+      "grounding_span": "i think i could work along side of AI to enhance my skills"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Patient safety and animal welfare",
+      "grounding_span": "an animals life in my hands"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Academic integrity",
+      "grounding_span": "they need to be in my own words so i cany use AI to help me structure them or I could get in trouble"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Continuous learning and professional development",
+      "grounding_span": "nursing its all about continuous learning"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for writing improvement",
+      "valence": "positive",
+      "grounding_span": "It did an amazing job at cutting down my paragraph to within the set wordcount"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI error in gas bill query",
+      "valence": "negative",
+      "grounding_span": "This was extremely frustrating as i had kicked up a bit of a fuss with the gas company"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Cautious trust in AI for research but not critical tasks",
+      "valence": "ambivalent",
+      "grounding_span": "i would prefer to do the calculation myself to ensure it is correct"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Practical hands-on orientation — prioritizes direct action over AI delegation",
+      "grounding_span": "Most of my work i cant use AI for as it is very practical and hands on"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Evaluative quality-based delegation — adjusts reliance based on AI response quality",
+      "grounding_span": "it depends on how good the response the AI gave me was"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

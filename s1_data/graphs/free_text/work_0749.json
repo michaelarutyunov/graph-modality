@@ -1,0 +1,245 @@
+{
+  "transcript_id": "work_0749",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as proofreading and drafting assistant",
+      "label_negative": "AI as unreliable source requiring full verification",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "proofreading documents i've drafted"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as legal research tool",
+      "label_negative": "AI as hallucinator of fictional cases",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "perform legal research for me"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as iterative drafting collaborator",
+      "label_negative": "AI as one-shot draft generator",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "requires further prompting to refine various sections"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as thinking partner revealing weak points",
+      "label_negative": "AI as misleading or incomplete output",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "the ai provides a rough first draft that then reveals weak points in the analysis"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI use constrained by ethical obligations",
+      "label_negative": "Unconstrained AI use without verification",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "i have ethical obligations to ensure any work i do for a client meets certain standards of quality"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "Workplace perception of AI use",
+      "label_negative": "Open AI use without stigma",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "i tend to not be so open about using ai because i think some people...would be more doubtful of my work product"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI as tool for discovering obscure relevant information",
+      "label_negative": "AI as generator of fictional information",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "it turned up an obscure state case that i had not seen before"
+    },
+    {
+      "id": "n8",
+      "type": "Construct",
+      "label": "AI as evolving technology worth staying updated with",
+      "label_negative": "AI as unreliable tool to abandon after bad experience",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "i think ai is always advancing so i didnt want to throw it all away just for one bad experience"
+    },
+    {
+      "id": "n9",
+      "type": "Construct",
+      "label": "Skill maintenance in areas AI could automate",
+      "label_negative": "Complete reliance on AI for automated tasks",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "i wouldnt stop training certain skills, like legal research or writing, entirely"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Professional competence and quality",
+      "valence": null,
+      "grounding_span": "ensure any work i do for a client meets certain standards of quality"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Efficiency and productivity",
+      "valence": null,
+      "grounding_span": "make me more efficient while still ensuring high quality work product"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Intellectual satisfaction and puzzle-solving",
+      "valence": null,
+      "grounding_span": "it feels like solving a puzzle when you figure out the right words to use"
+    },
+    {
+      "id": "n13",
+      "type": "Value",
+      "label": "Professional reputation and trust",
+      "valence": null,
+      "grounding_span": "i could lose my license for doing something like that"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Satisfaction with AI discovering obscure case",
+      "valence": "positive",
+      "grounding_span": "it confirmed for me that ai can be a powerful tool"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Frustration with AI hallucinating cases",
+      "valence": "negative",
+      "grounding_span": "the ai simply generated fictional cases...that was pretty frustrating"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Cautious optimism about AI's potential",
+      "valence": "mixed",
+      "grounding_span": "i still see immense potential in the technology for my job so i want to make sure i am up to date with it"
+    },
+    {
+      "id": "n17",
+      "type": "Stance",
+      "label": "Resistance to over-reliance on AI for skills",
+      "valence": "negative",
+      "grounding_span": "i wouldnt stop training certain skills, like legal research or writing, entirely"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through prompting",
+      "grounding_span": "requires further prompting to refine various sections"
+    },
+    {
+      "id": "n19",
+      "type": "CognitiveStyleMarker",
+      "label": "Comparative evaluation of AI vs human alternatives",
+      "grounding_span": "if i had instead asked an entry level associate to do the research, it's possible they could do a bad job too"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n13",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n13",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n14",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n8",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n17",
+      "target": "n9",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n3",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n8",
+      "target": "n19",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

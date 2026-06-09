@@ -1,6 +1,6 @@
 """Tests for extraction.validator."""
 
-from extraction.validator import is_valid, validate_graph
+from s2_extraction.validator import is_valid, validate_graph
 
 
 def _make_graph(

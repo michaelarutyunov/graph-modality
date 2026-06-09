@@ -1,0 +1,193 @@
+{
+  "transcript_id": "work_0737",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as tool for lesson planning",
+      "label_negative": "AI as fully autonomous content generator",
+      "bipolarity_complete": true,
+      "grounding_span": "I am definitely more likely to collaborate"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as brainstorming and idea generator",
+      "label_negative": "AI as primary content creator",
+      "bipolarity_complete": true,
+      "grounding_span": "I tend to use AI as a jumping off point and then again for edits and refinements"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI output quality for training materials",
+      "label_negative": "AI output quality below professional standards",
+      "bipolarity_complete": true,
+      "grounding_span": "I do not think the quality is (yet) at the level of materials designed by an experienced instructional designer"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI adoption in workplace",
+      "label_negative": "Workplace resistance to AI adoption",
+      "bipolarity_complete": true,
+      "grounding_span": "My workplace has been very slow to adopt AI and my direct manager does not see the value in it"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI for creative tasks (slide deck design)",
+      "label_negative": "Delegating slide deck design to AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I also handle slide deck design on my own as I prefer to have creative control"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as confidence-building assistant",
+      "label_negative": "AI causing second-guessing and spinning gears",
+      "bipolarity_complete": true,
+      "grounding_span": "AI really helped me settle on topics and activities and helped show me that they were relevant for my audience"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional quality and thoroughness",
+      "grounding_span": "I do not think the quality is (yet) at the level of materials designed by an experienced instructional designer"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Creative autonomy",
+      "grounding_span": "I prefer to have creative control"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Effective training outcomes",
+      "grounding_span": "this session was very well-received and got a 4.9/5 rating from participants"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Workplace innovation and progress",
+      "grounding_span": "I am optimistic in the future AI will play in my workplace"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI as collaborative partner",
+      "valence": "positive",
+      "grounding_span": "I was particularly satisfied with the training outline I asked it to develop"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with AI slide deck output",
+      "valence": "negative",
+      "grounding_span": "have not been impressed with the output when I've asked models to create PPTs for me in the past"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Optimism about future AI integration",
+      "valence": "positive",
+      "grounding_span": "I am optimistic in the future AI will play in my workplace"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Frustration with AI delegation due to poor output",
+      "valence": "negative",
+      "grounding_span": "I do not think the quality is (yet) at the level of materials designed by an experienced instructional designer"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative iterative refinement — works back and forth with AI",
+      "grounding_span": "I tend to use AI as a jumping off point and then again for edits and refinements after I've made the materials my own"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based boundary setting — separates creative from non-creative tasks",
+      "grounding_span": "I tend to write learning objectives on my own... I also handle slide deck design on my own"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

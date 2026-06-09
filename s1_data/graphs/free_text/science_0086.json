@@ -1,0 +1,161 @@
+{
+  "transcript_id": "science_0086",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as time-saving summarization tool for initial literature sifting",
+      "label_negative": "AI as unreliable for precise understanding",
+      "bipolarity_complete": true,
+      "grounding_span": "the ability of AI to summarise ideas is a really large time save"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as verifiable coding and data analysis assistant",
+      "label_negative": "AI as opaque and untrustworthy for creative high-stakes work",
+      "bipolarity_complete": true,
+      "grounding_span": "I have been using AI for things like coding for a little while and I trust this segment of AI a lot more"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as potential image generation tool for scientific diagrams",
+      "label_negative": "AI as incapable of creating custom specialized diagrams",
+      "bipolarity_complete": true,
+      "grounding_span": "I would love AI to be very capable in the image generation field"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Self-oriented control over own work",
+      "label_negative": "Delegation to AI for important stages",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't trust others with my own work and like to do stuff in my own way"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Efficiency and time saving",
+      "grounding_span": "it was the logical next step to at least try it"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Research quality and correctness",
+      "grounding_span": "I still do not have full confidence in models and there is still time needed to check results"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Personal autonomy and self-reliance",
+      "grounding_span": "I don't trust others with my own work and like to do stuff in my own way"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Positive toward AI for literature summarization",
+      "valence": "positive",
+      "grounding_span": "the ability of AI to summarise ideas is a really large time save"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Cautious trust in AI for coding and data analysis",
+      "valence": "positive",
+      "grounding_span": "I trust this segment of AI a lot more"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Negative toward AI for creative high-stakes work",
+      "valence": "negative",
+      "grounding_span": "I just do not have the confidence to let AI reproduce more creative, and also much more important areas of work"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Aspirational desire for AI image generation",
+      "valence": "positive",
+      "grounding_span": "I would love AI to be very capable in the image generation field"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Methodical incremental narrowing — systematic sifting and gradual focus",
+      "grounding_span": "It's quite gradual and more methodical in narrowing down potential areas"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Verification-oriented workflow — uses AI output as roadmap to check original",
+      "grounding_span": "I just do a simple Ctrl + F to locate where in the paper this is mentioned and do a quick skim to check for correctness"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

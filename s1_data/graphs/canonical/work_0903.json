@@ -1,0 +1,161 @@
+{
+  "transcript_id": "work_0903",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as independent task executor",
+      "bipolarity_complete": true,
+      "grounding_span": "always collaborate"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as time-saving tool",
+      "label_negative": "AI encroaching on core job responsibilities",
+      "bipolarity_complete": true,
+      "grounding_span": "the satisfaction came from how much time I saved"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI use within corporate compliance boundaries",
+      "label_negative": "AI use violating corporate rules",
+      "bipolarity_complete": true,
+      "grounding_span": "I dont even tell the model the company name"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as supplementary aide to human expertise",
+      "label_negative": "AI for tasks where accuracy is critical and personal judgment is needed",
+      "bipolarity_complete": true,
+      "grounding_span": "I would not want to give false information by just trusting a model"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "it helped my time management"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Job security and skill relevance",
+      "grounding_span": "I would start to worry about my importance"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Risk avoidance",
+      "grounding_span": "We have strict corp rules so I dont even tell the model the company name"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Satisfaction with AI for time-saving",
+      "valence": "positive",
+      "grounding_span": "the satisfaction came from how much time I saved"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Concern about AI replacing jobs",
+      "valence": "negative",
+      "grounding_span": "I would start to worry about my importance"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Cautious adherence to corporate boundaries",
+      "valence": "ambivalent",
+      "grounding_span": "I dont even tell the model the company name"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Contentment with current AI use",
+      "valence": "positive",
+      "grounding_span": "at this point I dont see any real need in expanding"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative workflow with AI as collaborative partner",
+      "grounding_span": "back and forth as I am generating schedules, kind of like live note-taking"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic boundary-setting based on task importance",
+      "grounding_span": "I wouldn't use it for anything proprietary to the corp name or with anyones personal information"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

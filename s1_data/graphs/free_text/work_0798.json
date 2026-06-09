@@ -1,0 +1,169 @@
+{
+  "transcript_id": "work_0798",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as time-saving tool for admin tasks",
+      "label_negative": "AI as time-consuming or inefficient tool",
+      "bipolarity_complete": true,
+      "grounding_span": "heavy admin tasks that would otherwise take hours of my day"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as collaborative extension of thinking",
+      "label_negative": "AI as replacement for human thinking",
+      "bipolarity_complete": true,
+      "grounding_span": "less of a replacement for my brain and more of an extension to it"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability for quality checking",
+      "label_negative": "AI inconsistency in judgment tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "not very consistent with making a call on directly grading a student's work"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as efficiency booster for lesson planning",
+      "label_negative": "AI as source of polished but flawed output requiring more time to fix",
+      "bipolarity_complete": true,
+      "grounding_span": "going from hours spent on just a draft to a final version in about the same time is amazing"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Human judgment in student assessment",
+      "label_negative": "AI-driven automated grading",
+      "bipolarity_complete": true,
+      "grounding_span": "that judgement is difficult to make, it's not always a black and white decision"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Time for meaningful teaching",
+      "grounding_span": "free me up even more to focus on supporting my students"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional autonomy and control",
+      "grounding_span": "I still plan lessons and map criteria myself"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Quality and accuracy in teaching materials",
+      "grounding_span": "make sure everything that I do aligns with the learning aims specified"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for admin efficiency",
+      "valence": "positive",
+      "grounding_span": "Using AI to make full schemes of work always feels like a win"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI learning curve",
+      "valence": "negative",
+      "grounding_span": "The process and the right approach has definitely taken me a few weeks to perfect, which felt frustrating at first"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Resistance to AI in grading",
+      "valence": "negative",
+      "grounding_span": "I wouldn't hand over to AI, things like marking work"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Optimism about future seamless integration",
+      "valence": "positive",
+      "grounding_span": "I see it becoming more seamless, less of a separate tool"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement approach — starts with structure, then drafts, then adjusts",
+      "grounding_span": "start with a clear structure in mind, then use AI to draft sections ... refine and adjust as I go along"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain boundary setting — clear demarcation of tasks for AI vs. human judgment",
+      "grounding_span": "There's definitely parts that I wouldn't hand over to AI, things like marking work"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

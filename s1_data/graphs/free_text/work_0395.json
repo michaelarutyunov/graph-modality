@@ -1,0 +1,193 @@
+{
+  "transcript_id": "work_0395",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as personal assistant for routine tasks",
+      "label_negative": "AI as unreliable for critical tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "Personally I use ChatGPT sprinkled throughout my day sort of like a personal assistant"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for non-critical code generation",
+      "label_negative": "AI for critical-path code generation",
+      "bipolarity_complete": true,
+      "grounding_span": "This is generally data analysis code that is in the non-critical path of work we do"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as collaborative hand-holding partner",
+      "label_negative": "AI as total delegation tool",
+      "bipolarity_complete": true,
+      "grounding_span": "Definitely more of a collaboration. I would describe it more like holding its hand through a task"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as syntax aid for memory fallibility",
+      "label_negative": "AI as context-forgetting burden",
+      "bipolarity_complete": true,
+      "grounding_span": "My downfall is remembering syntax, and I think keeping syntax straight is where AI really helps me the most"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as knowledge expander requiring expert oversight",
+      "label_negative": "AI as autonomous knowledge source without verification",
+      "bipolarity_complete": true,
+      "grounding_span": "I believe AI is a great tool to speed work up or even expand your knowledge, but it has to be handled very carefully"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI training participation for future-proofing",
+      "label_negative": "AI training participation as job devaluation",
+      "bipolarity_complete": true,
+      "grounding_span": "I have been working with DataAnnotations and some other companies to try to teach physics to AI"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Personal competence and independent learning",
+      "grounding_span": "I value being able to learn how to perform tasks independently"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Productivity and time efficiency",
+      "grounding_span": "still saves a ton of time compared to doing it myself"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Professional confidence and trust in outcomes",
+      "grounding_span": "it gives me more confidence in the end solution"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Career resilience and adaptability",
+      "grounding_span": "potentially future-proofing myself"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI for syntax help",
+      "valence": "positive",
+      "grounding_span": "A time when AI made me satisfied was when I was able to simply ask it for a set of MATLAB commands"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with AI context forgetting",
+      "valence": "negative",
+      "grounding_span": "The time I think I have been most frustrated was just what I was telling you previously about how I kept having to correct and remind ChatGPT"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Caution about over-delegation based on team experience",
+      "valence": "negative",
+      "grounding_span": "I think it serves as an example of how not to use AI in your work"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Aspirational desire for increased trust",
+      "valence": "positive",
+      "grounding_span": "I would like to develop more trust with the models so that I can take a more hands-off approach"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative context management — re-entering code to maintain AI memory",
+      "grounding_span": "I often find myself having to augment ChatGPTs generated solution and re-enter it into the conversation"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Independent verification tendency — double-checking AI outputs manually",
+      "grounding_span": "I almost always double check the answers by hand anyways"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n6",
+      "target": "n6",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

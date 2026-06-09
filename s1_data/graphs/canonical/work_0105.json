@@ -1,0 +1,162 @@
+{
+  "transcript_id": "work_0105",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as unreliable or unhelpful for communication",
+      "bipolarity_complete": true,
+      "grounding_span": "It is like a collaborative back and forth"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI accuracy in numerical tasks",
+      "label_negative": "AI inaccuracy in math and calculations",
+      "bipolarity_complete": true,
+      "grounding_span": "the accuracy is just not there yet when it comes to math"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as time-saving tool",
+      "label_negative": "AI as time-consuming or unreliable for routine tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "it is just a time saver incorporating AI to do them"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as tool for critical thinking about AI",
+      "label_negative": "AI as replacement that diminishes skills",
+      "bipolarity_complete": true,
+      "grounding_span": "it almost increases critical thinking skills"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI accuracy in accounting tasks",
+      "label_negative": "Distrust in AI for detailed accounting work",
+      "bipolarity_complete": true,
+      "grounding_span": "It still seems a ways off to do any real detailed accounting work"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Professional efficiency",
+      "grounding_span": "I can spend my time on other tasks"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Financial accuracy and trust",
+      "grounding_span": "I double and triple checked on a calculator and excel"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Critical thinking and skill development",
+      "grounding_span": "it almost increases critical thinking skills"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for communications",
+      "valence": "positive",
+      "grounding_span": "Anytime it will correct an email for me and I do not have to spend much time writing it"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI errors",
+      "valence": "negative",
+      "grounding_span": "It has left me frustrated one time when it calculated a simple formula wrong"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Cautious trust in AI",
+      "valence": "mixed",
+      "grounding_span": "Hopefully more and more of outsourcing the simple tasks and trusting that the output is correct"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative iterative refinement — works back and forth with AI",
+      "grounding_span": "I will usually copy and paste the image email into AI. Then I will type out my response and then ask for revisions"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Experience-driven calibration of trust",
+      "grounding_span": "I tend to avoid asking it math questions"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

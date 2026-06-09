@@ -1,0 +1,174 @@
+{
+  "transcript_id": "work_0381",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI for menial tasks",
+      "label_negative": "AI involvement in creative work",
+      "bipolarity_complete": true,
+      "grounding_span": "I prefer to use it for the more menial tasks I do like creating invoices, writing generic emails to clients, or organizing client lists/bookkeeping"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for data analysis",
+      "label_negative": "Manual data analysis without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I used Ai to do my business analytics... Being able to see the data presented visually/graphically allowed me to notice trends I hadn't before"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Full automation of business tasks",
+      "label_negative": "Partial or no automation",
+      "bipolarity_complete": true,
+      "grounding_span": "I would love to be able to give the AI the names of the company's and have it find me their business emails for me, and even automate the process of sending out the emails in gmail"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Human creative autonomy",
+      "label_negative": "AI involvement in creative process",
+      "bipolarity_complete": true,
+      "grounding_span": "I can say almost certainly that I wouldn't want AI involved in the actual creation process for me"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as supplemental tool",
+      "label_negative": "Uncertainty about cost and worth",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't know which programs would fit what I need and how much they would all cost. With cost I don't know that it would be worth it for me"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Personal creative skill development",
+      "grounding_span": "This leaves me time to do the creative part myself"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Business efficiency and cost-effectiveness",
+      "grounding_span": "I was able to see trends for the whole year and compare it to previous years"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Strategic client matching",
+      "grounding_span": "I search for clients whose products fit work I've done or want to get into"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for marketing research",
+      "valence": "positive",
+      "grounding_span": "I found it really informative when I used Ai to do my business analytics"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Desire for fuller automation",
+      "valence": "positive",
+      "grounding_span": "I would love to be able to give the AI the names of the company's and have it find me their business emails"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Resistance to AI in creative work",
+      "valence": "negative",
+      "grounding_span": "I can say almost certainly that I wouldn't want AI involved in the actual creation process for me"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Hesitation due to cost uncertainty",
+      "valence": "negative",
+      "grounding_span": "With cost I don't know that it would be worth it for me"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic task delegation — uses AI only for specific, bounded tasks",
+      "grounding_span": "This leaves me time to do the creative part myself"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Independent exploration and self-directed learning about AI",
+      "grounding_span": "I've been figuring it out on my own!"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

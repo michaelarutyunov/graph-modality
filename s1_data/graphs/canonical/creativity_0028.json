@@ -1,0 +1,162 @@
+{
+  "transcript_id": "creativity_0028",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as tool for overcoming creative block",
+      "label_negative": "AI as direct content generator",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is a terrific way of becoming 'unstuck'"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as scheduling assistant for complex logistics",
+      "label_negative": "AI as creative decision-maker",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't really approach AI when stuck creatively, but rather when stuck in terms of something logistical"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as second opinion for critical decisions",
+      "label_negative": "AI as overly eager to please without critique",
+      "bipolarity_complete": true,
+      "grounding_span": "AI models are overly eager to please, and so I don't fully trust the model to be sufficiently critical"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as time-saving placeholder",
+      "label_negative": "AI as source of creative stagnation",
+      "bipolarity_complete": true,
+      "grounding_span": "I can move on from something that might have had me stuck for quite some time"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as supplement to creative process",
+      "label_negative": "AI as threat to human creativity",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is a tool, very much like the internet. While it can be abused, this will not be at the cost of human creativity"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative autonomy",
+      "grounding_span": "Oh, I am, absolutely"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "I can move on from something that might have had me stuck for quite some time"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "High-quality critical editorial feedback",
+      "grounding_span": "I would love to get the point where AI operates as a full editorial partner"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Positive appreciation for AI as research catalyst",
+      "valence": "positive",
+      "grounding_span": "AI is a tool, very much like the internet"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Ambivalent stance toward AI as editorial checker",
+      "valence": "negative",
+      "grounding_span": "I don't fully trust the model to be sufficiently critical and demanding as an editorial partner"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Aspirational hope for AI as practical assistant",
+      "valence": "positive",
+      "grounding_span": "I would love to get the point where AI operates as a full editorial partner"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Catalytic ideation — uses AI suggestions to trigger own ideas",
+      "grounding_span": "The list of suggestions given essentially rebooted my semantic field and I came up with the perfect description"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Logical world-building verification — uses AI to check consistency",
+      "grounding_span": "I described their cycles to the model, and used it to determine the frequency of sacred nights"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

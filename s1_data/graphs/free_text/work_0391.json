@@ -1,0 +1,218 @@
+{
+  "transcript_id": "work_0391",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as file management and comparison tool",
+      "label_negative": "Manual file searching and comparison",
+      "bipolarity_complete": true,
+      "grounding_span": "I have used it to locate files in our extensive drive, to compare similar files"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as content consolidation and editing assistant",
+      "label_negative": "Manual content consolidation and editing",
+      "bipolarity_complete": true,
+      "grounding_span": "I had two version of a resume and wanted to extract descriptive text that made sure all aspects were captured from both"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI writing style alignment with personal voice",
+      "label_negative": "AI writing style mismatch with intended voice",
+      "bipolarity_complete": true,
+      "grounding_span": "The writing style was quite different than what I had intended for this purpose"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI reliability and trustworthiness",
+      "label_negative": "AI hallucination and untrustworthy outputs",
+      "bipolarity_complete": true,
+      "grounding_span": "there was definitely hallucination in the list of titles produced, so I didn't trust the output"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI use in workplace communication",
+      "label_negative": "Manual email writing without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I prefer to write emails myself because I think that others I work with are tuned into when something 'sounds' or 'reads' like it was at least partially AI generated"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as coding and script writing accelerator",
+      "label_negative": "Manual coding without AI assistance",
+      "bipolarity_complete": true,
+      "grounding_span": "I have used AI to up my coding/script writing"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI as tool for specialized expert domain",
+      "label_negative": "AI replacing specialized expertise",
+      "bipolarity_complete": true,
+      "grounding_span": "I am an expert in a highly specialized field of biology that AI could not perform the vast majority of tasks with"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "it was of course much faster when the AI did it"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Authenticity and genuineness in communication",
+      "grounding_span": "Some people think that others who write emails with the help of AI are less genuine"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Trust and reliability in outputs",
+      "grounding_span": "I could not trust the output of the model"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Skill development and learning",
+      "grounding_span": "that has vastly helped me to create more complex code faster"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI speed for content consolidation",
+      "valence": "positive",
+      "grounding_span": "it was of course much faster when the AI did it"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Frustration with AI hallucination in file search",
+      "valence": "negative",
+      "grounding_span": "it hallucinated some names. That was frustrating because I felt like I had wasted time"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Preference for manual email writing due to authenticity concerns",
+      "valence": "negative",
+      "grounding_span": "I prefer to write emails myself because I think that others I work with are tuned into when something 'sounds' or 'reads' like it was at least partially AI generated"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Openness to retry AI for similar tasks despite past hallucination",
+      "valence": "mixed",
+      "grounding_span": "I would be open to trying again since I know that the models are constantly being refined"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Positive experience with AI for coding and debugging",
+      "valence": "positive",
+      "grounding_span": "that has vastly helped me to create more complex code faster"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement and manual takeover when progress stalls",
+      "grounding_span": "after 3 tries I took over"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Cautious verification and scrutiny of AI outputs",
+      "grounding_span": "I do indeed place additional scrutiny on the outputs of the models when I do use them"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

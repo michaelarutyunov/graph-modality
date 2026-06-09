@@ -1,0 +1,187 @@
+{
+  "transcript_id": "creativity_0088",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as structural solution provider for readability",
+      "label_negative": "AI as inadequate for nuanced editorial judgment",
+      "bipolarity_complete": true,
+      "grounding_span": "I asked the AI how I make this more readable without removing any of the numbers"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as quality control tool for stealth typos and regional spelling",
+      "label_negative": "AI as unreliable due to nonsensical suggestions",
+      "bipolarity_complete": true,
+      "grounding_span": "It has saved me some embarrassment a couple times, catching typos for me"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Confidentiality in AI use",
+      "label_negative": "Openness to sharing proprietary data with AI",
+      "bipolarity_complete": true,
+      "grounding_span": "Privacy is a concern. Sometimes the things I edit has proprietary trade names and data"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as tool for understanding AI limitations",
+      "label_negative": "AI as integrated throughout the creative process",
+      "bipolarity_complete": true,
+      "grounding_span": "Usually my first run at a piece of work is just me and myself working at it. Then the second run is when I get more technical, using reference books and AI"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as continuous consultant with broad knowledge",
+      "label_negative": "AI as ongoing collaborative partner",
+      "bipolarity_complete": true,
+      "grounding_span": "I give it a problem, it suggests a potential solution; I think about the solution, and accept or reject it"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Readability and precision in technical writing",
+      "grounding_span": "striking a balance between being casually readable and more technical"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional accuracy and reliability",
+      "grounding_span": "It has saved me some embarrassment a couple times, catching typos for me"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Client confidentiality and data security",
+      "grounding_span": "I don't want to put that 'out there'"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Personal judgment and autonomy",
+      "grounding_span": "I can't dispense with my own judgment"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for design tasks",
+      "valence": "positive",
+      "grounding_span": "I went with the bullet points, as that was easily readable while still containing all the information needed"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Appreciation for AI catching stealth typos",
+      "valence": "positive",
+      "grounding_span": "It has saved me some embarrassment a couple times, catching typos for me"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Concern about privacy with AI",
+      "valence": "negative",
+      "grounding_span": "Privacy is a concern. Sometimes the things I edit has proprietary trade names and data"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Frustration with AI's impractical suggestions",
+      "valence": "negative",
+      "grounding_span": "sometimes the AI makes suggestions that don't make a lot of sense"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Concern about AI replacing human writers",
+      "valence": "mixed",
+      "grounding_span": "Hopefully not good enough to obviate my job, but I suspect that may be unlikely"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Boundary-driven selective tool use",
+      "grounding_span": "Usually my first run at a piece of work is just me and myself working at it. Then the second run is when I get more technical, using reference books and AI"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "One-shot problem solving with AI",
+      "grounding_span": "I give it a problem, it suggests a potential solution; I think about the solution, and accept or reject it. Usually I don't iterate on the problem"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

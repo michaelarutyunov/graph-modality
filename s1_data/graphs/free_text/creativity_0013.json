@@ -1,0 +1,133 @@
+{
+  "transcript_id": "creativity_0013",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as tool for enabling economically inaccessible creative services",
+      "label_negative": "AI as replacement for genuine creative skill",
+      "bipolarity_complete": true,
+      "grounding_span": "Doing it this way lets the author achieve their vision with as little expenditure as possible"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as non-compliant tool requiring iterative battle",
+      "label_negative": "AI as compliant and easy-to-direct tool",
+      "bipolarity_complete": true,
+      "grounding_span": "It feels a bit more like a battle to be honest"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as appropriate for promotional support of real creative work",
+      "label_negative": "AI as inappropriate in core creative spaces",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't believe that AI has a place in many creative spaces. But i see this as a case where it is used for good"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as tool not shortcut or crutch",
+      "label_negative": "AI as shortcut or crutch",
+      "bipolarity_complete": true,
+      "grounding_span": "I think AI is a tool, not a shortcut or crutch"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Author empowerment and economic accessibility",
+      "grounding_span": "lets the author achieve their vision with as little expenditure as possible"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative integrity and appropriate use",
+      "grounding_span": "I don't believe that AI has a place in many creative spaces"
+    },
+    {
+      "id": "n7",
+      "type": "Stance",
+      "label": "Frustration with AI's non-compliance",
+      "valence": "negative",
+      "grounding_span": "It feels a bit more like a battle to be honest"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Positive view of AI enabling new services",
+      "valence": "positive",
+      "grounding_span": "Doing it this way lets the author achieve their vision with as little expenditure as possible"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Conditional acceptance of AI in promotional role",
+      "valence": "mixed",
+      "grounding_span": "I don't believe that AI has a place in many creative spaces. But i see this as a case where it is used for good"
+    },
+    {
+      "id": "n10",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through detailed tweaking",
+      "grounding_span": "I would take the best of the results and remix that with things like 'change the colour of the lights' or 'lower the camera angle'"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-specific boundary setting for AI use",
+      "grounding_span": "I don't believe that AI has a place in many creative spaces. But i see this as a case where it is used for good"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n10",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

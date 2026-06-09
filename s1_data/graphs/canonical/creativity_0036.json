@@ -1,0 +1,179 @@
+{
+  "transcript_id": "creativity_0036",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI for administrative tasks",
+      "label_negative": "AI doing core creative work",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is useful for when I'm trying to craft pitches to prospective clients, respond to client emails, or when I want to know what a contract or TOS says"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as brainstorming and idea generator",
+      "label_negative": "AI as sole creator of creative work",
+      "bipolarity_complete": true,
+      "grounding_span": "If I'm feeling really stuck and uninspired, I might use ChatGPT to brainstorm ideas"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as research accelerator",
+      "label_negative": "Manual research without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I asked for a list of styles and niches. I probably could have done my own research, but it was way faster to just get the list using AI"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as threat to creative workforce",
+      "label_negative": "AI as benign tool for creatives",
+      "bipolarity_complete": true,
+      "grounding_span": "If companies continue to do this, it will have a devastating effect on creatives' livelihoods"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as compromise to creative integrity",
+      "label_negative": "AI as assist preserving integrity",
+      "bipolarity_complete": true,
+      "grounding_span": "using AI as an assist, rather than letting it do the actual core, creative work, allows me to maintain my integrity as a creative"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative integrity and human artistry",
+      "grounding_span": "maintain my integrity as a creative"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "it was definitely a timesaver and time is money"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Job stability and fair valuation of creative work",
+      "grounding_span": "concerned about the hype surrounding AI tools and how it affects our job stability"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Positive stance toward AI for administrative tasks",
+      "valence": "positive",
+      "grounding_span": "Having AI assist with the tedious things like emails, contracts, pitches, etc has saved me time"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Resistance to AI in creative work",
+      "valence": "negative",
+      "grounding_span": "I don't use Generative AI in my creative work"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI for brainstorming",
+      "valence": "ambivalent",
+      "grounding_span": "If I'm feeling really stuck and uninspired, I might use ChatGPT to brainstorm ideas. But ultimately, I try to avoid AI use in my workflow"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Concern for artists directly impacted by AI",
+      "valence": "negative",
+      "grounding_span": "If companies continue to do this, it will have a devastating effect on creatives' livelihoods"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Boundary-setting between core and peripheral creative tasks",
+      "grounding_span": "using AI as an assist, rather than letting it do the actual core, creative work"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Concern for broader industry and economic impact",
+      "grounding_span": "concerned about the hype surrounding AI tools and how it affects our job stability"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

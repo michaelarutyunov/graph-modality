@@ -1,0 +1,157 @@
+{
+  "transcript_id": "work_0849",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as brainstorming and idea generator",
+      "label_negative": "AI as complete task delegator",
+      "bipolarity_complete": true,
+      "grounding_span": "I use it mainly as a collaboration tool for me to build off of, and very rarely delegate complete tasks to AI"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI hallucination and mistakes",
+      "bipolarity_complete": true,
+      "grounding_span": "AI can make mistakes and hallucinate, and when that happens, it is a huge hassle to detect what went wrong"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Code ownership and understanding",
+      "label_negative": "AI-generated code without full understanding",
+      "bipolarity_complete": true,
+      "grounding_span": "I'd rather be able to understand exactly what I built and how I built it to facilitate bug fixing and follow industry standards"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Quality and robustness of work for clients",
+      "label_negative": "Compromised quality due to over-reliance on AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I highly value the quality and robustness of my work, so I want to make sure that I am building the best possible product"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as evolving tool requiring human adaptation",
+      "label_negative": "AI as static tool with current limitations",
+      "bipolarity_complete": true,
+      "grounding_span": "Perhaps my approach may begin to include some delegation as AI improves the quality of its deliverables"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Professional competence and code ownership",
+      "grounding_span": "I'd rather be able to understand exactly what I built and how I built it"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Client success and satisfaction",
+      "grounding_span": "I highly value the quality and robustness of my work"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Career advancement and adaptability",
+      "grounding_span": "how I can find a niche spot to grow my career amidst all of that"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "I then review and double check the AI answer to make sure it is correct and use it to help my decision making"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI delegation due to poor output",
+      "valence": "negative",
+      "grounding_span": "it would build the context in a very illogical way which made it hard for me to integrate and led to time spent bug fixing"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Cautious openness to future delegation",
+      "valence": "ambivalent",
+      "grounding_span": "Perhaps my approach may begin to include some delegation as AI improves the quality of its deliverables, but still with limitations"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative verification and follow-up",
+      "grounding_span": "I then review and double check the AI answer to make sure it is correct"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Adaptive career flexibility — shifts focus rather than resisting change",
+      "grounding_span": "how I can find a niche spot to grow my career amidst all of that"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,157 @@
+{
+  "transcript_id": "work_0987",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI for standard automation wrapper code",
+      "label_negative": "AI for business logic and calculations",
+      "bipolarity_complete": true,
+      "grounding_span": "To write Excel VBA code for such standard automation tasks as open every file in this folder"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "Self-written business logic for maintainability",
+      "label_negative": "Delegated business logic requiring verification",
+      "bipolarity_complete": true,
+      "grounding_span": "I prefer to write these myself rather than delegating to AI and then checking"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI adherence to team conventions",
+      "label_negative": "AI deviation from personal coding style",
+      "bipolarity_complete": true,
+      "grounding_span": "I then need to go back to ask it to apply my preferred coding conventions particularly in the case of naming variables"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as coding assistant",
+      "label_negative": "AI as threat to foundational coding skills",
+      "bipolarity_complete": true,
+      "grounding_span": "Ai can write this 'wrapper' code quickly an effectively"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Human as driver of development process",
+      "label_negative": "AI as autonomous developer",
+      "bipolarity_complete": true,
+      "grounding_span": "I am still the driver of the development process"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "Ai can write this 'wrapper' code quickly an effectively"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Maintainability and debugging ease",
+      "grounding_span": "This makes updating and debugging easier for me"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional competence and adaptability",
+      "grounding_span": "the skill is in knowing what AI can be best asked to do"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI as initial pass tool",
+      "valence": "positive",
+      "grounding_span": "Ai can write this 'wrapper' code quickly an effectively. This is satisfying."
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI naming suggestions",
+      "valence": "negative",
+      "grounding_span": "What is frustrating is that I then need to go back to ask it to apply my preferred coding conventions"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Confidence in human-driven development",
+      "valence": "positive",
+      "grounding_span": "I am still the driver of the development process"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement with limited back-and-forth",
+      "grounding_span": "Going back and forth sounds closer to what I do"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Selective delegation based on task nature",
+      "grounding_span": "I use what Ai produces as a wrapper for the 'action' parts of my code"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

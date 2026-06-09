@@ -1,0 +1,217 @@
+{
+  "transcript_id": "creativity_0097",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as copywriting assistant for refinement",
+      "label_negative": "AI producing generic word salad without refinement",
+      "bipolarity_complete": true,
+      "grounding_span": "I rely heavily on AI tools for content creation"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as confidence booster in marketing copy",
+      "label_negative": "AI causing cliche or wrong tone",
+      "bipolarity_complete": true,
+      "grounding_span": "It makes me feel a bit more confident in the marketing copy before I hand it over to a client but there are also issues like sounding too cliche or not finding the right tone"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as productivity multiplier for solo founder",
+      "label_negative": "AI as job threat for large team employees",
+      "bipolarity_complete": true,
+      "grounding_span": "It helps me do more work in a short amount of time and offer a higher level of service"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as iterative brainstorming partner",
+      "label_negative": "AI as one-shot content generator",
+      "bipolarity_complete": true,
+      "grounding_span": "I then ask for two or three versions depending on how I feel about it"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI model reliability and consistency",
+      "label_negative": "AI model inconsistency across days or projects",
+      "bipolarity_complete": true,
+      "grounding_span": "a model will be great one day and not as great the next week or for a different project"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI context limits and subscription barriers",
+      "label_negative": "Unlimited context and unified AI environment",
+      "bipolarity_complete": true,
+      "grounding_span": "The context limits are something I bump into quite often and arbitrary limits put in place by AI companies to limit usage is really annoying"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Creative confidence and quality output",
+      "grounding_span": "being able to feel confident that what I have is going to work"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "It helps me do more work in a short amount of time"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Client satisfaction and business success",
+      "grounding_span": "delivering something closer to the high end marketing firms as an individual working from home"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Creative autonomy and control",
+      "grounding_span": "I'm driving the decisions but I get AI to identify weaknesses"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Optimistic reliance on AI for copywriting",
+      "valence": "positive",
+      "grounding_span": "I rely heavily on AI tools for content creation"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Confidence in AI-assisted copy",
+      "valence": "positive",
+      "grounding_span": "It makes me feel a bit more confident in the marketing copy"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Frustration with AI cliches and tone issues",
+      "valence": "negative",
+      "grounding_span": "issues like sounding too cliche or not finding the right tone"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Optimism about AI empowering solo founders",
+      "valence": "positive",
+      "grounding_span": "I'm highly optimistic. I think the programming side of things and AI are more concerning than marketing and as a solo founder I'm not as worried about being put out of work"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Concern about AI model inconsistency",
+      "valence": "negative",
+      "grounding_span": "a model will be great one day and not as great the next week or for a different project"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Frustration with context limits and subscription barriers",
+      "valence": "negative",
+      "grounding_span": "The context limits are something I bump into quite often and arbitrary limits put in place by AI companies to limit usage is really annoying"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through multiple models and fresh conversations",
+      "grounding_span": "I start a new conversation or choose a new model and send it through and ask for critical feedback"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "A/B testing and data-driven decision making",
+      "grounding_span": "Sometimes I'll do an A/B test and show both to the client and we sorta pick out what is best or send both out and display copy A to one visitor and copy B to another visitor"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

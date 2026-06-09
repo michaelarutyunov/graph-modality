@@ -1,0 +1,164 @@
+{
+  "transcript_id": "work_0048",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI reliability and factuality",
+      "label_negative": "AI as unreliable or unhelpful for complex tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "mainly to access a quick factual answer if I get stuck on something software related"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as brainstorming and idea generator",
+      "label_negative": "AI as limited to conventional ideas",
+      "bipolarity_complete": true,
+      "grounding_span": "come up with creative ideas which I can then expand on"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as task-specific tool",
+      "label_negative": "AI inability to handle specialized software work",
+      "bipolarity_complete": true,
+      "grounding_span": "It isn't yet capable of using or helping with specific software, such as Maya, ZBrush, Rhino etc"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as job threat",
+      "label_negative": "AI as harmless or beneficial to employment",
+      "bipolarity_complete": true,
+      "grounding_span": "it does threaten jobs within the industry"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as practical problem solver",
+      "label_negative": "AI as not immediately helpful",
+      "bipolarity_complete": true,
+      "grounding_span": "It did provide a quick solution to a mesh issue that would have taken me hours to work out alone"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "quick solution to a mesh issue that would have taken me hours"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Novelty and creative insight",
+      "grounding_span": "come up with ideas that wouldn't be seen on a Google search"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Job security and skill relevance",
+      "grounding_span": "it does threaten jobs within the industry"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "It did provide a quick solution to a mesh issue"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Resistance to AI in creative work",
+      "valence": "positive",
+      "grounding_span": "AI can help to simplify things and provide a few different options quickly"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Worry about AI's negative impact on jobs",
+      "valence": "negative",
+      "grounding_span": "The attitude towards it is generally negative as it does threaten jobs"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Resistance to expanding AI use",
+      "valence": "negative",
+      "grounding_span": "I dont plan to use AI much more than I do currently"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Preference for single-query, reference-style interaction",
+      "grounding_span": "Ask a specific question only"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic filtering based on project constraints",
+      "grounding_span": "From a list of AI suggestions, there is normally only one or two that are realistically feasible"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

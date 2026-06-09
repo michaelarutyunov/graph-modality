@@ -1,0 +1,169 @@
+{
+  "transcript_id": "work_0061",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as creative collaborator for menu and drink descriptions",
+      "label_negative": "AI as independent creator without human input",
+      "bipolarity_complete": true,
+      "grounding_span": "I go back and worth adjusting the descriptions they've provided or changing the instructions I gave them until they create something that matches what I was envisioning"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as source of creative cocktail names",
+      "label_negative": "AI as poor at creative naming",
+      "bipolarity_complete": true,
+      "grounding_span": "I'm normally very satisfied with the cocktail names it comes up with"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI handling of Canadian context (spelling, grammar, slang)",
+      "label_negative": "AI ignoring Canadian context",
+      "bipolarity_complete": true,
+      "grounding_span": "it does not always use the correct spelling, grammar, or slang in its responses"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Human customer interaction vs AI automation",
+      "label_negative": "AI taking over customer-facing roles",
+      "bipolarity_complete": true,
+      "grounding_span": "I prefer handling all of the customer facing roles myself"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as team-based creative game",
+      "label_negative": "AI as solitary tool",
+      "bipolarity_complete": true,
+      "grounding_span": "we all kind of do it as a team. We find it like a fun game to talk to the AI"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative expression and satisfaction",
+      "grounding_span": "get the perfect descriptions/names, better than anything we could create on our own"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Human connection and hospitality",
+      "grounding_span": "I like talking to strangers and building that connection with my customers"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Cultural authenticity and accuracy",
+      "grounding_span": "it does not always use the correct spelling, grammar, or slang"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for cocktail names",
+      "valence": "positive",
+      "grounding_span": "I'm normally very satisfied with the cocktail names it comes up with"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI's lack of Canadian context",
+      "valence": "negative",
+      "grounding_span": "Sometimes it can be frustrating because I live in Canada"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Preference for human customer interaction",
+      "valence": "positive",
+      "grounding_span": "I prefer handling all of the customer facing roles myself"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Enjoyment of collaborative AI process",
+      "valence": "positive",
+      "grounding_span": "We find it like a fun game to talk to the AI"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative collaborative refinement — back-and-forth adjustment",
+      "grounding_span": "I go back and worth adjusting the descriptions they've provided or changing the instructions"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain boundary setting — preserving human roles",
+      "grounding_span": "I prefer handling all of the customer facing roles myself"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

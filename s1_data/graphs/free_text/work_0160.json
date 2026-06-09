@@ -1,0 +1,154 @@
+{
+  "transcript_id": "work_0160",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI image generation accuracy for product placement",
+      "label_negative": "AI image generation inconsistency and errors",
+      "bipolarity_complete": true,
+      "grounding_span": "Most of the time the glasses do not come out with good accuracy"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI code assistance specificity",
+      "label_negative": "AI code assistance overgeneralization and confusion",
+      "bipolarity_complete": true,
+      "grounding_span": "I get much better results when I just focus on the specific lines of code related to my request"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability and tool stability",
+      "label_negative": "AI unreliability and tool errors",
+      "bipolarity_complete": true,
+      "grounding_span": "I also get many errors with chatgpt saying no models available for request and the copolit windows app freezing"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as collaborative assistant",
+      "label_negative": "AI as independent task delegator",
+      "bipolarity_complete": true,
+      "grounding_span": "I collaborate with it mostly"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Efficient e-commerce product presentation",
+      "grounding_span": "My goal is to get the sunglasses to look as close as possible to the real model I'm selling so the customer can see how they look on a persons face"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productive website development",
+      "grounding_span": "the large amount of time its taking me to reach conclusive fixes while building my ecommerce website"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Control and clarity in coding tasks",
+      "grounding_span": "I prefer to edit specific blocks of code over a full code"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Satisfaction with AI when outputs are accurate",
+      "valence": "positive",
+      "grounding_span": "I'm satisfied when the images i need come out perfectly as I ask them to be or when the AI finds the exact code that is causing an issue"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Frustration with AI inconsistency and errors",
+      "valence": "negative",
+      "grounding_span": "frustration is all the opposite of those and also the large amount of time its taking me to reach conclusive fixes"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Skepticism about AI's ability to replace human skills",
+      "valence": "negative",
+      "grounding_span": "I don't think these models are even close to developing entire websites"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative prompt experimentation",
+      "grounding_span": "I will usually try different phrasing techniques to get the model to produce a male or female model"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Narrow problem decomposition",
+      "grounding_span": "it's easier to keep the code focus very small"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n8",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

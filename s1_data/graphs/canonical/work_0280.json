@@ -1,0 +1,187 @@
+{
+  "transcript_id": "work_0280",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as fully autonomous replacement",
+      "bipolarity_complete": true,
+      "grounding_span": "I really prefer to collaborate"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as efficiency tool",
+      "label_negative": "AI for tasks that require personal touch",
+      "bipolarity_complete": true,
+      "grounding_span": "I was really happy to have AI to help me write clean content faster"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as competitive advantage",
+      "label_negative": "AI use leading to homogenization",
+      "bipolarity_complete": true,
+      "grounding_span": "It makes us stand out as 'forward thinkers'"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI trustworthiness and verification",
+      "label_negative": "Distrust due to AI errors or inauthenticity",
+      "bipolarity_complete": true,
+      "grounding_span": "As AI evolves, my ability to trust it will evolve"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI for administrative tasks",
+      "label_negative": "AI for creative or personal tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't really like doing administrative work"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as initial draft generator",
+      "label_negative": "AI for full writing without human editing",
+      "bipolarity_complete": true,
+      "grounding_span": "I like to do the proofreading and editing, myself"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Authenticity and personal touch",
+      "grounding_span": "Marketing in the higher ed space needs to feel personal and authentic"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Career sustainability",
+      "grounding_span": "I do worry about this when it comes to my career"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "AI helps me deliver pretty good work quickly"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Preference for collaboration over delegation",
+      "valence": "positive",
+      "grounding_span": "I really prefer to collaborate"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Reluctance to use AI for writing",
+      "valence": "negative",
+      "grounding_span": "The use of AI as a beginning, middle, and end of a project is frustrating to me"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Concern about skill loss",
+      "valence": "negative",
+      "grounding_span": "I do worry about the, 'If you don't use it, you lose it' type of thing"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Cautious openness to future delegation",
+      "valence": "positive",
+      "grounding_span": "When I trust that AI won't make writing errors... I will likely begin to delegate more"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative iterative refinement — works back and forth with AI",
+      "grounding_span": "I really prefer to collaborate"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic differentiation through AI mastery",
+      "grounding_span": "It makes us stand out as 'forward thinkers'"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n6",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

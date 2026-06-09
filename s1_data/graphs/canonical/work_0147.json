@@ -1,0 +1,198 @@
+{
+  "transcript_id": "work_0147",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as time-saving tool",
+      "label_negative": "AI as threat to teacher skill and autonomy",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI simply as a time saving device"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as reviewer of teacher-created materials",
+      "label_negative": "AI adaptation without teacher judgment",
+      "bipolarity_complete": true,
+      "grounding_span": "I know my students and their needs well enough that I can tell if a suggestion is actually going to be useful"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI suggestions that maintain core learning goals",
+      "label_negative": "AI suggestions that reduce challenge or separate students",
+      "bipolarity_complete": true,
+      "grounding_span": "without changing the core lesson or the main learning goals"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Teacher-created resources as foundation",
+      "label_negative": "AI-generated resources as primary material",
+      "bipolarity_complete": true,
+      "grounding_span": "all resources are shared between teachers and I think it's really important that these are made, at least initially, by real people"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI use in education",
+      "label_negative": "Unrestricted AI use",
+      "bipolarity_complete": true,
+      "grounding_span": "We have very clear boundaries on how we use AI"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as threat to student learning assessment",
+      "label_negative": "AI as support for student learning",
+      "bipolarity_complete": true,
+      "grounding_span": "we as teachers can't properly assess where a student is at education wise because all of their thinking and work is being done by AI"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Educational quality and accuracy",
+      "grounding_span": "we need to know that materials and teaching are sticking to the curriculum"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Teacher professional growth",
+      "grounding_span": "teachers and support staff know their own material"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Child development and inclusive learning",
+      "grounding_span": "just because someone has learning difficulties doesn't mean they should be separated out from the rest of the class"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Efficiency and reduced workload",
+      "grounding_span": "education staff are under a lot of pressure and have a huge workload"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI for simple adaptation tasks",
+      "valence": "positive",
+      "grounding_span": "The AI did a really good job of this and saved me a lot of time"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Resistance to over-reliance on AI",
+      "valence": "negative",
+      "grounding_span": "I worry that too much reliance on AI will lower the quality of teaching"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Preference for AI on simple tasks only",
+      "valence": "positive",
+      "grounding_span": "If I have time, I'll do these tasks myself as I would prefer to not use AI"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Resistance to expanding AI use",
+      "valence": "negative",
+      "grounding_span": "I would like to use less of it in the future"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Systematic filtering of AI suggestions through contextual factors",
+      "grounding_span": "I know my students and their needs well enough that I can tell if a suggestion is actually going to be useful"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Systematic task decomposition into specific prompts",
+      "grounding_span": "I find its when prompts become more complex that AI struggles"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,159 @@
+{
+  "transcript_id": "work_0820",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as verification tool for simple calculations",
+      "label_negative": "Manual calculation with risk of error",
+      "bipolarity_complete": true,
+      "grounding_span": "Mindless calculations, forming excel tables"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI requiring context explanation",
+      "label_negative": "Human on-site contextual judgment",
+      "bipolarity_complete": true,
+      "grounding_span": "AI does not have up to date satellite imagery, or context of what the survey requirements are"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI false confidence in error detection",
+      "bipolarity_complete": true,
+      "grounding_span": "the model could not figure it out, but it still pretended to find errors"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as practical labor-saving tool",
+      "label_negative": "Extended manual work after physical labor",
+      "bipolarity_complete": true,
+      "grounding_span": "After a long day in the sun doing a level loop, i did not want to do calculations"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Efficiency and speed in work",
+      "grounding_span": "AI to do the math in a few seconds, whereas I would take 10+ minutes"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Accuracy and reliability",
+      "grounding_span": "saved any potential calculation errors"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional autonomy",
+      "grounding_span": "i feel secure in my position"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Satisfaction with AI for routine numerical tasks",
+      "valence": "positive",
+      "grounding_span": "I got home earlier, and saved any potential calculation errors so I was satisfied"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Frustration with AI errors",
+      "valence": "negative",
+      "grounding_span": "the model could not figure it out, but it still pretended to find errors, which was very frustrating"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Confidence in human judgment over AI",
+      "valence": "positive",
+      "grounding_span": "the human eye on the worksite is still much better"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Delegation with verification — offloads complex tasks but double-checks results",
+      "grounding_span": "i would quickly understand if something went wrong when seeing the results"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based boundary setting — clear separation of AI-appropriate vs. human-only tasks",
+      "grounding_span": "AI still lacks context and up to date data of worksites that surveyors need"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n8",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n3",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

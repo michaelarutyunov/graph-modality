@@ -1,0 +1,188 @@
+{
+  "transcript_id": "work_0034",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as tutor for learning and understanding",
+      "label_negative": "AI as mere translator providing answers without learning",
+      "bipolarity_complete": true,
+      "grounding_span": "just using a translator app isn't going to teach you anything, but having a tutor who can answer questions and customize for your needs is really going to help"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as efficient problem-solver for cyclical tasks",
+      "label_negative": "Struggling alone with infrequent tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I spent hours trying to get it right to no avail. Finally I broke down and asked AI ... It wrote a for loop for me ... that solved the problem and I was done so fast"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as thought partner for growth and new approaches",
+      "label_negative": "AI limited to fixing errors only",
+      "bipolarity_complete": true,
+      "grounding_span": "I should also use it to grow and think about new ways of doing things. Having that thought partner is probably the best benefit"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Reading knowledge of coding languages via AI",
+      "label_negative": "Full coding proficiency required without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I could develop a reading knowledge of Python with AI writing code and I understand it without being able to generate it"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as research assistant (hesitant adoption)",
+      "label_negative": "Self-directed research (enjoyable but time-consuming)",
+      "bipolarity_complete": true,
+      "grounding_span": "I'm also trying to be more strategic about AI as a research assistant. This is an area where I like doing research and don't feel like I need help"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "Openness to AI despite initial fear and pride",
+      "label_negative": "Resistance to AI due to fear and pride",
+      "bipolarity_complete": true,
+      "grounding_span": "like a lot of people I hadn't used it before out of a combination of fear and pride"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Continuous learning and skill development",
+      "grounding_span": "I try to figure it out myself and then use AI as my tutor"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "Much faster now with AI"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Professional competence and problem-solving",
+      "grounding_span": "It was very satisfying to solve the problem"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Personal growth and expanded perspective",
+      "grounding_span": "I should also use it to grow and think about new ways of doing things"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI as tutor for coding",
+      "valence": "positive",
+      "grounding_span": "That has really been a gamechanger"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI solving cyclical task",
+      "valence": "positive",
+      "grounding_span": "It was very satisfying to solve the problem and also a 'road to Damascus' moment"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Hesitation to use AI for research due to enjoyment",
+      "valence": "ambivalent",
+      "grounding_span": "I have been hesitant to replace something I enjoy with something I would have to fact-check anyway"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Openness to AI after overcoming fear",
+      "valence": "positive",
+      "grounding_span": "I realized I needed to be more open to AI"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Analogical reasoning — uses language learning analogy to frame AI use",
+      "grounding_span": "I try to think about it like studying a foreign language"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic skill differentiation — decides which languages to master vs. have reading knowledge",
+      "grounding_span": "For R and SQL I want to really learn those, but for Python ... I could develop a reading knowledge"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

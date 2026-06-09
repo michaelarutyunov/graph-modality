@@ -1,0 +1,180 @@
+{
+  "transcript_id": "work_0919",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI reliability and factuality",
+      "label_negative": "AI as unreliable source requiring full manual verification",
+      "bipolarity_complete": true,
+      "grounding_span": "I can take a twenty minute job and whittle it down to a few minutes"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as drafting assistant for emails",
+      "label_negative": "AI as autonomous writer producing impersonal output",
+      "bipolarity_complete": true,
+      "grounding_span": "I give it scaffolding and then work back and forth with it to get what I want"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI hallucination and broken links",
+      "bipolarity_complete": true,
+      "grounding_span": "sometimes the links lead to 404s"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as tool for career advancement",
+      "label_negative": "AI as threat to job relevance",
+      "bipolarity_complete": true,
+      "grounding_span": "I'm using AI to help me identify places where I can remain relevant in an AI dominated world"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as research starting point",
+      "label_negative": "Traditional search methods leading to dead ends",
+      "bipolarity_complete": true,
+      "grounding_span": "ChatGPT is almost like a co-worker I turn to and say, 'Hey, do you think I'm thinking of this the right way?'"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "I can take a twenty minute job and whittle it down to a few minutes"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional competence",
+      "grounding_span": "All the information I provide my employer has to be bulletproof"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Career resilience and adaptability",
+      "grounding_span": "I'm using AI to help me identify places where I can remain relevant in an AI dominated world"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Epistemic accuracy and understanding",
+      "grounding_span": "I may have to clarify something that doesn't make sense to me and ask a question about whatever topic I'm researching so I better understand it"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for time-saving",
+      "valence": "positive",
+      "grounding_span": "I'd say it satisfies more than frustrates because I can take a twenty minute job and whittle it down to a few minutes"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI errors and broken links",
+      "valence": "negative",
+      "grounding_span": "It frustrates me when it obviously gets things wrong or I have to go back and redo the same prompt because it's forgotten my instructions"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Openness to increasing AI use in future",
+      "valence": "positive",
+      "grounding_span": "I think, if anything, I'll use it more and more"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Concern about colleagues' over-reliance on AI",
+      "valence": "mixed",
+      "grounding_span": "I don't tell anyone my process because I know how a lot of people feel about AI"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Verification-oriented — cross-checks AI outputs against other sources",
+      "grounding_span": "I double-check everything because I have to"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative iterative refinement — works back and forth with AI",
+      "grounding_span": "I give it scaffolding and then work back and forth with it to get what I want"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

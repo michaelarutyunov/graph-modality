@@ -1,0 +1,183 @@
+{
+  "transcript_id": "creativity_0101",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as brainstorming and idea generator",
+      "label_negative": "AI as autonomous decision-maker",
+      "bipolarity_complete": true,
+      "grounding_span": "I like to have conversations frequently where I state my objective or intended outcome and then have the AI ask me questions"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for administrative tasks",
+      "label_negative": "AI for core creative decisions",
+      "bipolarity_complete": true,
+      "grounding_span": "I think there's hardly any downside on my end for using it in an administrative sense"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as efficiency tool",
+      "label_negative": "Manual post-production without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "cut my turnaround time on galleries from 12 weeks to about 3"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as tool for market and business perspective",
+      "label_negative": "AI causing loss of creative ownership",
+      "bipolarity_complete": true,
+      "grounding_span": "it will consider the impact to that 'bigger vision' more easily and consistently than I do"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as brainstorming and idea generator",
+      "label_negative": "AI as focused tool for selective ideas",
+      "bipolarity_complete": true,
+      "grounding_span": "it can give me a sense of shiny-object syndrome"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative autonomy",
+      "grounding_span": "keeping myself in creative control is essential with my work"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "the amount of time I spend on these tasks has been reduced"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Business growth and profitability",
+      "grounding_span": "I am able to charge more, so I know I've been making significantly more money"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Intentional focus and long-term vision",
+      "grounding_span": "I've had to become much more intentional about what I take on and how it will promote my long-term objectives"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI as collaborative partner",
+      "valence": "positive",
+      "grounding_span": "I think it has improved my quality of output in every way and arena of business"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Concern about creativity loss",
+      "valence": "negative",
+      "grounding_span": "I worry that relying on it too much in regards to creative steps will remove me from the drivers seat"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Optimism about future AI adoption",
+      "valence": "ambivalent",
+      "grounding_span": "I do worry that with mass acceptance there will be the risk that AI is used more - but not more intentionally"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative back-and-forth ideation with AI",
+      "grounding_span": "I will first extensively train the AI on my tone of voice... then I provide the initial idea or the draft version and then use the AI to help me see my 'blind spots'"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based boundary setting — separates creative from non-creative tasks",
+      "grounding_span": "I've had to become much more intentional about what I take on and how it will promote my long-term objectives"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

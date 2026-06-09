@@ -1,0 +1,151 @@
+{
+  "transcript_id": "science_0039",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as learning complement for coding",
+      "label_negative": "AI as unreliable standalone coder",
+      "bipolarity_complete": true,
+      "grounding_span": "I used it alongside searching documentation and reading from textbooks"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability for summarization and synthesis",
+      "label_negative": "AI unreliability for summarizing key points",
+      "bipolarity_complete": true,
+      "grounding_span": "AI tools are not reliably able to summarize key points from papers"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as literature filtering tool",
+      "label_negative": "Manual literature search without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "If an AI tool could narrow down which of those would be relevant to me"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI in critical experimental and analytical domains",
+      "label_negative": "Manual execution in critical domains",
+      "bipolarity_complete": true,
+      "grounding_span": "I spend more time checking for errors in AI tools when applied in those domains"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Efficient learning and skill development",
+      "grounding_span": "I used ChatGPT to help me identify ways to make my code cleaner"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Research efficiency and time savings",
+      "grounding_span": "that would save a lot of time"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Research integrity and reliability",
+      "grounding_span": "even small detours can throw the whole pipeline off"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Positive stance toward AI as coding tutor",
+      "valence": "positive",
+      "grounding_span": "I used ChatGPT to help me identify ways to make my code cleaner"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Negative stance toward AI for summarization",
+      "valence": "negative",
+      "grounding_span": "AI tools are not reliably able to summarize key points from papers"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Aspirational stance toward AI for literature filtering",
+      "valence": "positive",
+      "grounding_span": "If an AI tool could narrow down which of those would be relevant to me"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Skeptical stance toward AI in critical tasks",
+      "valence": "negative",
+      "grounding_span": "I spend more time checking for errors in AI tools when applied in those domains"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Cross-referencing and stepwise verification",
+      "grounding_span": "I would cross-reference what it was telling me with source documentation"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Complementary tool integration",
+      "grounding_span": "I used it alongside searching documentation and reading from textbooks"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

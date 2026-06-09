@@ -1,0 +1,193 @@
+{
+  "transcript_id": "creativity_0109",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as initial iteration and brainstorming tool",
+      "label_negative": "AI as final decision-maker or sole creator",
+      "bipolarity_complete": true,
+      "grounding_span": "I usually find myself using AI for initial iteration and brainstorming"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as executive function assistant for ADHD",
+      "label_negative": "AI as source of distraction or overwhelm",
+      "bipolarity_complete": true,
+      "grounding_span": "I use ChatGPT almost daily for executive function related tasks like to-do lists or breaking down big projects into smaller pieces"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as honest mentor/coach providing feedback",
+      "label_negative": "AI as sugar-coating or unreliable critic",
+      "bipolarity_complete": true,
+      "grounding_span": "it will give honest and not sugar-coated feedback on the project"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as amplifier of human creativity",
+      "label_negative": "AI as replacement for human creativity",
+      "bipolarity_complete": true,
+      "grounding_span": "I like to use AI to amplify my own creative vision"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as knowledgeable collaborator in unfamiliar domains",
+      "label_negative": "AI as unreliable or misleading guide",
+      "bipolarity_complete": true,
+      "grounding_span": "I used AI to assist me in talking through our ideas for the game"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and task completion",
+      "grounding_span": "I am much more productive"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Creative control and authenticity",
+      "grounding_span": "I am always in charge of the conversation"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Self-compassion and overcoming perfectionism",
+      "grounding_span": "it's good, leave it alone!"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Human creativity as irreplaceable soul-expression",
+      "grounding_span": "true art is sparked by something deep within the soul that AI can only imitate"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Positive embrace of AI for productivity and support",
+      "valence": "positive",
+      "grounding_span": "I am much more productive"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Confident rejection of AI replacing human creativity",
+      "valence": "positive",
+      "grounding_span": "I don't have the same fears that some of them do about AI taking away our jobs"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Trust in AI feedback to overcome perfectionism",
+      "valence": "positive",
+      "grounding_span": "I've learned to trust the model when it tells me, 'it's good, leave it alone!'"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Customized structured interaction — uses custom instructions and modes to control AI behavior",
+      "grounding_span": "I've given custom instructions to my ChatGPT that relate to how I think and how I best navigate my ADHD"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Compartmentalization and task segmentation — separates tasks into different conversations or project folders",
+      "grounding_span": "I can compartmentalize different tasks within different conversations or project folders"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

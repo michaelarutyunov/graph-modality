@@ -1,0 +1,200 @@
+{
+  "transcript_id": "work_0479",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as summarization tool for long technical documents",
+      "label_negative": "Manual reading and extraction of key points",
+      "bipolarity_complete": true,
+      "grounding_span": "summarising long, technical documents"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as editor for improving written output",
+      "label_negative": "Self-editing without AI assistance",
+      "bipolarity_complete": true,
+      "grounding_span": "use AI to run these through to check for ways in which they might be improved"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability for factual retrieval",
+      "label_negative": "AI unreliability for specific factual information",
+      "bipolarity_complete": true,
+      "grounding_span": "I've found AI to be less reliable in these instances"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as foundational work assistant",
+      "label_negative": "AI taking over core analytical and writing skills",
+      "bipolarity_complete": true,
+      "grounding_span": "AI can have a role in doing some of the foundational work leaving me to do the more interesting side"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI embeddedness and user choice",
+      "label_negative": "Mandatory AI integration without opt-out",
+      "bipolarity_complete": true,
+      "grounding_span": "having the option to disable tools for certain activities is important"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "saves me the most time"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Accuracy and trustworthiness",
+      "grounding_span": "make sure that they're an accurate reflection of the source"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Authenticity and personal voice",
+      "grounding_span": "It has to still sound like it's in my 'voice'"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Personal autonomy and skill preservation",
+      "grounding_span": "I'm mindful of not wanting to hand that over"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for summarization and editing",
+      "valence": "positive",
+      "grounding_span": "The satisfied ways I use it are the ones I've described to you"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI for factual retrieval",
+      "valence": "negative",
+      "grounding_span": "More frustrating is when I used AI to try and find out a specific piece of information"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Cautious optimism about AI in product development",
+      "valence": "positive",
+      "grounding_span": "I hope it will... improving some of our product development processes"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Preference for choice in AI adoption",
+      "valence": "positive",
+      "grounding_span": "having the option to disable tools for certain activities is important"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through selective feedback",
+      "grounding_span": "I'll give it a first go, review the proposals and may come back saying - drop that one, have another go at that section"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based task allocation with personal boundaries",
+      "grounding_span": "I've never used AI to help with emails or with writing performance review content"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n4",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -12,42 +12,62 @@ This separation is critical: it means we can cleanly measure whether adding grap
 
 1. **Train/test split.** Fixed stratified split (70/15/15, seed=42). Split IDs must be saved and never changed. No hyperparameter decisions on test set performance. Validation set is used for model selection and early stopping.
 
-2. **Classification pipeline.** Train and evaluate classifier architectures on frozen modality embeddings. Compare single-modality baselines (text-only, stats-only, GIN-only) against fusion architectures (stacked concat, gated fusion, late fusion). Record macro-F1, per-class F1, confusion matrices.
+2. **Classification pipeline.** Train and evaluate classifier architectures on frozen modality embeddings. Two backends are supported:
+   - **torch**: PyTorch MLP classifiers — SingleModality (baselines), Stacked (concat), GatedFusion (attention), LateFusion (ensemble). Epoch-based training with early stopping.
+   - **sklearn**: Traditional classifiers — LogisticRegression, RandomForest, GradientBoosting, SVC. One-shot fit, no epochs. All operate on concatenated modality features.
+   Compare single-modality baselines against fusion combinations. Record macro-F1, per-class F1, confusion matrices.
 
-3. **Fusion experiment runner.** Use `classification/fusion/run.py` with `ExperimentConfig` dataclass to run reproducible experiments. Each run saves: model weights, training curves, per-example predictions, metrics JSON. Sweep across architectures, modality combinations, and targets.
+3. **Experiment runner.** Use `s5_classification/train_run.py` with `ExperimentConfig` dataclass to run reproducible experiments. Supports `--sweep torch` (42 experiments), `--sweep sklearn` (48 experiments), or `--sweep all` (90 experiments). Each run saves: model weights (.pt or .joblib), curves, per-example predictions, metrics JSON. Sweep across architectures, modality combinations, targets, and backends.
 
-4. **Disentanglement analysis.** Build complementarity matrices (2×2: text correct/wrong vs graph correct/wrong) to quantify GRAPH-UNIQUE signal — examples where graph classifies correctly and text does not. This directly answers "does the frozen graph modality add complementary signal?"
+4. **Disentanglement analysis.** Build complementarity matrices (2×2: text correct/wrong vs graph correct/wrong) to quantify GRAPH-UNIQUE signal — examples where graph classifies correctly and text does not. This directly answers "does the frozen graph modality add complementary signal?" See `s6_notebooks/05_fusion_analysis.py`.
 
-5. **Feature importance (route 2).** Compute permutation importance for the 30 graph stat features. Identify which structural properties drive classification.
+5. **Feature importance (route 2).** Load a pre-trained sklearn model and compute permutation importance for the 30 graph stat features. Identify which structural properties drive classification. `s5_classification/analysis_feature_importance.py` is analysis-only — models are trained by `train_run.py`.
 
 6. **Structural analysis (RQ2, H1-H4).** Test whether cohorts differ in graph structure: Construct:Value ratio (H1), stance valence distribution (H2), bipolarity completeness (H3), cognitive style marker prevalence (H4). Completed in Phase 4.
 
-7. **Results reporting.** Write results to `results/` — never overwrite. Log all findings to `.claude/context/results-log.md`. Report negative results as boundary conditions, not failures.
+7. **Results reporting.** Write results to `results/fusion/` — never overwrite. Log all findings to `.claude/context/results-log.md`. Report negative results as boundary conditions, not failures.
 
 ## Key Files
 
 | File | Role |
 |---|---|
-| `classification/split.py` | Fixed stratified split (70/15/15, seed=42) |
-| `classification/baseline.py` | Text-only logistic regression baseline |
-| `classification/route2.py` | Text + graph stats LR with permutation importance |
-| `classification/fusion/models.py` | **Classifier zoo** — SingleModality, Stacked, GatedFusion, LateFusion |
-| `classification/fusion/train.py` | **Generic training loop** — consumes frozen .npz embeddings |
-| `classification/fusion/run.py` | **Config-driven experiment runner** — any arch × any target |
-| `classification/fusion/config.py` | **ExperimentConfig dataclass** — reproducible experiment specs |
-| `notebooks/02_graph_exploration.py` | Cohort topology, H1-H4 previews |
-| `notebooks/03_classification_results.py` | Results presentation, confusion matrices, route comparison |
-| `notebooks/04_structural_analysis.py` | H1-H4 statistical tests, AI adoption exploratory |
-| `notebooks/05_fusion_analysis.py` | Fusion experiment: complementarity matrices, architecture comparison |
+| `s5_classification/split.py` | Fixed stratified split (70/15/15, seed=42) |
+| `s5_classification/train_config.py` | ExperimentConfig dataclass + sweep builders (torch, sklearn, all) |
+| `s5_classification/train_run.py` | Config-driven experiment runner — torch + sklearn backends |
+| `s5_classification/classifiers.py` | PyTorch classifier zoo + build_classifier() factory |
+| `s5_classification/mlp_single.py` | SingleModalityClassifier — MLP on one embedding |
+| `s5_classification/mlp_stacked.py` | StackedClassifier — concatenation fusion |
+| `s5_classification/mlp_gated.py` | GatedFusionClassifier — learned per-modality attention |
+| `s5_classification/mlp_late.py` | LateFusionClassifier — ensemble (average logits) |
+| `s5_classification/sklearn_classifier.py` | Sklearn wrapper — any sklearn classifier behind Phase 5 interface |
+| `s5_classification/train_loop.py` | PyTorch training loop — Trainer, TrainingConfig, curve plotting |
+| `s5_classification/baseline.py` | Text-only LR (Phase 3 reference, sklearn) |
+| `s5_classification/analysis_feature_importance.py` | Permutation importance — which graph features matter |
+| `s5_classification/analysis_stats.py` | Stats-only per-class report — graph topology discriminability |
+| `s6_notebooks/02_graph_exploration.py` | Cohort topology, H1-H4 previews |
+| `s6_notebooks/03_classification_results.py` | Results presentation, confusion matrices, route comparison |
+| `s6_notebooks/04_structural_analysis.py` | H1-H4 statistical tests, AI adoption exploratory |
+| `s6_notebooks/05_fusion_analysis.py` | Fusion experiment: complementarity matrices, architecture comparison |
 | `.claude/context/results-log.md` | Canonical results record |
-| `results/` | Experiment outputs (gitignored) |
+| `results/fusion/` | Experiment outputs (gitignored) |
 | `cache/modality_dataset/` | Frozen embeddings per split/target (gitignored) |
 
-### Deprecated files
+### Deprecated / archived
 
 | File | Fate |
 |---|---|
-| `classification/route3.py` | Replaced by `classification/fusion/` — conflated GIN+classifier training |
+| `s5_classification/_archived/route3.py` | Replaced by `s5_classification/train_run.py` — conflated GIN+classifier training |
+| `s4_encoding/_archived/model.py` + `train.py` | Task-supervised GIN — replaced by `s4_encoding/graph_gnn_encoder.py` |
+
+## Adding a New Classifier
+
+**Torch (new fusion architecture):**
+1. Create `s5_classification/<name>.py` — ~60 lines, implement forward(embeddings_dict) → logits
+2. Register in `s5_classification/classifiers.py` build_classifier()
+
+**Sklearn (traditional classifier):**
+1. Add one import + one entry to `SKLEARN_CLASSES` dict in `s5_classification/sklearn_classifier.py`
+2. The sweep builder picks it up automatically — 48 experiments generated
 
 ## Evaluation Rules
 
@@ -58,28 +78,36 @@ This separation is critical: it means we can cleanly measure whether adding grap
 - **Significance:** p < 0.05. Mann-Whitney U (pairwise), Kruskal-Wallis (three-way).
 - **Effect sizes:** Cliff's delta (pairwise), eta-squared (omnibus).
 
-## Experiment Matrix (Phase 5)
+## Experiment Matrix
 
 | Dimension | Values |
 |---|---|
+| Backend | torch, sklearn |
 | Target | AI adoption (binary), Cohort (3-class) |
-| Modalities | text, stats, GIN, text+stats, text+GIN, text+stats+GIN |
-| Architecture | SingleModality, Stacked, GatedFusion, LateFusion |
+| Modalities | text, stats, graph, text+stats, text+graph, text+stats+graph |
+| Architecture (torch) | single, stacked, gated, late |
+| Architecture (sklearn) | logistic, random_forest, gradient_boost, svm |
 
-Every combination produces: model .pt, training curves .png, per-example predictions .npy, metrics .json.
+Every combination produces: model file (.pt or .joblib), curves .png, per-example predictions .npy, metrics .json.
 
-## Key Questions (Phase 5 Gate)
+## Key Questions (Phase 5 Gate — answered)
 
 1. With target-agnostic encoders, does graph modality add complementary signal over text alone?
+   **Yes, but small.** +0.001–0.006 F1. GRAPH-UNIQUE cell populated (3-12% of test examples).
+
 2. Does gated fusion outperform stacked concatenation?
+   **For cohort, yes** (11.7% vs 6.9% GRAPH-UNIQUE). For AI adoption, late fusion is best.
+
 3. Does the answer differ by target (AI adoption vs cohort)?
+   **Yes.** Graph-only models collapse to chance on cohort (0.296 F1) but retain signal on AI adoption (~0.58 F1). The autoencoder's node-type objective preserves more AI-adoption-relevant structure.
 
 ## Common Pitfalls
 
 - Evaluating on test set during model development — invalidates final comparison
 - Using accuracy instead of macro-F1 — class imbalance makes accuracy misleading
 - Not saving per-example predictions — needed for complementarity analysis
-- Overwriting result files — each run writes to a new timestamped file
+- Overwriting result files — each run writes to a unique output directory
 - Treating negative results as failures — pre-committed to reporting regardless of outcome
-- Using task-trained GIN embeddings from old `encoding/gnn/train.py` — must use frozen autoencoder embeddings
-- Confusing conflated Phase 3 results (GIN trained with classification loss) with Phase 5 results (frozen GIN + separate classifier)
+- Using task-trained GIN embeddings from old `s4_encoding/_archived/` — must use frozen autoencoder embeddings from `s4_encoding/graph_gnn_encoder.py`
+- Confusing Phase 3 results (GIN trained with classification loss, conflated) with Phase 5 results (frozen GIN + separate classifier, target-agnostic)
+- Confusing `analysis_feature_importance.py`/`analysis_stats.py` (analysis-only, loads pre-trained models) with the experiment runner (training, `s5_classification/train_run.py`)

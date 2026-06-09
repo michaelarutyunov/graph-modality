@@ -1,0 +1,203 @@
+{
+  "transcript_id": "work_0606",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as brainstorming and planning partner",
+      "label_negative": "AI as fully autonomous executor",
+      "bipolarity_complete": true,
+      "grounding_span": "I started using AI to help me brainstorm and create a plan to build the project"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability and trustworthiness",
+      "label_negative": "AI hallucination and unreliability",
+      "bipolarity_complete": true,
+      "grounding_span": "even the latest version of GPT can hallucinate a lot and so I was always weary of this issue"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for complex structured tasks (SQL, debugging)",
+      "label_negative": "AI for nuanced, specific requirements (GUI design)",
+      "bipolarity_complete": true,
+      "grounding_span": "ChatGPT still struggles to understand very specific requirements"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as aid tool not replacement",
+      "label_negative": "AI as complete replacement",
+      "bipolarity_complete": true,
+      "grounding_span": "I will continue to always have this reserved approach to AI as an aid tool and not a complete replacement"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI for safety-sensitive tasks",
+      "label_negative": "AI for safety-sensitive tasks without human verification",
+      "bipolarity_complete": true,
+      "grounding_span": "Safety sensitive tasks such as performing calculations for designing pipeline systems, would also be done almost entirely on my own"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI for meeting notes",
+      "label_negative": "AI for meeting notes without privacy safeguards",
+      "bipolarity_complete": true,
+      "grounding_span": "One thing AI could be really useful for is keeping effective notes during meetings"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "Quickly creating otherwise tedious queries...was really helpful"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional competence and accuracy",
+      "grounding_span": "I would run sanity checks on my work process using AI before consulting my supervisor just to iron out any obvious errors"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Personal autonomy and skill maintenance",
+      "grounding_span": "As long as I am writing code, with or without AI, I am still practicing my coding skill"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Privacy and ethics",
+      "grounding_span": "This obviously has some implications about privacy and ethics"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI for SQL and debugging",
+      "valence": "positive",
+      "grounding_span": "AI was able to help me really well with creating complex and effective SQL queries"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with AI for GUI design",
+      "valence": "negative",
+      "grounding_span": "I got really frustrated while using AI to help me design the GUI"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Skepticism and caution toward AI",
+      "valence": "ambivalent",
+      "grounding_span": "I am always skeptical of what I get from AI"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Optimism about AI for meeting notes",
+      "valence": "positive",
+      "grounding_span": "One thing AI could be really useful for is keeping effective notes during meetings"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative verification and testing",
+      "grounding_span": "I always do my own research and testing before deploying any AI generated code"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based task differentiation",
+      "grounding_span": "Tasks such as creating a presentation for the upper management, I would do almost entirely myself"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

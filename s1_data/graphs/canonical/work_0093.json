@@ -1,0 +1,179 @@
+{
+  "transcript_id": "work_0093",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as independent task delegator",
+      "bipolarity_complete": true,
+      "grounding_span": "I am way more likely to collaborate with it throughout a task"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI usefulness for sanity checks and chain-of-thought confirmation",
+      "label_negative": "AI useless for nuanced behavioral issues requiring full context",
+      "bipolarity_complete": true,
+      "grounding_span": "I use it to confirm my assessment of a situation if I'm second-guessing myself"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for administrative tasks",
+      "label_negative": "AI as irrelevant for hands-on animal care",
+      "bipolarity_complete": true,
+      "grounding_span": "I asked AI to generate volunteer task schedules"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI adoption in workplace",
+      "label_negative": "Open AI discussion in supportive environment",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is generally misunderstood and/or frowned upon"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI adoption in workplace",
+      "label_negative": "AI limited by human dishonesty in adoption process",
+      "bipolarity_complete": true,
+      "grounding_span": "I'd love to see AI used to improve the permanent adoption rates"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Workflow efficiency",
+      "grounding_span": "It helped me avoid having to double-back and check"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Safety and well-being of animals",
+      "grounding_span": "the human touch cannot be replicated when directly dealing with the animals"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional competence",
+      "grounding_span": "confirm my chain-of-thought before altering a routine"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for scheduling",
+      "valence": "positive",
+      "grounding_span": "I was satisfied when I asked AI to generate volunteer task schedules"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI errors",
+      "valence": "negative",
+      "grounding_span": "I've rarely received useful output when I've asked AI how to deal with behavioral issues"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Concern about workplace perception of AI use",
+      "valence": "ambivalent",
+      "grounding_span": "I do not openly talk about it unless I'm among coworkers who are open"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Optimism about future AI adoption",
+      "valence": "positive",
+      "grounding_span": "I'd love to see AI used to improve the permanent adoption rates"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Selective delegation based on task nature",
+      "grounding_span": "I typically decide that a situation calls for an AI consultation when I'm overwhelmed and/or second-guessing myself"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Hands-on primacy — prefers direct experience over AI mediation",
+      "grounding_span": "Most of my tasks I prefer to handle myself, because I am in-tune with the animals"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,179 @@
+{
+  "transcript_id": "work_0134",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as strategic thinking partner",
+      "label_negative": "AI as mere execution tool",
+      "bipolarity_complete": true,
+      "grounding_span": "I usually use AI first to describe to the model that I'm starting a new work project and then explain the desired end product, deliverables, or what assets I have been given to work with and then ask for an outline or suggestions on how to approach the whole thing"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "Confidentiality in AI use",
+      "label_negative": "AI requiring full data access",
+      "bipolarity_complete": true,
+      "grounding_span": "most of the time I'm working under NDA or with confidential data and PII so I have to usually just describe where I am at in the suggested workflow"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as writing assistant preserving personal voice",
+      "label_negative": "AI generating writing from scratch without voice",
+      "bipolarity_complete": true,
+      "grounding_span": "I generally prefer to start with my own writing sample and ask AI to improve it or tell me what I'm missing"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as practical problem solver",
+      "label_negative": "AI as passive responder",
+      "bipolarity_complete": true,
+      "grounding_span": "The model I found most satisfying was the one that proactively suggested that it could create a brief research proposal"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as skill development enabler",
+      "label_negative": "AI as skill atrophy risk",
+      "bipolarity_complete": true,
+      "grounding_span": "Sometimes a model will ask something I don't know about and I take that opportunity to use the AI to explain it to me"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "using AI still is SO much faster and more helpful than in the past when I'd have to Google everything"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Client trust and credibility",
+      "grounding_span": "they know my work style and voice or I know theirs if they are outsourcing work to me and then submitting it as their own"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional competence and adaptability",
+      "grounding_span": "as long as I keep using it, I will keep maintaining and developing relevant skills"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "using AI still is SO much faster and more helpful"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Reluctance to use AI for writing",
+      "valence": "positive",
+      "grounding_span": "I generally prefer to start with my own writing sample and ask AI to improve it"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Appreciation for AI's proactive problem-solving",
+      "valence": "positive",
+      "grounding_span": "The model I found most satisfying was the one that proactively suggested that it could create a brief research proposal"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Openness to increasing AI use in future",
+      "valence": "positive",
+      "grounding_span": "I take that opportunity to use the AI to explain it to me"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative workflow with AI as collaborative partner",
+      "grounding_span": "I continue to go back and forth between other platforms where I'm constructing and saving my work product, and the AI chat to continue to ask for assistance with next steps"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic abstraction to protect confidentiality",
+      "grounding_span": "I have to usually just describe where I am at in the suggested workflow and what roadblock I've hit"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

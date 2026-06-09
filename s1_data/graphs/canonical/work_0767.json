@@ -1,0 +1,242 @@
+{
+  "transcript_id": "work_0767",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as tone checker for professional communication",
+      "label_negative": "Self-reliant direct communication",
+      "bipolarity_complete": true,
+      "grounding_span": "how to respond to emails or texts while sounding professional"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as practical problem solver",
+      "label_negative": "Self-sufficient problem solving",
+      "bipolarity_complete": true,
+      "grounding_span": "problem solving when I need more strategies"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as message shortener for effective signage",
+      "label_negative": "Verbose original message",
+      "bipolarity_complete": true,
+      "grounding_span": "shortening the message"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Personal creative satisfaction in naming",
+      "label_negative": "AI-generated names",
+      "bipolarity_complete": true,
+      "grounding_span": "I really enjoy being creative and coming up with something myself"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as task automator for disliked tasks",
+      "label_negative": "Manual handling of disliked tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I would really like to see it take over tasks for me, especially the ones I don't like to do"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as collaborator for iterative refinement",
+      "label_negative": "Independent task completion",
+      "bipolarity_complete": true,
+      "grounding_span": "I collab with it"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI as refinement tool for maintaining personal touch",
+      "label_negative": "Human-created art with personal meaning",
+      "bipolarity_complete": true,
+      "grounding_span": "art is kind of cheapened when it is created with AI"
+    },
+    {
+      "id": "n8",
+      "type": "Construct",
+      "label": "AI as objectivity aid in difficult conversations",
+      "label_negative": "AI generating genuinely good ideas",
+      "bipolarity_complete": true,
+      "grounding_span": "AI supplies me with a lot of ideas that are very cringey"
+    },
+    {
+      "id": "n9",
+      "type": "Construct",
+      "label": "AI as refinement tool for maintaining personal touch",
+      "label_negative": "AI as threat to human skills",
+      "bipolarity_complete": true,
+      "grounding_span": "I find AI to be useful and not a threat"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Effective professional communication",
+      "grounding_span": "sounding professional"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "won't have to do as much of the contacting that we spend hours doing"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Creative expression and quality",
+      "grounding_span": "makes me feel talented and useful when I can provide something creative"
+    },
+    {
+      "id": "n13",
+      "type": "Value",
+      "label": "Authenticity and personal touch",
+      "grounding_span": "takes away a personal touch and gives you something that lacks any thought"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Satisfaction with AI for wording tasks",
+      "valence": "positive",
+      "grounding_span": "It was helpful in shortening the message"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Resistance to AI in creative work",
+      "valence": "negative",
+      "grounding_span": "This really disappointed me because I used to work in photo editing"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Frustration with AI errors",
+      "valence": "negative",
+      "grounding_span": "AI frustrates me when I want it to think of things that aren't cheesy"
+    },
+    {
+      "id": "n17",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "positive",
+      "grounding_span": "Hopefully, we'll use it more and won't have to do as much of the contacting"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Creative problem-solving through iterative self-generation",
+      "grounding_span": "I actually ended up Googling soccer terms that began with B to come up with the team name"
+    },
+    {
+      "id": "n19",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative iterative refinement — works back and forth with AI",
+      "grounding_span": "Usually I get stuck on something so I give the AI what I have so far"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n13",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n13",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n14",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n8",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n17",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n4",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n19",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n5",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

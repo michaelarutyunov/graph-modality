@@ -1,0 +1,187 @@
+{
+  "transcript_id": "work_0547",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as scaffolding for initial project structure",
+      "label_negative": "AI-generated code without personal understanding",
+      "bipolarity_complete": true,
+      "grounding_span": "I'll typically use it for boiler plate code and for generating class and method structures when I'm first starting out a new project"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as guide for unfamiliar libraries",
+      "label_negative": "Independent exploration without AI guidance",
+      "bipolarity_complete": true,
+      "grounding_span": "I started by asking the AI which functions within LibLouis would be required for my application"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for rapid GUI prototyping",
+      "label_negative": "Manual GUI development from scratch",
+      "bipolarity_complete": true,
+      "grounding_span": "asked the AI to make a super basic GUI using WPF for me so that I can test how the wrappers worked"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as code improver on human-written logic",
+      "label_negative": "AI generating complex logic from scratch",
+      "bipolarity_complete": true,
+      "grounding_span": "written the algorithm myself to begin with, then asked the model to improve upon it"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as global averaging machine",
+      "label_negative": "AI as source of exceptional, boundary-pushing code",
+      "bipolarity_complete": true,
+      "grounding_span": "I simply see it as a global averaging machine; it can pump out great code that any average person can produce, not great code that exceeds the average"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI for compartmentalized feature implementation",
+      "label_negative": "AI for monolithic, non-decomposable tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I could very easily compartmentalize each individual feature of the application and simply ask the model to add GUI features consecutively"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Personal codebase familiarity and ownership",
+      "grounding_span": "I want to be very familiar with my own codebase as it becomes more complex"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "it saved me a bunch of time and effort"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Deep understanding of complex logic",
+      "grounding_span": "some types of complex logic are very hard for even the best of programmers to wrap their heads around without trying it out for themselves"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for GUI prototyping",
+      "valence": "positive",
+      "grounding_span": "I think I was most satisfied with AI when trying to build a mobile port"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with over-reliance on AI for complex logic",
+      "valence": "negative",
+      "grounding_span": "I spent more time re-writing the algorithm to actually understand what it did than I saved using the AI model to generate it for me"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Skepticism about AI's ability to exceed average",
+      "valence": "negative",
+      "grounding_span": "I don't believe the AI would be able to create an enterprise-grade application on par with that of an actual UX designer"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Steady pragmatic use of AI as it improves",
+      "valence": "positive",
+      "grounding_span": "As AI gets better, I'll just use it the same way I currently do"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Compartmentalization and sequential decomposition",
+      "grounding_span": "I could very easily compartmentalize each individual feature of the application and simply ask the model to add GUI features consecutively"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Preference for understanding through personal implementation",
+      "grounding_span": "some types of complex logic are very hard for even the best of programmers to wrap their heads around without trying it out for themselves"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,197 @@
+{
+  "transcript_id": "work_0995",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as time-saving tool",
+      "label_negative": "AI as time-consuming collaboration",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI only a couple to a few times per week. I usually use it because I run across a tedious task that is going to really slow me down otherwise."
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability and accuracy in generated content",
+      "label_negative": "AI inaccuracy and unreliability in content generation",
+      "bipolarity_complete": true,
+      "grounding_span": "the AI made a slide that was all about claims and was mixing up claims and arguments. I didn't notice right away, then had to explain to my students in class why my slide had inaccurate information in it."
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as brainstorming and idea generator",
+      "label_negative": "AI as independent task delegator",
+      "bipolarity_complete": true,
+      "grounding_span": "When I use AI for an event company that I own, and not for teaching/research, I am much more collaborative, because I'm more focused on idea generation than time saving."
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as equity tool for underserved students",
+      "label_negative": "AI as elitist or exclusionary tool",
+      "bipolarity_complete": true,
+      "grounding_span": "Anything that makes old-school professors so unanimously skeptical, to me, is probably something that will help underserved students."
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI understanding of specific constraints",
+      "label_negative": "AI misunderstanding of domain constraints",
+      "bipolarity_complete": true,
+      "grounding_span": "No matter how many times I explain that LARP isn't something where I can control the players or have them lose autonomy, ChatGPT always suggest plots where players would have to pretend to lose half of their memories"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and cost reduction",
+      "grounding_span": "I could be doing something more requiring of my skillset instead."
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Teaching accuracy and confidence",
+      "grounding_span": "I can make sure more easily that inaccurate information doesn't end up on my slides if I'm the one generating the information."
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Creative inspiration and ideation",
+      "grounding_span": "I'm more focused on idea generation than time saving."
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Equity and student support",
+      "grounding_span": "I have, in fact, found that the time-saving elements of using AI for English classes does help students."
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "I could totally do it myself, but it would take so much longer and I could be doing something more requiring of my skillset instead."
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI inaccuracy in content creation",
+      "valence": "negative",
+      "grounding_span": "I felt particularly frustrated when it produced that slide I mentioned earlier."
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI for lesson creation",
+      "valence": "positive",
+      "grounding_span": "It felt particularly satisfying when I was able to teach ESL students who were freshmen to talk to AI about their topics"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Resistance to AI in creative work",
+      "valence": "ambivalent",
+      "grounding_span": "Honestly, it's terrible at it. ... But, it usually gives me enough information that I am able to then pull out useful parts"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Optimistic anticipation of deeper collaboration",
+      "valence": "positive",
+      "grounding_span": "I hope to be able to occasionally not need to just unload tasks on AI and to be able to collaborate more deeply."
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Task-dependent delegation vs. collaboration",
+      "grounding_span": "When I use AI for an event company that I own, and not for teaching/research, I am much more collaborative"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative iterative refinement — works back and forth with AI",
+      "grounding_span": "it usually gives me enough information that I am able to then pull out useful parts of the idea and ask more questions to flesh out the stories."
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

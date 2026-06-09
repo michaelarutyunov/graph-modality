@@ -1,0 +1,188 @@
+{
+  "transcript_id": "creativity_0099",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as research accelerator and idea generator",
+      "label_negative": "Slow manual research without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "My research has sped up massively"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as conversational partner for deeper understanding",
+      "label_negative": "Surface-level interpretation without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "It helped me to get inside the mind of the author of the text"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability for factual accuracy",
+      "label_negative": "AI factual unreliability",
+      "bipolarity_complete": true,
+      "grounding_span": "check if certain thoughts or insights are factually accurate"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Human-driven creative control",
+      "label_negative": "AI-driven creative decisions",
+      "bipolarity_complete": true,
+      "grounding_span": "I am driving the creative decisions"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as tool for overcoming creative block",
+      "label_negative": "Stuck without AI assistance",
+      "bipolarity_complete": true,
+      "grounding_span": "if I have a bit of a block and I don't know where to go next"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI preserving human element in creative work",
+      "label_negative": "AI bypassing human element",
+      "bipolarity_complete": true,
+      "grounding_span": "temptation to bypass the human element altogether"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and productivity",
+      "grounding_span": "My research has sped up massively"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Deep understanding and insight",
+      "grounding_span": "gaining a deeper understanding of the piece of writing"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Creative integrity and authenticity",
+      "grounding_span": "ensuring that I was not misrepresenting the intended message"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Human agency and autonomy",
+      "grounding_span": "I am driving the creative decisions"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Positive appreciation for AI as research accelerator",
+      "valence": "positive",
+      "grounding_span": "My research has sped up massively"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Positive appreciation for AI as conversational partner",
+      "valence": "positive",
+      "grounding_span": "It helped me to get inside the mind of the author of the text"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Concern about AI bypassing human element",
+      "valence": "negative",
+      "grounding_span": "temptation to bypass the human element altogether"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Positive anticipation of future AI capabilities",
+      "valence": "positive",
+      "grounding_span": "I think it may develop into a place where it could become a recorder of thoughts"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative questioning and follow-up exploration",
+      "grounding_span": "starting with 'give me the historical context' ... may lead me on to the follow up question"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Purpose-driven verification and integrity checking",
+      "grounding_span": "ensuring that I was not misrepresenting the intended message"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

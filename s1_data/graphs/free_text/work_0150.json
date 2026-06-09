@@ -1,0 +1,179 @@
+{
+  "transcript_id": "work_0150",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as expedient shortcut undermining learning",
+      "label_negative": "AI as tool for genuine skill development",
+      "bipolarity_complete": true,
+      "grounding_span": "I am battling expedience"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as last resort for routine tasks",
+      "label_negative": "AI as primary work tool",
+      "bipolarity_complete": true,
+      "grounding_span": "I'd rather think of AI as an absolute last resort"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as brainstorming partner for unfamiliar domains",
+      "label_negative": "AI as replacement for own expertise",
+      "bipolarity_complete": true,
+      "grounding_span": "I needed the AI to help fill in some gaps for me"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Teacher trust in own professional judgment",
+      "label_negative": "Deference to AI output",
+      "bipolarity_complete": true,
+      "grounding_span": "I trust myself better than any AI platform"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI detection and policing of student work",
+      "label_negative": "Trust-based student assessment",
+      "bipolarity_complete": true,
+      "grounding_span": "I find myself spending more time utilizing AI-detecting software"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Student development of authentic writing skills",
+      "grounding_span": "develop their style and voice as writers"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional integrity and authenticity",
+      "grounding_span": "I would feel like a bit of a hypocrite if I used AI extensively"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Effective teaching through creative lesson design",
+      "grounding_span": "became incredibly engaging and novel with some tinkering"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Frustration with AI undermining course objectives",
+      "valence": "negative",
+      "grounding_span": "Feeding a writing prompt into ChatGPT undermines the very purpose of the course"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Resignation toward inevitability of AI use",
+      "valence": "negative",
+      "grounding_span": "a sense of resignation; a feeling that I cannot battle something so profoundly massive"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI as creative brainstorming tool",
+      "valence": "positive",
+      "grounding_span": "Turning to AI in this instance helped supplement the knowledge I already had and really served as a brainstorming tool"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Cautious optimism about future AI use",
+      "valence": "mixed",
+      "grounding_span": "I'm going to be cautiously optimistic about AI in the classroom"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative back-and-forth refinement",
+      "grounding_span": "I definitely go back and forth. I will ask the AI to modify prose, or audience, or reconsider word count"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-dependent trust calibration",
+      "grounding_span": "I felt less expert in the domain I was attempting to lesson plan for"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

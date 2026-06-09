@@ -1,0 +1,195 @@
+{
+  "transcript_id": "science_0029",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as supplementary discovery tool",
+      "label_negative": "AI as primary or sole source",
+      "bipolarity_complete": true,
+      "grounding_span": "I initially did my own traditional approach for finding papers, and found several of interest, but then also used AI after to try and see if there were papers I missed"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as initial summarizer for triage",
+      "label_negative": "AI as final authority on content",
+      "bipolarity_complete": true,
+      "grounding_span": "I sometimes used AI as an initial tool to get a quick summary to see if the paper was actually of interest"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as verification and comparison partner",
+      "label_negative": "AI as unquestioned output generator",
+      "bipolarity_complete": true,
+      "grounding_span": "I would sometimes compare my own summaries to AI summaries to see these differences"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as calculation assistant with stepwise validation",
+      "label_negative": "AI as black-box calculator",
+      "bipolarity_complete": true,
+      "grounding_span": "For the calculations, we validated each step by checking each step to make sure it made sense"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as data analysis and debugging aid",
+      "label_negative": "AI as comprehensive autonomous analyst",
+      "bipolarity_complete": true,
+      "grounding_span": "AI can sometimes help with debugging / checking for errors, but I find AI still doesn't have a super comprehensive checking"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as powerful but exploitable tool in science",
+      "label_negative": "AI as safe and fully controllable tool",
+      "bipolarity_complete": true,
+      "grounding_span": "it's obviously an incredibly powerful tool, and can be used for a lot of good, but can also be exploited very easily"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Epistemic integrity and personal understanding",
+      "grounding_span": "my final lit review was entirely my own work and my own summarizing"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "to be able to say what my goal output is and what I'm trying to create, and have AI help give me the steps to do in R"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Societal protection and responsible AI use",
+      "grounding_span": "I think there need to be a lot more safeguards in place that can help protect us as a society from over-exploitation of AI"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Cautious openness to AI as supplementary tool",
+      "valence": "ambivalent",
+      "grounding_span": "I used AI in a few parts: first, in the literature review, used AI (of different forms) to help identify papers of interest"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Skepticism about AI's current data analysis capability",
+      "valence": "negative",
+      "grounding_span": "AI still doesn't have a super comprehensive checking, and often isn't as helpful as I want"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Fear and hesitation about future AI exploitation",
+      "valence": "negative",
+      "grounding_span": "I am honestly scared and hesitant about a lot of the use of AI in the future"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative validation and cross-checking",
+      "grounding_span": "I almost always double-check all AI outputs in some way or another"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Comparative reasoning between own and AI outputs",
+      "grounding_span": "I would sometimes compare my own summaries to AI summaries to see these differences"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

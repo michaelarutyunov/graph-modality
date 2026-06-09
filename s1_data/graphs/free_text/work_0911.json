@@ -1,0 +1,200 @@
+{
+  "transcript_id": "work_0911",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as creative catalyst for idea generation",
+      "label_negative": "AI as direct joke writer",
+      "bipolarity_complete": true,
+      "grounding_span": "I regularly use it to help me generate ideas and brainstorm topics or connections between topics"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI use in ideation stage only",
+      "label_negative": "AI use in later stages (organization, logistics)",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI right now solely in the ideation stages"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as tool for surfacing associations and wordplay",
+      "label_negative": "AI as source of ready-to-use content",
+      "bipolarity_complete": true,
+      "grounding_span": "they included some words and phrases that connect the two topics that I hadn't thought of before"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Preserving personal voice and authenticity",
+      "label_negative": "Relying on AI for personal expression",
+      "bipolarity_complete": true,
+      "grounding_span": "I have my own style and voice and personality and nothing AI has ever written for me sounds like something 'I' would say"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Community pressure against AI use in comedy",
+      "label_negative": "Open acceptance of AI as creative tool",
+      "bipolarity_complete": true,
+      "grounding_span": "Other comedians have big opinions on AI. I tend to be cautious about telling them what I might use it for"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as tool for generating vivid imagery and humor techniques",
+      "label_negative": "AI as source of stage-ready jokes",
+      "bipolarity_complete": true,
+      "grounding_span": "the punchlines gave me really nice imagery to think about that I was ultimately able to incorporate into my own jokes"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI for behind-the-scenes repetitive tasks",
+      "label_negative": "Manual handling of administrative tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I bet I could leverage AI more for these tasks, but I feel haven't taken the time to look into that"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Creative authenticity and personal voice",
+      "grounding_span": "I have my own style and voice and personality"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Human connection and vulnerability in performance",
+      "grounding_span": "the value that in-person standup comedy brings to people is in the connection between humans about real human experiences"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Efficiency in administrative tasks",
+      "grounding_span": "I bet I could leverage AI more for these tasks"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI as creative catalyst",
+      "valence": "positive",
+      "grounding_span": "the real satisfaction came because the punchlines gave me really nice imagery"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Resistance to AI writing jokes",
+      "valence": "negative",
+      "grounding_span": "I definitely do NOT ask AI to write jokes for me"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Cautious disclosure of AI use to peers",
+      "valence": "ambivalent",
+      "grounding_span": "I tend to be cautious about telling them what I might use it for"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Openness to future AI use for admin tasks",
+      "valence": "positive",
+      "grounding_span": "I bet I could leverage AI more for these tasks"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Short, targeted conversational bursts",
+      "grounding_span": "I typically have short conversations (maybe 5 or fewer turns) about no more than 2-3 topics"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative ideation through association surfacing",
+      "grounding_span": "I might ask AI to write 10 punchlines to a silly prompt, not to help me finish jokes but more to see what associations I might be missing"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

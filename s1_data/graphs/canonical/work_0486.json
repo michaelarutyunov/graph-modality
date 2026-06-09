@@ -1,0 +1,169 @@
+{
+  "transcript_id": "work_0486",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as research starting point",
+      "label_negative": "AI as vague and unhelpful for broad queries",
+      "bipolarity_complete": true,
+      "grounding_span": "By asking for exactly what I am looking for it tends to speed up results hugely"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as supplement to creative process",
+      "label_negative": "AI over-reliance diminishing creativity",
+      "bipolarity_complete": true,
+      "grounding_span": "the more you rely on something else to come up with original ideas for you, the harder it becomes for you to do when you next try"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as supplementary aide to human expertise",
+      "label_negative": "AI as replacement for human judgment",
+      "bipolarity_complete": true,
+      "grounding_span": "having the two lists just immediately provided, and therefore being able to compare them and determine my own order from the results was super helpful"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Guilt vs satisfaction in AI use",
+      "label_negative": "Guilt-free AI use",
+      "bipolarity_complete": true,
+      "grounding_span": "I also feel somewhat guilty about switching over, as though I am taking the lazier option- however sometimes the results are so helpful that this guilt is assuaged"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI adoption in workplace",
+      "label_negative": "Independent AI adoption regardless of peers",
+      "bipolarity_complete": true,
+      "grounding_span": "I think I probably did end up using it more simply because of the frequency with which my superiors used it too"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "speed up results hugely"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Creative autonomy",
+      "grounding_span": "I don't want to lose my ability to think creatively"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Epistemic understanding and skill development",
+      "grounding_span": "I am keen to keep up my knowledge just for the security of knowing that I achieved something, and I can explain how I achieved any result I get"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "having the two lists just immediately provided... was super helpful so I was very satisfied"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Concern about AI-induced laziness",
+      "valence": "negative",
+      "grounding_span": "I also feel somewhat guilty about switching over, as though I am taking the lazier option"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Resistance to AI in creative work",
+      "valence": "negative",
+      "grounding_span": "the more you rely on something else to come up with original ideas for you, the harder it becomes for you to do when you next try"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Openness to improving workflow with AI",
+      "valence": "positive",
+      "grounding_span": "I am always open to improving and developing my workflow"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Systematic task decomposition into specific prompts",
+      "grounding_span": "I tend to go to the AI with very specific requirements"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Intentional skill-building to maintain independence from AI",
+      "grounding_span": "I try and limit how much I use the AI"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

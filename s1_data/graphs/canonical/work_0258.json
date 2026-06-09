@@ -1,0 +1,207 @@
+{
+  "transcript_id": "work_0258",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as brainstorming and idea generator",
+      "label_negative": "AI as unreliable for complex tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I like to bounce ideas off of AI to help me collect my thoughts"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as search tool for simple queries",
+      "label_negative": "Manual search through documents",
+      "bipolarity_complete": true,
+      "grounding_span": "ask plain-speak questions into a knowledge base and have AI parse the answer out"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI errors and mistakes",
+      "bipolarity_complete": true,
+      "grounding_span": "AI still makes too many mistakes and errors to be completely relied upon"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Personal enjoyment tasks kept for oneself",
+      "label_negative": "Delegation to AI for enjoyable tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "There are things that I enjoy doing and want to stay current with"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI adoption in workplace",
+      "label_negative": "Resistance to AI due to unfamiliarity",
+      "bipolarity_complete": true,
+      "grounding_span": "I work with very tech savvy folks so I think we are probably more comfortable with the ever changing nature of technology"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as time-saving tool",
+      "label_negative": "AI as inefficient due to need for auditing",
+      "bipolarity_complete": true,
+      "grounding_span": "AI was able to locate it much more efficiently. That was a big time saver"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI impact on skill maintenance",
+      "label_negative": "Over-reliance on AI leading to skill atrophy",
+      "bipolarity_complete": true,
+      "grounding_span": "over reliance can put you in a bad spot if you don't keep current on skills"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "big time saver"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Personal competence and skill development",
+      "grounding_span": "it's important to stay current"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Collaborative ideation and creativity",
+      "grounding_span": "bounce ideas off of AI to help me collect my thoughts"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI for brainstorming",
+      "valence": "positive",
+      "grounding_span": "AI is great at helping you glue together a bunch of thoughts or concepts into a cohesive plan"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Positive stance toward AI for knowledge retrieval",
+      "valence": "positive",
+      "grounding_span": "AI is really good at extracting information from a knowledge base"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Cautious skepticism toward AI reliability",
+      "valence": "negative",
+      "grounding_span": "AI still makes too many mistakes and errors to be completely relied upon"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Satisfaction with AI for time-saving",
+      "valence": "positive",
+      "grounding_span": "AI was able to locate it much more efficiently. That was a big time saver"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Concern about AI replacing skills",
+      "valence": "ambivalent",
+      "grounding_span": "I know AI probably would be servcible but I'd have to audit the work and I enjoy doing stuff like that"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement — feeds raw thoughts then fine-tunes",
+      "grounding_span": "mostly me feeding the thoughts all at once and having it spit something out. I then will suggest fine tune adjustments"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Deliberate skill preservation through manual practice",
+      "grounding_span": "it's important to stay current. Having experience is needed"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n7",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

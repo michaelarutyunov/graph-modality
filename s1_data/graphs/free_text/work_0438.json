@@ -1,0 +1,154 @@
+{
+  "transcript_id": "work_0438",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI for conversational documentation vs shorthand lists",
+      "label_negative": "Shorthand lists for immediate capture",
+      "bipolarity_complete": true,
+      "grounding_span": "forcing myself to use a conversational format by storing this information in an AI model allows me to recall it better at a later time than a blank list of numbers"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI use under time pressure vs downtime",
+      "label_negative": "AI use under time pressure",
+      "bipolarity_complete": true,
+      "grounding_span": "If i get started in an AI conversation and go through the entire thing without some rush, incident, or customer interrupting me the extra time feels well worth it, but i get interrupted often enough that it ends up feeling quite jarring"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for scheduling and operational coordination",
+      "label_negative": "Manual scheduling with bad software",
+      "bipolarity_complete": true,
+      "grounding_span": "i would really love it if AI could handle employee scheduling"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as efficiency tool vs threat to personal competence",
+      "label_negative": "AI as threat to personal competence",
+      "bipolarity_complete": true,
+      "grounding_span": "I would put limits to how much of my mind i outsource to AI, particularly with memorization and trust in my own knowledge"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Operational efficiency and time management",
+      "grounding_span": "Taking extra time to do anything on my phone is time taken away from managing screening officers"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Personal competence and autonomy",
+      "grounding_span": "its super important to keep that sharp and not depend on AI"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Situational awareness and coordination",
+      "grounding_span": "unite the managers so we all have more of a birdseye view of whats going on checkpoint by checkpoint"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Positive toward AI for scheduling and coordination",
+      "valence": "positive",
+      "grounding_span": "i would really love it if AI could handle employee scheduling"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Frustration with AI under interruption",
+      "valence": "negative",
+      "grounding_span": "i ended up losing track of what i needed to include multiple times, causing a huge time loss"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Cautious about outsourcing mind to AI",
+      "valence": "negative",
+      "grounding_span": "I would put limits to how much of my mind i outsource to AI"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic switching between tools based on context",
+      "grounding_span": "once the time pressure is cranked up the shorthand becomes necessary to get things done in satisfactory time"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic delegation with boundary on core competence",
+      "grounding_span": "I would put limits to how much of my mind i outsource to AI, particularly with memorization and trust in my own knowledge"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n3",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

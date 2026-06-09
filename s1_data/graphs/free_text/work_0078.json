@@ -1,0 +1,180 @@
+{
+  "transcript_id": "work_0078",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as strategic thinking partner for complex challenges",
+      "label_negative": "AI as simple task automation tool",
+      "bipolarity_complete": true,
+      "grounding_span": "I want to use it to help me tackle complex conversations or thought processes"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as expert consultant challenging assumptions",
+      "label_negative": "AI as passive answer provider",
+      "bipolarity_complete": true,
+      "grounding_span": "I set it up to feel like an expert consultation session"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI use for personal communication",
+      "label_negative": "Personal touch in human communication",
+      "bipolarity_complete": true,
+      "grounding_span": "Writing emails or solving personal challenges is not something that is appealing for me to use AI for"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as tool for expanding professional capacity",
+      "label_negative": "AI as threat to job security",
+      "bipolarity_complete": true,
+      "grounding_span": "they need to see it as an incredible opportunity to expand their capacity"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI reliability for grant writing",
+      "label_negative": "AI unreliability in grant writing",
+      "bipolarity_complete": true,
+      "grounding_span": "it has been so much fun seeing this chatbot win grants for my client"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Strategic insight and actionable knowledge",
+      "grounding_span": "provide me with actionable information"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Personal authenticity and human connection",
+      "grounding_span": "prefer to keep a personal touch in my communication with humans"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional growth and innovation",
+      "grounding_span": "expand my profession's impact"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Tangible client impact and efficiency",
+      "grounding_span": "winning substantial grants for them"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Enthusiasm for AI as deep thinking partner",
+      "valence": "positive",
+      "grounding_span": "Those are my favorite ones that usually end up providing me with actionable information"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Rejection of AI for personal communication",
+      "valence": "negative",
+      "grounding_span": "Writing emails or solving personal challenges is not something that is appealing for me to use AI for"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Advocacy for AI adoption among colleagues",
+      "valence": "positive",
+      "grounding_span": "challenging them to enter the sandbox and explore how these amazing tools can be leveraged"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Satisfaction with AI grant writing success",
+      "valence": "positive",
+      "grounding_span": "it has been so much fun seeing this chatbot win grants for my client"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Intentional upfront context-setting and iterative probing",
+      "grounding_span": "I will spend time to write a lengthy initial prompt to establish context"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Scheduled dedicated thinking time for complex problems",
+      "grounding_span": "I will schedule out an hour each day to work through the conversations"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,174 @@
+{
+  "transcript_id": "work_0155",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as writing assistant for drafting",
+      "label_negative": "AI writing entire pieces autonomously",
+      "bipolarity_complete": true,
+      "grounding_span": "I do not use it to write the whole piece"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI trustworthiness and verification",
+      "label_negative": "AI inaccuracy and lack of trust",
+      "bipolarity_complete": true,
+      "grounding_span": "I do not trust the accuracy level enough"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as skill development enabler",
+      "label_negative": "AI use eroding human skills",
+      "bipolarity_complete": true,
+      "grounding_span": "how do I keep my own writing and critical thinking skills sharp"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as full task replacement",
+      "bipolarity_complete": true,
+      "grounding_span": "I'd rather uses as help vs. taking over an entire task"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as workload reducer for repetitive tasks",
+      "label_negative": "AI for replacing analytical work",
+      "bipolarity_complete": true,
+      "grounding_span": "reduce task work to free up time for people to do more analytical work"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Skill preservation and professional adaptability",
+      "grounding_span": "keep my own writing and critical thinking skills sharp"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "not having to design a template for a slide deck"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Meaningful analytical work",
+      "grounding_span": "free up time for people to do more analytical work"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for design tasks",
+      "valence": "positive",
+      "grounding_span": "Satisfying, not having to design a template for a slide deck"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI errors",
+      "valence": "negative",
+      "grounding_span": "Frustration, when the information returned is inaccurate"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Cautious trust in AI",
+      "valence": "ambivalent",
+      "grounding_span": "I do not trust the accuracy level enough to have it write whole pieces"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Concern about colleagues' over-reliance on AI",
+      "valence": "negative",
+      "grounding_span": "some colleagues have swayed me towards being overly cautious"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative workflow with AI as collaborative partner",
+      "grounding_span": "I'll do a lot of research myself, once I'm ready to write up findings I will give the AI assistant some key pieces"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Deliberate skill preservation through manual practice",
+      "grounding_span": "how do I keep my own writing and critical thinking skills sharp"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

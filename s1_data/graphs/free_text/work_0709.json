@@ -1,0 +1,150 @@
+{
+  "transcript_id": "work_0709",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative thinking partner for idea formulation",
+      "label_negative": "AI as mere executor of predefined tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "conversating with the model gives me a chance to streamline my ideas"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability for data handling",
+      "label_negative": "AI unreliability for raw data input",
+      "bipolarity_complete": true,
+      "grounding_span": "I wish my model could view this data and input it, but if I download my sheets of data it is a confusing layout and I handle computing this so that I know it is accurate"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as tool for persuasive communication",
+      "label_negative": "AI as insufficient for persuasive argument",
+      "bipolarity_complete": true,
+      "grounding_span": "I couldn't put it all into an effective and persuasive argument"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Healthy balanced AI dependence",
+      "label_negative": "Unhealthy over-dependence on AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I want to stay mindful of not becoming dependent on it"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Effective communication and clarity",
+      "grounding_span": "effective communication with my fellow managers"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Accuracy and control over data",
+      "grounding_span": "I handle computing this so that I know it is accurate"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Persuasive advocacy and leadership",
+      "grounding_span": "create a new position in our restaurant; a certified trainer"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Personal growth and skill honing",
+      "grounding_span": "AI helps me hone them"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI as idea clarifier",
+      "valence": "positive",
+      "grounding_span": "I was so relieved, and it gave me a new respect for AI models"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Preference for manual data handling over AI",
+      "valence": "negative",
+      "grounding_span": "I handle computing this so that I know it is accurate"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Mindful optimism about future AI use",
+      "valence": "mixed",
+      "grounding_span": "I could see my own relationship strengthening with AI, but I want to stay mindful of not becoming dependent on it"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative collaborative refinement — builds on AI suggestions through feedback",
+      "grounding_span": "We build off of each other's dialogue and the model listens to my feedback"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Verification-oriented control — prefers direct handling for accuracy",
+      "grounding_span": "I handle computing this so that I know it is accurate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,229 @@
+{
+  "transcript_id": "work_0243",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as personalized on-demand learning tool",
+      "label_negative": "Traditional static learning resources (books, papers)",
+      "bipolarity_complete": true,
+      "grounding_span": "I now find myself writing custom requests to Deep Research to write many on-demand, highly customized chapter-length summaries"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI hallucinations, errors, and omissions",
+      "bipolarity_complete": true,
+      "grounding_span": "Deep Research is also capable of providing worked software examples and tends to be the most reliable and thorough in terms of hallucinations, errors, and omissions"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for internal/technical work",
+      "label_negative": "AI for human-facing deliverables",
+      "bipolarity_complete": true,
+      "grounding_span": "I try to have human-facing deliverables be handwritten"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as one-shot delegator",
+      "bipolarity_complete": true,
+      "grounding_span": "I typically have a back-and-forth series of exchanges"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as productivity enhancer",
+      "label_negative": "Traditional team-based development",
+      "bipolarity_complete": true,
+      "grounding_span": "These tools are completely transformative to what is possible for ICs"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "Workplace acceptance of AI use",
+      "label_negative": "Workplace bias against AI-generated content",
+      "bipolarity_complete": true,
+      "grounding_span": "There is a strong bias against LLM-generated work"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficient learning and adaptation",
+      "grounding_span": "I most value this tailored approach"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional reputation and credibility",
+      "grounding_span": "I deeply regret admitting that I used certain tools in certain circumstances"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "I prototyped, designed, deployed and demo'd a 50K line solution"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Career advancement and relevance",
+      "grounding_span": "AI tooling is also accelerating the speed of my learning"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Enthusiasm for AI as learning and efficiency tool",
+      "valence": "positive",
+      "grounding_span": "I think it's great"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "Deep Research is also capable of providing worked software examples and tends to be the most reliable and thorough"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Preference for human writing",
+      "valence": "negative",
+      "grounding_span": "I try to have human-facing deliverables be handwritten"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Frustration with iterative refinement needed",
+      "valence": "mixed",
+      "grounding_span": "It is very rare, even with the first-in-class models from each vendor, that any LLM gets anything correct on the first attempt"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Pride in AI-enabled solo achievement",
+      "valence": "positive",
+      "grounding_span": "It was a huge success"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Frustration with AI's lack of error transparency",
+      "valence": "negative",
+      "grounding_span": "I deeply regret admitting that I used certain tools in certain circumstances"
+    },
+    {
+      "id": "n17",
+      "type": "Stance",
+      "label": "Optimism about future AI integration",
+      "valence": "positive",
+      "grounding_span": "I suspect we're still in a very early inning in terms of how we work with these tools"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Tailored request formulation — specifies level, length, and goal",
+      "grounding_span": "you can specify where your current understanding and level is in the field, and ask for the composition of a research artifact that is meant to accomplish a specific goal"
+    },
+    {
+      "id": "n19",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement with limited back-and-forth",
+      "grounding_span": "I ask for something, review and refine it, ask for the next change, and iterate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n17",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n19",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

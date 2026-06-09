@@ -1,0 +1,169 @@
+{
+  "transcript_id": "work_0240",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as research assistant and outline writer",
+      "label_negative": "AI as unreliable fabricator",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI as a research assistant and outline writer"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI accuracy in citation retrieval",
+      "label_negative": "AI hallucination of articles and authors",
+      "bipolarity_complete": true,
+      "grounding_span": "sometimes it will make up an article and authors that don't exist"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as efficiency booster for tight deadlines",
+      "label_negative": "Client restrictions preventing AI use",
+      "bipolarity_complete": true,
+      "grounding_span": "I can put the whole idea and the desired outcome into the AI, get a result within 5 minutes"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as tool for research and structure, not final writing",
+      "label_negative": "AI fully writing content without human voice",
+      "bipolarity_complete": true,
+      "grounding_span": "I write the actual contents of each paragraph"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as threat to white-collar jobs",
+      "label_negative": "AI as harmless tool",
+      "bipolarity_complete": true,
+      "grounding_span": "no white collar job is free from the threat of AI replacing humans"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and productivity",
+      "grounding_span": "I can put the whole idea and the desired outcome into the AI, get a result within 5 minutes"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Authenticity and human voice",
+      "grounding_span": "I write the actual contents of each paragraph"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Job security and career resilience",
+      "grounding_span": "no white collar job is free from the threat of AI replacing humans"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI's research and outlining capabilities",
+      "valence": "positive",
+      "grounding_span": "The satisfaction occurs daily, because AI gives me neat ordered research plans"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with client paradox of wanting AI efficiency but no AI detection",
+      "valence": "negative",
+      "grounding_span": "Frustrations are only with my clients"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Concern about AI replacing white-collar jobs",
+      "valence": "negative",
+      "grounding_span": "no white collar job is free from the threat of AI replacing humans"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Optimism about AI improvement and evolving role",
+      "valence": "positive",
+      "grounding_span": "I believe Ai will continue to improve"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through broad-to-narrow search",
+      "grounding_span": "throw a broad net into the information pool and let me see what's showing up"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Verification through cross-checking and specific prompts",
+      "grounding_span": "I spot check everything though"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

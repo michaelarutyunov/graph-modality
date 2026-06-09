@@ -1,0 +1,157 @@
+{
+  "transcript_id": "work_0643",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as efficiency tool for content creation",
+      "label_negative": "Manual time-consuming content creation",
+      "bipolarity_complete": true,
+      "grounding_span": "AI can draft a really good blog post in just a minute or two. It takes me much longer."
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as collaborator for iterative refinement",
+      "label_negative": "AI as independent autonomous producer",
+      "bipolarity_complete": true,
+      "grounding_span": "collab for sure even if I delegate a full task like 'draft a blog post about X', I'm still going to look for ways to improve it."
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI alignment with company policies and specific workflows",
+      "label_negative": "AI output misaligned with company values",
+      "bipolarity_complete": true,
+      "grounding_span": "remember that our company values humane practices"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as cost and time saving substitute for human freelancers",
+      "label_negative": "Human writing skills as irreplaceable asset",
+      "bipolarity_complete": true,
+      "grounding_span": "AI has already largely replaced my field (freelance content creation). Why pay someone when you can get a chat model to draft similar content for free in less time?"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as tool for crisis recovery under time pressure",
+      "label_negative": "Manual crisis recovery without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "What probably would have taken me days to fix was done in a matter of hours through AI's assistance."
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "the need to save time and put that energy elsewhere led me to AI"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Quality content aligned with business identity",
+      "grounding_span": "that doesn't really fit our company, try again"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Skill preservation and professional adaptability",
+      "grounding_span": "I work to maintain my writing skills (typically through creative means)"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for rapid website recovery",
+      "valence": "positive",
+      "grounding_span": "What probably would have taken me days to fix was done in a matter of hours through AI's assistance."
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Acceptance of AI replacing freelance writing but valuing own skills",
+      "valence": "ambivalent",
+      "grounding_span": "AI has already largely replaced my field (freelance content creation). However, the ability to write and understand will never stop being valuable."
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Optimistic expectation for AI to speed workflow",
+      "valence": "positive",
+      "grounding_span": "in the future I likely won't even need a back and forth conversation- it will just produce something that needs no improvements."
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative iterative refinement — works back and forth with AI",
+      "grounding_span": "From there, I'll take the content/suggestions and work with AI to improve it."
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Selective delegation based on task nature",
+      "grounding_span": "If it's a new model that's unfamiliar with me or my husband's business, I explain what we do, our core principles, and a bit about our company"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

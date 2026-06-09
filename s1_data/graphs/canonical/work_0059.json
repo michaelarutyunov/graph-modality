@@ -1,0 +1,169 @@
+{
+  "transcript_id": "work_0059",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborator for iterative refinement",
+      "label_negative": "AI as final product without human adjustment",
+      "bipolarity_complete": true,
+      "grounding_span": "I use it as a starting point and then make adjustments"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability for grading and assessment",
+      "label_negative": "AI misalignment with teacher's judgment",
+      "bipolarity_complete": true,
+      "grounding_span": "how closely aligned the AIs grade was with my analysis"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as tool for lesson planning",
+      "label_negative": "AI producing flat, unengaging lesson materials",
+      "bipolarity_complete": true,
+      "grounding_span": "It did not have enough meaningful graphics and the information felt flat"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as tool preserving human relationships in teaching",
+      "label_negative": "AI replacing human instruction and relationships",
+      "bipolarity_complete": true,
+      "grounding_span": "one on one with a student and with a person will always win out"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Ethical AI use in education",
+      "label_negative": "Students using AI without integrity",
+      "bipolarity_complete": true,
+      "grounding_span": "teach my students how to use AI appropriately while maintaining integrity"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Professional efficiency",
+      "grounding_span": "made my job much easier"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Personal connection with students",
+      "grounding_span": "the relationships formed with our students"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Academic integrity",
+      "grounding_span": "maintaining integrity in their learning"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Frustration with AI's inability to reconsider grading",
+      "valence": "positive",
+      "grounding_span": "It was satisfying to see how closely aligned the AIs grade was with my analysis"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI errors in teaching materials",
+      "valence": "negative",
+      "grounding_span": "It did not have enough meaningful graphics and the information felt flat"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Affirmation of irreplaceable human relationships",
+      "valence": "positive",
+      "grounding_span": "one on one with a student and with a person will always win out"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Concern about teaching AI integrity",
+      "valence": "negative",
+      "grounding_span": "That will always be a battle"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative iterative refinement — works back and forth with AI",
+      "grounding_span": "I use it as a starting point and then make adjustments"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Relational prioritization — values human connection over efficiency",
+      "grounding_span": "one on one with a student and with a person will always win out"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

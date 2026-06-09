@@ -1,0 +1,196 @@
+{
+  "transcript_id": "work_0103",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as research assistant for finding authoritative sources",
+      "label_negative": "AI providing SEO-optimized but low-quality sources",
+      "bipolarity_complete": true,
+      "grounding_span": "I want the primary resource that ranks lower in SEO, but much higher in reliability and veracity"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI memory and continuity across conversations",
+      "label_negative": "AI forgetting past instructions due to privacy constraints",
+      "bipolarity_complete": true,
+      "grounding_span": "Microsoft doesn't remember things to protect privacy, but that ends up being frustrating sometimes because I need it to remember how to do something from conversation to conversation"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI voice and personality appeal",
+      "label_negative": "AI with unappealing voice or personality",
+      "bipolarity_complete": true,
+      "grounding_span": "I'd use Gemini more often if it had Google Assistant's voices, so I could keep the 'Pink' voice that sounds like Tom Hanks"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI for math calculations and efficiency",
+      "label_negative": "Manual spreadsheet setup for calculations",
+      "bipolarity_complete": true,
+      "grounding_span": "I used my favorite AI to do the math to save time"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI in writing: research vs. creation",
+      "label_negative": "AI used for actual writing instead of human author",
+      "bipolarity_complete": true,
+      "grounding_span": "I'd rather use it for research and do the writing myself"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI photorealistic image generation from personal photos",
+      "label_negative": "AI generating cartoonish or unrealistic images",
+      "bipolarity_complete": true,
+      "grounding_span": "Instapix is so dead-on that when I trained it with photos of myself as a test, it created new photos that actually look like me"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Information reliability and veracity",
+      "grounding_span": "I want the primary resource that ranks lower in SEO, but much higher in reliability and veracity"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Productivity and time savings",
+      "grounding_span": "It was a combination of the time savings and efficiency"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Pleasant user experience and enjoyment",
+      "grounding_span": "if I have to hear it talk all day, I want to enjoy it"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Human creative control and authorship",
+      "grounding_span": "I'd rather use it for research and do the writing myself"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Creative expression and innovation",
+      "grounding_span": "I write music and would love to be able to enter a piece of music as notation or by playing it or singing, then have it transformed to a recording"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI for math efficiency",
+      "valence": "positive",
+      "grounding_span": "It was a combination of the time savings and efficiency, providing a much easier method than setting up an Excel spreadsheet"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Frustration with AI memory limitations",
+      "valence": "negative",
+      "grounding_span": "Microsoft doesn't remember things to protect privacy, but that ends up being frustrating sometimes"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Preference for AI with appealing voice",
+      "valence": "positive",
+      "grounding_span": "I'd use Gemini more often if it had Google Assistant's voices, so I could keep the 'Pink' voice that sounds like Tom Hanks"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Respect for client preferences against AI writing",
+      "valence": "mixed",
+      "grounding_span": "When a client says they do not want AI used, I respect their choice. I handle everything that relates to writing myself"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Excitement about AI photorealistic image generation",
+      "valence": "positive",
+      "grounding_span": "Instapix is so dead-on that when I trained it with photos of myself as a test, it created new photos that actually look like me"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Systematic comparative testing of AI tools",
+      "grounding_span": "I test each AI out using the same problem to find out which one performs best"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through conversation",
+      "grounding_span": "I have to restate or hone the search terms"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,174 @@
+{
+  "transcript_id": "work_0530",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative colleague for ideas and editing",
+      "label_negative": "AI as unreliable or inconsistent tool",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI like a well informed colleague, so I ask it what it thinks about arguments I might be planning to user, or for ideas about things like design principles."
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI assistance in professional writing and argument refinement",
+      "label_negative": "AI failing to anticipate needs or provide appropriate language",
+      "bipolarity_complete": true,
+      "grounding_span": "I will put it into AI and ask it for its opinion - comments on writing style, professionalism of language, and spelling and grammar etc."
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI capability in architectural descriptions",
+      "label_negative": "AI inconsistency and inaccuracy in architectural descriptions",
+      "bipolarity_complete": true,
+      "grounding_span": "I have noticed its not great at architectural descriptions of buildings."
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Human enjoyment of research and discovery",
+      "label_negative": "AI taking over research and discovery process",
+      "bipolarity_complete": true,
+      "grounding_span": "The main thing I enjoy in my job is the research, understanding and learning about a site and its history."
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Professional expertise and subjectivity in heritage decisions",
+      "label_negative": "AI replacing human judgment in heritage decisions",
+      "bipolarity_complete": true,
+      "grounding_span": "there's a degree of subjectivity always in decisions about the built environment and history that I think a human mind might still be better at dealing with"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Professional fulfillment and joy in learning",
+      "grounding_span": "I enjoy research for its own sake - I am interested in history and places"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional credibility and accuracy",
+      "grounding_span": "enough value put on my professional qualifications and affiliations"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and productivity",
+      "grounding_span": "I use it like an editor, to review draft reports and help me address spelling and grammar and refine my language."
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI as collaborative tool",
+      "valence": "positive",
+      "grounding_span": "I use AI like a well informed colleague"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI inconsistency in architectural descriptions",
+      "valence": "negative",
+      "grounding_span": "I have noticed its not great at architectural descriptions of buildings."
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Ambivalence about AI's future role in research",
+      "valence": "ambivalent",
+      "grounding_span": "I think AI could probably do things for me already that I don't even consider asking it."
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Preference for human-led research despite AI capability",
+      "valence": "positive",
+      "grounding_span": "I think AI could probably do some of that but I like doing it."
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative iterative refinement — drafts then seeks AI feedback",
+      "grounding_span": "I will draft a report / chapter and then once its completed ... I will put it into AI and ask it for its opinion"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Reflective anticipation of counterarguments",
+      "grounding_span": "ask for thoughts on if I can improve my argument anywhere, and how someone arguing back might frame their comments"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

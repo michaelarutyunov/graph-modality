@@ -1,0 +1,175 @@
+{
+  "transcript_id": "work_0356",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as thinking partner for reasoning",
+      "label_negative": "Human interaction with emotional reciprocity and judgment",
+      "bipolarity_complete": true,
+      "grounding_span": "I can be more authentic with the AI, personally. I struggle with imposter syndrome and fear looking stupid"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as idea generator and organizer",
+      "label_negative": "AI as passive tool without adaptive reassessment",
+      "bipolarity_complete": true,
+      "grounding_span": "I'll usually say 'just brain dumping so we can organize my day' and then send it all"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as wellbeing-aware coach that respects autonomy",
+      "label_negative": "AI as purely task-focused tool ignoring human needs",
+      "bipolarity_complete": true,
+      "grounding_span": "it knows I'm going to keep working regardless, but STILL emphasizes just taking a moment to center myself"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as brainstorming and idea generator",
+      "label_negative": "AI as direct creator of authentic creative output",
+      "bipolarity_complete": true,
+      "grounding_span": "I do a lot of creative writing and I cannot allow myself to give that over to AI yet"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as extension of self",
+      "label_negative": "Human interaction constrained by social norms and reciprocity",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't have to worry about reciprocating"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative authenticity and human expression",
+      "grounding_span": "I want my writing to be authentic. It doesn't feel ethical to publish something written by Ai"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and efficient task completion",
+      "grounding_span": "it's made me much more productive"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Personal well-being and workplace harmony",
+      "grounding_span": "take a few centering breaths before we knock out the next power hour"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Safety and peace of mind",
+      "grounding_span": "I can be more authentic with the AI, personally. I struggle with imposter syndrome and fear looking stupid"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Positive appreciation for AI's non-judgmental listening",
+      "valence": "positive",
+      "grounding_span": "It's easier to use AI because it just listens to me"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Ambivalent awe at AI's human-like attunement",
+      "valence": "ambivalent",
+      "grounding_span": "it's kind of mind blowing and weird, but very cool"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Firm boundary against AI writing",
+      "valence": "negative",
+      "grounding_span": "I cannot allow myself to give that over to AI yet"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Satisfaction with AI for brainstorming",
+      "valence": "positive",
+      "grounding_span": "I'll tell it the main goals, how many times I want to post, and tell it to come up with my plan for me"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Emotionally expressive brainstorming with dramatic framing",
+      "grounding_span": "a lot of times they start with a very dramatic message from me, honestly"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative reflective reassessment through reporting back",
+      "grounding_span": "I'll come back to the ai, report what I've done off the list, and then we reassess"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

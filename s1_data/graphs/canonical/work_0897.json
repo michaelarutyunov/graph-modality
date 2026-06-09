@@ -1,0 +1,213 @@
+{
+  "transcript_id": "work_0897",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as interactive research tool for follow-up questions",
+      "label_negative": "Static search without follow-up capability",
+      "bipolarity_complete": true,
+      "grounding_span": "AI lets me follow up with specifics like gender, weight, age, race when asking about symptoms or medication side effects"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as sounding board for ideas",
+      "label_negative": "AI making final decisions autonomously",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is really helpful with brainstorming, helping to steer things in certain directions, and just generally being a sounding board but I like to make final decisions"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as writing assistant",
+      "label_negative": "AI writing entire notes without human input",
+      "bipolarity_complete": true,
+      "grounding_span": "I like writing my own nursing notes and care plans but it is really nice to get help with clarity, wording choice, and other types of suggestions"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI stigma in workplace culture",
+      "label_negative": "Open acceptance of AI use",
+      "bipolarity_complete": true,
+      "grounding_span": "There's a lot of stigma around AI for various reasons"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as web-like learning tool revealing unexpected connections",
+      "label_negative": "Linear, isolated learning without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "It's like learning in a web pattern"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI for administrative paperwork reduction",
+      "label_negative": "Humans forced to do paperwork",
+      "bipolarity_complete": true,
+      "grounding_span": "I love the idea of AI doing all the paperwork so I can focus on patient care"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI ability to provide hard-to-find information",
+      "label_negative": "AI as unreliable requiring double-checking",
+      "bipolarity_complete": true,
+      "grounding_span": "I hope in the future that we can trust AI to be accurate enough to be a sole source of information"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficient knowledge discovery",
+      "grounding_span": "In 10 minutes I knew all about the disorder and its treatments"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Professional autonomy",
+      "grounding_span": "I like to make final decisions"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Patient-centered care",
+      "grounding_span": "focus on patient care"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Social acceptance and reduced stigma",
+      "grounding_span": "Without the stigma behind AI being a sort of form of cheating"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with research AI",
+      "valence": "positive",
+      "grounding_span": "AI lets me follow up with specifics like gender, weight, age, race when asking about symptoms or medication side effects"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Preference for human control over final decisions",
+      "valence": "negative",
+      "grounding_span": "I like to make final decisions"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Resignation about workplace AI stigma",
+      "valence": "negative",
+      "grounding_span": "I feel like someone would try to get me in trouble"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Satisfaction with AI for documentation",
+      "valence": "positive",
+      "grounding_span": "I love the idea of AI doing all the paperwork so I can focus on patient care"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Cautious skepticism toward AI reliability",
+      "valence": "positive",
+      "grounding_span": "I hope in the future that we can trust AI to be accurate enough to be a sole source of information"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Web-like associative learning — connecting disparate domains",
+      "grounding_span": "It's like learning in a web pattern"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Privacy-conscious compartmentalization — separating AI use from identifiable data",
+      "grounding_span": "I keep specifics like names out of it for privacy reasons and edit those in after on a secure charting app"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n5",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

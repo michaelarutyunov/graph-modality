@@ -1,0 +1,189 @@
+{
+  "transcript_id": "work_0057",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as communication and content creation tool",
+      "label_negative": "AI as unreliable for artistic execution",
+      "bipolarity_complete": true,
+      "grounding_span": "generating emails or quotes for jobs, and developing social media and advertising content"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as project planning and idea generation aid",
+      "label_negative": "AI suggestions impractical due to spatial constraints",
+      "bipolarity_complete": true,
+      "grounding_span": "come up with unique ideas for projects"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI accuracy in product and measurement suggestions",
+      "label_negative": "AI inaccuracy in measurements and placement",
+      "bipolarity_complete": true,
+      "grounding_span": "accuracy issues when searching for products"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as independent task delegator",
+      "bipolarity_complete": true,
+      "grounding_span": "I am more inclined to collaborate throughout the task"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Human artistic touch and experience",
+      "label_negative": "AI-replaced artistic execution",
+      "bipolarity_complete": true,
+      "grounding_span": "the human element is key to creating a beautiful finish"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "This often saves time"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Creative problem-solving and client satisfaction",
+      "grounding_span": "AI found a solution that was functionally perfect and gave me the assistance I needed"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Artistic integrity and personal craftsmanship",
+      "grounding_span": "experience using various techniques, products, and colors cannot be replaced"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI as time-saver and enhancer",
+      "valence": "positive",
+      "grounding_span": "AI only enhances my work, often making it less time consuming"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI inaccuracy in spatial constraints",
+      "valence": "negative",
+      "grounding_span": "the suggestion was ultimately useless because the placement of the window and roofline made its completion impossible"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Optimism about future AI improvements in accuracy",
+      "valence": "positive",
+      "grounding_span": "I have no doubt that accuracy in this type of situation will improve in the future"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Confidence in irreplaceability of human artistic touch",
+      "valence": "positive",
+      "grounding_span": "there are aspects of my job that I believe will always require a human touch"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative iterative refinement — back-and-forth editing with AI",
+      "grounding_span": "have AI generate a first draft, then edit to add my own personal touch and have AI check it over for me"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based selective trust — clear boundaries between AI-helpful and human-essential tasks",
+      "grounding_span": "for project planning and content creation for social media and communication with clients, AI is superb, but as far as achieving the final product, that can't be replaced by AI"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,211 @@
+{
+  "transcript_id": "work_0774",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as fast research assistant for specific queries",
+      "label_negative": "Manual slow research via search engines",
+      "bipolarity_complete": true,
+      "grounding_span": "much faster method for looking up things like what does this command line execution actually do"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI answer reliability and need for verification",
+      "label_negative": "AI answer unreliability requiring cross-checking",
+      "bipolarity_complete": true,
+      "grounding_span": "I absolutely do some sanity checking along the way if I feel the answer may not be correct"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as collaborative brainstorming partner",
+      "label_negative": "AI as independent task executor",
+      "bipolarity_complete": true,
+      "grounding_span": "it is absolutely collaborative and almost like a conversation back and forth"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Human ownership of communication and analysis workflow",
+      "label_negative": "AI drafting communications and driving analysis",
+      "bipolarity_complete": true,
+      "grounding_span": "I try to refrain from having it give me pre-written explanations that I then would pass on"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI transparency about uncertainty and edge cases",
+      "label_negative": "AI overconfidence and omission of fringe cases",
+      "bipolarity_complete": true,
+      "grounding_span": "it basically said the backups/snapshot was a fringe use case and so it didn't offer it as an initial explanation which was annoying"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "Human skill maintenance vs AI reliance",
+      "label_negative": "Over-reliance on AI leading to skill atrophy",
+      "bipolarity_complete": true,
+      "grounding_span": "it is always important in any field for humans to maintain and increase their skills"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and speed in investigations",
+      "grounding_span": "much faster method for looking up things"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Accuracy and truth in analysis",
+      "grounding_span": "sanity checking along the way if I feel the answer may not be correct"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Collaborative problem-solving",
+      "grounding_span": "collaborative and almost like a conversation back and forth"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Personal autonomy and professional identity",
+      "grounding_span": "I like to draft those things myself"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Human expertise and adaptability",
+      "grounding_span": "maintain and increase their skills"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI speed for research",
+      "valence": "positive",
+      "grounding_span": "normally I am very satisfied with the speed at which i can judge something to be benign or suspicious"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Frustration with AI overconfidence on edge cases",
+      "valence": "negative",
+      "grounding_span": "it basically said the backups/snapshot was a fringe use case and so it didn't offer it as an initial explanation which was annoying"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Cautious trust requiring verification",
+      "valence": "ambivalent",
+      "grounding_span": "I absolutely do some sanity checking along the way if I feel the answer may not be correct"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Preference for human-driven communication and analysis",
+      "valence": "negative",
+      "grounding_span": "I try to refrain from having it give me pre-written explanations that I then would pass on"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Commitment to maintaining human skills",
+      "valence": "positive",
+      "grounding_span": "it is always important in any field for humans to maintain and increase their skills"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative verification and cross-checking",
+      "grounding_span": "I absolutely do some sanity checking along the way if I feel the answer may not be correct"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative conversational reasoning",
+      "grounding_span": "it is absolutely collaborative and almost like a conversation back and forth"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n5",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

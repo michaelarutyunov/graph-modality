@@ -1,0 +1,181 @@
+{
+  "transcript_id": "creativity_0081",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI reliability and factuality",
+      "label_negative": "AI as unreliable or unhelpful for research",
+      "bipolarity_complete": true,
+      "grounding_span": "I often use AI for the research, and it's very helpful!"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as tool for generating visual and video elements",
+      "label_negative": "AI as inadequate or low-quality for visuals",
+      "bipolarity_complete": true,
+      "grounding_span": "Another thing AI has been useful for is creating art and video for book covers, trailers, and other promotional materials"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as delegated employee for oversight",
+      "label_negative": "AI as autonomous creative partner",
+      "bipolarity_complete": true,
+      "grounding_span": "I'm in charge of driving all creative decisions"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as serendipitous inspiration source",
+      "label_negative": "AI as irrelevant or distracting",
+      "bipolarity_complete": true,
+      "grounding_span": "sometimes a certain image will give me ideas for a story"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as threat to creative workforce",
+      "label_negative": "AI as threat to human authors",
+      "bipolarity_complete": true,
+      "grounding_span": "knowing AI will be able to write books soon doesn't really bother me"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative autonomy",
+      "grounding_span": "I'm in charge of driving all creative decisions"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Creative satisfaction and enjoyment",
+      "grounding_span": "I ultimately create because it's fun"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "Being able to generate high-quality images and videos that are personalized for my stories has been amazing"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Positive appreciation for AI as research catalyst",
+      "valence": "positive",
+      "grounding_span": "I often use AI for the research, and it's very helpful!"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Positive satisfaction with AI for visualization",
+      "valence": "positive",
+      "grounding_span": "Another thing AI has been useful for is creating art and video"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Assertion of authorial control over AI",
+      "valence": "positive",
+      "grounding_span": "I'm in charge of driving all creative decisions"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Openness to AI as creative catalyst",
+      "valence": "positive",
+      "grounding_span": "sometimes a certain image will give me ideas for a story"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Concern about AI replacing human writers",
+      "valence": "positive",
+      "grounding_span": "knowing AI will be able to write books soon doesn't really bother me"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative prompt refinement",
+      "grounding_span": "it's sometimes taken hundreds of tries before I've gotten the AI to give me an image that matches my exact vision"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic acceptance of technological change",
+      "grounding_span": "the creative potential being made possible by AI far outweighs any negatives in my opinion"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

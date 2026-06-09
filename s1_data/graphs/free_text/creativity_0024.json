@@ -1,0 +1,160 @@
+{
+  "transcript_id": "creativity_0024",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative sounding board for ideas",
+      "label_negative": "AI as autonomous creator replacing human thought",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "it's been a great sounding board for ideas"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as efficiency tool for research and editing",
+      "label_negative": "Manual laborious process without AI",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "it primarily has just become a bit faster and easier"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Human-originated creative work",
+      "label_negative": "AI-generated creative work claimed as human",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "creative works need to originate from the human brain"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI over-reliance in writing and education",
+      "label_negative": "Balanced AI use preserving human thinking",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "people leaning too heavily on AI for writing and creative tasks"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Creative authenticity and originality",
+      "grounding_span": "I have a real thing about that"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and ease in workflow",
+      "grounding_span": "it primarily has just become a bit faster and easier"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Human cognitive development and independent thinking",
+      "grounding_span": "impact on people's ability to think for themselves"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Gratitude for AI's organizational help",
+      "valence": "positive",
+      "grounding_span": "I was very grateful for this new tool"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Concern about AI replacing human creativity in publishing",
+      "valence": "negative",
+      "grounding_span": "I am concerned that will lead to a lot of books that are very derivative"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Concern about AI hindering student learning",
+      "valence": "negative",
+      "grounding_span": "I'm very concerned about the impact that will have on their learning to think"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Commitment to human-driven creative process",
+      "valence": "positive",
+      "grounding_span": "I, myself, will probably continue to do the bulk of my writing the old fashioned way"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative back-and-forth ideation with AI",
+      "grounding_span": "we can go back and forth with iterations of the ideas"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Principled boundary-setting around AI use",
+      "grounding_span": "I am fairly set on the idea that creative works need to originate from the human brain"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

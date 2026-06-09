@@ -1,0 +1,144 @@
+{
+  "transcript_id": "creativity_0052",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as rapid ideation and drafting tool",
+      "label_negative": "Traditional manual sketching and hiring external designers",
+      "bipolarity_complete": true,
+      "grounding_span": "I then begin working with some keywords and thoughts, creating a draft of the cover via AI"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as efficiency multiplier for content production",
+      "label_negative": "Resource-constrained production with external contractors",
+      "bipolarity_complete": true,
+      "grounding_span": "I am able to create more content in a shorter window of time"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as natural evolution of creative tools",
+      "label_negative": "AI as disruptive or threatening to creative work",
+      "bipolarity_complete": true,
+      "grounding_span": "I'm an artist who sees it as another tool in my toolset"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Creative control and human direction in AI use",
+      "label_negative": "AI driving creative decisions autonomously",
+      "bipolarity_complete": true,
+      "grounding_span": "I am definitely driving it. I know what I want, and how it should look"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Creative productivity and output volume",
+      "grounding_span": "I am able to create more content in a shorter window of time"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Artistic autonomy and creative control",
+      "grounding_span": "I am in the drivers seat"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and cost reduction",
+      "grounding_span": "I have significantly cut down the need for external contractors"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Enthusiasm for AI as a creative accelerator",
+      "valence": "positive",
+      "grounding_span": "This is profound"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Impatience with AI development pace",
+      "valence": "negative",
+      "grounding_span": "I don't have any concerns other than it is moving too slow"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Confidence in maintaining creative direction",
+      "valence": "positive",
+      "grounding_span": "I am definitely driving it"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative visual prototyping — rapid drafting and refinement",
+      "grounding_span": "I then begin working with some keywords and thoughts, creating a draft of the cover via AI"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Parallel multitasking across projects",
+      "grounding_span": "While I am working on an artists cover I am also working on code for their mobile app"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n8",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

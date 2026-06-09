@@ -1,0 +1,209 @@
+{
+  "transcript_id": "work_0073",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI for factual internal summaries",
+      "label_negative": "AI for external-facing documents",
+      "bipolarity_complete": true,
+      "grounding_span": "for factual summaries intended for internal use I'll typically let AI handle a brief independently"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as creative ideation partner",
+      "label_negative": "Human-led creative ideation",
+      "bipolarity_complete": true,
+      "grounding_span": "the broad concept and scope of a proposal is always best led by humans"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for dialogue generation in film editing",
+      "label_negative": "AI-generated dialogue as manipulation risk",
+      "bipolarity_complete": true,
+      "grounding_span": "its easy now to generate those words in the exact voice of the character concerned: this is both dangerous and extremely useful"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as skill replacement threat",
+      "label_negative": "AI as skill expansion opportunity",
+      "bipolarity_complete": true,
+      "grounding_span": "there are many aspects of our work that are clearly going to become redundant"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as double-edged sword",
+      "label_negative": "AI as unambiguously beneficial",
+      "bipolarity_complete": true,
+      "grounding_span": "It will continue as a double-edged sword for a while"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and productivity",
+      "grounding_span": "for factual summaries intended for internal use I'll typically let AI handle a brief independently"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Creative integrity and human judgment",
+      "grounding_span": "the broad concept and scope of a proposal is always best led by humans"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Ethical responsibility",
+      "grounding_span": "dangerous (if ever exploited as a way to manipulate people into say things they never said in reality)"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Professional relevance and adaptability",
+      "grounding_span": "it will be necessary in order to stay relevant and ahead of the curve"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Trust in AI for bounded internal tasks",
+      "valence": "positive",
+      "grounding_span": "for factual summaries intended for internal use I'll typically let AI handle a brief independently"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Resistance to AI in creative leadership",
+      "valence": "negative",
+      "grounding_span": "the broad concept and scope of a proposal is always best led by humans"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Excitement about AI's creative potential",
+      "valence": "positive",
+      "grounding_span": "Discovering this use of AI was an exciting moment"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Concern about AI's ethical risks",
+      "valence": "negative",
+      "grounding_span": "dangerous (if ever exploited as a way to manipulate people into say things they never said in reality)"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Ambivalence about AI's impact on skills",
+      "valence": "ambivalent",
+      "grounding_span": "there are many aspects of our work that are clearly going to become redundant"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Reluctant acceptance of AI necessity",
+      "valence": "mixed",
+      "grounding_span": "I'll be somewhat reluctant in some respects, but I'll also embrace the positive aspects"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Context-dependent delegation — adjusts autonomy based on audience and stakes",
+      "grounding_span": "for factual summaries intended for internal use I'll typically let AI handle a brief independently. For documents and images that may be seen by third parties, I'll collaborate with AI"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Collective learning through peer observation — adopts new uses by seeing colleagues",
+      "grounding_span": "seeing how colleagues have used AI influences me to explore new ways to use it"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n3",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

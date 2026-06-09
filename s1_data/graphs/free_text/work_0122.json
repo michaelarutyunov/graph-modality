@@ -1,0 +1,207 @@
+{
+  "transcript_id": "work_0122",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI accuracy and reliability",
+      "label_negative": "AI inaccuracy and hallucination",
+      "bipolarity_complete": true,
+      "grounding_span": "Due to the risks of AI being inaccurate at times, the work still requires double checking"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for sensitive tasks",
+      "label_negative": "AI for routine tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "sensitive tasks are all done manually"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for personalized tasks",
+      "label_negative": "AI for impersonal tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I prefer to handle tasks that require personalization"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI for niche expertise",
+      "label_negative": "AI for general knowledge",
+      "bipolarity_complete": true,
+      "grounding_span": "advice given by these models are often surface level"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI adherence to instructions",
+      "label_negative": "AI deviation from instructions",
+      "bipolarity_complete": true,
+      "grounding_span": "instructions such as a specific word limit would not be followed"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as time-saving tool",
+      "label_negative": "AI as time-consuming correction loop",
+      "bipolarity_complete": true,
+      "grounding_span": "it would be incredibly rare for me to spend as much time trying to get the AI to perform the task right compared to how much time I would need to spend getting it done myself"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "Human backup capability",
+      "label_negative": "Over-reliance on AI",
+      "bipolarity_complete": true,
+      "grounding_span": "there will always need to be a person that can still perform the same tasks"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Accuracy and risk mitigation",
+      "grounding_span": "Anything of significance to stakeholders such as total revenue figures must be double and triple checked"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Personalization and authenticity",
+      "grounding_span": "I prefer to handle tasks that require personalization"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Deep expertise and professional knowledge",
+      "grounding_span": "answering inquiries that require specific in-depth, professional knowledge or experience"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Efficiency and productivity",
+      "grounding_span": "Even more time can be saved and much less effort would be required for analytics"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Resilience and self-sufficiency",
+      "grounding_span": "If there were a power outage or the internet went down, someone still needs to be able to perform the necessary tasks"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Cautious trust in AI for non-sensitive tasks",
+      "valence": "ambivalent",
+      "grounding_span": "Due to the risks of AI being inaccurate at times, the work still requires double checking"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Frustration with AI's instruction following",
+      "valence": "negative",
+      "grounding_span": "I sometimes find myself getting frustrated with AI's limitations especially regarding generating papers, reports, or even paragraphs"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Optimism about future AI integration",
+      "valence": "positive",
+      "grounding_span": "I foresee an even closer relationship working with AI"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Preference for manual handling of personalized tasks",
+      "valence": "negative",
+      "grounding_span": "I avoid using AI for tasks such as answering inquiries that require specific in-depth, professional knowledge or experience"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Risk-aware task delegation — assesses accuracy and sensitivity before using AI",
+      "grounding_span": "Due to the risks of AI being inaccurate at times, the work still requires double checking and sensitive tasks are all done manually"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement with fallback to manual editing",
+      "grounding_span": "I'll often find myself getting trapped in a loop of try agains and undos... Often I would take what is generated and edit it myself"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n13",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

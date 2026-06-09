@@ -1,0 +1,193 @@
+{
+  "transcript_id": "work_0330",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as idea generator and base structure creator",
+      "label_negative": "AI as fully autonomous lesson planner",
+      "bipolarity_complete": true,
+      "grounding_span": "creating ideas for specific curriculum or target language points"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as collaborative refinement partner",
+      "label_negative": "AI as one-shot output generator",
+      "bipolarity_complete": true,
+      "grounding_span": "We'll probably bounce back and forth for a few turns fine tuning elements"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI accuracy in lesson timing",
+      "label_negative": "AI inaccuracy in lesson timing",
+      "bipolarity_complete": true,
+      "grounding_span": "LLM have struggled to provide accurate timings for lessons"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI personalization to teacher's style and students",
+      "label_negative": "AI generic suggestions lacking personalization",
+      "bipolarity_complete": true,
+      "grounding_span": "An LLM might suggest doing something that doesn't really gel with my personality"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as time-saving labour device",
+      "label_negative": "AI as crutch leading to over-reliance",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't use AI as a crutch - it's more about being a labour saving device"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI integration with personal resources and localization",
+      "label_negative": "AI lacking integration and defaulting to US content",
+      "bipolarity_complete": true,
+      "grounding_span": "If I was able to link an LLM to my Google drive"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Teaching effectiveness and student engagement",
+      "grounding_span": "I know my students and my teaching style"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional autonomy and personal authenticity",
+      "grounding_span": "I know what sort of teacher I am and what I can pull off convincingly"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Efficiency and time management",
+      "grounding_span": "It's just such a time saver!"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Professional diligence and quality control",
+      "grounding_span": "it's important to be diligent and carefully check over lesson plans"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI as collaborative planning tool",
+      "valence": "positive",
+      "grounding_span": "it definitely speeds up the process when working with LLM"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with AI timing inaccuracies",
+      "valence": "negative",
+      "grounding_span": "LLM have struggled to provide accurate timings for lessons"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Cautious optimism about future AI integration",
+      "valence": "mixed",
+      "grounding_span": "I think, looking ahead, my working relationship with AI will be fairly consistent, unless big changes occur"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Resistance to over-reliance on AI",
+      "valence": "negative",
+      "grounding_span": "I'm quite careful about not being over reliant on AI usage professionally"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through back-and-forth dialogue",
+      "grounding_span": "We'll probably bounce back and forth for a few turns fine tuning elements"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-specific delegation based on task type",
+      "grounding_span": "It depends on the use case"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

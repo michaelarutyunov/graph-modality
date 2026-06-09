@@ -1,0 +1,157 @@
+{
+  "transcript_id": "work_0968",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as thought partner for logic checking",
+      "label_negative": "AI as primary decision-maker",
+      "bipolarity_complete": true,
+      "grounding_span": "double check my thoughts through the AI"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as inventory sourcing advisor",
+      "label_negative": "AI for strategic or high-stakes decisions",
+      "bipolarity_complete": true,
+      "grounding_span": "helped me decide which Monster Energy flavor would likely be best for me to stock"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI use for quick, bounded tasks",
+      "label_negative": "AI as essential or high-importance tool",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is more of a handy tool at the moment rather than a huge help"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI delegation for simple tasks",
+      "label_negative": "AI autonomy or job displacement",
+      "bipolarity_complete": true,
+      "grounding_span": "We have the final say so and we can delegate what we do and don't want to AI"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI for repetitive simple tasks",
+      "label_negative": "AI for creative or skilled manual work",
+      "bipolarity_complete": true,
+      "grounding_span": "buy small machines/robots to do repetitive tasks for cheap"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Business efficiency and cost-effectiveness",
+      "grounding_span": "I wasn't sure if it were worth the price point"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Autonomy and personal control",
+      "grounding_span": "We have the final say so"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Enjoyment of hands-on work",
+      "grounding_span": "I enjoy the work I do"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "I was satisfied when it helped me decide which Monster Energy flavor would likely be best for me to stock"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Openness to future AI for repetitive tasks",
+      "valence": "positive",
+      "grounding_span": "I might consider using an AI voice for certain things in the future"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Concern for others in less autonomous situations",
+      "valence": "negative",
+      "grounding_span": "I do think it's a little scary for others in situations unlike mine"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Independent deliberation before AI consultation",
+      "grounding_span": "I tend to think about whatever I'd ask the AI myself first"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based boundary setting — clear separation of AI-appropriate vs. human-only tasks",
+      "grounding_span": "I don't believe we'd ever delegate more than like 5% of tasks to AI"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

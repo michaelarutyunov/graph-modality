@@ -1,0 +1,157 @@
+{
+  "transcript_id": "work_0310",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as autonomous coder for unknown tasks",
+      "label_negative": "Manual learning and implementation",
+      "bipolarity_complete": true,
+      "grounding_span": "I simply let AI code the entire functionality on it's own"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as strategic thinking partner",
+      "label_negative": "AI as mere executor of my ideas",
+      "bipolarity_complete": true,
+      "grounding_span": "I prompt the AI with simply the context and have it think independently"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI code quality and reliability",
+      "label_negative": "AI unreliability requiring verification",
+      "bipolarity_complete": true,
+      "grounding_span": "it is correct most of the time"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI for communication tasks",
+      "label_negative": "AI performance in tailored communication",
+      "bipolarity_complete": false,
+      "grounding_span": "having the AI write up simple elevator pitches that are fine tuned to a specific incubator be very poor"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as research accelerator",
+      "label_negative": "AI as threat to skill development",
+      "bipolarity_complete": true,
+      "grounding_span": "I've adapted to use AI to learn subjects and grow with it"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "become more efficient"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Autonomy and personal control",
+      "grounding_span": "I have my own plan/idea set up"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Authentic company representation",
+      "grounding_span": "staying on track with the company mission"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "There have been a lot of moments where I was satisfied with AI - especially within frontend development"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Reluctance to use AI for writing",
+      "valence": "negative",
+      "grounding_span": "having the AI write up simple elevator pitches ... be very poor"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "positive",
+      "grounding_span": "I don't really worry about it taking over my skillset, but more so how I can develop with it"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement with limited back-and-forth",
+      "grounding_span": "I analyze the AI's system design and then go on google to verify the approach"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic comparison of independent outputs",
+      "grounding_span": "I prompt the AI with simply the context and have it think independently to see what it comes up with and to see if it's better than my idea"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

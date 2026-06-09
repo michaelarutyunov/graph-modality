@@ -1,0 +1,240 @@
+{
+  "transcript_id": "work_0549",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborator for iterative refinement",
+      "label_negative": "AI as author replacing human writing",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I use AI to rewrite emails, summaries, and similar shorter-form documents. In other words, AI is my editor."
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as brainstorming and idea generator",
+      "label_negative": "AI as mere executor without creative input",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I use AI to bounce ideas off of someone to test for their realizability"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI unreliability and need for fact-checking",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I also always double-check crucial data points like time/date, etc."
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI integration into existing software",
+      "label_negative": "AI siloed in separate applications",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "my AI tools aren't connected across data domains is a source of immense frustration"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI involvement in actual making process",
+      "label_negative": "AI as domain expert requiring deep knowledge",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "Sometimes I just need a structural agent instead of in-depth domain expertise to help guide my writing"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as tool for generating visual and video elements",
+      "label_negative": "AI for complex data-driven graphics",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I usually trust that the graphic truly represents the data underlying it, because I make only simple graphics with AI"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI use sanctioned by workplace",
+      "label_negative": "Workplace cultural constraints on AI adoption",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "My cultural environment constrains my access to relevant tools"
+    },
+    {
+      "id": "n8",
+      "type": "Construct",
+      "label": "AI for rote and time-consuming tasks",
+      "label_negative": "Humans doing rote processes manually",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "We spend lots of manpower doing rote processes based on multiple known variables, which should be done by AI"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Effective communication",
+      "valence": null,
+      "grounding_span": "optimize the effectiveness of the message"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "valence": null,
+      "grounding_span": "not an effective use of limited time"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Trustworthiness and accuracy",
+      "valence": null,
+      "grounding_span": "validate for accuracy, relevance, and reliable sourcing"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Seamless workflow integration",
+      "valence": null,
+      "grounding_span": "my AI tools aren't connected across data domains is a source of immense frustration"
+    },
+    {
+      "id": "n13",
+      "type": "Value",
+      "label": "Innovation and creating new knowledge",
+      "valence": null,
+      "grounding_span": "encounter new ideas that AI augments and helps generate"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Satisfaction with AI summaries",
+      "valence": "positive",
+      "grounding_span": "AI summarization of conversations we have is virtually flawless"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Optimism about future AI integration",
+      "valence": "negative",
+      "grounding_span": "my AI tools aren't connected across data domains is a source of immense frustration"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Cautious trust with verification",
+      "valence": "ambivalent",
+      "grounding_span": "I prefer to collaborate with AI rather than blindly trust"
+    },
+    {
+      "id": "n17",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "positive",
+      "grounding_span": "I'm ready for the promise to become actualized"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement with limited back-and-forth",
+      "valence": null,
+      "grounding_span": "Then we engage in a back-and-forth conversation on its version versus mine"
+    },
+    {
+      "id": "n19",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-specific delegation based on task nature",
+      "valence": null,
+      "grounding_span": "I usually trust that the graphic truly represents the data underlying it, because I make only simple graphics with AI"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n14",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n17",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n19",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

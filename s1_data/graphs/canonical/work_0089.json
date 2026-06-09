@@ -1,0 +1,167 @@
+{
+  "transcript_id": "work_0089",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI for repetitive simple tasks",
+      "label_negative": "Manual repetition of patterns",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI like copilot to refactor code sometimes because it helps me with repetitions"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI capability for complex tasks",
+      "label_negative": "Self-handling of complex tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I let AI handle more complex tasks and refine them later"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI code quality and reliability",
+      "label_negative": "Subpar AI-generated code quality",
+      "bipolarity_complete": true,
+      "grounding_span": "sometimes the quality of the code produced is not great"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as time-saving refactoring tool",
+      "label_negative": "Time-wasting prompt tweaking for complex tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "When refactoring code I feel the most satisfied because it saves a loooot of time"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as assistant for complex work",
+      "label_negative": "AI replacing complex software engineering",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't see ai taking over complex software engineering"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "it saves a loooot of time"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Code quality and correctness",
+      "grounding_span": "code that is subpar in terms of quality"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional autonomy",
+      "grounding_span": "I try to focus on good patterns of development and I try to focus on complex tasks"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for refactoring",
+      "valence": "positive",
+      "grounding_span": "When refactoring code I feel the most satisfied because it makes exactly what I want"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI errors",
+      "valence": "negative",
+      "grounding_span": "The most frustrating part is when something very complex comes up and I spend a lot of time tweaking the prompt"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "mixed",
+      "grounding_span": "I often try to use it with caution"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative prompt refinement",
+      "grounding_span": "I have to specify even more precisely what I need and then ask to give alternatives"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Selective delegation based on task nature",
+      "grounding_span": "I choose to do tasks that are simple to understand of medium complexity by myself"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n4",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

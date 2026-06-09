@@ -1,0 +1,194 @@
+{
+  "transcript_id": "work_0617",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as educational resource for background knowledge",
+      "label_negative": "AI as unreliable for acute or emergency situations",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is best used when I know I don't know and need the information or background"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as granular search engine for concrete answers",
+      "label_negative": "AI as conversational partner for advice",
+      "bipolarity_complete": true,
+      "grounding_span": "I use it as a granular search engine basically. I'm not looking for advice or conversation, I'm looking for answers that are concrete"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as collaborative design partner",
+      "label_negative": "AI as unresponsive to fine-tuning requests",
+      "bipolarity_complete": true,
+      "grounding_span": "In those cases I am collaborating with AI and trying to get projects or write-ups to be effective and high quality"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as enhancer of paramedic skills and safety",
+      "label_negative": "AI as threat to paramedic jobs",
+      "bipolarity_complete": true,
+      "grounding_span": "If anything AI will make paramedics way better"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as shortcut used by younger colleagues",
+      "label_negative": "AI as quality tool for genuine learning",
+      "bipolarity_complete": true,
+      "grounding_span": "In their case they seem to use it as a dodge or a shortcut"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Patient care and safety",
+      "grounding_span": "This will result in better patient outcomes"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional competence and efficiency",
+      "grounding_span": "AI rarely let's me down and the small complaints are so trivial compared to alternatives"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Quality and effectiveness in work products",
+      "grounding_span": "trying to get projects or write-ups to be effective and high quality"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI as reliable educational tool",
+      "valence": "positive",
+      "grounding_span": "It's a great resource for education and information"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI's lack of responsiveness to fine-tuning",
+      "valence": "negative",
+      "grounding_span": "It was frustrating to some extent putting together the survey, because I had trouble fine tuning the design"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Optimism about AI's future impact on paramedicine",
+      "valence": "positive",
+      "grounding_span": "I think AI will also have the potential to help train and education EMS providers to a much higher standard"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Critical view of younger colleagues' AI use as shortcut",
+      "valence": "negative",
+      "grounding_span": "I don't see a lot of quality in terms of how they are using AI. In their case they seem to use it as a dodge or a shortcut"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Context-dependent tool switching — adapts interaction style to task domain",
+      "grounding_span": "When I use AI in the back of an ambulance I use it as a granular search engine basically... In those cases I am collaborating with AI"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Explicit boundary setting between emergency and non-emergency situations",
+      "grounding_span": "Anything EMS related or acute changes in the patient would default to me doing what I know"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n5",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

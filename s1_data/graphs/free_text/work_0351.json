@@ -1,0 +1,174 @@
+{
+  "transcript_id": "work_0351",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as streamlining tool for tedious tasks",
+      "label_negative": "AI as unreliable for complex tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "streamline tedious processes at my job"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as writing and formatting assistant",
+      "label_negative": "Manual writing without AI assistance",
+      "bipolarity_complete": true,
+      "grounding_span": "write standard operating procedures or boring email responses"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI accuracy in data and math tasks",
+      "label_negative": "AI errors in calculations and data handling",
+      "bipolarity_complete": true,
+      "grounding_span": "AI generally gives me the wrong answer when data I have inputted is involved"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as collaborator for specific parts of tasks",
+      "label_negative": "Full automation of entire workflows",
+      "bipolarity_complete": true,
+      "grounding_span": "refer to AI to help with specific parts of a larger task"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI reliability in factual information",
+      "label_negative": "AI hallucination and invention of information",
+      "bipolarity_complete": true,
+      "grounding_span": "it completely invents addresses"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and productivity",
+      "grounding_span": "streamline tedious processes"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Accuracy and trustworthiness",
+      "grounding_span": "AI generally gives me the wrong answer"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional competence and control",
+      "grounding_span": "I still do a lot of these activities by myself"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for formatting and polishing",
+      "valence": "positive",
+      "grounding_span": "I will plug my awkward wording into AI and ask it to polish it"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI calculation errors",
+      "valence": "negative",
+      "grounding_span": "the sum of these payments was being consistently calculated incorrectly"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Mixed feelings about AI for market research",
+      "valence": "mixed",
+      "grounding_span": "I have had mixed results with it in the past"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Desire for AI humility and error disclaimers",
+      "valence": "positive",
+      "grounding_span": "Incorporating some 'humility' or acknowledgement to possible margin of error"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Experience-driven calibration of AI use",
+      "grounding_span": "I have also found that AI is not good at plotting geographical points on maps"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Delegation of specific sub-tasks within larger workflows",
+      "grounding_span": "I will many times refer to AI to help with specific parts of a larger task"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,143 @@
+{
+  "transcript_id": "science_0110",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as accessible expert for troubleshooting and information gathering",
+      "label_negative": "Limited access to human experts",
+      "bipolarity_complete": true,
+      "grounding_span": "I consulted AI to understand how to design an ASO. Traditionally, I need to consult expert in this field but I have limited access to them."
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability in providing verifiable sources",
+      "label_negative": "AI hallucination and lack of source transparency",
+      "bipolarity_complete": true,
+      "grounding_span": "AI can help me and can provide sources that can back up its reasoning."
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI capability in handling long nucleic acid sequences",
+      "label_negative": "AI hallucination with long DNA/RNA sequences",
+      "bipolarity_complete": true,
+      "grounding_span": "AI tool is bad at analysing long nucleic acid sequence. It hallucinates a lot when long DNA or RNA sequence is involved."
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as autonomous NGS data analysis tool",
+      "label_negative": "Dependence on bioinformatician for NGS analysis",
+      "bipolarity_complete": true,
+      "grounding_span": "I wish it could help me analyse NGS sequencing dataset like this: I upload the fastq raw data to the model and ask it to do read mapping, data analysis and it will do that."
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Research efficiency and autonomy",
+      "grounding_span": "it's really time consuming and requires much effort in communication. I wish AI can help me analyse these datasets."
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Epistemic trust and verification",
+      "grounding_span": "I looked up the method sections and verified myself."
+    },
+    {
+      "id": "n7",
+      "type": "Stance",
+      "label": "Positive reliance on AI for troubleshooting and information",
+      "valence": "positive",
+      "grounding_span": "I mainly used AI tools to troubleshoot experimental problems. And I also used AI to help me gather information on past research."
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Negative stance toward AI for long sequence analysis",
+      "valence": "negative",
+      "grounding_span": "AI tool is bad at analysing long nucleic acid sequence. It hallucinates a lot when long DNA or RNA sequence is involved."
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Aspirational desire for AI in NGS analysis",
+      "valence": "positive",
+      "grounding_span": "I wish it could help me analyse NGS sequencing dataset like this"
+    },
+    {
+      "id": "n10",
+      "type": "CognitiveStyleMarker",
+      "label": "Verification-oriented reasoning — cross-checking AI outputs with primary sources",
+      "grounding_span": "I asked AI to show where did it get the rules it presented using real papers. I looked up the method sections and verified myself."
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic domain-specific calibration — using AI where it works, avoiding where it fails",
+      "grounding_span": "AI tool is bad at analysing long nucleic acid sequence. It hallucinates a lot when long DNA or RNA sequence is involved."
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n8",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n10",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

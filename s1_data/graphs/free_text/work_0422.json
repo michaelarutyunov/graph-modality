@@ -1,0 +1,179 @@
+{
+  "transcript_id": "work_0422",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as strategic collaborator for segments",
+      "label_negative": "AI as unreliable long-term partner",
+      "bipolarity_complete": true,
+      "grounding_span": "I tend to strategically collaborate, usually only on a segment of a project"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as thought mirror and starting point",
+      "label_negative": "AI as source of fundamental errors",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is great as an interactive notebook or thought mirror"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI context retention and understanding",
+      "label_negative": "AI context loss and hallucination",
+      "bipolarity_complete": true,
+      "grounding_span": "It will often start to shift away from previous context"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI reliability for fundamental logic",
+      "label_negative": "AI making basic logical errors",
+      "bipolarity_complete": true,
+      "grounding_span": "it claimed that a fundamental mathematical theory was wrong"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Human control over personal expression and code",
+      "label_negative": "AI taking over personal tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I write my own emails and i would rarely want ai help"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "unless its taking too long for me to figure something out"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Understanding and contextual awareness",
+      "grounding_span": "hope for systems with a better method of understanding"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Authenticity and personal expression",
+      "grounding_span": "I want to give my thoughts and feelings, not a guess from a computer"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI as idea flesher",
+      "valence": "positive",
+      "grounding_span": "My most satisfying moments have come from it helping me flesh out ideas"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI context loss",
+      "valence": "negative",
+      "grounding_span": "It will often start to shift away from previous context, which becomes very frustrating"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Skepticism toward AI replacing workers",
+      "valence": "negative",
+      "grounding_span": "I don't think AI can take over anything"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Cautious optimism for future AI understanding",
+      "valence": "mixed",
+      "grounding_span": "hope for systems with a better method of understanding"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic time-boxed collaboration",
+      "grounding_span": "I try to keep it on a timer, if I can't get any help from it in a few prompts, probably time to think more about it myself"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Verification-oriented analysis",
+      "grounding_span": "I check it for consistency, since it doesn't KNOW our business"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

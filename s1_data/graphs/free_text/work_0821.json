@@ -1,0 +1,188 @@
+{
+  "transcript_id": "work_0821",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as comprehension aid for complex technical documentation",
+      "label_negative": "Manual analysis of complex documentation",
+      "bipolarity_complete": true,
+      "grounding_span": "get AI to summarise the usages, and general flows"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as autonomous task executor with refinement",
+      "label_negative": "AI as collaborative back-and-forth partner",
+      "bipolarity_complete": true,
+      "grounding_span": "I normally give it a complete task"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability and accuracy in code generation",
+      "label_negative": "AI unreliability and need for verification",
+      "bipolarity_complete": true,
+      "grounding_span": "it made suitable modifications and got it right first try"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as productivity tool for work-life balance",
+      "label_negative": "AI as threat to job security and work hours",
+      "bipolarity_complete": true,
+      "grounding_span": "I want AI to help me deliver the same amount of work in a shorter amount of time so that I can spend more time with my family"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as skill maintenance risk",
+      "label_negative": "AI as skill enhancement opportunity",
+      "bipolarity_complete": true,
+      "grounding_span": "I have already found myself getting lazier when it comes to learning new technologies"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI suitability for legacy codebases",
+      "label_negative": "AI unsuitability for legacy codebases",
+      "bipolarity_complete": true,
+      "grounding_span": "I work in an extremely legacy codebase that AI can often struggle to make suitable changes in"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Epistemic understanding",
+      "grounding_span": "get AI to summarise the usages, and general flows"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "saved me a lot of time and brain power"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Work-life balance",
+      "grounding_span": "spend more time with my family"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Professional competence and code quality",
+      "grounding_span": "they don't understand what the AI is delivering"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI fixing unit tests correctly",
+      "valence": "positive",
+      "grounding_span": "it made suitable modifications and got it right first try"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Worry about AI's negative impact on jobs",
+      "valence": "negative",
+      "grounding_span": "I do worry about how it might negatively affect our jobs in the future"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Concern about skill degradation due to AI",
+      "valence": "negative",
+      "grounding_span": "I have already found myself getting lazier when it comes to learning new technologies"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Skepticism about AI handling entire features in legacy code",
+      "valence": "negative",
+      "grounding_span": "I would be surprised if it ever gets to a point where I can just let it deliver entire features for me"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Delegation with refinement — gives full task then iterates",
+      "grounding_span": "I normally give it a complete task... then normally have to give it small follow up prompts"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Risk-aware boundary setting — retains control over critical compliance decisions",
+      "grounding_span": "When making decisions around PCI DSS compliance I will always do that analysis myself"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

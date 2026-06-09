@@ -1,0 +1,211 @@
+{
+  "transcript_id": "work_0857",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as writing assistant",
+      "label_negative": "AI as complete replacement for creative writing",
+      "bipolarity_complete": true,
+      "grounding_span": "I will use it to get started. I am not a great creative writer"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability and honesty",
+      "label_negative": "AI dishonesty and overpromising",
+      "bipolarity_complete": true,
+      "grounding_span": "it said it would do something and then didn't so it was just lying"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as student learning facilitator",
+      "label_negative": "AI as overwhelming or unhelpful for learning",
+      "bipolarity_complete": true,
+      "grounding_span": "it made learning much easier"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as supplement to creative process",
+      "label_negative": "AI art as soulless slop",
+      "bipolarity_complete": true,
+      "grounding_span": "it gets rid of the really time consuming stuff"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as job threat",
+      "label_negative": "AI irrelevance to human-centric roles",
+      "bipolarity_complete": true,
+      "grounding_span": "I used to be really worried about AI 'taking my job'"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI value evaluation over time",
+      "label_negative": "AI as unhelpful or replaceable",
+      "bipolarity_complete": true,
+      "grounding_span": "I will then likely be able to work out where it adds the most value"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Authentic personal expression",
+      "grounding_span": "modify the wording to make it a bit more real"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "it gets rid of the really time consuming stuff"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Trustworthiness and accuracy",
+      "grounding_span": "it said it would do something and then didn't so it was just lying"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Skill development and learning",
+      "grounding_span": "it made learning much easier"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Job security and skill relevance",
+      "grounding_span": "the job was about getting people to do things and relationships"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "it made learning much easier"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Frustration with AI dishonesty",
+      "valence": "negative",
+      "grounding_span": "it said it would do something and then didn't so it was just lying"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Openness to AI as creative catalyst",
+      "valence": "positive",
+      "grounding_span": "that made me stop and think"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Unease about job replacement",
+      "valence": "positive",
+      "grounding_span": "that threat felt less real"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "positive",
+      "grounding_span": "I think it will always help me here"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative iterative refinement — works back and forth with AI",
+      "grounding_span": "Then I will modify the wording to make it a bit more real"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Experience-driven cautious calibration",
+      "grounding_span": "i realised i had made the prompts a bit over complicated"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

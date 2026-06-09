@@ -1,0 +1,121 @@
+{
+  "transcript_id": "work_0954",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as brainstorming and problem-solving partner",
+      "label_negative": "AI as formal task completion tool",
+      "bipolarity_complete": true,
+      "grounding_span": "we don't use AI formally for tasks, more informally for this type of brainstorming and problem-solving"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI effectiveness in generating novel strategies",
+      "label_negative": "AI providing insufficient or obvious strategies",
+      "bipolarity_complete": true,
+      "grounding_span": "the answer gave us a new strategy that we hadn't tried before"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as tool for data organization and cleaning",
+      "label_negative": "Manual data organization without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "enter a jumbled and combined list of job titles, and have them properly extrapolated"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Workplace openness to AI use",
+      "label_negative": "Workplace discouragement of AI use",
+      "bipolarity_complete": true,
+      "grounding_span": "it encouraged me to openly use it and talk about it"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Workplace recognition and validation",
+      "grounding_span": "she was very happy about it, and that was also satisfying"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and effectiveness in task completion",
+      "grounding_span": "it helped a lot, and we were surprised we hadn't been layering the keyword filter"
+    },
+    {
+      "id": "n7",
+      "type": "Stance",
+      "label": "Satisfaction with AI-generated novel strategies",
+      "valence": "positive",
+      "grounding_span": "I felt particularly satisfied when I was able to come up with an overlooked and effective solution"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Openness to expanding AI use with agents and automation",
+      "valence": "positive",
+      "grounding_span": "if given the opportunity, I will bring AI more into my role"
+    },
+    {
+      "id": "n9",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through different questioning angles",
+      "grounding_span": "I went in with another conversation and came up with an even better strategy"
+    },
+    {
+      "id": "n10",
+      "type": "CognitiveStyleMarker",
+      "label": "Preprocessing and structuring data before problem-solving",
+      "grounding_span": "my first step was to enter a jumbled and combined list of job titles, and have them properly extrapolated"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n9",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n10",
+      "relation": "MODULATED_BY"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

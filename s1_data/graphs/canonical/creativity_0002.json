@@ -1,0 +1,143 @@
+{
+  "transcript_id": "creativity_0002",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as efficiency tool for content creation",
+      "label_negative": "AI as threat to job existence",
+      "bipolarity_complete": true,
+      "grounding_span": "I was able to use AI for this project to craft paragraphs"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "Human oversight and decision-making",
+      "label_negative": "Unchecked AI content",
+      "bipolarity_complete": true,
+      "grounding_span": "I make sure all content undergoes multiple human checks"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as productivity enhancer",
+      "label_negative": "AI as cause of job displacement",
+      "bipolarity_complete": true,
+      "grounding_span": "I've gone from being able to produce 2000 words of polished, professional content to well over 5000 words each day"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI reliance leading to laziness and oversight",
+      "label_negative": "AI replacing human role entirely",
+      "bipolarity_complete": true,
+      "grounding_span": "my job changing to be more of a prompt engineer rather than an SEO copywriter"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "saved a lot of time from having to research things and write from scratch"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Job security and skill relevance",
+      "grounding_span": "one day my job might not exist"
+    },
+    {
+      "id": "n7",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "I felt positive about the experience"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Concern about job displacement",
+      "valence": "negative",
+      "grounding_span": "my main concern is that one day my job might not exist"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Optimistic anticipation of role evolution",
+      "valence": "positive",
+      "grounding_span": "I can see AI's role continuing to grow larger"
+    },
+    {
+      "id": "n10",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement and human touch",
+      "grounding_span": "I'll 'tidy up', making edits to give a more human feel"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic prompt engineering with constraints",
+      "grounding_span": "the prompt I start with has as much information fed into it as possible"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n8",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n10",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n10",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

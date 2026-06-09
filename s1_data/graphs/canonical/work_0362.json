@@ -1,0 +1,205 @@
+{
+  "transcript_id": "work_0362",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as speed tool for discrete tasks",
+      "label_negative": "AI as unreliable oracle requiring deep trust",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is a massive speed-boost for a lot of things"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI code quality and reliability",
+      "label_negative": "AI as unreliable for obscure or unfamiliar languages",
+      "bipolarity_complete": true,
+      "grounding_span": "If I'm using Claude 4 or Gemini 2.5 Pro to write code, I can almost certainly trust that it's writing 'good code'"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI bug severity and fix effort",
+      "label_negative": "AI as ineffective when given wrong files or insufficient context",
+      "bipolarity_complete": true,
+      "grounding_span": "There's actually a really high success rate at bug-finding when using this method"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as job threat",
+      "label_negative": "AI as benign tool that creates new opportunities",
+      "bipolarity_complete": true,
+      "grounding_span": "our jobs are going to be fully supplanted by artificially intelligent agents"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Authenticity of AI-generated content",
+      "label_negative": "AI as acceptable substitute for human interaction",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't trust AI when it comes to communicating with other humans on my behalf"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as verification-requiring tool",
+      "label_negative": "AI as autonomous decision-maker without oversight",
+      "bipolarity_complete": true,
+      "grounding_span": "trust, but verify"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "create more efficient workflows and better end-products"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional competence",
+      "grounding_span": "AI was wrong and that feature never existed in that program"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Authenticity and personal integrity",
+      "grounding_span": "human-to-human connection that needs to persist"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Faith and trust in divine control",
+      "grounding_span": "I have faith in my Lord Jesus Christ and I know that at the end of the day, He's in charge of it all"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI for code generation",
+      "valence": "positive",
+      "grounding_span": "It was astounding to watch and it just spit out like 60 lines of code within ten seconds that did exactly what I needed"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with AI for software guidance",
+      "valence": "negative",
+      "grounding_span": "I spend the entire day listening to AI and trying to do what it says, only to discover that AI was wrong"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Concern about AI replacing jobs",
+      "valence": "negative",
+      "grounding_span": "There is little tension left within me -- only resignation"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Peaceful trust in divine sovereignty amid disruption",
+      "valence": "positive",
+      "grounding_span": "I'm okay with that because I have faith in my Lord Jesus Christ"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "ambivalent",
+      "grounding_span": "trust, but verify"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Systematic iterative decomposition of tasks",
+      "grounding_span": "Each step in that process is probably more granular than it needs to be"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic calibration based on task stakes and verifiability",
+      "grounding_span": "the stakes aren't super high on this because we don't trust it as 'Gospel truth'"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

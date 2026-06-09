@@ -1,0 +1,178 @@
+{
+  "transcript_id": "work_0452",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as ideation partner",
+      "label_negative": "AI as mere tool without collaborative input",
+      "bipolarity_complete": true,
+      "grounding_span": "I use it to help me research, talk through ideas"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for meeting summaries and communication",
+      "label_negative": "Manual tracking and risk of forgetting details",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is better at keeping up with the changes and organizing the conversation"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as professional polish tool",
+      "label_negative": "Manual drafting without AI assistance",
+      "bipolarity_complete": true,
+      "grounding_span": "AI generates a personalized follow up in seconds, saving me a ton of time"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Confidentiality in AI use",
+      "label_negative": "Sharing personal or confidential data with AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I am hesitant to put important personal or confidential information into AI"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI image generation capability",
+      "label_negative": "Current limitations in image and content generation",
+      "bipolarity_complete": true,
+      "grounding_span": "I have a harder time with images and AI"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as tool for routine legal work",
+      "label_negative": "AI replacing human roles in professions",
+      "bipolarity_complete": true,
+      "grounding_span": "so much of that profession could be done more efficiently and with less error by AI"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "saving me a ton of time"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Knowledge retention and skill maintenance",
+      "grounding_span": "make sure we don't forget anything"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Privacy and data security",
+      "grounding_span": "hesitant to put important personal or confidential information into AI"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Future career guidance for children",
+      "grounding_span": "makes me think about my kids and the fields that they should eventually go into"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI for email drafting",
+      "valence": "positive",
+      "grounding_span": "AI generates a personalized follow up in seconds, saving me a ton of time"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Concern about privacy with AI",
+      "valence": "negative",
+      "grounding_span": "I am hesitant to put important personal or confidential information into AI"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Frustration with AI image generation",
+      "valence": "negative",
+      "grounding_span": "I have a harder time with images and AI"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Enthusiasm for AI as learning and efficiency tool",
+      "valence": "positive",
+      "grounding_span": "I am impressed by AI and it's capabilities and know that I have so much more to learn about it"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic concealment and selective disclosure",
+      "grounding_span": "I am hesitant to put important personal or confidential information into AI"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Future-oriented thinking — considering long-term implications for children",
+      "grounding_span": "makes me think about my kids and the fields that they should eventually go into"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n4",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

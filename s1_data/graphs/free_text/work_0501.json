@@ -1,0 +1,214 @@
+{
+  "transcript_id": "work_0501",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as research starting point for broad information gathering",
+      "label_negative": "AI as unreliable for detailed niche research",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I'll toss a generic question out ... and ask AI to pull up as much information as possible"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as communication editor and critic",
+      "label_negative": "AI as insufficient for nuanced communication review",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I will drop it into AI for an edit/critique"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as second opinion for understanding unfamiliar topics",
+      "label_negative": "AI as unreliable for accurate understanding",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I find it valuable to drop that info in to AI ... help me make sure I am understanding correctly"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI trustworthiness for accurate analysis",
+      "label_negative": "AI untrustworthiness due to errors and hallucinations",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I get frustrated whenever AI produces an incorrect analysis, or miscalculates a simple summation"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as tool for uncovering deeper insights",
+      "label_negative": "AI as limited to superficial information",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I am satisfied when AI uncovers insights that are beyond a basic google search"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI delegation feasibility given unpredictable work",
+      "label_negative": "AI delegation infeasibility due to unstructured days",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "my days are not well structured. I never know what I'm going to have to work on from day to day. It would be extremely hard to delegate tasks"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficient information gathering",
+      "valence": null,
+      "grounding_span": "I'll toss a generic question out ... and ask AI to pull up as much information as possible"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional communication quality",
+      "valence": null,
+      "grounding_span": "If I am about to send out an important email ... I will drop it into AI for an edit/critique"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Accurate understanding and knowledge validation",
+      "valence": null,
+      "grounding_span": "help me make sure I am understanding correctly"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Reliable and error-free work output",
+      "valence": null,
+      "grounding_span": "I get frustrated whenever AI produces an incorrect analysis"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Discovery of novel insights",
+      "valence": null,
+      "grounding_span": "AI uncovers insights that are beyond a basic google search"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Workflow autonomy and control",
+      "valence": null,
+      "grounding_span": "I am an independent contractor, so I'm the only decision-maker for how things get done"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Satisfaction with AI for broad research",
+      "valence": "positive",
+      "grounding_span": "I am satisfied when AI uncovers insights that are beyond a basic google search"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Frustration with AI inaccuracies",
+      "valence": "negative",
+      "grounding_span": "I get frustrated whenever AI produces an incorrect analysis, or miscalculates a simple summation"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Cautious trust in AI for understanding unfamiliar topics",
+      "valence": "ambivalent",
+      "grounding_span": "I find it valuable to drop that info in to AI ... help me make sure I am understanding correctly"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Reluctance to delegate due to trust and unpredictability",
+      "valence": "negative",
+      "grounding_span": "I do not delegate complete tasks"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative exploration — broad initial query then targeted follow-up",
+      "valence": null,
+      "grounding_span": "I'll toss a generic question out ... I'll typically hit on topics from there that I will research more thoroughly"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic cost-benefit assessment — prefers own research when AI requires extensive instructions",
+      "valence": null,
+      "grounding_span": "it's just quicker and easier for me to peruse things on my own"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

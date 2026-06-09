@@ -1,0 +1,157 @@
+{
+  "transcript_id": "work_0342",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as autonomous task owner",
+      "label_negative": "AI as limited assistant requiring constant human intervention",
+      "bipolarity_complete": true,
+      "grounding_span": "giving it a chance to own new features"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability and accuracy",
+      "label_negative": "AI hallucination and circular reasoning",
+      "bipolarity_complete": true,
+      "grounding_span": "when AI starts hallucinating, or rotating in circle"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as efficiency booster for manual tasks",
+      "label_negative": "AI as unreliable source in unfamiliar domains",
+      "bipolarity_complete": true,
+      "grounding_span": "manual operations and hours of debugging turns into just couple of minutes"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as research and scaffolding tool",
+      "label_negative": "AI as final decision-maker without human oversight",
+      "bipolarity_complete": true,
+      "grounding_span": "AI would scaffold and do as much as possible until someone picks it up"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Human supervisory role over AI",
+      "label_negative": "AI replacing human role entirely",
+      "bipolarity_complete": true,
+      "grounding_span": "shape my role from actively doing something to more supervision"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and speed",
+      "grounding_span": "helps speed development in projects you have limited knowledge on"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Reliable knowledge and truth",
+      "grounding_span": "AI keeps making up information because even it struggles to fully get awareness"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Human agency and control",
+      "grounding_span": "all we would do is provide guidance and express feedback"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for debugging and speed",
+      "valence": "positive",
+      "grounding_span": "manual operations and hours of debugging turns into just couple of minutes"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI hallucination in unfamiliar domains",
+      "valence": "negative",
+      "grounding_span": "AI keeps making up information because even it struggles to fully get awareness"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Acceptance of evolving supervisory role",
+      "valence": "positive",
+      "grounding_span": "I see myself becomes more supervision and having the ability to do more with less"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative decomposition and frequent verification",
+      "grounding_span": "more frequent checks is always better. smaller prompts ideally with start and end"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Exhaustive strategy testing before handoff",
+      "grounding_span": "we have tried multiple times, multiple sessions (independent), rephrasing prompts, making prompts into smaller chunks"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

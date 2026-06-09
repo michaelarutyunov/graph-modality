@@ -1,0 +1,154 @@
+{
+  "transcript_id": "work_0499",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as starting point for research leads",
+      "label_negative": "Starting from blank page without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I'll use something like Chat GPT and type in relevant key words. That will then generate some information that I'll use as 'leads' to then delve further myself"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as drafting and refinement tool",
+      "label_negative": "Manual drafting without AI assistance",
+      "bipolarity_complete": true,
+      "grounding_span": "I wrote a rough outline quickly and gave the AI instructions to finesse it"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for routine task delegation",
+      "label_negative": "Manual handling of routine tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I would like to integrate it even more into my work so it takes the bulk of 'routine' tasks away"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI grasp of complex and nuanced information",
+      "label_negative": "Human grasp of complex and nuanced information",
+      "bipolarity_complete": true,
+      "grounding_span": "the information I deal with tends to be very complex and nuanced and I think it would be challenging for an AI to grasp all the intracasies in a human like way"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "The whole approach saved a large amount of time with a professional sounding output"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Professional quality output",
+      "grounding_span": "professional sounding output"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Human judgment and nuance",
+      "grounding_span": "I think it would be challenging for an AI to grasp all the intracasies in a human like way"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Satisfaction with AI for drafting under deadline",
+      "valence": "positive",
+      "grounding_span": "The whole approach saved a large amount of time with a professional sounding output, so that was a satisfying outcome"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Confidence in human superiority for complex tasks",
+      "valence": "positive",
+      "grounding_span": "I'm not overly concerned personally as the information I deal with tends to be very complex and nuanced and I think it would be challenging for an AI to grasp all the intracasies in a human like way"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Desire for more AI integration in routine tasks",
+      "valence": "positive",
+      "grounding_span": "I would like to integrate it even more into my work so it takes the bulk of 'routine' tasks away"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic task decomposition — uses AI for leads and refinement, retains deeper verification",
+      "grounding_span": "I'll use something like Chat GPT and type in relevant key words. That will then generate some information that I'll use as 'leads' to then delve further myself"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Adaptive collaboration style — delegates or collaborates based on task complexity",
+      "grounding_span": "With meeting notes, I will usually ask it to do the first summary and I'll then check and edit. When preparing a document I tend to be more collaborative"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

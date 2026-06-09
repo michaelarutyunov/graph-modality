@@ -1,0 +1,184 @@
+{
+  "transcript_id": "work_0250",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as code generation assistant",
+      "label_negative": "AI code requiring extensive debugging",
+      "bipolarity_complete": true,
+      "grounding_span": "ask it to list down the different steps I have to do to complete this feature"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as independent task delegator",
+      "bipolarity_complete": true,
+      "grounding_span": "I usually collaborate with it throughout the task until i complete it"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as practical problem solver",
+      "label_negative": "AI unsuitability for creative and architectural decisions",
+      "bipolarity_complete": true,
+      "grounding_span": "with problem solving tasks, AI would be suitable and think of multiple solutions very quickly, but with the designs and styling, i usually love to tackle and decide it myself"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI memory and context retention",
+      "label_negative": "AI context loss and re-establishment hassle",
+      "bipolarity_complete": true,
+      "grounding_span": "i want the AI to keep all the context i gave, but if it started to become slower, i would actually create a new chat"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI reliability and honesty",
+      "label_negative": "AI hallucination and lying",
+      "bipolarity_complete": true,
+      "grounding_span": "not lying about certain things"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "i'm able to minimise the time to write the code"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Skill preservation and professional adaptability",
+      "grounding_span": "i would still try to understand all the code the AI gives rather than just applying it without thinking"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Creative autonomy",
+      "grounding_span": "i usually love to tackle and decide it myself"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for technical setup",
+      "valence": "positive",
+      "grounding_span": "These scripts and files are all done with AI which I'm really satisfied with"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI for coding",
+      "valence": "negative",
+      "grounding_span": "the code it gave has either lots of bugs, or can't even compile"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Preference for self-handling styling and schema design",
+      "valence": "negative",
+      "grounding_span": "with the designs and styling, i usually love to tackle and decide it myself"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "positive",
+      "grounding_span": "Ai would definitely be a good buddy over the next few years in my daily work tasks"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative collaborative debugging — persistent back-and-forth with AI",
+      "grounding_span": "i kept interacting with the AI to come up with different potential solutions to solve the bug"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based task allocation — creative vs. mundane",
+      "grounding_span": "with problem solving tasks, AI would be suitable ... but with the designs and styling, i usually love to tackle and decide it myself"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

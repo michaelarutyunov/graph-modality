@@ -1,0 +1,207 @@
+{
+  "transcript_id": "work_0626",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as sounding board for ideas",
+      "label_negative": "AI as unreliable source requiring constant fact-checking",
+      "bipolarity_complete": true,
+      "grounding_span": "I used the model more as an initial springboard for my thinking"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as proofreading assistant",
+      "label_negative": "AI as autonomous content generator",
+      "bipolarity_complete": true,
+      "grounding_span": "I find the model very useful at rewriting sentences and paragraphs"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as generator of novel valuable references",
+      "label_negative": "AI as hallucinator of false references",
+      "bipolarity_complete": true,
+      "grounding_span": "asking for a half-remembered book that was about narrative in novels"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as time-saving tool",
+      "label_negative": "AI as ethically suspect or secretive tool",
+      "bipolarity_complete": true,
+      "grounding_span": "If a model helps us do our job, faster and with less work, than everyone is for it"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Openness about AI use with colleagues",
+      "label_negative": "Secrecy about AI use due to stigma",
+      "bipolarity_complete": true,
+      "grounding_span": "I want to have conversations about how it is used, and how we might use it better. But I also feel I should shut up and use it without telling others"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Student engagement and learning",
+      "grounding_span": "suggestions about where to engage with students, and where to present new information"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Research efficiency",
+      "grounding_span": "occasionally giving me things I would never have thought of"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional efficiency",
+      "grounding_span": "If a model helps us do our job, faster and with less work"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Intellectual honesty and accountability",
+      "grounding_span": "never contravening university policy (particularly the letter of its law)"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Pragmatic acceptance of AI as a tool",
+      "valence": "positive",
+      "grounding_span": "worthwhile despite the failure rate"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI hallucination",
+      "valence": "negative",
+      "grounding_span": "it would get elements of the plot wrong, or--critically--falsify quotes or even events"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Confidence in human adaptability over AI",
+      "valence": "positive",
+      "grounding_span": "if anything I feel clever, that I can adapt it to do what I want"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Concern about colleagues' over-reliance on AI",
+      "valence": "negative",
+      "grounding_span": "I do think it would be annoying to have to introduce its uses to colleagues who are less close to the technology than I am"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Desire for nuanced institutional AI policies",
+      "valence": "positive",
+      "grounding_span": "A more granular sense of the categories of AIs' uses might help fewer people move from using LLMs on the DL to openly talking about their uses"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative verification and manual fact-checking",
+      "grounding_span": "I have an etext of the novel in front of me, and I always just check manually"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based compartmentalization of AI use",
+      "grounding_span": "The less autonomy I give the model, the better it does"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n5",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

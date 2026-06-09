@@ -1,0 +1,209 @@
+{
+  "transcript_id": "work_0344",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as mere tool or robot",
+      "bipolarity_complete": true,
+      "grounding_span": "I always work collaboratively"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability and accuracy",
+      "label_negative": "AI hallucination and misinformation",
+      "bipolarity_complete": true,
+      "grounding_span": "the model will hallucinate information or use sources that are not reputable"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI competence in specialized creative work",
+      "label_negative": "AI generic and off-target creative output",
+      "bipolarity_complete": true,
+      "grounding_span": "the results are pretty generic or off the mark still"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as task automator for routine work",
+      "label_negative": "AI as incapable of complex estimation",
+      "bipolarity_complete": true,
+      "grounding_span": "I hope as it gets better I can begin to automate some new parts of my work"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Human strategic judgment vs AI replacement",
+      "label_negative": "AI fully replacing human designers",
+      "bipolarity_complete": true,
+      "grounding_span": "it will be some time before I'm fully replaced by it"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Evidence-based factual accuracy",
+      "grounding_span": "I might value evidence-based, factual information a bit more than most of my peers"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional competence and credibility",
+      "grounding_span": "I want to make sure you get your order"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Creative authenticity and strategic depth",
+      "grounding_span": "what sets me apart from other designers is my ability to help clients figure out what they need"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Efficiency and automation",
+      "grounding_span": "I hope as it gets better I can begin to automate some new parts of my work"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with collaborative AI use",
+      "valence": "positive",
+      "grounding_span": "I always work collaboratively"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI hallucination and inaccuracy",
+      "valence": "negative",
+      "grounding_span": "the model will hallucinate information or use sources that are not reputable"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Disappointment with AI creative ideation",
+      "valence": "negative",
+      "grounding_span": "the results are pretty generic or off the mark still"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Frustration with AI failure on math task",
+      "valence": "negative",
+      "grounding_span": "we just could never seem to get the right equation figured out"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Optimistic hope for future automation",
+      "valence": "positive",
+      "grounding_span": "I hope as it gets better I can begin to automate some new parts of my work"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Confidence in human irreplaceability",
+      "valence": "positive",
+      "grounding_span": "it will be some time before I'm fully replaced by it"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative collaborative refinement — corrects and trains AI like a person",
+      "grounding_span": "If an AI gives me more information, I'm going to correct it so we can continue on from the same factual standpoint"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Evidence-based skepticism — verifies sources and cross-checks facts",
+      "grounding_span": "I always ask for and check the sources"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

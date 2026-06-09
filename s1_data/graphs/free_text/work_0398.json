@@ -1,0 +1,203 @@
+{
+  "transcript_id": "work_0398",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative starting point",
+      "label_negative": "AI as autonomous delegator",
+      "bipolarity_complete": true,
+      "grounding_span": "I always collaborate and use it like an assistant or as a starting point"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability and accuracy",
+      "label_negative": "AI errors and mistakes",
+      "bipolarity_complete": true,
+      "grounding_span": "I still worry about any mistakes that could happen if I delegate AI to handle it on its own"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for routine communication tasks",
+      "label_negative": "AI for complex technical tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "draft emails for me"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI for brainstorming and initial drafts",
+      "label_negative": "AI for final polished output",
+      "bipolarity_complete": true,
+      "grounding_span": "AI helped a lot with brainstorming questions and getting an initial draft"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Workplace-sanctioned AI integration",
+      "label_negative": "Unsanctioned or individual AI use",
+      "bipolarity_complete": true,
+      "grounding_span": "Our workplace strongly encourages the integration of AI"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "Personal skill maintenance",
+      "label_negative": "Over-reliance on AI leading to skill atrophy",
+      "bipolarity_complete": true,
+      "grounding_span": "I do try to maintain my skills in those areas"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "it'll be quicker for me to just do it on my own"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Personal authenticity and voice",
+      "grounding_span": "change the tone of it to sound more like myself"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Professional competence and control",
+      "grounding_span": "I know what the client is asking for and the responses better than the AI"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Continuous learning and adaptability",
+      "grounding_span": "I see myself trying to expand my uses beyond what I am currently using it for"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI for brainstorming",
+      "valence": "positive",
+      "grounding_span": "AI helped a lot with brainstorming questions and getting an initial draft"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with AI for coding",
+      "valence": "negative",
+      "grounding_span": "there was always some sort of error and it was not working"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Cautious trust in AI for routine tasks",
+      "valence": "ambivalent",
+      "grounding_span": "I still worry about any mistakes that could happen if I delegate AI to handle it on its own"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Optimistic openness to expanding AI use",
+      "valence": "positive",
+      "grounding_span": "I see myself trying to expand my uses beyond what I am currently using it for"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement — uses AI output as draft, then edits",
+      "grounding_span": "I use the draft as a starting point, but I always revise it first"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Contextual prioritization — weighs speed vs. review effort",
+      "grounding_span": "sometimes when the data files are too large, I feel that it'll be quicker for me to just do it on my own"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

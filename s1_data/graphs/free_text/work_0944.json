@@ -1,0 +1,184 @@
+{
+  "transcript_id": "work_0944",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI image generation for custom designs",
+      "label_negative": "Manual design or hiring designers",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I use it for image generation quite often in work"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI accuracy in angle and dimension calculations",
+      "label_negative": "AI inaccuracy in calculations",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "calculating angles"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI ability to make minor alterations without over-changing",
+      "label_negative": "AI tendency to over-change when making alterations",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "models find it hard to make minor alterations without changing too much"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI reliability for high-risk tasks (electrical)",
+      "label_negative": "AI unreliability for high-risk tasks",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "too high risk to trust the models on things like calculating changing wire sizes"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI image consistency and fidelity to reference",
+      "label_negative": "AI producing non-representative images",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "it would churn out non-representative images"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Cost efficiency and resource saving",
+      "valence": null,
+      "grounding_span": "we had hired designers which was crazy expensive for similar output"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Precision and accuracy in work",
+      "valence": null,
+      "grounding_span": "my measurements are accurate"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Creative expression and aesthetic quality",
+      "valence": null,
+      "grounding_span": "make it look good"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for image generation when it works",
+      "valence": "positive",
+      "grounding_span": "we all love image creation since none of us are artists"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI image inconsistency",
+      "valence": "negative",
+      "grounding_span": "I had to give up and hire a designer"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Distrust of AI for angle calculations due to inaccuracy",
+      "valence": "negative",
+      "grounding_span": "I generally don't trust models"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Cautious optimism about future AI capabilities",
+      "valence": "mixed",
+      "grounding_span": "I feel like in future AI will be able to complete these tasks with less bad results"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Multi-model cross-checking — uses multiple AI models to verify outputs",
+      "valence": null,
+      "grounding_span": "I give the same prompt to multiple models"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative prompt refinement — learns from failures to adjust prompts",
+      "valence": null,
+      "grounding_span": "I make alterations to the prompt based on what went wrong on my first attempt"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,174 @@
+{
+  "transcript_id": "work_0597",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as transcription tool for speed and cost savings",
+      "label_negative": "Specialist transcription services (slow/expensive)",
+      "bipolarity_complete": true,
+      "grounding_span": "Sometimes work pays for a specialist service (such as trint or rev) sometimes it doesn't or I need something really quickly"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as creative brainstorming partner",
+      "label_negative": "Creative block without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I have a creative block so I will ask for multiple lines and then it gives me something to build from"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI accuracy in transcription (accents)",
+      "label_negative": "AI misrecognition of regional accents",
+      "bipolarity_complete": true,
+      "grounding_span": "I think there is a big problem with AI understanding different UK regional accents"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI ability to capture nuanced storytelling elements",
+      "label_negative": "AI inability to capture human nuance (silence, looks)",
+      "bipolarity_complete": true,
+      "grounding_span": "how is it going to know just because there is silence that there isn't a look or something that would be useful to the story"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as time-saving tool for mechanical tasks",
+      "label_negative": "AI as threat to core creative role",
+      "bipolarity_complete": true,
+      "grounding_span": "AI helps best for tasks like transcribing or brainstorming to save me time"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "save me time"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Creative expression and storytelling quality",
+      "grounding_span": "human touch is still needed to craft the story"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Accuracy and reliability in transcription",
+      "grounding_span": "if it isn't transcribed properly it ends up not saving any time"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for brainstorming",
+      "valence": "positive",
+      "grounding_span": "it gives me something to build from"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI transcription errors",
+      "valence": "negative",
+      "grounding_span": "It makes me feel frustrated often when I'm reading through a transcript and it has got it really wrong"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Confidence in human necessity for storytelling",
+      "valence": "positive",
+      "grounding_span": "I think with human stories it will always need a human eye"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Skepticism about AI's ability to handle nuanced visual cues",
+      "valence": "negative",
+      "grounding_span": "I don't know how soon this would happen"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement — adjusts prompts based on AI output",
+      "grounding_span": "Sometimes I refine, like sorry that fun fact is not fun enough"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-specific boundary setting — distinguishes mechanical vs creative tasks",
+      "grounding_span": "AI helps best for tasks like transcribing or brainstorming to save me time"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n2",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

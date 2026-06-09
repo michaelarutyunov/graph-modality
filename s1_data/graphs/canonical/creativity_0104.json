@@ -1,0 +1,187 @@
+{
+  "transcript_id": "creativity_0104",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI for administrative tasks",
+      "label_negative": "AI as creative writing tool",
+      "bipolarity_complete": true,
+      "grounding_span": "I try not to use it for anything to do with my writing. I prefer to use it for admin and some more mathematical issues"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as confidence-building assistant",
+      "label_negative": "AI as editor or writer of creative content",
+      "bipolarity_complete": true,
+      "grounding_span": "At most, I'll use it for a final check before publication, or if I'm feeling bad about my writing, I might use it for a confidence boost"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI feedback as useful but fallible",
+      "label_negative": "AI feedback as authoritative and always correct",
+      "bipolarity_complete": true,
+      "grounding_span": "I take everything with a pinch of salt. Sometimes, it will tell me I've made mistakes which aren't really mistakes"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Human writing as deeply human and nuanced",
+      "label_negative": "AI writing as technically perfect but lacking depth",
+      "bipolarity_complete": true,
+      "grounding_span": "being a good writer is all about understanding humanity, which LLMs are simply incapable of doing"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as writing assistant",
+      "label_negative": "AI-assisted writing as threat to creative writing",
+      "bipolarity_complete": true,
+      "grounding_span": "I think AI-assisted writing is ok. I think we have to get with the times and be realistic about its place in our world"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as brainstorming and idea generator",
+      "label_negative": "AI as generator of novel ideas",
+      "bipolarity_complete": true,
+      "grounding_span": "Right now, AI is only capable of remixing what's already out there"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Creative integrity and human artistry",
+      "grounding_span": "my core desire is to be a good writer"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Human understanding and depth in writing",
+      "grounding_span": "being a good writer is all about understanding humanity"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Creative autonomy and enjoyment of writing",
+      "grounding_span": "I love writing so much. It would be no fun if a computer got to do it all"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Reluctance to use AI for writing",
+      "valence": "negative",
+      "grounding_span": "I try not to use it for anything to do with my writing"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Positive stance toward AI for administrative tasks",
+      "valence": "positive",
+      "grounding_span": "I prefer to use it for admin and some more mathematical issues"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Distrust of AI for critical feedback",
+      "valence": "ambivalent",
+      "grounding_span": "I take everything with a pinch of salt"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Optimism about human writing gaining prestige",
+      "valence": "positive",
+      "grounding_span": "human writing will have more prestige"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based boundary setting",
+      "grounding_span": "I try not to use it for anything to do with my writing. I prefer to use it for admin"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Critical evaluation and selective acceptance of AI output",
+      "grounding_span": "I take everything with a pinch of salt"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n2",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

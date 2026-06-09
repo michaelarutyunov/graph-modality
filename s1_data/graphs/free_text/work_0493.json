@@ -1,0 +1,169 @@
+{
+  "transcript_id": "work_0493",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative partner requiring human oversight",
+      "label_negative": "AI as fully autonomous agent",
+      "bipolarity_complete": true,
+      "grounding_span": "I am collaborating. I am not at the point where I can rely fully on AI so I double check the work."
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI effectiveness in text-based tasks",
+      "label_negative": "AI ineffectiveness in visual/creative tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I am extremely satisfied with letter writing and idea generation/ brainstorming. I am frequently frustrated with attempts to make graphics, flyers, visuals, etc."
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability and accuracy",
+      "label_negative": "AI unreliability and inaccuracy",
+      "bipolarity_complete": true,
+      "grounding_span": "My audit mind needs to be comfortable with the accuracy so I need assurances before I can let go and rely more heavily on AI."
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Generational openness to AI",
+      "label_negative": "Generational resistance to AI",
+      "bipolarity_complete": true,
+      "grounding_span": "It surprises me how fast people my generation have fallen behind with AI, and all their missed opportunities, distrust, and fear."
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Responsible AI use",
+      "label_negative": "Irresponsible AI use",
+      "bipolarity_complete": true,
+      "grounding_span": "I am very interested in using AI responsibly."
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Professional accountability and quality",
+      "grounding_span": "I am responsible for the output so I need to confirm everything."
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "This has saved me time and improved / enhanced quality of my work."
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Focus on higher-level work",
+      "grounding_span": "I can focus my attention on higher level things."
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for text tasks",
+      "valence": "positive",
+      "grounding_span": "I am extremely satisfied with letter writing and idea generation/ brainstorming."
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI for visual tasks",
+      "valence": "negative",
+      "grounding_span": "I am frequently frustrated with attempts to make graphics, flyers, visuals, etc."
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Cautious optimism toward future AI reliance",
+      "valence": "ambivalent",
+      "grounding_span": "I welcome the time when it is actually good enough to be more heavily relied upon, but my audit mind needs to be comfortable with the accuracy."
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Surprise at colleagues' lack of AI adoption",
+      "valence": "negative",
+      "grounding_span": "I am shocked that most colleagues do not embrace AI."
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Audit-minded verification — systematic double-checking",
+      "grounding_span": "My audit mind needs to be comfortable with the accuracy so I need assurances before I can let go and rely more heavily on AI."
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative iterative refinement — back-and-forth with AI",
+      "grounding_span": "I am collaborating. I am not at the point where I can rely fully on AI so I double check the work."
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

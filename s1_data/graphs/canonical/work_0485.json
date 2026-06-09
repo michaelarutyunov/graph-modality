@@ -1,0 +1,184 @@
+{
+  "transcript_id": "work_0485",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as proofreading assistant",
+      "label_negative": "AI for tasks requiring judgment and curation",
+      "bipolarity_complete": true,
+      "grounding_span": "I use OpenAI's API for proofreading submissions to my website"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI unreliability for complex or unverifiable tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I trust it more for segmented things that I can check easily"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as formatting and synthesizing tool",
+      "label_negative": "AI deviation from specified format",
+      "bipolarity_complete": true,
+      "grounding_span": "ChatGPT kept outputting the JSON with 'title' instead"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as fire-and-forget tool",
+      "bipolarity_complete": true,
+      "grounding_span": "Coding is more collaborative - I'll go back and forth"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Human oversight for content curation",
+      "label_negative": "Full AI automation for content curation",
+      "bipolarity_complete": true,
+      "grounding_span": "I prefer to have human involvement, even if it's just a quick eyeball"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "speeding up certain things"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Accuracy and reliability",
+      "grounding_span": "I've always taken pride in it being curated content"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Autonomy and personal control",
+      "grounding_span": "Being my own boss means I have complete control"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for proofreading and coding",
+      "valence": "positive",
+      "grounding_span": "AI is helpful for speeding up certain things"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI formatting",
+      "valence": "negative",
+      "grounding_span": "ChatGPT kept outputting the JSON with 'title' instead"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Cautious trust in AI",
+      "valence": "ambivalent",
+      "grounding_span": "I don't fully trust AI to implement that yet"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "positive",
+      "grounding_span": "There's a lot of potential for AI implementation"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Task decomposition into small verifiable steps",
+      "grounding_span": "I trust it more for segmented things that I can check easily"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic experimentation with AI limitations",
+      "grounding_span": "I can tinker with it for different things"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n4",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

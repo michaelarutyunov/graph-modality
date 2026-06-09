@@ -1,0 +1,157 @@
+{
+  "transcript_id": "work_0170",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as time-saving template filler",
+      "label_negative": "AI as misinterpretation risk",
+      "bipolarity_complete": true,
+      "grounding_span": "it still saves quite a bit of time"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as helpful starter for complex issues",
+      "label_negative": "AI as inadequate for multi-issue emails",
+      "bipolarity_complete": true,
+      "grounding_span": "it still gives good bones to start with"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability in customer details",
+      "label_negative": "AI errors in customer name transfer",
+      "bipolarity_complete": true,
+      "grounding_span": "the system didn't transfer the customer name into the appropriate spot"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as augmenting human role",
+      "label_negative": "AI as replacing human role",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't feel like my job is being taken over"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as collaborative chat partner",
+      "label_negative": "AI as one-off email generator",
+      "bipolarity_complete": true,
+      "grounding_span": "If its chat and its back and fourth its working continuously with the AI"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "it saves quite a bit of time"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Accuracy and error prevention",
+      "grounding_span": "we as humans are there to check it all before sending"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Job security and role evolution",
+      "grounding_span": "I don't feel like my job is being taken over"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with daily time savings",
+      "valence": "positive",
+      "grounding_span": "Satisfied, almost daily. It makes my life a lot easier"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with occasional AI errors",
+      "valence": "negative",
+      "grounding_span": "there was a time or two where I assumed the model got it right and almost missed the error"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Optimism about future AI improvements",
+      "valence": "positive",
+      "grounding_span": "I definitely think the system could be better... I believe will just get better and more refined"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic evaluation of AI outputs",
+      "grounding_span": "It's fairly easy to recognize when the model has gotten something wrong"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Adaptive switching between email and chat modes",
+      "grounding_span": "Depends if it is email or chat"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

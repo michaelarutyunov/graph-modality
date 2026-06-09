@@ -1,0 +1,194 @@
+{
+  "transcript_id": "work_0693",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as effort-saving tool for coding",
+      "label_negative": "Manual coding without AI assistance",
+      "bipolarity_complete": true,
+      "grounding_span": "when I'm feeling a bit lazy and want AI to do the lifting for me"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as learning accelerator for unfamiliar codebases",
+      "label_negative": "Slow manual exploration of unfamiliar codebases",
+      "bipolarity_complete": true,
+      "grounding_span": "helped me quickly find and understand files specific to my ticket's needs"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability and self-correction capability",
+      "label_negative": "AI errors that require manual intervention",
+      "bipolarity_complete": true,
+      "grounding_span": "it can eventually self-correct itself as long as I give it updates on the current error"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Strategic model selection based on task complexity",
+      "label_negative": "Indiscriminate use of premium models for all tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I'll often swap to a model that doesn't eat at my token/premium usage for easy/menial tasks"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as domain expert enabler for leading projects",
+      "label_negative": "Struggling alone to become domain expert",
+      "bipolarity_complete": true,
+      "grounding_span": "helped me get an understanding of the codebase so fast that I was days beyond anybody else"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as personal tutor for validation and understanding",
+      "label_negative": "Solo debugging without guidance",
+      "bipolarity_complete": true,
+      "grounding_span": "just like having a personal tutor"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI as calculator-like skill augmentation tool",
+      "label_negative": "AI as threat to fundamental skill development",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is akin to a calculator back in the day"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Productivity and time efficiency",
+      "grounding_span": "I get my ticket done relatively fast and I have a lot more time"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Learning and skill development",
+      "grounding_span": "I am learning by working with AI"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Professional competence and leadership",
+      "grounding_span": "helped me lead the new database design decisions"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Work-life balance and reduced stress",
+      "grounding_span": "I often use that extra time to take a break instead"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI for accelerating learning",
+      "valence": "positive",
+      "grounding_span": "helped me get an understanding of the codebase so fast that I was days beyond anybody else"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Strategic caution about premium model usage",
+      "valence": "ambivalent",
+      "grounding_span": "I'm very particular about not wanting the premium model to do things I can do myself"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Optimism about AI as skill augmenter",
+      "valence": "positive",
+      "grounding_span": "it'll be a way for me to continuously improve my skills"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Structured subtask decomposition",
+      "grounding_span": "I'll split it into separate subtasks which I prompt the model for"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Validation-oriented verification approach",
+      "grounding_span": "I simply had to understand its explanation and ensure it made sense"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

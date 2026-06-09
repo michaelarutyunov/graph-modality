@@ -1,0 +1,195 @@
+{
+  "transcript_id": "work_0463",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as quick information lookup tool",
+      "label_negative": "Slow or unreliable terminology lookup",
+      "bipolarity_complete": true,
+      "grounding_span": "It usually takes less than a second for the AI model to start generating the response"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as learning tool for terminology and understanding",
+      "label_negative": "Literal or irrelevant translation",
+      "bipolarity_complete": true,
+      "grounding_span": "if it is a colloquial term, the AI assistant almost always returns better results than Google Search"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as fully autonomous replacement",
+      "bipolarity_complete": true,
+      "grounding_span": "I think it is more collaborating with it throughout my shift"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI reliability for common vs uncommon abbreviations",
+      "label_negative": "AI failure on uncommon abbreviations",
+      "bipolarity_complete": true,
+      "grounding_span": "Certain abbreviations are less common and the AI assistant will have a hard time figuring it out"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Human judgment in contextual interpreting",
+      "label_negative": "Literal AI translation without context",
+      "bipolarity_complete": true,
+      "grounding_span": "I have to rephrase and improvise to convey the real meaning"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and speed in work",
+      "grounding_span": "speed is really important when it comes to real-time interpretation"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Accuracy in specialized terminology",
+      "grounding_span": "the AI assistant would provide these options: The prescription is not strong enough"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Privacy and data security",
+      "grounding_span": "there is a privacy concern"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Professional autonomy",
+      "grounding_span": "I can do the job independently"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for terminology breakthroughs",
+      "valence": "positive",
+      "grounding_span": "It usually takes less than a second for the AI model to start generating the response"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI on uncommon abbreviations",
+      "valence": "negative",
+      "grounding_span": "my AI assistant returns only international medical corps and Integrated Marketing Communications, both of which are irrelevant"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Pragmatic acceptance of AI as a tool",
+      "valence": "mixed",
+      "grounding_span": "the AI assistant is more like a useful tool, rather than an essential part"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Reserved view on expanding AI use",
+      "valence": "negative",
+      "grounding_span": "If it can do more than that, it's probably the time I should do something else"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Structured and deliberate workflow optimization",
+      "grounding_span": "I first wrote the instructions in my own words and asked a AI model to rewrite it for me so that it has a structured step-by-step work flow"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic fallback strategy — multiple backup options",
+      "grounding_span": "I will fall back to Google search or I will just ask the client to clarify"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n2",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

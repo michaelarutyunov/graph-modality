@@ -1,0 +1,171 @@
+{
+  "transcript_id": "creativity_0122",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as character development enhancer",
+      "label_negative": "Shallow character development without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "AI has helped me to really give my characters so much more depth than what I was previously able to"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as time-saving helper for non-core tasks",
+      "label_negative": "AI writing the story itself",
+      "bipolarity_complete": true,
+      "grounding_span": "It is faster for me to have the AI do the backstory than for me to come up with all of the details on my own if I am under time constraints"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as threat to human creativity and imagination",
+      "label_negative": "AI as tool preserving human creativity",
+      "bipolarity_complete": true,
+      "grounding_span": "I worry that the younger kids will lose their imaginations because 'AI can do it all for them'"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as cheap content generator replacing human writers",
+      "label_negative": "AI as assistant that does not replace human writers",
+      "bipolarity_complete": true,
+      "grounding_span": "I'm so concerned that publishers will turn to AI as a cheap way to mass produce stories that are not actually written by real people"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Creative depth and character richness",
+      "grounding_span": "I hope that they can picture every last detail of the character that they are reading about"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Human authenticity and soul in storytelling",
+      "grounding_span": "that special little something is missing if it doesn't come from a beating heart"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Preservation of imagination and humanity",
+      "grounding_span": "We NEED that in order to survive and to keep hope and peace in the world"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Positive appreciation for AI's role in character depth",
+      "valence": "positive",
+      "grounding_span": "AI has helped me to really give my characters so much more depth"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Concern about AI replacing human writers",
+      "valence": "negative",
+      "grounding_span": "I'm so concerned that publishers will turn to AI as a cheap way to mass produce stories"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Fear of loss of imagination in children",
+      "valence": "negative",
+      "grounding_span": "I worry that the younger kids will lose their imaginations"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Resistance to AI taking over creative work",
+      "valence": "negative",
+      "grounding_span": "I sadly see it taking over more than it should"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic selective delegation — uses AI only for specific non-core tasks",
+      "grounding_span": "I never use it to write the story. I love the personal creativity of writing but when the clock is ticking down I do like to use it as a helper"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Human-centric creative control — maintains direction and final say",
+      "grounding_span": "I was definitely driving the conversation. I had an idea of what I wanted it to look like"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

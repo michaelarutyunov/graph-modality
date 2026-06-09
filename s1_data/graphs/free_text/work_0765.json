@@ -1,0 +1,179 @@
+{
+  "transcript_id": "work_0765",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as knowledge gap filler for unfamiliar syntax or functions",
+      "label_negative": "Self-reliance on known coding skills",
+      "bipolarity_complete": true,
+      "grounding_span": "The AI is only useful for me when I don't know exactly or don't remember how to do something"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as time-saving tool for code translation",
+      "label_negative": "Manual code translation effort",
+      "bipolarity_complete": true,
+      "grounding_span": "I asked to translate some code from C to Python and it got it right on the first attempt"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability requiring careful verification",
+      "label_negative": "Blind trust in AI outputs",
+      "bipolarity_complete": true,
+      "grounding_span": "It is necessary to check carefully that it is correct"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI context handling for complex tasks",
+      "label_negative": "AI failure on context-heavy tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "It is difficult to delegate tasks that need a lot of context"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI integration convenience via IDE",
+      "label_negative": "Manual code pasting and context setting",
+      "bipolarity_complete": true,
+      "grounding_span": "It is more convenient. I do not need to paste long strings of code"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and time efficiency",
+      "grounding_span": "it saved me a lot of time"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Epistemic understanding and skill acquisition",
+      "grounding_span": "I learn some new trick that I may apply directly myself"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Reliability and correctness",
+      "grounding_span": "It is necessary to check carefully that it is correct"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for code translation",
+      "valence": "positive",
+      "grounding_span": "I felt quite satisfied once that I asked to translate some code from C to Python and it got it right on the first attempt"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI on context-heavy tasks",
+      "valence": "negative",
+      "grounding_span": "It is difficult to delegate tasks that need a lot of context. It requires too long prompts and tend to provide bad results"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Preference for self-reliance when code is known",
+      "valence": "negative",
+      "grounding_span": "If I know well how to write some piece of code, it is more reliable to do it myself"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Positive view of AI convenience in IDE",
+      "valence": "positive",
+      "grounding_span": "It is more convenient. I do not need to paste long strings of code"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Cost-benefit analysis of explanation time vs. doing it yourself",
+      "grounding_span": "I frequently find that it is faster to write the code myself than to try to explain to the AI what I need"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Selective delegation based on task criticality and familiarity",
+      "grounding_span": "The level of understanding the code may depend on how critical is that part of the code"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

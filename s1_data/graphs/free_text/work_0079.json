@@ -1,0 +1,199 @@
+{
+  "transcript_id": "work_0079",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as administrative efficiency tool",
+      "label_negative": "AI as unreliable or inappropriate for core therapy",
+      "bipolarity_complete": true,
+      "grounding_span": "Composing email responses, summarising long emails, improving notes, setting up website"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as sounding board for professional reflection",
+      "label_negative": "AI as sycophantic echo chamber",
+      "bipolarity_complete": true,
+      "grounding_span": "use it as a sounding board when I don't know where to take future sessions"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI honesty and error acknowledgment",
+      "label_negative": "AI gaslighting and sycophancy",
+      "bipolarity_complete": true,
+      "grounding_span": "utterly incapable of acknowledging when they make mistakes"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI memory and contextual consistency",
+      "label_negative": "AI poor memory and forgetting details",
+      "bipolarity_complete": true,
+      "grounding_span": "AI's memory is shocking and it constantly forgets important details"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI capacity for authentic therapeutic relationship",
+      "label_negative": "AI inability to replicate human empathy and challenge",
+      "bipolarity_complete": true,
+      "grounding_span": "AI will never be able to authentically replicate this"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "Confidentiality and ethical boundaries in AI use",
+      "label_negative": "Breach of confidentiality through AI",
+      "bipolarity_complete": true,
+      "grounding_span": "unable to use AI for several aspects of my work due to confidentiality reasons"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional efficiency and productivity",
+      "grounding_span": "make them more concise, check for spelling errors"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Authentic professional growth and self-awareness",
+      "grounding_span": "talk through my own frustrations and feelings of being inadequate"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Honest and accurate feedback",
+      "grounding_span": "I do not want or need an AI bot to suck up to me"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Therapeutic integrity and human connection",
+      "grounding_span": "Therapy at it's core is about human relation"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Client confidentiality and ethical practice",
+      "grounding_span": "breach of confidentiality to share this email"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI for administrative tasks",
+      "valence": "positive",
+      "grounding_span": "I use AI for composing email responses, summarising long emails"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Frustration with AI sycophancy and dishonesty",
+      "valence": "negative",
+      "grounding_span": "most AI models seem to have the tendency to be rather sycophantic"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Skepticism about AI replacing human therapy",
+      "valence": "negative",
+      "grounding_span": "I don't believe AI will ever be able to fully replace a human therapist"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Cautious adherence to ethical boundaries",
+      "valence": "ambivalent",
+      "grounding_span": "I cannot see a way where I could use them any more than I am already, without breaching a lot of ethical guidelines"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Task-dependent interaction style switching",
+      "grounding_span": "When it comes to summarising... I delegate... if I use it as a soundingboard... I prefer a more collaborative style"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Ethical boundary setting based on vulnerability",
+      "grounding_span": "it would feel wrong for me to discuss them"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

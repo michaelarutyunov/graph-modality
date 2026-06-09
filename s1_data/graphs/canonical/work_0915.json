@@ -1,0 +1,180 @@
+{
+  "transcript_id": "work_0915",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI unreliability and fabrication with large datasets",
+      "bipolarity_complete": true,
+      "grounding_span": "AI generally has problems analyzing very large data sets"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as tool requiring human oversight",
+      "label_negative": "AI as independent autonomous executor",
+      "bipolarity_complete": true,
+      "grounding_span": "I check in frequently and collaborate"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as efficiency tool",
+      "label_negative": "AI inefficiency for simple tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "we used AI to really help develop some curriculum mapping that took hours of work and did it within a few minutes"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI's ability to maintain narrative continuity and concrete details",
+      "label_negative": "AI use for public-facing outputs",
+      "bipolarity_complete": true,
+      "grounding_span": "for data analysis it's for my eyes only so it does not matter, however for narrative I am very cautious"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as proactive team member",
+      "label_negative": "AI preserving team roles",
+      "bipolarity_complete": true,
+      "grounding_span": "it would impact the roles of people who report to me (likely eliminating them or reducing to part time)"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "took hours of work and did it within a few minutes"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Trustworthiness and accuracy",
+      "grounding_span": "AI started to fabricate heavily the information"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional reputation and credibility",
+      "grounding_span": "for narrative I am very cautious with my AI use and final product"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Institutional sustainability",
+      "grounding_span": "lower tuition for students to attend colleges (less staff means a smaller budget)"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI errors",
+      "valence": "negative",
+      "grounding_span": "Frustrated is fairly easy - we had a simple task we were doing...the AI would do a block of 10 names, and then would punt"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "we used AI to really help develop some curriculum mapping that took hours of work and did it within a few minutes"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "positive",
+      "grounding_span": "my intention is to vastly increase my AI use - Chat5 is already well ahead of where o3 was"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Caution toward AI in high-risk tasks",
+      "valence": "negative",
+      "grounding_span": "for narrative I am very cautious with my AI use and final product"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative sample-checking approach",
+      "grounding_span": "I always have AI give samples, stop let me review then provide more detailed response"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based compartmentalization of AI use",
+      "grounding_span": "for data analysis it's for my eyes only so it does not matter, however for narrative I am very cautious"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

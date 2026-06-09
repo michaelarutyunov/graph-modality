@@ -1,0 +1,162 @@
+{
+  "transcript_id": "work_0829",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as efficiency tool for writing",
+      "label_negative": "Manual writing without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "the entire process took less than an hour for me to obtain an article from the AI, edit it, and submit it"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI output human-likeness",
+      "label_negative": "AI output robotic or unnatural",
+      "bipolarity_complete": true,
+      "grounding_span": "looking for a response by the AI that reads like it's written by a human"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Writer's control over key sections",
+      "label_negative": "AI taking over key sections",
+      "bipolarity_complete": true,
+      "grounding_span": "I like writing the article intros and conclusions"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Client-driven AI usage rules",
+      "label_negative": "Writer autonomy in AI usage",
+      "bipolarity_complete": true,
+      "grounding_span": "It depends on the client. They often have strict rules"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI collaboration in editing process",
+      "label_negative": "Independent editing without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I usually collaborate with the AI through the editing process"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and time efficiency",
+      "grounding_span": "the entire process took less than an hour"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Quality and high standards",
+      "grounding_span": "ensure they meet the high standards I have as a writer"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Client satisfaction and feedback",
+      "grounding_span": "I took that feedback and started using more specific prompts"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI efficiency",
+      "valence": "positive",
+      "grounding_span": "I remember being highly satisfied because... the entire process took less than an hour"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Preference for human touch in intros/conclusions",
+      "valence": "negative",
+      "grounding_span": "I like writing the article intros and conclusions... I tend to either heavily edit or replace them"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Adaptability to client rules",
+      "valence": "mixed",
+      "grounding_span": "It depends on the client. They often have strict rules"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through prompt engineering",
+      "grounding_span": "refining the prompt until I receive a suitable article"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Feedback-driven adaptation",
+      "grounding_span": "I took that feedback and started using more specific prompts with the AI"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

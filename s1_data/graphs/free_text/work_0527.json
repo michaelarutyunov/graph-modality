@@ -1,0 +1,186 @@
+{
+  "transcript_id": "work_0527",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative writing assistant preserving personal voice",
+      "label_negative": "AI writing that loses personal voice and sounds like a sales pitch",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I'll have a goal and target audience in mind. Since I also used the AI model to help create my website, it has a good idea about my voice and personality, so it keeps things consistent."
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as strategic business advisor generating new opportunities",
+      "label_negative": "AI limited to task execution without strategic insight",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "After finishing the blog post, the AI's follow-up suggested offering editing services to realtors who didn't hire a photographer. This led to a conversation that resulted in offering a new service and a new revenue stream."
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as objective calculator for cut-and-dried tasks",
+      "label_negative": "AI for subjective tasks requiring personal vision",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "The financial tasks are cut and dried. They're either right or their wrong. My voice and vision don't matter in those tasks."
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI memory and continuity enabling productive conversations",
+      "label_negative": "AI without memory requiring repetitive stage-setting",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "the tipping point was when the AI models started 'remembering' past conversations. It's very helpful when the model knows what I've tried, what I've dismissed, my voice and my goals."
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as external critic providing objective perspective",
+      "label_negative": "Relying solely on own judgment without external input",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "AI has helped put me back on path before by explaining that even though the photo is good, it may not be what a realtor looking for a photographer is looking for."
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Authentic personal expression in business",
+      "grounding_span": "It's [REDACTED] photography I'm selling, not AI's."
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Business growth and innovation",
+      "grounding_span": "This led to a conversation that resulted in offering a new service and a new revenue stream."
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and accuracy in objective tasks",
+      "grounding_span": "The financial tasks are cut and dried. They're either right or their wrong."
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Seamless and productive workflow",
+      "grounding_span": "The conversation can be productive from the first prompt in a new conversation. There's no stage-setting involved."
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Objective validation and course correction",
+      "grounding_span": "AI has helped put me back on path before by explaining that even though the photo is good, it may not be what a realtor looking for a photographer is looking for."
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI's strategic suggestion",
+      "valence": "positive",
+      "grounding_span": "The most satisfying experience using AI came when I was writing a blog post...the AI's follow-up suggested offering editing services...This led to...a new revenue stream."
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Trust in AI for objective financial tasks",
+      "valence": "positive",
+      "grounding_span": "if it passes the smell test, I let it go. I'm always interested in learning and building new skills, but there are some things I admit AI does better and I trust it more and more to take over."
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Enthusiasm for AI memory feature",
+      "valence": "positive",
+      "grounding_span": "the tipping point was when the AI models started 'remembering' past conversations. It's very helpful..."
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Preference for collaborative over delegated AI use currently",
+      "valence": "mixed",
+      "grounding_span": "Currently it's almost exclusively collaborative. When I learn to use it more, or trust the results more, I will likely delegate things like creating the P&L, tracking expenses, etc."
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Goal-oriented iterative refinement — starts with a goal and audience, then tweaks AI output",
+      "grounding_span": "I'll have a goal and target audience in mind...it will provide an email or description and I'll ask for tweaks before using."
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based delegation — distinguishes objective vs. subjective tasks for AI use",
+      "grounding_span": "The financial tasks are cut and dried...My voice and vision don't matter in those tasks."
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

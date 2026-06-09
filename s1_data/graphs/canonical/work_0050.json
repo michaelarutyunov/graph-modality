@@ -1,0 +1,189 @@
+{
+  "transcript_id": "work_0050",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as writing assistant for drafting",
+      "label_negative": "Manual drafting and editing without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I mostly use it for drafting emails or proofreading/editing emails"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as tool for lesson planning",
+      "label_negative": "Creating lessons entirely from scratch",
+      "bipolarity_complete": true,
+      "grounding_span": "I would ask it something like, 'Give me a way to incorporate the 4 W's into a lesson on sentences'"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI energy consumption",
+      "label_negative": "Self-reliance on high-energy days",
+      "bipolarity_complete": true,
+      "grounding_span": "It's not so much the specific task but how high or low energy I'm feeling on a particular day"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI independence in task completion",
+      "label_negative": "Collaborative co-creation throughout task",
+      "bipolarity_complete": true,
+      "grounding_span": "I tend to give it tasks to complete independently, but modify its response to suit the student"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI unreliability or frustration",
+      "bipolarity_complete": true,
+      "grounding_span": "Anything I've asked it to do, it's done well enough that I could use it or adapt it slightly"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "Irreplaceable human role in special education",
+      "label_negative": "AI replacing human role in special education",
+      "bipolarity_complete": true,
+      "grounding_span": "Computer AI can't accompany a student to a specials class or modify their behavior - that has to come from a human"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI as information provider vs teacher",
+      "label_negative": "Consistent AI policy for all",
+      "bipolarity_complete": true,
+      "grounding_span": "teachers are using AI but in general students are expected not to"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "Those times I am more mentally and emotionally drained and ready for a break"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Personalized student support",
+      "grounding_span": "I generally modify them for the specific student, since they all have different abilities"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Professional autonomy",
+      "grounding_span": "I've thought about it a bit, but there will always be a need for a role like mine"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Workplace harmony and approval",
+      "grounding_span": "I can see some conflict rearing its head over that in the coming years"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "In general I feel satisfied with it"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Preference for self-creation on high-energy days",
+      "valence": "positive",
+      "grounding_span": "On days when behaviors are low, I tend to have more energy to put into tasks myself"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Concern about teacher-student AI policy conflict",
+      "valence": "negative",
+      "grounding_span": "I can see some conflict rearing its head over that in the coming years"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Energy-dependent task delegation — adjusts AI use based on mental/emotional state",
+      "grounding_span": "It's not so much the specific task but how high or low energy I'm feeling on a particular day"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Selective delegation — prefers AI for content creation, retains control over structure",
+      "grounding_span": "I tend to give it tasks to complete independently, but modify its response to suit the student"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

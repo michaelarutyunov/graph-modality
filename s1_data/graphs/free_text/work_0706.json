@@ -1,0 +1,180 @@
+{
+  "transcript_id": "work_0706",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative creative partner for student engagement",
+      "label_negative": "AI as non-interactive or non-creative tool",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI to create images collaboratively with students to then use a writing stimuli"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as personal knowledge trainer for unfamiliar topics",
+      "label_negative": "Independent struggle with unfamiliar topics",
+      "bipolarity_complete": true,
+      "grounding_span": "I also use it to train myself on unfamiliar topics, particularly maths"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as source of clear examples and clarifying questions",
+      "label_negative": "Vague or unhelpful AI explanations",
+      "bipolarity_complete": true,
+      "grounding_span": "having really clear examples of maths concepts and the ability to ask clarifying questions"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI for quick and easy tasks vs. personal preference for self-handling",
+      "label_negative": "AI for tasks I find quick and easy to do myself",
+      "bipolarity_complete": true,
+      "grounding_span": "I never ask AI to help me to write emails or messages because I find it quick and easy to do this myself"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as affordable alternative to human tutoring",
+      "label_negative": "Human tutoring as more expensive but personalized",
+      "bipolarity_complete": true,
+      "grounding_span": "less demand for tuition as AI options grow in popularity, it's a much more affordable option"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Student engagement and investment in learning",
+      "grounding_span": "makes them really invested in the writing"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Teaching confidence and competence",
+      "grounding_span": "gives me confidence that I am not missing anything and can effectively teach the concept"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and time management",
+      "grounding_span": "time is always a factor in an hour long session"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Affordable access to quality education",
+      "grounding_span": "it's a much more affordable option"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Enthusiasm for AI's creative collaborative use with students",
+      "valence": "positive",
+      "grounding_span": "It's great fun for them, makes them really invested in the writing"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI for building teaching confidence",
+      "valence": "positive",
+      "grounding_span": "gives me confidence that I am not missing anything"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Resistance to using AI for quick personal tasks",
+      "valence": "negative",
+      "grounding_span": "I never ask AI to help me to write emails or messages"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Forward-looking acceptance of AI's impact on tutoring demand",
+      "valence": "mixed",
+      "grounding_span": "less demand for tuition as AI options grow in popularity"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative collaborative refinement — works through examples and questions",
+      "grounding_span": "I might ask how to do something, process the information, ask for examples, etc. Then I'll work through questions myself"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Habitual reliance on traditional methods despite awareness of AI",
+      "grounding_span": "old habits die hard and I often just trawl through resources instead"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

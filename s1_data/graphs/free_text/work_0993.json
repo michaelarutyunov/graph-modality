@@ -1,0 +1,187 @@
+{
+  "transcript_id": "work_0993",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as knowledge bridge for unfamiliar domains",
+      "label_negative": "AI as unreliable for domain-specific complex tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I often use AI to help understand new technologies"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as productivity enhancer through collaboration",
+      "label_negative": "AI as autonomous unreliable agent",
+      "bipolarity_complete": true,
+      "grounding_span": "I collaborate, it makes me faster. I still don't trust it to do things by itself"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability and hallucination",
+      "label_negative": "AI hallucination and fabrication",
+      "bipolarity_complete": true,
+      "grounding_span": "AI often just gets confused and makes up wrong data"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Task specificity for AI effectiveness",
+      "label_negative": "Open-ended tasks leading to unreliable output",
+      "bipolarity_complete": true,
+      "grounding_span": "I get it to do very specific things, smaller task items, smaller questions"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as amplifier of good workers",
+      "label_negative": "AI enabling mediocrity in poor workers",
+      "bipolarity_complete": true,
+      "grounding_span": "I feel it makes good people better, but bad people just pump out mid level code fast"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "Workplace-sanctioned AI use with best practices",
+      "label_negative": "Unsupervised or free AI use causing misinformation",
+      "bipolarity_complete": true,
+      "grounding_span": "All of them use it the same, I insist upon it as the person in charge"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and efficient task completion",
+      "grounding_span": "My job is to produce results, not to have fun"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Epistemic understanding and knowledge acquisition",
+      "grounding_span": "find out what unknowns I do not know I don't know yet"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Professional competence and career security",
+      "grounding_span": "It just motivates me to stay on top so that I am not replaced"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for cross-domain learning",
+      "valence": "positive",
+      "grounding_span": "Successful it when it can help me with things like electrical design where I have much less experience"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with unreliable free AI tools used by CEO",
+      "valence": "negative",
+      "grounding_span": "Frustrated is when my CEO will use free AI, like google search gemini and it gives him wrong info"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Cautious trust in AI for bounded tasks",
+      "valence": "ambivalent",
+      "grounding_span": "I might trust it a bit more over time, but I think just making it enhance my workflow is best"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Confidence in personal ability to stay ahead of AI",
+      "valence": "positive",
+      "grounding_span": "I think it will cut the bottom 25 or 50 percent and I think I am not in that group"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Systematic decomposition into specific sub-tasks",
+      "grounding_span": "I get it to do very specific things, smaller task items, smaller questions"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through back-and-forth questioning",
+      "grounding_span": "After that I go back and forth with a few lines per prompt, maybe questioning its answers"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n4",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

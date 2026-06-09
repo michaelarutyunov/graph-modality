@@ -1,0 +1,163 @@
+{
+  "transcript_id": "work_0859",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as first-pass information filter",
+      "label_negative": "Independent research from the start",
+      "bipolarity_complete": true,
+      "grounding_span": "I like to a very quick 'AI pass' where I'll go to AI right away"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI solution reliability",
+      "label_negative": "AI hallucination and incorrect solutions",
+      "bipolarity_complete": true,
+      "grounding_span": "it gave me a solution but that didn't work"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as independent solution generator",
+      "label_negative": "AI as collaborative back-and-forth partner",
+      "bipolarity_complete": true,
+      "grounding_span": "I'll let it give me a full solution independently"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI task scope manageability",
+      "label_negative": "AI task scope too large or complex",
+      "bipolarity_complete": true,
+      "grounding_span": "it was failing more specific edits and was going round and round"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI guidance skill as competitive advantage",
+      "label_negative": "Skill obsolescence due to AI",
+      "bipolarity_complete": true,
+      "grounding_span": "if i can guide AI better than others, it's a win"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "AI to ease the load of processing info for myself"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional competence and value",
+      "grounding_span": "I'm still valuable"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Satisfaction with AI's independent solutions",
+      "valence": "positive",
+      "grounding_span": "I've been pleasantly surprised by how much AI can do"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Frustration with AI's iterative failures",
+      "valence": "negative",
+      "grounding_span": "it was failing more specific edits and was going round and round"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Ambivalence about skill maintenance",
+      "valence": "ambivalent",
+      "grounding_span": "I struggle with this personally yeah"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Acceptance of inevitable AI integration",
+      "valence": "positive",
+      "grounding_span": "There's no avoiding it. I'll be using AI for work no matter what"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative verification — test AI output, then correct or research",
+      "grounding_span": "If the answer works I'll go with it, but if it seems a bit off or confusing I'll do my own research"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Version control discipline — preserve working states before iterating",
+      "grounding_span": "Version control is key with AI. Storing a working solution cause it's so finicky"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

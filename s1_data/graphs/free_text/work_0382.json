@@ -1,0 +1,156 @@
+{
+  "transcript_id": "work_0382",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as creative brainstorming partner",
+      "label_negative": "AI as uncreative repetitive suggester",
+      "bipolarity_complete": true,
+      "grounding_span": "I use it for brainstorming those names"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability for numerical accuracy",
+      "label_negative": "AI unreliability for numerical accuracy",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't trust that the numbers are always accurate from AI"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as independent task completer for financial tasks",
+      "label_negative": "AI as collaborative partner for financial tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "with financial ones I leave it to complete the task independently"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Human personal touch in customer relations",
+      "label_negative": "AI-mediated customer interaction",
+      "bipolarity_complete": true,
+      "grounding_span": "it will never have the human approach that I do with my customers"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Business success through personal connection",
+      "grounding_span": "The reason for my success is that people are invested in me, as a person, as well as my business"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Financial accuracy and trust",
+      "grounding_span": "It is important that those numbers are correct"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Creative expression and uniqueness",
+      "grounding_span": "unique menu names for my ice cream dishes"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Satisfaction with AI for creative naming success",
+      "valence": "positive",
+      "grounding_span": "it came up with the perfect name after a few rounds of back and forth"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Frustration with AI repetitive suggestions",
+      "valence": "negative",
+      "grounding_span": "I was frustrated and gave up after it made the same suggestions over and over"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Cautious trust in AI for financial calculations",
+      "valence": "ambivalent",
+      "grounding_span": "I later double-checked to make sure it was accurate (and it was!)"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Resistance to AI in customer-facing roles",
+      "valence": "negative",
+      "grounding_span": "I don't think it will ever have the human approach that I do with my customers"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through back-and-forth",
+      "grounding_span": "I always have to go back and forth"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-specific delegation strategy",
+      "grounding_span": "I am more likely to collaborate with creative tasks, and with financial ones I leave it to complete the task independently"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

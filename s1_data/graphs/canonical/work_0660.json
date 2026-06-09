@@ -1,0 +1,144 @@
+{
+  "transcript_id": "work_0660",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI ability to provide hard-to-find information",
+      "label_negative": "AI for critical environmental risk data",
+      "bipolarity_complete": true,
+      "grounding_span": "easily acquirable information that an AI might be able to research"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for low-stakes tasks",
+      "label_negative": "AI inaccuracy in critical data",
+      "bipolarity_complete": true,
+      "grounding_span": "AI that I have used before will give frequently inaccurate information regarding the information I seek"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as time-saving tool",
+      "label_negative": "AI as unreliable for critical tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "The feeling was so nice as it saved a decent bit of time"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Independent research skill retention",
+      "label_negative": "Skill atrophy from AI delegation",
+      "bipolarity_complete": true,
+      "grounding_span": "Being able to do the research myself will always be an option"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Efficiency and speed in work",
+      "grounding_span": "saved a decent bit of time"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Accuracy and reliability in work",
+      "grounding_span": "we have to ensure we use the most reliable sources"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Personal autonomy and skill preservation",
+      "grounding_span": "Being able to do the research myself will always be an option"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "The feeling was so nice as it saved a decent bit of time"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Distrust of AI reliability",
+      "valence": "negative",
+      "grounding_span": "AI that I have used before will give frequently inaccurate information regarding the information I seek"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Confidence in own research skills",
+      "valence": "positive",
+      "grounding_span": "Being able to do the research myself will always be an option"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Risk-based task delegation — distinguishes high-risk from low-risk tasks",
+      "grounding_span": "easily acquirable information that an AI might be able to research"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Verification-oriented — cross-checks AI outputs against other sources",
+      "grounding_span": "I will give a quick call or send out a brief email"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

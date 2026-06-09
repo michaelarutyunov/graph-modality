@@ -1,0 +1,174 @@
+{
+  "transcript_id": "work_0242",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI for unit testing vs wholesale development",
+      "label_negative": "AI for wholesale code generation",
+      "bipolarity_complete": true,
+      "grounding_span": "I tend to prefer using for the unit testing instead of a wholesale new development"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability and accuracy",
+      "label_negative": "AI hallucinations and instruction ignoring",
+      "bipolarity_complete": true,
+      "grounding_span": "Hallucinations are an occasional source of frustration as well as models ignoring specific instructions"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as autonomous enrichment system",
+      "label_negative": "Manual oversight of enrichment",
+      "bipolarity_complete": true,
+      "grounding_span": "We'd ideally like to get the system to the point where we don't have to manually do much with the enrichment flow"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Top-down AI mandate vs bottom-up implementation",
+      "label_negative": "Team-level cultural guidelines",
+      "bipolarity_complete": true,
+      "grounding_span": "my workplace culture is top-down driven, where SVPs decide that we should leverage AI as much as we can"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as collaborative coding partner with context",
+      "label_negative": "AI as isolated code generator",
+      "bipolarity_complete": true,
+      "grounding_span": "I'm looking forward to continuing to work with Claude Code and similar AI technologies within given repos, so that it can maintain better context"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and resource efficiency",
+      "grounding_span": "we likely won't have to worry about resource issues (from a personnel perspective)"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Quality and editorial trust",
+      "grounding_span": "the occasional output with poor wording or non-standard abbreviations always seem to get the attention of senior editors, who then begin to question the overall worth of the system"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "User experience enhancement",
+      "grounding_span": "further enhance the user experience with our various products"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for unit testing",
+      "valence": "positive",
+      "grounding_span": "I tend to prefer using for the unit testing"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with hallucinations and instruction ignoring",
+      "valence": "negative",
+      "grounding_span": "Hallucinations are an occasional source of frustration as well as models ignoring specific instructions"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Optimism about future AI use cases",
+      "valence": "positive",
+      "grounding_span": "I think that we're going to continue finding new use cases"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Skepticism toward wholesale code generation",
+      "valence": "negative",
+      "grounding_span": "the wholesale code generations that I have seen usually have enough errors in it that it would have taken about as much time for me to do it myself"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative prompt tweaking and model adjustment",
+      "grounding_span": "Often it's iterative tweaking of prompts. However, we occasionally do adjust the models"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Data-driven quality monitoring with multiple model ratings",
+      "grounding_span": "We've also implemented flows were different models will rate the output, and we'll aggregate that data"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

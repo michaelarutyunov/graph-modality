@@ -1,0 +1,210 @@
+{
+  "transcript_id": "work_0040",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as brainstorming and idea generation partner",
+      "label_negative": "AI as unreliable or insufficient for complex analysis",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "AI systems to help brainstorm ideas and or to identify new ideas"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as objective framework provider with subjective refinement",
+      "label_negative": "AI as final decision-maker without human context",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "initial recommendation is meant to achieve an objective approach...follow-up questions help incorporate subjective elements"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as blind spot identifier and alternative perspective provider",
+      "label_negative": "AI as limited to surface-level or traditional approaches",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "AI's role is to always provide insight into what other factors of influence may not have been readily identified"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI reliability for data and statistical analysis",
+      "label_negative": "AI unreliability for data and statistical analysis due to lack of contextual understanding",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "Data and statistical analysis are particular areas that I am hesitant to rely on AI for"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as strategic thinking partner and validation check",
+      "label_negative": "AI as independent task delegator without human oversight",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I'll rarely delegate a specific task to an AI but typically use them as a sounding board"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI conversational memory and coherence",
+      "label_negative": "AI lack of conversational memory and coherence",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "effectiveness of the AI models to remember elements of the conversation to build new ideas off of"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI accountability and organizational trust",
+      "label_negative": "AI lack of accountability and erosion of trust",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "inability to hold an AI system accountable for system failures necessitates an additional level of scrutiny"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Optimized asset management and reliability",
+      "grounding_span": "optimized asset management strategies for maintaining equipment reliability and availability"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Organizational accountability and trust",
+      "grounding_span": "inability to hold an AI system accountable for system failures necessitates an additional level of scrutiny"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Professional competence and skill preservation",
+      "grounding_span": "reliability engineering is meant to influence alignment with organization leadership and work process management"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Positive satisfaction with AI as brainstorming partner",
+      "valence": "positive",
+      "grounding_span": "AI systems actually helped develop what became my organization's defined process for evaluating asset criticality"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Hesitancy toward AI for statistical analysis",
+      "valence": "negative",
+      "grounding_span": "Data and statistical analysis are particular areas that I am hesitant to rely on AI for"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Cautious optimism about AI's role",
+      "valence": "ambivalent",
+      "grounding_span": "the organization as a whole embraces its usage but cautions against over-reliance"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through back-and-forth dialogue",
+      "grounding_span": "refinement is almost always required to incorporate specific elements"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Systematic decomposition of problems into objective and subjective layers",
+      "grounding_span": "initial recommendation is meant to achieve an objective approach...follow-up questions help incorporate subjective elements"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,230 @@
+{
+  "transcript_id": "science_0060",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as time-saving starting point for literature review",
+      "label_negative": "Manual exhaustive literature search",
+      "bipolarity_complete": true,
+      "grounding_span": "I can spend hours combing through research trying to find what I'm looking for, or I can ask a model that will give me almost instant answers"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as troubleshooting partner for lab issues",
+      "label_negative": "Sole reliance on own or coworker knowledge",
+      "bipolarity_complete": true,
+      "grounding_span": "if a test is going wrong and I just want to talk through different troubleshooting stuff that my coworkers also don't have answers for- I'll use ChatGPT there as well"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as manuscript editing assistant",
+      "label_negative": "Manual self-editing without external suggestions",
+      "bipolarity_complete": true,
+      "grounding_span": "I put in my rough draft and had the model give me suggestions for improvements"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI reliability and accuracy",
+      "label_negative": "AI hallucination and incorrect citations",
+      "bipolarity_complete": true,
+      "grounding_span": "a lot of times that it wont cite a paper correctly or will be wrong on things"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "User critical thinking as filter for AI output",
+      "label_negative": "Blind trust in AI suggestions",
+      "bipolarity_complete": true,
+      "grounding_span": "it's really necessary for the user to have some common sense and logical thinking and not just blindly trust a model"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI for automated data analysis from raw fluorescence data",
+      "label_negative": "Manual data processing and graphing",
+      "bipolarity_complete": true,
+      "grounding_span": "If we could get a model to be able to just receive the raw data and immediately analyze it into a graph"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "Institutional data privacy and ownership for AI use",
+      "label_negative": "Unrestricted third-party access to unpublished data",
+      "bipolarity_complete": true,
+      "grounding_span": "a contract or some other understanding with the universities would need to be necessary before they'd allow raw unpublished scientific data to be handed over to a third party"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Research efficiency and time savings",
+      "grounding_span": "It's really mostly about time"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Epistemic understanding and problem-solving",
+      "grounding_span": "maybe those ideas will be something that I absolutely should have thought of but just couldn't find in my brain"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Scientific communication quality",
+      "grounding_span": "see where things were the least understandable"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Data sovereignty and institutional trust",
+      "grounding_span": "our research doesn't even belong to us, it's always the property of our university"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Positive pragmatic use of AI for literature review",
+      "valence": "positive",
+      "grounding_span": "It made it a lot easier to find where the gaps were in research rather than doing all that searching manually"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Positive reliance on AI for troubleshooting",
+      "valence": "positive",
+      "grounding_span": "I'll use ChatGPT there as well"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Positive use of AI for manuscript editing",
+      "valence": "positive",
+      "grounding_span": "It's helpful for editing and revising"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Awareness of AI inaccuracies but acceptance as starting point",
+      "valence": "ambivalent",
+      "grounding_span": "Sure, there's a lot of times that it wont cite a paper correctly or will be wrong on things, but it's a great starting point"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Desire for AI in automated data analysis with privacy constraints",
+      "valence": "positive",
+      "grounding_span": "If we could get a model (that's allowed by the university to handle our data) to be able to just receive the raw data and immediately analyze it"
+    },
+    {
+      "id": "n17",
+      "type": "Stance",
+      "label": "Concern about institutional data privacy",
+      "valence": "negative",
+      "grounding_span": "the privacy constraint would be super necessary to think about as a company"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic efficiency-driven tool selection",
+      "grounding_span": "It's really mostly about time"
+    },
+    {
+      "id": "n19",
+      "type": "CognitiveStyleMarker",
+      "label": "Critical filtering through domain expertise",
+      "grounding_span": "it's really necessary for the user to have some common sense and logical thinking and not just blindly trust a model"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n17",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n19",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

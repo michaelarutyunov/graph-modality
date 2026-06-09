@@ -1,0 +1,169 @@
+{
+  "transcript_id": "work_0130",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI for administrative tasks",
+      "label_negative": "AI as independent knowledge worker",
+      "bipolarity_complete": true,
+      "grounding_span": "I treat the AI as an administrative assistant, not a knowledge worker"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as formatting and synthesizing tool",
+      "label_negative": "Manual formatting and data presentation",
+      "bipolarity_complete": true,
+      "grounding_span": "I am not very good at presentation formatting and data presentation, so the AI was helpful"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability and factuality",
+      "label_negative": "AI hallucination and fabrication",
+      "bipolarity_complete": true,
+      "grounding_span": "I do not trust AI to not hallucinate and/or fabricate data"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Human control over creative decisions",
+      "label_negative": "AI autonomy over creative and factual tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I prefer to handle creative tasks myself"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI for repetitive simple tasks",
+      "label_negative": "AI for complex judgment tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "Any tasks that would require only an entry-level employee are likely candidates for AI to assume"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Professional competence",
+      "grounding_span": "The documents I create have to be factually valid with supporting data"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "it took only two iterations for me to get output that I was satisfied with"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Human judgment and nuanced understanding",
+      "grounding_span": "I don't believe AI will be able to understand the nuances of a constituency and shape policy"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "I am not very good at presentation formatting and data presentation, so the AI was helpful"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Distrust of AI for factual accuracy",
+      "valence": "negative",
+      "grounding_span": "I do not trust AI to not hallucinate and/or fabricate data"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Cautious approach due to observing colleagues' misuse",
+      "valence": "ambivalent",
+      "grounding_span": "I have seen my colleagues misuse AI and suffer consequences, so I learned early that I need to validate output"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Openness to increasing AI use in future",
+      "valence": "positive",
+      "grounding_span": "I can see a future where AI could replace some of my staff's functions"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement with limited back-and-forth",
+      "grounding_span": "If the first output meets my needs, I am finished. If I feel that I need more refinement, I will ask the AI to make those refinements"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Observational learning from others' AI mistakes",
+      "grounding_span": "I have seen my colleagues misuse AI and suffer consequences, so I learned early that I need to validate output"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,186 @@
+{
+  "transcript_id": "work_0592",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as ideation partner",
+      "label_negative": "AI as unreliable or limited by knowledge cutoff",
+      "bipolarity_complete": true,
+      "grounding_span": "AI helped me here by a) suggesting a topic I probably wouldn't have thought of on my own, and b) handling the heavy lifting"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as efficiency tool for content creation",
+      "label_negative": "Manual laborious content creation without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "With AI I can produce an entire 12-minute video in a day, but if I had to handle everything myself, it would take weeks"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Human control over creative decisions",
+      "label_negative": "AI handling of pacing and aesthetics",
+      "bipolarity_complete": true,
+      "grounding_span": "I prefer to steer the ship more directly when it comes to the visual elements, the pacing of the videos, and the overall channel aesthetics"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI adherence to instructions",
+      "label_negative": "AI ignoring user instructions",
+      "bipolarity_complete": true,
+      "grounding_span": "I've told ChatGPT to stop using dashes in scripts so many times that I've finally stopped requesting it, no matter if it's committed to memory it still does what it wants"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI adaptation to audience and market nuances",
+      "label_negative": "AI as threat to human jobs and creativity",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is already taking over in the real world and it will only get worse. The more people who are out of work because of it, the more people who will be seeking fulfillment and looking for deeper meaning to life"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative productivity and efficiency",
+      "grounding_span": "With AI I can produce an entire 12-minute video in a day"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Creative integrity and human artistry",
+      "grounding_span": "AI can simulate art, but I think it will be a while before it's truly able to become an artist"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Audience engagement and authenticity",
+      "grounding_span": "will allow more time for me to handle brand building"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "AI helped me here by a) suggesting a topic I probably wouldn't have thought of on my own, and b) handling the heavy lifting"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI errors",
+      "valence": "negative",
+      "grounding_span": "I've told ChatGPT to stop using dashes in scripts so many times that I've finally stopped requesting it, no matter if it's committed to memory it still does what it wants"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "With AI I can produce an entire 12-minute video in a day"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Resistance to AI in creative work",
+      "valence": "negative",
+      "grounding_span": "I prefer to steer the ship more directly when it comes to the visual elements, the pacing of the videos, and the overall channel aesthetics"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Skepticism toward AI for marketing strategy",
+      "valence": "positive",
+      "grounding_span": "Hopefully as it improves, it will take over the more mundane tasks (like video pacing) and will allow more time for me to handle brand building"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Observational learning from others' AI mistakes",
+      "grounding_span": "I've seen many other creators take what appears to be a less hands-on approach, and the results are what I use to learn what not to do"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic foresight about AI-driven societal shifts",
+      "grounding_span": "AI is already taking over in the real world and it will only get worse. The more people who are out of work because of it, the more people who will be seeking fulfillment and looking for deeper meaning to life"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n4",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

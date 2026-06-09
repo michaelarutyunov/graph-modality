@@ -1,0 +1,189 @@
+{
+  "transcript_id": "creativity_0124",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as curiosity-driven exploration tool",
+      "label_negative": "AI as direct content creator",
+      "bipolarity_complete": true,
+      "grounding_span": "I like to use AI for very loose conceptual ideas (such as color palettes), material research"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as brainstorming and idea generator",
+      "label_negative": "AI as final decision maker",
+      "bipolarity_complete": true,
+      "grounding_span": "We like to let the assistant throw things at the wall and only give necessary direction"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Anonymity and concept security in AI interactions",
+      "label_negative": "Exposure of unique ideas to AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I like specific ideas to be anonymous when talking to an assistant for idea and concept security"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI for low-stakes tasks",
+      "label_negative": "AI for high-stakes, core creative work",
+      "bipolarity_complete": true,
+      "grounding_span": "AI gives really great and fun suggestions for original home building ideas in Sims! ... it's very fun and stress-free because I don't really care about those ideas as much"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as compromise to creative integrity",
+      "label_negative": "Unethical AI data practices",
+      "bipolarity_complete": false,
+      "grounding_span": "so many artists are terrified right now because of their works getting scraped and losing value"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative autonomy",
+      "grounding_span": "we independently enjoy refining and drafting our own finalized concepts or ideas"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficient knowledge discovery",
+      "grounding_span": "allows us to focus our research and save time"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Creative integrity and human artistry",
+      "grounding_span": "I feel bad for people who are losing work"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Positive appreciation for AI as research catalyst",
+      "valence": "positive",
+      "grounding_span": "It felt nice to get some more ideas, and it allowed us to discuss many of the suggestions on our own!"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Cautious boundary-setting around idea protection",
+      "valence": "ambivalent",
+      "grounding_span": "I am wary about what I tell the models in order to avoid accidentally training it personal/unique ideas"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Concern for artists directly impacted by AI",
+      "valence": "negative",
+      "grounding_span": "I feel bad for people who are losing work"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Enthusiasm for low-stakes AI play",
+      "valence": "positive",
+      "grounding_span": "it's very fun and stress-free because I don't really care about those ideas as much"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through conversation",
+      "grounding_span": "We did not directly specify which ideas we liked to the assistant, so it doesn't know whether we liked or disliked a suggestion"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-dependent risk calibration — low vs high stakes",
+      "grounding_span": "I might use AI for building ideas in my story in the future, because I feel like that can be low-stress!"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

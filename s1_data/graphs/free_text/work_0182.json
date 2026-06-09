@@ -1,0 +1,175 @@
+{
+  "transcript_id": "work_0182",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI-generated listing descriptions",
+      "label_negative": "Self-written listing descriptions",
+      "bipolarity_complete": true,
+      "grounding_span": "I use it to help me write eBay listings"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI's descriptive quality and appeal",
+      "label_negative": "AI's over-inflation and misleading positivity",
+      "bipolarity_complete": true,
+      "grounding_span": "It can be very descriptive and makes descriptions that really draw attention"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI accuracy and truthfulness",
+      "label_negative": "AI fabrication and hallucination",
+      "bipolarity_complete": true,
+      "grounding_span": "Sometimes it fabricates the whole listing"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as efficiency booster",
+      "label_negative": "AI as time-consuming rework",
+      "bipolarity_complete": true,
+      "grounding_span": "It made the listing process so much faster"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as competitive advantage",
+      "label_negative": "AI as risk of misrepresentation",
+      "bipolarity_complete": true,
+      "grounding_span": "help someone decide if they want to buy from me or from someone else"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as inventory sourcing advisor",
+      "label_negative": "Manual inventory sourcing",
+      "bipolarity_complete": true,
+      "grounding_span": "ask the AI if this product fits the parameters"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Sales success and profitability",
+      "grounding_span": "triggered a fast sale"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Customer trust and satisfaction",
+      "grounding_span": "cause a return of the item"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Business efficiency and time savings",
+      "grounding_span": "spend less time in each store"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI-generated descriptions that need no changes",
+      "valence": "positive",
+      "grounding_span": "written a very nice description that didn't need any changes"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI fabrications requiring rework",
+      "valence": "negative",
+      "grounding_span": "frustrating when the AI gets it really wrong"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Optimism about expanding AI use for inventory sourcing",
+      "valence": "positive",
+      "grounding_span": "I am trying to learn how to do this"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative review and adjustment — reads over multiple times while checking against item",
+      "grounding_span": "reading it over a few times while looking at the item itself"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Opportunity-seeking experimentation — actively looking for new AI strategies",
+      "grounding_span": "always looking for new ways to incorporate AI into my everyday business"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

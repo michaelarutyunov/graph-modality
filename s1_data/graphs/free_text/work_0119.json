@@ -1,0 +1,179 @@
+{
+  "transcript_id": "work_0119",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as efficient template generator for routine clients",
+      "label_negative": "AI as inadequate for nuanced client personalization",
+      "bipolarity_complete": true,
+      "grounding_span": "I start with parameters, and then fine tune as necessary"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as research assistant for specific injury questions",
+      "label_negative": "AI as poor at integrating injury context into full plans",
+      "bipolarity_complete": true,
+      "grounding_span": "AI does a really good job... It's just if it's mentioned within the larger context"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as time-saving tool for routine tasks",
+      "label_negative": "AI as time-wasting when it loses context or makes errors",
+      "bipolarity_complete": true,
+      "grounding_span": "It (usually) helps me save time"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Human interpersonal coaching as irreplaceable value",
+      "label_negative": "AI replacing human coaching entirely",
+      "bipolarity_complete": true,
+      "grounding_span": "the person-to-person connection in training is vital for motivation and troubleshooting"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI reliability with complex constraints",
+      "label_negative": "AI unreliability with complex constraints",
+      "bipolarity_complete": true,
+      "grounding_span": "It just seemed to be too much for the AI to hold at once"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Client satisfaction and personalized service",
+      "grounding_span": "I know what exercises and foods are most likely to be appropriate (and appreciated by the client)"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional efficiency and time savings",
+      "grounding_span": "It (usually) helps me save time"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Human connection and motivational support",
+      "grounding_span": "the person-to-person connection in training is vital for motivation and troubleshooting"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for routine plan generation",
+      "valence": "positive",
+      "grounding_span": "I start with parameters, and then fine tune as necessary"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI when handling complex constraints",
+      "valence": "negative",
+      "grounding_span": "It was frustrating to spend that much time on something"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Confidence in human irreplaceability for coaching",
+      "valence": "positive",
+      "grounding_span": "I don't see that happening"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Openness to future AI improvements",
+      "valence": "positive",
+      "grounding_span": "I'll continue using AI for sure"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement — starts broad then fine-tunes",
+      "grounding_span": "I start with parameters, and then fine tune as necessary"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic skill differentiation — focuses on human strengths",
+      "grounding_span": "What I think most about is how to strengthen my interpersonal skills"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

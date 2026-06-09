@@ -1,0 +1,201 @@
+{
+  "transcript_id": "science_0077",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as verification partner for independent work",
+      "label_negative": "AI as answer provider replacing independent effort",
+      "bipolarity_complete": true,
+      "grounding_span": "I'd work through each problem myself first, then use AI to check my process"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability on multi-step problems",
+      "label_negative": "AI error-proneness on multi-step problems",
+      "bipolarity_complete": true,
+      "grounding_span": "the AI would frequently make calculation errors, especially on multi-step problems"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as diagnostic tool for knowledge gaps",
+      "label_negative": "AI as crutch bypassing genuine understanding",
+      "bipolarity_complete": true,
+      "grounding_span": "I keep track of these problem areas...use notes as sort of a study guide"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI use for targeted study after mastering basics",
+      "label_negative": "AI use during initial learning or exams",
+      "bipolarity_complete": true,
+      "grounding_span": "Once I've mastered the basics, I do turn to AI to generate targeted study materials"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI providing interactive visualizations and thought experiments",
+      "label_negative": "AI limited to equations and solutions without intuition bridging",
+      "bipolarity_complete": true,
+      "grounding_span": "I wish AI could provide truly interactive visualizations and guided thought experiments"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Deep conceptual understanding",
+      "grounding_span": "It forced me to really understand the underlying concepts"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Academic integrity and self-reliance",
+      "grounding_span": "I'm not becoming dependent on AI to do my thinking for me"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficient learning and skill improvement",
+      "grounding_span": "It's enhanced my problem-solving process without replacing my need to truly understand"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Positive stance toward AI as verification tool",
+      "valence": "positive",
+      "grounding_span": "I'm much more confident tackling difficult technical problems"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Negative stance toward AI errors on complex problems",
+      "valence": "negative",
+      "grounding_span": "the AI would frequently make calculation errors, especially on multi-step problems"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Positive stance toward AI for targeted study",
+      "valence": "positive",
+      "grounding_span": "I use notes as sort of a study guide to create targeted study sessions with NotebookLM"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Negative stance toward AI during initial learning or exams",
+      "valence": "negative",
+      "grounding_span": "I avoid AI during actual practice tests or timed quizzes"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Aspirational positive stance toward interactive AI visualizations",
+      "valence": "positive",
+      "grounding_span": "I wish AI could provide truly interactive visualizations and guided thought experiments"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Systematic iterative verification — works independently first, then checks with AI",
+      "grounding_span": "I always start by working though problems completely on my own first"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic boundary-setting — clear rules for when and how to use AI",
+      "grounding_span": "I set clear boundaries around AI to preserve essential learning steps"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

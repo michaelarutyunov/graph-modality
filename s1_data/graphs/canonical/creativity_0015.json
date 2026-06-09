@@ -1,0 +1,167 @@
+{
+  "transcript_id": "creativity_0015",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as brainstorming and idea generator",
+      "label_negative": "AI as sole creator replacing human creativity",
+      "bipolarity_complete": true,
+      "grounding_span": "I will often use AI as a sounding board, to help brainstorm ideas"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as proofreading assistant",
+      "label_negative": "AI as complete autonomous editor",
+      "bipolarity_complete": true,
+      "grounding_span": "I look to it as a first-check"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as tool for generating visual and video elements",
+      "label_negative": "AI-generated art without human refinement",
+      "bipolarity_complete": true,
+      "grounding_span": "I often employ generative AI imaging services and combine it with details I craft"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI trustworthiness and verification",
+      "label_negative": "AI unreliability requiring oversight",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't fully trust it to edit a work to completion"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as threat to artistic endeavors",
+      "label_negative": "AI as complementary tool alongside human creativity",
+      "bipolarity_complete": true,
+      "grounding_span": "I can understand why some feel that it's perhaps a threat to artistic endeavours"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative expansion and inspiration",
+      "grounding_span": "It's definitely helped expand my creative scope"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Creative autonomy",
+      "grounding_span": "human creativity will always triumph"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and focus on craft",
+      "grounding_span": "I am more able to work on the fine-grained details"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Resistance to AI in creative work",
+      "valence": "positive",
+      "grounding_span": "AI has allowed me to consider new concepts and ways of doing things"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Resistance to AI in creative work",
+      "valence": "positive",
+      "grounding_span": "I am optimistic that human creativity will always triumph"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Cautious trust requiring oversight",
+      "valence": "ambivalent",
+      "grounding_span": "I don't fully trust it to edit a work to completion"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement with human oversight",
+      "grounding_span": "its design work often requires a fair amount of oversight and re-tooling"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Conceptual expansion from initial ideas",
+      "grounding_span": "I've always found it easy to come up with an initial idea, but moving beyond that has been challenging"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,175 @@
+{
+  "transcript_id": "work_0884",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI for low-stakes tasks",
+      "label_negative": "Manual effort for low-stakes tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "saves time that can be used to focus on more pressing customer service and food hygiene related tasks"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for low-stakes tasks",
+      "label_negative": "Manual control for high-stakes tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "tasks where there is a significant repercussion if something went wrong"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliance leading to laziness and oversight",
+      "label_negative": "Manual compilation ensuring thoroughness",
+      "bipolarity_complete": true,
+      "grounding_span": "more prone to laziness if I were to rely on AI for those kinds of tasks"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as calculator-like tool requiring user competence",
+      "label_negative": "AI as replacement for user skill",
+      "bipolarity_complete": true,
+      "grounding_span": "similar to the invention of the calculator"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI integration into existing software",
+      "label_negative": "Standalone AI tools prohibited by policy",
+      "bipolarity_complete": true,
+      "grounding_span": "would have to be integrated into our existing software, as we are prohibited from extracting staff and financial records"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "saves a significant amount of time and effort researching products"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Safety and accountability",
+      "grounding_span": "could have a significant impact on somebody's health"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Personal competence and skill development",
+      "grounding_span": "I am still able to write compelling social media copy or staff memos when needed"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Security and compliance",
+      "grounding_span": "prohibited from extracting staff and financial records"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for marketing research",
+      "valence": "positive",
+      "grounding_span": "most satisfying examples would be when AI has generated tasting notes"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Caution toward AI in high-risk tasks",
+      "valence": "negative",
+      "grounding_span": "I prefer to be in control of the entire process, in those scenarios"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI for routine numerical tasks",
+      "valence": "positive",
+      "grounding_span": "similar to the invention of the calculator... it has actively improved lives"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Optimism about future AI integration",
+      "valence": "positive",
+      "grounding_span": "What I would love to be able to use AI for in my day to day working life"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Risk-based task delegation — distinguishes high-risk from low-risk tasks",
+      "grounding_span": "tasks where there is a significant repercussion if something went wrong"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Analogical reasoning — uses concrete analogies to evaluate AI",
+      "grounding_span": "similar to the invention of the calculator"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

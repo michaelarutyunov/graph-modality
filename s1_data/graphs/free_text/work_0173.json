@@ -1,0 +1,185 @@
+{
+  "transcript_id": "work_0173",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaboration partner",
+      "label_negative": "AI as autonomous task delegator",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI mainly as a collaboration partner"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI trustworthiness for data integrity",
+      "label_negative": "AI unreliability with specific data",
+      "bipolarity_complete": true,
+      "grounding_span": "past experiences of writing detailed prompts and uploading data in very specific structure only to get it back where those instructions were not fully fulfilled or data was missing or changed"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as learning catalyst",
+      "label_negative": "AI as crutch that hinders skill development",
+      "bipolarity_complete": true,
+      "grounding_span": "I see AI as an catalyst to what humans, including me, are capable of"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI solution simplicity vs. over-engineering",
+      "label_negative": "AI overly elaborate solutions",
+      "bipolarity_complete": true,
+      "grounding_span": "vibe coding has also lead to some of my biggest frustration where the solutions AI offers are overly elaborate"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Managing multiple AI tools",
+      "label_negative": "Single AI tool simplicity",
+      "bipolarity_complete": true,
+      "grounding_span": "I often struggle with competing AIs"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "saving my coworkers 10-14 hours every week"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Skill development and learning",
+      "grounding_span": "had it teach me groovy along the way"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Control and accuracy",
+      "grounding_span": "I prefer to handle tasks that have specific data inputs and outputs"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Seamless integration and reduced overhead",
+      "grounding_span": "Time saved later when AI assists with generation but in the beginning sometimes all of that prevents me from engaging with AI"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI as learning partner",
+      "valence": "positive",
+      "grounding_span": "I recently was able to use AI to help me write a groovy script to accomplish a task that was costing folks in my department many hours a week"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI over-engineering",
+      "valence": "negative",
+      "grounding_span": "vibe coding has also lead to some of my biggest frustration where the solutions AI offers are overly elaborate"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Trust issues limiting delegation",
+      "valence": "negative",
+      "grounding_span": "I rarely assign it tasks due to trust issues"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Optimism about future seamless AI",
+      "valence": "positive",
+      "grounding_span": "Hopefully continued experiences will allow a more trustful relationship where I can 'bring it with me'"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative collaborative refinement — guides AI step-by-step",
+      "grounding_span": "I will ask it to tell me what I am missing, explain why something may or may not be a good idea, flesh out something I have already established a framework for"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Comparative tool orchestration — evaluates multiple AI personalities",
+      "grounding_span": "I have to learn the personalities, strengths, and weaknesses of each so I know who to go to"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n4",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

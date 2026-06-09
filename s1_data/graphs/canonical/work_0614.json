@@ -1,0 +1,280 @@
+{
+  "transcript_id": "work_0614",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as rapid prototyping tool for business needs",
+      "label_negative": "Manual coding from scratch without AI assistance",
+      "bipolarity_complete": true,
+      "grounding_span": "quickly mock up interfaces in React, before fine tuning and creating the more technical detail myself"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI adherence to user specifications",
+      "label_negative": "AI missing implicit requirements",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is usually very good at hitting the explicit goals, if something is written in the brief it'll almost certainly be included. However implicit requirements occasionally get missed"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI code quality and reliability",
+      "label_negative": "AI generating outdated or error-prone code",
+      "bipolarity_complete": true,
+      "grounding_span": "commands to build the React project (these often are outdated and do not work well with Tailwind CSS) or occasional minor exception errors in the code"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI for mundane tasks",
+      "label_negative": "AI inefficiency for very simple or very complex tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "both the extremely technical and extremely basic functions I generally choose to handle myself"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as task delegator for complete tasks",
+      "label_negative": "AI as collaborative partner on large tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I generally delegate it complete tasks, such as small functions or working on individual components"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI integration encouraged by small company culture",
+      "label_negative": "AI adoption hindered by large company inertia",
+      "bipolarity_complete": true,
+      "grounding_span": "My company is relatively small (less than 10 people), so we've been encouraged to embrace it quite a lot"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI independence in task completion",
+      "label_negative": "AI frustration from prolonged error correction",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is mainly satisfying when it's able to complete a task in its entirety without correction"
+    },
+    {
+      "id": "n8",
+      "type": "Construct",
+      "label": "AI leading to skill atrophy through over-reliance",
+      "label_negative": "AI preserving or enhancing skills through practice",
+      "bipolarity_complete": true,
+      "grounding_span": "I do see a certain laziness appear in my work sometimes where I get AI to do something relatively trivial simply because I can't be bothered"
+    },
+    {
+      "id": "n9",
+      "type": "Construct",
+      "label": "AI as job threat",
+      "label_negative": "AI as job complement creating new opportunities",
+      "bipolarity_complete": true,
+      "grounding_span": "why would I be needed if my manager could just feed his requirements into a model that could generate the entire project from scratch"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "that feeling of just having the job done in a few moments when it might have taken you 30+ minutes to put together yourself is great"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Quality of output",
+      "grounding_span": "compare it to the brief to ensure compliance"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Skill preservation and professional adaptability",
+      "grounding_span": "this will lead to the loss of skills through lack of practice"
+    },
+    {
+      "id": "n13",
+      "type": "Value",
+      "label": "Career sustainability",
+      "grounding_span": "I hope that my job is not completely eradicated"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Satisfaction with AI for GUI prototyping",
+      "valence": "positive",
+      "grounding_span": "quickly mock up interfaces in React, before fine tuning and creating the more technical detail myself"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Frustration with AI's inability to handle complex constraints",
+      "valence": "negative",
+      "grounding_span": "implicit requirements occasionally get missed"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Frustration with AI for coding",
+      "valence": "negative",
+      "grounding_span": "commands to build the React project (these often are outdated and do not work well with Tailwind CSS) or occasional minor exception errors"
+    },
+    {
+      "id": "n17",
+      "type": "Stance",
+      "label": "Preference for manual handling of enjoyable tasks",
+      "valence": "negative",
+      "grounding_span": "both the extremely technical and extremely basic functions I generally choose to handle myself"
+    },
+    {
+      "id": "n18",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "AI is mainly satisfying when it's able to complete a task in its entirety without correction"
+    },
+    {
+      "id": "n19",
+      "type": "Stance",
+      "label": "Frustration with AI errors",
+      "valence": "negative",
+      "grounding_span": "it takes forever (in terms of corrections) to get a code block to run without error"
+    },
+    {
+      "id": "n20",
+      "type": "Stance",
+      "label": "Concern about skill atrophy",
+      "valence": "negative",
+      "grounding_span": "I do see a certain laziness appear in my work sometimes where I get AI to do something relatively trivial simply because I can't be bothered"
+    },
+    {
+      "id": "n21",
+      "type": "Stance",
+      "label": "Caution and skepticism toward AI for historical facts",
+      "valence": "positive",
+      "grounding_span": "I see the AI revolution in much the same way as when computers became widespread - many jobs were eradicated but many new ones were also created"
+    },
+    {
+      "id": "n22",
+      "type": "CognitiveStyleMarker",
+      "label": "Systematic iterative decomposition of tasks",
+      "grounding_span": "I generally delegate it complete tasks, such as small functions or working on individual components"
+    },
+    {
+      "id": "n23",
+      "type": "CognitiveStyleMarker",
+      "label": "Comparative efficiency assessment before engaging AI",
+      "grounding_span": "it would take too long to explain the function to a model and the risk of it generating an error is too large"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n13",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n14",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n17",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n18",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n19",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n20",
+      "target": "n8",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n21",
+      "target": "n9",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n22",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n23",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n22",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n8",
+      "target": "n9",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

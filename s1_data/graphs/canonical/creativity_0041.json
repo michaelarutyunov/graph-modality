@@ -1,0 +1,173 @@
+{
+  "transcript_id": "creativity_0041",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as supplement to creative process",
+      "label_negative": "Passive waiting for inspiration without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "spark kernels of creativity when inspiration is feeling scarce"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as brainstorming and idea generator",
+      "label_negative": "AI as autonomous creative decision-maker",
+      "bipolarity_complete": true,
+      "grounding_span": "Having AI suggest however many ideas I need to curate into a starting point"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as tool for overcoming creative block",
+      "label_negative": "Being stuck without AI assistance",
+      "bipolarity_complete": true,
+      "grounding_span": "AI as a sounding board has allowed me to often ram through the wall of writer's block"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI for administrative tasks",
+      "label_negative": "Manual organization without AI assistance",
+      "bipolarity_complete": true,
+      "grounding_span": "further utilizing AI in a more assistant/administrative role eg. file naming and general organization"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Client preference for curated human work vs cheap AI output",
+      "label_negative": "Clients settling for non-curated AI generative art as cheaper alternative",
+      "bipolarity_complete": true,
+      "grounding_span": "clients settling for non-curated, early stage AI generative art as a cheaper alternative"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative inspiration and ideation",
+      "grounding_span": "get the necessary creative juices flowing much more quickly"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Creative autonomy",
+      "grounding_span": "retaining the overall creative decisions for myself"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "facilitates my workflow into being proactive"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Quality of creative output",
+      "grounding_span": "only some needs can be easily satisfied by the AI tools readily available"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI as creative block breaker",
+      "valence": "positive",
+      "grounding_span": "spark kernels of creativity when inspiration is feeling scarce"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI generating similar ideas across clients",
+      "valence": "negative",
+      "grounding_span": "clients settling for non-curated, early stage AI generative art as a cheaper alternative"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Openness to increasing AI use in future",
+      "valence": "positive",
+      "grounding_span": "I am definitely interested in further utilizing AI in a more assistant/administrative role"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Curatorial mindset — uses AI for ideation then curates",
+      "grounding_span": "Having AI suggest however many ideas I need to curate into a starting point"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Pattern-seeking and personalization — wants AI to learn personal tactics",
+      "grounding_span": "memorize and piece together the patterns I have used in other projects that were successful"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

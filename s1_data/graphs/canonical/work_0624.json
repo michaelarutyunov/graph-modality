@@ -1,0 +1,225 @@
+{
+  "transcript_id": "work_0624",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as research starting point",
+      "label_negative": "AI as unreliable for final output",
+      "bipolarity_complete": true,
+      "grounding_span": "I've found AI useful for the starting phase of research"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as double-checker and second pair of eyes",
+      "label_negative": "AI as unnecessary or intrusive in editing",
+      "bipolarity_complete": true,
+      "grounding_span": "I have sometimes used AI as a second set of eyes"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for administrative tasks",
+      "label_negative": "AI as unreliable for administrative tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I also used AI for some administrative tasks"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Human writing and creative control",
+      "label_negative": "AI-generated writing lacking human voice",
+      "bipolarity_complete": true,
+      "grounding_span": "I think my value as a contributor is in my human voice and perspective"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI inaccuracy and hallucination",
+      "bipolarity_complete": true,
+      "grounding_span": "I simply don't have confidence that any of the models I have used are providing accurate information 100% of the time"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI image generation capability",
+      "label_negative": "AI image generation producing poor results",
+      "bipolarity_complete": true,
+      "grounding_span": "I've been particularly frustrated when using it for image generation"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI adoption in workplace",
+      "label_negative": "Personal resistance to AI adoption",
+      "bipolarity_complete": true,
+      "grounding_span": "Through speaking with clients and colleagues about it, I've come to see it as a helpful tool"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "saving the clients money, and myself time"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Accuracy and reliability in work",
+      "grounding_span": "It gives me that extra bit of confidence before submitting the completed draft"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Personal authenticity and unique voice",
+      "grounding_span": "I still think human creativity is crucial to my field"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Professional growth and skill maintenance",
+      "grounding_span": "I will always maintain my skills in writing/editing"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Positive stance toward AI as research tool",
+      "valence": "positive",
+      "grounding_span": "I've found AI useful for the starting phase of research"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Satisfaction with AI as editing aid",
+      "valence": "positive",
+      "grounding_span": "I have sometimes used AI as a second set of eyes"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Frustration with AI image generation",
+      "valence": "negative",
+      "grounding_span": "I've been particularly frustrated when using it for image generation"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Cautious skepticism about AI accuracy",
+      "valence": "ambivalent",
+      "grounding_span": "I simply don't have confidence that any of the models I have used are providing accurate information 100% of the time"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Positive stance toward AI for administrative tasks",
+      "valence": "positive",
+      "grounding_span": "I also used AI for some administrative tasks"
+    },
+    {
+      "id": "n17",
+      "type": "Stance",
+      "label": "Negative stance toward AI-generated writing",
+      "valence": "negative",
+      "grounding_span": "I still think human creativity is crucial to my field"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic task delegation — uses AI only for specific, bounded tasks",
+      "grounding_span": "I tend to delegate basic tasks"
+    },
+    {
+      "id": "n19",
+      "type": "CognitiveStyleMarker",
+      "label": "Experience-driven calibration of trust",
+      "grounding_span": "I was quite closed off to the idea of using AI in my work at all when one of my clients first introduced the idea"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n17",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n7",
+      "target": "n19",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n5",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

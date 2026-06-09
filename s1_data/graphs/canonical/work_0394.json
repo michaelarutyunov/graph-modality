@@ -1,0 +1,156 @@
+{
+  "transcript_id": "work_0394",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as coding suggestion tool",
+      "label_negative": "Solo coding without peer support",
+      "bipolarity_complete": true,
+      "grounding_span": "I've used AI to help me look up ways to code things or to explain how some code works"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as collaborator for iterative refinement",
+      "label_negative": "AI as one-shot code generator",
+      "bipolarity_complete": true,
+      "grounding_span": "It took some tweaking and back and forth with the AI to be able to get it where I wanted it"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI delegation for simple tasks",
+      "label_negative": "AI as collaborative step-by-step partner",
+      "bipolarity_complete": true,
+      "grounding_span": "Mostly that delegation approach"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as debugging assistant",
+      "label_negative": "Debugging self-written code",
+      "bipolarity_complete": true,
+      "grounding_span": "It's harder to debug because I didn't write the original code"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as time-saving tool",
+      "label_negative": "Describing task to AI more time-consuming than doing it myself",
+      "bipolarity_complete": true,
+      "grounding_span": "trying to describe what I'm looking for would be harder and more time-consuming than just doing it myself"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "AI has been very helpful"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Skill development and learning",
+      "grounding_span": "knowing what to ask for and describe it is a useful skill"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "AI has been very helpful"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for debugging",
+      "valence": "negative",
+      "grounding_span": "The going back and forth can be very rewarding and very frustrating"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Ambivalence about AI collaboration vs delegation",
+      "valence": "ambivalent",
+      "grounding_span": "I imagine using it more and more...perhaps in the collaborative way that you brought up earlier"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative trial-and-error approach",
+      "grounding_span": "taking what it gives me, trying it, and then going back and describing any problems"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic threshold for abandoning AI",
+      "grounding_span": "if it ever got to where the AI was just absolutely not giving me what I wanted...that would be the point that I would just write it myself"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

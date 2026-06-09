@@ -1,0 +1,187 @@
+{
+  "transcript_id": "work_0025",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as test management and reporting tool",
+      "label_negative": "AI as manual testing substitute",
+      "bipolarity_complete": true,
+      "grounding_span": "AI primarily handles test management and reporting where it can handle large volumes of data at a time"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "Human judgment in visual and navigational testing",
+      "label_negative": "AI-driven visual and navigational testing",
+      "bipolarity_complete": true,
+      "grounding_span": "issues can sometimes be visual and the navigating of the application is better done by humans"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as collaborative heavy lifter under human direction",
+      "label_negative": "AI as autonomous decision-maker",
+      "bipolarity_complete": true,
+      "grounding_span": "AI just does the heavy lifting by putting it all together"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI efficiency for test managers vs manual burden for test associates",
+      "label_negative": "Equitable distribution of AI benefits across roles",
+      "bipolarity_complete": true,
+      "grounding_span": "Test Managers, with the help of AI, can work more efficiently...Test Associates might feel like they do more work but for less pay"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as optional tool used only when beneficial",
+      "label_negative": "AI as mandatory or forced tool",
+      "bipolarity_complete": true,
+      "grounding_span": "We are not required to use AI if it makes things harder"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI following predetermined workflows",
+      "label_negative": "AI freely testing without guidance",
+      "bipolarity_complete": true,
+      "grounding_span": "AI can get to a point where it can run, test, and report all on its own but only when it follows a predetermined workflow"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "this process can be done quicker, allowing more time to be spent on testing"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Human expertise and skill preservation",
+      "grounding_span": "it still requires thorough planning from a human to execute effectively"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Fairness and role equity",
+      "grounding_span": "Test Associates might feel like they do more work but for less pay than a Test Manager"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI as efficiency booster",
+      "valence": "positive",
+      "grounding_span": "With the help of AI this process can be done quicker"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Concern about inequitable workload distribution",
+      "valence": "negative",
+      "grounding_span": "Test Associates might feel like they do more work but for less pay than a Test Manager"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Confidence in human planning irreplaceability",
+      "valence": "positive",
+      "grounding_span": "it still requires thorough planning from a human to execute effectively"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Skepticism about AI's ability to test freely",
+      "valence": "negative",
+      "grounding_span": "I don't think it will ever be capable of testing a piece of software freely and thoroughly without guidance"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Role-differentiated reasoning — evaluates AI impact separately for different job roles",
+      "grounding_span": "Test Managers, with the help of AI, can work more efficiently...Test Associates might feel like they do more work"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic conditional adoption — uses AI only when it clearly improves workflow",
+      "grounding_span": "We are not required to use AI if it makes things harder"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

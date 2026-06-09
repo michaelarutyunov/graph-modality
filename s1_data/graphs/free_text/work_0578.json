@@ -1,0 +1,224 @@
+{
+  "transcript_id": "work_0578",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as curiosity-driven exploration tool",
+      "label_negative": "AI as limited to simple factual queries",
+      "bipolarity_complete": true,
+      "grounding_span": "The quickness and ease in which I would receive information and uncover information about things I was interested in spurred my curiosity"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI accuracy and reliability",
+      "label_negative": "AI hallucination and inaccuracy",
+      "bipolarity_complete": true,
+      "grounding_span": "In the beginning, some responses were vague or inaccurate; hallucinations were commonplace"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as collaborative enhancer",
+      "label_negative": "AI as autonomous replacement",
+      "bipolarity_complete": true,
+      "grounding_span": "Typically, I'm using AI collaboratively - having it help me come up with ideas or approaches"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Maintaining personal voice and judgment",
+      "label_negative": "Blind acceptance of AI outputs",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't every blindly accept something AI tells me or writes for me, because maintaining my voice is important"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Responsible AI integration with foundational skills",
+      "label_negative": "Premature over-reliance on AI without discernment",
+      "bipolarity_complete": true,
+      "grounding_span": "I think it's important for staff, especially new professionals, to first develop good research skills and work ethic so they don't prematurely become too reliant on AI"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as skill expander and learning tool",
+      "label_negative": "AI as skill atrophier",
+      "bipolarity_complete": true,
+      "grounding_span": "AI has helped expand my skill set"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI as productivity enhancer freeing time for higher-level work",
+      "label_negative": "AI as source of inefficiency and frustration",
+      "bipolarity_complete": true,
+      "grounding_span": "AI has freed up time I used to spend on mundane, repetitive, or mentally draining tasks"
+    },
+    {
+      "id": "n8",
+      "type": "Construct",
+      "label": "AI as creative and visual communication enabler",
+      "label_negative": "AI limitations in graphical outputs and data storytelling",
+      "bipolarity_complete": true,
+      "grounding_span": "I'm very excited for the day where one can quickly get a customized image quickly, without weird quirks or artifacts"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Personal growth and learning",
+      "grounding_span": "I also learned new skills and terminology along the way"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Workplace productivity and efficiency",
+      "grounding_span": "Some tasks that would have taken me days to complete are now done in hours"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Professional integrity and responsible practice",
+      "grounding_span": "I strongly believe that AI is a tool not a replacement for good work"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Creative expression and communication",
+      "grounding_span": "Having an AI to help bring the ideas I have in my head to fruition would be amazing"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Satisfaction with AI as collaborative enhancer",
+      "valence": "positive",
+      "grounding_span": "I recently felt particularly satisfied with I used AI collaboratively to set up code"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Frustration with AI contradictions and slow responses",
+      "valence": "negative",
+      "grounding_span": "when a chat gets bogged down with a lot of data sharing or back and forth, the long response times are irritating"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Optimistic excitement about AI evolution",
+      "valence": "positive",
+      "grounding_span": "I'm excited to evolve myself with AI, and for AI platforms to evolve"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Advocacy for responsible AI use with caution",
+      "valence": "ambivalent",
+      "grounding_span": "I'm also an advocate for being careful who gets the green-light to use AI"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative testing and verification — checks accuracy and refines prompts",
+      "grounding_span": "I find that when I check the accuracy of responses, there are less likely to have bad information"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Historical analogical reasoning — draws parallels to past technological shifts",
+      "grounding_span": "It won't be the first time in history when a new technology has eliminated certain jobs in the workforce"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n13",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n8",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

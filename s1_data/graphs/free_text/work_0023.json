@@ -1,0 +1,181 @@
+{
+  "transcript_id": "work_0023",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as grammar and structure assistant",
+      "label_negative": "Manual editing without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I used AI for grammar and punctuation as well as sentence and paragraph structure"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as creative brainstorming partner",
+      "label_negative": "Solo creative ideation",
+      "bipolarity_complete": true,
+      "grounding_span": "It helped me brainstorm scenes"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for query letter generation",
+      "label_negative": "Self-written query letter",
+      "bipolarity_complete": true,
+      "grounding_span": "I look to AI for help with that"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI ability to capture story essence",
+      "label_negative": "AI missing crucial story elements",
+      "bipolarity_complete": true,
+      "grounding_span": "There's always something missing in the query or synopsis that I feel is crucial"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "User's ability to articulate desired output",
+      "label_negative": "User's inability to specify perfection",
+      "bipolarity_complete": true,
+      "grounding_span": "I wish I was better at telling it what I want, what I see as perfection"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI for formulaic communication tasks",
+      "label_negative": "AI for creative writing tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "There's a right way and a wrong way to handle a difficult conversation or write a proper email"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Creative satisfaction and perfection",
+      "grounding_span": "I only get one chance for an agent to read my query and get hooked"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Effective communication",
+      "grounding_span": "There's a right way and a wrong way to handle a difficult conversation or write a proper email"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Frustration with AI's inability to capture essence",
+      "valence": "negative",
+      "grounding_span": "There's always something missing in the query or synopsis that I feel is crucial"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Enjoyment of AI's creative output",
+      "valence": "positive",
+      "grounding_span": "It's great fun to see how it produces something so close to what I imagine"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Self-doubt about guiding AI",
+      "valence": "negative",
+      "grounding_span": "I wish I was better at telling it what I want"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Confidence in recognizing ideal output",
+      "valence": "positive",
+      "grounding_span": "I think I'd know it if I saw it"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement with periodic breaks",
+      "grounding_span": "I go a couple of rounds like that and then quit to try another day"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Analytical self-reflection on communication with AI",
+      "grounding_span": "Maybe there's information that I'm not supplying properly or I could be over analyzing it"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

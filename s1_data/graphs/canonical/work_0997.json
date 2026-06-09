@@ -1,0 +1,250 @@
+{
+  "transcript_id": "work_0997",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as tool for lesson planning",
+      "label_negative": "Manual lesson planning without AI assistance",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I usually use it to help me play lessons"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as writing and grammar assistant",
+      "label_negative": "Teacher relying solely on prior knowledge without AI review",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I'm having AI teach me the grammar lesson so that I can make sure I know what to teach my students"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as tool for lesson planning",
+      "label_negative": "AI as one-shot request handler without iterative refinement",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I'll give my instructions in pieces even if they could all go together"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Teacher-created resources as foundation",
+      "label_negative": "AI-curated secondary resources without teacher oversight",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I usually like to find secondary resources myself"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as quick answer provider",
+      "label_negative": "AI providing verbose explanations unsuitable for real-time classroom use",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "when I'm in class I want a one sentence thing I can read out to my students"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI for PowerPoint slide generation",
+      "label_negative": "Teacher manually creating slides to maintain professional involvement",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I ask AI to transfer them to a google slide and slightly adopt them and then I just play the slides class with full trust"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI for correcting student work and tracking progress",
+      "label_negative": "Manual correction without AI assistance",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I haven't used AI to correct a students work before, but I think that would be helpful"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Effective lesson planning and content accuracy",
+      "valence": null,
+      "grounding_span": "help me play lessons"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Teaching accuracy and confidence",
+      "valence": null,
+      "grounding_span": "make sure I know what to teach my students"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Efficiency and time savings in lesson planning",
+      "valence": null,
+      "grounding_span": "I'll give my instructions in pieces"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Control over instructional content and level appropriateness",
+      "valence": null,
+      "grounding_span": "I am able to make sure that there is nothing additional on the page I haven't taught yet"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Real-time classroom responsiveness",
+      "valence": null,
+      "grounding_span": "when I'm in class I want a one sentence thing I can read out to my students"
+    },
+    {
+      "id": "n13",
+      "type": "Value",
+      "label": "Pedagogical integrity and student understanding",
+      "valence": null,
+      "grounding_span": "I wouldn't feel like I was doing my job then"
+    },
+    {
+      "id": "n14",
+      "type": "Value",
+      "label": "Personalized student assessment and feedback",
+      "valence": null,
+      "grounding_span": "AI could flag that and then I'll know that I need to teach that more"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Satisfaction with AI for lesson creation",
+      "valence": "positive",
+      "grounding_span": "AI helps me adapt the sentences and the grammar point to the topic"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Frustration with AI's verbose responses",
+      "valence": "negative",
+      "grounding_span": "I'll get a super long explanation where the answer I'm looking for is at the bottom"
+    },
+    {
+      "id": "n17",
+      "type": "Stance",
+      "label": "Ambivalence about AI taking over slide creation",
+      "valence": "ambivalent",
+      "grounding_span": "I wouldn't feel like I was doing my job then, so realistically I would still go over everything"
+    },
+    {
+      "id": "n18",
+      "type": "Stance",
+      "label": "Optimism about AI for correcting and tracking student work",
+      "valence": "positive",
+      "grounding_span": "I think that would be helpful"
+    },
+    {
+      "id": "n19",
+      "type": "CognitiveStyleMarker",
+      "label": "Systematic iterative decomposition of tasks",
+      "valence": null,
+      "grounding_span": "I'll give my instructions in pieces even if they could all go together"
+    },
+    {
+      "id": "n20",
+      "type": "CognitiveStyleMarker",
+      "label": "Proactive data curation and filtering",
+      "valence": null,
+      "grounding_span": "I usually like to find secondary resources myself"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n13",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n14",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n15",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n17",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n18",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n3",
+      "target": "n19",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n20",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n6",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

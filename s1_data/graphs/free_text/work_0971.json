@@ -1,0 +1,156 @@
+{
+  "transcript_id": "work_0971",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative iterative partner",
+      "label_negative": "AI as one-shot independent executor",
+      "bipolarity_complete": true,
+      "grounding_span": "I go back and forth. I like to send an initial prompt, wait to see what I get back and then work with the AI to create something better."
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as time-saving efficiency tool",
+      "label_negative": "AI as unnecessary or wasteful",
+      "bipolarity_complete": true,
+      "grounding_span": "it saves me so much time"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as tool for routine administrative tasks",
+      "label_negative": "AI for sensitive human-centered tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I prefer handling the problem solving and also the very hyper-specific problems myself. If a parent has a complaint, or a student is hurt or affected by something, I handle that old fashion."
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as personal productivity enhancer",
+      "label_negative": "AI as job threat",
+      "bipolarity_complete": true,
+      "grounding_span": "I see AI as a tool more than competition. I dont think AI will immediately take over, but the people who utilize AI will take over."
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "it saves me so much time"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Personal competence and control",
+      "grounding_span": "I prefer handling the problem solving and also the very hyper-specific problems myself"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Career advancement and adaptability",
+      "grounding_span": "the people who utilize AI will take over"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Satisfaction with AI's collaborative process",
+      "valence": "positive",
+      "grounding_span": "I go back and forth. I like to send an initial prompt, wait to see what I get back and then work with the AI to create something better."
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Gratitude for AI support during stress",
+      "valence": "positive",
+      "grounding_span": "I entrusted AI completely with the task, and it created a Monday plan that fit my criteria perfectly, leaving me extremely satisfied"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Optimism about expanding AI use",
+      "valence": "positive",
+      "grounding_span": "I imagine I will use it for more and more as time goes on."
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Resistance to AI in sensitive tasks",
+      "valence": "negative",
+      "grounding_span": "I prefer handling the problem solving and also the very hyper-specific problems myself. If a parent has a complaint, or a student is hurt or affected by something, I handle that old fashion."
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement — back-and-forth collaboration",
+      "grounding_span": "I go back and forth. I like to send an initial prompt, wait to see what I get back and then work with the AI to create something better."
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain boundary setting — clear separation of AI vs human tasks",
+      "grounding_span": "I prefer handling the problem solving and also the very hyper-specific problems myself."
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

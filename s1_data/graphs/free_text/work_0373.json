@@ -1,0 +1,162 @@
+{
+  "transcript_id": "work_0373",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as brainstorming and inspiration partner",
+      "label_negative": "AI as full content generator",
+      "bipolarity_complete": true,
+      "grounding_span": "let the AI help inspire my content and flow, and then I create the presentation myself"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as writing reviewer and editor",
+      "label_negative": "AI as full writing generator",
+      "bipolarity_complete": true,
+      "grounding_span": "I turn to AI once I've already written to double check I haven't made any errors, help me reduce word count, or give me alternative phrasing ideas"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Preservation of human writing voice",
+      "label_negative": "AI-generated writing style",
+      "bipolarity_complete": true,
+      "grounding_span": "I really value the 'humanness' of writing and I avoid using AI to fully generate anything I write"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI reliability in task execution",
+      "label_negative": "AI unreliability and inconsistency",
+      "bipolarity_complete": true,
+      "grounding_span": "it was incredibly inconsistent in how it labelled the figure (didn't follow APA format, mixed fonts and shapes, etc)"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as time-saving tool for tedious tasks",
+      "label_negative": "AI as source of extra work due to errors",
+      "bipolarity_complete": true,
+      "grounding_span": "I sent it to a chatbot and had it reduced, which saved me lots of time and headache"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Personal authenticity and creative control",
+      "grounding_span": "I really value the 'humanness' of writing"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional quality and accuracy",
+      "grounding_span": "it was incredibly inconsistent in how it labelled the figure (didn't follow APA format)"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and productivity",
+      "grounding_span": "saved me lots of time and headache"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for editing and reduction tasks",
+      "valence": "positive",
+      "grounding_span": "saved me lots of time and headache"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI for figure generation",
+      "valence": "negative",
+      "grounding_span": "it was incredibly inconsistent in how it labelled the figure"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Cautious middle-ground approach to AI adoption",
+      "valence": "ambivalent",
+      "grounding_span": "I tend to ride the middle line"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative iterative refinement — uses AI for inspiration then adapts manually",
+      "grounding_span": "I take what it sends me and adapt it per my vision"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Value-driven boundary setting — preserves human voice in writing",
+      "grounding_span": "I really value the 'humanness' of writing and I avoid using AI to fully generate anything I write"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

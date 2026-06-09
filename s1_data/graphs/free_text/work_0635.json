@@ -1,0 +1,131 @@
+{
+  "transcript_id": "work_0635",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI trustworthiness for granular tasks",
+      "label_negative": "AI unreliability for large or complex tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I cannot trust it to implement large features all at once"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI adherence to explicit instructions",
+      "label_negative": "AI taking liberties beyond instructions",
+      "bipolarity_complete": true,
+      "grounding_span": "instead of doing that it wanted to create another large function to make the correction"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as productivity multiplier",
+      "label_negative": "AI as requiring excessive oversight",
+      "bipolarity_complete": true,
+      "grounding_span": "It has increased my output significantly"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as skill development enabler",
+      "label_negative": "AI as skill atrophy risk",
+      "bipolarity_complete": true,
+      "grounding_span": "If AI is better at its job that means that I am better at my job"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "speed is really important to me"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Professional competence and mastery",
+      "grounding_span": "I am making sure that I know how to use it"
+    },
+    {
+      "id": "n7",
+      "type": "Stance",
+      "label": "Frustration with AI overreach",
+      "valence": "negative",
+      "grounding_span": "it taking certain liberties when I don't ask for it really frustrate me"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "positive",
+      "grounding_span": "I see AI as a permanent feature of the future"
+    },
+    {
+      "id": "n9",
+      "type": "CognitiveStyleMarker",
+      "label": "Granular decomposition and iterative testing",
+      "grounding_span": "I am very granular and specific with it now, but I will sporadically test"
+    },
+    {
+      "id": "n10",
+      "type": "CognitiveStyleMarker",
+      "label": "Explicit rule-setting and corrective feedback",
+      "grounding_span": "I tell it to do something with VERY specific rules, it executes, I review it and if it made a mistake I will take the time to clearly explain how it messed up"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n8",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n8",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n9",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n10",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,184 @@
+{
+  "transcript_id": "work_0603",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as idea generator replacing own creativity",
+      "bipolarity_complete": true,
+      "grounding_span": "I prefer using AI in a more collaborative nature, rather than using AI to come up with my ideas for me"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as efficiency tool",
+      "label_negative": "AI as unreliable or hallucinating source",
+      "bipolarity_complete": true,
+      "grounding_span": "Instead of googling a solution, they will ask a chatbot instead, streamlining the troubleshooting process"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI hallucination and fabrication",
+      "bipolarity_complete": true,
+      "grounding_span": "The main time AI makes me feel frustrated is when it hallucinates"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Preserving personal creativity",
+      "label_negative": "Over-reliance on AI leading to skill atrophy",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't want to ruin my own creativity by relying on AI and letting my brain go stale"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as collaborator for iterative refinement",
+      "label_negative": "AI use for full writing generation",
+      "bipolarity_complete": true,
+      "grounding_span": "I might ask a chatbot how to make an email sound more polite/ more professional"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Professional growth and skill maintenance",
+      "grounding_span": "I want to continue getting better at what I do"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "streamlining the troubleshooting process"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Epistemic accuracy and understanding",
+      "grounding_span": "it would just make up paper titles that fit what I was asking for"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI as collaborative partner",
+      "valence": "positive",
+      "grounding_span": "I prefer using AI in a more collaborative nature"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI hallucination",
+      "valence": "negative",
+      "grounding_span": "The main time AI makes me feel frustrated is when it hallucinates"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI for debugging",
+      "valence": "positive",
+      "grounding_span": "Instead of googling a solution, they will ask a chatbot instead, streamlining the troubleshooting process"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Negative stance toward AI-generated writing",
+      "valence": "negative",
+      "grounding_span": "I prefer writing papers myself, as I like to have my own writing style"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Selective adoption based on task fit",
+      "grounding_span": "I don't consult AI for recent internet resources, or anything super niche like very specific scientific information"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement with limited back-and-forth",
+      "grounding_span": "picking out particular key words or phrases that I liked, or taking inspiration from its sentence structure"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

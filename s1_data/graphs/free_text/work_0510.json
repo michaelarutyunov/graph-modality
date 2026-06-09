@@ -1,0 +1,181 @@
+{
+  "transcript_id": "work_0510",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as time-saving starting point for script breakdown",
+      "label_negative": "AI missing nuances requiring human oversight",
+      "bipolarity_complete": true,
+      "grounding_span": "AI breakdowns are a great time-saving starting point"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI in script evaluation for market validation",
+      "label_negative": "AI evaluation lacking human intuition",
+      "bipolarity_complete": true,
+      "grounding_span": "The AI model made some great comparisons for the film and reviewed it incredibly favorably"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for audience engagement and content repurposing",
+      "label_negative": "AI failing to maintain audience interest",
+      "bipolarity_complete": true,
+      "grounding_span": "I'm really interested in exploring more about what AI can do to help build audience and repurpose films"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Human touch in relationship and negotiation tasks",
+      "label_negative": "AI handling relationship and negotiation tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "those are all things that need the human touch for sure"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI in budgeting and scheduling automation",
+      "label_negative": "Human expertise in nuanced budgeting and scheduling",
+      "bipolarity_complete": true,
+      "grounding_span": "I am skeptical that AI can do this as well as a human with years in the industry"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "time-saving starting point"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Creative validation and market success",
+      "grounding_span": "it was nice to see my gut instinct about the quality of the project be validated"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Audience engagement and revenue generation",
+      "grounding_span": "maintain audience and create additional revenue streams"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Human connection and relationship building",
+      "grounding_span": "the networking with financiers, negotiating with vendors, and negotiating with / hiring cast and crew"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Professional competence and adaptability",
+      "grounding_span": "adapt or die has always been built into the DNA of film workers"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI validation of project quality",
+      "valence": "positive",
+      "grounding_span": "The AI model made some great comparisons for the film and reviewed it incredibly favorably"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Skepticism about AI replacing human expertise in budgeting",
+      "valence": "negative",
+      "grounding_span": "I am skeptical that AI can do this as well as a human with years in the industry"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Optimistic curiosity about AI for audience building",
+      "valence": "positive",
+      "grounding_span": "I'm really interested in exploring more about what AI can do to help build audience"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Concern about AI's impact on audience behavior",
+      "valence": "negative",
+      "grounding_span": "The even bigger concern, though, is how AI will impact audience behavior"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Stage-gate verification — sequential approval before proceeding",
+      "grounding_span": "We have to review this before we can move onto scheduling"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Industry-experience-based calibration of AI trust",
+      "grounding_span": "I am skeptical that AI can do this as well as a human with years in the industry"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

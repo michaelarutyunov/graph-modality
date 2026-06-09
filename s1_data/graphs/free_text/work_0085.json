@@ -1,0 +1,201 @@
+{
+  "transcript_id": "work_0085",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as administrative assistant for practice management",
+      "label_negative": "AI as clinical partner in therapy sessions",
+      "bipolarity_complete": true,
+      "grounding_span": "I truly think of it as an assistant for my practice"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as collaborative iterative tool requiring human refinement",
+      "label_negative": "AI as fully autonomous one-shot solution",
+      "bipolarity_complete": true,
+      "grounding_span": "it very hands on and some back and forth with each interaction"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as time-saving efficiency booster",
+      "label_negative": "AI as time-consuming due to need for oversight",
+      "bipolarity_complete": true,
+      "grounding_span": "it still saves a lot of time"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as style-learning adaptive tool",
+      "label_negative": "AI as generic one-size-fits-all tool",
+      "bipolarity_complete": true,
+      "grounding_span": "AI program is getting much better understanding how I say things"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as resource for clinical documentation and planning",
+      "label_negative": "AI as replacement for therapeutic connection",
+      "bipolarity_complete": true,
+      "grounding_span": "I had it develop a client's treatment plan"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as affordable essential support for work-life balance",
+      "label_negative": "AI as unaffordable luxury",
+      "bipolarity_complete": true,
+      "grounding_span": "it is the right price point if it were more expensive I would go back to doing things myself"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI as limited in replicating human therapeutic connection",
+      "label_negative": "AI as capable of genuine therapeutic relationship",
+      "bipolarity_complete": true,
+      "grounding_span": "there is a deep spiritual component to good therapy and I don't believe AI can replicate that"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional efficiency and time management",
+      "grounding_span": "it still saves a lot of time"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Authentic therapeutic relationship and human connection",
+      "grounding_span": "in therapy there must be a connection and AI is not really making those connections"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Personal style and professional identity",
+      "grounding_span": "make me sound like a good therapist"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Work-life balance and affordability",
+      "grounding_span": "AI has really been essential for my life; mainly because it is the right price point"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI for treatment planning",
+      "valence": "positive",
+      "grounding_span": "I was very satisfied with an interaction with AI where I had it develop a client's treatment plan"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Resistance to AI in live therapy sessions",
+      "valence": "negative",
+      "grounding_span": "I rely solely on myself"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Appreciation for AI's time-saving and adaptive qualities",
+      "valence": "positive",
+      "grounding_span": "it still saves a lot of time"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Skepticism about AI's ability to replicate human therapy",
+      "valence": "negative",
+      "grounding_span": "AI might sometimes be able to offer AI-based therapy but people quickly find that AI is a little too people-pleasy"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through back-and-forth collaboration",
+      "grounding_span": "it very hands on and some back and forth with each interaction"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain boundary setting between administrative and clinical tasks",
+      "grounding_span": "I truly think of it as an assistant for my practice"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

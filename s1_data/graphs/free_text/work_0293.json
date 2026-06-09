@@ -1,0 +1,162 @@
+{
+  "transcript_id": "work_0293",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as text-to-speech narration tool",
+      "label_negative": "Manual voice recording and editing",
+      "bipolarity_complete": true,
+      "grounding_span": "generating text-to-speech to use as narration"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as synthesis and concision aid",
+      "label_negative": "AI writing independently at lower quality",
+      "bipolarity_complete": true,
+      "grounding_span": "help me synthesize information from multiple sources, or to help me make a long paragraph more concise"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as personal editing and brainstorming assistant",
+      "label_negative": "AI writing instructional content independently",
+      "bipolarity_complete": true,
+      "grounding_span": "treat AI like a personal assistant who looks over something and gives me feedback"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI tone alignment with instructional voice",
+      "label_negative": "AI marketing or juvenile tone",
+      "bipolarity_complete": true,
+      "grounding_span": "the 'voice' that the AI writes with comes across more as a marketing or salesperson rather than an instructor"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as research assistant for task analysis",
+      "label_negative": "AI doing all instructional design work",
+      "bipolarity_complete": true,
+      "grounding_span": "use AI to help me analyze large sets of documentation to help me do instructional and task analysis"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Production efficiency and reduced frustration",
+      "grounding_span": "reduce my production time by about half, which in turn helps reduce my own boredom and frustration"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Instructional quality and authentic voice",
+      "grounding_span": "the 'voice' that the AI writes with comes across more as a marketing or salesperson rather than an instructor"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional competence and skill focus",
+      "grounding_span": "focus on the more high value tasks that I use at work"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI text-to-speech adoption",
+      "valence": "positive",
+      "grounding_span": "Text-to-speech has allowed me to reduce my production time by about half"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI's marketing tone in instructional writing",
+      "valence": "negative",
+      "grounding_span": "It came across as a bit too juvenile, or like it was written by someone who wrote a cheesy Marvel movie"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Cautious trust in AI as support tool, not replacement",
+      "valence": "ambivalent",
+      "grounding_span": "I don't trust AI to write anything for me at my same level of quality, but I will use it as a tool"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Systematic workflow decomposition — breaks tasks into sub-steps with AI",
+      "grounding_span": "I'll feed the handbook to the AI and ask it to give me a summary of all the major topics... then I'll have the AI model highlight the main tasks"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Quality-driven selective adoption — adopts AI only when quality meets threshold",
+      "grounding_span": "I was slow to adopt it because, historically, the quality was never good enough compared to my own voice"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

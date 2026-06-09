@@ -1,0 +1,174 @@
+{
+  "transcript_id": "work_0306",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as initial framework provider for weaker areas",
+      "label_negative": "AI as sole decision-maker",
+      "bipolarity_complete": true,
+      "grounding_span": "AI gives me a framework, and I go back to make sure all details are correct"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability and factuality",
+      "label_negative": "AI unreliability requiring verification",
+      "bipolarity_complete": true,
+      "grounding_span": "I always double-check the information provided by the AI"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as writing and formatting assistant for menus",
+      "label_negative": "AI inability to handle client-specific nuances",
+      "bipolarity_complete": true,
+      "grounding_span": "I would not rely on the AI to make the menu from scratch"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI usefulness for unfamiliar cuisines",
+      "label_negative": "AI useless for routine tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I was completely unfamiliar with the cuisine, but the AI really helped me out"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as skill development enabler",
+      "label_negative": "AI as crutch that diminishes skills",
+      "bipolarity_complete": true,
+      "grounding_span": "I often use the AI to sharpen up the kitchen skills that I already know"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Professional accuracy and reliability",
+      "grounding_span": "It would be much worse if an allergen was not properly labeled"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Culinary creativity and learning",
+      "grounding_span": "I ended up making Argentinian barbecue, all thanks to the AI's suggestion"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "I would have to inform the AI on too much data for it to help me with ordering, so it is easier to do it myself"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Distrust of AI for precise recipe formulation",
+      "valence": "positive",
+      "grounding_span": "I ended up making Argentinian barbecue, all thanks to the AI's suggestion"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Cautious trust with verification",
+      "valence": "ambivalent",
+      "grounding_span": "I always double-check the information provided by the AI"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "positive",
+      "grounding_span": "I'm hoping that AI will soon be able to take in every factor necessary to make a menu"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Preference for manual ordering despite AI",
+      "valence": "negative",
+      "grounding_span": "I don't think the AI will develop enough to handle food ordering beyond organization"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Systematic iterative verification — works independently first, then checks with AI",
+      "grounding_span": "I always double-check the information provided by the AI"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-specific delegation based on task nature",
+      "grounding_span": "I would not rely on the AI to make the menu from scratch"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

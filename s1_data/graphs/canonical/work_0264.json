@@ -1,0 +1,220 @@
+{
+  "transcript_id": "work_0264",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as clinical information source",
+      "label_negative": "AI as source of unreliable or inaccurate information",
+      "bipolarity_complete": true,
+      "grounding_span": "i mostly use it to find reliable sources"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as ideation partner",
+      "label_negative": "AI as independent task executor",
+      "bipolarity_complete": true,
+      "grounding_span": "i would say more collaborative, I use OpenEvidence and ask it questions as if I'm talking to a senior resident"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI use for targeted study after mastering basics",
+      "label_negative": "Manual inefficient study methods",
+      "bipolarity_complete": true,
+      "grounding_span": "it can also save time by pulling out high yield information from those long documents"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI trustworthiness and verification",
+      "label_negative": "AI trustworthiness before error detection",
+      "bipolarity_complete": true,
+      "grounding_span": "when i call it out it responds well and doesn't double down, but then it makes me trust it less"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as clinical information source",
+      "label_negative": "AI as source of clinical uncertainty",
+      "bipolarity_complete": true,
+      "grounding_span": "it makes me feel more confident that what i'm saying makes medical sense"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "Human diagnostic skill vs AI",
+      "label_negative": "AI as threat to clinical skills",
+      "bipolarity_complete": true,
+      "grounding_span": "hopefully by then AI is more established and i would be able to use it as a hipaa compliant scribe"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI as democratizing tool for independent creators",
+      "label_negative": "AI as unreliable substitute for established resources",
+      "bipolarity_complete": true,
+      "grounding_span": "if the questions it's writing end up being representative and helpful I think that could really save students a ton of money"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Medical knowledge and accuracy",
+      "grounding_span": "find reliable sources"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Skill development and learning",
+      "grounding_span": "ask it questions as if I'm talking to a senior resident"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "save time by pulling out high yield information"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Clinical confidence",
+      "grounding_span": "makes me feel more confident"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Patient-centered care",
+      "grounding_span": "I would have way more time to spend with patients"
+    },
+    {
+      "id": "n13",
+      "type": "Value",
+      "label": "Financial accessibility",
+      "grounding_span": "save students a ton of money"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Positive reliance on AI for source finding",
+      "valence": "positive",
+      "grounding_span": "i mostly use it to find reliable sources"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Preference for collaborative interaction",
+      "valence": "positive",
+      "grounding_span": "i would say more collaborative"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Distrust of AI reliability",
+      "valence": "negative",
+      "grounding_span": "it makes me trust it less and wonder about all the other things it told me and it can be very frustrating"
+    },
+    {
+      "id": "n17",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "positive",
+      "grounding_span": "hopefully by then AI is more established and i would be able to use it as a hipaa compliant scribe"
+    },
+    {
+      "id": "n18",
+      "type": "Stance",
+      "label": "Optimism about future AI use in design",
+      "valence": "mixed",
+      "grounding_span": "if the questions it's writing end up being representative and helpful I think that could really save students a ton of money"
+    },
+    {
+      "id": "n19",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative dialogue — engages AI in back-and-forth discussion",
+      "grounding_span": "ask it questions as if I'm talking to a senior resident"
+    },
+    {
+      "id": "n20",
+      "type": "CognitiveStyleMarker",
+      "label": "Verification-oriented — cross-checks AI outputs against other sources",
+      "grounding_span": "sometimes i catch it making mistakes and when i call it out"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n13",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n14",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n17",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n18",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n19",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n20",
+      "relation": "MODULATED_BY"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

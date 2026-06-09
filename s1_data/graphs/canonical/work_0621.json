@@ -1,0 +1,181 @@
+{
+  "transcript_id": "work_0621",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as brainstorming and idea generator",
+      "label_negative": "AI as unreliable or incomplete idea generator",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI to help me fleshout ideas for research projects"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as coding assistant for unfamiliar languages",
+      "label_negative": "AI as error-prone code writer requiring extensive troubleshooting",
+      "bipolarity_complete": true,
+      "grounding_span": "I have had it assist me in writting R scripts because I don't actually know R"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Personal validation and ownership of research ideas",
+      "label_negative": "Delegating validation and fine-tuning to AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I do the validation and fine tuning of project aims on my own"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Reading papers for deep comprehension and memory",
+      "label_negative": "Using AI to summarize papers at the cost of personal retention",
+      "bipolarity_complete": true,
+      "grounding_span": "I find that I don't commit other peoples research into my memory unless I read the papers myself"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Skill preservation through personal practice",
+      "label_negative": "Skill atrophy from over-reliance on AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I feel that I would start to lose the skills needed to read that type of literature"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Research efficiency",
+      "grounding_span": "it will allow me to handle a larger amount of data or projects with greater ease"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Personal intellectual ownership",
+      "grounding_span": "I want to make sure that any ideas that I develop are largely my own"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Satisfaction with AI as delegated employee",
+      "valence": "positive",
+      "grounding_span": "once the script is validated and working it feels pretty satisfying to have the final product"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Frustration with AI iteration management",
+      "valence": "negative",
+      "grounding_span": "it never gets it right the first time"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Deliberate resistance to AI in reading and validation tasks",
+      "valence": "negative",
+      "grounding_span": "I do the validation and fine tuning of project aims on my own"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative prompt refinement",
+      "grounding_span": "I take into account the response and fine tune my next prompt input"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Deliberate skill preservation through manual practice",
+      "grounding_span": "If I already have the skill I tend to utilize it rather than have AI do the task for me"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,181 @@
+{
+  "transcript_id": "creativity_0118",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as utilitarian tool for transcription and editing",
+      "label_negative": "AI as intrusive or unnecessary in transcription",
+      "bipolarity_complete": false,
+      "grounding_span": "strictly utilitarian"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as curiosity-driven collaborator for story and audio",
+      "label_negative": "AI as rigid or uncreative partner",
+      "bipolarity_complete": false,
+      "grounding_span": "more of an exercise in curiosity"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as enhancer of creative confidence and skill",
+      "label_negative": "AI as underminer of confidence or skill",
+      "bipolarity_complete": false,
+      "grounding_span": "made me feel elevated, as though my expertise had increased, and with it my confidence"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as bridge between ideas",
+      "label_negative": "AI as obstacle to creative flow",
+      "bipolarity_complete": false,
+      "grounding_span": "helps me better achieve the vision when I can't quite find the bridge from one idea to another"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI capacity for handling large data packages",
+      "label_negative": "AI limitation with large data packages",
+      "bipolarity_complete": true,
+      "grounding_span": "it will come to work more coherently with larger packages of data"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative efficiency and productivity",
+      "grounding_span": "AI has helped cut down this process significantly"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Creative confidence and mastery",
+      "grounding_span": "made me feel elevated, as though my expertise had increased, and with it my confidence"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Creative coherence and flow",
+      "grounding_span": "helps me better achieve the vision when I can't quite find the bridge from one idea to another"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Positive utilitarian satisfaction with AI for transcription",
+      "valence": "positive",
+      "grounding_span": "AI has helped cut down this process significantly"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Positive curiosity-driven engagement with AI for story/audio",
+      "valence": "positive",
+      "grounding_span": "more of an exercise in curiosity"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Positive confidence boost from AI assistance",
+      "valence": "positive",
+      "grounding_span": "made me feel elevated, as though my expertise had increased, and with it my confidence"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "No concern about AI in creative field",
+      "valence": "positive",
+      "grounding_span": "I have no concerns about AI. I am not worried."
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Frustration with AI's current data handling limits",
+      "valence": "negative",
+      "grounding_span": "the model always fails to combine large numbers of these sections into a single piece"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Piecemeal and flexible approach to creative tasks",
+      "grounding_span": "piecemealing sections of text together as they cross my mind"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Curiosity-driven exploration when at baseline performance",
+      "grounding_span": "I am usually already at a baseline performance and am just seeking to tighten it up"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

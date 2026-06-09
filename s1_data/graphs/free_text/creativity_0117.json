@@ -1,0 +1,217 @@
+{
+  "transcript_id": "creativity_0117",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as business utility for SEO and listing descriptions",
+      "label_negative": "AI as inadequate for creative personality",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI to facilitate my business. I use AI for SEO and writing listing descriptions."
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI-generated text quality",
+      "label_negative": "AI-generated text as formulaic and lacking personality",
+      "bipolarity_complete": true,
+      "grounding_span": "They usually sound very formulaic, like you can tell they were written by a robot."
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as brainstorming partner for concepts",
+      "label_negative": "AI as surface-level idea generator",
+      "bipolarity_complete": true,
+      "grounding_span": "I've spoken with a chatbot before to brainstorm concepts"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI in art creation",
+      "label_negative": "Human-only art creation",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't use AI to create art."
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI's role in the art community",
+      "label_negative": "AI as harmful to artists",
+      "bipolarity_complete": true,
+      "grounding_span": "it feels like AI art only hurts artists"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI collaboration depth",
+      "label_negative": "AI collaboration as shallow",
+      "bipolarity_complete": true,
+      "grounding_span": "it wasn't very back-and-forth. I felt like it was only giving me surface-level ideas"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Business efficiency and sales",
+      "grounding_span": "help me come up with tags for my Etsy listings"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Authentic creative expression",
+      "grounding_span": "my art has personality"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Community trust and artistic integrity",
+      "grounding_span": "I'd be letting down my community by using AI in my art process"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Novelty and creative insight",
+      "grounding_span": "it actually was coming up with new ideas"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Positive stance toward AI for business tasks",
+      "valence": "positive",
+      "grounding_span": "I use AI to facilitate my business"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Negative stance toward AI-generated text quality",
+      "valence": "negative",
+      "grounding_span": "They usually sound very formulaic"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Mixed feelings about AI brainstorming for art",
+      "valence": "mixed",
+      "grounding_span": "I have really mixed feelings about letting AI generate art itself"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Negative stance toward AI in art creation",
+      "valence": "negative",
+      "grounding_span": "I don't use AI to create art."
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Negative stance toward AI's impact on art community",
+      "valence": "negative",
+      "grounding_span": "it feels like AI art only hurts artists"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Positive stance toward recent AI collaboration",
+      "valence": "positive",
+      "grounding_span": "it definitely felt more collaborative and insightful"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-specific boundary setting — separates business from creative use",
+      "grounding_span": "I don't use AI to create art."
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement — edits AI outputs to add personality",
+      "grounding_span": "I usually will copy & paste the whole response and edit it to sound more personable"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n4",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n3",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

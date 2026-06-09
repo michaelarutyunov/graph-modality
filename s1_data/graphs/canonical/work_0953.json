@@ -1,0 +1,174 @@
+{
+  "transcript_id": "work_0953",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI verifiability and accuracy",
+      "label_negative": "AI for unverifiable or high-stakes tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I used it to identify some plants to confirm they were poisonous to the horses"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI trustworthiness and verification",
+      "label_negative": "AI trained on unreviewed or biased data",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is only as good as the information it is trained on"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as validation-seeking tool",
+      "label_negative": "AI as objective information provider",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is also to willing to please users, so you can convince them eventually to agree with anything"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI use in education",
+      "label_negative": "AI use that bypasses learning and critical thinking",
+      "bipolarity_complete": true,
+      "grounding_span": "Kids need to get comfortable with not knowing the answer and just try some thing instead"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Hands-on problem-solving with animals",
+      "label_negative": "AI-mediated or automated problem-solving",
+      "bipolarity_complete": true,
+      "grounding_span": "when working with animals you have to problem solve because you really don't have any other option"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Safety and well-being of animals",
+      "grounding_span": "confirm they were poisonous to the horses and definitely should be removed"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Epistemic integrity and critical thinking",
+      "grounding_span": "I need to keep my research skills up and refuse to allow it to make me lazy"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Personal competence and skill development",
+      "grounding_span": "they learn nothing because they never think for themselves and problem solve through writing their code"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Skepticism and caution toward AI",
+      "valence": "ambivalent",
+      "grounding_span": "I am very skeptical of AI (Actually I love the technology, I just dislike how it is being used the majority of the time)"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Cautious trust with verification",
+      "valence": "positive",
+      "grounding_span": "I do always make sure to re look up the plant independently of the AI to compare and confirm on my own"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Caution toward AI in high-risk tasks",
+      "valence": "negative",
+      "grounding_span": "he'd get it to agree that not feeding his horses would make them go faster"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with student AI misuse",
+      "valence": "negative",
+      "grounding_span": "they learn nothing because they never think for themselves and problem solve through writing their code"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Systematic verification through cross-referencing",
+      "grounding_span": "I do always make sure to re look up the plant independently of the AI to compare and confirm on my own"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative trial-and-error approach",
+      "grounding_span": "we are temporarily trying to make it work by removing sand that's too deep and some times I remove from the wrong place or make ridges and set us back a little bit"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

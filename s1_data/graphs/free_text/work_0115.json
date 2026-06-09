@@ -1,0 +1,157 @@
+{
+  "transcript_id": "work_0115",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as brainstorming partner for idea generation",
+      "label_negative": "Sole reliance on AI for ideas without human refinement",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI to help find a starting point"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as writing revision tool for polishing drafts",
+      "label_negative": "AI writing original content in place of human voice",
+      "bipolarity_complete": true,
+      "grounding_span": "AI does a pretty good job of cleaning that stuff up"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Preservation of personal writing voice and style",
+      "label_negative": "AI overriding or diluting personal writing voice",
+      "bipolarity_complete": true,
+      "grounding_span": "I've developed a voice that I quite like"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as tone moderator for professional communication",
+      "label_negative": "AI sanitizing authentic emotion in communication",
+      "bipolarity_complete": true,
+      "grounding_span": "I put those initial angry drafts into AI and ask for the message to be preserved"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Maintenance of human social and relational intelligence",
+      "label_negative": "Delegation of social decisions to AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't want to forfeit social/relational intelligence"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative autonomy and personal expression",
+      "grounding_span": "I've developed a voice that I quite like"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional efficiency and time savings",
+      "grounding_span": "saving me hours of work"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Authentic interpersonal connection",
+      "grounding_span": "I don't want to forfeit social/relational intelligence"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Overall satisfaction with AI for efficiency gains",
+      "valence": "positive",
+      "grounding_span": "On the balance, I have to say I'm very satisfied with AI"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI's failure to preserve voice",
+      "valence": "negative",
+      "grounding_span": "I get frustrated and say 'NO EM DASHES EVER'"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Deliberate resistance to using AI for social interactions",
+      "valence": "negative",
+      "grounding_span": "I usually avoid doing so"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through multiple AI interactions",
+      "grounding_span": "It usually takes a few iterations of generating and refining ideas"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Deliberate boundary-setting between AI and human domains",
+      "grounding_span": "I still do most of my own writing and drafting"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

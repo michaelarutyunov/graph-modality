@@ -1,0 +1,179 @@
+{
+  "transcript_id": "work_0815",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as supplement to creative process",
+      "label_negative": "AI as mere efficiency tool",
+      "bipolarity_complete": true,
+      "grounding_span": "It has opened up a lot of new creative opportunities"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as efficiency tool",
+      "label_negative": "Manual methods faster than AI",
+      "bipolarity_complete": true,
+      "grounding_span": "more often generative AI is faster than me"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI failure on seemingly simple tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't understand why generative AI can't do a better job removing glare from glasses"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI for administrative tasks",
+      "label_negative": "Manual administrative work",
+      "bipolarity_complete": true,
+      "grounding_span": "I just used AI to summarize all of our emails"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as threat to photographer identity",
+      "label_negative": "AI as enhancer of photographer's unique value",
+      "bipolarity_complete": true,
+      "grounding_span": "Photographers tend to be afraid of AI because they worry it will take their jobs"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative expression and quality",
+      "grounding_span": "the soul I put into my work"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "That was such a time saver!"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional competence and client satisfaction",
+      "grounding_span": "the love and care I show to my clients"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Resistance to AI in creative work",
+      "valence": "positive",
+      "grounding_span": "It has opened up a lot of new creative opportunities"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI limitations",
+      "valence": "negative",
+      "grounding_span": "I don't understand why generative AI can't do a better job removing glare from glasses"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "That was such a time saver!"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Confidence in irreplaceable human element of sales",
+      "valence": "positive",
+      "grounding_span": "I don't feel worried that AI will be able to replicate the soul I put into my work"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative iterative refinement — works back and forth with AI",
+      "grounding_span": "I do typically go back and forth with AI refining things"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Selective delegation based on task nature",
+      "grounding_span": "The only time I would not use AI is if I could do it faster myself"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

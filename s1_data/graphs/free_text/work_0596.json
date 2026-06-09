@@ -1,0 +1,159 @@
+{
+  "transcript_id": "work_0596",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as professional writing assistant",
+      "label_negative": "Manual professional writing without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "rewrite the text to sound more professional"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability for visual/spatial tasks",
+      "label_negative": "AI unreliability for visual/spatial tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "it just kept getting the teeth wrongly labelled"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as time-saving tool for routine tasks",
+      "label_negative": "AI as source of frustration and wasted time",
+      "bipolarity_complete": true,
+      "grounding_span": "help me with the aspects of my job that are time consuming"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Back-and-forth collaborative interaction with AI",
+      "label_negative": "Independent hands-off AI delegation",
+      "bipolarity_complete": true,
+      "grounding_span": "I normally go back and forth throughout the task"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Realistic expectations of AI capabilities",
+      "label_negative": "Over-reliance on AI without critical assessment",
+      "bipolarity_complete": true,
+      "grounding_span": "I try to have a realistic approach with the AI tools"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Professional competence and quality",
+      "grounding_span": "rewrite the text to sound more professional"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "help me with the aspects of my job that are time consuming"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Personal skill retention",
+      "grounding_span": "I shouldn't lose the skills I already have"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for professional writing",
+      "valence": "positive",
+      "grounding_span": "I used most of the other work it gave me"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI for visual/spatial tasks",
+      "valence": "negative",
+      "grounding_span": "it just kept getting the teeth wrongly labelled"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Optimistic outlook on AI's future role",
+      "valence": "positive",
+      "grounding_span": "I see it evolving well and it becoming a really super tool"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Balanced realistic approach to AI use",
+      "valence": "ambivalent",
+      "grounding_span": "I try to have a realistic approach with the AI tools"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Experimental trial-and-error approach to task delegation",
+      "grounding_span": "I will always give any task a go with AI to see if it works well"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative back-and-forth refinement",
+      "grounding_span": "I normally go back and forth throughout the task"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

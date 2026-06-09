@@ -1,0 +1,184 @@
+{
+  "transcript_id": "work_0581",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as decision-making support",
+      "label_negative": "AI misunderstanding physical situations",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "use AI to help make decisions about what products to use, what kind of repairs would be best"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as mentor for learning",
+      "label_negative": "AI as inadequate replacement for human expertise",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "don't have a more experienced guy to tell me what to do"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI advice specificity and accuracy",
+      "label_negative": "AI advice overriding personal experience",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "If it suggests something I know from experience isn't a good strategy, I'm going to go with my past experience"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as skill development enabler",
+      "label_negative": "AI as crutch hindering personal knowledge growth",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "my primary drive is always learning and remembering and expanding my own personal offline knowledge"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI interaction modality (phone-based)",
+      "label_negative": "Hands-free AI interaction",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I would like an easier way to interact with the AI instead of having to use my phone"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Authentic skill and craftsmanship",
+      "grounding_span": "I love this kind of work as a kind of art form, or like as an ever developing skillset"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency in problem-solving",
+      "grounding_span": "lowered her heat bill about 35%, which was far better than I expected"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Autonomy and self-reliance",
+      "grounding_span": "I want to just know and understand what to do on my own"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "They're actually extremely helpful"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Resistance to AI for personal communication",
+      "valence": "negative",
+      "grounding_span": "Frustration points would be getting the AI to understand exactly what I'm working with"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "positive",
+      "grounding_span": "I am sort of an AI optimist (at least as far as capabilities go)"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Disappointment with GPT-5",
+      "valence": "negative",
+      "grounding_span": "I was pretty disappointed with the latest GPT (5)"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative, step-by-step planning for novel tasks",
+      "grounding_span": "I'm going to sit down with the AI and go through everything I can think of, every issue that might come up, step by step before I start"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Systematic filtering of AI suggestions through contextual factors",
+      "grounding_span": "If it suggests something I know from experience isn't a good strategy, I'm going to go with my past experience"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

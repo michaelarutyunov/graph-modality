@@ -1,0 +1,136 @@
+{
+  "transcript_id": "work_0489",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as final solution provider",
+      "bipolarity_complete": true,
+      "grounding_span": "its analysis of the challenge is more useful to me than the actual drill suggestion"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as professional development tool",
+      "label_negative": "AI as threat to teacher skill development",
+      "bipolarity_complete": true,
+      "grounding_span": "it clearly improves the skill of the teacher"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as direct student feedback provider",
+      "label_negative": "Human teacher as irreplaceable",
+      "bipolarity_complete": true,
+      "grounding_span": "once the ai can watch a student and provide good feedback directly, what is the point of a human teacher"
+    },
+    {
+      "id": "n4",
+      "type": "Value",
+      "label": "Student progress and learning",
+      "grounding_span": "helped the student make progress in that particular passage"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Teacher professional growth",
+      "grounding_span": "the teacher's skill can improve by learning new drills and analysis"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Human teacher relevance and job security",
+      "grounding_span": "what is the point of a human teacher"
+    },
+    {
+      "id": "n7",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "its analysis of the challenge is more useful to me than the actual drill suggestion"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Cautious optimism about AI in education",
+      "valence": "positive",
+      "grounding_span": "it clearly improves the skill of the teacher"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Skepticism about AI replacing teachers",
+      "valence": "negative",
+      "grounding_span": "what is the point of a human teacher"
+    },
+    {
+      "id": "n10",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement with limited back-and-forth",
+      "grounding_span": "it takes several iterations"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Analytical decomposition of musical challenges",
+      "grounding_span": "explain the challenge with that passage b) what skills one requires and c) what kind of drills"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n8",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n10",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n10",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

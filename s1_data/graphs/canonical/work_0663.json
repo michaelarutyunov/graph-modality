@@ -1,0 +1,182 @@
+{
+  "transcript_id": "work_0663",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as style emulator with clear examples",
+      "label_negative": "AI defaulting to its own generic tone",
+      "bipolarity_complete": true,
+      "grounding_span": "It's much easier for me to set the style and tone myself ... and then asking the AI to match to that style"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as autonomous delegated executor",
+      "bipolarity_complete": true,
+      "grounding_span": "I would always collaborate ... incrementally working back and forth WITH AI on something and checking at each stage"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI trustworthiness and verification",
+      "label_negative": "AI hallucination and going off the rails",
+      "bipolarity_complete": true,
+      "grounding_span": "they are often hallucinating or going 'off the rails'"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Human experience for high-level design",
+      "label_negative": "AI capable of high-level design",
+      "bipolarity_complete": true,
+      "grounding_span": "you need to have been a human being, with experience in talking to human agents on the phone, to be able to replicate that kind of user experience"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI use sanctioned by workplace",
+      "label_negative": "Workplace uncertainty about AI use",
+      "bipolarity_complete": true,
+      "grounding_span": "to be given the greenlight on this has stopped me from worrying if it was what I should be doing"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI leading to programmer obsolescence",
+      "label_negative": "AI leading to job obsolescence",
+      "bipolarity_complete": true,
+      "grounding_span": "there will be a 'sweet spot' ... But soon after that point, there will also be no need for *me* to be doing my job anymore"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Creative control and originality",
+      "grounding_span": "I enjoy that work and also I feel like you need to have been a human being"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "increase productivity"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Personal enjoyment and satisfaction in work",
+      "grounding_span": "rediscover the pleasure in certain things in my spare time"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Preference for collaborative interaction",
+      "valence": "positive",
+      "grounding_span": "I would always collaborate"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Concern about aggressive AI rollout",
+      "valence": "negative",
+      "grounding_span": "ChatGPT kept insisting that it had solved the issue, but each time i tried it, the issue persisted"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with workplace AI encouragement",
+      "valence": "positive",
+      "grounding_span": "to be given the greenlight on this has stopped me from worrying"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Ambivalence about AI's future role",
+      "valence": "ambivalent",
+      "grounding_span": "there will be a 'sweet spot' ... But soon after that point, there will also be no need for *me* to be doing my job anymore"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative verification and follow-up",
+      "grounding_span": "incrementally working back and forth WITH AI on something and checking at each stage"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Preference for rewriting AI suggestions to maintain personal style",
+      "grounding_span": "write one or two examples of my own first, and then ask the AI to replicate that tone and style"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

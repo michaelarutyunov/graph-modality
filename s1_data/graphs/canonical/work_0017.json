@@ -1,0 +1,157 @@
+{
+  "transcript_id": "work_0017",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI for administrative tasks",
+      "label_negative": "AI as unnecessary for tasks requiring personal touch",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI to summarize reports to client by scanning the reports"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as efficiency tool",
+      "label_negative": "AI inefficiency or time waste when no content to extract",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't need AI to search for instructions that do not exist"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Personal client communication as human domain",
+      "label_negative": "AI-mediated client communication",
+      "bipolarity_complete": true,
+      "grounding_span": "I handle drafting emails to clients on my own"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Company policy restricting AI tool use",
+      "label_negative": "Unsanctioned or risky AI use",
+      "bipolarity_complete": true,
+      "grounding_span": "It is not yet approved to be used by the firm"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI hallucination and fabrication",
+      "bipolarity_complete": true,
+      "grounding_span": "a lawyer has used AI and hallucinated cases in their references"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "streamline tasks and due dates by extracting the information from reports"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Human connection and relationship",
+      "grounding_span": "it gives a personal touch"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional integrity and ethical practice",
+      "grounding_span": "our firm has been skeptical and slow to integrate AI"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "I have felt satisfied using AI at work when it has successfully helped me streamline tasks"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Resistance to AI in client communication",
+      "valence": "negative",
+      "grounding_span": "I don't feel the need to incorporate AI in that aspect of my job"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Optimism about future AI integration",
+      "valence": "mixed",
+      "grounding_span": "Once our firm is more comfortable using AI, there will be opportunities to streamline tasks"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Methodical experimentation and evaluation of tool capabilities",
+      "grounding_span": "I make sure to skim the report first before using AI to waste any time"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based task allocation — creative vs. mundane",
+      "grounding_span": "I handle drafting emails to clients on my own"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

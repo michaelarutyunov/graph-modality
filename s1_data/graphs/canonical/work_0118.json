@@ -1,0 +1,198 @@
+{
+  "transcript_id": "work_0118",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as autonomous task completer",
+      "bipolarity_complete": true,
+      "grounding_span": "I'm more likely to collaborate with AI throughout a task rather than delegating complete tasks"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as tool for lesson planning",
+      "label_negative": "AI as full lesson plan creator",
+      "bipolarity_complete": true,
+      "grounding_span": "I create the lesson plan myself, using AI to help me answer specific questions I have in the process"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as conversational partner for reflection",
+      "label_negative": "Unprocessed stream-of-consciousness reflection",
+      "bipolarity_complete": true,
+      "grounding_span": "It honestly made me understand my own thoughts and feelings better after seeing everything re-written into clear, logical sentences"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as tool for lesson planning",
+      "label_negative": "Traditional trial-and-error learning without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "AI has been a really valuable resource in helping me 'learn' to be a teacher"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Personal engagement with student problem-solving process",
+      "label_negative": "Delegating problem-solving to AI",
+      "bipolarity_complete": true,
+      "grounding_span": "it's important for me to go through the process of doing the problems myself so that I can understand exactly the thought process my students are going through"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as quick reference for literacy knowledge",
+      "label_negative": "AI ignorance risking job security",
+      "bipolarity_complete": true,
+      "grounding_span": "I try to use AI in my daily life just so that I feel comfortable using it and am 'AI-literate' for the sake of employability"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Human connection and empathy",
+      "grounding_span": "understand exactly the thought process my students are going through, common mistakes they might make, patterns they should recognize"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Business process clarity and self-awareness",
+      "grounding_span": "It honestly made me understand my own thoughts and feelings better"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Professional growth and skill maintenance",
+      "grounding_span": "AI has been a really valuable resource in helping me 'learn' to be a teacher"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Job security and skill relevance",
+      "grounding_span": "AI-literate for the sake of employability"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Resistance to AI for reflective tasks",
+      "valence": "positive",
+      "grounding_span": "I was very satisfied with being able to use AI in this way"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Preference for personal control over lesson planning and problem-solving",
+      "valence": "negative",
+      "grounding_span": "I prefer to handle creating my lesson plans myself, even though AI could do it"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Openness to increasing AI use in future",
+      "valence": "positive",
+      "grounding_span": "I can see my use of AI at work expanding in the future"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Worry about AI's negative impact on jobs",
+      "valence": "ambivalent",
+      "grounding_span": "I don't give it much active thought"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative back-and-forth questioning",
+      "grounding_span": "I usually ask AI one-off questions as I'm working through a task"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Process-oriented engagement — values the doing over the outcome",
+      "grounding_span": "it's important for me to go through the process of doing the problems myself"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

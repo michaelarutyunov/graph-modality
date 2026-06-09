@@ -1,0 +1,144 @@
+{
+  "transcript_id": "work_0183",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as diagnostic consultant for plant health",
+      "label_negative": "AI as unreliable or unhelpful for plant health",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is better at asking questions to pinpoint exactly what is happening and what I should do for the plant"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as creative decorator for garden aesthetics",
+      "label_negative": "Human creative vision for garden aesthetics",
+      "bipolarity_complete": true,
+      "grounding_span": "I haven't found AI's decorative abilities to be superior to mine quite yet, I value my own opinion more"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as learning aid for novice gardeners",
+      "label_negative": "AI as unnecessary for experienced gardeners",
+      "bipolarity_complete": true,
+      "grounding_span": "when I was first starting to learn how to garden I did not have much experience so asking AI these questions certainly made me think of factors I otherwise wouldn't"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as learning aid for novice gardeners",
+      "label_negative": "AI as primary decision-maker for experienced gardeners",
+      "bipolarity_complete": true,
+      "grounding_span": "it just definitely helps to receive a second opinion"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Plant health and survival",
+      "grounding_span": "messing it up means the plant will likely be dead or too far gone to save"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Personal fulfillment through creative engagement",
+      "grounding_span": "I take pride in having a vision and then making that vision come to life"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Skill development and learning",
+      "grounding_span": "I am even more certain that I will be able to maintain this skill and even potentially further my skill and expertise"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Satisfaction with AI diagnostic help",
+      "valence": "positive",
+      "grounding_span": "After I sliced this root off, the plant returned to draining and full health"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Resistance to AI in creative work",
+      "valence": "negative",
+      "grounding_span": "I value my own opinion more"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Confidence in AI as a key skill",
+      "valence": "positive",
+      "grounding_span": "I am even more certain that I will be able to maintain this skill"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Systematic diagnostic questioning",
+      "grounding_span": "AI will ask follow up questions"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Consultation-based interaction pattern",
+      "grounding_span": "I present the issue and symptoms, the AI eventually gives me an educated answer, and then I go ahead and implement"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

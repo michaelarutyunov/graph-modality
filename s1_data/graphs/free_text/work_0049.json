@@ -1,0 +1,190 @@
+{
+  "transcript_id": "work_0049",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as conversational search engine to counter bias",
+      "label_negative": "Reliance on prior experience leading to bias",
+      "bipolarity_complete": true,
+      "grounding_span": "I can ask for sources from interesting ideas and gather insights that I may have overlooked due to prior experience with projects providing a source of bias"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for experimental idea generation",
+      "label_negative": "Self-generated ideas limited by bias",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI for experimental idea generation"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as collaborative back-and-forth partner",
+      "label_negative": "AI as independent one-shot tool",
+      "bipolarity_complete": true,
+      "grounding_span": "Most likely back-and-forth. Especially for idea generation"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI reliability for document generation",
+      "label_negative": "AI unreliability for document generation",
+      "bipolarity_complete": true,
+      "grounding_span": "AI hasn't proven to be successful in doing this for me yet"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI for novel parameter discovery",
+      "label_negative": "Sticking to well-known parameters",
+      "bipolarity_complete": true,
+      "grounding_span": "I used AI to help me figure out a novel parameter that I could use to elicit a specific response"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI for in-lab automation and data management",
+      "label_negative": "Human doing routine operational tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "AI helping with in-lab automation, document generation (basic), and data management"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Scientific discovery and breakthrough",
+      "grounding_span": "The result was a record-setting output for my specific project"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "AI could make our lives easier and more efficient"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Intellectual growth and skill development",
+      "grounding_span": "I always try to see the future and stay ahead"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for novel parameter discovery",
+      "valence": "positive",
+      "grounding_span": "The result was a record-setting output for my specific project that was actually featured in my promotion paperwork"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI for document generation",
+      "valence": "negative",
+      "grounding_span": "I worked for 6 hours straight one day working on a prompt to get the AI to output only one section of a document. I never got the AI to output my desired format or data visualizations"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Optimism about AI's future role in automation",
+      "valence": "positive",
+      "grounding_span": "I believe AI will have the ability to streamline our work in a way that gives us time to use our brains for the theoretical knowledge"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Proactive skill acquisition — anticipates future technological needs",
+      "grounding_span": "I always try to see the future (so to speak) and stay ahead"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative validation — uses follow-up conversations to vet AI suggestions",
+      "grounding_span": "I can follow this up with a conversation with the AI about that specific parameter to gather further insights and collect sources"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

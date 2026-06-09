@@ -1,0 +1,207 @@
+{
+  "transcript_id": "work_0934",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as tone-checking communication aid",
+      "label_negative": "Unchecked blunt communication",
+      "bipolarity_complete": true,
+      "grounding_span": "I'm autistic, so I can sometimes come off as very blunt or offensive, so it helps me check that what I'm saying is not more mean than I intended"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as planning and stress management tool",
+      "label_negative": "Overwhelming task initiation without support",
+      "bipolarity_complete": true,
+      "grounding_span": "It was supremely helpful, just at helping me manage my stress and keep on top of my daily tasks"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Privacy-preserving AI use",
+      "label_negative": "Reckless AI use with personal data",
+      "bipolarity_complete": true,
+      "grounding_span": "due to us not knowing who can access it after we type it in we err on the side of caution"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI output verifiability",
+      "label_negative": "Unverifiable AI output",
+      "bipolarity_complete": true,
+      "grounding_span": "I'd like to use AI more, as long as the data we get out of it is verifiable"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI delegation based on time constraints",
+      "label_negative": "Inflexible AI use regardless of time",
+      "bipolarity_complete": true,
+      "grounding_span": "how much I have to delegate to each task determines whether I write it myself or ask for help"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as physical environment assistant",
+      "label_negative": "Manual physical environment control",
+      "bipolarity_complete": true,
+      "grounding_span": "AI assistance with things like camera control, door opening etc would be amazing"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Effective interpersonal communication",
+      "grounding_span": "helps me check that what I'm saying is not more mean than I intended"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Stress reduction and task management",
+      "grounding_span": "helping me manage my stress and keep on top of my daily tasks"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Data privacy and security",
+      "grounding_span": "due to us not knowing who can access it after we type it in we err on the side of caution"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Reliable and trustworthy information",
+      "grounding_span": "as long as the data we get out of it is verifiable"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Efficiency and productivity",
+      "grounding_span": "how much I have to delegate to each task determines whether I write it myself or ask for help"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Safety and convenience in physical environment",
+      "grounding_span": "based on cameras it could decide if we were alone or not and if it was safe to open the door"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Satisfaction with AI for tone checking",
+      "valence": "positive",
+      "grounding_span": "it helps me check that what I'm saying is not more mean than I intended"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Satisfaction with AI for planning and stress relief",
+      "valence": "positive",
+      "grounding_span": "It was supremely helpful, just at helping me manage my stress and keep on top of my daily tasks"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Caution regarding privacy",
+      "valence": "negative",
+      "grounding_span": "I've always been a bit more wary of privacy"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Desire for verifiable AI outputs",
+      "valence": "positive",
+      "grounding_span": "I'd like to use AI more, as long as the data we get out of it is verifiable"
+    },
+    {
+      "id": "n17",
+      "type": "Stance",
+      "label": "Aspirational openness to AI for physical tasks",
+      "valence": "positive",
+      "grounding_span": "AI assistance with things like camera control, door opening etc would be amazing"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Context-dependent delegation — adjusts AI use based on time and workload",
+      "grounding_span": "how much I have to delegate to each task determines whether I write it myself or ask for help"
+    },
+    {
+      "id": "n19",
+      "type": "CognitiveStyleMarker",
+      "label": "Privacy-conscious boundary setting — cautious about data sharing",
+      "grounding_span": "I've always been a bit more wary of privacy"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n13",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n17",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n5",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n19",
+      "relation": "MODULATED_BY"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

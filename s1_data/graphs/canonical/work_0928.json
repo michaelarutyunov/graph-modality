@@ -1,0 +1,174 @@
+{
+  "transcript_id": "work_0928",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as formatting and synthesizing tool",
+      "label_negative": "AI as autonomous content generator",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI everyday in small capacities. Mostly editing my writing"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for summarization and research",
+      "label_negative": "AI as unreliable for visual interpretation",
+      "bipolarity_complete": true,
+      "grounding_span": "AI does a great job summarizing and categorizing"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for data analysis",
+      "label_negative": "AI as unsuitable for nuanced product content",
+      "bipolarity_complete": true,
+      "grounding_span": "I've begun to dip my toes into using AI for data analysis"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Workplace pressure to adopt AI for efficiency",
+      "label_negative": "Relaxed individual choice in AI use",
+      "bipolarity_complete": true,
+      "grounding_span": "there's been growing pressure across departments to use it"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as complement to human-centered work",
+      "label_negative": "AI replacing core human skills",
+      "bipolarity_complete": true,
+      "grounding_span": "I continue to refine my presentation skills. I don't think AI is at a point yet where it could seamlessly facilitate and interact with customers"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Professional competence",
+      "grounding_span": "I write very technical product-specific papers"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "I'd like to also use it to help automate more rote tasks"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Personal autonomy and skill preservation",
+      "grounding_span": "I continue to refine my presentation skills"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI summaries",
+      "valence": "positive",
+      "grounding_span": "AI does a great job summarizing and categorizing"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI fabrications",
+      "valence": "negative",
+      "grounding_span": "It was not able to interpret any of the visual elements"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Openness to increasing AI use in future",
+      "valence": "ambivalent",
+      "grounding_span": "I'd like to integrate it more into other, more complex tasks"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with AI inaccuracy in content creation",
+      "valence": "negative",
+      "grounding_span": "I don't like using AI to generate new content on it's own"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement with limited back-and-forth",
+      "grounding_span": "I go back and forth. I'll make subtle tweaks"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based boundary setting — clear separation of AI-appropriate vs. human-only tasks",
+      "grounding_span": "I don't like using AI to generate new content on it's own because it doesn't have a good enough understanding of the very nuanced product"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

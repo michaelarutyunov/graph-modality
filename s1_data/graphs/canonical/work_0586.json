@@ -1,0 +1,156 @@
+{
+  "transcript_id": "work_0586",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as coding assistant",
+      "label_negative": "AI for large, complex tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I often use AI to solve small tasks, such as string manipulation, or debugging my code"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "Writing initial code independently",
+      "label_negative": "Delegating initial code writing to AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I prefer to write the starting code out myself"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI misunderstanding and forgetting instructions",
+      "bipolarity_complete": true,
+      "grounding_span": "the model does not understand my instructions, or forgets them"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as debugging assistant",
+      "label_negative": "AI as independent solution provider",
+      "bipolarity_complete": true,
+      "grounding_span": "I will give it tasks to handle independently, but often I find that there are issues with a provided solution, and need to collaborate"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as skill development enabler",
+      "label_negative": "AI as replacement for skill development",
+      "bipolarity_complete": true,
+      "grounding_span": "I like to keep it as a tool so my skills continue to grow, and not completely rely on it"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Student skill development and independence",
+      "grounding_span": "I need to know understand what the code is doing first and grow my abilities independently"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Problem-solving and debugging success",
+      "grounding_span": "It can find a small mistake in my code causing a bug"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Satisfaction with AI for debugging",
+      "valence": "positive",
+      "grounding_span": "I feel satisfied when it can find a small mistake in my code causing a bug"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Frustration with AI errors",
+      "valence": "negative",
+      "grounding_span": "I can get frustrated when I need a coding solution and the model does not understand my instructions"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Belief in AI as tool not replacement",
+      "valence": "positive",
+      "grounding_span": "I prefer to use it as a tool rather than relying on it for my work"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative iterative refinement — works back and forth with AI",
+      "grounding_span": "need to collaborate to get the result I want"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Independent foundation then AI refinement",
+      "grounding_span": "I prefer to write the starting code out myself, and then get a model to refine or debug it"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

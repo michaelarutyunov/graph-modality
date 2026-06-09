@@ -1,0 +1,169 @@
+{
+  "transcript_id": "work_0397",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as efficient literature and data processing tool",
+      "label_negative": "Manual time-consuming sifting and analysis",
+      "bipolarity_complete": true,
+      "grounding_span": "using it to find papers on a specific topic and extract key information from the papers and then link the papers so I dont have to spend my time sifting through irrelevant papers"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI hallucination and incorrect information",
+      "bipolarity_complete": true,
+      "grounding_span": "the model kept providing incorrect information or hallucinating source papers"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as tool requiring human oversight",
+      "label_negative": "AI as autonomous independent executor",
+      "bipolarity_complete": true,
+      "grounding_span": "I tend to collaborate with the AI, providing an initial prompt to direct the AI but then providing repeated adjustments"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Skill preservation through personal practice",
+      "label_negative": "Over-reliance on AI leading to skill atrophy",
+      "bipolarity_complete": true,
+      "grounding_span": "I think it is important to maintain the skills as there are times where the AI is unable to find the information you desire"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI adoption in workplace",
+      "label_negative": "Individual hesitation without peer modeling",
+      "bipolarity_complete": true,
+      "grounding_span": "observing them provide specific requests and always ask for sources has better informed me to do the same"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Research efficiency",
+      "grounding_span": "they were able to compare and filter literature and data at a greater rate than doing it manually"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Epistemic accuracy and understanding",
+      "grounding_span": "the model kept providing incorrect information or hallucinating source papers, making the information difficult to confirm and unreliable"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Skill maintenance and self-reliance",
+      "grounding_span": "it is important to not lose these skills as while they are more time consuming, they are what you will fall back on if AI fails"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Negative stance toward AI for literature search",
+      "valence": "positive",
+      "grounding_span": "I will integrate AI more into my work to better find relevant literature and perform further data analysis"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI hallucination",
+      "valence": "negative",
+      "grounding_span": "I was frustrated when I was trying to find papers referring to a specific enzyme ... the model kept providing incorrect information or hallucinating source papers"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Cautious trust requiring oversight",
+      "valence": "ambivalent",
+      "grounding_span": "I do not think it is reliable enough to run a task without oversight"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Concern about skill value erosion",
+      "valence": "positive",
+      "grounding_span": "I think it is important to maintain the skills as there are times where the AI is unable to find the information you desire"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative iterative refinement — works back and forth with AI",
+      "grounding_span": "providing an initial prompt to direct the AI but then providing repeated adjustments as new information is provided"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Verification-oriented — cross-checks AI outputs against other sources",
+      "grounding_span": "double check the output"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

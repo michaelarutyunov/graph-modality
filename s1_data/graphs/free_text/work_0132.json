@@ -1,0 +1,174 @@
+{
+  "transcript_id": "work_0132",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as efficient email writer",
+      "label_negative": "AI as unreliable email writer",
+      "bipolarity_complete": true,
+      "grounding_span": "I find AI to be very satisfying when performing tasks like writing emails because it does that very well"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as marketing plan generator",
+      "label_negative": "AI as off-course marketing plan generator",
+      "bipolarity_complete": true,
+      "grounding_span": "I have had some frustrations with AI when I tried to have it set up a marketing plan and it went completely off course"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI accuracy in accounting tasks",
+      "label_negative": "AI inaccuracy in accounting tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I have not yet developed enough trust in AI to let it take over that task"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Human oversight and verification of AI work",
+      "label_negative": "Full delegation to AI without verification",
+      "bipolarity_complete": true,
+      "grounding_span": "I still like to be somewhat in control as to what I write to the customer"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as time-saving tool for routine tasks",
+      "label_negative": "AI as time-wasting or unreliable tool",
+      "bipolarity_complete": true,
+      "grounding_span": "That saves me a lot of time which I can then spend doing more important tasks"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Accuracy and reliability in work output",
+      "grounding_span": "I am a stickler for accuracy in my accounts"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "That saves me a lot of time"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Control and oversight over work quality",
+      "grounding_span": "I still like to be somewhat in control"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for email writing",
+      "valence": "positive",
+      "grounding_span": "I find AI to be very satisfying when performing tasks like writing emails"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI for marketing plan",
+      "valence": "negative",
+      "grounding_span": "I have had some frustrations with AI when I tried to have it set up a marketing plan"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Distrust of AI for accounting tasks",
+      "valence": "negative",
+      "grounding_span": "I have not yet developed enough trust in AI to let it take over that task"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Optimism about future AI trust and delegation",
+      "valence": "positive",
+      "grounding_span": "I think, in time, I could come to trust AI more"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Verification-oriented oversight — always proofreads AI output",
+      "grounding_span": "I see myself as always proofreading the work that AI does"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Gradual trust building based on demonstrated accuracy",
+      "grounding_span": "I think, in time, I could come to trust AI more as its accuracy and understanding of my systems grows"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n4",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

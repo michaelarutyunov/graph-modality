@@ -1,0 +1,152 @@
+{
+  "transcript_id": "work_0697",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative partner in ad creation",
+      "label_negative": "AI as autonomous ad creator without human oversight",
+      "bipolarity_complete": true,
+      "grounding_span": "I prefer to collaborate with AI and correct it when it provides an ad creative which may be against any rules"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for data analysis and performance comparison",
+      "label_negative": "Human-only data analysis without AI assistance",
+      "bipolarity_complete": true,
+      "grounding_span": "it is used to analyse data on the performance of the ads it comes up with, and how they compare to ads created in-house"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for menial daily tasks (data collection)",
+      "label_negative": "Human handling of menial daily tasks for accuracy",
+      "bipolarity_complete": true,
+      "grounding_span": "Things like daily menial tasks like collecting the previous days ad spend and revenue from various sources I handle myself"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI compliance with industry regulations",
+      "label_negative": "AI ignorance of industry regulations",
+      "bipolarity_complete": true,
+      "grounding_span": "Most industries have rules and regulations which means ads can't cross certain boundaries"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as complementary tool enhancing human expertise",
+      "label_negative": "AI as replacement for human skills",
+      "bipolarity_complete": true,
+      "grounding_span": "I do not consider AI 'taking over', as I view it more complementary to skills and more of a collaboration"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Data-driven decision making",
+      "grounding_span": "the data is all that matters, we'll test every ad that we come up with and every ad that AI comes up with"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Regulatory compliance and accuracy",
+      "grounding_span": "there is a line that cannot be crossed, or certain things we cannot say"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional expertise and skill retention",
+      "grounding_span": "I have been in marketing/advertising for around 15+ years now, and have a good understanding of how companies work"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI's performance validation",
+      "valence": "positive",
+      "grounding_span": "AI outperformed human ads by a few percent but it showed the power of AI"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Openness to AI collaboration despite personal preference",
+      "valence": "mixed",
+      "grounding_span": "I do enjoy creating ads, however enjoyment doesn't factor into it as if data shows one ad works better than another, then we keep the winning ad"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Preference for human handling of sensitive financial data",
+      "valence": "negative",
+      "grounding_span": "as these figures pass through to our accounting/bookkeeping team, we prefer it to be handled by humans"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Data-driven empirical validation — testing all ads regardless of subjective opinion",
+      "grounding_span": "we'll test every ad that we come up with and every ad that AI comes up with"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative iterative refinement — correcting AI outputs based on domain knowledge",
+      "grounding_span": "I prefer to collaborate with AI and correct it when it provides an ad creative which may be against any rules"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,170 @@
+{
+  "transcript_id": "work_0212",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as creative brainstorming partner providing different perspectives",
+      "label_negative": "AI as mere tool without creative input",
+      "bipolarity_complete": true,
+      "grounding_span": "bounce ideas off of an AI helper the way I used to do it working alongside graphic artists and designers"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as research assistant for fact-checking and deeper exploration",
+      "label_negative": "AI as source of unreliable or plagiarized content",
+      "bipolarity_complete": true,
+      "grounding_span": "go back to AI to do deeper research into the term's origins"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Maintaining authorial ownership and originality",
+      "label_negative": "Copying AI output verbatim",
+      "bipolarity_complete": true,
+      "grounding_span": "I write everything in my own words. I never 'copy and paste' complete sentences"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as exploratory tool for new skills and domains",
+      "label_negative": "AI limited to familiar tasks only",
+      "bipolarity_complete": true,
+      "grounding_span": "I was able to use AI to explore ways to create a semi-interactive website"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Predictive text and formatting tools as hindrance to creative flow",
+      "label_negative": "Predictive text as helpful aid",
+      "bipolarity_complete": true,
+      "grounding_span": "I love and loathe predictive text... it gets kind of frustrating"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative inspiration and idea generation",
+      "grounding_span": "the more ideas I find myself exposed to (that aren't my own), the more creative ideas kind of reveal themselves"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Epistemic accuracy and understanding",
+      "grounding_span": "I was able to go back to AI to do deeper research into the term's origins"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Personal autonomy and creative ownership",
+      "grounding_span": "I write everything in my own words"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Continuous learning and skill expansion",
+      "grounding_span": "I like to be aware. I take pride in trying to keep up with culture and trying new things"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Enthusiasm for AI as creative collaborator",
+      "valence": "positive",
+      "grounding_span": "I enjoy 'shooting the breeze'-style conversations, so I really enjoy the back and forth interacting with AI"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with predictive text interference",
+      "valence": "negative",
+      "grounding_span": "I find predictive text is terrible at guessing the word I am trying to find"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI-assisted fact-checking",
+      "valence": "positive",
+      "grounding_span": "Because of the fact-check feedback, I was able to go back to AI to do deeper research"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Indifference to AI replacing skills",
+      "valence": "mixed",
+      "grounding_span": "I think less about AI potentially taking over and more about just enjoying the few hours I get to sit and ruminate"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Exploratory and iterative ideation — bouncing ideas and exploring angles",
+      "grounding_span": "I just kind of like to bounce ideas off of an AI helper"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Intentional ownership of final output — rewriting and synthesizing rather than copying",
+      "grounding_span": "I write everything in my own words. I never 'copy and paste' complete sentences"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

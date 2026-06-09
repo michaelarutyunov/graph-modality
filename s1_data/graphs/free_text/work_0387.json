@@ -1,0 +1,175 @@
+{
+  "transcript_id": "work_0387",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as learning partner in new domains",
+      "label_negative": "AI as unnecessary in areas of expertise",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI to gut check things I am learning or don't know myself"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as collaborative co-creator",
+      "label_negative": "AI as independent delegator",
+      "bipolarity_complete": true,
+      "grounding_span": "I definitely collaborate, I hear a lot about delegating tasks to AI but I don't really know how to do that"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Authentic personal voice in work",
+      "label_negative": "Generic AI-generated copy",
+      "bipolarity_complete": true,
+      "grounding_span": "It's important to me that I maintain my voice in all my work"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as augmentation not replacement",
+      "label_negative": "AI as threat to human roles",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't think what I do will be replaced by AI, just augmented by it"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI reliability and consistency",
+      "label_negative": "AI degradation and unreliability",
+      "bipolarity_complete": true,
+      "grounding_span": "the latest release of Chat GPT 5 has me ready to cancel my subscription. The model seems actively worse for remembering things"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Authentic self-expression",
+      "grounding_span": "I enjoy writing and want to sound like me"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Creative success and reach",
+      "grounding_span": "the video reached over 300K people and is still growing in reach"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Human connection and trust",
+      "grounding_span": "the personal touch and relationships are PARAMOUNT. AI can never replicate who I am or the way I make people feel heard"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Skill development and learning",
+      "grounding_span": "I use AI to gut check things I am learning"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for viral content",
+      "valence": "positive",
+      "grounding_span": "it made me feel super satisfied when it helped me create my first video that went viral"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Mixed feelings about others' AI use",
+      "valence": "mixed",
+      "grounding_span": "I can absolutely tell when other creators incorporate AI into their copy and to be honest I have mixed feelings about it"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with AI degradation",
+      "valence": "negative",
+      "grounding_span": "the latest release of Chat GPT 5 has me ready to cancel my subscription"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Optimism about future AI use in design",
+      "valence": "positive",
+      "grounding_span": "I'd love to as the technology continues to improve"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-dependent tool adoption — uses AI in learning domains, not expertise",
+      "grounding_span": "I consider myself an expert in the type of sales I do, whereas content creation is a new avenue for me"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative iterative refinement — prefers to edit and collaborate rather than delegate",
+      "grounding_span": "I end up collaborating anyway. I haven't found a way to successfully delegate my work load to AI"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

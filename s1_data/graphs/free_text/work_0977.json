@@ -1,0 +1,182 @@
+{
+  "transcript_id": "work_0977",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative material generator for teaching",
+      "label_negative": "AI as unreliable or unrealistic example provider",
+      "bipolarity_complete": true,
+      "grounding_span": "I get them to give me more capacious examples of the target language"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as stimulator of own ideas",
+      "label_negative": "AI as source of unusable output",
+      "bipolarity_complete": true,
+      "grounding_span": "they stimulate ideas for me to give my own examples"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI adherence to conversational naturalness",
+      "label_negative": "AI reverting to formal or unnatural examples",
+      "bipolarity_complete": true,
+      "grounding_span": "it gives uncommon and unnatural uses of the words"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as persona simulator for learner errors",
+      "label_negative": "AI producing unrealistic or outlandish mistakes",
+      "bipolarity_complete": true,
+      "grounding_span": "adopt the persona of someone whose native language isn't English"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI for material preparation vs. real-time teaching judgment",
+      "label_negative": "AI for lesson planning and student adaptation",
+      "bipolarity_complete": true,
+      "grounding_span": "the AI helps me prepare the materials I use in the lesson"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Teaching effectiveness and student comprehension",
+      "grounding_span": "helps them know how to use the language in question"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional efficiency and marginal gains",
+      "grounding_span": "producing the same amount of quality work in a shorter timeframe"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Personal creativity and autonomy in teaching",
+      "grounding_span": "I just judge that by myself in terms of how I think their progress is going"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI generating novel examples",
+      "valence": "positive",
+      "grounding_span": "I feel satisfied with it when it comes up with examples of target vocabulary, especially that I hadn't considered"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI forgetting instructions and reverting",
+      "valence": "negative",
+      "grounding_span": "I get frustrated with it when it gives uncommon and unnatural uses of the words"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Contentment with current AI role, no desire for more complex AI",
+      "valence": "mixed",
+      "grounding_span": "it does what I need it to do, and I can't imagine a more sophisticated version of the current AI doing much more for me"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative back-and-forth refinement — multi-turn conversational approach",
+      "grounding_span": "it's really back and forth"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic filtering — discarding unusable output while leveraging useful parts",
+      "grounding_span": "I just filter them out myself and move on"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n4",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

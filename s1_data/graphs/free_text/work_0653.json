@@ -1,0 +1,285 @@
+{
+  "transcript_id": "work_0653",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI for low-value mandated tasks",
+      "label_negative": "Manual performance of low-value mandated tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I have ChatGPT or Gemini identify the objectives and can-do statements for my lesson plans because it's a task that I don't see a lot of value in and is tedious"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as creativity aid with risk of dependency",
+      "label_negative": "Full reliance on AI reducing personal creativity",
+      "bipolarity_complete": true,
+      "grounding_span": "I do get a little worried that I'm being 'lazy' and lowering my creativity by outsourcing these tasks"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as seed-idea generator requiring teacher contextualization",
+      "label_negative": "AI as complete solution without teacher input",
+      "bipolarity_complete": true,
+      "grounding_span": "I get seeds of ideas and modify from there"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Covert AI use due to restrictive policy",
+      "label_negative": "Open sanctioned AI use",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't use it for anything that the admin would see directly"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as relief for overwhelming workload",
+      "label_negative": "Overwhelming workload without AI support",
+      "bipolarity_complete": true,
+      "grounding_span": "It helped me break it all down and outline it for me to make a PPT off of it. That was so helpful, and probably the biggest relief I got from using AI so far"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as limited tool for student practice, not replacement for teacher",
+      "label_negative": "AI as potential replacement for teacher",
+      "bipolarity_complete": true,
+      "grounding_span": "I think AI can definitely help students practice and quiz themselves... but it doesn't recreate the work I do as a teacher"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI as neutral tool requiring education for good use",
+      "label_negative": "AI as inherently good or bad",
+      "bipolarity_complete": true,
+      "grounding_span": "I think it's a tool that can be used for good and bad, so the education for admin, teaching staff, and students needs to be how to use it for good"
+    },
+    {
+      "id": "n8",
+      "type": "Construct",
+      "label": "AI amplifying existing academic dishonesty issues",
+      "label_negative": "AI not affecting academic dishonesty",
+      "bipolarity_complete": true,
+      "grounding_span": "I think it is just becoming more rampant with easy, universal access to AI"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "saves me the tedious thinking aspect of doing it"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Personal creativity and professional autonomy",
+      "grounding_span": "I do get a little worried that I'm being 'lazy' and lowering my creativity"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Contextualized student-centered teaching",
+      "grounding_span": "I know all of the context of the class - individual student interests, strengths, difficulties"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Professional integrity and avoiding gossip",
+      "grounding_span": "I don't really talk about using it because I don't want other teachers to gossip"
+    },
+    {
+      "id": "n13",
+      "type": "Value",
+      "label": "Workload relief and reduced stress",
+      "grounding_span": "probably the biggest relief I got from using AI so far"
+    },
+    {
+      "id": "n14",
+      "type": "Value",
+      "label": "Teacher irreplaceability and holistic education",
+      "grounding_span": "There is so much more to teaching than just instruction"
+    },
+    {
+      "id": "n15",
+      "type": "Value",
+      "label": "Ethical use and academic integrity",
+      "grounding_span": "education for admin, teaching staff, and students needs to be how to use it for good"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Satisfaction with AI for tedious tasks",
+      "valence": "positive",
+      "grounding_span": "saves me the tedious thinking aspect of doing it"
+    },
+    {
+      "id": "n17",
+      "type": "Stance",
+      "label": "Concern about creativity loss",
+      "valence": "negative",
+      "grounding_span": "I do get a little worried that I'm being 'lazy' and lowering my creativity"
+    },
+    {
+      "id": "n18",
+      "type": "Stance",
+      "label": "Appreciation for AI as idea starter",
+      "valence": "positive",
+      "grounding_span": "I get seeds of ideas and modify from there"
+    },
+    {
+      "id": "n19",
+      "type": "Stance",
+      "label": "Strategic concealment of AI use",
+      "valence": "mixed",
+      "grounding_span": "I don't use it for anything that the admin would see directly"
+    },
+    {
+      "id": "n20",
+      "type": "Stance",
+      "label": "Relief from overwhelming workload",
+      "valence": "positive",
+      "grounding_span": "probably the biggest relief I got from using AI so far"
+    },
+    {
+      "id": "n21",
+      "type": "Stance",
+      "label": "Skepticism about AI replacing teachers",
+      "valence": "negative",
+      "grounding_span": "I really don't see how it's possible with the models right now"
+    },
+    {
+      "id": "n22",
+      "type": "Stance",
+      "label": "Neutral pragmatism toward AI advocacy",
+      "valence": "ambivalent",
+      "grounding_span": "It's not that important to me to promote it or oppose it"
+    },
+    {
+      "id": "n23",
+      "type": "Stance",
+      "label": "Frustration with admin inaction on AI dishonesty",
+      "valence": "negative",
+      "grounding_span": "many times, districts/admin don't have teachers backs and say we can't prove it"
+    },
+    {
+      "id": "n24",
+      "type": "CognitiveStyleMarker",
+      "label": "Contextual modification — adapts AI outputs to specific student/classroom context",
+      "grounding_span": "I definitely modify and build off of them because I know all of the context of the class"
+    },
+    {
+      "id": "n25",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic compartmentalization — separates visible from invisible AI use",
+      "grounding_span": "I don't use it for anything that the admin would see directly"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n13",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n14",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n15",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n15",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n16",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n17",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n18",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n19",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n20",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n21",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n22",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n23",
+      "target": "n8",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n3",
+      "target": "n24",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n25",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,179 @@
+{
+  "transcript_id": "science_0121",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as research identification tool",
+      "label_negative": "AI as unreliable for complex bespoke tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "The area where it has been really helpful is identifying research, in that sense its invaluable"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability and truthfulness",
+      "label_negative": "AI hallucination and fabrication",
+      "bipolarity_complete": true,
+      "grounding_span": "about half the time the AI will give quotes that don't exist"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as trusted research assistant for complex tasks",
+      "label_negative": "AI as failing assistant for complex bespoke tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "We tried to get AI working as a trusted research assistant, and as a source of specialist knowledge and it failed at both"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI ability to grasp data structure and context",
+      "label_negative": "AI inability to understand data structure and context",
+      "bipolarity_complete": true,
+      "grounding_span": "it could not understand the structure of the data"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as writing assistant for funding applications",
+      "label_negative": "AI as unreliable writer due to hallucination risk",
+      "bipolarity_complete": true,
+      "grounding_span": "The most useful thing I could get from an AI would be help writing funding applications"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Research efficiency and speed",
+      "grounding_span": "the process is much faster that any alternative"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Research integrity and accuracy",
+      "grounding_span": "The possibility of nonsense means I can't send an application in"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Novelty and excitement in repetitive tasks",
+      "grounding_span": "its hard to sound novel and excited after the firth application in a row"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Positive valuation of AI for research identification",
+      "valence": "positive",
+      "grounding_span": "The area where it has been really helpful is identifying research, in that sense its invaluable"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Negative experience with AI for complex analytical tasks",
+      "valence": "negative",
+      "grounding_span": "for more complex bespoke tasks, its been a waste of time"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Ambivalence toward AI due to hallucination",
+      "valence": "ambivalent",
+      "grounding_span": "about half the time the AI will give quotes that don't exist"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Aspirational desire for reliable AI writing assistance",
+      "valence": "positive",
+      "grounding_span": "The most useful thing I could get from an AI would be help writing funding applications"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Verification-oriented approach — checks AI outputs against sources",
+      "grounding_span": "I will ask for references / citations and then check them to find the claims made by the AI"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic cost-benefit calibration of AI use",
+      "grounding_span": "The amount of time needed to check makes it faster to do draft myself"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

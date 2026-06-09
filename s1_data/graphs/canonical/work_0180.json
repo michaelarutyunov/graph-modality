@@ -1,0 +1,212 @@
+{
+  "transcript_id": "work_0180",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI for repetitive simple tasks",
+      "label_negative": "Manual coding for repetitive simple tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "When something has simple logic but just needs repetition, I would use AI instead of spending a lot of time in writing it myself."
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI for complex tasks without iterative collaboration",
+      "bipolarity_complete": true,
+      "grounding_span": "For harder tasks that involve a bigger codebase, complex logic, or more intense reasoning, my initial prompt tends to be longer and more complicated. I would then go back and forth with the AI."
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI prone to error",
+      "bipolarity_complete": true,
+      "grounding_span": "As AI is not fully accurate and is still prone to error due to the aforementioned reasons I gave"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI for security-sensitive high-impact tasks",
+      "label_negative": "Manual coding for security-sensitive high-impact tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I sometimes still prefer to write code for short but important tasks. Important in the sense that the task is security-sensitive or has high impact on the organisation."
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI for security-sensitive high-impact tasks",
+      "label_negative": "AI security risk ignorance",
+      "bipolarity_complete": true,
+      "grounding_span": "our organisation has a huge security concern around AI, in particular, agent to agent protocols, MCP servers, and in general, AI code generation."
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI impact on skill maintenance",
+      "label_negative": "AI as skill maintenance neutral or beneficial",
+      "bipolarity_complete": true,
+      "grounding_span": "I actively think about how my skills could deteriorate due to overuse of AI."
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI as skill requiring prompt engineering",
+      "label_negative": "AI not requiring new skills",
+      "bipolarity_complete": true,
+      "grounding_span": "it also requires people to have a new skill, prompt engineering. You also have to be able to read code to identify if the AI has done what you want."
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "it saved me a lot of time"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Security and organizational integrity",
+      "grounding_span": "AI security must constantly be in the back of mind"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Personal competence and skill development",
+      "grounding_span": "I actively think about how my skills could deteriorate due to overuse of AI."
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "I felt really satisfied, as it saved me a lot of time."
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with AI for niche problems",
+      "valence": "negative",
+      "grounding_span": "if the task is too niche or too complex, the AI may not be able to fulfill the task. In those cases, I need to manually write the code"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Cautious trust in AI",
+      "valence": "positive",
+      "grounding_span": "one prompt tends to do the trick. I would then just check that the AI has done it correctly."
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Preference for manual coding for security-sensitive tasks",
+      "valence": "negative",
+      "grounding_span": "I sometimes still prefer to write code for short but important tasks. I write it myself because I would be more confident in the final result."
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Caution toward AI in high-risk tasks",
+      "valence": "negative",
+      "grounding_span": "AI security must constantly be in the back of mind"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Experience-driven pattern recognition of AI limitations",
+      "grounding_span": "It is due to my experience with using LLMs and the errors that they struggle with in the past."
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative step-by-step problem decomposition",
+      "grounding_span": "I work with the AI to help it unfold those layers of reasoning by providing it verbose explanations or additional context."
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

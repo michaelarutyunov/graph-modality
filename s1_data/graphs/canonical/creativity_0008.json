@@ -1,0 +1,156 @@
+{
+  "transcript_id": "creativity_0008",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as supplement to creative process",
+      "label_negative": "AI as cliché and sanitized generator",
+      "bipolarity_complete": true,
+      "grounding_span": "The AI model can come up with interesting things that I hadn't considered"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as efficiency tool",
+      "label_negative": "AI as threat to authentic human creativity",
+      "bipolarity_complete": true,
+      "grounding_span": "The advantage of using AI is that it makes the whole process a lot faster"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Human-driven creative agency",
+      "label_negative": "AI-driven creative laziness and homogenization",
+      "bipolarity_complete": true,
+      "grounding_span": "I'm the one driving the process"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI-generated content quality and validity",
+      "label_negative": "Human-created art as warm, nuanced, and enriching",
+      "bipolarity_complete": true,
+      "grounding_span": "A lot of the content it generates is 'good enough'"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Creative authenticity and human expression",
+      "grounding_span": "hand edited to sound more like my authentic voice as an artist"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "it makes the whole process a lot faster"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Human artistic expression",
+      "grounding_span": "Things that are created by a human are warmer, more beautiful, more nuanced, complex, difficult and enriching"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Satisfaction with AI as collaborative partner",
+      "valence": "positive",
+      "grounding_span": "I really enjoyed the process of generating the statement"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Frustration with AI's lack of personal voice",
+      "valence": "negative",
+      "grounding_span": "The version that the AI generated didn't sound much like me though. It sounded cliché and sanitised"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Resistance to AI in creative work",
+      "valence": "negative",
+      "grounding_span": "I do have a concern that people will become creatively lazy"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Commitment to collaborative creative process",
+      "valence": "positive",
+      "grounding_span": "I won't let it replace my own creativity - that would be very unsatisfying"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative iterative refinement — works back and forth with AI",
+      "grounding_span": "I could ask for different versions of the statement, fine-tuning it by adding and subtracting different elements"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative curation — selects and builds upon AI outputs",
+      "grounding_span": "Then it's up to me to decide if I want to keep them, or if I want to change them in some way to fit my purposes"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

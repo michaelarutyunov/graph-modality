@@ -1,0 +1,216 @@
+{
+  "transcript_id": "work_0036",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as research and troubleshooting aid",
+      "label_negative": "AI as unreliable hallucinator",
+      "bipolarity_complete": true,
+      "grounding_span": "I mainly use AI for research purposes or as a means of getting a better understanding of how to use a particular technology"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as template provider for implementation",
+      "label_negative": "AI as untrusted for final implementation",
+      "bipolarity_complete": true,
+      "grounding_span": "I will go to AI to provide a template or a sample script to help me get started, especially if I am new to the technology"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as productivity enhancer",
+      "label_negative": "AI as threat to skill development",
+      "bipolarity_complete": true,
+      "grounding_span": "How to leverage AI to increase productivity, which will increase my marketability"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as data analyst and monotonous task handler",
+      "label_negative": "AI as incapable of original creativity",
+      "bipolarity_complete": true,
+      "grounding_span": "AI's best trait is data analysis and working on monotonous tasks with significant human oversight. The core limitation of AI is that it cannot develop new ideas"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as collaborative sounding board (Iron Man-Jarvis analogy)",
+      "label_negative": "AI as mere tool without partnership",
+      "bipolarity_complete": true,
+      "grounding_span": "The analogy I would use is how Iron Man collaborates with Jarvis. The goal would be to use it as a sounding board to validate my thinking"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI energy consumption and sustainability",
+      "label_negative": "Unchecked AI capability expansion",
+      "bipolarity_complete": true,
+      "grounding_span": "The future should be about reducing AI's energy consumption instead of focusing on expanding its capabilities"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficient problem-solving and time saving",
+      "grounding_span": "reduce my search time when it comes to looking for the information that I need"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional competence and marketability",
+      "grounding_span": "increase my marketability to my current employer or another company"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Human oversight and control",
+      "grounding_span": "significant human oversight"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Original creativity and innovation",
+      "grounding_span": "it cannot develop new ideas"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Environmental sustainability",
+      "grounding_span": "reducing AI's energy consumption"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI as example provider",
+      "valence": "positive",
+      "grounding_span": "I was really satisfied when it showed me a valid example of how to add a database module to JBoss"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Frustration with AI hallucination",
+      "valence": "negative",
+      "grounding_span": "the AI chatbot kept on hallucinating instead of acknowledging it can provide the feedback that I needed"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Concern about AI taking over skills",
+      "valence": "negative",
+      "grounding_span": "I am concerned about it taking over most of my skills"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Aspirational view of AI as collaborative partner",
+      "valence": "positive",
+      "grounding_span": "The goal would be to use it as a sounding board to validate my thinking"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Advocacy for sustainable AI development",
+      "valence": "positive",
+      "grounding_span": "The future should be about reducing AI's energy consumption"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Verification-oriented approach — cross-references AI outputs with documentation",
+      "grounding_span": "I will ask it for references to documentation that could provide the missing parameter. If that doesn't work, I just revert back to using Google"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Analogical reasoning — uses concrete analogies to conceptualize AI relationship",
+      "grounding_span": "The analogy I would use is how Iron Man collaborates with Jarvis"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n3",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

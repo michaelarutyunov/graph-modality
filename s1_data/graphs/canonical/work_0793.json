@@ -1,0 +1,169 @@
+{
+  "transcript_id": "work_0793",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as project organization tool",
+      "label_negative": "AI for existing codebase maintenance",
+      "bipolarity_complete": true,
+      "grounding_span": "I use it to help me launch new projects"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as coding assistant",
+      "label_negative": "Human manual coding",
+      "bipolarity_complete": true,
+      "grounding_span": "its hard to justify doing a lot of it myself when AI is now so efficient"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI code quality and reliability",
+      "label_negative": "AI code safety issues and vulnerabilities",
+      "bipolarity_complete": true,
+      "grounding_span": "I still have my reserves as I've encountered code safety issues before"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as creative UI generator",
+      "label_negative": "AI as error-prone debugger",
+      "bipolarity_complete": true,
+      "grounding_span": "I remember being satisfied with the UI generated in a recent project with just one prompt"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Human as project architect and reviewer",
+      "label_negative": "Human as mere debugger of AI code",
+      "bipolarity_complete": true,
+      "grounding_span": "I am still the project manager, the data structure engineer"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "I think this will lead to a huge increase in efficiency"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Code quality and correctness",
+      "grounding_span": "Its part of our job to be paranoid about code security"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Understanding and control over codebase",
+      "grounding_span": "I still always go through the backend to make sure I understand how it actually works"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for GUI prototyping",
+      "valence": "positive",
+      "grounding_span": "I remember being satisfied with the UI generated in a recent project with just one prompt"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for debugging",
+      "valence": "negative",
+      "grounding_span": "I felt frustrated because I want AI to do the debugging while I write code"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Cautious trust in AI",
+      "valence": "ambivalent",
+      "grounding_span": "I still have my reserves as I've encountered code safety issues before"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "positive",
+      "grounding_span": "I think this will lead to a huge increase in efficiency"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Modular task decomposition — breaks tasks into small, testable components",
+      "grounding_span": "I think of it kind of like Legos"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Systematic review and understanding of generated code",
+      "grounding_span": "I still always go through the backend to make sure I understand how it actually works"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

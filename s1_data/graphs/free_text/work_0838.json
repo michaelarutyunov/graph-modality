@@ -1,0 +1,174 @@
+{
+  "transcript_id": "work_0838",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as delegable tool for mundane, standardisable tasks",
+      "label_negative": "AI as requiring collaboration for non-standard tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "if something is mundane, standardisable, repeatable I will delegate it"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as collaborative partner for creative and strategic tasks",
+      "label_negative": "AI as fully autonomous without human input",
+      "bipolarity_complete": true,
+      "grounding_span": "I also may need to collaborate on tasks such as drafting for content, copy, visual generations as these require back and forth"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI pragmatism and directness",
+      "label_negative": "AI over-friendliness and idealism",
+      "bipolarity_complete": true,
+      "grounding_span": "generic phrase usage by llms and their desire to be overly friendly and over affirming of ideas etc and hesitation to be extremely pragmatic"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Human-only communication for rapport building",
+      "label_negative": "AI-mediated communication for client relationships",
+      "bipolarity_complete": true,
+      "grounding_span": "I like to keep a certain level of communication strictly human input only"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as time-saving automation",
+      "label_negative": "Manual time-consuming processes",
+      "bipolarity_complete": true,
+      "grounding_span": "it saves me time"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and optimisation",
+      "grounding_span": "a desire for optimisation and efficiency"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Personal autonomy and control",
+      "grounding_span": "the majority of the fundamentals or criteria to be judged were defined by myself"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Authentic human connection",
+      "grounding_span": "Getting to build rapport with clients and potential clients is rewarding"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI automation saving time",
+      "valence": "positive",
+      "grounding_span": "The first business report that was created by the agent I made has got to be the most rewarding"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI's generic and overly friendly tone",
+      "valence": "negative",
+      "grounding_span": "generic phrase usage by llms and their desire to be overly friendly and over affirming of ideas"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Preference for human-only communication in client relationships",
+      "valence": "negative",
+      "grounding_span": "I like to keep a certain level of communication strictly human input only"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Optimistic anticipation of increased AI usage with advancement",
+      "valence": "positive",
+      "grounding_span": "if there are leaps in advancement I only see my usage going up"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic task decomposition — delegates vs collaborates based on task nature",
+      "grounding_span": "if something is mundane, standardisable, repeatable I will delegate it"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Opportunity-oriented reframing — sees AI as enabler for new products",
+      "grounding_span": "you are now in the position to create systems or products to make that said area more accessible"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

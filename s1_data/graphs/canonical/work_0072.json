@@ -1,0 +1,157 @@
+{
+  "transcript_id": "work_0072",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as task automator for disliked tasks",
+      "label_negative": "Manual content creation for disliked tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "Crafting social media captions. I hate trying to do it, so I feed it content that I like"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as efficiency tool",
+      "label_negative": "Time-consuming manual processes",
+      "bipolarity_complete": true,
+      "grounding_span": "saves me time that I can then make use of elsewhere"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Personal client communication as human domain",
+      "label_negative": "AI-generated client communications",
+      "bipolarity_complete": true,
+      "grounding_span": "when emailing existing clients I would definitely take on the writing for myself"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as proofreading assistant",
+      "label_negative": "Manual proofreading and error-checking",
+      "bipolarity_complete": true,
+      "grounding_span": "I will use it to check for grammatical errors etc."
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI integration into hands-on roasting process",
+      "label_negative": "Exclusive human control over roasting",
+      "bipolarity_complete": true,
+      "grounding_span": "I could see it taking on some of the roasting once its underway"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "saves me time that I can then make use of elsewhere"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Personal authenticity and relationship maintenance",
+      "grounding_span": "I want to know exactly what has been said"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Accurate communication",
+      "grounding_span": "check for grammatical errors etc."
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Resistance to AI in creative work",
+      "valence": "positive",
+      "grounding_span": "Crafting social media captions. I hate trying to do it, so I feed it content"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Preference for personal control over email",
+      "valence": "negative",
+      "grounding_span": "when emailing existing clients I would definitely take on the writing for myself"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Optimism about future AI integration",
+      "valence": "positive",
+      "grounding_span": "I could see it taking on some of the roasting once its underway"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic delegation of disliked tasks to AI",
+      "grounding_span": "Crafting social media captions. I hate trying to do it, so I feed it content"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Principled boundary setting — preserves human touch in communication",
+      "grounding_span": "when emailing existing clients I would definitely take on the writing for myself"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,174 @@
+{
+  "transcript_id": "work_0076",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as efficient screening tool",
+      "label_negative": "AI as unreliable or missing critical items",
+      "bipolarity_complete": true,
+      "grounding_span": "we definitely try to adjust the settings of the AI platform so that it is highly sensitive and can flag more accounting entries than needed so that nothing is missed"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "Human judgment as final decision-maker",
+      "label_negative": "Blind reliance on AI assessments",
+      "bipolarity_complete": true,
+      "grounding_span": "allowing us to make the final decision"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for communication tasks",
+      "label_negative": "AI for nuanced client relationship emails",
+      "bipolarity_complete": true,
+      "grounding_span": "I was able to utilize AI to somewhat automate this process, including having it draft emails in this situation (which I feel more comfortable with as they follow a standard template)"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as efficiency tool",
+      "label_negative": "AI as job replacer threatening roles",
+      "bipolarity_complete": true,
+      "grounding_span": "I view it more as a way to reduce the amount of hours individuals focus on data entry and marking up client support. This would allow us to increase the number of audits we do in a year, as well as allow us more to focus on judgment calls"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Personal client communication as human domain",
+      "label_negative": "Robotic or accusatory tone from AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I do still prefer to write the message myself instead of having AI do it. This is often because I've built a friendly yet professional connection with the client, and want to make sure the email does not come across as accusatory or 'robotic'"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Audit thoroughness and accuracy",
+      "grounding_span": "so that nothing is missed"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Client trust and credibility",
+      "grounding_span": "I've built a friendly yet professional connection with the client"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional efficiency",
+      "grounding_span": "reduce the amount of hours individuals focus on data entry"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Positive toward AI for initial screening",
+      "valence": "positive",
+      "grounding_span": "we definitely try to adjust the settings of the AI platform so that it is highly sensitive and can flag more accounting entries than needed"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Preference for human-written emails",
+      "valence": "negative",
+      "grounding_span": "I do still prefer to write the message myself instead of having AI do it"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "positive",
+      "grounding_span": "I view it more as a way to reduce the amount of hours individuals focus on data entry and marking up client support"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "I was able to utilize AI to somewhat automate this process, including having it draft emails in this situation"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic delegation with oversight",
+      "grounding_span": "allowing us to make the final decision"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Task decomposition into separate sessions",
+      "grounding_span": "I do still prefer to write the message myself instead of having AI do it"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

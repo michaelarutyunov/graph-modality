@@ -1,0 +1,162 @@
+{
+  "transcript_id": "creativity_0020",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as admin task handler",
+      "label_negative": "AI as impediment to genuine creativity",
+      "bipolarity_complete": true,
+      "grounding_span": "AI has been most useful in handling my admin tasks"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as iteration tool for variations",
+      "label_negative": "AI as unpredictable and hard to direct",
+      "bipolarity_complete": true,
+      "grounding_span": "AI allowed me to easily and quickly iterate on my base illustration into a multitude of new versions"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as cost-saving substitute for human labor",
+      "label_negative": "AI as threat to established illustrators' styles",
+      "bipolarity_complete": true,
+      "grounding_span": "its only truly useful if there's no budget for hiring a human illustrator"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as improving technical tool (e.g., cutouts, generative fill)",
+      "label_negative": "AI as early-stage and limited",
+      "bipolarity_complete": true,
+      "grounding_span": "I look forward to Photoshop's integrated AI tools improving"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Creative control and intentionality",
+      "grounding_span": "it's difficult to 'art direct' the various models"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and stress reduction in admin",
+      "grounding_span": "taking the stress out of various admin-related aspects of creative work"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Economic pragmatism",
+      "grounding_span": "no budget for hiring a human illustrator"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Artistic integrity and originality",
+      "grounding_span": "established illustrators who have had their distinctive style 'ripped' by AI models"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Positive toward AI for admin tasks",
+      "valence": "positive",
+      "grounding_span": "using LLMs has been tremendously helpful in taking the stress out of various admin-related aspects"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Negative toward AI for genuine creative work",
+      "valence": "negative",
+      "grounding_span": "for genuinely creative work, AI feels like an impediment of sorts"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Ambivalent toward AI as iteration tool",
+      "valence": "ambivalent",
+      "grounding_span": "using AI feels like a bit of a crapshoot"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Positive anticipation for AI tool improvement",
+      "valence": "positive",
+      "grounding_span": "I look forward to Photoshop's integrated AI tools improving"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-specific pragmatism — evaluates AI utility per creative domain",
+      "grounding_span": "I don't see photography as immediately being as negatively affected by AI as much as illustration"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative hybrid workflow — alternates between hand-drawn and AI",
+      "grounding_span": "hand drawn image that was modified in Firefly, iterated on, then redrawn again by hand"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

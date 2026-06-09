@@ -1,0 +1,219 @@
+{
+  "transcript_id": "work_0190",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as coding assistant",
+      "label_negative": "Manual coding without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't have a coding background so I use it when I need help with code for my job"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as efficiency tool",
+      "label_negative": "Slow manual problem-solving",
+      "bipolarity_complete": true,
+      "grounding_span": "It's made it much faster"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI learning curve and back-and-forth",
+      "label_negative": "Seamless one-shot AI performance",
+      "bipolarity_complete": true,
+      "grounding_span": "There was back-and-forth because it didn't know the system as well"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as learning and research tool",
+      "label_negative": "AI as replacement for learning",
+      "bipolarity_complete": true,
+      "grounding_span": "The part that was missed was my learning more about the syntax"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI role expansion beyond current tasks",
+      "label_negative": "AI in tasks it can already do",
+      "bipolarity_complete": true,
+      "grounding_span": "It's the things it can't do right now"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "Management enthusiasm for AI",
+      "label_negative": "Organizational embrace of AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I think our organization is hesitant to embrace AI"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI automation vs human element",
+      "label_negative": "AI preserving human element",
+      "bipolarity_complete": true,
+      "grounding_span": "so we don't lose the human element of what we do"
+    },
+    {
+      "id": "n8",
+      "type": "Construct",
+      "label": "AI job displacement concern",
+      "label_negative": "AI job creation optimism",
+      "bipolarity_complete": true,
+      "grounding_span": "the fear is if AI will make anyone lose their job"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "It's made it much faster"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Skill development and learning",
+      "grounding_span": "my learning more about the syntax"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Human connection and institutional identity",
+      "grounding_span": "so we don't lose the human element of what we do"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Job security and skill relevance",
+      "grounding_span": "the fear is if AI will make anyone lose their job"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "It's made it much faster"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Frustration with AI errors",
+      "valence": "negative",
+      "grounding_span": "Frustrating would be needing to go back-and-forth to resolve an issue"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "positive",
+      "grounding_span": "I can see us using it more"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Concern about job displacement",
+      "valence": "negative",
+      "grounding_span": "the fear is if AI will make anyone lose their job"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Goal-oriented problem decomposition",
+      "grounding_span": "I usually try to state the end goal I need to accomplish and where i'm at in the process first"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Historical analogical reasoning — draws parallels to past technological shifts",
+      "grounding_span": "I think it will help create more jobs (maybe even better ones) in the long run"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n13",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n8",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n8",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n8",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n7",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

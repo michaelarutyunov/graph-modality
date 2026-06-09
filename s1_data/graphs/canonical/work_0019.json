@@ -1,0 +1,187 @@
+{
+  "transcript_id": "work_0019",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as practical problem solver",
+      "label_negative": "AI as time-consuming or ineffective",
+      "bipolarity_complete": true,
+      "grounding_span": "I bring the problems that I'm stuck on and I'm in a crunch of time to find the solution"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as collaborative solution refiner",
+      "label_negative": "AI as autonomous solution provider",
+      "bipolarity_complete": true,
+      "grounding_span": "I explain the problem extensively. I sometimes explain my solution approach to get refined"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI's ability to produce authentic voice",
+      "label_negative": "AI output sounding robotic",
+      "bipolarity_complete": true,
+      "grounding_span": "it sounds so rigid and robotic no matter what I do so I prefer to write my own emails"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI for niche expertise",
+      "label_negative": "AI unreliability for niche problems",
+      "bipolarity_complete": true,
+      "grounding_span": "I usually feel more frustrated than satisfied when using AI at work to solve a niche problem"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as practical problem solver",
+      "label_negative": "AI as first resort in problem-solving",
+      "bipolarity_complete": true,
+      "grounding_span": "I did learn to turn to AI as a last resort in the process of problem-solving"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI for repetitive simple tasks",
+      "label_negative": "AI incompetence for simple tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "AI has worked well numerous times on mundane simple tasks like generating a sample draft"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "the time I'm provided to solve the problem is not sufficient for me to solve it without the help of AI"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Authentic personal expression",
+      "grounding_span": "I prefer to write my own emails and only use AI to help with grammar and punctuation but not the content"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Successful problem resolution",
+      "grounding_span": "I usually feel more frustrated than satisfied when using AI at work to solve a niche problem"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI for niche problems",
+      "valence": "negative",
+      "grounding_span": "I usually feel more frustrated than satisfied when using AI at work to solve a niche problem"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "AI has worked well numerous times on mundane simple tasks"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Preference for maintaining personal voice",
+      "valence": "negative",
+      "grounding_span": "I prefer to write my own emails and only use AI to help with grammar and punctuation but not the content"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "mixed",
+      "grounding_span": "I hope the AI gets smarter so I can rely on it more"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement and testing",
+      "grounding_span": "I would do this multiple times to get the AI's solution to work"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Last-resort problem-solving strategy",
+      "grounding_span": "I did learn to turn to AI as a last resort in the process of problem-solving"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n2",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

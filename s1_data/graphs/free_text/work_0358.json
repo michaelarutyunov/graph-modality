@@ -1,0 +1,163 @@
+{
+  "transcript_id": "work_0358",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as refinement tool for maintaining personal touch",
+      "label_negative": "AI-generated generic robotic responses",
+      "bipolarity_complete": true,
+      "grounding_span": "I only use AI to help refine it, but afterwards i still double check it and make sure it doesnt read like a robot"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as quick lookup for factual information",
+      "label_negative": "AI for complex multi-variable tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "quick research or even item look ups I use AI as i want to find the answer as quick as possible"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability and accuracy",
+      "label_negative": "AI hallucination and incorrect outputs",
+      "bipolarity_complete": true,
+      "grounding_span": "I have even had it refer to a section that is not real"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI integration with existing work systems",
+      "label_negative": "AI lack of integration with proprietary databases",
+      "bipolarity_complete": true,
+      "grounding_span": "We have a specifically built computer system that we use as our database, which AI does not integrate with"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as collaborative partner vs task delegator",
+      "label_negative": "AI as independent task completer",
+      "bipolarity_complete": true,
+      "grounding_span": "I dont typically ever delegate an entire task"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Personal authenticity in communication",
+      "grounding_span": "People reading the responses should get some form of personal feel"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and speed",
+      "grounding_span": "i want to find the answer as quick as possible"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Accuracy and trustworthiness",
+      "grounding_span": "I would have to read through it as well to make sure it is fact checked"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Workflow integration and seamlessness",
+      "grounding_span": "AI does not integrate with, and I dont even know how it would"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for polite refusal",
+      "valence": "positive",
+      "grounding_span": "i wrote the message how I felt and told AI to change it to a polite NO. that was satifying"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI for Excel formula failure",
+      "valence": "negative",
+      "grounding_span": "it kept giving me a formula that didnt work with my data set... Gave up on that one"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Cautious reliance on AI for factual lookups",
+      "valence": "ambivalent",
+      "grounding_span": "although I still double check them typically"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement and quality control",
+      "grounding_span": "I only use AI to help refine it, but afterwards i still double check it"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic task delegation based on complexity",
+      "grounding_span": "I dont typically ever delegate an entire task"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

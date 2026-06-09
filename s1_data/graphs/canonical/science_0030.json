@@ -1,0 +1,147 @@
+{
+  "transcript_id": "science_0030",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as predictive model for extreme conditions",
+      "label_negative": "Physical testing for extreme conditions",
+      "bipolarity_complete": true,
+      "grounding_span": "attempting to predict how these metals will react/perform in extreme situations that are difficult to recreate inhouse"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as test case reviewer and regression testing aid",
+      "label_negative": "Direct full-scale external testing without screening",
+      "bipolarity_complete": true,
+      "grounding_span": "use the AI to see if they are satisfactory and then send them off to facilities that can do the full testing as this is more efficient"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI optimization of physical process parameters",
+      "label_negative": "Manual trial-and-error parameter setting",
+      "bipolarity_complete": true,
+      "grounding_span": "if an algorithm could optimize the temperature/pressure that the atomizer works at to produce more powder"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI usefulness for professional composition",
+      "label_negative": "Intuition-based composition selection",
+      "bipolarity_complete": true,
+      "grounding_span": "AI giving us suggestions on what compositions to use"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Workflow efficiency",
+      "grounding_span": "more efficient than just sending a bunch of untested particles to be fully tested"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Prediction accuracy for real-world performance",
+      "grounding_span": "predict their effectiveness in realistic use cases"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Reduction of human error and wasted effort",
+      "grounding_span": "we get none or barely any powder from the run as some parameters were a little off"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Positive toward AI for initial screening",
+      "valence": "positive",
+      "grounding_span": "greatly aided by AI use"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Frustration with manual parameter setting and desire for AI optimization",
+      "valence": "negative",
+      "grounding_span": "Many times we will go through the long and tedious process to set up the machine and then we get none or barely any powder"
+    },
+    {
+      "id": "n10",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic cost-benefit analysis of AI use",
+      "grounding_span": "it is not efficient to use AI in mechanical sieving or atomization as these both require physical labor and supervision"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Sequential screening mindset — use AI to filter before committing resources",
+      "grounding_span": "use the AI to see if they are satisfactory and then send them off to facilities that can do the full testing"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n8",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n8",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n10",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n10",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

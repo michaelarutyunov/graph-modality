@@ -1,0 +1,162 @@
+{
+  "transcript_id": "creativity_0085",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as ideation and trend assistant",
+      "label_negative": "AI as sole creative originator",
+      "bipolarity_complete": true,
+      "grounding_span": "AI can be useful to come up for ideas for social media content and keep up with trends"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as proofreading assistant",
+      "label_negative": "AI as primary content creator",
+      "bipolarity_complete": true,
+      "grounding_span": "I also use it to proof read scripts for TikToks"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Human control over creative decisions",
+      "label_negative": "AI-driven creative decisions",
+      "bipolarity_complete": true,
+      "grounding_span": "I was definitely making the creative decisions"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as time-saving tool",
+      "label_negative": "AI as job replacement threat",
+      "bipolarity_complete": true,
+      "grounding_span": "AI definitely cuts down on planning and editing time"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI adoption in workplace",
+      "label_negative": "Resistance to AI integration",
+      "bipolarity_complete": true,
+      "grounding_span": "it is important to learn to work with AI and use it to your advantage"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative authenticity and human expression",
+      "grounding_span": "the bulk of the actual creation of content is done by me"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "cutting down on the amount of time it takes to finish a project"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Career resilience and adaptability",
+      "grounding_span": "it is important to learn to work with AI and use it to your advantage"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI as editing aid",
+      "valence": "positive",
+      "grounding_span": "AI can be useful to come up for ideas for social media content"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Concern about AI replacing jobs",
+      "valence": "negative",
+      "grounding_span": "it is a little concerning how many jobs are going to be taken over by AI"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Proactive embrace of AI as strategic tool",
+      "valence": "positive",
+      "grounding_span": "it is important to learn to work with AI and use it to your advantage"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative iterative refinement — works back and forth with AI",
+      "grounding_span": "if ChatGPT gave me response that did not make sense or did not fit what I wanted, I had it revise the sentence"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Deliberate boundary-setting to preserve core skills",
+      "grounding_span": "the bulk of the actual creation of content is done by me"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

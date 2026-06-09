@@ -1,0 +1,235 @@
+{
+  "transcript_id": "work_0795",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI for communication refinement",
+      "label_negative": "Manual drafting without AI refinement",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I use AI to help me formulate my thoughts, word things better, make my tone more professional"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as thinking partner for reasoning",
+      "label_negative": "Independent struggle with complex explanations",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "if I don't know exactly what I want to say (it's a more difficult explanation/question) and I need to organize my thoughts"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI alignment with company policies and specific workflows",
+      "label_negative": "AI deviation from company policies and specific workflows",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "It doesn't always take into account company policies, and so I often have to fix things"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI flexibility in adapting to patient-specific changes",
+      "label_negative": "AI rigidity in assuming diagnoses and resisting changes",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "It often assumes diagnoses and makes a big deal if I try to change the recommended exercises"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as research assistant for clinical knowledge",
+      "label_negative": "AI disruption of established nuanced clinical practices",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "the AI created its own detailed description of the exercise (of exactly what the video showed) and I now have to go in and create a separate note that basically says 'ignore everything that is written and do this:'"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as independent task delegator",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I'm more likely to collaborate with it throughout a task"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI as automatic response drafter with human oversight",
+      "label_negative": "Manual response drafting without AI assistance",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I'd love for it to get to a point where it drafts an automatic response to emails/text/app chats based on prior history and understanding of company policies"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficient patient communication",
+      "grounding_span": "I use AI to help me formulate my thoughts, word things better, make my tone more professional"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Workflow efficiency",
+      "grounding_span": "it would make things super easy"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Professional autonomy",
+      "grounding_span": "I prefer to handle it myself since it's less overall work for me"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Patient-centered care",
+      "grounding_span": "AI can't socialize/create a relationship with Dr. Snow the way I do"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Resistance to AI for personal communication",
+      "valence": "positive",
+      "grounding_span": "When it comes to writing/patient communication I 100% prefer AI to handle it"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Frustration with AI in program creation due to policy misalignment",
+      "valence": "negative",
+      "grounding_span": "It doesn't always take into account company policies, and so I often have to fix things"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Frustration with AI in program creation due to policy misalignment",
+      "valence": "negative",
+      "grounding_span": "It often assumes diagnoses and makes a big deal if I try to change the recommended exercises"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Satisfaction with AI as collaborative partner",
+      "valence": "positive",
+      "grounding_span": "I'm more likely to collaborate with it throughout a task"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Satisfaction with AI for drafting",
+      "valence": "positive",
+      "grounding_span": "I'd love for it to get to a point where it drafts an automatic response"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Selective, need-based engagement with AI",
+      "grounding_span": "Any that are simple to answer and that I don't need help with, I will go ahead and complete"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative prompt refinement",
+      "grounding_span": "Usually this type of prompt will take a few tweaks after the initial prompt"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n5",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

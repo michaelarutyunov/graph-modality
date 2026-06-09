@@ -1,0 +1,156 @@
+{
+  "transcript_id": "work_0803",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as routine task handler",
+      "label_negative": "AI as unhelpful policy repeater",
+      "bipolarity_complete": true,
+      "grounding_span": "For routine things like inquiries about shipping policies, the AI does most of the work but I double check it."
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as tone and empathy checker",
+      "label_negative": "AI lacking nuance and empathy",
+      "bipolarity_complete": true,
+      "grounding_span": "I'm looking for them to judge the tone of my response to see if it's appropriate."
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as augmentation tool",
+      "label_negative": "AI as replacement threat",
+      "bipolarity_complete": true,
+      "grounding_span": "I catch enough mistakes with the AI to know that it's there to augment my abilities and I don't fear them taking them over."
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI with company-specific knowledge",
+      "label_negative": "Generic AI without context",
+      "bipolarity_complete": true,
+      "grounding_span": "Ideally I'd like to have a database with a custom AI that is specifically built for our company, with knowledge of our products, processes, workflow, inventory, etc."
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Customer satisfaction and retention",
+      "grounding_span": "the goal is ideally to make them go away, but I always run it by my AI bot to see what they think."
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and productivity",
+      "grounding_span": "For routine things like inquiries about shipping policies, the AI does most of the work but I double check it."
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Human judgment and control",
+      "grounding_span": "I catch enough mistakes with the AI to know that it's there to augment my abilities and I don't fear them taking them over."
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Satisfaction with AI for routine tasks",
+      "valence": "positive",
+      "grounding_span": "For routine things like inquiries about shipping policies, the AI does most of the work but I double check it."
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Frustration with AI lacking empathy",
+      "valence": "negative",
+      "grounding_span": "The AI would not sympathize or help me resolve my problems by understanding that I had a unique situation and instead just kept instructing me to do the same thing that I've already done."
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Confidence in AI as augmentation",
+      "valence": "positive",
+      "grounding_span": "I catch enough mistakes with the AI to know that it's there to augment my abilities and I don't fear them taking them over."
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Aspiration for custom company AI",
+      "valence": "positive",
+      "grounding_span": "Ideally I'd like to have a database with a custom AI that is specifically built for our company."
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Task-dependent delegation — adjusts AI involvement based on complexity",
+      "grounding_span": "I review the solution that the AI comes up with, but in difficult cases where I've exhausted all options, I look to AI for ways to de-escalate and resolve the problem."
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Empathy-first communication — prioritizes tone and customer feeling",
+      "grounding_span": "the goal is ideally to make them go away, but I always run it by my AI bot to see what they think."
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

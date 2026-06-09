@@ -1,0 +1,174 @@
+{
+  "transcript_id": "work_0802",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as fully autonomous worksheet creator",
+      "bipolarity_complete": true,
+      "grounding_span": "Collaborating back and forth sounds about right"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as practical problem solver",
+      "label_negative": "AI-generated problem inappropriateness",
+      "bipolarity_complete": true,
+      "grounding_span": "I try to get AI to produce me new problems that would be appropriate for the topic"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI hallucination in math tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "AI hallucination, but in practice I find this is rarely an issue with math nowadays"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI solution writing capability",
+      "label_negative": "AI solution writing inadequacy",
+      "bipolarity_complete": true,
+      "grounding_span": "I've tried at times in the past to get them to come up with solutions to the worksheets, but never to significant success"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as learning and study aid",
+      "label_negative": "AI as limited to teaching tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "my hope is that it'll get to the point where I might be able to use it as a research aid"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Educational quality and accuracy",
+      "grounding_span": "I don't want to just regurgitate modified versions of them, since then there'd be no real reason for a lot of students to come to discussions"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional efficiency",
+      "grounding_span": "I think it's a useful tool"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Learning and intellectual growth",
+      "grounding_span": "my hope is that it'll get to the point where I might be able to use it as a research aid and solve advanced problems"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI as collaborative partner",
+      "valence": "positive",
+      "grounding_span": "Collaborating back and forth sounds about right"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Reluctance to use AI for writing",
+      "valence": "negative",
+      "grounding_span": "I've tried at times in the past to get them to come up with solutions to the worksheets, but never to significant success"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Cautious skepticism toward AI reliability",
+      "valence": "positive",
+      "grounding_span": "AI hallucination, but in practice I find this is rarely an issue with math nowadays"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Aspirational hope for AI as practical assistant",
+      "valence": "positive",
+      "grounding_span": "my hope is that it'll get to the point where I might be able to use it as a research aid"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement with limited back-and-forth",
+      "grounding_span": "I check over each of the problems myself to make sure. Occasionally it takes a couple retries"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic acceptance of technological change",
+      "grounding_span": "I feel that's the way progress is, and sometimes it leads to things like job loss. I think it'll be a while before that happens still, so I'm not too concerned"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

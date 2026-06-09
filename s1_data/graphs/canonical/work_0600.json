@@ -1,0 +1,244 @@
+{
+  "transcript_id": "work_0600",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as contract analysis and comprehension aid",
+      "label_negative": "AI as unreliable or missing critical details",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I use AI to see if it also flags the same areas"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as accountability and follow-up assistant",
+      "label_negative": "AI as excessive cheerleader or lacking accountability",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I need someone to kick me in the pants and not tell me that I'm fabulous"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as efficiency tool for content creation",
+      "label_negative": "AI as consuming time with manual tweaking",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "it has saved me a TON of time to provide the basics and have AI do the heavy lifting"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as assistant for complex work",
+      "label_negative": "AI as passive tool requiring constant initiation",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "it would be nice to have AI as a daily check-in without me always needing to initiate contact"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI providing outdated or incorrect information",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "AI responded with docs from 2016"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as research accelerator",
+      "label_negative": "AI as insufficient for deep or manual research",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "What would take me hours to do can be done in a fraction of the time"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional responsibility and client safety",
+      "grounding_span": "I can protect my buyer or seller"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional accountability",
+      "grounding_span": "help keep me motivated and honest"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "focus my time and energy elsewhere"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Structured daily workflow",
+      "grounding_span": "I need someone to help me with the structure"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Epistemic accuracy and understanding",
+      "grounding_span": "I like to be very certain of information"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Trust in AI for contract confirmation but not primary",
+      "valence": "ambivalent",
+      "grounding_span": "I use AI to see if it also flags the same areas"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Frustration with AI when it deviates from tone",
+      "valence": "negative",
+      "grounding_span": "I've had to talk with AI about being too much of a cheerleader"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Satisfaction with AI for time-saving",
+      "valence": "positive",
+      "grounding_span": "it has saved me a TON of time"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Reluctance to delegate policy checking to AI",
+      "valence": "positive",
+      "grounding_span": "it would be nice to have AI as a daily check-in"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Frustration with outdated AI information",
+      "valence": "negative",
+      "grounding_span": "AI responded with docs from 2016"
+    },
+    {
+      "id": "n17",
+      "type": "Stance",
+      "label": "Positive appreciation for AI as research catalyst",
+      "valence": "positive",
+      "grounding_span": "What would take me hours to do can be done in a fraction of the time"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Verification-oriented approach",
+      "grounding_span": "I've already read carefully through the contract and noted things"
+    },
+    {
+      "id": "n19",
+      "type": "CognitiveStyleMarker",
+      "label": "Pattern-seeking and personalization — wants AI to learn personal tactics",
+      "grounding_span": "I've already provided AI with my personality traits"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n17",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n19",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n19",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n19",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

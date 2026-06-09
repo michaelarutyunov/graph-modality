@@ -1,0 +1,192 @@
+{
+  "transcript_id": "science_0042",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as productivity tool for low-risk coding tasks",
+      "label_negative": "AI as unreliable for high-stakes research tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "Using AI seemed like a no-brainer at that point for productivity purposes"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability in literature search and fact reporting",
+      "label_negative": "AI unreliability in literature search and fact reporting",
+      "bipolarity_complete": true,
+      "grounding_span": "confidence in the comprehensive nature of AI searching and its reporting of details and facts from papers - in my experience it frequently makes mistakes"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as creative ideation partner",
+      "label_negative": "AI as lacking creative out-of-the-box ideas",
+      "bipolarity_complete": true,
+      "grounding_span": "I think that I personally still wouldn't assume that an AI chatbot would provide me with very creative, out-of-the-box ideas"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI integration with university journal access",
+      "label_negative": "AI without journal access integration",
+      "bipolarity_complete": true,
+      "grounding_span": "integration into whatever university access system you might have to view specific journals"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI reliability for research community trust",
+      "label_negative": "AI unreliability undermining research community trust",
+      "bipolarity_complete": true,
+      "grounding_span": "it's very important that those tools become much more reliable in their results to foster confidence in what can be a very sceptical community"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "we were often working 'against the clock' with deadlines"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Research integrity and accuracy",
+      "grounding_span": "it's important to properly read and understand that background research or any research you might be citing"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Scientific creativity and innovation",
+      "grounding_span": "very creative, out-of-the-box ideas"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Comprehensive knowledge discovery",
+      "grounding_span": "finding literature and being comprehensive and such can be a long process and it's easy to miss things"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Positive stance toward AI for coding productivity",
+      "valence": "positive",
+      "grounding_span": "Using AI seemed like a no-brainer at that point for productivity purposes"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Negative stance toward AI for literature search due to unreliability",
+      "valence": "negative",
+      "grounding_span": "confidence in the comprehensive nature of AI searching and its reporting of details and facts from papers - in my experience it frequently makes mistakes"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Skeptical stance toward AI for creative ideation",
+      "valence": "negative",
+      "grounding_span": "I think that I personally still wouldn't assume that an AI chatbot would provide me with very creative, out-of-the-box ideas"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Aspirational stance toward AI for literature search with journal integration",
+      "valence": "positive",
+      "grounding_span": "it would be very helpful to have the bulk of that done by an AI assistant"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Cautious optimism about AI reliability for research community",
+      "valence": "ambivalent",
+      "grounding_span": "it's very important that those tools become much more reliable in their results to foster confidence in what can be a very sceptical community"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Risk-based task delegation — distinguishes low-risk from high-risk tasks",
+      "grounding_span": "For debugging and code explanation there are no perceived 'risks' or downsides to using AI in research in my opinion"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Verification-by-outcome — uses task outcome to validate AI output",
+      "grounding_span": "For code debugging the validation is usually part of the process because you can tell whether or not the bug is fixed"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

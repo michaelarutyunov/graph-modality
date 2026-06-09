@@ -1,0 +1,169 @@
+{
+  "transcript_id": "work_0038",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as time-saving tool",
+      "label_negative": "AI as time-consuming and frustrating",
+      "bipolarity_complete": true,
+      "grounding_span": "the time saved by using the models has made a big difference"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as generator of diverse ideas",
+      "label_negative": "AI as producing same same stuff",
+      "bipolarity_complete": true,
+      "grounding_span": "ai often churns out same same stuff so for me it's definitely more about being given more diverse ideas"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as independent task delegator",
+      "bipolarity_complete": true,
+      "grounding_span": "probably more collaborative as I would take an idea then build on it"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as writing assistant",
+      "label_negative": "AI as causing loss of personal voice",
+      "bipolarity_complete": true,
+      "grounding_span": "I've also been able to improve my language In the written pieces by using AI"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as threat to creative workforce",
+      "label_negative": "AI as preserving human artistry",
+      "bipolarity_complete": true,
+      "grounding_span": "my worry is it will cause teaching to merely be about content delivery and we will take the humanity, artistry and creativity out of teaching"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and reduced workload",
+      "grounding_span": "time saved by using the models has made a big difference"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional growth and skill maintenance",
+      "grounding_span": "completing an application for a deputy principal position"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Human-centered education",
+      "grounding_span": "teaching is a human endeavour and the personable element needs to be done by a human"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "the time saved by using the models has made a big difference"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI iteration management",
+      "valence": "negative",
+      "grounding_span": "struggled to find the bestcopy"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Positive view of AI as idea generator",
+      "valence": "positive",
+      "grounding_span": "being given more diverse ideas I may not have thought about"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Concern for artists directly impacted by AI",
+      "valence": "negative",
+      "grounding_span": "my worry is it will cause teaching to merely be about content delivery"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through revision requests",
+      "grounding_span": "I got lost with about 4 or 5 different iterations and struggled to find the bestcopy"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based boundary setting — clear separation of AI-appropriate vs. human-only tasks",
+      "grounding_span": "the personable element needs to be done by a human"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

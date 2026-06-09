@@ -1,0 +1,169 @@
+{
+  "transcript_id": "work_0918",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as verification tool for own thinking",
+      "label_negative": "AI as replacement for own thinking",
+      "bipolarity_complete": true,
+      "grounding_span": "I much prefer to use my brain as much as possible and have AI double check me than have AI simply think for me"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as troubleshooting assistant for unfamiliar problems",
+      "label_negative": "Struggling alone with unfamiliar problems",
+      "bipolarity_complete": true,
+      "grounding_span": "I'm not gonna mess around with a machine I am not familiar with for hours when I could just use AI"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as diagnostic partner for multi-variable issues",
+      "label_negative": "Trial and error without systematic diagnosis",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is extremely helpful in thinking of possible reasons for issues on the spot"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI limitation in practical knowledge",
+      "label_negative": "AI competence in practical knowledge",
+      "bipolarity_complete": true,
+      "grounding_span": "it does feel limited in more practical knowledge issues"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Workplace encouragement of AI use",
+      "label_negative": "Workplace discouragement of AI use",
+      "bipolarity_complete": true,
+      "grounding_span": "my boss absolutely loves to use AI; this definitely encourages me to use AI more"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Personal understanding and competence",
+      "grounding_span": "I want to understand everything I work with the best I can"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "saves time in the long run"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Workplace harmony and approval",
+      "grounding_span": "my boss absolutely loves to use AI; this definitely encourages me to use AI more"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Preference for AI as verifier over thinker",
+      "valence": "positive",
+      "grounding_span": "I much prefer to use my brain as much as possible and have AI double check me"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for troubleshooting",
+      "valence": "positive",
+      "grounding_span": "the Zebra printer for one.. it just worked out great"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Acknowledgment of AI limitations in practical knowledge",
+      "valence": "negative",
+      "grounding_span": "it does feel limited in more practical knowledge issues"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Positive attitude toward AI use due to boss's encouragement",
+      "valence": "positive",
+      "grounding_span": "my boss absolutely loves to use AI; this definitely encourages me to use AI more"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Critical thinking and selective information provision",
+      "grounding_span": "I make an effort to think critically and only offer details that are important"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Preference for understanding over delegation",
+      "grounding_span": "I want to understand everything I work with the best I can"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

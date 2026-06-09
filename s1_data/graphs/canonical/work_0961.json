@@ -1,0 +1,167 @@
+{
+  "transcript_id": "work_0961",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI for generating measurable objectives",
+      "label_negative": "AI generating vague or non-measurable objectives",
+      "bipolarity_complete": true,
+      "grounding_span": "I am very satisfied when AI generates measurable objectives"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for documentation efficiency",
+      "label_negative": "AI use compromising confidentiality",
+      "bipolarity_complete": true,
+      "grounding_span": "If I use AI more I think I'll be able to spend less time on documentation"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Human collaboration in goal-setting",
+      "label_negative": "AI involvement in goal-setting",
+      "bipolarity_complete": true,
+      "grounding_span": "I usually like to collaborate with clients to create goals together"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Confidentiality in AI use",
+      "label_negative": "Risk of confidentiality breach with AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't know the best way to use AI and maintain confidentiality"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Therapeutic effectiveness and client progress tracking",
+      "grounding_span": "They just feel more easy to measure and monitor client's progress with"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Client-centered collaboration",
+      "grounding_span": "I usually like to collaborate with clients to create goals together"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Time efficiency for client interaction",
+      "grounding_span": "spend less time on documentation and more time meeting with people"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional integrity and ethical practice",
+      "grounding_span": "maintain confidentiality"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "I am very satisfied when AI generates measurable objectives"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Openness to increasing AI use in future",
+      "valence": "positive",
+      "grounding_span": "If I use AI more I think I'll be able to spend less time on documentation"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Resistance to AI in goal-setting",
+      "valence": "negative",
+      "grounding_span": "I never really ask AI to come up with goals for a treatment plan"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Concern about privacy with AI",
+      "valence": "negative",
+      "grounding_span": "I don't know the best way to use AI and maintain confidentiality"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through back-and-forth questioning",
+      "grounding_span": "I sometimes ask for more examples with more objective measures if the responses are too vague"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Selective delegation based on task nature",
+      "grounding_span": "I just feel like this is more central to the purpose and outcomes of therapy and I want to be more involved"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n2",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

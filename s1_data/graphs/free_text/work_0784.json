@@ -1,0 +1,180 @@
+{
+  "transcript_id": "work_0784",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as creative collaborator for lesson planning",
+      "label_negative": "AI as insufficiently creative or impractical",
+      "bipolarity_complete": true,
+      "grounding_span": "back and forth and refining together"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as workload reducer",
+      "label_negative": "AI as unnecessary or not worth the effort",
+      "bipolarity_complete": true,
+      "grounding_span": "taking some of the workload off of me"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Personal curation of educational materials",
+      "label_negative": "AI-driven curation of educational materials",
+      "bipolarity_complete": true,
+      "grounding_span": "I would rather gather and piece together certain books for the year myself"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as practical problem solver",
+      "label_negative": "AI as impractical or out of touch with reality",
+      "bipolarity_complete": true,
+      "grounding_span": "It's a problem solver"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Teacher's instinct over AI suggestions",
+      "label_negative": "Deference to AI suggestions over own instinct",
+      "bipolarity_complete": true,
+      "grounding_span": "I would never give the benefit to anything AI suggests over my own instincts"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative and engaging education",
+      "grounding_span": "more engaging ways to cement concepts into a child's mind"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Personal satisfaction and accomplishment",
+      "grounding_span": "brings me satisfaction and a sense of accomplishment"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and reduced workload",
+      "grounding_span": "taking some of the workload off of me"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Parental autonomy and judgment",
+      "grounding_span": "I would never give the benefit to anything AI suggests over my own instincts"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI as collaborative tool",
+      "valence": "positive",
+      "grounding_span": "It's satisfying and really helpful"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Openness to expanding AI use",
+      "valence": "positive",
+      "grounding_span": "I think I need to consider using it in more facets of my day"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Resistance to AI replacing teacher role",
+      "valence": "negative",
+      "grounding_span": "That is not something I would be comfortable with in any way"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Preference for personal curation over AI recommendations",
+      "valence": "negative",
+      "grounding_span": "I would rather gather and piece together certain books for the year myself"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through back-and-forth",
+      "grounding_span": "back and forth and refining together"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Practical constraint awareness",
+      "grounding_span": "maybe they are not something that I can practically do"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

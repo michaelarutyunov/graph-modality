@@ -1,0 +1,179 @@
+{
+  "transcript_id": "work_0598",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as research and administrative task delegator",
+      "label_negative": "AI as collaborative partner or creative thinker",
+      "bipolarity_complete": true,
+      "grounding_span": "I will use AI to quickly research a breadth of topics and provide relevant articles"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as threat to student learning and assessment integrity",
+      "label_negative": "AI as legitimate educational tool for students",
+      "bipolarity_complete": true,
+      "grounding_span": "students using AI to complete standard-driven tasks"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Human-centered teaching and student connection",
+      "label_negative": "AI-reliant or automated teaching",
+      "bipolarity_complete": true,
+      "grounding_span": "the important work of connecting with students"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Preservation of personal creative and critical thinking",
+      "label_negative": "Delegation of creative and critical thinking to AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I'd prefer to keep creative and critical thinking tasks to myself"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as tool for task delegation rather than collaboration",
+      "label_negative": "AI as collaborative partner",
+      "bipolarity_complete": true,
+      "grounding_span": "More likely to delegate. Collaborative tasks are things I choose to do with coworkers."
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Meaningful human connection in education",
+      "grounding_span": "the important work of connecting with students"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Personal intellectual growth and skill maintenance",
+      "grounding_span": "These skills are important to me for a number of reasons"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Educational integrity and authentic student assessment",
+      "grounding_span": "students using AI to complete standard-driven tasks"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for administrative tasks",
+      "valence": "positive",
+      "grounding_span": "Not certain I've been frustrated by it too many times"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Resistance to AI in creative and critical thinking",
+      "valence": "negative",
+      "grounding_span": "I'd prefer to keep creative and critical thinking tasks to myself"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Concern about student AI misuse",
+      "valence": "negative",
+      "grounding_span": "students using AI to complete standard-driven tasks"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Confidence in human irreplaceability in teaching",
+      "valence": "positive",
+      "grounding_span": "I don't think an AI chatbot could effectively replace the human interactions"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Clear boundary-setting between AI-appropriate and human-essential tasks",
+      "grounding_span": "I'd prefer to keep creative and critical thinking tasks to myself"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Proactive input quality management to avoid frustration",
+      "grounding_span": "I try to be as clear and direct as possible, and remind myself that the AI is only as smart as what I input"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n5",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

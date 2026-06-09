@@ -1,0 +1,192 @@
+{
+  "transcript_id": "work_0782",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as backup for low-energy days",
+      "label_negative": "Struggling through low-energy days without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "if I'm not feeling great or don't have energy to think, which happens at least 1 day a week, I'll use AI in part for all of it"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as supplement to creative process",
+      "label_negative": "AI as fully autonomous creator",
+      "bipolarity_complete": true,
+      "grounding_span": "working collaboratively with anything more creative"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as practical problem-solving guide for hands-on tasks",
+      "label_negative": "AI requiring iterative collaboration for routine work",
+      "bipolarity_complete": true,
+      "grounding_span": "typically with cold emails I ask for something with specific perimeters and the first response I copy and paste and use"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Authenticity of AI-generated content",
+      "label_negative": "AI-generated content that feels impersonal",
+      "bipolarity_complete": true,
+      "grounding_span": "I want it to feel personal. I don't ever want someone to view our company account and be able to tell it was AI"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as aid requiring human direction",
+      "label_negative": "AI as autonomous replacement",
+      "bipolarity_complete": true,
+      "grounding_span": "I think the AI needs me to operate it for these tasks so I don't actively consider it taking over my job"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "Concealing AI use from older bosses",
+      "label_negative": "Openly using AI with boss approval",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't make a show of using it in front of the owners, mostly because I want them to think I'm doing all of my work myself"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Creative authenticity and human expression",
+      "grounding_span": "I want it to feel personal"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional efficiency",
+      "grounding_span": "Every single time I don't have to write a cold email I feel satisfied"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Job security and skill relevance",
+      "grounding_span": "I want them to think I'm doing all of my work myself"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for email drafting",
+      "valence": "positive",
+      "grounding_span": "Every single time I don't have to write a cold email I feel satisfied"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Preference for personal touch in communication",
+      "valence": "negative",
+      "grounding_span": "I want it to feel personal. I don't ever want someone to view our company account and be able to tell it was AI"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Confidence in human creative superiority",
+      "valence": "positive",
+      "grounding_span": "I believe humans have a specific touch when it comes to storytelling that I don't believe AI could ever replicate"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Caution about revealing AI use to bosses",
+      "valence": "negative",
+      "grounding_span": "I don't make a show of using it in front of the owners"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Task-dependent delegation vs. collaboration",
+      "grounding_span": "working collaboratively with anything more creative... typically with cold emails I ask for something with specific perimeters and the first response I copy and paste and use"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Energy-aware task allocation — using AI when low energy",
+      "grounding_span": "if I'm not feeling great or don't have energy to think, which happens at least 1 day a week, I'll use AI in part for all of it"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n4",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

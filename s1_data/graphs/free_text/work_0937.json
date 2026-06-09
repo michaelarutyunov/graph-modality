@@ -1,0 +1,145 @@
+{
+  "transcript_id": "work_0937",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as knowledge mentor for skill development",
+      "label_negative": "AI as crutch that hinders independent learning",
+      "bipolarity_complete": true,
+      "grounding_span": "having an option like AI to turn to to help me learn and fill in the gaps of my knowledge is very useful"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as collaborative brainstorming partner",
+      "label_negative": "AI as task delegator that does work for me",
+      "bipolarity_complete": true,
+      "grounding_span": "I tend to use AI mainly for brainstorming and advice, as if it were a work colleague to talk to"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI advice specificity and accuracy",
+      "label_negative": "AI advice that is not applicable or suitable",
+      "bipolarity_complete": true,
+      "grounding_span": "AI can give me advice that is not applicable or suitable for the model of machine that I've specified"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Self-sufficiency and independence from AI",
+      "label_negative": "Reliance on AI for knowledge and skills",
+      "bipolarity_complete": true,
+      "grounding_span": "I want to upskill myself so that I can be more self sufficient and independent with my tasks"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Personal mastery and expertise",
+      "grounding_span": "I endeavour to learn that all myself so that other people could turn to me for help and advice in future"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Autonomy and self-reliance",
+      "grounding_span": "I want to upskill myself so that I can be more self sufficient and independent"
+    },
+    {
+      "id": "n7",
+      "type": "Stance",
+      "label": "Satisfaction with AI as learning resource",
+      "valence": "positive",
+      "grounding_span": "I have used it for project help and have learnt a lot about why certain woods are used for different purposes"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Frustration with inaccurate AI advice",
+      "valence": "negative",
+      "grounding_span": "One thing that has proved frustrating is getting advice on machine maintenance, as AI can give me advice that is not applicable"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Preference for doing design and planning myself",
+      "valence": "negative",
+      "grounding_span": "I prefer to do all of those things myself and aim to do the bulk of the work and project on my own"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Expectation of decreased AI use as expertise grows",
+      "valence": "positive",
+      "grounding_span": "I think the only way it will change is that I use it less"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Self-directed learning through questioning",
+      "grounding_span": "I will usually just ask for advice, I'll have the idea and outcome but often need help filling in the middle"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Independent verification when AI fails",
+      "grounding_span": "I typically do the research myself to find an instruction manual online or a youtube video to figure it out on my own"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n8",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

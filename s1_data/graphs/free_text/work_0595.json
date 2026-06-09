@@ -1,0 +1,180 @@
+{
+  "transcript_id": "work_0595",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as route optimization tool",
+      "label_negative": "Manual route planning",
+      "bipolarity_complete": true,
+      "grounding_span": "AI optimises the route for efficiency"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as clinical information source",
+      "label_negative": "Unaided medication knowledge",
+      "bipolarity_complete": true,
+      "grounding_span": "provide summaries of medication uses and interactions"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for drafting correspondence",
+      "label_negative": "Personal writing for authenticity",
+      "bipolarity_complete": true,
+      "grounding_span": "I've always preferred to do this myself to ensure that the note or email sounds like it's coming from me"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI for language translation",
+      "label_negative": "Manual translation with trust concerns",
+      "bipolarity_complete": true,
+      "grounding_span": "provide a Mandarin translation of our communications"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI reliability and verifiability",
+      "label_negative": "AI untrustworthiness",
+      "bipolarity_complete": true,
+      "grounding_span": "I can easily verify if I need to"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and time saving",
+      "grounding_span": "saves me a lot of time"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Authenticity in communication",
+      "grounding_span": "maintain continuity of personality"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Knowledge and understanding",
+      "grounding_span": "I do like to know the answer for myself"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Trust and accuracy",
+      "grounding_span": "issues with trust, as non-Chinese speakers don't know whether or not it's correct"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI route planning",
+      "valence": "positive",
+      "grounding_span": "It's quite effective and saves me a lot of time"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Preference for personal writing over AI",
+      "valence": "negative",
+      "grounding_span": "I've always preferred to do this myself"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI for time saving and knowledge",
+      "valence": "positive",
+      "grounding_span": "the time saving that AI can provide can be satisfying, especially if I don't know where to look for an answer"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Trust concern with AI translation",
+      "valence": "negative",
+      "grounding_span": "issues with trust, as non-Chinese speakers don't know whether or not it's correct"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Verification-oriented — checks AI output against trusted sources",
+      "grounding_span": "I do check the output when it's done"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Authenticity-driven — prioritizes personal voice in communication",
+      "grounding_span": "I find authenticity in my communication to be highly important"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

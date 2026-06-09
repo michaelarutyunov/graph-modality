@@ -1,0 +1,226 @@
+{
+  "transcript_id": "work_0640",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as ideation partner and knowledge manager",
+      "label_negative": "AI as mere answer provider",
+      "bipolarity_complete": true,
+      "grounding_span": "I use it for a back and forth ideation partner then have it sum up what we said to store it in Notion"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI automation for executive function support",
+      "label_negative": "Manual planning and organization",
+      "bipolarity_complete": true,
+      "grounding_span": "I have autism and ADHD, so executive function is a real problem for me. I use AI as much as possible to automate things"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI's ability to produce authentic voice",
+      "label_negative": "AI's generic output lacking personal touch",
+      "bipolarity_complete": true,
+      "grounding_span": "it can't add the touches that are going to make it sound like it's perfectly in my voice"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI efficiency for low-stakes tasks",
+      "label_negative": "Time-consuming manual effort for trivial tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "We did probably 25 minutes of meaningless work in 10 seconds"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as skill for working with technology",
+      "label_negative": "Obsolescence of manual skills",
+      "bipolarity_complete": true,
+      "grounding_span": "knowing how to work WITH AI to produce something that's better quality than something that's just human made or something that's just AI made? That skill's going to be essential"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as personalized external brain",
+      "label_negative": "Generic AI without memory of individual",
+      "bipolarity_complete": true,
+      "grounding_span": "I allow Perplexity to store memories... I'd also love for it to serve as my external brain"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI designed to teach concepts",
+      "label_negative": "AI that just gives answers",
+      "bipolarity_complete": true,
+      "grounding_span": "I really appreciate the move towards models that are designed to teach concepts, rather than just give answers"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Productivity and time efficiency",
+      "grounding_span": "every minute is incredibly valuable"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Personal authenticity and self-expression",
+      "grounding_span": "make it sound like it's perfectly in my voice"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Professional competence and future-proofing",
+      "grounding_span": "That skill's going to be essential, at least for the next few years"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Cognitive support and memory",
+      "grounding_span": "serve as my external brain, allowing me to search and recall previous information"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Educational effectiveness",
+      "grounding_span": "makes it easier for me to promote AI use to other educators"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Enthusiasm for AI as collaborative partner",
+      "valence": "positive",
+      "grounding_span": "I use it for a back and forth ideation partner"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Frustration with AI's lack of personal voice",
+      "valence": "negative",
+      "grounding_span": "it can't add the touches that are going to make it sound like it's perfectly in my voice"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Pride in AI's efficiency for trivial tasks",
+      "valence": "positive",
+      "grounding_span": "I was strangely... proud of the AI for helping us be so efficient"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Acceptance of AI as inevitable and need to adapt",
+      "valence": "mixed",
+      "grounding_span": "I think that we have to accept AI as a given at this point, and plan with it in mind"
+    },
+    {
+      "id": "n17",
+      "type": "Stance",
+      "label": "Optimism about personalized AI future",
+      "valence": "positive",
+      "grounding_span": "I think we're going to wind up with one predominant AI model that we personify and that is better trained on us as individuals"
+    },
+    {
+      "id": "n18",
+      "type": "Stance",
+      "label": "Appreciation for concept-teaching AI models",
+      "valence": "positive",
+      "grounding_span": "I really appreciate the move towards models that are designed to teach concepts"
+    },
+    {
+      "id": "n19",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic automation-seeking — offloads routine tasks to AI",
+      "grounding_span": "I use AI as much as possible to automate things"
+    },
+    {
+      "id": "n20",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative back-and-forth ideation — builds on AI responses",
+      "grounding_span": "There's a lot of back-and-forth, with me driving the direction of the conversation but also building off what AI is giving me"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n13",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n17",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n18",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n19",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n20",
+      "relation": "MODULATED_BY"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

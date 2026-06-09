@@ -1,0 +1,185 @@
+{
+  "transcript_id": "work_0128",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as time-saving tool",
+      "label_negative": "AI as requiring excessive oversight and correction",
+      "bipolarity_complete": true,
+      "grounding_span": "I'm finding I'm using it more and more to save time and to get more work done"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as writing assistant",
+      "label_negative": "AI formulaic and generic voice",
+      "bipolarity_complete": true,
+      "grounding_span": "make it sound less 'AI'... it can use a very AI voice which is hard to break out of"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as tool requiring human oversight",
+      "label_negative": "AI as independent autonomous agent",
+      "bipolarity_complete": true,
+      "grounding_span": "I never let it handle stuff independently as I don't feel it is quite there yet and still needs a lot of oversight"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI unreliability and inconsistency",
+      "bipolarity_complete": true,
+      "grounding_span": "it did often struggle to remember all the instructions at one time so often needed reminding"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI capability in image editing",
+      "label_negative": "AI poor performance in image editing",
+      "bipolarity_complete": true,
+      "grounding_span": "I've tried to use it to edit images for me... but so far it's always done a really poor job"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "save time and to get more work done"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Authentic personal expression",
+      "grounding_span": "make it sound less 'AI'... maintain readability while preserving academic nuance"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Control and reliability in work outcomes",
+      "grounding_span": "I never let it handle stuff independently as I don't feel it is quite there yet"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Professional competence and future-proofing",
+      "grounding_span": "I am trying to make sure I am skilled at working with AI so that we can collaborate in future"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for wording tasks",
+      "valence": "positive",
+      "grounding_span": "I can save time this way"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI's inability to maintain context",
+      "valence": "negative",
+      "grounding_span": "it kept giving me comments on the initial draft rather than the pdf I'd just shared"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "mixed",
+      "grounding_span": "I think as AI gets better and doesn't need to be corrected and checked so much, I may let it do a little more for me"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Frustration with AI image generation",
+      "valence": "negative",
+      "grounding_span": "so far it's always done a really poor job"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative task expansion — gradually increasing AI's role",
+      "grounding_span": "I started off quite simply... but then gradually got it to do more with the actual content itself"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Human-first writing approach — prefers to write drafts manually before AI polish",
+      "grounding_span": "I prefer to do the bulk of the writing myself and then perhaps use an AI for its advice or to help polish"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n3",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

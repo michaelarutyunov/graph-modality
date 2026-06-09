@@ -1,0 +1,184 @@
+{
+  "transcript_id": "work_0174",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as writing refinement tool",
+      "label_negative": "AI as full writing replacement",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I don't like to have AI do writing for me. I want to be the one who is writing my captions"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as brainstorming partner for captions",
+      "label_negative": "AI providing generic, undifferentiated ideas",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "ask it to help me come up with ideas for captions"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as logistical planner for scheduling",
+      "label_negative": "Manual time-consuming scheduling",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "have it help me match each dog with what products will fit and then give me a schedule"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI output distinctiveness across clients",
+      "label_negative": "AI output sounding same across clients",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "the ideas it gives me for one client sound almost identical to the ideas it gave me for another"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Human creativity as differentiator from AI",
+      "label_negative": "AI indistinguishable from human creativity",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "human creativity is differentiated from AI"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Professional integrity and job ownership",
+      "valence": null,
+      "grounding_span": "it doesn't feel right to me to just hand that over to AI to do my job for me"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Creative authenticity and unique voice",
+      "valence": null,
+      "grounding_span": "I don't want them all sounding the same"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and time optimization",
+      "valence": null,
+      "grounding_span": "free up my time to be able to do higher level tasks"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Ethical resistance to AI writing replacement",
+      "valence": "negative",
+      "grounding_span": "it doesn't feel right to me to just hand that over to AI to do my job for me"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for logistical planning",
+      "valence": "positive",
+      "grounding_span": "it actually benefits my company for me to input this into AI and free up my time"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI generating similar ideas across clients",
+      "valence": "negative",
+      "grounding_span": "the ideas it gives me for one client sound almost identical to the ideas it gave me for another"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Confidence in human creativity as safeguard",
+      "valence": "positive",
+      "grounding_span": "human creativity is what protects my skills and my work"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Ethical boundary-setting based on job role",
+      "valence": null,
+      "grounding_span": "I feel like I was hired into this position to do a certain job"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative prompting to refine AI output",
+      "valence": null,
+      "grounding_span": "I'll just point out to the model that what it gave me sounds really similar"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

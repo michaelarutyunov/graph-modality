@@ -1,0 +1,181 @@
+{
+  "transcript_id": "work_0167",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as thinking partner for reasoning",
+      "label_negative": "AI as source of final answers",
+      "bipolarity_complete": true,
+      "grounding_span": "AI helps me to converse with my own thoughts"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI accuracy in clinical coding",
+      "label_negative": "AI inaccuracy in clinical coding",
+      "bipolarity_complete": true,
+      "grounding_span": "the AI mostly gets the codes incorrect"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as error checker for human mistakes",
+      "label_negative": "AI as source of errors",
+      "bipolarity_complete": true,
+      "grounding_span": "AI would be useful in pointing out mistakes which happen with human error"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI for consistent and precise coding",
+      "label_negative": "AI for inconsistent coding",
+      "bipolarity_complete": true,
+      "grounding_span": "AI could be expected to make coding much more consistent and precise"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as threat to job security",
+      "label_negative": "AI as opportunity for role evolution",
+      "bipolarity_complete": true,
+      "grounding_span": "the general feeling is that it will take over ours jobs eventually"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Professional expertise and self-trust",
+      "grounding_span": "I trust myself and my qualifications more"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Continuous learning and growth",
+      "grounding_span": "learning something new is always a good change for me"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Accuracy and consistency in coding",
+      "grounding_span": "make coding much more consistent and precise"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI as reasoning aid",
+      "valence": "positive",
+      "grounding_span": "I was happy with its answers and it informed my coding positively"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Skepticism toward AI accuracy",
+      "valence": "negative",
+      "grounding_span": "the AI mostly gets the codes incorrect"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Openness to AI as error checker",
+      "valence": "positive",
+      "grounding_span": "AI would be useful in pointing out mistakes which happen with human error"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Optimism about AI improving consistency",
+      "valence": "positive",
+      "grounding_span": "AI could be expected to make coding much more consistent and precise"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Acceptance of role change due to AI",
+      "valence": "positive",
+      "grounding_span": "I would be willing to embrace a new role in auditing"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative conversational reasoning",
+      "grounding_span": "I'll first ask plainly what it thinks the code is, then I'll correct it"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Proactive skill diversification",
+      "grounding_span": "I am always asking my boss to let me learn a new clinical speciality"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

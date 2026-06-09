@@ -1,0 +1,184 @@
+{
+  "transcript_id": "creativity_0009",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI usefulness for professional composition",
+      "label_negative": "AI as unreliable generator with deformities",
+      "bipolarity_complete": true,
+      "grounding_span": "I really like to use AI tools when I just can't find a good reference image for a pose"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as supplement to creative process",
+      "label_negative": "AI as time-wasting when it misinterprets",
+      "bipolarity_complete": true,
+      "grounding_span": "It cuts my time in half having the tools to help generate these compositions"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for mental load reduction",
+      "label_negative": "AI as crutch that undermines skill",
+      "bipolarity_complete": true,
+      "grounding_span": "there are times that I'm mentally drained and need the extra help"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as threat to creative workforce",
+      "label_negative": "AI as legitimate creative tool",
+      "bipolarity_complete": true,
+      "grounding_span": "people and companies trying to abuse AI by using it as a replacement for artists"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as assistant for complex work",
+      "label_negative": "AI as frustrating with deformities under deadline",
+      "bipolarity_complete": true,
+      "grounding_span": "the more intuitive of a personal artist assistant I will have"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative productivity and efficiency",
+      "grounding_span": "It cuts my time in half"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Preservation of human artistic value",
+      "grounding_span": "artists and creatives like myself who've spent years training and honing our skills"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Creative control and originality",
+      "grounding_span": "I just feel I have less control once I've told the AI what I'm looking for"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Positive appreciation for AI as research catalyst",
+      "valence": "positive",
+      "grounding_span": "I really like to use AI tools when I just can't find a good reference image"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI errors",
+      "valence": "negative",
+      "grounding_span": "it doesn't quite generate exactly what I ask for"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Concern for artists directly impacted by AI",
+      "valence": "negative",
+      "grounding_span": "people and companies trying to abuse AI by using it as a replacement for artists"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Optimism about AI as future personal assistant",
+      "valence": "positive",
+      "grounding_span": "I see it becoming more refined so that the process becomes more streamlined"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative back-and-forth prompting",
+      "grounding_span": "I simply try to guide it"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic boundary-setting between AI assistance and personal expertise",
+      "grounding_span": "I'm very skilled in color theory but there are times that I'm mentally drained and need the extra help"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n4",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,132 @@
+{
+  "transcript_id": "work_0726",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative conversational partner",
+      "label_negative": "AI as task-execution tool",
+      "bipolarity_complete": true,
+      "grounding_span": "it is just someone (something?) to bounce ideas off, ask questions, etc."
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as knowledge resource for animal behavior",
+      "label_negative": "Reliance on own limited knowledge",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI to ask questions about pet behaviors, training, health, etc."
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for client communication",
+      "label_negative": "Direct confrontation without AI guidance",
+      "bipolarity_complete": true,
+      "grounding_span": "I had a convo about how to discuss with my clients without hurting their feelings or offending them."
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as companion in solitary work",
+      "label_negative": "Working in isolation without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "Petsitting can be a rather solitary business, and I don't always have a human around that knows things about animal behavior"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Professional competence and client satisfaction",
+      "grounding_span": "I got insights as to how to bring up the situation with my client, ideas on what to say and how to say it, etc."
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Personal learning and curiosity",
+      "grounding_span": "I am learning more about animal behavior than I would have if I did not have AI."
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Autonomy and personal control",
+      "grounding_span": "I am my own boss and I am free to do what I wish"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "That was very helpful and satisfying."
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Indifference to workplace AI pressure",
+      "valence": "mixed",
+      "grounding_span": "I don't think it will change too much. I don't really see how this could evolve much past the point I am now"
+    },
+    {
+      "id": "n10",
+      "type": "CognitiveStyleMarker",
+      "label": "Ongoing conversational exploration — develops ideas through dialogue",
+      "grounding_span": "I tend to have ongoing conversations as ideas develop."
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based boundary setting — clear separation of AI-appropriate vs. human-only tasks",
+      "grounding_span": "I don't have to have it, I just personally find it helpful."
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n10",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

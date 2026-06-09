@@ -1,0 +1,138 @@
+{
+  "transcript_id": "work_0735",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as tone adjuster for social media captions",
+      "label_negative": "AI as creator of cringy or inauthentic content",
+      "bipolarity_complete": true,
+      "grounding_span": "I'll ask AI to reword the caption I've thought of to better fit the demographic"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as rewording assistant for short text",
+      "label_negative": "AI as writer of long-form content",
+      "bipolarity_complete": true,
+      "grounding_span": "if I were writing paragraphs, I would want to write it myself, but just one sentence or so doesn't really seem lazy"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Preserving critical thinking and writing skills",
+      "label_negative": "Over-reliance on AI leading to skill loss",
+      "bipolarity_complete": true,
+      "grounding_span": "I am a critical thinker, and it's a skill I don't want to lose by asking AI to do my critical thinking for me"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as impersonal tool without emotional attachment",
+      "label_negative": "AI as entity deserving emotional reaction",
+      "bipolarity_complete": true,
+      "grounding_span": "I know I'm talking to a computer and not a real person, so there's no reason to get mad or upset"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Authentic communication with target audience",
+      "grounding_span": "I want to convey positive messages that don't seem cringy to 20-something year olds"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Personal cognitive autonomy and skill preservation",
+      "grounding_span": "I am a critical thinker, and it's a skill I don't want to lose"
+    },
+    {
+      "id": "n7",
+      "type": "Stance",
+      "label": "Satisfaction with AI for specific rewording tasks",
+      "valence": "positive",
+      "grounding_span": "I'll ask AI to reword the caption I've thought of to better fit the demographic"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Resistance to AI for tasks requiring critical thinking",
+      "valence": "negative",
+      "grounding_span": "I could use AI to draft emails, but I don't. I'm capable of doing that myself."
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Emotional neutrality toward AI",
+      "valence": "ambivalent",
+      "grounding_span": "It doesn't usually make me feel a particular way"
+    },
+    {
+      "id": "n10",
+      "type": "CognitiveStyleMarker",
+      "label": "Intentional selective delegation based on task scope",
+      "grounding_span": "if I were writing paragraphs, I would want to write it myself, but just one sentence or so doesn't really seem lazy"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Critical thinking preservation mindset",
+      "grounding_span": "I am a critical thinker, and it's a skill I don't want to lose"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n8",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n10",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

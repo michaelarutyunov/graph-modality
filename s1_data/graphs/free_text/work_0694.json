@@ -1,0 +1,147 @@
+{
+  "transcript_id": "work_0694",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as initial information source for regulation checks",
+      "label_negative": "AI as sole authoritative source without verification",
+      "bipolarity_complete": true,
+      "grounding_span": "I will use AI as a starting place, then compare the answer I receive with a search engine as well as internal documents"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as jargon translator for client communication",
+      "label_negative": "Using technical jargon directly with clients",
+      "bipolarity_complete": true,
+      "grounding_span": "I will ask AI how I can explain to the client, in regular terms, what I need"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as search term generator for rare problems",
+      "label_negative": "Flying blind without AI guidance",
+      "bipolarity_complete": true,
+      "grounding_span": "By using AI, i was able to find key words that aide in my search through my internal documents"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI reliability and trustworthiness",
+      "label_negative": "AI unreliability requiring independent verification",
+      "bipolarity_complete": true,
+      "grounding_span": "as AI becomes more reliable and updates more frequently, we will be allowed to trust AI to provide answers"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI use for internal company guidelines",
+      "label_negative": "AI use for external regulations",
+      "bipolarity_complete": false,
+      "grounding_span": "Items that are set by my company, rather than government or external laws or regulations, are easier to complete myself"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Accuracy and compliance in mortgage processing",
+      "grounding_span": "confirm current regulations within my industry"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Client understanding and satisfaction",
+      "grounding_span": "so that my clients can understand, in laymen's terms, what items are required"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency in problem-solving",
+      "grounding_span": "made confirming that answer much easier with my internal documents, instead of feeling like I am 'flying blind'"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a jumping point for verification",
+      "valence": "positive",
+      "grounding_span": "I will use AI as a starting place, then compare the answer I receive with a search engine as well as internal documents"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI when discrepancies arise",
+      "valence": "negative",
+      "grounding_span": "When I come across a discrepancy, I will go back to AI to question why a google search may be providing me different information"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Optimism about AI's future role",
+      "valence": "positive",
+      "grounding_span": "I absolutely think AI will start to play a more prominent role"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Systematic cross-referencing — uses AI as starting point then verifies with multiple sources",
+      "grounding_span": "I will use AI as a starting place, then compare the answer I receive with a search engine as well as internal documents"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative discrepancy resolution — circles back to AI when finding inconsistencies",
+      "grounding_span": "When I come across a discrepancy, I will go back to AI to question why a google search may be providing me different information"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

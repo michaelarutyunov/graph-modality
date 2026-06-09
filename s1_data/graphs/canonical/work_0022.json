@@ -1,0 +1,180 @@
+{
+  "transcript_id": "work_0022",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as practical problem solver",
+      "label_negative": "Manual trial-and-error for technical setup",
+      "bipolarity_complete": true,
+      "grounding_span": "After struggling to get DosBox set up and run the program, I simply asked AI. The instructions it gave were flawless and it took less than 5 minutes"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as scheduling and data analysis tool for fairness",
+      "label_negative": "Manual tracking of shift distribution",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is then used to provide either a report or charts to visualize who is working where and how often"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI unreliability for high-stakes tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "If nothing is pressing, I feel comfortable with just using AI and not having to double check things as much"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Trust in AI for high-stakes tasks (billing)",
+      "label_negative": "Human necessity for nuanced high-stakes billing",
+      "bipolarity_complete": true,
+      "grounding_span": "I would like to maybe one day use AI for this, but currently it is too vital to entrust to AI as there is too much nuance to the entries"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as learning and research tool",
+      "label_negative": "Traditional learning without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I have actually really been enjoying AI in my spare time simply as a learning tool"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "it took less than 5 minutes to set up after struggling for over an hour"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Fairness and equity in scheduling",
+      "grounding_span": "create a fair and equitable schedule"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Accuracy and error prevention in billing",
+      "grounding_span": "there can be no mistakes or the claims will be rejected"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Understanding and knowledge acquisition",
+      "grounding_span": "It makes information extremely accessible, and is able to provide examples instantly"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for technical setup",
+      "valence": "positive",
+      "grounding_span": "The instructions it gave were flawless and it took less than 5 minutes"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Cautious trust in AI",
+      "valence": "positive",
+      "grounding_span": "I will feed a few months worth of data if no issues have arisen which allows me to keep an eye on things"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Hesitance toward AI for high-stakes billing",
+      "valence": "negative",
+      "grounding_span": "currently it is too vital to entrust to AI as there is too much nuance to the entries"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "positive",
+      "grounding_span": "I think I will be moving to use AI more in the future, especially as it keeps improving"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-specific calibration of AI use",
+      "grounding_span": "If serious issues come up, I may still use AI to get some data analysis but I will also be double checking the information myself"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Proactive learning and skill maintenance",
+      "grounding_span": "if there's ever any technical issues where the AI isn't functioning properly, it is important to still know how to do things yourself"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

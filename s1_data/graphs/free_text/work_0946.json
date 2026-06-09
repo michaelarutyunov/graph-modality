@@ -1,0 +1,176 @@
+{
+  "transcript_id": "work_0946",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as time-saving research tool for community services",
+      "label_negative": "AI as unreliable or hallucination-prone source",
+      "bipolarity_complete": true,
+      "grounding_span": "It saves on research time"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI accuracy and reliability",
+      "label_negative": "AI hallucination and inaccuracy",
+      "bipolarity_complete": true,
+      "grounding_span": "I am aware that AI hallucinates so I will double check recommendations"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI use in patient care documentation",
+      "label_negative": "Human-only patient care documentation",
+      "bipolarity_complete": true,
+      "grounding_span": "Anything involving patients care, I wouldn't feel confident delegating that to AI yet"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as supplement to maintain research skills",
+      "label_negative": "AI over-reliance diminishing research skills",
+      "bipolarity_complete": true,
+      "grounding_span": "I primarily use my research skills and supplement occasionally with AI tools"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Work efficiency and time savings",
+      "grounding_span": "It saves on research time"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Accuracy and legal safety in documentation",
+      "grounding_span": "it all needs to be completely accurate"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional competence and skill development",
+      "grounding_span": "keeping my research skills sharp is of importance"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Satisfaction with AI for research efficiency",
+      "valence": "positive",
+      "grounding_span": "I have always been generally satisfied with my use of AI"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Caution toward AI due to hallucination risk",
+      "valence": "negative",
+      "grounding_span": "I am aware that AI hallucinates so I will double check recommendations"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Resistance to AI in patient care documentation",
+      "valence": "negative",
+      "grounding_span": "Anything involving patients care, I wouldn't feel confident delegating that to AI yet"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Intentional limited AI use to preserve skills",
+      "valence": "mixed",
+      "grounding_span": "I primarily use my research skills and supplement occasionally with AI tools"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative verification — double-checking AI outputs",
+      "grounding_span": "I will double check recommendations to ensure they are accurate"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based boundary setting — strict separation of AI-appropriate vs. AI-inappropriate tasks",
+      "grounding_span": "Anything involving patients care, I wouldn't feel confident delegating that to AI yet"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

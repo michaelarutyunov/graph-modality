@@ -1,0 +1,191 @@
+{
+  "transcript_id": "work_0558",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as planning and structuring tool",
+      "label_negative": "AI as unreliable execution tool",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI to generate outlines for longer work"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI hallucination and factual errors",
+      "bipolarity_complete": true,
+      "grounding_span": "AI isn't always correct"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as one-shot output generator",
+      "bipolarity_complete": true,
+      "grounding_span": "I sent those back to the AI and asked if it had any suggestions about grouping or ordering the questions differently"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as writing assistant",
+      "label_negative": "AI as threat to authentic writing",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is a tool, just like a thesaurus or a graphic organizer"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI integration with existing platforms",
+      "label_negative": "AI as isolated standalone tool",
+      "bipolarity_complete": true,
+      "grounding_span": "I like how it is starting to integrate with other platforms"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Client trust and credibility",
+      "grounding_span": "My clients trust me and I value that"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Creative autonomy and enjoyment of writing",
+      "grounding_span": "I like to do the actual writing myself - partly because I enjoy it"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "I love that a lot of the tedious background work can be handled by AI"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for planning",
+      "valence": "positive",
+      "grounding_span": "It was really helpful, I copied the outline into a document and was able to create a template"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Distrust of AI for factual accuracy",
+      "valence": "negative",
+      "grounding_span": "If anything is incorrect, it makes me look bad and I could lose a long-term client. I'm not taking that risk."
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Openness to increasing AI use in future",
+      "valence": "positive",
+      "grounding_span": "I sent those back to the AI and asked if it had any suggestions about grouping or ordering the questions differently"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Resistance to AI for authentic writing",
+      "valence": "negative",
+      "grounding_span": "There are a lot of people who use AI and then call themselves writers"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Pragmatic acceptance of AI as a tool",
+      "valence": "positive",
+      "grounding_span": "I didn't rant about social media destroying my job, I learned to use hashtags and images"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative iterative refinement — works back and forth with AI",
+      "grounding_span": "I tweaked a couple of the suggestions. Then, I sent those back to the AI and asked if it had any suggestions"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based boundary setting — separates creative from non-creative tasks",
+      "grounding_span": "I use AI for the planning any myself for the execution"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

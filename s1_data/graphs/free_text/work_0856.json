@@ -1,0 +1,192 @@
+{
+  "transcript_id": "work_0856",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI for resizing and resolution enhancement",
+      "label_negative": "Manual resizing with limited source images",
+      "bipolarity_complete": true,
+      "grounding_span": "AI can do a good job of bringing photos to the necessary resolution"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for repetitive busywork",
+      "label_negative": "Manual execution of repetitive tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "busywork- essentially, I'll try and see if there's an AI alternative"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for image completion and object alteration",
+      "label_negative": "Manual precise editing with artistic control",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't like using AI for these tasks"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI predictability and consistency",
+      "label_negative": "AI unpredictability and inconsistency",
+      "bipolarity_complete": true,
+      "grounding_span": "it can't do it predictably, and it can't do it precisely the way I want it"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as threat to artistic integrity",
+      "label_negative": "AI as harmless tool",
+      "bipolarity_complete": true,
+      "grounding_span": "it feels a little hypocritical and cannibalizing"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "Management pressure to use AI",
+      "label_negative": "Coworker resistance to AI",
+      "bipolarity_complete": true,
+      "grounding_span": "A manager of mine has been encouraging us to utilize AI where we can"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Artistic control and precision",
+      "grounding_span": "I can't rely on AI to do the same job consistently and predictably"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "it just helps to expedite otherwise time consuming tasks"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Creative autonomy and skill development",
+      "grounding_span": "I'd prefer to just prove through my work that I'm more valuable than what an AI can spit out"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Positive toward AI for resizing",
+      "valence": "positive",
+      "grounding_span": "AI can do a good job of bringing photos to the necessary resolution"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Negative toward AI for creative editing",
+      "valence": "negative",
+      "grounding_span": "I don't like using AI for these tasks"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with AI unpredictability",
+      "valence": "negative",
+      "grounding_span": "it was really frustrating to get it to do a nice looking thing once and then never be able to replicate that"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Ambivalent toward workplace AI pressure",
+      "valence": "ambivalent",
+      "grounding_span": "I really see the points of both my coworkers and my manager"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Piecemeal delegation — uses AI for isolated subtasks to maintain control",
+      "grounding_span": "I try and use it as piece-meal as possible in order to maintain control"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Diplomatic bridging — navigates conflicting social expectations",
+      "grounding_span": "It's definitely a lot of toeing the line at the moment"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,156 @@
+{
+  "transcript_id": "work_0476",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as efficient summarizer for initial overview",
+      "label_negative": "AI as insufficient for detailed context",
+      "bipolarity_complete": true,
+      "grounding_span": "the summary does make it easier to see and understand helpful information"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as roadmap to identify relevant details",
+      "label_negative": "AI as replacement for detailed review",
+      "bipolarity_complete": true,
+      "grounding_span": "The summary can be helpful in mentioning an event or interaction that I know to go looking for"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI accuracy and reliability",
+      "label_negative": "AI providing wrong information",
+      "bipolarity_complete": true,
+      "grounding_span": "it is important the AI does not provide wrong information"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Human emotional intelligence vs AI capability",
+      "label_negative": "AI fully taking over human touch",
+      "bipolarity_complete": true,
+      "grounding_span": "the skills are mostly emotional intelligence based and it's hard to imagine AI fully taking over"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Efficient information access",
+      "grounding_span": "easier to see and understand helpful information"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Client relationship preservation",
+      "grounding_span": "could cause an error or mistake in working with the client that could lead to the client terminating the relationship"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Human judgment and contextual understanding",
+      "grounding_span": "human touch can still be very important"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Satisfaction with AI as initial overview tool",
+      "valence": "positive",
+      "grounding_span": "Overall I think it is helpful"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Frustration with AI lacking detailed information",
+      "valence": "negative",
+      "grounding_span": "where I have been left wanting is needing more detailed information"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Concern about AI errors harming client relationships",
+      "valence": "negative",
+      "grounding_span": "if it provided wrong information, it could cause an error or mistake"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Openness to AI expanding into other roles",
+      "valence": "positive",
+      "grounding_span": "I think it will expand into other areas to some extent"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Preference for detailed review over summary reliance",
+      "grounding_span": "it can be more helpful for me to review detailed notes instead of relying on just a summary"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Risk-aware calibration of AI use",
+      "grounding_span": "it is important the AI does not provide wrong information"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

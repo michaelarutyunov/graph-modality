@@ -1,0 +1,185 @@
+{
+  "transcript_id": "creativity_0031",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative team member",
+      "label_negative": "AI as non-creative tool",
+      "bipolarity_complete": true,
+      "grounding_span": "Working with AI feels like that - like we are a team working together to make something special"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI output realism and consistency",
+      "label_negative": "AI output with artifacts (e.g., six fingers)",
+      "bipolarity_complete": true,
+      "grounding_span": "anything AI-generated has to look real - characters have to be consistent, people can't have 6 fingers"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI integration invisibility",
+      "label_negative": "AI integration being apparent",
+      "bipolarity_complete": true,
+      "grounding_span": "stitch together some stills we shot with footage we took by using AI, without it looking like I'm using AI"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI tool mastery through learning",
+      "label_negative": "AI tool frustration and failure",
+      "bipolarity_complete": true,
+      "grounding_span": "I spend a lot of time learning - or figuring out - how to use different tools to accomplish what I want"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as labor displacement force",
+      "label_negative": "AI as job creator or neutral",
+      "bipolarity_complete": true,
+      "grounding_span": "as companies figure out how to use these tools, they will need less people to do the creative work"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative achievement and satisfaction",
+      "grounding_span": "when I get a good result, I am very happy"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Seamless visual storytelling",
+      "grounding_span": "trying to get a smooth transition has been very interesting"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and capability expansion",
+      "grounding_span": "I can do more things"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Job security and industry stability",
+      "grounding_span": "they will need less people to do the creative work"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI collaboration",
+      "valence": "positive",
+      "grounding_span": "when I get a good result, I am very happy"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI unpredictability",
+      "valence": "negative",
+      "grounding_span": "trying to make that one fix will set off a whole slew of other problems"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Concern about job displacement",
+      "valence": "negative",
+      "grounding_span": "they will need less people to do the creative work"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Optimism about AI progress",
+      "valence": "positive",
+      "grounding_span": "The video side is coming along faster than that"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative experimentation and trial-and-error",
+      "grounding_span": "I'm going to have to just run a hundred variations of the same thing before I get one perfect generation"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Historical pattern recognition across career stages",
+      "grounding_span": "It's not really any different than the past couple decades have been though"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

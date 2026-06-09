@@ -1,0 +1,208 @@
+{
+  "transcript_id": "work_0755",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as code scaffolding tool",
+      "label_negative": "Manual code scaffolding without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I use it to scaffold AWS CDK or SAM code very frequently"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for data analysis",
+      "label_negative": "AI as autonomous executor of EDA",
+      "bipolarity_complete": true,
+      "grounding_span": "if I'm doing EDA on a dataset I prefer to use LLMs to bounce ideas off"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as task delegator for complete tasks",
+      "label_negative": "AI requiring close supervision for complex tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "Kilo Code or Claude Code and they are excellent for delegating complete tasks to"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI code quality and reliability",
+      "label_negative": "AI unreliability and off-track behavior",
+      "bipolarity_complete": true,
+      "grounding_span": "copilot tends to lose track of its task and will often go off the rails"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI use sanctioned by workplace",
+      "label_negative": "Restrictive workplace AI policies",
+      "bipolarity_complete": true,
+      "grounding_span": "my work is very restrictive with the use of AI tools"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as junior developer or coworker",
+      "label_negative": "AI as unreliable tool requiring constant oversight",
+      "bipolarity_complete": true,
+      "grounding_span": "AI moving towards being a sort of Junior software engineer"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and efficiency in code development",
+      "grounding_span": "scaffold AWS CDK or SAM code very frequently"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Epistemic accuracy and understanding",
+      "grounding_span": "bounce ideas off"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Workflow autonomy and control",
+      "grounding_span": "I need to give it certain directions"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Skill preservation and professional adaptability",
+      "grounding_span": "most of my contributions would be effective prompting and being able to understand the code"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI for simple syntax issues",
+      "valence": "negative",
+      "grounding_span": "The model was very bad about knowing the proper syntax for DB2"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI for code generation",
+      "valence": "positive",
+      "grounding_span": "I use it to scaffold AWS CDK or SAM code very frequently"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Optimism about AI for career advancement",
+      "valence": "positive",
+      "grounding_span": "AI moving towards being a sort of Junior software engineer"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Compliance with workplace AI discouragement",
+      "valence": "negative",
+      "grounding_span": "my work is very restrictive with the use of AI tools"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic task delegation — uses AI only for specific, bounded tasks",
+      "grounding_span": "the level of AI use varies per task"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Selective and independent AI adoption",
+      "grounding_span": "I think I have probably effected my coworkers more in towards the use of AI"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n5",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

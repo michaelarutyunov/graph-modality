@@ -1,0 +1,189 @@
+{
+  "transcript_id": "work_0705",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI for data analysis and insight generation",
+      "label_negative": "Manual data compilation without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI to help analyze the production numbers and other KPI of my subordinates"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for process verification and flaw detection",
+      "label_negative": "Unchecked processes with potential flaws",
+      "bipolarity_complete": true,
+      "grounding_span": "I will double-check new processes using AI to identify any obvious flaws"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for team engagement and morale",
+      "label_negative": "Manual creation of team-building content",
+      "bipolarity_complete": true,
+      "grounding_span": "I also use it to create trivia and fun facts for daily standups"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Approved AI use with demonstrated impact",
+      "label_negative": "Unapproved or unproven AI use",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI where it has been approved with my bosses because I can show the impact"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as efficiency tool for time-consuming tasks",
+      "label_negative": "Manual handling of time-consuming tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "it would give me about an hour each week of my time for other things"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI for standardized tracking and transparency",
+      "label_negative": "Inconsistent manual tracking across teams",
+      "bipolarity_complete": true,
+      "grounding_span": "Now the whole warehouse uses those spreadsheets"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI supplementing human leadership skills",
+      "label_negative": "AI replacing human leadership entirely",
+      "bipolarity_complete": true,
+      "grounding_span": "the AI can help supplement my workflow"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Operational efficiency and time savings",
+      "grounding_span": "showing big time savings helps with presenting it to my bosses"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Informed and supportive leadership",
+      "grounding_span": "It helps me be a better leader with the check ins"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Organizational buy-in and standardization",
+      "grounding_span": "Now the whole warehouse uses those spreadsheets"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Focus on human-centric aspects of work",
+      "grounding_span": "I can focus on the people"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI-driven system creation",
+      "valence": "positive",
+      "grounding_span": "This has made all shifts more aware of what is going on with their teams"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Frustration with restricted AI automation",
+      "valence": "negative",
+      "grounding_span": "I have not been allowed to automate tasks in several areas that I believe would make my workload easier"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Strategic optimism about future AI integration",
+      "valence": "positive",
+      "grounding_span": "Hopefully I can keep pushing new systems into being supplemented with AI"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic documentation and impact tracking",
+      "grounding_span": "I document thoroughly as not everyone understands why and how I am doing what I do with the AI"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through targeted questioning",
+      "grounding_span": "ask for a more in-depth analysis of anything that seems out of the ordinary"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n12",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n4",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

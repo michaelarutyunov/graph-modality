@@ -1,0 +1,162 @@
+{
+  "transcript_id": "work_0540",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as efficient first-draft generator",
+      "label_negative": "AI as final product without human refinement",
+      "bipolarity_complete": true,
+      "grounding_span": "I initially delegate the complete task"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI output personalization and naturalness",
+      "label_negative": "AI output as template-like and impersonal",
+      "bipolarity_complete": true,
+      "grounding_span": "The responses are becoming more personal and don't just regurgitate the same wording"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Human touch in sensitive communications",
+      "label_negative": "Purely AI-generated sensitive communications",
+      "bipolarity_complete": true,
+      "grounding_span": "I still review all AI products like rec letters to infuse my personality"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI freeing time for personal interaction",
+      "label_negative": "AI not used, leading to time scarcity for personal interaction",
+      "bipolarity_complete": true,
+      "grounding_span": "Now, I'm able to personally meet with families to review information"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI handling rote administrative tasks",
+      "label_negative": "Human spending time on rote administrative tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I hope it can handle most of the rote paperwork like rec letters, transcript analysis"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Personalized student and family support",
+      "grounding_span": "I can gauge their passion, nerves, work ethic, and goals that are rarely evident on paper"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "AI satisfies me on a daily basis since it is able to create a thorough recommendation in seconds"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Authentic human connection",
+      "grounding_span": "people remember how you make them feel"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI as time-saver",
+      "valence": "positive",
+      "grounding_span": "AI satisfies me on a daily basis since it is able to create a thorough recommendation in seconds"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Dissatisfaction with colleagues' impersonal AI use",
+      "valence": "negative",
+      "grounding_span": "My colleagues use AI for all their writing components, much to the chagrin of some of our families"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Optimistic hope for AI evolution",
+      "valence": "positive",
+      "grounding_span": "I hope it can evolve into more personal writing automatically"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement — delegates then collaborates",
+      "grounding_span": "I initially delegate the complete task... But I still have not used a product from the first submission; instead, I'll collaborate"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Quality-conscious differentiation from peers",
+      "grounding_span": "It is for this reason that I still add my own contributions as a final product"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

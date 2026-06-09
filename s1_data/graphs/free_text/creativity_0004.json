@@ -1,0 +1,192 @@
+{
+  "transcript_id": "creativity_0004",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as admin task automator",
+      "label_negative": "AI as creative collaborator",
+      "bipolarity_complete": true,
+      "grounding_span": "AI tools are most useful for automating admin tasks, rather than as part of the creative process"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI text controllability",
+      "label_negative": "AI image uncontrollability",
+      "bipolarity_complete": true,
+      "grounding_span": "it's harder to get the necessary level of control over AI produced images than it is for text"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as threat to freelance jobs",
+      "label_negative": "AI as tool for skilled creatives",
+      "bipolarity_complete": true,
+      "grounding_span": "people are concerned that it will take jobs away from freelancers eventually"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI reliance on existing data vs human novelty",
+      "label_negative": "AI ability to generate novel content",
+      "bipolarity_complete": true,
+      "grounding_span": "it necessarily has to rely on data that already exists, which makes me think it would struggle to come up with something new"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as creative amplifier in VFX",
+      "label_negative": "AI as replacement for human creativity",
+      "bipolarity_complete": true,
+      "grounding_span": "AI could be most useful in, as a new tool for skilled digital creatives to add to their arsenal, unlocking new creative opportunities"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative time and energy",
+      "grounding_span": "frees up more time to focus on creative work"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Human creative uniqueness",
+      "grounding_span": "capture the same unique creative perspective that a human could have"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional integrity and accountability",
+      "grounding_span": "If I'm going to send something out with my name on it I need to be happy that everything is exactly how I want it"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Equitable access to creative careers",
+      "grounding_span": "create a higher barrier for entry for people who want to learn those trades"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Positive toward AI for admin efficiency",
+      "valence": "positive",
+      "grounding_span": "AI tools are most useful for automating admin tasks"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Negative toward AI for creative tasks",
+      "valence": "negative",
+      "grounding_span": "They're not currently advanced enough to be really useful for script writing, on screen graphic design"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Concern about job displacement",
+      "valence": "negative",
+      "grounding_span": "people are concerned that it will take jobs away from freelancers eventually"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Skepticism about AI novelty",
+      "valence": "negative",
+      "grounding_span": "it necessarily has to rely on data that already exists, which makes me think it would struggle to come up with something new"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Optimism about AI in VFX",
+      "valence": "positive",
+      "grounding_span": "AI could be most useful in, as a new tool for skilled digital creatives to add to their arsenal"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic task differentiation — separates admin from creative",
+      "grounding_span": "AI tools are most useful for automating admin tasks, rather than as part of the creative process"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Future-oriented scenario thinking — envisions specific applications",
+      "grounding_span": "I imagine that if a human VFX designer could use AI tools to automate some parts of the process"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

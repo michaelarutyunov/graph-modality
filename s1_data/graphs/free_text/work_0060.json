@@ -1,0 +1,204 @@
+{
+  "transcript_id": "work_0060",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as foundation builder for materials",
+      "label_negative": "AI as unreliable or incomplete creator",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is a foundation builder and then I construct the house on top"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI efficiency through multitasking",
+      "label_negative": "AI frustration from poor output",
+      "bipolarity_complete": true,
+      "grounding_span": "it feels efficient in that I get to multi task"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI collaborative and proactive interaction",
+      "label_negative": "AI unresponsive or non-collaborative",
+      "bipolarity_complete": true,
+      "grounding_span": "I appreciate it when the AI is collaborative and proactive with ideas and concepts"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI reliability in task execution",
+      "label_negative": "AI failure to deliver or follow instructions",
+      "bipolarity_complete": true,
+      "grounding_span": "AI routinely messes up this process and says I created XYZ but the file is not there"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Preserving human communication and creativity",
+      "label_negative": "Delegating communication to AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I like handling most communication myself even though AI can be helpful"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as learning tool for skill evolution",
+      "label_negative": "AI as crutch replacing skills",
+      "bipolarity_complete": true,
+      "grounding_span": "I try to maintain my skills by seeing what AI does and then creatively utilizing that to inform my own evolution in skillsets"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "it feels efficient in that I get to multi task"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Personal fulfillment and rewarding work",
+      "grounding_span": "I enjoy writing and interacting with people so that feels like using AI for that would be removing a rewarding part of my day"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Continuous skill development",
+      "grounding_span": "I try to maintain my skills by seeing what AI does and then creatively utilizing that to inform my own evolution in skillsets"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI as foundation builder",
+      "valence": "positive",
+      "grounding_span": "AI is a foundation builder and then I construct the house on top"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI unreliability",
+      "valence": "negative",
+      "grounding_span": "AI routinely messes up this process and says I created XYZ but the file is not there"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Appreciation for collaborative AI",
+      "valence": "positive",
+      "grounding_span": "I appreciate it when the AI is collaborative and proactive with ideas and concepts"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Preference for handling communication personally",
+      "valence": "negative",
+      "grounding_span": "I like handling most communication myself even though AI can be helpful"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Ethical concern about using AI as crutch",
+      "valence": "negative",
+      "grounding_span": "I dont find using it as a crutch as most do to be effective or ethical"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative back-and-forth refinement",
+      "grounding_span": "I tend to go back and forth with it"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Observational learning from AI output",
+      "grounding_span": "I try to maintain my skills by seeing what AI does and then creatively utilizing that to inform my own evolution in skillsets"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n2",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n5",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

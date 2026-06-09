@@ -1,0 +1,215 @@
+{
+  "transcript_id": "work_0369",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative partner that validates expertise",
+      "label_negative": "AI that dismisses user expertise",
+      "bipolarity_complete": true,
+      "grounding_span": "The AI acknowledged my expertise and said lets try other things. That was HUGE."
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI trust built through mutual adaptation",
+      "label_negative": "AI trust undermined by errors or lack of adaptation",
+      "bipolarity_complete": true,
+      "grounding_span": "Trust was a process for both the AI and me."
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as teacher that adjusts to user knowledge level",
+      "label_negative": "AI that provides one-size-fits-all explanations",
+      "bipolarity_complete": true,
+      "grounding_span": "It teaches me along the way. It does so in a fashion I can take in."
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI accuracy in numerical tasks",
+      "label_negative": "AI errors in numerical calculations",
+      "bipolarity_complete": true,
+      "grounding_span": "It does happen that the AI is wrong."
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as time-saving problem solver",
+      "label_negative": "AI as source of frustration and wasted time",
+      "bipolarity_complete": true,
+      "grounding_span": "Saving time and solving a problem are the two biggest things I have seen convince people."
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI integrated into existing platforms with user control",
+      "label_negative": "AI as standalone automation without user input",
+      "bipolarity_complete": true,
+      "grounding_span": "add a platform like this to QuickBooks versus having AI automate without input from a user."
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Validation and respect for expertise",
+      "grounding_span": "The AI acknowledged my expertise and said lets try other things. That was HUGE."
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "Saving time and solving a problem are the two biggest things"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Learning and understanding",
+      "grounding_span": "It teaches me along the way."
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "User control and autonomy",
+      "grounding_span": "AI automate without input from a user"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Positive stance toward AI that validates expertise",
+      "valence": "positive",
+      "grounding_span": "The AI acknowledged my expertise and said lets try other things. That was HUGE."
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Trust in AI after mutual adaptation",
+      "valence": "positive",
+      "grounding_span": "Trust was a process for both the AI and me."
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Negative stance toward AI errors in calculations",
+      "valence": "negative",
+      "grounding_span": "It does happen that the AI is wrong."
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Positive stance toward AI as time-saver",
+      "valence": "positive",
+      "grounding_span": "Saving time and solving a problem are the two biggest things"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Negative stance toward standalone automation without user input",
+      "valence": "negative",
+      "grounding_span": "AI automate without input from a user"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative and adaptive reasoning — adjusts approach based on AI response",
+      "grounding_span": "My approach is always collaborative."
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Systematic trust calibration through experience",
+      "grounding_span": "As I built up trust I switched to eyeballing it and trusting my own ability"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

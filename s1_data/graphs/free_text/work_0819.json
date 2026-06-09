@@ -1,0 +1,188 @@
+{
+  "transcript_id": "work_0819",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as time-saving planning assistant",
+      "label_negative": "AI as replacement for personal understanding",
+      "bipolarity_complete": true,
+      "grounding_span": "I do see myself using it more as a time-saving device for course planning"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as useful writing helper",
+      "label_negative": "AI as replacement for student writing skills",
+      "bipolarity_complete": true,
+      "grounding_span": "While I think AI can be a useful writing helper, I also think it's important for students to have those skills for themselves"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as tool for critical thinking about AI",
+      "label_negative": "AI as replacement for critical thinking",
+      "bipolarity_complete": true,
+      "grounding_span": "students write a podcast script on the use of AI in higher ed. That's been a useful project to address the pros and cons"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI transparency and source grounding",
+      "label_negative": "AI opacity and unverifiable outputs",
+      "bipolarity_complete": true,
+      "grounding_span": "Showing students how important it is to ground information, and being able to review the sources used to synthesize information"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as ethical assistant requiring vetting",
+      "label_negative": "AI as unvetted work replacement",
+      "bipolarity_complete": true,
+      "grounding_span": "if allow AI's work to go unvetted, that could lead to problems"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as tool for understanding AI limitations",
+      "label_negative": "AI as perfect and unquestionable",
+      "bipolarity_complete": true,
+      "grounding_span": "I've shown students how AI doesn't always get things right"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Personal understanding and connection with students",
+      "grounding_span": "I want to ensure that I understand what my students are doing rather than handing that all over to another entity"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Student skill development (reading, writing, critical thinking)",
+      "grounding_span": "I maintain reading and writing continue to be counted among them"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Ethical use of AI",
+      "grounding_span": "how we can learn to ethically use it"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Information verification and source transparency",
+      "grounding_span": "helps to verify the information ourselves and show students the value in that skill"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI for mentorship planning",
+      "valence": "positive",
+      "grounding_span": "the scheduling for the mentorship felt like a solid use of time and AI tools"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Skepticism toward AI as replacement for student learning",
+      "valence": "negative",
+      "grounding_span": "I fear that too many students use it as a replacement for their own critical and analytical thinking"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Openness to using AI more for planning and research",
+      "valence": "positive",
+      "grounding_span": "I do see myself using it more as a time-saving device for course planning"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Ethical caution about unvetted AI use",
+      "valence": "negative",
+      "grounding_span": "if allow AI's work to go unvetted, that could lead to problems"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Hands-on experiential verification — redoing materials to maintain personal connection",
+      "grounding_span": "I redo the worksheets myself each time to ensure I'm on the same page as my students"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Ethical boundary-setting — distinguishing assistance from replacement",
+      "grounding_span": "I find it unethical to use AI to do the work rather than students doing it themselves"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

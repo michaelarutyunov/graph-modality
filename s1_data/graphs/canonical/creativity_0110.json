@@ -1,0 +1,180 @@
+{
+  "transcript_id": "creativity_0110",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as time-saving tool",
+      "label_negative": "AI as threat to personal creative involvement",
+      "bipolarity_complete": true,
+      "grounding_span": "it is a huge time-saver"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as knowledge gap filler",
+      "label_negative": "AI as source of inaccurate or unverified information",
+      "bipolarity_complete": true,
+      "grounding_span": "I reach for AI so I can ensure that what I put together does align with the company's objective"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as brainstorming and idea generator",
+      "label_negative": "AI as crutch that reduces own creative ability",
+      "bipolarity_complete": true,
+      "grounding_span": "I used AI to brainstorm and compile info about the company"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as job threat",
+      "label_negative": "AI as manageable tool that can be adapted to",
+      "bipolarity_complete": true,
+      "grounding_span": "AI will one day replace me"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI adaptation to audience and market nuances",
+      "label_negative": "AI as enabler of authentic audience connection",
+      "bipolarity_complete": true,
+      "grounding_span": "I find myself more focused on making sure it doesn't read like AI was involved"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "it is a huge time-saver"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Trustworthiness and accuracy",
+      "grounding_span": "accuracy of statement, not 'fluff' or non confirmed statements"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Creative autonomy",
+      "grounding_span": "I'm not as involved in the process of trying to create that connection of the audience with the content"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Job security and creative livelihood",
+      "grounding_span": "put me out of work in these projects"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Positive appreciation of AI for efficiency",
+      "valence": "positive",
+      "grounding_span": "it is a huge time-saver"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Resistance to AI in creative work",
+      "valence": "negative",
+      "grounding_span": "I find myself being lazy and less able to work create on my own"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Concern about AI replacing jobs",
+      "valence": "negative",
+      "grounding_span": "AI will one day replace me"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Optimistic expectation for AI to speed workflow",
+      "valence": "positive",
+      "grounding_span": "as long as I keep adapting, I'll be better able to incorporate using AI into my work"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Adaptive and pragmatic problem-solving",
+      "grounding_span": "as long as I keep adapting, I'll be better able to incorporate using AI into my work"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Reflective self-awareness of skill change",
+      "grounding_span": "I find myself being lazy and less able to work create on my own like I had in the past"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

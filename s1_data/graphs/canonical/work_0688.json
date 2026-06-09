@@ -1,0 +1,179 @@
+{
+  "transcript_id": "work_0688",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI for repetitive simple tasks",
+      "label_negative": "AI for core skills like coding and architecture",
+      "bipolarity_complete": true,
+      "grounding_span": "repetitive tasks, such as updating pom files for Maven or updating libraries using npm, just take the longest amount of time and then that takes away time from actually implementing new features"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "Low-quality AI tools that break code",
+      "bipolarity_complete": true,
+      "grounding_span": "the AI tools we had (especially when they were plug-ins for intelliJ), were very low quality and broke code in 99% of cases"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI doing too much vs. doing too little",
+      "label_negative": "AI doing exactly the right amount",
+      "bipolarity_complete": true,
+      "grounding_span": "the AI changed a file that was not supposed to be included in the upgrade ... it actually did too much and too little simultaneously"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as learning tool despite heavy lifting",
+      "label_negative": "Struggling with AI due to lack of guidance",
+      "bipolarity_complete": true,
+      "grounding_span": "the more I learn about how to actually use the AI ... then the less it does things wrong"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Willingness to adopt new technology",
+      "label_negative": "Resistance to new technology",
+      "bipolarity_complete": true,
+      "grounding_span": "the willing/unwillingness of different employees toward AI is the exact same that has happened in the past with new technology"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "frees up my time for finishing JIRAs which the business actually want my team to finish"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Skill preservation and professional adaptability",
+      "grounding_span": "coding, architecture, problem-solving, etc. are the real skills I need in my job"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Effective communication",
+      "grounding_span": "communicating with the clients about what tech will be implemented"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Frustration with AI output quality",
+      "valence": "positive",
+      "grounding_span": "when we changed from a low quality tool ... to a high quality tool ... that's when I felt so satisfied"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI overstepping scope",
+      "valence": "negative",
+      "grounding_span": "the AI changed a file that was not supposed to be included in the upgrade ... it broke the tests"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "positive",
+      "grounding_span": "I'm excited for the future"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Resistance to over-reliance on AI",
+      "valence": "negative",
+      "grounding_span": "not to become over-reliant on it and lose the skills I need to keep"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement with limited back-and-forth",
+      "grounding_span": "only if it does it wrongly, do I provide more follow-up info"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic delegation with oversight",
+      "grounding_span": "I'll ask the AI to do something ... and then, only if it does it wrongly, do I provide more follow-up info"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

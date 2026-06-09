@@ -1,0 +1,219 @@
+{
+  "transcript_id": "work_0893",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as search and research tool",
+      "label_negative": "AI as unreliable for verification",
+      "bipolarity_complete": true,
+      "grounding_span": "I'll use AI for some search; some fact checking/research; document verification; ideation"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as troubleshooting and ideation partner",
+      "label_negative": "AI as generating unusable text",
+      "bipolarity_complete": true,
+      "grounding_span": "I'll use AI to bounce troubleshooting ideas off of; generate first state batch commands"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI document verification with human ordering",
+      "label_negative": "AI full-batch ordering without human guidance",
+      "bipolarity_complete": true,
+      "grounding_span": "We typically figure out the order first then do a combination of small batch then request a full-batch"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI for voice identification in documents",
+      "label_negative": "Human expertise in voice identification",
+      "bipolarity_complete": true,
+      "grounding_span": "models have not had success with identifying voice in written form"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI for blog ideation",
+      "label_negative": "AI for blog text generation",
+      "bipolarity_complete": true,
+      "grounding_span": "I'll sometimes use AI for ideation if I am having a hard time coming up with a topic but I'll never use it to generate text for the blog"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as conversational role-play partner",
+      "label_negative": "AI as non-interactive tool",
+      "bipolarity_complete": true,
+      "grounding_span": "I asked to take on the role of a student who only used Mac computers and I tried to convince them"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI trustworthiness and verification",
+      "label_negative": "AI opacity and black box",
+      "bipolarity_complete": true,
+      "grounding_span": "How do we verify the work of AI when much of it happens in a blackbox?"
+    },
+    {
+      "id": "n8",
+      "type": "Construct",
+      "label": "AI in legal analysis tools",
+      "label_negative": "AI ignoring fabricated citations",
+      "bipolarity_complete": true,
+      "grounding_span": "they all chose to ignore the hallucinated cases"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "Time is often the primary concern"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Accuracy and verification",
+      "grounding_span": "we will never assume the results of AI and always verify by hand"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Deep understanding and cognitive engagement",
+      "grounding_span": "editing your own writing can provide spontaneous understanding"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Trust and reliability",
+      "grounding_span": "Trust is important, and the best way to have trust is to verify"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Satisfaction with targeted brainstorming",
+      "valence": "positive",
+      "grounding_span": "Having that back and forth gave me a better understanding of how to approach Mac users"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Frustration with AI legal tools ignoring hallucinations",
+      "valence": "negative",
+      "grounding_span": "That was frustrating. Wouldn't you want legal tools tied to a legal databases blaring alarms"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Skepticism about AI trustworthiness due to opacity",
+      "valence": "negative",
+      "grounding_span": "How do we verify the work of AI when much of it happens in a blackbox?"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Resignation about job fragility",
+      "valence": "mixed",
+      "grounding_span": "we're all working everyday waiting to be replaced by something or somebody"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Systematic decomposition and verification",
+      "grounding_span": "We typically figure out the order first then do a combination of small batch then request a full-batch"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Role-playing and perspective-taking",
+      "grounding_span": "I asked to take on the role of a student who only used Mac computers"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n13",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n8",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n3",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n5",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

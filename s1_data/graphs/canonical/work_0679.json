@@ -1,0 +1,187 @@
+{
+  "transcript_id": "work_0679",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as debugging assistant",
+      "label_negative": "AI as unreliable for complex or unfamiliar code",
+      "bipolarity_complete": true,
+      "grounding_span": "I use it for all kinds of tasks, mostly coding, like debugging problems which seem unclear, or automating tedious tasks"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as last resort for design tasks",
+      "label_negative": "Human-only design and architecture decisions",
+      "bipolarity_complete": true,
+      "grounding_span": "This kind of tasks where I prefer to do it myself are more dealing with the design or architecture"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI code quality and reliability",
+      "label_negative": "AI-generated unfamiliar or inconsistent code",
+      "bipolarity_complete": true,
+      "grounding_span": "any errors on chatbot side would introduce a lot of unfamiliar code which I then have to digest"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as one-shot answer provider",
+      "bipolarity_complete": true,
+      "grounding_span": "It's more like a back and forth, because it's not rare that chatbot provides a solution that is perfect"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI adoption in workplace",
+      "label_negative": "Balanced AI adoption with human oversight",
+      "bipolarity_complete": true,
+      "grounding_span": "since leadership pushes to use them even more, we may end up with a lot of generated code no human has verified thoroughly"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as efficiency tool",
+      "label_negative": "AI as unnecessary overhead for automation",
+      "bipolarity_complete": true,
+      "grounding_span": "I think, since now I google less now, and not check random conversations of people which may or may not be relevant for my search, I am coming to the solutions much faster"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "I am coming to the solutions much faster, in more direct approach"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Code quality and correctness",
+      "grounding_span": "any new code needs to be tested, and if I ask for a bigger feature, it means I will have to deal with a large piece of unfamiliar code"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Job security and skill relevance",
+      "grounding_span": "I don't feel comfortable because in this capitalist world you are out of the window as soon as something or somebody cheaper can substitute you"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "I was surprised that it did everything just right, with only few minor details that needed change"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI's inability to maintain context",
+      "valence": "negative",
+      "grounding_span": "it was filling the fields in some random order. More frustratingly, the code was full or unnecessary if else conditions"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Concern about job displacement",
+      "valence": "negative",
+      "grounding_span": "I don't feel comfortable because in this capitalist world you are out of the window as soon as something or somebody cheaper can substitute you"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Optimism about future AI adoption",
+      "valence": "ambivalent",
+      "grounding_span": "I think there so much emphasis on efficiency and cost cutting these days, that we may be just blindly rushing into the unknown"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative step-by-step problem decomposition",
+      "grounding_span": "it's just to big to effectively discuss all possible points at once, and that's why I break it down"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Scope management — keeps AI tasks small to maintain control",
+      "grounding_span": "That's why I keep the scope smaller, so it's more manageable for me"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

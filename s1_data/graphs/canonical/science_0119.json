@@ -1,0 +1,192 @@
+{
+  "transcript_id": "science_0119",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI for exploratory tasks",
+      "label_negative": "AI for publication-quality analysis",
+      "bipolarity_complete": true,
+      "grounding_span": "I occasionally use it to generate simple code for exploratory work, but would not trust it for publication quality analysis"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for protein structure modeling (AlphaFold)",
+      "label_negative": "Traditional resource-intensive structural methods",
+      "bipolarity_complete": true,
+      "grounding_span": "We have used AlphaFold pretty extensively to model potential protein structures"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI applicability to complex biological systems",
+      "label_negative": "AI inapplicability to complex biological systems",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't see how AI would be beneficial in either of those areas. Both the models and the training data just don't exist"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI integration into existing software",
+      "label_negative": "Isolated, non-integrated datasets",
+      "bipolarity_complete": true,
+      "grounding_span": "If AI could integrate and normalize all this data in a single repository, it could be a very exciting thing for biological discovery"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI assistance in grant writing",
+      "label_negative": "Fair, merit-based publication and grant processes",
+      "bipolarity_complete": true,
+      "grounding_span": "The effects of AI on the publication process are quite worrying, and the system is further shifting in favor of those who know how to game the system"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Research efficiency",
+      "grounding_span": "Traditional protein structure methods are very resource intensive and technically challenging"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Scientific rigor and accuracy",
+      "grounding_span": "Targeted biological research with model systems is still very much important for high quality science"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Biological discovery and hypothesis generation",
+      "grounding_span": "It could be a very exciting thing for biological discovery"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Fairness and objectivity in evaluation",
+      "grounding_span": "It is important that the strong scientific practices can still prevail and that safeguards be in place"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Cautious trust in AI",
+      "valence": "ambivalent",
+      "grounding_span": "I occasionally use it to generate simple code for exploratory work, but would not trust it for publication quality analysis"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Positive embrace of AlphaFold for structural modeling",
+      "valence": "positive",
+      "grounding_span": "We have used AlphaFold pretty extensively to model potential protein structures"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Skepticism toward AI in complex biological modeling",
+      "valence": "negative",
+      "grounding_span": "I don't see how AI would be beneficial in either of those areas"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Optimistic aspiration for AI-driven data integration",
+      "valence": "positive",
+      "grounding_span": "If AI could integrate and normalize all this data in a single repository, it could be a very exciting thing for biological discovery"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Concern about AI undermining learning",
+      "valence": "negative",
+      "grounding_span": "The effects of AI on the publication process are quite worrying"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Structured iterative validation — uses AI to systematically check and refine work",
+      "grounding_span": "I will typically do a more manual manipulation alongside the coding and validate at each step before iterating the process"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Intentional limitation and selective use of AI",
+      "grounding_span": "You would have to model an entire cell with millions of molecular interactions every second in order to predict what would happen in silicon with any amount of accuracy"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n4",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

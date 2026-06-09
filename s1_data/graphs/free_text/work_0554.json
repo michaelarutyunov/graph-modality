@@ -1,0 +1,261 @@
+{
+  "transcript_id": "work_0554",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as wording assistant for documents and emails",
+      "label_negative": "Manual wording without AI help",
+      "bipolarity_complete": true,
+      "grounding_span": "I've been using AI to help me get the wording correct"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as brainstorming and writing tool",
+      "label_negative": "Independent brainstorming and writing",
+      "bipolarity_complete": true,
+      "grounding_span": "I often use AI for brainstorming tasks and writing tasks"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI language naturalness and authenticity",
+      "label_negative": "AI language feeling forced or cheesy",
+      "bipolarity_complete": true,
+      "grounding_span": "the language feels too forced, like the model is trying too hard to be 'cool'"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI integration friction due to system boundaries",
+      "label_negative": "Seamless AI integration within existing tools",
+      "bipolarity_complete": true,
+      "grounding_span": "it feels tricker to utilize an outside AI for some of those tasks because it lives inside its own Notion-world"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI involvement in value-driven core work",
+      "label_negative": "AI involvement in value-driven core work",
+      "bipolarity_complete": false,
+      "grounding_span": "it feels strange to bring AI in. I want the curriculum to have heart and personality behind it"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as collaborative partner vs independent delegator",
+      "label_negative": "AI as independent delegator",
+      "bipolarity_complete": true,
+      "grounding_span": "most of my task flow with AI is more collaborative. I've not given it a ton of independent tasks"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI output detectability and authenticity",
+      "label_negative": "AI output being obvious and detectable",
+      "bipolarity_complete": true,
+      "grounding_span": "I've tried to be really intentional to utilize AI without making it seem like I'm using AI"
+    },
+    {
+      "id": "n8",
+      "type": "Construct",
+      "label": "AI naming suggestions quality",
+      "label_negative": "AI naming suggestions being cheesy and unhelpful",
+      "bipolarity_complete": true,
+      "grounding_span": "the suggestions always feel rather cheesy"
+    },
+    {
+      "id": "n9",
+      "type": "Construct",
+      "label": "AI threat to job satisfaction from repetitive tasks",
+      "label_negative": "AI preserving or enhancing job satisfaction",
+      "bipolarity_complete": true,
+      "grounding_span": "it can be scary to think of not getting to do those things in the future"
+    },
+    {
+      "id": "n10",
+      "type": "Construct",
+      "label": "AI delegation of disliked tasks to focus on liked tasks",
+      "label_negative": "AI not used for disliked tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I'd love to learn more about how to use AI to take some of the 'boring' tasks off of my plate"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "I want the time-benefits out utilizing AI"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Authenticity and personal touch in work",
+      "grounding_span": "I want the curriculum to have heart and personality behind it"
+    },
+    {
+      "id": "n13",
+      "type": "Value",
+      "label": "Professional competence and skill maintenance",
+      "grounding_span": "I feel competent enough to not use any sort of AI for it"
+    },
+    {
+      "id": "n14",
+      "type": "Value",
+      "label": "Job security and sense of success",
+      "grounding_span": "makes me not only nervous for my finances, but also for my feelings of success"
+    },
+    {
+      "id": "n15",
+      "type": "Value",
+      "label": "Focus on meaningful work",
+      "grounding_span": "so that I can focus on the things that I do like about my job"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Satisfaction with AI for wording tasks",
+      "valence": "positive",
+      "grounding_span": "Generally, when utilizing AI for my job, I feel pretty satisfied"
+    },
+    {
+      "id": "n17",
+      "type": "Stance",
+      "label": "Frustration with AI naming suggestions",
+      "valence": "negative",
+      "grounding_span": "the naming suggestions are rather unhelpful"
+    },
+    {
+      "id": "n18",
+      "type": "Stance",
+      "label": "Anxiety about AI replacing job tasks",
+      "valence": "negative",
+      "grounding_span": "it can be scary to think of not getting to do those things in the future"
+    },
+    {
+      "id": "n19",
+      "type": "Stance",
+      "label": "Aspiration to delegate boring tasks to AI",
+      "valence": "positive",
+      "grounding_span": "I'd love to learn more about how to use AI to take some of the 'boring' tasks off of my plate"
+    },
+    {
+      "id": "n20",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through specific prompting",
+      "grounding_span": "I try to be really specific in what I'm asking for, but it'll sometimes take a couple of rounds"
+    },
+    {
+      "id": "n21",
+      "type": "CognitiveStyleMarker",
+      "label": "Intentional concealment of AI use to maintain authenticity",
+      "grounding_span": "I've tried to be really intentional to utilize AI without making it seem like I'm using AI"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n13",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n14",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n15",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n16",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n17",
+      "target": "n8",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n18",
+      "target": "n9",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n19",
+      "target": "n10",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n20",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n7",
+      "target": "n21",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

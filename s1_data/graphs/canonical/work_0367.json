@@ -1,0 +1,247 @@
+{
+  "transcript_id": "work_0367",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI for repetitive simple tasks",
+      "label_negative": "AI as unhelpful or laborious for non-routine tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is very useful for automating routine and repeat tasks"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as drafting assistant for emails",
+      "label_negative": "AI as producing low-quality drafts requiring heavy editing",
+      "bipolarity_complete": true,
+      "grounding_span": "I will enter relevant details into say ChatGPT and ask for a draft before editing it"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as knowledge resource for unfamiliar domains",
+      "label_negative": "AI as unnecessary for familiar tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I will enter more detail and this often happens in areas where I am less experienced"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as brainstorming and idea generator",
+      "label_negative": "AI as time-wasting due to instruction overhead",
+      "bipolarity_complete": true,
+      "grounding_span": "I often just want a basic draft so as to move away from a blank page"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI unreliability and factual errors",
+      "bipolarity_complete": true,
+      "grounding_span": "the AI isnt capable enough for this, nor is it accurate enough"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as leveler for non-native English speakers",
+      "label_negative": "AI as inferior to own writing for skilled users",
+      "bipolarity_complete": true,
+      "grounding_span": "for people with lower ability that the AI may well have surpassed their own writing skills"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI search and procurement capability",
+      "label_negative": "AI search lacking depth and judgment",
+      "bipolarity_complete": true,
+      "grounding_span": "I have tried in vain to try and make AI models produce very good search results in specific procurement scenarios"
+    },
+    {
+      "id": "n8",
+      "type": "Construct",
+      "label": "AI as narrow task performer vs. holistic understanding",
+      "label_negative": "AI as capable of overarching goals and granular steps",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is very good at very narrow tasks but struggles with the overall picture"
+    },
+    {
+      "id": "n9",
+      "type": "Construct",
+      "label": "AI adherence to instructions",
+      "label_negative": "One-size-fits-all AI training",
+      "bipolarity_complete": true,
+      "grounding_span": "it almost needs a training module so that individual's can consistently instruct AI using a similar set of instructions"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "it has greatly reduced the time spent in undertaking accounting and bookkeeping functions"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Quality and accuracy of work output",
+      "grounding_span": "the copy is of fairly low quality compared to my own standards"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Skill preservation and professional adaptability",
+      "grounding_span": "If you did not know these skills where AI looks certain to take over, it would make using AI and instructing AI much more difficult"
+    },
+    {
+      "id": "n13",
+      "type": "Value",
+      "label": "Personalized and adaptive tool use",
+      "grounding_span": "it needs to be an organic learning curve from individuals that can be retained and learnt from"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "I find this an excellent use of AI"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Frustration with AI limitations",
+      "valence": "negative",
+      "grounding_span": "I find this frustrating because I can see how it could be improved but the models just dont want to play ball"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Satisfaction with AI for drafting",
+      "valence": "ambivalent",
+      "grounding_span": "I do edit a lot - however, when I draft an email and come back and edit my own work, it will usually involve re-writing 30% or so"
+    },
+    {
+      "id": "n17",
+      "type": "Stance",
+      "label": "Optimism about future AI personalization",
+      "valence": "positive",
+      "grounding_span": "I think there is a big opportunity to make AI work in your favour very well"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic task delegation — uses AI only for specific, bounded tasks",
+      "grounding_span": "This is dependent on the type of email"
+    },
+    {
+      "id": "n19",
+      "type": "CognitiveStyleMarker",
+      "label": "Critical evaluation and selective acceptance of AI output",
+      "grounding_span": "the models produce results that are better than they can create themselves"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n13",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n14",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n17",
+      "target": "n9",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n19",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n7",
+      "target": "n19",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

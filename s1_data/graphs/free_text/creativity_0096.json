@@ -1,0 +1,225 @@
+{
+  "transcript_id": "creativity_0096",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as research efficiency tool",
+      "label_negative": "Manual research without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "AI saves on time significantly by collecting a bunch of sources for me"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as language accessibility aid for disability",
+      "label_negative": "Struggling without AI due to writing disability",
+      "bipolarity_complete": true,
+      "grounding_span": "AI helps me when I'm struggling with spelling"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as contextual research partner",
+      "label_negative": "AI as generic search tool without context awareness",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is aware of how I'm applying that research into a fantasy world"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Professional safety of AI use in writing",
+      "label_negative": "Professional risk and ostracization for AI use",
+      "bipolarity_complete": true,
+      "grounding_span": "if any writer is caught collaborating actual ideas with AI, they are ostracized"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as creative collaborator and hype man",
+      "label_negative": "AI as forbidden creative partner",
+      "bipolarity_complete": true,
+      "grounding_span": "I would have liked to tell the AI my entire ideas, just to get encouraging feedback"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI impact on writing quality and style",
+      "label_negative": "AI diminishing human writing quality and style",
+      "bipolarity_complete": true,
+      "grounding_span": "my writing has becoming more sophisticated"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI replacing human writers",
+      "label_negative": "Human writers retaining their role",
+      "bipolarity_complete": true,
+      "grounding_span": "concerned about AI replacing writers"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Creative authenticity and human-driven artistry",
+      "grounding_span": "I am definitely driving the creative decisions"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Professional reputation and community acceptance",
+      "grounding_span": "Being an indie author is hard enough, and I've known indie writers whose sales have tanked"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "my ability to deliver articles is significantly faster"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Linguistic diversity and natural evolution of writing",
+      "grounding_span": "writers have began altering our styles to be starkly different. This will have consequences in the future linguistically"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Positive reliance on AI for research efficiency",
+      "valence": "positive",
+      "grounding_span": "AI saves on time significantly"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Positive reliance on AI for language accessibility",
+      "valence": "positive",
+      "grounding_span": "AI helps me when I'm struggling"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Hesitation to experiment with AI due to professional risks",
+      "valence": "negative",
+      "grounding_span": "it has made me greatly hesitant to experiment with AI"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Desire for AI as creative collaborator but constrained",
+      "valence": "ambivalent",
+      "grounding_span": "I would have liked to tell the AI my entire ideas, just to get encouraging feedback"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Concern about AI replacing writers and diminishing quality",
+      "valence": "negative",
+      "grounding_span": "concerned about AI replacing writers, and the qualities of stories being diminished"
+    },
+    {
+      "id": "n17",
+      "type": "Stance",
+      "label": "Concern about linguistic consequences of anti-AI witch hunt",
+      "valence": "negative",
+      "grounding_span": "writers have began altering our styles to be starkly different. This will have consequences"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Context-aware application of research to fictional world",
+      "grounding_span": "AI is aware of how I'm applying that research into a fantasy world"
+    },
+    {
+      "id": "n19",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic boundary-setting between AI-assisted and human-only work",
+      "grounding_span": "I always make sure I am the creative driver and do all the writing"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n17",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n3",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n19",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,149 @@
+{
+  "transcript_id": "science_0027",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as debugging assistant",
+      "label_negative": "AI as primary code generator",
+      "bipolarity_complete": true,
+      "grounding_span": "the purpose of AI was to spot bugs and point them out to me"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as foundational structure provider",
+      "label_negative": "AI use during initial development",
+      "bipolarity_complete": true,
+      "grounding_span": "I didn't use AI until I had a version of the game that I could use/test"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as verification-requiring tool",
+      "label_negative": "AI suggestions taken on trust",
+      "bipolarity_complete": true,
+      "grounding_span": "I made use of a REPL to test small snippets of code"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as resource expander for course planning",
+      "label_negative": "Manual searching through course materials",
+      "bipolarity_complete": true,
+      "grounding_span": "If AI could create a study guide with links, or that just brings all the relevant content into one place"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "I wanted to actual spend my limited time debugging, as opposed to looking for bugs"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Skill development and learning",
+      "grounding_span": "test and improve my coding skills"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Trust in educational resources",
+      "grounding_span": "I trust the courses solution enough that I don't feel the need to explore it with AI"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Satisfaction with AI for debugging",
+      "valence": "positive",
+      "grounding_span": "this was useful as it made me rethink some of my logic"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Frustration with AI's impractical suggestions",
+      "valence": "ambivalent",
+      "grounding_span": "I made use of a REPL to test small snippets of code"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Desire for AI in study guide creation",
+      "valence": "positive",
+      "grounding_span": "If AI could create a study guide with links... it would save time"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Systematic problem decomposition and incremental development",
+      "grounding_span": "I began by breaking the problem down into steps"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Thorough verification through isolated testing",
+      "grounding_span": "I made use of a REPL to test small snippets of code"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

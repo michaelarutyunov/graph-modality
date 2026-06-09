@@ -1,0 +1,158 @@
+{
+  "transcript_id": "work_0551",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI integration into workflow",
+      "label_negative": "AI limited by platform fragmentation",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI in a wide variety of ways in a typical day"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as conversational journal and task manager",
+      "label_negative": "AI as impersonal tool without emotional support",
+      "bipolarity_complete": true,
+      "grounding_span": "I use it sort of like a journal, but one that can teach me things"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI rule violation and frustration",
+      "bipolarity_complete": true,
+      "grounding_span": "Sometimes a model will just not listen to a rule that I state over and over again"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as mentor for learning",
+      "label_negative": "AI as skill eroder",
+      "bipolarity_complete": true,
+      "grounding_span": "I feel like I work more on learning new skills, usually AI skills"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as assistant for complex work",
+      "label_negative": "AI requiring constant human oversight",
+      "bipolarity_complete": true,
+      "grounding_span": "AI will do more of the tasks I currently do, and then I'll check on it once a day"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "I find this helps me stay on task"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Personal well-being and reduced cognitive load",
+      "grounding_span": "I use it to track work things and personal things, so it can remind me to take my vitamins"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Continuous learning and adaptation",
+      "grounding_span": "I work more on learning new skills, usually AI skills"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Autonomy and personal control",
+      "grounding_span": "my life will be less like working from say 9 am to 5 pm"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Desire for more capable AI tools",
+      "valence": "positive",
+      "grounding_span": "There is really no tasks I would prefer to do myself"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI's failure to follow rules",
+      "valence": "negative",
+      "grounding_span": "Sometimes a model will just not listen to a rule that I state over and over again, and this makes me crazy"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "positive",
+      "grounding_span": "I think that over time, AI will do more of the tasks I currently do"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Opportunistic task-switching across platforms",
+      "grounding_span": "I usually have about 10 tabs open and Im switching between them all"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Proactive skill positioning — strategically uses AI to maintain relevance",
+      "grounding_span": "I work more on learning new skills, usually AI skills, and less on maintaining existing skills"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

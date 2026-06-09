@@ -1,0 +1,169 @@
+{
+  "transcript_id": "work_0923",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as speed tool for discrete tasks",
+      "label_negative": "AI as frustrating when inaccurate",
+      "bipolarity_complete": true,
+      "grounding_span": "if it's a task of finding something in a lot of data, it's faster/less work to let the AI shuffle through the information. If it gets it wrong a few times though, it can get frustrating."
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as objective evaluator",
+      "label_negative": "AI as too agreeable and ego-stroking",
+      "bipolarity_complete": true,
+      "grounding_span": "I prefer an objective view over ego stroking and agreeableness."
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as debugging assistant",
+      "label_negative": "AI as forgetful of key context in long tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "it forgets key moments in the past that would make the current behavior act a certain way."
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as structured change tracker",
+      "label_negative": "AI as messy and unstructured in debugging",
+      "bipolarity_complete": true,
+      "grounding_span": "it also leaves things messy without a structured resource of what changes were made."
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as communication bridge from theory to practice",
+      "label_negative": "AI as intuitive extension of own thinking",
+      "bipolarity_complete": true,
+      "grounding_span": "if you learn how to use a tool, you have to learn the ins and outs of that tool."
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and speed in work",
+      "grounding_span": "it's faster/less work to let the AI shuffle through the information"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Trustworthy and accurate information",
+      "grounding_span": "I want truthful and accurate information"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "gotta keep up or be left behind"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Frustration with AI's agreeableness",
+      "valence": "negative",
+      "grounding_span": "If it gets it wrong a few times though, it can get frustrating."
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Preference for objective evaluation over agreeableness",
+      "valence": "positive",
+      "grounding_span": "I prefer an objective view over ego stroking and agreeableness."
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Pragmatic acceptance of AI as a tool",
+      "valence": "mixed",
+      "grounding_span": "it's not perfect and never will be, nothing is, but for some tasks being 90% good or whatever high statistic is enough."
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Commitment to keep using AI to stay relevant",
+      "valence": "positive",
+      "grounding_span": "I'll keep using it for sure. gotta keep up or be left behind."
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Analytical decomposition — breaks problems into steps and expects AI to follow",
+      "grounding_span": "I try to explain a walkthrough of the steps it took to get to that point."
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Experience-driven pragmatic calibration of tool use",
+      "grounding_span": "if you learn how to use a tool, you have to learn the ins and outs of that tool."
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

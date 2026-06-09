@@ -1,0 +1,170 @@
+{
+  "transcript_id": "work_0350",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI for routine tasks",
+      "label_negative": "AI for high-stakes tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI for routine tasks like some light scheduling"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI information accuracy",
+      "label_negative": "AI information incompleteness and inaccuracy",
+      "bipolarity_complete": true,
+      "grounding_span": "The facts provided are usually accurate but often incomplete"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for exploratory tasks",
+      "label_negative": "Self-directed exploration for new ideas",
+      "bipolarity_complete": true,
+      "grounding_span": "Exploratory tasks relating to new ideas, especially early on"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI collaboration",
+      "label_negative": "AI delegation",
+      "bipolarity_complete": true,
+      "grounding_span": "I am more likely to collaborate with it throughout a task"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as skill enhancement opportunity",
+      "label_negative": "AI as threat to skills",
+      "bipolarity_complete": true,
+      "grounding_span": "I prefer to instead see it as an opportunity to enhance those skills I already have"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "I was able to schedule a week's worth of meetings in about ten minutes"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Reliability and trustworthiness",
+      "grounding_span": "AI models have unfortunately been inaccurate about references to academic articles"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Intellectual autonomy and creativity",
+      "grounding_span": "it delays finding connections or new ideas"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Personal growth and skill development",
+      "grounding_span": "try to be able to do more"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for routine scheduling",
+      "valence": "positive",
+      "grounding_span": "I found that very beneficial and a great relief"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI inaccuracy on references",
+      "valence": "negative",
+      "grounding_span": "AI models have unfortunately been inaccurate about references to academic articles"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Preference for self-directed exploration",
+      "valence": "negative",
+      "grounding_span": "I start out by looking for myself at original sources"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Optimism about AI collaboration",
+      "valence": "positive",
+      "grounding_span": "I hope to transfer more routine tasks to AI and to be able to collaborate more closely"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement of prompts",
+      "grounding_span": "I will often have to refine what it is that I am looking for from the AI"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Self-directed exploration before AI use",
+      "grounding_span": "I start out by looking for myself at original sources and then use AI to fill in the blanks"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n4",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

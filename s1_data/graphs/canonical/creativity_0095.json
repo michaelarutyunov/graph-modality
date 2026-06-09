@@ -1,0 +1,202 @@
+{
+  "transcript_id": "creativity_0095",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as circuit design wizard",
+      "label_negative": "AI providing incorrect or unreliable circuit information",
+      "bipolarity_complete": true,
+      "grounding_span": "to better understand elements of electrical engineering in which I'm lacking"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "Corporate outsourcing to AI for profit",
+      "label_negative": "AI making errors in BoM compilation or component sourcing",
+      "bipolarity_complete": true,
+      "grounding_span": "Bill of Materials compilations, circuit theory (testing?), as well as providing me with the best of the abundance of sources for components"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as decision-making support",
+      "label_negative": "AI as over-supportive single-path suggester",
+      "bipolarity_complete": true,
+      "grounding_span": "I'd prefer it if a better approach was recommended as an alternative"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI unreliability and error-proneness",
+      "bipolarity_complete": true,
+      "grounding_span": "What if the info is wrong?"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as research accelerator",
+      "label_negative": "AI as time-consuming or misleading research tool",
+      "bipolarity_complete": true,
+      "grounding_span": "research streamlining"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as circuit design wizard",
+      "label_negative": "AI lacking capability for circuit design",
+      "bipolarity_complete": true,
+      "grounding_span": "a circuit wizard...we're talking population and design, demonstration with component swapability"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Epistemic understanding and skill development",
+      "grounding_span": "I get some practical understanding out of the conversation"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Production efficiency and reduced frustration",
+      "grounding_span": "I won't go to build them all like I have in the past and realize the AI messed up and I'm short a dozen resistors"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Informed decision-making",
+      "grounding_span": "putting the ball in my court for that one was very helpful"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Creative control and originality",
+      "grounding_span": "AI can't repair broken electronics or handmake these boutique pedal"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Gratitude for AI's role in enabling PCB design",
+      "valence": "positive",
+      "grounding_span": "now I'm making them with no problems thanks to that one conversation"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with AI errors",
+      "valence": "negative",
+      "grounding_span": "the AI is being somewhat over-supportive at times"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Cautious skepticism toward AI reliability",
+      "valence": "negative",
+      "grounding_span": "What if the info is wrong?"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "positive",
+      "grounding_span": "Hopefully I can rely on it more"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Confidence in AI-proof craftsmanship",
+      "valence": "positive",
+      "grounding_span": "AI can't repair broken electronics or handmake these boutique pedal"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Hands-on experiential learning preference",
+      "grounding_span": "I chose the DIY approach"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic cost-benefit evaluation",
+      "grounding_span": "I did weigh that option, but since I'd been screwed before by a hired circuit designer"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n10",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": [
+    "[creativity_0095] direct Stance→Value edge disallowed: n15 --[EXPRESSED_VIA]--> n10"
+  ]
+}

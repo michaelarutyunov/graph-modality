@@ -1,0 +1,176 @@
+{
+  "transcript_id": "creativity_0121",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as tool for overcoming creative block",
+      "label_negative": "AI as mere tool without creative collaboration",
+      "bipolarity_complete": true,
+      "grounding_span": "It's nice to have a creative partner who works with me and helps me see the options."
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for administrative tasks",
+      "label_negative": "AI taking over creative decisions",
+      "bipolarity_complete": true,
+      "grounding_span": "It's also very helpful for the AI to assist in editing, and also in the administrative/marketing tasks."
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as tool for series planning and character development",
+      "label_negative": "AI ignoring character arcs and series continuity",
+      "bipolarity_complete": true,
+      "grounding_span": "I want the AI to help me plan out the series arc and then help me determine how to move forward."
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Human control over creative decisions",
+      "label_negative": "AI-driven creative decisions",
+      "bipolarity_complete": true,
+      "grounding_span": "I feel that I'm driving the collaboration."
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Market saturation from AI-generated content",
+      "label_negative": "AI used as a tool for genuine creativity",
+      "bipolarity_complete": true,
+      "grounding_span": "There are so many people who are not using AI as a tool, but are using it as a fast way to upload books and other content and make money."
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as persistent private knowledge base",
+      "label_negative": "AI without memory requiring repeated loading",
+      "bipolarity_complete": true,
+      "grounding_span": "I wish there was a way I could load a longer document - like a story bible or character bible or even a whole book - and have it available without having to load it each time."
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Creative flow and momentum",
+      "grounding_span": "That is helping me move forward and things are starting to flow again."
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Authenticity and personal integrity",
+      "grounding_span": "writing is a part of me and I want the work to be mine."
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Market access and fair competition",
+      "grounding_span": "That will impact the ability of people like me to publish independently and the platforms that are willing to take my work."
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "It is great that AI can help with that."
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Resistance to AI in creative work",
+      "valence": "positive",
+      "grounding_span": "It makes me feel hopeful that I'll be able to take back my creativity again."
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Concern about market flooding by AI-generated works",
+      "valence": "negative",
+      "grounding_span": "That floods the market with pieces and also gives everyone the wrong impression about how to use AI."
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Desire for persistent private AI memory",
+      "valence": "positive",
+      "grounding_span": "I wish there was a way I could load a longer document ... and have it available without having to load it each time."
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative back-and-forth ideation with AI",
+      "grounding_span": "The AI prompts me with questions or suggestions, but it is my decision whether to take them."
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Forward-pushing writing process (avoiding backtracking)",
+      "grounding_span": "I don't usually backtrack, but push through to the end of the first draft."
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

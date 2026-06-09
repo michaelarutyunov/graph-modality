@@ -1,0 +1,186 @@
+{
+  "transcript_id": "work_0433",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative content creation partner",
+      "label_negative": "AI as fully autonomous content creator",
+      "bipolarity_complete": true,
+      "grounding_span": "I collaborate with the AI, for example, I'll send a pic of my work and explain what service I completed and ask it to create a relevant caption."
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI output authenticity and human touch",
+      "label_negative": "AI output sounding fake",
+      "bipolarity_complete": true,
+      "grounding_span": "I edit it myself to give it more of a 'human' touch."
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as last resort for design tasks",
+      "label_negative": "AI as primary design tool",
+      "bipolarity_complete": true,
+      "grounding_span": "as a last resort I provided all my pricings/services to an AI and included my style, colour pallet and branding information and it made an excellent price list for me"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI in client-facing communication",
+      "label_negative": "Human-managed client communication",
+      "bipolarity_complete": true,
+      "grounding_span": "I wouldn't like an AI to respond to comments on socials for me, again because of the human aspect."
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as necessity for industry demands",
+      "label_negative": "Traditional non-content-creation role",
+      "bipolarity_complete": true,
+      "grounding_span": "the industry now demands content creation due to the visual aspect of the industry and this is how to attract clients in this day and age."
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Authentic human connection",
+      "grounding_span": "people like a human touch, and alot of people see their nail appointments as a kind of therapy session."
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Business efficiency and marketing effectiveness",
+      "grounding_span": "it made an excellent price list for me (to my surprise)."
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Focus on core craft",
+      "grounding_span": "allow me to concentrate of the core of my business (creating beautiful nails)."
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI as collaborative tool",
+      "valence": "positive",
+      "grounding_span": "I collaborate with the AI, for example, I'll send a pic of my work and explain what service I completed and ask it to create a relevant caption."
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Dissatisfaction with AI output authenticity",
+      "valence": "negative",
+      "grounding_span": "it normally sounds a bit fake, so I edit it myself to give it more of a 'human' touch."
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Surprise and satisfaction with AI for design",
+      "valence": "positive",
+      "grounding_span": "it made an excellent price list for me (to my surprise)."
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Resistance to AI in client communication",
+      "valence": "negative",
+      "grounding_span": "I wouldn't like an AI to respond to comments on socials for me, again because of the human aspect."
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Openness to future AI use for support tasks",
+      "valence": "positive",
+      "grounding_span": "I'm sure as time goes on there will be alot more I could use AI to help me with to allow me to concentrate of the core of my business"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through back-and-forth",
+      "grounding_span": "I tend to go back and forth with the AI, each time asking it to amend a detail or to change the style of the caption slightly. We usually go back and forth around 5-6 times."
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic last-resort adoption",
+      "grounding_span": "as a last resort I provided all my pricings/services to an AI"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

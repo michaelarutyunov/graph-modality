@@ -1,0 +1,168 @@
+{
+  "transcript_id": "work_0185",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as quick information retrieval tool",
+      "label_negative": "AI as unreliable or confusing source",
+      "bipolarity_complete": true,
+      "grounding_span": "I will pull up an AI ... and then just ask it something like 'can a cotton and silk blend top go in the washing machine'"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI accuracy and reliability",
+      "label_negative": "AI confusion and misconstrual",
+      "bipolarity_complete": true,
+      "grounding_span": "AI gets confused easily still, like if the wording is slightly off then it will misconstrue my question and give me the wrong answer"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI use for interpersonal communication",
+      "label_negative": "Authentic human conversation",
+      "bipolarity_complete": true,
+      "grounding_span": "I will never ask AI to help me interact with customers or my colleagues in terms of how to speak to them"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI reliance and job displacement",
+      "label_negative": "Human skill maintenance and job security",
+      "bipolarity_complete": true,
+      "grounding_span": "AI could just eventually cause me and a lot of others to just eventually lose our jobs"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Customer service efficiency and accuracy",
+      "grounding_span": "I can't afford to give customers the wrong answer as they may use this to try to get a refund"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Authentic human connection",
+      "grounding_span": "it's important to have authentic conversations with people"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Job security and economic stability",
+      "grounding_span": "if we werent so reliant on having those jobs as a source of our income"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Satisfaction with AI for quick answers",
+      "valence": "positive",
+      "grounding_span": "I always find it really satisfying when a customer asks me and I'm able to give them a really comprehensive answer super fast because of AI"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Distrust of AI reliability",
+      "valence": "negative",
+      "grounding_span": "AI gets confused easily still"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Resistance to AI in interpersonal tasks",
+      "valence": "negative",
+      "grounding_span": "I will never ask AI to help me interact with customers or my colleagues"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Concern about job displacement",
+      "valence": "negative",
+      "grounding_span": "it is quite daunting especially that AI could just eventually cause me and a lot of others to just eventually lose our jobs"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Openness to future AI integration",
+      "valence": "positive",
+      "grounding_span": "I can imagine ... that I will start to use AI more at work in the coming months/ years"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Verification-oriented reasoning — cross-checks AI outputs",
+      "grounding_span": "I have checked the answer alongside another search result"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Boundary-setting around AI use — clear domains for human vs AI",
+      "grounding_span": "I will never ask AI to help me interact with customers or my colleagues"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

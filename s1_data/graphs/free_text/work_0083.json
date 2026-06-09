@@ -1,0 +1,177 @@
+{
+  "transcript_id": "work_0083",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI for objective transcription tasks",
+      "label_negative": "AI for subjective contextual tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "the transcription issue is far better - I think that is due to the relative lack of subjectivity required"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as independent task executor",
+      "label_negative": "AI as ongoing collaborative partner",
+      "bipolarity_complete": true,
+      "grounding_span": "I would normally say 'here's what I need to happen...' so more independently than ongoing collaborations"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI accuracy and familiarity",
+      "label_negative": "AI unreliability and lack of context",
+      "bipolarity_complete": true,
+      "grounding_span": "Probably accuracy and familiarity"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as proactive team member",
+      "label_negative": "AI as purely responsive tool",
+      "bipolarity_complete": true,
+      "grounding_span": "at the moment my workplace use of AI is entirely responsive to my requests rather than it proactively producing stuff"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Organizational risk aversion vs individual AI adoption",
+      "label_negative": "Organizational slow and steady approach",
+      "bipolarity_complete": true,
+      "grounding_span": "My workplace culture is quite risk averse... whereas I have embraced it more wholeheartedly"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI for low-stakes tasks",
+      "label_negative": "AI for high-stakes tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "depending on the importance or impact of the task is where I would want to have control over it"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and speed",
+      "grounding_span": "significantly quicker"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Trust and confidence in AI",
+      "grounding_span": "build that confidence would be a strong start"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Personal skill development and leverage",
+      "grounding_span": "frees me up to develop or hone my skills in other areas"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for transcription",
+      "valence": "positive",
+      "grounding_span": "the transcription issue is far better"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI for complex synthesis",
+      "valence": "negative",
+      "grounding_span": "More frustration. Particularly when trying to compose a progress update paper"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Optimism about AI as proactive team member",
+      "valence": "positive",
+      "grounding_span": "if AI could start to do some of that it'd be great"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Willingness to try AI for everything initially",
+      "valence": "positive",
+      "grounding_span": "I would always be willing to at least try AI initially for everything"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Contextual calibration based on stakes and audience",
+      "grounding_span": "depending on the importance or impact of the task is where I would want to have control over it"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "New team member analogy for AI onboarding",
+      "grounding_span": "treating AI like you would a new team member with that learning and check-in process"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

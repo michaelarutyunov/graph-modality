@@ -1,0 +1,184 @@
+{
+  "transcript_id": "creativity_0119",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as administrative and technical tool",
+      "label_negative": "AI as creative or cultural participant",
+      "bipolarity_complete": true,
+      "grounding_span": "A majority of the time I use it for admin stuff"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as granular task assistant in creative work",
+      "label_negative": "AI as conceptual or generative creative partner",
+      "bipolarity_complete": true,
+      "grounding_span": "I only really reach for it when I can ask for a really granular task that don't require idea generation"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI-generated content as generic and homogenizing",
+      "label_negative": "AI-generated content as unique and authentic",
+      "bipolarity_complete": true,
+      "grounding_span": "it might be hurting my chances because so many people probably have similar pitches"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI use leading to creative dependence and atrophy",
+      "label_negative": "AI use preserving creative autonomy and skill",
+      "bipolarity_complete": true,
+      "grounding_span": "I think it has the potential to rope people in to a sort of dependence"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI in arts as fundamentally incompatible with authentic creation",
+      "label_negative": "AI in arts as a valid creative tool",
+      "bipolarity_complete": true,
+      "grounding_span": "AI in the arts doesn't make sense to me"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative authenticity and personal connection to work",
+      "grounding_span": "I have a core aversion to that feeling of creating something yet not feeling connected to it"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Cultural value of organic authentic art",
+      "grounding_span": "organic authentic art isn't valued because it isn't as profitable as commercial slop"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency in administrative tasks",
+      "grounding_span": "tracking CPC on Meta Advertising campaigns or budgeting to buy new equipment"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Positive stance toward AI for admin and granular tasks",
+      "valence": "positive",
+      "grounding_span": "For that stuff, it can be really helpful"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Negative stance toward AI for creative conceptual work",
+      "valence": "negative",
+      "grounding_span": "it isn't usually that helpful and I don't love doing it"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Ambivalent stance toward AI-generated pitches",
+      "valence": "ambivalent",
+      "grounding_span": "It seems 'good enough', but I can't help think that it might be hurting my chances"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Negative stance toward AI in arts and culture",
+      "valence": "negative",
+      "grounding_span": "AI in the arts doesn't make sense to me"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Experience-driven boundary setting — learns from past tool dependency",
+      "grounding_span": "It reminds me of when I used 'Splice' loops for a period of time"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Systematic delegation of non-creative tasks to preserve creative core",
+      "grounding_span": "I usually bring many ideas to the table and have the LLM sort it out into a fluid text"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n4",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

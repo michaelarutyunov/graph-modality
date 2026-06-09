@@ -1,0 +1,218 @@
+{
+  "transcript_id": "work_0302",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as conceptual clarifier for research",
+      "label_negative": "Struggling to find obscure facts and terms",
+      "bipolarity_complete": true,
+      "grounding_span": "AI can make it a lot easier to find obscure facts"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as sounding board for ideas",
+      "label_negative": "AI giving generic, unhelpful advice",
+      "bipolarity_complete": true,
+      "grounding_span": "I use it as a sounding board"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Human judgment over AI suggestions",
+      "label_negative": "AI giving obvious, regimented advice",
+      "bipolarity_complete": true,
+      "grounding_span": "something genuinely novel... catered to my very specific situation"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI integration in workplace",
+      "label_negative": "Burnout and disorganization without support",
+      "bipolarity_complete": true,
+      "grounding_span": "looking for ways to get more leisure time in, to help avoid burnout"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as writing assistant",
+      "label_negative": "Human-only creative core",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't want any sort of collaborator... The whole point of writing is to do it myself"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as threat to artistic endeavors",
+      "label_negative": "AI replacing human creativity entirely",
+      "bipolarity_complete": true,
+      "grounding_span": "AI becomes a tool for creativity... force multiplier"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI content restrictions and filters",
+      "label_negative": "Unrestricted AI for creative exploration",
+      "bipolarity_complete": true,
+      "grounding_span": "I kept running into problems where the AI was uncomfortable with the subject matter"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Authentic human connection in art",
+      "grounding_span": "people enjoy stories because they are connecting with other people"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Creative autonomy",
+      "grounding_span": "The whole point of writing is to do it myself"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Work-life balance",
+      "grounding_span": "write faster, so I can have more time for other important things"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Novelty and tailored solutions",
+      "grounding_span": "something genuinely novel... catered to my very specific situation"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI for terminology breakthroughs",
+      "valence": "positive",
+      "grounding_span": "AI can make it a lot easier to find obscure facts"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Frustration with AI's impractical suggestions",
+      "valence": "negative",
+      "grounding_span": "very regimented suggestions, paint by numbers things that I've tried already"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Resistance to AI in creative work",
+      "valence": "negative",
+      "grounding_span": "I don't want any sort of collaborator"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Openness to AI as creative catalyst",
+      "valence": "positive",
+      "grounding_span": "I can envision a future where whole new artforms appear that almost require AI"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Frustration with AI content filters",
+      "valence": "negative",
+      "grounding_span": "I kept running into problems where the AI was uncomfortable with the subject matter"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Detailed upfront contextualization",
+      "grounding_span": "I'll usually do a really long first prompt, lay out my problem in great detail"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement with limited back-and-forth",
+      "grounding_span": "there's usually a certain amount of back and forth with these conversations"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

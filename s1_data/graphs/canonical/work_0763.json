@@ -1,0 +1,205 @@
+{
+  "transcript_id": "work_0763",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as quick answer provider",
+      "label_negative": "AI as unreliable for detailed or nuanced information",
+      "bipolarity_complete": true,
+      "grounding_span": "unless I need to be 100% of detailed or nuanced information, a quick ai response to a Google search usually has the answer i'm looking for"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability and factuality",
+      "label_negative": "AI factual inaccuracy requiring verification",
+      "bipolarity_complete": true,
+      "grounding_span": "for some things, the ai response may not be factually accurate, so if it's important i'll be sure to find sources to confirm"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as collaborator for iterative refinement",
+      "label_negative": "AI as one-shot independent task completer",
+      "bipolarity_complete": true,
+      "grounding_span": "definitely collaborate. the first response is not generally precisely what I need"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as skill development enabler",
+      "label_negative": "AI as replacement for core skills",
+      "bipolarity_complete": true,
+      "grounding_span": "AI just makes me more efficient"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Human judgment in customer interactions",
+      "label_negative": "AI handling customer interactions",
+      "bipolarity_complete": true,
+      "grounding_span": "I definitely prefer to handle customer interactions myself, as I'm not sure if I trust ai enough to take the right tone"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI reliance vs. maintaining independent thinking",
+      "label_negative": "Colleague's independent thinking",
+      "bipolarity_complete": true,
+      "grounding_span": "she is not choosing to think on her own about projects very much at all"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "saving me time"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Accuracy and reliability",
+      "grounding_span": "if it's important i'll be sure to find sources to confirm"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Effective communication and customer satisfaction",
+      "grounding_span": "work together with the customer for the solution"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Personal autonomy and skill preservation",
+      "grounding_span": "I still need to know how to write and how to communicate"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Pragmatic acceptance of AI as a tool",
+      "valence": "positive",
+      "grounding_span": "a quick ai response to a Google search usually has the answer i'm looking for"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Caution toward AI in high-risk tasks",
+      "valence": "negative",
+      "grounding_span": "if it's important i'll be sure to find sources to confirm"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Preference for human customer interaction",
+      "valence": "negative",
+      "grounding_span": "I definitely prefer to handle customer interactions myself"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "AI just makes me more efficient"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Concern about colleagues' over-reliance on AI",
+      "valence": "negative",
+      "grounding_span": "she is not choosing to think on her own about projects very much at all"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic task differentiation based on context",
+      "grounding_span": "unless I need to be 100% of detailed or nuanced information"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative clarification through initial AI output",
+      "grounding_span": "sometimes I'm not sure the best way to input what I really need without first gaining some of the information presented by the ai"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

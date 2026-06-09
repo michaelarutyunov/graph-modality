@@ -1,0 +1,185 @@
+{
+  "transcript_id": "work_0672",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as brainstorming and idea generator",
+      "label_negative": "AI as primary or sole research tool",
+      "bipolarity_complete": true,
+      "grounding_span": "It's more like a stepping stone when I've really run out of my own ideas"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as metaphor generator for abstract concepts",
+      "label_negative": "AI useless for idiomatic expression",
+      "bipolarity_complete": true,
+      "grounding_span": "It's often more useful for finding better or more idiomatic ways to say things in English"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI rigidity on definitions",
+      "label_negative": "AI flexibility on definitions",
+      "bipolarity_complete": true,
+      "grounding_span": "It's really rigid on specific definitions in some ways and tends to be pretty resistant to outside-the-box interpretations"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI for language translation",
+      "label_negative": "Lack of AI integration in translation tools",
+      "bipolarity_complete": true,
+      "grounding_span": "Trados has basically no useful AI integration at all"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as efficiency tool",
+      "label_negative": "AI causing loss of creativity and lowering standards",
+      "bipolarity_complete": true,
+      "grounding_span": "as long as that reduces the workload for 'busywork', that's fine. I think the issue is if it starts causing people in general to lose creativity and lower the bar"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Autonomy and self-reliance",
+      "grounding_span": "In general I prefer to handle everything myself unless it seems extremely onerous"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Accurate understanding and representation",
+      "grounding_span": "I of course verify anything the AI gives me"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional efficiency",
+      "grounding_span": "AI-powered QA seems like a complete no-brainer, yet nothing exists"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Critical thinking and skill development",
+      "grounding_span": "I'm paid to think"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for terminology breakthroughs",
+      "valence": "positive",
+      "grounding_span": "That was something I was able to uncover with AI after working on this particular piece for over a decade"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI errors",
+      "valence": "negative",
+      "grounding_span": "It's really rigid on specific definitions in some ways and tends to be pretty resistant to outside-the-box interpretations"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with poor AI integration in Trados",
+      "valence": "negative",
+      "grounding_span": "I was extremely frustrated to discover that it seems that Trados has basically no useful AI integration at all"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Pragmatic acceptance of AI as a tool",
+      "valence": "mixed",
+      "grounding_span": "I think it's fairly inevitable that it's going to play a bigger role in everyone's work over time, and as long as that reduces the workload for 'busywork', that's fine"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Self-reliant problem-solving with AI as last resort",
+      "grounding_span": "In general I prefer to handle everything myself unless it seems extremely onerous"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Verification-oriented approach",
+      "grounding_span": "I of course verify anything the AI gives me"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

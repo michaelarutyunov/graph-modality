@@ -1,0 +1,210 @@
+{
+  "transcript_id": "science_0056",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as efficient summarizer of unfamiliar regulations",
+      "label_negative": "Traditional manual reading of full documents",
+      "bipolarity_complete": true,
+      "grounding_span": "AI provides an easier to access, single tool, that addresses several of those shortcomings"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI verifiability through clause referencing",
+      "label_negative": "AI unverifiable summaries",
+      "bipolarity_complete": true,
+      "grounding_span": "ask it to provide references to specific clauses so I can confirm what it is saying matches the text"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for automated requirement extraction from standards",
+      "label_negative": "Manual copy-paste extraction",
+      "bipolarity_complete": true,
+      "grounding_span": "I would love to use AI to read a standard...pull out all the design and test requirements"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI reliability in PDF parsing and formatting",
+      "label_negative": "AI errors in reading PDFs and formatting output",
+      "bipolarity_complete": true,
+      "grounding_span": "AI had trouble reading the PDF files correctly, formatting in the output was not done well"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Copyright compliance in AI use with proprietary standards",
+      "label_negative": "Copyright infringement via feeding standards into AI",
+      "bipolarity_complete": true,
+      "grounding_span": "licensing concerns with feeding standards under copyright into an AI"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as compliance gap analysis tool",
+      "label_negative": "Manual gap analysis by engineer",
+      "bipolarity_complete": true,
+      "grounding_span": "get the AI to assess whether the product design complies or does not comply with a given standard"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "takes a lot of time"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Accuracy and reliability",
+      "grounding_span": "ensure the AI is correct"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Professional ethics and responsibility",
+      "grounding_span": "professional ethics and my personal ethos would demand I validate the AI's work"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Legal compliance and intellectual property protection",
+      "grounding_span": "licensing concerns with feeding standards under copyright into an AI"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Positive toward AI for initial regulation summaries",
+      "valence": "positive",
+      "grounding_span": "AI provides an easier to access, single tool"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Cautious trust in AI with verification",
+      "valence": "ambivalent",
+      "grounding_span": "I will ask it to provide references to specific clauses so I can confirm"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Frustration with AI limitations in PDF parsing and formatting",
+      "valence": "negative",
+      "grounding_span": "AI had trouble reading the PDF files correctly, formatting in the output was not done well"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Concern about copyright issues with AI",
+      "valence": "negative",
+      "grounding_span": "licensing concerns with feeding standards under copyright into an AI"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Aspirational desire for AI in compliance gap analysis",
+      "valence": "positive",
+      "grounding_span": "My pie in the sky dream is that I could...get the AI to assess whether the product design complies"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Systematic verification through cross-referencing",
+      "grounding_span": "I will ask it to provide references to specific clauses so I can confirm what it is saying matches the text"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic cost-benefit assessment of AI adoption",
+      "grounding_span": "if it could do the job competently I would be happy to let it do the bulk of the work while I take on more of a supervisory/quality control role"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n5",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

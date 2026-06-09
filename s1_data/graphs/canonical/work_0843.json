@@ -1,0 +1,205 @@
+{
+  "transcript_id": "work_0843",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as comprehensive search tool",
+      "label_negative": "Manual search without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I use the AI responses in a google search to find links where specific information can be located"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as formatting and synthesizing tool",
+      "label_negative": "Unaided complex text comprehension",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI to simplify text and break down tasks into smaller steps"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as tool for lesson planning",
+      "label_negative": "Personalized lesson creation without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I prefer to create lesson plans on my own"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI adoption in workplace",
+      "label_negative": "Independent AI use decisions",
+      "bipolarity_complete": true,
+      "grounding_span": "I've found myself using AI more as my colleagues depend on it a lot"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI accessibility and availability",
+      "label_negative": "Inaccessible content for students with disabilities",
+      "bipolarity_complete": true,
+      "grounding_span": "AI has helped me make college-level ideas more accessible to my students with learning disabilities"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as enhancer of teaching creativity",
+      "label_negative": "AI reliance undermining student skill building",
+      "bipolarity_complete": true,
+      "grounding_span": "Preparing students for jobs in creative fields is hard when they think AI will do everything for them"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and speed in work",
+      "grounding_span": "it makes their work go a lot faster"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Personalized and intentional teaching",
+      "grounding_span": "it feels more personalized and intentional to do it myself"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Student-centered education and accessibility",
+      "grounding_span": "Being able to help my students learn makes me feel satisfied"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Authenticity and personal integrity",
+      "grounding_span": "I should be creating my own resources so I don't seem hypocritical"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI for accessibility",
+      "valence": "positive",
+      "grounding_span": "I have felt satisfied when AI has helped me make college-level ideas more accessible"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Preference for personal control over lesson planning and problem-solving",
+      "valence": "negative",
+      "grounding_span": "I prefer to create lesson plans on my own"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Optimism about future AI adoption",
+      "valence": "ambivalent",
+      "grounding_span": "Even if their work has a lot of mistakes, they are still encouraged because it looks like they get more done"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Frustration with student AI misuse",
+      "valence": "negative",
+      "grounding_span": "Preparing students for jobs in creative fields is hard when they think AI will do everything for them"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Cautious reliance on AI for speed, not full delegation",
+      "valence": "positive",
+      "grounding_span": "I think I'm going to try to find more ways that using AI helps me do my work faster without sacrificing quality"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic acceptance of first output",
+      "grounding_span": "usually I'm happy with the first result I get"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Reflective awareness of contradictions",
+      "grounding_span": "Even though teachers are pressured to use AI, we are supposed to tell students not to use it for assignments"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n6",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

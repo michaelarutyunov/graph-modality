@@ -1,0 +1,162 @@
+{
+  "transcript_id": "work_0109",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as administrative efficiency tool",
+      "label_negative": "AI as time-consuming formatting burden",
+      "bipolarity_complete": true,
+      "grounding_span": "I use it mostly for administrative tasks"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as independent delegator",
+      "bipolarity_complete": true,
+      "grounding_span": "More likely to collaborate. Occasionally I will delegate though."
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability and consistency",
+      "label_negative": "AI unpredictability due to updates",
+      "bipolarity_complete": true,
+      "grounding_span": "AI was refusing to write the 1:1 report that lesson, despite being given the exact same prompt"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as content creator for lessons",
+      "label_negative": "Manual content creation",
+      "bipolarity_complete": true,
+      "grounding_span": "I also occasionally use AI to create lesson content, such as maths questions"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI in education: social irreplaceability",
+      "label_negative": "AI replacing teaching entirely",
+      "bipolarity_complete": true,
+      "grounding_span": "part of school is the social aspect. While AI may be able to teach maths, it can't teach how to socialise."
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and time efficiency",
+      "grounding_span": "I find it quicker and easier to do it myself"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional autonomy and control",
+      "grounding_span": "I think it would take too long to get an AI model to understand which branding to use"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Social development in education",
+      "grounding_span": "it can't teach how to socialise"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Frustration with AI inconsistency",
+      "valence": "negative",
+      "grounding_span": "I was very frustrated"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Optimism about future AI use",
+      "valence": "positive",
+      "grounding_span": "I anticipate on using it more and more in the workplace"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Preference for manual handling of branded tasks",
+      "valence": "negative",
+      "grounding_span": "I find it quicker and easier to do it myself"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Task-specific delegation based on formatting complexity",
+      "grounding_span": "I think it would take too long for AI to format the task in the way I would need"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative iterative refinement",
+      "grounding_span": "I would say 'homework completion should be the main area to work on'"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

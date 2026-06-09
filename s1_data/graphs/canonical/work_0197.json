@@ -1,0 +1,152 @@
+{
+  "transcript_id": "work_0197",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as foundational structure provider",
+      "label_negative": "AI as incomplete solution requiring human correction",
+      "bipolarity_complete": true,
+      "grounding_span": "The AI's attempt was key to successfully building the script"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as knowledge gap filler",
+      "label_negative": "Manual learning or alternative methods",
+      "bipolarity_complete": true,
+      "grounding_span": "By myself, I would have had to do multiple websearches or started learning to write scripts"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI error looping and compounding problems",
+      "label_negative": "AI linear error correction",
+      "bipolarity_complete": true,
+      "grounding_span": "It was getting stuck on the original problem, and creating new problems as we went along"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as tool requiring human oversight",
+      "label_negative": "AI as fully autonomous solution",
+      "bipolarity_complete": true,
+      "grounding_span": "I still had to be there to oversee it and do the final corrections"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI integration into process network for ladder logic",
+      "label_negative": "AI absence from process network",
+      "bipolarity_complete": true,
+      "grounding_span": "AI will be coming into my process network"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Task completion under deadline",
+      "grounding_span": "the project had a completion date that would have been impossible for me to learn in time"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Skill preservation and professional adaptability",
+      "grounding_span": "I still had to be there to oversee it and do the final corrections"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and cost reduction",
+      "grounding_span": "it was a huge help giving me that foundation"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Frustration with AI errors",
+      "valence": "negative",
+      "grounding_span": "the instance we are talking about had me frustrated"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Positive appreciation for AI as research catalyst",
+      "valence": "positive",
+      "grounding_span": "it was a huge help giving me that foundation"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Optimism about future AI agent oversight",
+      "valence": "mixed",
+      "grounding_span": "I expect it to, as this example shows, it is better than me at the bulk of the work, but I still had to be there to oversee it"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative trial-and-error with restarts when stuck",
+      "grounding_span": "I had to restart the task quite a few times to get it to a point where I could finish it"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic acceptance of AI as natural evolution",
+      "grounding_span": "I expect that will be the way AI integrates into my work"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

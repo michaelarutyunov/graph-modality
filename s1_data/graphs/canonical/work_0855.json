@@ -1,0 +1,214 @@
+{
+  "transcript_id": "work_0855",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as efficiency tool",
+      "label_negative": "Manual execution of routine tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is very helpful for me during my workday"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI use for sensitive data",
+      "label_negative": "Human handling of sensitive data",
+      "bipolarity_complete": true,
+      "grounding_span": "I prefer to handle anything with sensitive data especially if it might connect client names or data with social security numbers"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as one-shot delegator for simple tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "there will be a good bit of back and forth regarding changes or updates I want to make along the way"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as efficient complete solution provider",
+      "label_negative": "Piecemeal manual solution",
+      "bipolarity_complete": true,
+      "grounding_span": "ChatGPT was able to produce a really great and helpful reserve study that went into great detail"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Maintaining professional knowledge vs. manual skills",
+      "label_negative": "Letting AI erode professional knowledge",
+      "bipolarity_complete": true,
+      "grounding_span": "it is important for me to maintain knowledge and overall comprehensive understanding of these topics"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as professional development tool",
+      "label_negative": "Resistance to AI leading to obsolescence",
+      "bipolarity_complete": true,
+      "grounding_span": "accounting as a field has a risk of becoming obsolete due to AI so I think it is important to learn to integrate it"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "saved me hours of manual work"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Client trust and credibility",
+      "grounding_span": "I worry about the long term security of AI"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Professional judgment and expertise",
+      "grounding_span": "I will be responsible for explaining them as well as making sure that AI has given the correct answer"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Client relationship and face time",
+      "grounding_span": "It allows me more client face time and interaction"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Career sustainability",
+      "grounding_span": "accounting as a field has a risk of becoming obsolete due to AI"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Positive appreciation of AI for efficiency",
+      "valence": "positive",
+      "grounding_span": "AI is very helpful for me during my workday"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Caution about AI for sensitive data",
+      "valence": "negative",
+      "grounding_span": "I worry about the long term security of AI"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Frustration with AI output quality",
+      "valence": "positive",
+      "grounding_span": "It was truly helpful and saved me hours of manual work"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Proactive embrace of AI as strategic tool",
+      "valence": "positive",
+      "grounding_span": "I think we will begin to use AI more and more"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Task-dependent delegation vs. collaboration",
+      "grounding_span": "Sometimes if I am working on a longer project... there will be a good bit of back and forth"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Deliberate skill preservation through manual practice",
+      "grounding_span": "it is important for me to maintain knowledge and overall comprehensive understanding"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n5",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,148 @@
+{
+  "transcript_id": "science_0021",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as efficient screening tool",
+      "label_negative": "AI as unreliable hallucinator requiring verification",
+      "bipolarity_complete": true,
+      "grounding_span": "The AI screen allows me to reduce the amount of steps to get to the final answer"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability and trustworthiness",
+      "label_negative": "AI hallucinations and untrustworthiness",
+      "bipolarity_complete": true,
+      "grounding_span": "At the moment there are too many hallucinations to have any great degree of trust"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as verification burden",
+      "label_negative": "AI as autonomous reliable assistant",
+      "bipolarity_complete": true,
+      "grounding_span": "I would love to be able to trust AI to do the things I ask it to do correctly, and not have to double check everything"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI for sequence analysis tasks",
+      "label_negative": "Manual sequence analysis",
+      "bipolarity_complete": true,
+      "grounding_span": "I have used AI to help decide on restriction enzymes, primer design and verification of plasmid design"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Research efficiency and time savings",
+      "grounding_span": "The AI screen allows me to reduce the amount of steps to get to the final answer"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Scientific rigor and accuracy",
+      "grounding_span": "I still use old fashioned sequence analysis software, restriction enzyme supplier catalogs etc, to verify the AI outputs"
+    },
+    {
+      "id": "n7",
+      "type": "Stance",
+      "label": "Pragmatic acceptance of AI as screening tool",
+      "valence": "positive",
+      "grounding_span": "The AI screen allows me to reduce the amount of steps to get to the final answer"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Distrust due to hallucinations",
+      "valence": "negative",
+      "grounding_span": "At the moment there are too many hallucinations to have any great degree of trust"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Desire for trustworthy autonomous AI",
+      "valence": "positive",
+      "grounding_span": "I would love to be able to trust AI to do the things I ask it to do correctly, and not have to double check everything"
+    },
+    {
+      "id": "n10",
+      "type": "CognitiveStyleMarker",
+      "label": "Experienced-based verification — relies on 20 years of domain expertise to validate AI outputs",
+      "grounding_span": "I use processes I have always used for 20 years"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative screening-then-verification — uses AI for initial options then manually verifies",
+      "grounding_span": "The AI screen allows me to reduce the amount of steps to get to the final answer, but I still use old fashioned sequence analysis software"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n8",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n10",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n10",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n3",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

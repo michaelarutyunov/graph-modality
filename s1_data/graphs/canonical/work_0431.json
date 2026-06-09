@@ -1,0 +1,187 @@
+{
+  "transcript_id": "work_0431",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as idea expander for academic writing",
+      "label_negative": "AI as replacement for student analysis",
+      "bipolarity_complete": true,
+      "grounding_span": "help you generate ideas to build on"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for administrative tasks",
+      "label_negative": "AI for core teaching tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "offload to an assistant"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Human pedagogical creativity and empathy",
+      "label_negative": "Standardized AI-generated curriculum",
+      "bipolarity_complete": true,
+      "grounding_span": "creativity and insight that I bring to them"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as independent task completer",
+      "bipolarity_complete": true,
+      "grounding_span": "I first identified the qualities... I then gave it specific instructions"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Workplace acceptance of AI use",
+      "label_negative": "AI prohibition in educational culture",
+      "bipolarity_complete": true,
+      "grounding_span": "strictly prohibiting its use"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as tool for understanding AI limitations",
+      "label_negative": "AI as deep and smart",
+      "bipolarity_complete": true,
+      "grounding_span": "they're also just not that smart or deep"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Student learning and skill development",
+      "grounding_span": "support their scholarly work rather than simply to expect it DO work for them"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Deep focus and immersion in work",
+      "grounding_span": "deep work that I do is everything related to teaching and learning"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Human touch in healthcare",
+      "grounding_span": "taste for the 'human touch' in education"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "I've actually never had a bad or frustrating experience when I've used AI for work"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI limitations",
+      "valence": "negative",
+      "grounding_span": "they're also just not that smart or deep"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Optimism about future AI integration",
+      "valence": "positive",
+      "grounding_span": "I hope to continue integrating these tools into my weekly workflow"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Resistance to AI in creative work",
+      "valence": "negative",
+      "grounding_span": "I worry that many in the 'management class' of education don't put much stock in the 'human creativity' piece"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Human-centered philosophical framing",
+      "grounding_span": "I've always tried to think about teaching and learning as 'things human beings do'"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative iterative refinement — works back and forth with AI",
+      "grounding_span": "I worked with the assistant for a round or two like this before copying the text"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,179 @@
+{
+  "transcript_id": "work_0963",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as supplement to creative process",
+      "label_negative": "AI as primary creative tool",
+      "bipolarity_complete": true,
+      "grounding_span": "I often only turn to AI after failing to quickly do the task on my own"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for low-complexity content variation",
+      "label_negative": "AI for high-complexity creative tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I might feed AI the question and ask it to change details"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability in English vs. ESL contexts",
+      "label_negative": "AI unreliability in English contexts",
+      "bipolarity_complete": true,
+      "grounding_span": "in English-speaking environments, AI hasn't been up to par for me"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Authenticity in creative work",
+      "label_negative": "AI-assisted inauthenticity",
+      "bipolarity_complete": true,
+      "grounding_span": "I try to be an exemplar in not doing so"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI for data analysis and report writing",
+      "label_negative": "Manual report writing from scratch",
+      "bipolarity_complete": true,
+      "grounding_span": "AI was extremely helpful in taking certain statements and rewording them"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "save myself the time and effort of brainstorming"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Authenticity and personal integrity",
+      "grounding_span": "would rather be able to definitively state any ideas or work submitted is my own"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Educational effectiveness",
+      "grounding_span": "students seem more and more reliant on AI to do classwork/homework, and I try to be an exemplar in not doing so"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for wording tasks",
+      "valence": "positive",
+      "grounding_span": "AI was extremely helpful in taking certain statements and rewording them"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI's unnatural wording",
+      "valence": "negative",
+      "grounding_span": "I found myself rewording my requests and getting nowhere after ten minutes"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Principled minimal use of AI",
+      "valence": "ambivalent",
+      "grounding_span": "I rely on it very minimally, almost out of principle"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Openness to increasing AI use in future",
+      "valence": "positive",
+      "grounding_span": "I might rely on AI a bit more for brainstorming"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative context refinement — provides initial context then adds more to refine",
+      "grounding_span": "If I can avoid it, I don't give the AI much context"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based boundary setting — clear separation of AI-appropriate vs. human-only tasks",
+      "grounding_span": "I rely on it very minimally, almost out of principle"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,161 @@
+{
+  "transcript_id": "creativity_0094",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as ideation partner",
+      "label_negative": "AI as threat to creative authenticity",
+      "bipolarity_complete": true,
+      "grounding_span": "it helps me drill down on best practices"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as efficiency tool",
+      "label_negative": "AI as replacement for creative skill",
+      "bipolarity_complete": true,
+      "grounding_span": "using AI for that part helps save time so I can move on with the most important parts"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI denoising as cheating",
+      "label_negative": "AI denoising as acceptable enhancement",
+      "bipolarity_complete": true,
+      "grounding_span": "It feels kind of like cheating"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Authenticity in creative work",
+      "label_negative": "AI-mediated creative process",
+      "bipolarity_complete": true,
+      "grounding_span": "the art of the process less authentic"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Creative authenticity and human expression",
+      "grounding_span": "the art of the process less authentic"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "helps save time so I can move on with the most important parts"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Mastery and competence",
+      "grounding_span": "the skill of capturing a moment with the technical know-how"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Positive stance toward AI as research tool",
+      "valence": "positive",
+      "grounding_span": "it helps me drill down on best practices"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Resistance to AI in creative work",
+      "valence": "negative",
+      "grounding_span": "I tend to avoid using it for anything creative"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Negative stance toward AI denoising",
+      "valence": "negative",
+      "grounding_span": "It feels kind of like cheating"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Concern about devaluation of skill in photography",
+      "valence": "negative",
+      "grounding_span": "there'll be less skill involved in capturing pictures"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Intentional boundary-setting between AI and creative work",
+      "grounding_span": "I do my best to keep AI out of the creative side"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic efficiency-seeking — minimizes back-and-forth to avoid wasted effort",
+      "grounding_span": "using AI for that part helps save time"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n2",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

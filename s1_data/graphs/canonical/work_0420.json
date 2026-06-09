@@ -1,0 +1,190 @@
+{
+  "transcript_id": "work_0420",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI verifiability and accuracy",
+      "label_negative": "AI for subjective or lengthy tasks",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I favor AI when the answer is Yes/no, or a specific numerical answer based on analysis of a excel sheet"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for communication tasks",
+      "label_negative": "Personal authenticity in team communication",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I would ask Copilot to draft the whole email for me, I would give it a very quick glance and I would click send"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as time-saving tool",
+      "label_negative": "AI as threat to personal ownership and team trust",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I don't want the team to feel I don't value their time, so I choose to write their 121 comments"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as data analysis and insight generator",
+      "label_negative": "AI as unreliable for nuanced decisions",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "it identified trends, and highlighted the days we received more incoming work, which was Wednesdays"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI output quality and appropriateness",
+      "label_negative": "AI with vague prompts producing poor output",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "they need to put effort into a good prompt to get a good response"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "that's 32-48 minutes saved"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Team trust and authentic leadership",
+      "grounding_span": "I need to have the respect and confidence of my team"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Data-driven decision making",
+      "grounding_span": "we have had a more stable amount of work in our queues at the end of each day"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Continuous learning and skill development",
+      "grounding_span": "I often read social media such as dedicated Reddit subs on the use of AI in the work place"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "I think when we first got access to the copilot 365 license, and I was experimenting with it in Excel and used the deeper analysis of data mode it has"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Resistance to AI for personal communication",
+      "valence": "negative",
+      "grounding_span": "I don't want the team to feel I don't value their time, so I choose to write their 121 comments"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Confidence in AI as a key skill",
+      "valence": "positive",
+      "grounding_span": "I favor AI when the answer is Yes/no, or a specific numerical answer"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Resistance to AI for subjective content",
+      "valence": "negative",
+      "grounding_span": "where the answer to the prompt could be more subjective, or it involves more than 3 paragraphs of written content, I would take on the task myself"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic task decomposition based on complexity",
+      "grounding_span": "I favor AI when the answer is Yes/no, or a specific numerical answer based on analysis of a excel sheet"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through back-and-forth questioning",
+      "grounding_span": "ask copilot to ask me some questions to allow it to fine tune its response"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

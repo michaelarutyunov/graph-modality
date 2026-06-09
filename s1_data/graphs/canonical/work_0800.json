@@ -1,0 +1,189 @@
+{
+  "transcript_id": "work_0800",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as contract analysis and comprehension aid",
+      "label_negative": "Manual contract reading and interpretation",
+      "bipolarity_complete": true,
+      "grounding_span": "use AI to scan and pick out key points from the contracts"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for data analysis and report writing",
+      "label_negative": "Independent report creation without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "AI for brainstorming on reports, about the best way to present facts and figures"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as Excel formula assistant",
+      "label_negative": "Manual search and trial-and-error for technical solutions",
+      "bipolarity_complete": true,
+      "grounding_span": "using AI as a shortcut for formulae, VLookups etc in excel"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "One-shot complete task description to AI",
+      "bipolarity_complete": true,
+      "grounding_span": "Step by step. If it was a real person I was dealing with, I imagine they'd get frustrated"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as personal relationship maintainer",
+      "label_negative": "Impersonal or disrespectful treatment of AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I treat people with respect, and I think that is how you should deal with an AI"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as supportive teammate without judgment",
+      "label_negative": "AI as critical or demanding collaborator",
+      "bipolarity_complete": true,
+      "grounding_span": "it was like having a teammate that didn't mind your poor explanations or briefs"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI as omniscient companion across systems",
+      "label_negative": "Manual navigation between disparate systems",
+      "bipolarity_complete": true,
+      "grounding_span": "AI to almost be like a passenger along the 'journeys' I go through each day"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "AI will be a great time saver and automation is a crucial step in efficiencies"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Professional competence",
+      "grounding_span": "I felt proud with the quality of the report I produced: visually it was professional and the content was like I'd been doing contract management for years"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Authenticity and personal integrity",
+      "grounding_span": "you are being true to yourself, kind of like the public versus private persona needs to remain consistent"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Learning and understanding",
+      "grounding_span": "I do like to learn and understand"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "I felt proud with the quality of the report I produced"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Positive appreciation for AI's non-judgmental listening",
+      "valence": "positive",
+      "grounding_span": "it was like having a teammate that didn't mind your poor explanations or briefs"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Optimism about future AI integration",
+      "valence": "positive",
+      "grounding_span": "I hope so. I think multi-platform integration and standardisation is going to be a next step"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Abstract-to-concrete iterative thinking",
+      "grounding_span": "I like to develop my thoughts and build and build upon ideas"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Visual-contextual thinking",
+      "grounding_span": "I'm a visual person, and with reports, and in particular, tables and spreadsheets in excel, I like things to look a certain way"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n4",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,157 @@
+{
+  "transcript_id": "work_0828",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI for cut-and-dry objective questions",
+      "label_negative": "AI for subjective collaborative questions",
+      "bipolarity_complete": true,
+      "grounding_span": "cut-and-dry is typically more objective and collaboration conversations involve more subjectivity"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as preliminary sounding board",
+      "label_negative": "AI as final authority",
+      "bipolarity_complete": true,
+      "grounding_span": "I like to run items by AI to make sure I am not immediately running into a dead end"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for mundane and technical tasks",
+      "label_negative": "AI for design and creative tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI in a standard workday for more mundane and technical tasks"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI use normalized by workplace culture",
+      "label_negative": "AI use stigmatized or isolated",
+      "bipolarity_complete": true,
+      "grounding_span": "I have many coworkers who use AI; I think it makes it feel more normalized"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as enhancement tool not replacement",
+      "label_negative": "AI as replacement for human work",
+      "bipolarity_complete": true,
+      "grounding_span": "I see it as a tool to enhance my work rather than replacing the work I already do"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "It saved both me and my coworker a lot of time"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional competence and accuracy",
+      "grounding_span": "I have at least some idea as to whether what I propose is doable"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Personal enjoyment and creative autonomy",
+      "grounding_span": "I genuinely enjoy designing and feel like it's so nuanced and subjective"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI providing verifiable answers",
+      "valence": "positive",
+      "grounding_span": "I was really happy with how it worked when I was in a conversation with my coworker"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Preference for human collaboration in design",
+      "valence": "negative",
+      "grounding_span": "when I am in a room with my coworkers I seldom think to use AI"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Optimism about expanding AI use",
+      "valence": "positive",
+      "grounding_span": "I see my relationship with AI expanding, not shrinking or staying the same"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Task-based compartmentalization — distinguishes objective vs subjective tasks",
+      "grounding_span": "cut-and-dry is typically more objective and collaboration conversations involve more subjectivity"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative verification — uses AI as initial check before consulting colleagues",
+      "grounding_span": "I like to run items by AI to make sure I am not immediately running into a dead end"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

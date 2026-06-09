@@ -1,0 +1,177 @@
+{
+  "transcript_id": "work_0004",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as efficiency and speed tool",
+      "label_negative": "AI as requiring hand-holding and collaboration",
+      "bipolarity_complete": true,
+      "grounding_span": "the goal is efficiency and speed"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as learning and capability expander",
+      "label_negative": "AI as limited to known tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "It helps me create things or discover features I would not have known otherwise"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability for sensitive financial data",
+      "label_negative": "AI error-prone for math and sensitive data",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is quite prone to errors, especially when it comes to Maths"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI trustworthiness with confidential information",
+      "label_negative": "AI untrustworthy with confidential information",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't use AI for any work where confidential information is involved"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Productivity and time savings",
+      "grounding_span": "It saves a lot of time"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Professional growth and skill acquisition",
+      "grounding_span": "discover features I would not have known otherwise"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Accuracy and error avoidance in finance",
+      "grounding_span": "Any sort of mistake cannot be afforded for work in the Finance department"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Data privacy and security",
+      "grounding_span": "I don't use AI for any work where confidential information is involved"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI as daily productivity booster",
+      "valence": "positive",
+      "grounding_span": "It makes me feel satisfied on a daily basis"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Preference for independent AI over collaboration",
+      "valence": "positive",
+      "grounding_span": "I'd prefer if AI could handle it independently from the start"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Distrust of AI for confidential data",
+      "valence": "negative",
+      "grounding_span": "I don't believe that"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Skepticism about AI taking over",
+      "valence": "negative",
+      "grounding_span": "I don't believe AI could take over anytime soon"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic boundary-setting based on risk assessment",
+      "grounding_span": "for super sensitive information, like budgets and other financial areas, I do them without AI"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative step-by-step problem decomposition",
+      "grounding_span": "I will manually walk through it step by step with the AI"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n4",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

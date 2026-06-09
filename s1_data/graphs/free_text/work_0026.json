@@ -1,0 +1,188 @@
+{
+  "transcript_id": "work_0026",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as communication mediator for difficult messages",
+      "label_negative": "Direct unmediated communication",
+      "bipolarity_complete": true,
+      "grounding_span": "if I have something I need to express to another co-worker that may not be the best news, I use AI to help me figure out a way to 'break the news' in a more positive or less harsh way"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as thought organizer for scattered ideas",
+      "label_negative": "Self-organized thought without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I will dump a summary of most or all of the ideas and let the AI work with it/organize them"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as efficiency tool for complex tasks",
+      "label_negative": "Manual effort on complex tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "it helped me clean up my schedule in an extremely organized way in a matter of minutes"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Personal control over work output",
+      "label_negative": "AI-influenced or co-created output",
+      "bipolarity_complete": true,
+      "grounding_span": "providing results that are 100% mine, not influenced or effected by outside sources"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Skill maintenance through non-delegation",
+      "label_negative": "Full reliance on AI leading to skill atrophy",
+      "bipolarity_complete": true,
+      "grounding_span": "I do not fully rely on AI to do every task or job"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI adoption in a non-AI-using workplace",
+      "label_negative": "Open AI use in an AI-friendly workplace",
+      "bipolarity_complete": true,
+      "grounding_span": "I definitely keep it more private, unless I have a great breakthrough"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Effective communication and relationship maintenance",
+      "grounding_span": "break the news in a more positive or less harsh way"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Productivity and time efficiency",
+      "grounding_span": "it helped me clean up my schedule in an extremely organized way in a matter of minutes"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Personal autonomy and ownership",
+      "grounding_span": "providing results that are 100% mine"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Professional competence and skill preservation",
+      "grounding_span": "I do not fully rely on AI to do every task or job"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI for complex scheduling",
+      "valence": "positive",
+      "grounding_span": "I was about 4 hours deep at that point and was so happy"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with self for not using AI sooner",
+      "valence": "negative",
+      "grounding_span": "incredibly frustrated with myself for spending so much time instead of getting help"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Intentional boundary on AI use for easy tasks",
+      "valence": "negative",
+      "grounding_span": "I prefer to handle my 'easy' tasks on my own"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Optimism about future AI relationship",
+      "valence": "positive",
+      "grounding_span": "I think my relationship with AI at work will continue to evolve and flourish"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Delegation with verification — offloads complex tasks but double-checks results",
+      "grounding_span": "I take extra care to double check the results and edit as needed"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Selective disclosure — keeps AI use private unless demonstrating value",
+      "grounding_span": "I definitely keep it more private, unless I have a great breakthrough"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

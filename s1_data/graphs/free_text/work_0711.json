@@ -1,0 +1,156 @@
+{
+  "transcript_id": "work_0711",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative partner for articulation and validation",
+      "label_negative": "AI as untrustworthy black box",
+      "bipolarity_complete": true,
+      "grounding_span": "It mostly confirmed what I had in mind but helped me articulate it clearly and approach it from a more objective perspective"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for sensitive tasks requiring verification",
+      "label_negative": "Blind trust in AI for sensitive tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "the only tasks that AI could help with that I don't use it for would be ones that are too sensitive to blindly trust the AI with"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as efficiency tool for routine tasks",
+      "label_negative": "AI as threat to human roles",
+      "bipolarity_complete": true,
+      "grounding_span": "saving precious time"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Institutional integration of AI for information routing",
+      "label_negative": "Individual resistance to AI adoption",
+      "bipolarity_complete": true,
+      "grounding_span": "Having an AI assistant able to review all the information recorded and disseminate it to the right people"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "saving precious time"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Professional competence and accuracy",
+      "grounding_span": "I always double check at the end that it followed the requirements"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Patient care quality and information flow",
+      "grounding_span": "avoid risks of missing key information"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Satisfaction with AI for articulation and validation",
+      "valence": "positive",
+      "grounding_span": "It mostly confirmed what I had in mind but helped me articulate it clearly"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Cautious trust requiring verification",
+      "valence": "ambivalent",
+      "grounding_span": "I would always, for example, verify that the information provided by the AI exists"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with institutional resistance",
+      "valence": "negative",
+      "grounding_span": "the only friction in my relationship with AI comes from colleagues that do not see the benefits"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Optimism about AI integration for team coordination",
+      "valence": "positive",
+      "grounding_span": "Having an AI assistant able to review all the information recorded and disseminate it to the right people"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative iterative refinement — works with AI step by step",
+      "grounding_span": "I usually collaborate with it throughout"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic boundary setting — distinguishes sensitive vs routine tasks",
+      "grounding_span": "the only tasks that AI could help with that I don't use it for would be ones that are too sensitive"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

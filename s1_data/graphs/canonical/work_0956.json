@@ -1,0 +1,142 @@
+{
+  "transcript_id": "work_0956",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as brainstorming and idea generator",
+      "label_negative": "AI as full content generator",
+      "bipolarity_complete": true,
+      "grounding_span": "I use it to generate ideas for sales and marketing emails"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "Personal voice in email writing",
+      "label_negative": "AI-drafted impersonal emails",
+      "bipolarity_complete": true,
+      "grounding_span": "I want the tone to sound like me"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for menial tasks",
+      "label_negative": "AI for foundational skill development",
+      "bipolarity_complete": true,
+      "grounding_span": "utilizing AI for more routine, menial tasks"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI for one-off tasks vs. foundational knowledge",
+      "label_negative": "AI use without foundational knowledge",
+      "bipolarity_complete": true,
+      "grounding_span": "new people joining will then not learn properly how to do these tasks on their own"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Creative inspiration and ideation",
+      "grounding_span": "set me apart from the competition and resonate with my customers"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Authentic personal expression",
+      "grounding_span": "I want the tone to sound like me"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Skill development and learning",
+      "grounding_span": "not know how to identify if there is an error with the AI"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Satisfaction with AI for brainstorming",
+      "valence": "positive",
+      "grounding_span": "I am generally satisfied with the result of what I am using AI for"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Concern about AI undermining learning",
+      "valence": "negative",
+      "grounding_span": "I do have concern that new people joining will then not learn properly"
+    },
+    {
+      "id": "n10",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement with limited back-and-forth",
+      "grounding_span": "if it does not spark inspiration right away I will go back and forth, refining my thoughts"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic phased adoption with safeguards",
+      "grounding_span": "I will slowly test out using it for routine and menial tasks"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n10",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n3",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

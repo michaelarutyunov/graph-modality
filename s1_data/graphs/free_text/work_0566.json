@@ -1,0 +1,178 @@
+{
+  "transcript_id": "work_0566",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as independent task completer",
+      "bipolarity_complete": true,
+      "grounding_span": "I use it as a collaboration"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI trustworthiness in code generation",
+      "label_negative": "AI untrustworthiness in scientific research",
+      "bipolarity_complete": true,
+      "grounding_span": "When it comes to code, AI has earned my trust"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as efficiency enhancer",
+      "label_negative": "AI as unnecessary or time-wasting",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't see a reason not to use it as I always want to save time at work"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as career enhancer",
+      "label_negative": "AI as career threat",
+      "bipolarity_complete": true,
+      "grounding_span": "because of AI, I have a better job with much better money"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Productivity and time savings",
+      "grounding_span": "I always want to save time at work"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Professional success and career growth",
+      "grounding_span": "I have a better job with much better money"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Scientific integrity and accuracy",
+      "grounding_span": "What they write must be correct and well documented"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Satisfaction with AI as collaborative partner",
+      "valence": "positive",
+      "grounding_span": "I use it as a collaboration"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Trust in AI for code generation",
+      "valence": "positive",
+      "grounding_span": "When it comes to code, AI has earned my trust"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Distrust in AI for scientific verification",
+      "valence": "negative",
+      "grounding_span": "I still can't trust AI for something so important"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Enthusiasm for AI's efficiency gains",
+      "valence": "positive",
+      "grounding_span": "I don't see a reason not to use it as I always want to save time at work"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Optimism about AI's career impact",
+      "valence": "positive",
+      "grounding_span": "because of AI, I have a better job with much better money"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic efficiency-driven approach",
+      "grounding_span": "I always want to save time at work"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-specific trust calibration",
+      "grounding_span": "When it comes to code, AI has earned my trust"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

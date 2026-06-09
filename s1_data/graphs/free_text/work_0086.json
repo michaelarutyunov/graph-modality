@@ -1,0 +1,156 @@
+{
+  "transcript_id": "work_0086",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as idea generator and framework builder",
+      "label_negative": "AI as full content creator",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is used as a idea generator and soundboard to get the bones of an article which I then would go off and do the writing myself"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as fact-finding tool requiring verification",
+      "label_negative": "AI as reliable source without verification",
+      "bipolarity_complete": true,
+      "grounding_span": "looking up facts that I then fact check myself elsewhere"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as assistant for grunt work",
+      "label_negative": "AI as replacement for human tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "if it could call people or video people to interview them, transcribe it, pull out the best quotes"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI writing detectability",
+      "label_negative": "AI writing indistinguishable from human",
+      "bipolarity_complete": true,
+      "grounding_span": "it's pretty obvious when AI is writing something"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Creative autonomy and originality",
+      "grounding_span": "I then would go off and do the writing myself"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Factual accuracy and reliability",
+      "grounding_span": "I would have to make sure the facts are correct myself"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency in preparatory work",
+      "grounding_span": "helpful for the idea creation"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Satisfaction with AI for idea generation",
+      "valence": "positive",
+      "grounding_span": "it is helpful for the idea creation"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Frustration with AI's repetitive language",
+      "valence": "negative",
+      "grounding_span": "it gets frustrating when some of the words and things sound similar"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Confidence in human writing superiority",
+      "valence": "positive",
+      "grounding_span": "I think for now human writers are safe"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Openness to AI handling more grunt work",
+      "valence": "positive",
+      "grounding_span": "if AI can do more of the gruntwork like finding sources, interviews"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Structured iterative refinement — breaks brainstorming into stages",
+      "grounding_span": "I'll ask an AI to come up with 5 ideas... then ask the AI to give me some angles... then see what comes up"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Verification-oriented fact-checking — cross-references AI outputs",
+      "grounding_span": "looking up facts that I then fact check myself elsewhere"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

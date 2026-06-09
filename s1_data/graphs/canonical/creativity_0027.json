@@ -1,0 +1,175 @@
+{
+  "transcript_id": "creativity_0027",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as brainstorming and idea generator",
+      "label_negative": "Reliance on own limited ideas",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI to generate these ideas for me"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as supplement to creative process",
+      "label_negative": "Time-consuming manual creative process",
+      "bipolarity_complete": true,
+      "grounding_span": "Gemini saved me time"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as supplement to creative process",
+      "label_negative": "Commonplace or expected ideas",
+      "bipolarity_complete": true,
+      "grounding_span": "The ideas that Gemini came out with I never would have dreamt of in my wildest dreams"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as tool for market and business perspective",
+      "label_negative": "Blending in with competitors",
+      "bipolarity_complete": true,
+      "grounding_span": "stand out from the crowd"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as future automation of technical design and cutting",
+      "label_negative": "Manual time-consuming design and setup",
+      "bipolarity_complete": true,
+      "grounding_span": "I would love you to be able to tell AI the design you would like in Cricut"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Novelty and creative insight",
+      "grounding_span": "they were so thoughtful and out of the box"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "Gemini saved me time"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Strategic control and business success",
+      "grounding_span": "make my business thrive and showcase my work"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Creative autonomy",
+      "grounding_span": "I do still also create my own ideas too"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for brainstorming",
+      "valence": "positive",
+      "grounding_span": "it was a relief and like a weight had lifted off of me"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "positive",
+      "grounding_span": "optimistic, knowing there was this ability to generate insane ideas to make my business amazing"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "No personal concern about AI in own work",
+      "valence": "positive",
+      "grounding_span": "I do not have any concerns, AI only seems to help make life easier"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Concern for artists directly impacted by AI",
+      "valence": "mixed",
+      "grounding_span": "some artists maybe worried about how AI can generate a creative piece of work in seconds"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Gut-feeling decision-making — intuitive selection from AI suggestions",
+      "grounding_span": "I just go with my gut and the one I felt stood out"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Vision-oriented future planning — imagining ideal automated workflow",
+      "grounding_span": "I would love you to be able to tell AI the design you would like in Cricut"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

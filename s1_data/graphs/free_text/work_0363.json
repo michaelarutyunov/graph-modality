@@ -1,0 +1,201 @@
+{
+  "transcript_id": "work_0363",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as comprehensive search tool",
+      "label_negative": "Traditional keyword search missing buried articles",
+      "bipolarity_complete": true,
+      "grounding_span": "The AI would search more comprehensively and find articles"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability and accuracy",
+      "label_negative": "AI mistakes and misinterpretations",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't trust it independently, as it makes mistakes"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for note-taking and documentation",
+      "label_negative": "Manual note-taking for accuracy",
+      "bipolarity_complete": true,
+      "grounding_span": "I prefer to document my notes myself rather than copying from the call summaries provided by AI"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI for personal writing tasks",
+      "label_negative": "Personal writing without AI assistance",
+      "bipolarity_complete": true,
+      "grounding_span": "I also prefer to write my own resumes, I don't like using AI for that"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Human oversight and verification",
+      "label_negative": "Blind reliance on AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I check the sources it cites to make sure it is truly answering my questions"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "I was able to avoid having to ask for help"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Accuracy and reliability",
+      "grounding_span": "The AI call summaries don't always catch everything and don't include important info such as prescription numbers"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Personal autonomy and control",
+      "grounding_span": "I prefer to document my notes myself"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for finding hard-to-locate information",
+      "valence": "positive",
+      "grounding_span": "One time I felt particularly satisfied was when I had not known of a VIP program"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Distrust of AI for independent tasks due to errors",
+      "valence": "negative",
+      "grounding_span": "I don't trust it independently, as it makes mistakes"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Preference for manual note-taking over AI summaries",
+      "valence": "negative",
+      "grounding_span": "I prefer to document my notes myself rather than copying from the call summaries provided by AI"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Resistance to using AI for personal writing",
+      "valence": "negative",
+      "grounding_span": "I also prefer to write my own resumes, I don't like using AI for that"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Openness to future AI expansion",
+      "valence": "positive",
+      "grounding_span": "I do see myself using it in the future"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Verification-oriented approach — checks sources before trusting",
+      "grounding_span": "I check the sources it cites to make sure it is truly answering my questions"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-specific delegation — uses AI for research but not for personal writing or note-taking",
+      "grounding_span": "I prefer to document my notes myself rather than copying from the call summaries"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

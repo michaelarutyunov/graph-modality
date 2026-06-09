@@ -1,0 +1,219 @@
+{
+  "transcript_id": "work_0576",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as code generation assistant",
+      "label_negative": "AI as error-prone content creator requiring extensive vetting",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I use it a lot to create examples. It saves time, when it's correct"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI output quality and appropriateness",
+      "label_negative": "AI output with repetition, errors, or inappropriate difficulty",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "if you can be specific enough and spend some time crafting good prompts, you can get some good help"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI alignment with educational standards and rigor",
+      "label_negative": "AI unreliability for learning outcomes coverage and distractor quality",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I don't think I'd trust any model (yet) to be able to do that"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI formatting and integration friction",
+      "label_negative": "Seamless AI formatting and integration",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I cannot deal with AI formatting, so I'm going back and forth to Word"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI first response quality",
+      "label_negative": "AI fast response with high quality",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "models that are taking 2 or 3 minutes now to think before responding...I don't think the new responses are all that much better"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI for student engagement and motivation",
+      "label_negative": "AI as tool that enhances student engagement",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "Motivating them when AI is so readily available is difficult"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and time savings in lesson planning",
+      "grounding_span": "It saves time"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Educational quality and accuracy",
+      "grounding_span": "I still have to go through every example with a fine tooth comb to be sure that it is correct"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Professional autonomy",
+      "grounding_span": "I don't think I'd trust any model (yet) to be able to do that"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Student engagement and learning",
+      "grounding_span": "I love my job and I love math"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI for content creation",
+      "valence": "positive",
+      "grounding_span": "I was happily shocked the first time I went looking for integration problems and got a decent list from AI"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with AI output quality",
+      "valence": "negative",
+      "grounding_span": "when there's some repetition or some nuance that didn't translate...it can be frustrating"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Resignation about AI's impact on student motivation",
+      "valence": "negative",
+      "grounding_span": "Lots of students don't bother to do their own work anymore, which is really depressing"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Openness to increasing AI use in future",
+      "valence": "positive",
+      "grounding_span": "I'll probably start using AI to show simulations of adding the area under a curve"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement and quality control",
+      "grounding_span": "if you can be specific enough and spend some time crafting good prompts"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Systematic pedagogical curation and editing",
+      "grounding_span": "I take the questions and look through to see what I can use first"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

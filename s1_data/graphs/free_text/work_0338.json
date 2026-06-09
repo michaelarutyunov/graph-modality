@@ -1,0 +1,223 @@
+{
+  "transcript_id": "work_0338",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as quick research tool",
+      "label_negative": "Manual search through Google results",
+      "bipolarity_complete": true,
+      "grounding_span": "using AI to quickly research something, because I find it's a lot faster than sifting through google results"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as writing and creativity tool",
+      "label_negative": "Human-crafted writing for genuine connection",
+      "bipolarity_complete": true,
+      "grounding_span": "Anything that requires any measure of creativity, like writing, even if it's just an email response. I find that the way AI writes doesn't sound like me at all"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability and accuracy",
+      "label_negative": "AI hallucination and fabrication",
+      "bipolarity_complete": true,
+      "grounding_span": "when AI invents resources or sources instead of just saying it can't find the information I asked for"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as task delegator for complete tasks",
+      "label_negative": "Collaborative back-and-forth with AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I definitely tend to do the latter - delegate a complete task"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as time-saving efficiency tool",
+      "label_negative": "Time-consuming manual work",
+      "bipolarity_complete": true,
+      "grounding_span": "I do feel satisfied when it saves me time by doing something quickly that would have taken me awhile"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as threat to human expertise in creative fields",
+      "label_negative": "AI as harmless tool that cannot replace human insight",
+      "bipolarity_complete": true,
+      "grounding_span": "I can definitely see how my job could be replaced by AI for people who don't appreciate the insight a human can offer"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI as future personal assistant for mundane tasks",
+      "label_negative": "AI as overreaching into human autonomy",
+      "bipolarity_complete": true,
+      "grounding_span": "it will become more integrated into people's daily lives as a sort of always-present personal assistant, something that can manage mundane tasks"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "saves me time by doing something quickly"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Authentic human connection and self-expression",
+      "grounding_span": "It feels like that person isn't trying to genuinely connect with me"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Epistemic trust and accuracy",
+      "grounding_span": "I do always verify that the answer is correct"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Professional identity and human creativity",
+      "grounding_span": "the human mind has a level of creativity and unique way of looking at problems"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI for quick tasks",
+      "valence": "positive",
+      "grounding_span": "I do feel satisfied when it saves me time"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Frustration with AI hallucination",
+      "valence": "negative",
+      "grounding_span": "when AI invents resources or sources instead of just saying it can't find the information I asked for"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Resistance to AI in creative writing",
+      "valence": "negative",
+      "grounding_span": "Anything that requires any measure of creativity, like writing... I always compose those things myself"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Worry about AI replacing human insight",
+      "valence": "negative",
+      "grounding_span": "It worries me a lot, actually"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Optimism about AI as future assistant",
+      "valence": "positive",
+      "grounding_span": "I imagine in the future it will become more integrated... as a sort of always-present personal assistant"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Verification-oriented — always checks AI outputs",
+      "grounding_span": "I do always verify that the answer is correct"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based boundary setting — separates creative from non-creative tasks",
+      "grounding_span": "Anything that requires any measure of creativity, like writing... I always compose those things myself"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

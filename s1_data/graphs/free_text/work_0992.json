@@ -1,0 +1,147 @@
+{
+  "transcript_id": "work_0992",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI understanding of domain-specific constraints",
+      "label_negative": "AI misunderstanding of domain-specific constraints",
+      "bipolarity_complete": true,
+      "grounding_span": "the ai didn't quite understand what made a keto bread keto"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability and accuracy in advice",
+      "label_negative": "AI unreliability and inaccuracy",
+      "bipolarity_complete": true,
+      "grounding_span": "suggested that the issues in the recipe was due to a lack of flour"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Ethical transparency of AI training data",
+      "label_negative": "Ethical opacity of AI training data",
+      "bipolarity_complete": true,
+      "grounding_span": "not knowing where the datasets is taken from"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI art quality and usability",
+      "label_negative": "AI art quality and usability",
+      "bipolarity_complete": false,
+      "grounding_span": "it was not really usable at that time"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Hands-on skill development vs AI reliance",
+      "label_negative": "Hands-on skill development vs AI reliance",
+      "bipolarity_complete": false,
+      "grounding_span": "I have gone out of my way in the past to take online courses for graphic design"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Practical problem-solving in baking",
+      "grounding_span": "troubleshoot these problems"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Ethical integrity",
+      "grounding_span": "ethical concerns of where the datasets of ai art tools came from"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Personal competence and self-reliance",
+      "grounding_span": "I have gone out of my way in the past to take online courses for graphic design"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Frustration with AI misunderstanding domain constraints",
+      "valence": "negative",
+      "grounding_span": "the ai didn't quite understand what made a keto bread keto"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Skepticism toward AI due to past failures",
+      "valence": "negative",
+      "grounding_span": "Honestly I cannot think of any times where ai has been particularly helpful to me"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Conditional openness to future AI use",
+      "valence": "ambivalent",
+      "grounding_span": "Perhaps I would consider using it in the future if I was more confident in its abilities"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Trial-and-error empirical approach",
+      "grounding_span": "just tried more trial and error in the bread making process"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Preference for proven methods over novelty",
+      "grounding_span": "I will simply use whatever method worked best in the past"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

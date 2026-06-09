@@ -1,0 +1,195 @@
+{
+  "transcript_id": "work_0003",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as creative writing assistant for property descriptions",
+      "label_negative": "Manual writing of property descriptions",
+      "bipolarity_complete": true,
+      "grounding_span": "ask AI to create a decription that is less than 2000 characters and is mindfull of fair housing guidelines"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for social media content automation",
+      "label_negative": "Manual social media content creation",
+      "bipolarity_complete": true,
+      "grounding_span": "find more AI solutions to automate more of my social media presence"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI in client communications",
+      "label_negative": "Direct human client communications",
+      "bipolarity_complete": true,
+      "grounding_span": "I've chosen not to utilize any Ai assistance with follow up and client communications"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI ability to convey nuanced property condition",
+      "label_negative": "AI inability to convey nuanced property condition",
+      "bipolarity_complete": true,
+      "grounding_span": "the AI model had a hard time with that. It tended to want to either make the property sound like a complete fixer-upper or a turnkey dream house"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI authenticity in replicating personal writing style",
+      "label_negative": "AI inability to replicate personal writing style",
+      "bipolarity_complete": true,
+      "grounding_span": "I've struggled to get AI to write in a way for social media that could pass as my own content"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency in marketing tasks",
+      "grounding_span": "lean on Ai to write an appealing description"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Authentic client relationships and personal touch",
+      "grounding_span": "I always want my clients to feel heard and well cared for during their process"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional reputation and trust",
+      "grounding_span": "I am not quite trusting enough in Ai yet to allow any communications to leave my desk in my name"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Accurate and effective property marketing",
+      "grounding_span": "knowing the target audience and messaging, along with having seen the property in person, was key to an accurate yet effective marketing campaign"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for property descriptions",
+      "valence": "positive",
+      "grounding_span": "lean on Ai to write an appealing description"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Reluctance to use AI for client communications",
+      "valence": "negative",
+      "grounding_span": "I've chosen not to utilize any Ai assistance with follow up and client communications"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with AI's inability to convey nuanced property condition",
+      "valence": "negative",
+      "grounding_span": "the AI model had a hard time with that"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Aspiration for AI to automate social media authentically",
+      "valence": "positive",
+      "grounding_span": "I really hope to find more AI solutions to automate more of my social media presence"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement with thoughtful initial prompts",
+      "grounding_span": "I typically request at least 2 or 3 revisions but they are generally minor if I take the time to enter the prompt in a thoughtful manor"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based trust calibration",
+      "grounding_span": "I've chosen not to utilize any Ai assistance with follow up and client communications"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

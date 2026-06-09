@@ -1,0 +1,210 @@
+{
+  "transcript_id": "work_0740",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as rapid feature creation tool",
+      "label_negative": "AI as unreliable requiring debugging",
+      "bipolarity_complete": true,
+      "grounding_span": "spins up new features faster than I could without AI"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as learning and research assistant",
+      "label_negative": "AI as unhelpful without context",
+      "bipolarity_complete": true,
+      "grounding_span": "use the research functions if I'm completely new to an area"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI task scope manageability",
+      "label_negative": "AI task scope too large",
+      "bipolarity_complete": true,
+      "grounding_span": "the task I gave AI was just way too large"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI in technical vs creative domains",
+      "label_negative": "AI in artistic endeavors",
+      "bipolarity_complete": true,
+      "grounding_span": "very against using AI for any sort of artistic endeavor"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI transparency and explainability",
+      "label_negative": "AI as black box",
+      "bipolarity_complete": true,
+      "grounding_span": "I would like it to explain what it is setting up so I can manage it myself"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "Workplace AI adoption culture",
+      "label_negative": "Individual reluctance to AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I actually didn't use much AI until my workplace really started to adopt it"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "spins up new features faster than I could without AI"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Understanding and technical competence",
+      "grounding_span": "I would like to know what's going on"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Creative integrity and human artistry",
+      "grounding_span": "I do not think AI should be in the business of image/video generation"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Autonomy and control",
+      "grounding_span": "I don't want to be beholden to AI every time"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI for rapid prototyping",
+      "valence": "positive",
+      "grounding_span": "spins up new features faster than I could without AI"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with AI debugging loops",
+      "valence": "negative",
+      "grounding_span": "it gets frustrating after the 15th attempt of debugging"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Openness to increased AI use",
+      "valence": "positive",
+      "grounding_span": "I think I will probably use more AI at work"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Resistance to AI in creative domains",
+      "valence": "negative",
+      "grounding_span": "very against using AI for any sort of artistic endeavor"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Initial reluctance overcome by peer influence",
+      "valence": "mixed",
+      "grounding_span": "I was reluctant until I saw how much my coworkers were getting done with it"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative steering with frequent commits",
+      "grounding_span": "I make commits very often working with AI so I can easily roll back"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Proactive learning to maintain technical understanding",
+      "grounding_span": "I do actively try to do that so I know in what direction to steer the AI"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

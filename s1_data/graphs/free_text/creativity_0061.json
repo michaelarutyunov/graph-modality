@@ -1,0 +1,169 @@
+{
+  "transcript_id": "creativity_0061",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as idea generation partner for customer empathy",
+      "label_negative": "Limited human-only ideation without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "AI has been very helpful with generating ideas about what would matter to this woman"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as mockup generation tool with creative surprise",
+      "label_negative": "Rigid, predictable mockup creation without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I am often very happily surprised with some of the visual representations the AI comes up with"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as cost and time saving substitute for human freelancers",
+      "label_negative": "Expensive, time-consuming human-only production",
+      "bipolarity_complete": true,
+      "grounding_span": "Being able to create images that look nearly as incredible, and have so much control over every aspect, feels like a relief every time"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as threat to other creatives' livelihoods",
+      "label_negative": "AI as harmless tool without negative externalities",
+      "bipolarity_complete": true,
+      "grounding_span": "I fully understand that my gain is another creative's loss"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as future full-service design integrator",
+      "label_negative": "Manual, piecemeal design workflow without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I really look forward to being able to upload my product image and having AI fully create mockups"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative control and intentional direction",
+      "grounding_span": "Ultimately I always feel like we're driving the actual creative decision making"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and cost reduction",
+      "grounding_span": "a huge time and money saver"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Ethical responsibility toward displaced workers",
+      "grounding_span": "I recognize that it has harmed her financially"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Enthusiasm for AI's creative expansion",
+      "valence": "positive",
+      "grounding_span": "I loved the ability to decide on the fly that I wanted to see how the frames would look in gold"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Relief at AI's efficiency gains",
+      "valence": "positive",
+      "grounding_span": "feels like a relief every time"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Guilt over AI's displacement of freelancers",
+      "valence": "negative",
+      "grounding_span": "I fully understand that my gain is another creative's loss"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Optimistic anticipation of future AI capabilities",
+      "valence": "positive",
+      "grounding_span": "I really look forward to being able to upload my product image and having AI fully create mockups"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative prompt refinement with loose initial parameters",
+      "grounding_span": "start without very strict parameters because I want to see what varying ideas it will come up with"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Empathy-driven persona-based ideation",
+      "grounding_span": "We input specific customer data and as much information as we know about our avatar"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

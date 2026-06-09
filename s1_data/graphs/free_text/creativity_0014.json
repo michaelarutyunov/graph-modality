@@ -1,0 +1,209 @@
+{
+  "transcript_id": "creativity_0014",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as rapid prototyping tool for 2D ideas",
+      "label_negative": "Manual slow ideation without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "rapidly create 2D renderings/ideas for token genres"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as efficiency accelerator in creative workflow",
+      "label_negative": "Time-consuming manual process",
+      "bipolarity_complete": true,
+      "grounding_span": "AI functions as an efficiency tool, speeding up the first 'third' of the workflow"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as creative enabler for non-drawers",
+      "label_negative": "Exclusion from visual creation without drawing skill",
+      "bipolarity_complete": true,
+      "grounding_span": "allowed for a person like me, who is not adept nor willing nor wanting to draw, to be able to actually create something"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI adherence to user creative direction",
+      "label_negative": "AI losing or misinterpreting user direction",
+      "bipolarity_complete": true,
+      "grounding_span": "my direction being lost from say prompt to image generation or image editing"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as threat to future artistic talent development",
+      "label_negative": "AI as harmless tool that does not discourage artists",
+      "bipolarity_complete": true,
+      "grounding_span": "broadly disincentivizes other artists from entering the field growing up"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI expansion into photo editing tasks",
+      "label_negative": "AI limited to ideation only",
+      "bipolarity_complete": true,
+      "grounding_span": "I could easily see it expanding into the photo editing aspect of the my workflow"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Creative productivity and speed",
+      "grounding_span": "speed from which I have a 2D image that I can then take through the workflow to make 3D"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Creative participation and self-expression",
+      "grounding_span": "allowed me to exist as a creator, making prototypes to prove the concept"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Artistic integrity and unique talent cultivation",
+      "grounding_span": "unique and special talents are not going to enter the field"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Positive appreciation for AI as efficiency booster",
+      "valence": "positive",
+      "grounding_span": "It feels nice to be able to quickly get from an idea to a physical product within two hours"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI losing creative direction",
+      "valence": "negative",
+      "grounding_span": "the number one pain point in terms of my direction being lost"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Gratitude for AI enabling creative participation",
+      "valence": "positive",
+      "grounding_span": "allowed for a person like me...to be able to actually create something"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Concern about AI discouraging future artists",
+      "valence": "negative",
+      "grounding_span": "broadly disincentivizes other artists from entering the field"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Optimistic openness to AI expanding into photo editing",
+      "valence": "positive",
+      "grounding_span": "I could easily see it expanding into the photo editing aspect"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Systematic workflow decomposition — breaks creative process into distinct phases",
+      "grounding_span": "speeding up the first 'third' of the workflow if you will, the prototyping portion"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic tool calibration based on task suitability",
+      "grounding_span": "I am not sure that functionality is important enough for developers to want to engage with it"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

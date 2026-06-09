@@ -1,0 +1,201 @@
+{
+  "transcript_id": "science_0079",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as enhanced search engine for relevant articles",
+      "label_negative": "Traditional keyword-dependent database search",
+      "bipolarity_complete": true,
+      "grounding_span": "I currently see LLM's as a type of search engine for finding articles that produce a higher rate of relevant articles compared to using Google Scholar"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability in citations",
+      "label_negative": "AI hallucination and off-topic links",
+      "bipolarity_complete": true,
+      "grounding_span": "the models will frequently find links that are not at all on topic, or have titles that sound like they could be relevant, but after reading, are not"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as brainstorming and idea generator",
+      "label_negative": "AI as overly critical and dismissive of early-stage ideas",
+      "bipolarity_complete": true,
+      "grounding_span": "I wish that it wouldn't decide to be completely dismissive of early-stage ideas, or express as much criticism about novel idea's"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI memory reliability in long conversations",
+      "label_negative": "AI degradation in intelligence and focus over long conversations",
+      "bipolarity_complete": true,
+      "grounding_span": "it is noticeably dumber and less focused the more prompts I use"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as efficient quiz/test creator",
+      "label_negative": "AI wordiness and failure to distill complex ideas",
+      "bipolarity_complete": true,
+      "grounding_span": "LLMs quickly become wordy or fail to distill complex ideas into short questions"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Research efficiency",
+      "grounding_span": "it could provide links based on entire paragraphs describing my hypothesis or research ideas, instead of relying on keywords"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Epistemic accuracy and understanding",
+      "grounding_span": "I will independently verify the source, such as its authors or if it was done at a university"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Creative freedom and exploration",
+      "grounding_span": "the questions being asked in my research are harmless and more speculative than factual"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Strong preference for AI search over Google",
+      "valence": "positive",
+      "grounding_span": "I immediately adopted it because it could provide links based on entire paragraphs"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI errors and broken links",
+      "valence": "negative",
+      "grounding_span": "the models will frequently find links that are not at all on topic"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Dismissive of AI as threat to specialized work",
+      "valence": "negative",
+      "grounding_span": "I wish that it wouldn't decide to be completely dismissive of early-stage ideas"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with AI quality degradation over conversation length",
+      "valence": "negative",
+      "grounding_span": "it is noticeably dumber and less focused the more prompts I use"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Reluctance to use AI for writing",
+      "valence": "negative",
+      "grounding_span": "LLMs quickly become wordy or fail to distill complex ideas into short questions"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Systematic prompt engineering with chain-of-thought and verification steps",
+      "grounding_span": "I frequently use chain of thought prompts that I come up with before starting a conversation, such as follow-up questions or asking the model to rank the trustworthiness of articles"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Experience-driven calibration of trust",
+      "grounding_span": "I will independently verify the source, such as its authors or if it was done at a university"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

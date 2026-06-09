@@ -1,0 +1,208 @@
+{
+  "transcript_id": "work_0386",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI for broad research and discovery",
+      "label_negative": "AI for high-stakes factual tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "AI tools have made opposition research a lot easier"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability and accuracy",
+      "label_negative": "AI hallucination and obvious errors",
+      "bipolarity_complete": true,
+      "grounding_span": "AI still makes obvious mistakes that a human would never make, and also blatantly hallucinates information"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for brainstorming and big-picture ideas",
+      "label_negative": "AI for factual or client-facing tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I could see myself using AI to brainstorm or to bounce ideas off of more"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI use in education",
+      "label_negative": "Human-led instruction and correction",
+      "bipolarity_complete": true,
+      "grounding_span": "I would never give a student information from AI"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Generational AI acceptance",
+      "label_negative": "Skepticism about AI reliability",
+      "bipolarity_complete": true,
+      "grounding_span": "many of the instructors are Gen Z college kids, who see using AI for coursework as completely normal"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Epistemic reliability and truth",
+      "grounding_span": "I ended up not trusting the answer"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Educational integrity and student development",
+      "grounding_span": "An incorrect math fundamental learned from AI that a young student trusts to be correct could have huge consequences for years"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional autonomy and judgment",
+      "grounding_span": "I would never use AI for anything client-facing, because I fundamentally do not trust it"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Positive stance toward AI for broad research",
+      "valence": "positive",
+      "grounding_span": "AI tools have made opposition research a lot easier"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Negative stance toward AI due to errors and hallucinations",
+      "valence": "negative",
+      "grounding_span": "AI still makes obvious mistakes that a human would never make, and also blatantly hallucinates information"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Positive stance toward AI for brainstorming",
+      "valence": "positive",
+      "grounding_span": "I could see myself using AI to brainstorm or to bounce ideas off of more"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Negative stance toward AI in education",
+      "valence": "negative",
+      "grounding_span": "I would never give a student information from AI"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Negative stance toward AI in client communication",
+      "valence": "negative",
+      "grounding_span": "I would never use AI for anything client-facing"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Concern about generational overreliance on AI",
+      "valence": "negative",
+      "grounding_span": "It actually deeply terrifies me that an entire generation might be forgetting how to write"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based boundary setting — clear separation of AI-appropriate vs. AI-inappropriate tasks",
+      "grounding_span": "I would never give a student information from AI, and I would never use AI for anything client-facing"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative verification and double-checking",
+      "grounding_span": "I always double check when doing deeper research on my own"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n3",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

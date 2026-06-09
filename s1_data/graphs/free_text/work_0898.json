@@ -1,0 +1,213 @@
+{
+  "transcript_id": "work_0898",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as drafting assistant for simple responses",
+      "label_negative": "AI as unreliable for complex legal drafting",
+      "bipolarity_complete": true,
+      "grounding_span": "I often use AI to draft simple responses to clients"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as feedback tool for legal arguments",
+      "label_negative": "AI as hallucinator of case law",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is very frustrating when it hallucinates case law"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as thinking partner for oral argument and counterarguments",
+      "label_negative": "AI as insufficient for independent legal reasoning",
+      "bipolarity_complete": true,
+      "grounding_span": "ask it to take my written motion and develop an outline for oral argument"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI integration with legal research tools",
+      "label_negative": "AI lack of integration with Lexis/Westlaw",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is not integrated into Lexis or Westlaw to do legal research"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI use for client communications with legal advice",
+      "label_negative": "AI use for client communications without legal advice",
+      "bipolarity_complete": true,
+      "grounding_span": "I also prefer to write my own emails to clients if it includes legal advice"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "Generational divide in AI adoption",
+      "label_negative": "Generational resistance to AI adoption",
+      "bipolarity_complete": true,
+      "grounding_span": "Younger attorneys embrace it more"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI as threat to job security for lawyers",
+      "label_negative": "AI as tool for democratizing legal access",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is going to decrease people's reliance on lawyers"
+    },
+    {
+      "id": "n8",
+      "type": "Construct",
+      "label": "AI as tool for training low-income persons",
+      "label_negative": "AI as source of hallucinated legal documents for the unwary",
+      "bipolarity_complete": true,
+      "grounding_span": "training low income persons on how to best utilize AI"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Professional competence and accuracy",
+      "grounding_span": "its my bar card on the line"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Efficiency and productivity",
+      "grounding_span": "I am a busy attorney with a large caseload"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Justice and access to legal help",
+      "grounding_span": "low income persons who rely on lawyers because they don't understand the law"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI for simple drafting and feedback",
+      "valence": "positive",
+      "grounding_span": "AI is excellent (after redacting clients names) to ask what is our strongest and weakest points"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Frustration with AI hallucination",
+      "valence": "negative",
+      "grounding_span": "AI is very frustrating when it hallucinates case law"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Concern about job security due to AI",
+      "valence": "negative",
+      "grounding_span": "I think about it in terms of job security all the time"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Optimism about training others to use AI safely",
+      "valence": "positive",
+      "grounding_span": "I see myself as someone who is hopefully training low income persons on how to best utilize AI"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Verification-oriented double-checking",
+      "grounding_span": "You really have to double check because it wont know"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Generational framing of technology adoption",
+      "grounding_span": "Younger attorneys embrace it more"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n8",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n7",
+      "target": "n8",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

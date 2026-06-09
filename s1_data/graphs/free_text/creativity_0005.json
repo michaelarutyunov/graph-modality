@@ -1,0 +1,181 @@
+{
+  "transcript_id": "creativity_0005",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as caption generation tool for long-form content",
+      "label_negative": "AI struggling with short, punchy captions",
+      "bipolarity_complete": true,
+      "grounding_span": "it does excellent and hits it on the money every time... it struggles to do the same for short, punchier captions"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as efficiency and stress reducer",
+      "label_negative": "AI as source of frustration or inefficiency",
+      "bipolarity_complete": true,
+      "grounding_span": "I'm less stressed, honestly. It has created a ton of efficiency for me"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as threat to job security",
+      "label_negative": "AI as enabler of career growth",
+      "bipolarity_complete": true,
+      "grounding_span": "AI can easily replace social media managers one day"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as source of misinformation",
+      "label_negative": "AI as reliable information source",
+      "bipolarity_complete": true,
+      "grounding_span": "I'm more so worried about the impact it will have on spreading false info"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as trend prediction and hashtag generation tool",
+      "label_negative": "AI failing to keep up with trends",
+      "bipolarity_complete": true,
+      "grounding_span": "AI doesn't pick up on the trends fast enough... hope that AI will become intelligent enough to help predict trends"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative efficiency and reduced stress",
+      "grounding_span": "I'm less stressed, honestly. It has created a ton of efficiency"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Career security and professional integrity",
+      "grounding_span": "I don't want my work to be tainted"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Creative control and authenticity",
+      "grounding_span": "Me, for sure. In my experience, I don't find that chatbot going out of its way to provide that type of insight"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Enthusiasm for AI in caption generation",
+      "valence": "positive",
+      "grounding_span": "ChatGPT is my best friend when it comes to caption generating"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI for short captions",
+      "valence": "negative",
+      "grounding_span": "it took 5 tries to get a caption I liked for TikTok"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Worry about AI replacing social media managers",
+      "valence": "negative",
+      "grounding_span": "I do worry about the overall impact it will have"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Concern about AI spreading misinformation",
+      "valence": "negative",
+      "grounding_span": "I'm more so worried about the impact it will have on spreading false info"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Hope for AI as trend predictor",
+      "valence": "positive",
+      "grounding_span": "The ultimate hope is that AI will become intelligent enough to help predict trends"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Rapid associative thinking (ADHD brain)",
+      "grounding_span": "My ADHD brain just goes lol"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through multiple attempts",
+      "grounding_span": "it took 5 tries to get a caption I liked"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

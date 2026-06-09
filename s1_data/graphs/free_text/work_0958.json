@@ -1,0 +1,175 @@
+{
+  "transcript_id": "work_0958",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as delegable task performer for menial work",
+      "label_negative": "AI requiring micromanagement or failing at simple tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I would probably delegate the completed task for it to handle independently"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as title generation reliever of creative pressure",
+      "label_negative": "Manual title creation causing perfectionist freeze",
+      "bipolarity_complete": true,
+      "grounding_span": "By asking the AI to generate article titles for me, it takes the pressure off myself"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as threat to junior skill development",
+      "label_negative": "AI as enabler of learning through menial tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "If AI is now taking over that skillset, how will new people learn the craft?"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as brainstorming and fact-based content partner",
+      "label_negative": "AI as creator of insights or advice (risky)",
+      "bipolarity_complete": true,
+      "grounding_span": "I can see myself using it more for brainstorming and maybe even creating new content as long as that content is fact-based"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as gap filler for reduced team capacity",
+      "label_negative": "Human-only workflow with insufficient capacity",
+      "bipolarity_complete": true,
+      "grounding_span": "I need to rely on AI to fill in some of the gaps"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and workload management",
+      "grounding_span": "I'm expected to do everything, from the high level tasks to the low level ones"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Creative ease and reduced mental pressure",
+      "grounding_span": "it takes the pressure off myself"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Career development and skill acquisition for newcomers",
+      "grounding_span": "I learned by doing menial, easier tasks and built my skillset from there"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Reputational safety and compliance",
+      "grounding_span": "We also don't use AI to create any articles that contain financial advice since that might get us into trouble"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Confidence in delegating simple tasks to AI",
+      "valence": "positive",
+      "grounding_span": "I'm mostly confident that the AI can handle them without me needing to micromanage it"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Pleasant surprise at AI's title generation quality",
+      "valence": "positive",
+      "grounding_span": "I was really pleasantly surprised with how well the AI was able to analyze the gist of the article"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Worry about AI replacing junior roles",
+      "valence": "negative",
+      "grounding_span": "I do worry about junior roles being take over by AI"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Openness to expanding AI use for brainstorming and fact-based content",
+      "valence": "positive",
+      "grounding_span": "I can see myself using it more for brainstorming and maybe even creating new content"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Selection from multiple options rather than iterative refinement",
+      "grounding_span": "ask it to prove me with a list of results and I choose the best ones from there"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Boundary-setting based on expertise and risk",
+      "grounding_span": "I perform editing tasks myself because I am a fast and efficient editor with decades of expertise"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

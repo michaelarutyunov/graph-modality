@@ -1,0 +1,198 @@
+{
+  "transcript_id": "work_0138",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI for summarization and research",
+      "label_negative": "AI as unreliable hallucinator requiring verification",
+      "bipolarity_complete": true,
+      "grounding_span": "I dont trust AI to pull completely factual research on its own so im trying to make sure its not hallucinating by going straight to the source first"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as time-saving tool",
+      "label_negative": "AI as time-wasting error-prone tool for creative tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I use it to shorten the amount of time I spend gathering and compiling research"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Human writing and creative control",
+      "label_negative": "AI outsourcing of creative and writing tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "id prefer to handle all creative and writing steps myself"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as autonomous independent executor",
+      "bipolarity_complete": true,
+      "grounding_span": "I always have a back and forth. I review the work at each step and reiterate what is needed"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Workplace pressure to adopt AI for efficiency",
+      "label_negative": "Workplace pressure leading to skill loss and over-reliance",
+      "bipolarity_complete": true,
+      "grounding_span": "we are encouraged to try new tools and approaches to save time and streamline processes"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as learning tool to demonstrate human superiority",
+      "label_negative": "AI as threat to skill maintenance and human interaction",
+      "bipolarity_complete": true,
+      "grounding_span": "I think using AI is a good way to learn and then demonstrate the things I still do better than a LLM"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "shorten the amount of time I spend gathering and compiling research"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Accuracy and factual reliability",
+      "grounding_span": "make sure its not hallucinating"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Creative autonomy",
+      "grounding_span": "I like writing, its my favorite part of my job and I don't want to outsource it"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Professional growth and skill maintenance",
+      "grounding_span": "I also try to use it sparingly so I don't lose my ability to say, brainstorm on my own or conduct proper research"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI summaries",
+      "valence": "positive",
+      "grounding_span": "I felt particularly satisfied when I used AI to pull information from a lengthy deck into relevant bullet points for my task"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with AI image generation",
+      "valence": "negative",
+      "grounding_span": "I asked ChatGPT to create an image and it kept repeating my ask saying 'I have done [insert ask]' but it didn't do anything even remotely close"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Concern about skill loss",
+      "valence": "negative",
+      "grounding_span": "Im afraid i will be asked to use it too much and lose my skills"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Preference for human handling of creative tasks",
+      "valence": "positive",
+      "grounding_span": "id prefer to handle all creative and writing steps myself"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement with limited back-and-forth",
+      "grounding_span": "I always have a back and forth. I review the work at each step and reiterate what is needed"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Selective sparing use to maintain skills",
+      "grounding_span": "I also try to use it sparingly so I don't lose my ability to say, brainstorm on my own or conduct proper research"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

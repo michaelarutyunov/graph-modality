@@ -1,0 +1,191 @@
+{
+  "transcript_id": "work_0407",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as writing assistant for drafting and editing",
+      "label_negative": "Manual writing without AI assistance",
+      "bipolarity_complete": true,
+      "grounding_span": "I primarily use it for writing tasks"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as collaborative brainstorming partner for employee issues",
+      "label_negative": "Solo problem-solving without AI input",
+      "bipolarity_complete": true,
+      "grounding_span": "If I have employee issues I need to think through, I'll sometimes ask AI for ideas"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as tool for complex data analysis and modeling",
+      "label_negative": "Manual data analysis without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "It helped me come up with a bonus model for my staff"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Personal enjoyment tasks kept for oneself",
+      "label_negative": "Delegating enjoyable tasks to AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I prefer to do a lot of work in Excel on my own"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as efficiency enhancer without skill atrophy concern",
+      "label_negative": "AI causing skill degradation",
+      "bipolarity_complete": true,
+      "grounding_span": "I think AI is more likely to help me work more efficiently"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "help me work more efficiently"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Creative problem-solving and innovation",
+      "grounding_span": "It helped me come up with a bonus model for my staff"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Personal enjoyment and mental break",
+      "grounding_span": "I enjoy them. They are often a break from other more thought intense work"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for drafting and editing",
+      "valence": "positive",
+      "grounding_span": "I primarily use it for writing tasks"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for brainstorming employee issues",
+      "valence": "positive",
+      "grounding_span": "If I have employee issues I need to think through, I'll sometimes ask AI for ideas"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI for bonus model creation",
+      "valence": "positive",
+      "grounding_span": "It helped me come up with a bonus model for my staff and I felt that was very satisfying"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Preference for doing Excel and editing manually",
+      "valence": "negative",
+      "grounding_span": "I prefer to do a lot of work in Excel on my own"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Optimism about expanding AI use to complex tasks",
+      "valence": "positive",
+      "grounding_span": "I imagine I find more complex ways to work it into my role"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative iterative refinement — uses AI drafts then tweaks and feeds back",
+      "grounding_span": "I'll give it prompts and request it give me a draft. Then I will often tweak what the AI model gives me and feed it back"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Selective task delegation based on enjoyment and complexity",
+      "grounding_span": "I prefer to do a lot of work in Excel on my own, even though I know I could likely ask AI to help"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

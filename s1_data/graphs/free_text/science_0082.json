@@ -1,0 +1,162 @@
+{
+  "transcript_id": "science_0082",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as verification tool for simple calculations",
+      "label_negative": "AI as unreliable source for complex tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I sometimes used ChatGPT to double-check my mathematical calculations for very simple questions"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability and accuracy",
+      "label_negative": "AI hallucination and error",
+      "bipolarity_complete": true,
+      "grounding_span": "it was often wrong so my usage is minimal due to lack of trust"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as supplemental tool distinct from colleagues",
+      "label_negative": "AI as replacement for human verification",
+      "bipolarity_complete": true,
+      "grounding_span": "I mainly think of it as a supplemental tool in its own category"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI integration with existing software",
+      "label_negative": "AI as standalone tool without integration",
+      "bipolarity_complete": true,
+      "grounding_span": "it doesn't integrate with my lab software tools such as GraphPad"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI for literature review and synthesis",
+      "label_negative": "Manual literature review without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "Literature review, definitely! Combing through papers and keeping track of info from multiple sources can take a ton of time"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Research efficiency and time saving",
+      "grounding_span": "this doesn't save time"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Epistemic trust and accuracy",
+      "grounding_span": "it's not trustworthy for the advanced math or conceptual understanding"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Scientific rigor and methodological control",
+      "grounding_span": "I do all my data analysis using GraphPad Prism and by the time I'm done, I'm confident in my work"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Cautious minimal use due to trust issues",
+      "valence": "negative",
+      "grounding_span": "my usage is minimal due to lack of trust"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Optimism about future AI accuracy",
+      "valence": "positive",
+      "grounding_span": "I am very optimistic that AI can be trained over time to become quite accurate and powerful"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Desire for AI in literature review",
+      "valence": "positive",
+      "grounding_span": "If AI could be relied on to cite sources accurately, this would be a dream"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Independent verification and cross-checking",
+      "grounding_span": "I always use a calculator to begin with, and I do my own research to reference multiple external protocols"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic conditional trust based on task verifiability",
+      "grounding_span": "If I couldn't validate something the AI is saying via my own external research/knowledge then I would not put faith into the AI's explanation"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

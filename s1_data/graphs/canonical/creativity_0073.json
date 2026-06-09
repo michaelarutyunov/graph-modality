@@ -1,0 +1,218 @@
+{
+  "transcript_id": "creativity_0073",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as tone checker for professional communication",
+      "label_negative": "AI as story suggestion influencer",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I ask for criticism on the overall tone and feel"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as research starting point",
+      "label_negative": "AI as replacement for human creativity",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "using AI to help with research as well as finding similar works"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as research accelerator",
+      "label_negative": "AI as demotivating or praise-only tool",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "having the assistant on hand to provide feedback has been a motivator"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as proofreading assistant",
+      "label_negative": "Human-only expensive editing",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "using it for the proofreading/editing aspect is a big area I could see using way more as this is the biggest expense"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as second brain and personal assistant",
+      "label_negative": "AI as generic tool without personalization",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "the more I use a model the more it will learn my writing and desires as a creative so it will become more and more of a 'second brain'"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "Market saturation from AI-generated content",
+      "label_negative": "Human-crafted unique works standing out",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "the market can become filled with works by people who have used AI to write a whole story without much actual input"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI as plagiarism risk",
+      "label_negative": "Clear ethical boundaries for AI training",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "concerns about the work being used to train models, and this should be looked at carefully as it is such a fine line between plagiarism and inspiration"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Creative autonomy",
+      "grounding_span": "I am the driving force for the creative decisions"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "it really made the process flow better"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Market access and fair competition",
+      "grounding_span": "standing out is like a needle in a haystack"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Ethical and responsible AI use",
+      "grounding_span": "this should be looked at carefully as it is such a fine line between plagiarism and inspiration"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Positive appreciation for AI as research catalyst",
+      "valence": "positive",
+      "grounding_span": "having that instant feedback on something which, as a writer, you often don't get feedback until you've finished the whole thing which can take a long, long time!! As such, this provided me with a great motivation to keep going"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Concern about market flooding by AI-generated works",
+      "valence": "negative",
+      "grounding_span": "the market can become filled with works by people who have used AI to write a whole story without much actual input from themselves"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Concern about plagiarism in AI training",
+      "valence": "negative",
+      "grounding_span": "concerns about the work being used to train models, and this should be looked at carefully as it is such a fine line between plagiarism and inspiration"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Resistance to AI in creative work",
+      "valence": "positive",
+      "grounding_span": "the more I use a model the more it will learn my writing and desires as a creative so it will become more and more of a 'second brain'"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based boundary setting — clear separation of AI-appropriate vs. human-only tasks",
+      "grounding_span": "I am careful to specify I don't want suggestions for the story, as I feel this could influence my writing"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement with limited back-and-forth",
+      "grounding_span": "I use the previous conversation to continue this so the model's know my aim"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

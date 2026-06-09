@@ -1,0 +1,157 @@
+{
+  "transcript_id": "work_0932",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative brainstorming partner",
+      "label_negative": "AI as independent task delegator",
+      "bipolarity_complete": true,
+      "grounding_span": "It is definitely more of a collaboration process"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as well-read friend with expansive memory",
+      "label_negative": "AI as replacement for personal knowledge",
+      "bipolarity_complete": true,
+      "grounding_span": "I think of AI as a well read friend with an expansive memory"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for articulating intuitive knowledge",
+      "label_negative": "AI for tasks where I lack understanding",
+      "bipolarity_complete": true,
+      "grounding_span": "I know what I am trying to say but I can't get it to come out right"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI for research and idea generation",
+      "label_negative": "AI for tasks requiring personal knowledge of children",
+      "bipolarity_complete": true,
+      "grounding_span": "AI can research and scour the internet to find book ideas"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Personalized professional judgment over AI suggestions",
+      "label_negative": "Deferring to AI suggestions without adaptation",
+      "bipolarity_complete": true,
+      "grounding_span": "I know what my kids can and cannot do based on attention span and behavior"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Effective communication and professional articulation",
+      "grounding_span": "rewrite emails to make them sound more professional"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficient lesson planning and curriculum alignment",
+      "grounding_span": "help plan different activities...meet curriculum goals and standards"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Personalized child-centered education",
+      "grounding_span": "I know what my kids can and cannot do"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI as articulation aid",
+      "valence": "positive",
+      "grounding_span": "The times I find AI most satisfying is when I know what I am trying to say but I can't get it to come out right"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Openness to expanding AI use",
+      "valence": "positive",
+      "grounding_span": "I am sure that I will find other ways to use it to my benefit"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Confidence in retaining personal skills",
+      "valence": "positive",
+      "grounding_span": "I know that these are things I could do on my own"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement and modification",
+      "grounding_span": "I will tweak or ask for modifications of things I like but they aren't quite right"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Contextual personalization based on individual knowledge",
+      "grounding_span": "I know what my kids can and cannot do based on attention span and behavior"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

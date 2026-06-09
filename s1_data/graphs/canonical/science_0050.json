@@ -1,0 +1,152 @@
+{
+  "transcript_id": "science_0050",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "Task verifiability enabling trust",
+      "label_negative": "Opaque outputs precluding trust",
+      "bipolarity_complete": true,
+      "grounding_span": "I prioritise giving AI tasks that can be checked easily"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI task scope manageability",
+      "label_negative": "Task scope too large for reliable AI performance",
+      "bipolarity_complete": true,
+      "grounding_span": "AI struggles when the size of the project is too big"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI adherence to researcher-specified method",
+      "label_negative": "AI deviation from requested approach",
+      "bipolarity_complete": true,
+      "grounding_span": "instead of assisting in solving a prompt the way I request, sometimes AI will try to optimise its methods"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as supplement to creative process",
+      "label_negative": "AI limited to implementation and assistance only",
+      "bipolarity_complete": true,
+      "grounding_span": "a tool that is smart enough to bounce complex ideas off of and have its own interesting ideas"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Research integrity and accuracy",
+      "grounding_span": "I have requested a certain method because I know it will work as intended"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Scientific advancement and innovation",
+      "grounding_span": "if AI was able to produce its own mathematical theorems and push the boundaries of science"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and efficient task completion",
+      "grounding_span": "It was a big project with a tight deadline"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Cautious trust in AI",
+      "valence": "ambivalent",
+      "grounding_span": "AI has let me down a lot of times, so I dont trust it to work without supervision"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Aspirational hope for AI as practical assistant",
+      "valence": "positive",
+      "grounding_span": "if AI was able to produce its own mathematical theorems and push the boundaries of science"
+    },
+    {
+      "id": "n10",
+      "type": "CognitiveStyleMarker",
+      "label": "Task decomposition into small verifiable steps",
+      "grounding_span": "I will have verification code ready to go"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Experience-driven pragmatic calibration of tool use",
+      "grounding_span": "I could focus on the larger parts of the project that AI couldn't handle"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n8",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n10",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n10",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n4",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

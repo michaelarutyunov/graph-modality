@@ -1,0 +1,190 @@
+{
+  "transcript_id": "science_0051",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as research accelerator",
+      "label_negative": "Manual literature review",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is invaluable for me in the planning stage of my projects"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as coding assistant",
+      "label_negative": "Manual coding via tutorials",
+      "bipolarity_complete": true,
+      "grounding_span": "I would definitely not use online tutorials to code and I would use exclusively AI tools"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability in citations",
+      "label_negative": "AI citation errors and hallucinations",
+      "bipolarity_complete": true,
+      "grounding_span": "some current tools can make errors when providing citations"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI for data analysis",
+      "label_negative": "Researcher-led interpretation and hypothesis building",
+      "bipolarity_complete": true,
+      "grounding_span": "I am still dubious of existing tools' capabilities for data interpretation and hypothesis building"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI-only experiment planning",
+      "bipolarity_complete": true,
+      "grounding_span": "planning experiments, I think this is good when it is done in collaboration with an AI tool, but never solely by an AI tool"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Research efficiency",
+      "grounding_span": "would have saved me weeks of work"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Epistemic accuracy and understanding",
+      "grounding_span": "I always need to double check"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Personal intellectual ownership",
+      "grounding_span": "you want to know exactly what is going on in your project which you lose track of if you don't plan it yourself"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Personal fulfillment through creative engagement",
+      "grounding_span": "Hypothesis building again is firstly a fun process that I enjoy"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Negative stance toward AI for literature search",
+      "valence": "positive",
+      "grounding_span": "AI is invaluable for me in the planning stage of my projects"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Hesitation toward AI for data analysis",
+      "valence": "negative",
+      "grounding_span": "I am still dubious of existing tools' capabilities for data interpretation and hypothesis building"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Cautious trust in AI",
+      "valence": "ambivalent",
+      "grounding_span": "planning experiments, I think this is good when it is done in collaboration with an AI tool, but never solely by an AI tool"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Desire for reliable citations",
+      "valence": "positive",
+      "grounding_span": "If I could rely 100% on citations this would be a game changer"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Delegation with verification — offloads complex tasks but double-checks results",
+      "grounding_span": "I always need to double check"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Boundary-setting for intellectual ownership",
+      "grounding_span": "you want to know exactly what is going on in your project which you lose track of if you don't plan it yourself"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

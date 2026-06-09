@@ -1,0 +1,187 @@
+{
+  "transcript_id": "work_0139",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as time-saving tool for routine tasks",
+      "label_negative": "AI as inefficient for tasks requiring nuance",
+      "bipolarity_complete": true,
+      "grounding_span": "it is just massively time saving"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for drafting and summarization",
+      "label_negative": "Manual drafting and summarization",
+      "bipolarity_complete": true,
+      "grounding_span": "quickly drafting emails and summarising long notes"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Human judgment in matching cases to caseworkers",
+      "label_negative": "AI-driven case assignment",
+      "bipolarity_complete": true,
+      "grounding_span": "I feel its better if I do it myself, as I feel I can use the referral information and my personal knowledge"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Minimal back-and-forth with AI",
+      "label_negative": "Extensive iterative collaboration with AI",
+      "bipolarity_complete": true,
+      "grounding_span": "Generally I'll only get into minimal back-and-forth though, because otherwise it becomes easier for me to just do it myself"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Workplace culture and AI adoption",
+      "label_negative": "Tech-phobic resistance to AI",
+      "bipolarity_complete": true,
+      "grounding_span": "many of my colleagues and the sector I work in are a little tech-phobic"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI for data analysis and report writing",
+      "label_negative": "Manual data analysis and report writing",
+      "bipolarity_complete": true,
+      "grounding_span": "use AI for things like data analysis and report writing for funding bids"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "it is just massively time saving"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Personalized service delivery",
+      "grounding_span": "match them up with the people they can help the most"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Workplace harmony and appropriate use",
+      "grounding_span": "wary of encouraging a culture where everyone thinks you can use AI for everything"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Positive toward AI for time-saving tasks",
+      "valence": "positive",
+      "grounding_span": "it is just massively time saving"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Negative toward AI for nuanced matching",
+      "valence": "negative",
+      "grounding_span": "I feel its better if I do it myself"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Ambivalent toward AI collaboration due to inefficiency",
+      "valence": "ambivalent",
+      "grounding_span": "ended up feeling like I've had to make so many corrections and requests that I may as well have just written the email myself"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Cautious optimism toward AI adoption in workplace",
+      "valence": "mixed",
+      "grounding_span": "hopefully we will get some approval from upper management for a secure, official way to use AI"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic efficiency-seeking — minimizes back-and-forth to avoid wasted effort",
+      "grounding_span": "Generally I'll only get into minimal back-and-forth though, because otherwise it becomes easier for me to just do it myself"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Contextual relational reasoning — uses personal knowledge and nuance for matching",
+      "grounding_span": "I feel I can use the referral information and my personal knowledge of the case workers and their personalities and abilities"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

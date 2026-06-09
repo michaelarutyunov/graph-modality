@@ -1,0 +1,211 @@
+{
+  "transcript_id": "science_0074",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as literature discovery tool",
+      "label_negative": "AI missing nuanced essential details in papers",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "used AI tools to quickly scan any papers before I read them to check how relevant they are"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as brainstorming and idea generator",
+      "label_negative": "AI unable to grasp niche scientific nuances",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "tried to use AI chats to help me with the brainstorming process"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for mechanical task automation (LaTeX conversion)",
+      "label_negative": "Manual laborious coding of equations",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "Screenshots of the equations into an AI chatbot was all it took to get immediate output of the latex"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as debugging assistant",
+      "label_negative": "Loss of understanding and control over code",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "used it here and there for bits of coding / debugging help"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as data analysis assistant for pattern identification",
+      "label_negative": "Low accuracy and risk of errors in analysis",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "tried using it to spot things in big groups of data for me, but the accuracy was a bit too low"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as supplement to creative process",
+      "label_negative": "AI as one-sided teacher-student relationship",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I would love an AI which could feel like a valuable research partner"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Research efficiency",
+      "grounding_span": "really cut the method section of my paper in half"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Epistemic accuracy and understanding",
+      "grounding_span": "I would often worry the AI had missed a nuance in the paper which would be essential to me"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Intellectual partnership and understanding",
+      "grounding_span": "I would love an AI which could feel like a valuable research partner"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Personal competence and skill development",
+      "grounding_span": "I also like to take to chance to practice where I can"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Positive satisfaction with AI for LaTeX conversion",
+      "valence": "positive",
+      "grounding_span": "That was a great use"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI for brainstorming",
+      "valence": "negative",
+      "grounding_span": "it just could not understand"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Negative stance toward AI for literature search",
+      "valence": "negative",
+      "grounding_span": "I didn't feel very trusting sometimes and would often worry the AI had missed a nuance"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Hesitation toward AI for data analysis",
+      "valence": "negative",
+      "grounding_span": "It didn't feel worth the chance of errors"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Aspirational hope for AI as practical assistant",
+      "valence": "positive",
+      "grounding_span": "I would love an AI which could feel like a valuable research partner"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Verification-oriented approach — prioritizes tasks where outputs can be easily checked",
+      "grounding_span": "The latex conversion is super easy to check which is why I loved it for that"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain expertise calibration — assesses AI's capability relative to own deep knowledge",
+      "grounding_span": "I also knew that I had insights on the science that the AI tools just wouldn't"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n3",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n6",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

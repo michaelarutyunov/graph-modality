@@ -1,0 +1,152 @@
+{
+  "transcript_id": "work_0071",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as independent task completer",
+      "bipolarity_complete": true,
+      "grounding_span": "I use it mostly for planning purposes. I like to use it as I am planning. I know my big ideas, so I use AI to help me break down the ideas into smaller chunks."
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI-generated content quality and validity",
+      "label_negative": "AI-generated content irrelevant or invalid",
+      "bipolarity_complete": true,
+      "grounding_span": "When I used the questions in class, they were valid and fit well into the interactions with the students."
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI use in maintaining authentic human connection in teaching",
+      "label_negative": "AI-mediated impersonal interaction",
+      "bipolarity_complete": true,
+      "grounding_span": "When I am planning things individually for children, I want that to specifically come from me. It makes it authentic."
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as curriculum enrichment and refreshment tool",
+      "label_negative": "AI use restricted by curriculum",
+      "bipolarity_complete": true,
+      "grounding_span": "There are certain objectives or standards that I have to teach by and certain structures that I have to follow (i.e. writing format) that AI could improve on, but due to some restrictions with curriculum I am unable to use it for that."
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI use for efficiency in learning and planning",
+      "label_negative": "AI as time-consuming or unnecessary",
+      "bipolarity_complete": true,
+      "grounding_span": "I use it consistently, as it speeds up the process for me to get all of my planning done"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Student engagement and learning",
+      "grounding_span": "they were valid and fit well into the interactions with the students"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Authenticity and personal integrity",
+      "grounding_span": "It makes it authentic. Sometimes I write small quotes or questions for the kids to think about on their own and because I know them personally, it makes it more special."
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional efficiency",
+      "grounding_span": "it speeds up the process for me to get all of my planning done"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI-generated questions",
+      "valence": "positive",
+      "grounding_span": "I was satisfied with the results when I added the questions AI came up with in my plans, my dean was impressed at the amount of detail that went into them."
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with student AI misuse",
+      "valence": "negative",
+      "grounding_span": "When I am planning things individually for children, I want that to specifically come from me."
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "positive",
+      "grounding_span": "I envision the usage increasing in other ways, maybe adding in some activities or looking to use it for creative stories"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative prompt refinement",
+      "grounding_span": "There are many times where I may not have been clear in the structure I am looking for in the lesson, so I need to fine tune my expectations."
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based boundary setting — clear separation of AI-appropriate vs. human-only tasks",
+      "grounding_span": "When I am planning things individually for children, I want that to specifically come from me."
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

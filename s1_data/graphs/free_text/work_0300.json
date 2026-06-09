@@ -1,0 +1,149 @@
+{
+  "transcript_id": "work_0300",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative refinement partner",
+      "label_negative": "AI as fully autonomous task completer",
+      "bipolarity_complete": true,
+      "grounding_span": "I have an idea, then ask AI to write the follow up message, then will work with AI to refine the message"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "Human touch in client outreach",
+      "label_negative": "AI-automated client outreach",
+      "bipolarity_complete": true,
+      "grounding_span": "I prefer to do the outreach myself because its more genuine and some people can tell the difference between an AI or human written message"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI understanding of nuanced context",
+      "label_negative": "AI missing nuance in complex situations",
+      "bipolarity_complete": true,
+      "grounding_span": "the chatbot was not fully understanding the situation after several rounds"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Prompt engineering skill",
+      "label_negative": "Ineffective prompting",
+      "bipolarity_complete": true,
+      "grounding_span": "learning prompt engineering is extremely important as it enables me to get to the answer I am looking for quicker"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Genuine client relationships",
+      "grounding_span": "its more genuine and some people can tell the difference"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and productivity",
+      "grounding_span": "get to the answer I am looking for quicker"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional competence and adaptability",
+      "grounding_span": "the best way to maintain skills is to keep up with industry news"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Satisfaction with collaborative AI process",
+      "valence": "positive",
+      "grounding_span": "I have an idea, then ask AI to write the follow up message, then will work with AI to refine the message"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Frustration with AI missing nuance",
+      "valence": "negative",
+      "grounding_span": "the chatbot was not fully understanding the situation after several rounds and I ended up creating my own email to send"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Strategic optimism about AI integration",
+      "valence": "positive",
+      "grounding_span": "AI will be the next internet where everything is integrated with it"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement — back-and-forth collaboration with AI",
+      "grounding_span": "I have an idea, then ask AI to write the follow up message, then will work with AI to refine the message"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic skill development — proactive learning to stay ahead",
+      "grounding_span": "the best way to maintain skills is to keep up with industry news"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

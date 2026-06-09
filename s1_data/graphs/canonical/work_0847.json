@@ -1,0 +1,191 @@
+{
+  "transcript_id": "work_0847",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI for tedious data processing",
+      "label_negative": "Manual slow information search",
+      "bipolarity_complete": true,
+      "grounding_span": "quickly gather data and compile information that are harder to just simply search myself"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as time-saving tool",
+      "label_negative": "Time-consuming manual research",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is able to do it in a fraction of the time"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for broad tasks vs. human for decisions",
+      "label_negative": "AI involvement in decision-making",
+      "bipolarity_complete": true,
+      "grounding_span": "I mainly use AI for broader, time-consuming tasks... when its decision time, I use my own judgment"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI unreliability in early days",
+      "bipolarity_complete": true,
+      "grounding_span": "Frustrated? Maybe in the earlier days... it has mostly improved drastically since"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as competitive advantage",
+      "label_negative": "AI as a non-factor",
+      "bipolarity_complete": true,
+      "grounding_span": "If you trade stocks using technical analysis, you would already assume theres a composite operator working against you"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "AI is able to do it in a fraction of the time"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Personal judgment and autonomy",
+      "grounding_span": "when its decision time, I use my own judgment"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Competitive edge in trading",
+      "grounding_span": "theres a composite operator working against you"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "Using AI to summarize large amounts of text/data has helped me a lot"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI's agreeableness",
+      "valence": "negative",
+      "grounding_span": "Frustrated? Maybe in the earlier days, where getting a good answer was a bit difficult"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Cautious trust in AI",
+      "valence": "positive",
+      "grounding_span": "I usually take the information as-is"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Concern about AI replacing skills",
+      "valence": "negative",
+      "grounding_span": "there is no way I can process information faster than AI. So thats a concern"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Aspirational hope for AI as practical assistant",
+      "valence": "positive",
+      "grounding_span": "give me alerts or even trade for me when those parameters are met"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Selective delegation based on task nature",
+      "grounding_span": "I mainly use AI for broader, time-consuming tasks"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Systematic iterative verification — works independently first, then checks with AI",
+      "grounding_span": "I go through the list, check the stock charts myself"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

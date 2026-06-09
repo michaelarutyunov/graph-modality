@@ -1,0 +1,144 @@
+{
+  "transcript_id": "work_0137",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as efficient research assistant for familiar regulatory material",
+      "label_negative": "Manual sifting through hundreds of pages of material",
+      "bipolarity_complete": true,
+      "grounding_span": "AI cut down on a lot of my research time"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI trustworthiness based on familiarity and stakes",
+      "label_negative": "Blind trust in AI without verification",
+      "bipolarity_complete": true,
+      "grounding_span": "Since I was fairly familiar with the regulations, rules, and information that AI cited, I trusted it right away"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as tool for interpreting regulations and legal text",
+      "label_negative": "Manual interpretation without AI assistance",
+      "bipolarity_complete": true,
+      "grounding_span": "interpret regulations, statues, or other legal text and apply that to specific questions or situations"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as enhancer of human capabilities, not replacement",
+      "label_negative": "AI replacing human jobs entirely",
+      "bipolarity_complete": true,
+      "grounding_span": "I do not believe that AI will completely take over my job"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "AI cut down on a lot of my research time"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Accuracy and reliability in regulatory work",
+      "grounding_span": "gave me the answer that I needed without having to spend a ton of time sifting through hundreds of pages of material myself"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional growth and continuous improvement",
+      "grounding_span": "I constantly look for ways to improve or get better in my job"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Satisfaction with AI for efficient research",
+      "valence": "positive",
+      "grounding_span": "The situation I described this morning actually made me very satisfied"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Conditional trust in AI based on familiarity and stakes",
+      "valence": "ambivalent",
+      "grounding_span": "if I was less certain or working through something more critical... I might follow up by reading the cited materials"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Optimism about future AI integration",
+      "valence": "positive",
+      "grounding_span": "I hope to continue to use AI in ways that can make my work more efficient"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Context-dependent trust calibration based on familiarity and stakes",
+      "grounding_span": "Since I was fairly familiar with the regulations... I trusted it right away"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Exploratory learning mindset toward AI capabilities",
+      "grounding_span": "I am still learning how to use AI in my job, so there are probably a lot of things I can use it for that I don't"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

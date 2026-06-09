@@ -1,0 +1,234 @@
+{
+  "transcript_id": "science_0102",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as literature synthesis partner",
+      "label_negative": "AI as unreliable source interpreter",
+      "bipolarity_complete": true,
+      "grounding_span": "it can synthesise information so quickly and serve as a great diving board into various sources"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for data analysis and figure creation",
+      "label_negative": "Human-controlled data interpretation and visualization",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't want to look silly by having some sort of silly mistake in the figure where the data is misrepresented"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for writing and final checks",
+      "label_negative": "Human-authored research narrative",
+      "bipolarity_complete": true,
+      "grounding_span": "having it write the whole thing makes me feel like I am no longer the one steering the conclusions drawn from my research"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as endless revision suggester",
+      "label_negative": "AI as finalizing affirmation tool",
+      "bipolarity_complete": true,
+      "grounding_span": "it makes it sort of like a hedonic treadmill of fixing things and then fixing more things"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI for experimental design ethics checking",
+      "label_negative": "Human-only ethical reasoning",
+      "bipolarity_complete": true,
+      "grounding_span": "having an ethics bot that double checks experiment designs against general guidelines"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as specialized research phase tool",
+      "label_negative": "Generic one-size-fits-all AI",
+      "bipolarity_complete": true,
+      "grounding_span": "having a dedicated frame work of models with slightly different system instructions for each step within the research process"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficient literature discovery",
+      "grounding_span": "it can synthesise information so quickly and serve as a great diving board into various sources"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Research integrity and accurate representation",
+      "grounding_span": "I don't want to look silly by having some sort of silly mistake in the figure where the data is misrepresented"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Authorial control and intellectual ownership",
+      "grounding_span": "I am no longer the one steering the conclusions drawn from my research"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Efficient and finalizing writing process",
+      "grounding_span": "having one or two checking steps and then having the AI affirm that everything looks good"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Ethical research conduct",
+      "grounding_span": "double checks experiment designs against general guidelines and highlights grey areas"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Seamless research workflow integration",
+      "grounding_span": "help provide nice punctuation between steps of the research process"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Positive appreciation for AI in literature search",
+      "valence": "positive",
+      "grounding_span": "I think having AI as a partner when it comes to this type of literary search is really quite helpful"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Cautious skepticism toward AI in data analysis",
+      "valence": "negative",
+      "grounding_span": "I don't want to look silly by having some sort of silly mistake in the figure where the data is misrepresented"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Resistance to AI writing full manuscripts",
+      "valence": "negative",
+      "grounding_span": "having it write the whole thing makes me feel like I am no longer the one steering the conclusions drawn from my research"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Frustration with AI's endless revision suggestions",
+      "valence": "negative",
+      "grounding_span": "it makes it sort of like a hedonic treadmill of fixing things and then fixing more things"
+    },
+    {
+      "id": "n17",
+      "type": "Stance",
+      "label": "Openness to AI ethics checking",
+      "valence": "positive",
+      "grounding_span": "having an ethics bot that double checks experiment designs against general guidelines"
+    },
+    {
+      "id": "n18",
+      "type": "Stance",
+      "label": "Desire for specialized AI models per research phase",
+      "valence": "positive",
+      "grounding_span": "having a dedicated frame work of models with slightly different system instructions for each step within the research process"
+    },
+    {
+      "id": "n19",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative exploration with verification — uses AI for broad search then double-checks sources",
+      "grounding_span": "I would not let it do the entire literary search for me without me double checking sources"
+    },
+    {
+      "id": "n20",
+      "type": "CognitiveStyleMarker",
+      "label": "Phase-based compartmentalization — prefers different AI roles for different research stages",
+      "grounding_span": "having a dedicated frame work of models with slightly different system instructions for each step within the research process"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n13",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n17",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n18",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n19",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n20",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n4",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

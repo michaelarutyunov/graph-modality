@@ -1,0 +1,214 @@
+{
+  "transcript_id": "work_0472",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as tutor for learning and understanding",
+      "label_negative": "AI as unreliable or hallucinating information source",
+      "bipolarity_complete": true,
+      "grounding_span": "I tailored my AI to respond to me in a certain way so that I could be prepared for my shelf exams and for questions on the job"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as clinical information source",
+      "label_negative": "Relying solely on memory without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "if I get pimped on a subject that I'm pretty weak in, my attending tells me to look it up"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as clinical information source",
+      "label_negative": "AI errors in calculations and clinical reasoning",
+      "bipolarity_complete": true,
+      "grounding_span": "I used AI to help me narrow down diagnoses and help me come up with firstline treatment plans for my SOAP note"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI for iterative SOAP note refinement",
+      "label_negative": "AI-generated SOAP note without attending-specific formatting",
+      "bipolarity_complete": true,
+      "grounding_span": "I go back and forth with the process. For example, if it doesn't include the necessary information for past medical history or social history, then I'll change it"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as enhanced search engine for relevant articles",
+      "label_negative": "Manual literature search without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I used open evidence AI to find me research articles for that"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI for creating study materials (Anki cards, summaries)",
+      "label_negative": "AI hallucination and broken promises in generating materials",
+      "bipolarity_complete": true,
+      "grounding_span": "I was using AI to help me make anki cards and pdfs of summaries/notes for the pathophysiology of high yield information"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI as efficiency booster in healthcare",
+      "label_negative": "AI replacing human emotional aspect of patient care",
+      "bipolarity_complete": true,
+      "grounding_span": "I think it helps health practitioners work more efficiently"
+    },
+    {
+      "id": "n8",
+      "type": "Construct",
+      "label": "AI as clinical information source",
+      "label_negative": "Human error in radiology interpretation",
+      "bipolarity_complete": true,
+      "grounding_span": "it'll help with not missing important information - especially since we had a problem where my attending was super upset that a radiologist had missed an important feature"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Clinical competence and impressing superiors",
+      "grounding_span": "my attendings and residents get very impressed"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "I think it helps health practitioners work more efficiently"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Patient safety and quality of care",
+      "grounding_span": "it'll help with not missing important information"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Personalized learning and understanding",
+      "grounding_span": "the explanations are geared to help me understand in a less complicated way"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Satisfaction with AI for outperforming peers",
+      "valence": "positive",
+      "grounding_span": "I felt satisfied when I was able to come up with the right answer with the help of AI whereas my peers could not"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Frustration with AI errors",
+      "valence": "negative",
+      "grounding_span": "AI got it wrong, and I was embarrassed"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Frustration with AI hallucination",
+      "valence": "negative",
+      "grounding_span": "It felt like it just hallucinated and gave me the wrong links. It made me pretty upset that it kept lying to me"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Optimism about AI as partner in patient assessment",
+      "valence": "positive",
+      "grounding_span": "I think it'd progress into working more efficiently and becoming a partner in the assessment of a patient"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement and personalization",
+      "grounding_span": "I tailored my AI to respond to me in a certain way"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Experience-based boundary setting",
+      "grounding_span": "I do my calculations on my own. AI messes up some things when I ask for calculations"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n13",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

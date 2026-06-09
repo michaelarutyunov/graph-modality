@@ -1,0 +1,184 @@
+{
+  "transcript_id": "science_0098",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as coding assistant",
+      "label_negative": "Manual coding from scratch",
+      "bipolarity_complete": true,
+      "grounding_span": "it would be more efficient to use AI"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as convenience tool vs necessity",
+      "label_negative": "AI as essential tool",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is a convenience tool, I don't really need it to do anything for me"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for standard automation wrapper code",
+      "label_negative": "AI full automation without human oversight",
+      "bipolarity_complete": true,
+      "grounding_span": "I used AI to get a 80% complete framework, and I made my edits where I deemed it necessary"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Intellectual property protection when using AI",
+      "label_negative": "AI use without IP concerns",
+      "bipolarity_complete": true,
+      "grounding_span": "I also have ethical concerns when it comes to intellectual property"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Deep mathematical understanding vs surface-level use",
+      "label_negative": "Surface-level reliance on AI for math",
+      "bipolarity_complete": true,
+      "grounding_span": "I really wanted to understand the mathematics behind what I was doing"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "it would be more efficient to use AI"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Academic integrity",
+      "grounding_span": "I find that I am pretty self-sufficient in that regard"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Ethical responsibility and respect for IP",
+      "grounding_span": "ethical concerns when it comes to intellectual property"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Positive toward AI for coding tasks",
+      "valence": "positive",
+      "grounding_span": "it would be more efficient to use AI"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Indifferent stance toward AI as non-essential",
+      "valence": "ambivalent",
+      "grounding_span": "AI is a convenience tool, I don't really need it to do anything for me"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Resignation toward IP restrictions on AI use",
+      "valence": "negative",
+      "grounding_span": "I didn't want to use AI to write or rewrite something that is already present in a textbook or my professor's lecture notes"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Positive stance toward AI as research tool",
+      "valence": "positive",
+      "grounding_span": "I used AI to get a 80% complete framework"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic delegation with oversight",
+      "grounding_span": "I used AI to get a 80% complete framework, and I made my edits where I deemed it necessary"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Self-sufficient and intentional tool use",
+      "grounding_span": "I find that I am pretty self-sufficient in that regard"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,206 @@
+{
+  "transcript_id": "work_0033",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as resource creation tool for diverse questions",
+      "label_negative": "Limited textbook question pool",
+      "bipolarity_complete": true,
+      "grounding_span": "creating resources such as additional starter questions, worksheet, exam style questions and homeworks"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as time-saving tool",
+      "label_negative": "Time-consuming manual creation",
+      "bipolarity_complete": true,
+      "grounding_span": "allows me to save lots of time as creating math questions can be time consuming"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI resource consumption",
+      "label_negative": "Lower quality without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "created a higher quality resource as a result"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Authentic teacher voice in solutions",
+      "label_negative": "AI-generated impersonal solutions",
+      "bipolarity_complete": true,
+      "grounding_span": "I still need to solve problems myself and I will still provide my own solutions as it will appear more authentic"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as student learning facilitator",
+      "label_negative": "Insufficient practice variety",
+      "bipolarity_complete": true,
+      "grounding_span": "Creating more questions gives students a chance to experience a wider range of style of question"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI for administrative tasks",
+      "label_negative": "Incompatible admin systems",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't use AI for admin as much as I would like to, this mostly due to the system we use wouldn't be compatible"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "Educator as facilitator vs lecturer",
+      "label_negative": "Traditional lecturer role",
+      "bipolarity_complete": true,
+      "grounding_span": "my role as an educator to be one of a facilitator rather than a lecturer"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Student progress and learning",
+      "grounding_span": "check they are still learning and understanding the content"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "allows me to save lots of time"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Authenticity and personal integrity",
+      "grounding_span": "appear more authentic and will appear in a more familiar style to students"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Resource quality and variety",
+      "grounding_span": "created a higher quality resource"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI for resource creation",
+      "valence": "positive",
+      "grounding_span": "creating the escape room activity recently went really well"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Positive stance toward AI for administrative tasks",
+      "valence": "negative",
+      "grounding_span": "I don't use AI for admin as much as I would like to"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Satisfaction with AI for marking and feedback",
+      "valence": "positive",
+      "grounding_span": "Marking is an area in particular I want to explore more"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Preference for personal solutions",
+      "valence": "negative",
+      "grounding_span": "I still need to solve problems myself and I will still provide my own solutions"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement with limited back-and-forth",
+      "grounding_span": "I tend to start minimal to see what it will produce and if that isn't to my standard, I will give some follow ups"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic scaffolding — adapts difficulty based on student confidence",
+      "grounding_span": "if they are really struggling, I will get AI to create one that is close to the original but if they are getting more confident, I will try and use AI to add extra layers of difficultly"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

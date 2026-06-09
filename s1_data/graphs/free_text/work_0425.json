@@ -1,0 +1,184 @@
+{
+  "transcript_id": "work_0425",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as efficient summarizer and information extractor",
+      "label_negative": "Manual processing of lengthy information",
+      "bipolarity_complete": true,
+      "grounding_span": "ai really helps to highlight important information"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as reliable geographical data filler",
+      "label_negative": "AI as unreliable distance calculator",
+      "bipolarity_complete": true,
+      "grounding_span": "it's usually right with the geographical information"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as content editor with human-controlled formatting",
+      "label_negative": "AI as full design and formatting tool",
+      "bipolarity_complete": true,
+      "grounding_span": "ai can't really design how I want the announcement to look like"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as tone checker for professional communication",
+      "label_negative": "Unchecked harsh tone in messages",
+      "bipolarity_complete": true,
+      "grounding_span": "ai is also very good at letting me know what the tone of my message is"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as repetitive task delegator to free mental energy",
+      "label_negative": "Manual engagement with tedious tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I use less brain power and I can focus on other things"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and cognitive load reduction",
+      "grounding_span": "I use less brain power and I can focus on other things"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Accuracy and reliability of information",
+      "grounding_span": "it's usually right with the geographical information"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional communication quality",
+      "grounding_span": "so I don't sound too harsh/mean"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for summarization and data filling",
+      "valence": "positive",
+      "grounding_span": "ai is really useful in editing student communications, as well as filling in the blanks for my master lists"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI for distance calculations",
+      "valence": "negative",
+      "grounding_span": "I was frustrated when it was consistently getting the travel distance wrong"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Trust in AI for geographical data but not for distances",
+      "valence": "ambivalent",
+      "grounding_span": "it's usually right with the geographical information. sometimes it's not right when I ask it to tell me how far the addresses are"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Preference for manual formatting over AI design",
+      "valence": "negative",
+      "grounding_span": "I just format it myself"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement — back-and-forth until satisfied",
+      "grounding_span": "I go back and forth until I like it"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Experience-based trust calibration — verifies then trusts",
+      "grounding_span": "I checked it the first few times but it's usually right"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

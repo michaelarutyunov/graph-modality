@@ -1,0 +1,196 @@
+{
+  "transcript_id": "work_0620",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as creative idea generator",
+      "label_negative": "AI as limited to routine tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "receiving ideas i never would have otherwise considered"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as writing and communication enhancer",
+      "label_negative": "AI producing unsatisfactory output requiring manual rework",
+      "bipolarity_complete": true,
+      "grounding_span": "copy and pasting beautifully written communications"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as collaborative decision support for candidate fit",
+      "label_negative": "AI over-prioritizing certain qualifications",
+      "bipolarity_complete": true,
+      "grounding_span": "tell me which is a better fit for the role and give me the top 5 reasons why"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as efficiency and workflow optimizer",
+      "label_negative": "AI failing to deliver required output",
+      "bipolarity_complete": true,
+      "grounding_span": "streamline my workflow better"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Human irreplaceability in organic conversation",
+      "label_negative": "AI-mediated or automated conversation",
+      "bipolarity_complete": true,
+      "grounding_span": "a conversation has to be had organically"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as a second pair of eyes without coordination friction",
+      "label_negative": "Needing to hunt down a colleague for feedback",
+      "bipolarity_complete": true,
+      "grounding_span": "asking for a second pair of eyes without having to hunt someone down"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Creative inspiration and novel ideas",
+      "grounding_span": "receiving ideas i never would have otherwise considered"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional communication quality",
+      "grounding_span": "beautifully written communications"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "streamline my workflow better"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Human connection and authenticity",
+      "grounding_span": "a conversation has to be had organically"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI-generated ideas and polished communications",
+      "valence": "positive",
+      "grounding_span": "receiving ideas i never would have otherwise considered"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration when AI output is unsatisfactory",
+      "valence": "negative",
+      "grounding_span": "not receiving the output i need and having to write it myself"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Proactive embrace of AI integration and continuous learning",
+      "valence": "positive",
+      "grounding_span": "i see myself becoming an expert at integrating and leveraging ai"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement and selective combination of AI outputs",
+      "grounding_span": "we may go back and forth, but sometimes I may end up having to piece together two sections"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Active steering and prioritization of AI's focus",
+      "grounding_span": "I'll tell them to de prioritize that qual"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,218 @@
+{
+  "transcript_id": "creativity_0075",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as documentation gap-filler",
+      "label_negative": "Official documentation as sole knowledge source",
+      "bipolarity_complete": true,
+      "grounding_span": "AI fills the gaps when official documentation doesn't meet my needs"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as learning accelerator for new domains",
+      "label_negative": "Self-directed trial and error without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "AI was very capable of assisting with ensuring that I understood the basic concepts"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as project persistence enabler",
+      "label_negative": "Project abandonment due to obstacles",
+      "bipolarity_complete": true,
+      "grounding_span": "With the help of AI however, I've gotten much farther in the process than in the past and I can actually see myself completing this project"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as threat to coding prestige and job market",
+      "label_negative": "AI as neutral or positive tool for accessibility",
+      "bipolarity_complete": true,
+      "grounding_span": "It seems as if anyone can now jump online and grab some code"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as customer service replacement concern",
+      "label_negative": "Human customer service as ideal",
+      "bipolarity_complete": true,
+      "grounding_span": "I'm not a huge fan of using AI in lieu of actual customer service"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as future UI design collaborator",
+      "label_negative": "Manual UI design without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I'm looking forward to a time when an AI model can output graphic representations for the UI layers"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficient problem-solving and time savings",
+      "grounding_span": "my time was better served utilizing AI to help answer questions"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Skill acquisition and mastery",
+      "grounding_span": "ensuring that I understood the basic concepts"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Project completion and personal achievement",
+      "grounding_span": "I can actually see myself completing this project"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Professional recognition and marketability",
+      "grounding_span": "create something that may be marketable"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Authentic human interaction and accountability",
+      "grounding_span": "allows a company an 'out' for not solving issues for its paying customers"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Positive reliance on AI for documentation gaps",
+      "valence": "positive",
+      "grounding_span": "AI fills the gaps when official documentation doesn't meet my needs"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Positive view of AI as learning aid",
+      "valence": "positive",
+      "grounding_span": "AI was very capable of assisting with ensuring that I understood the basic concepts"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Gratitude for AI enabling project completion",
+      "valence": "positive",
+      "grounding_span": "With the help of AI however, I've gotten much farther in the process than in the past"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Concern about AI devaluing coding skills",
+      "valence": "negative",
+      "grounding_span": "It seems as if anyone can now jump online and grab some code"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Disapproval of AI replacing customer service",
+      "valence": "negative",
+      "grounding_span": "I'm not a huge fan of using AI in lieu of actual customer service"
+    },
+    {
+      "id": "n17",
+      "type": "Stance",
+      "label": "Optimistic anticipation of AI for UI design",
+      "valence": "positive",
+      "grounding_span": "I'm looking forward to a time when an AI model can output graphic representations for the UI layers"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Comparative evaluation across multiple AI models",
+      "grounding_span": "I also use a few different AI models to get comparisons"
+    },
+    {
+      "id": "n19",
+      "type": "CognitiveStyleMarker",
+      "label": "Trial-and-error learning with rapid code comprehension",
+      "grounding_span": "its essentially trial and error. However, because I do have the coding background, I can grasp the code pretty quickly"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n17",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n19",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,213 @@
+{
+  "transcript_id": "work_0169",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as efficiency tool for data analysis",
+      "label_negative": "Manual detailed review of all information",
+      "bipolarity_complete": true,
+      "grounding_span": "quickly go through information that I myself do not need to go in detail"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as report comparison assistant",
+      "label_negative": "Manual comparison of reports",
+      "bipolarity_complete": true,
+      "grounding_span": "compare them to our usual reports to highlight the differences"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as drafting assistant for emails",
+      "label_negative": "Personal email writing without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "quickly write email replies that do not need to be personal"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI trustworthiness and verification",
+      "label_negative": "AI unreliability requiring detailed verification",
+      "bipolarity_complete": true,
+      "grounding_span": "I generally trust what it has produced"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as starting point for engineering review",
+      "label_negative": "AI as final authority without human verification",
+      "bipolarity_complete": true,
+      "grounding_span": "use AI to give a rundown first through things to give me a starting point"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "One-shot AI use for complex tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "In regards to reports I will collaborate more and fine tune the requirements over multiple passthroughs"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI for data analysis and report writing",
+      "label_negative": "AI making unwanted changes to reports",
+      "bipolarity_complete": true,
+      "grounding_span": "It is frustrating when it has made unwanted changes to reports I am writing"
+    },
+    {
+      "id": "n8",
+      "type": "Construct",
+      "label": "AI for repetitive simple tasks",
+      "label_negative": "Manual handling of trivial tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "automate a lot of trivial stuff"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "saved me time by going through 40 page reports"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Engineering accuracy and oversight",
+      "grounding_span": "Anything that requires my engineering verification to review I have to handle myself"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Focus on important work",
+      "grounding_span": "make me focus on the important stuff"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI for time-saving",
+      "valence": "positive",
+      "grounding_span": "quite satisfied when it has saved me time by going through 40 page reports"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Frustration with AI making unintended changes",
+      "valence": "negative",
+      "grounding_span": "It is frustrating when it has made unwanted changes to reports I am writing"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Distrust of AI reliability",
+      "valence": "positive",
+      "grounding_span": "I generally trust what it has produced"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Acceptance of human oversight requirement",
+      "valence": "negative",
+      "grounding_span": "Anything that requires my engineering verification to review I have to handle myself"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement with limited back-and-forth",
+      "grounding_span": "collaborate more and fine tune the requirements over multiple passthroughs"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic delegation to focus on high-value work",
+      "grounding_span": "embracing using AI to make me focus on the important stuff"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n6",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n8",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n7",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

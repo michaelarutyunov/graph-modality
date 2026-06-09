@@ -1,0 +1,179 @@
+{
+  "transcript_id": "work_0866",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as coding suggestion tool",
+      "label_negative": "AI as unreliable suggestion source",
+      "bipolarity_complete": true,
+      "grounding_span": "AI assistant that suggests codes that may be applicable to the case"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as learning and study aid",
+      "label_negative": "AI as distraction from independent learning",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI often to assist in those tasks, such as creating study schedules, charts to break information down"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Human judgment over AI suggestions",
+      "label_negative": "Blind trust in AI suggestions",
+      "bipolarity_complete": true,
+      "grounding_span": "I always double check anything it suggests"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI code quality and reliability",
+      "label_negative": "AI misunderstanding of specific details",
+      "bipolarity_complete": true,
+      "grounding_span": "we kept having a misunderstanding regarding the correct body part I was referencing"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI integration with provider documentation and payer guidelines",
+      "label_negative": "AI operating in isolation without standardization",
+      "bipolarity_complete": true,
+      "grounding_span": "AI could be used to assist medical providers in more uniform and complete documentation"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Accuracy and quality in medical coding",
+      "grounding_span": "ensuring claims go out properly coded the first time reducing denials"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Continuous learning and skill development",
+      "grounding_span": "my professions require constant study"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "I usually do not have time to have an on-going conversation due to the workload"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "I use AI often to assist in those tasks, such as creating study schedules, charts to break information down"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI errors",
+      "valence": "negative",
+      "grounding_span": "we kept having a misunderstanding regarding the correct body part I was referencing"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "positive",
+      "grounding_span": "AI will create more jobs rather than less"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with AI's impractical suggestions",
+      "valence": "ambivalent",
+      "grounding_span": "I always double check anything it suggests"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Systematic iterative verification — works independently first, then checks with AI",
+      "grounding_span": "I do however always code the case first before looking at the suggestions"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Context-dependent tool use — separates work and learning contexts",
+      "grounding_span": "I usually do not have time to have an on-going conversation due to the workload. However, when I am off the clock... I use AI often"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

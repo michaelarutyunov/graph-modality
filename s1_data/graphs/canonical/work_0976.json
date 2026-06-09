@@ -1,0 +1,157 @@
+{
+  "transcript_id": "work_0976",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as idea generator and organizer",
+      "label_negative": "AI as mechanical and lacking human understanding",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is not used exclusively by either of my jobs how ever it is something I use to generate ideas and support both the teachers and parents"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as emotional support in difficult situations",
+      "label_negative": "AI as unable to grasp emotional experiences",
+      "bipolarity_complete": true,
+      "grounding_span": "AI helps to 1. help me decompress if it was a rather difficult interaction"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as planning and structuring tool",
+      "label_negative": "AI as ignoring real-world time and human factors",
+      "bipolarity_complete": true,
+      "grounding_span": "AI does not have a good grasp on the amount of time it takes for certain things"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as skill development enabler",
+      "label_negative": "AI as replacement that diminishes human skills",
+      "bipolarity_complete": true,
+      "grounding_span": "AI has helped me sharpen my skills"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Human touch in language teaching for engagement",
+      "label_negative": "AI-driven assembly line approach",
+      "bipolarity_complete": true,
+      "grounding_span": "I want to work very hard not to use AI differently"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Professional confidence and validation",
+      "grounding_span": "It feels good to be able to be confident in directing the parents on what is next"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Authenticity and personal integrity",
+      "grounding_span": "I would never want to use AI so much that I simply become an assembly line for my clients thoughts and issues"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Workflow efficiency",
+      "grounding_span": "AI does the work of sorting and my brain has more space to be creative"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for organizing brain dumps",
+      "valence": "positive",
+      "grounding_span": "Working with AI to figure out parenting plans has been helpful because I am able to enter in the brain dump of the notes I took while in the session with the parent and then it organizes it all"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI's mechanical understanding of time and emotion",
+      "valence": "negative",
+      "grounding_span": "Mostly just that sometimes AI does not understand those human experiences of time and emotion"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Resistance to over-reliance on AI",
+      "valence": "negative",
+      "grounding_span": "I want to work very hard not to use AI differently"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Present situation and adapt — uses AI as springboard, ignores follow-ups",
+      "grounding_span": "I typically present the situation and let it generate suggestions that I then adapt. In fact I find myself often ignoring the follow up questions"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Independent adoption and pioneering use",
+      "grounding_span": "I am one of the only ones who use AI on a regular basis and only because I am acquainted with it from outside my normal working hours"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

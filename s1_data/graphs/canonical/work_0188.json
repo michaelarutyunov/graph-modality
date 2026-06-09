@@ -1,0 +1,227 @@
+{
+  "transcript_id": "work_0188",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as code generation assistant",
+      "label_negative": "AI as source of deprecated code",
+      "bipolarity_complete": true,
+      "grounding_span": "quickly write base scripts"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as research assistant",
+      "label_negative": "AI as source of outdated information",
+      "bipolarity_complete": true,
+      "grounding_span": "researching best practices for deployments like in Azure"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as autonomous agent trusted independently",
+      "bipolarity_complete": true,
+      "grounding_span": "I always collaborate with it, I don't trust it to handle tasks independently"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as professional development tool",
+      "label_negative": "AI as optional or stigmatized tool",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is a tool in your toolset you need to have"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI reliance vs. maintaining independent thinking",
+      "label_negative": "AI as safe tool for skill maintenance",
+      "bipolarity_complete": true,
+      "grounding_span": "If you use it too much it becomes a crutch and harms you down the line"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as systematic troubleshooter",
+      "label_negative": "AI as reliable diagnostic aid",
+      "bipolarity_complete": true,
+      "grounding_span": "worried AI takes me down the wrong rabbit hole when fixing something difficult"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "quickly write base scripts"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Deep expertise and professional knowledge",
+      "grounding_span": "out of date information on powershell and graph calls"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Skill maintenance and self-reliance",
+      "grounding_span": "maintain your skillset"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Accurate and reliable problem diagnosis",
+      "grounding_span": "worried AI takes me down the wrong rabbit hole"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI on simple scripting",
+      "valence": "positive",
+      "grounding_span": "gets me 95% of the way there"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with deprecated recommendations",
+      "valence": "negative",
+      "grounding_span": "most frustrating when it uses a deprecated version"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Cautious trust with verification",
+      "valence": "ambivalent",
+      "grounding_span": "I always collaborate with it, I don't trust it to handle tasks independently"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Hesitation to experiment with AI due to professional risks",
+      "valence": "positive",
+      "grounding_span": "AI is a tool in your toolset you need to have"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Resistance to over-reliance on AI",
+      "valence": "negative",
+      "grounding_span": "If you use it too much it becomes a crutch"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Satisfaction with AI diagnostic help",
+      "valence": "negative",
+      "grounding_span": "worried AI takes me down the wrong rabbit hole"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Systematic verification through source checking",
+      "grounding_span": "I can make my own adjustments to finish it out"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic tool-use with arm's-length distance",
+      "grounding_span": "it needs to be held at an arm's length"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

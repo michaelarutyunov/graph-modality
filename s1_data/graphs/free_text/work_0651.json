@@ -1,0 +1,182 @@
+{
+  "transcript_id": "work_0651",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as creative idea generator",
+      "label_negative": "Manual creative generation without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI to help me generate creative ideas"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as data analysis tool",
+      "label_negative": "Manual data analysis without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I also use AI to perform a quick data analysis"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI output humanization",
+      "label_negative": "AI output used as-is",
+      "bipolarity_complete": true,
+      "grounding_span": "changes that make the email feel human-written instead of AI-written"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI in planning tasks",
+      "label_negative": "Human-only planning",
+      "bipolarity_complete": true,
+      "grounding_span": "anything related to planning... I plan every campaign and strategy myself without AI"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI collaboration vs delegation",
+      "label_negative": "Complete delegation to AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I collaborate, I don't delegate completely"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI instruction following",
+      "label_negative": "AI deviating from instructions",
+      "bipolarity_complete": true,
+      "grounding_span": "it really followed my instructions"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Creative output quality",
+      "grounding_span": "the result was perfect"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Personal added value and control",
+      "grounding_span": "it's my added value"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Efficiency and time saving",
+      "grounding_span": "perform a quick data analysis"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for creative tasks",
+      "valence": "positive",
+      "grounding_span": "It made me very satisfied one time where I needed to generate a very specific email campaign"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Preference for human planning",
+      "valence": "negative",
+      "grounding_span": "I plan every campaign and strategy myself without AI"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Positive view of collaborative AI use",
+      "valence": "positive",
+      "grounding_span": "I collaborate, I don't delegate completely"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Satisfaction with AI following instructions",
+      "valence": "positive",
+      "grounding_span": "it really followed my instructions"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement — uses multiple prompts to adjust output",
+      "grounding_span": "I will modify slightly with new prompts until I'm happy"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain boundary setting — separates planning from creative tasks",
+      "grounding_span": "anything related to planning... I plan every campaign and strategy myself without AI"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

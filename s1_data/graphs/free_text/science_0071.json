@@ -1,0 +1,139 @@
+{
+  "transcript_id": "science_0071",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as literature synthesis accelerator",
+      "label_negative": "Manual exhaustive literature review",
+      "bipolarity_complete": true,
+      "grounding_span": "AI can more quickly skim through many literature results than would be possible by a single researcher"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as initial direction-finder for complex analysis",
+      "label_negative": "AI as final conclusive analysis tool",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is good at coming up with an experimental design and I have used it for that in the past but most of my research has budget/time/specimen limits so the 'ideal' design isn't always viable"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI verifiability through source cross-checking",
+      "label_negative": "AI unverifiable output acceptance",
+      "bipolarity_complete": true,
+      "grounding_span": "I would make a list of the values provided and go through the sources provided by AI and verify that they were those exact parameters"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as causal inference engine from large datasets",
+      "label_negative": "AI limited to descriptive pattern recognition",
+      "bipolarity_complete": true,
+      "grounding_span": "I would love for it to be able to draw unique conclusions based on large datasets"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Research efficiency and speed",
+      "grounding_span": "speed up the research process"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Research integrity and accuracy",
+      "grounding_span": "verify that they were those exact parameters with the correct deposition setup"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Scientific discovery and novel insight",
+      "grounding_span": "draw unique conclusions based on large datasets"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Positive valuation of AI for literature synthesis",
+      "valence": "positive",
+      "grounding_span": "AI can more quickly skim through many literature results than would be possible by a single researcher"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Cautious reliance on AI for experimental design",
+      "valence": "ambivalent",
+      "grounding_span": "AI is good at coming up with an experimental design and I have used it for that in the past but most of my research has budget/time/specimen limits so the 'ideal' design isn't always viable"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Aspirational desire for AI as causal inference tool",
+      "valence": "positive",
+      "grounding_span": "I would love for it to be able to draw unique conclusions based on large datasets"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Systematic verification through source cross-referencing",
+      "grounding_span": "I would make a list of the values provided and go through the sources provided by AI and verify that they were those exact parameters"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic adaptation of AI suggestions to real-world constraints",
+      "grounding_span": "most of my research has budget/time/specimen limits so the 'ideal' design isn't always viable"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,195 @@
+{
+  "transcript_id": "creativity_0003",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as tool for lesson planning",
+      "label_negative": "Manual time-consuming lesson planning",
+      "bipolarity_complete": true,
+      "grounding_span": "AI has saved me so much time in this area"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as editing assistant",
+      "label_negative": "Rigid unchangeable AI outputs",
+      "bipolarity_complete": true,
+      "grounding_span": "I am able to edit the lesson plans quickly and easily"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as supplement to creative process",
+      "label_negative": "AI-driven creative decisions overriding human intent",
+      "bipolarity_complete": true,
+      "grounding_span": "I am driving the creative decisions"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as supplement to creative process",
+      "label_negative": "AI as crutch that stifles creativity",
+      "bipolarity_complete": true,
+      "grounding_span": "I find that I am more creative"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as tool versus crutch",
+      "label_negative": "AI as crutch replacing human skill",
+      "bipolarity_complete": true,
+      "grounding_span": "I would hate to see choreographers use it as a crutch rather than a tool"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "Preservation of human essence and individuality in dance",
+      "label_negative": "Uniform cookie-cutter dance due to AI",
+      "bipolarity_complete": true,
+      "grounding_span": "Dance is distinctly human. I would hate to see the art become too uniform"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI learning and adapting to personal choreographic style",
+      "label_negative": "AI ignoring personal style",
+      "bipolarity_complete": true,
+      "grounding_span": "AI could eventually learn my choreography style and apply that"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "AI has saved me so much time"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Creative freedom and exploration",
+      "grounding_span": "I am able to explore the possibilities more deeply"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Creative authenticity and human expression",
+      "grounding_span": "Dance is distinctly human"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Positive relief from overwhelm",
+      "valence": "positive",
+      "grounding_span": "This made me feel much less overwhelmed"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Concern about AI making dance uniform",
+      "valence": "negative",
+      "grounding_span": "I would hate to see a time where the art of dance becomes too uniform"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Aspirational hope for AI as practical assistant",
+      "valence": "mixed",
+      "grounding_span": "I need to do a better job at navigating it myself"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Optimism about AI learning personal style",
+      "valence": "positive",
+      "grounding_span": "I would love if AI could eventually learn my choreography style"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative prompt refinement",
+      "grounding_span": "I am very specific in my prompts... If I feel the AI is getting off track, I will redirect"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Intentional skill-building to maintain independence from AI",
+      "grounding_span": "I plan on blocking off time to make lesson plans completely without the help of AI"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

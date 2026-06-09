@@ -1,0 +1,225 @@
+{
+  "transcript_id": "work_0084",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as tool for market and business perspective",
+      "label_negative": "AI as unreliable information source",
+      "bipolarity_complete": true,
+      "grounding_span": "I use it mostly for market research such as researching competitors"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for communication refinement",
+      "label_negative": "Manual communication effort",
+      "bipolarity_complete": true,
+      "grounding_span": "making my emails sound nicer and writing text for a slide deck or report"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability and hallucination",
+      "label_negative": "AI reliability and accuracy",
+      "bipolarity_complete": true,
+      "grounding_span": "AI hallucinates stuff and makes stuff up"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI for creative tasks (slide deck design)",
+      "label_negative": "AI for creative tasks (slide deck design)",
+      "bipolarity_complete": false,
+      "grounding_span": "I like the creative tasks. For example designing slide decks is fun"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI independence in task completion",
+      "label_negative": "AI requiring constant back-and-forth",
+      "bipolarity_complete": true,
+      "grounding_span": "Let it handle things independently"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI reliability in citations",
+      "label_negative": "AI lack of source citation",
+      "bipolarity_complete": true,
+      "grounding_span": "they do not cite sources so I can't even really verify the info"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI complementing search engines",
+      "label_negative": "AI fully replacing search engines",
+      "bipolarity_complete": true,
+      "grounding_span": "AI to not fully replace search engines it just kind of complements them"
+    },
+    {
+      "id": "n8",
+      "type": "Construct",
+      "label": "AI delegation for simple tasks",
+      "label_negative": "Skill maintenance vs AI delegation",
+      "bipolarity_complete": false,
+      "grounding_span": "I have to maintain my skills because otherwise I get taken over"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "It frees up my time to do other things"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Creative autonomy",
+      "grounding_span": "I like to exercise the creative part of my brain"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Critical thinking and skill development",
+      "grounding_span": "practicing your writing is a useful skill and it helps with analytical abilities and critical thinking"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "Particularly satisfied is when they return results that I could not find on Google"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Positive reliance on AI for source finding",
+      "valence": "negative",
+      "grounding_span": "Particularly frustrated is when they do not cite sources"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Commitment to verification-focused approach",
+      "valence": "ambivalent",
+      "grounding_span": "Part of the process I expect"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Preference for human creativity in design",
+      "valence": "positive",
+      "grounding_span": "I like doing it myself"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Reluctance to maintain writing skills",
+      "valence": "negative",
+      "grounding_span": "For stuff like writing I don't maintain that anymore"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Delegation with verification — offloads complex tasks but double-checks results",
+      "grounding_span": "Let it handle things independently"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic skill trade-off reasoning",
+      "grounding_span": "I have to maintain my skills because otherwise I get taken over"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n8",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n8",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

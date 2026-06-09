@@ -1,0 +1,151 @@
+{
+  "transcript_id": "work_0271",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as independent task completer",
+      "bipolarity_complete": true,
+      "grounding_span": "I usually collaborate on a task as I like to have some level of control"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI capability for complex tasks",
+      "label_negative": "AI inability to handle chaotic data",
+      "bipolarity_complete": true,
+      "grounding_span": "I was really hoping this would be a perfect challenge for AI"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as source of misinformation",
+      "label_negative": "AI as a sentient being",
+      "bipolarity_complete": true,
+      "grounding_span": "I see it as a tool which a lot of people don't understand, they think there's some sentient being in the computer"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI use as habitual practice",
+      "label_negative": "AI use as forgotten option",
+      "bipolarity_complete": true,
+      "grounding_span": "it doesn't always occur to me since I'm so used to doing tasks alone"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Autonomy and personal control",
+      "grounding_span": "I like to have some level of control"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency in problem-solving",
+      "grounding_span": "I was really hoping this would be a perfect challenge for AI"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Understanding and acceptance of AI",
+      "grounding_span": "I feel like it has a lot of negative connotations which I'm hoping people will come to terms with"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Preference for collaborative interaction",
+      "valence": "positive",
+      "grounding_span": "I usually collaborate on a task as I like to have some level of control"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Frustration with AI for data tasks",
+      "valence": "negative",
+      "grounding_span": "I asked AI for help with this but it was unable to understand what I needed"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Optimistic expectation for AI to speed workflow",
+      "valence": "positive",
+      "grounding_span": "Sometimes I like to just ask it questions or give it tasks to see how well it performs"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Awareness of negative societal perceptions",
+      "valence": "mixed",
+      "grounding_span": "I feel like it has a lot of negative connotations which I'm hoping people will come to terms with"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative narrowing using own expertise before AI",
+      "grounding_span": "I try to keep it as simple as possible. Sometimes I use my own knowledge to try and narrow down what I think could be potential causes"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Gradual integration and exploration of AI",
+      "grounding_span": "Sometimes I like to just ask it questions or give it tasks to see how well it performs and to help me understand more ways I can use it"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

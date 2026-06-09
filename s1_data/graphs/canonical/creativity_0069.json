@@ -1,0 +1,229 @@
+{
+  "transcript_id": "creativity_0069",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as research and synthesis tool",
+      "label_negative": "Manual information extraction and synthesis",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is most helpful in extracting important information"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as writing assistant",
+      "label_negative": "Struggling alone with wording and clarity",
+      "bipolarity_complete": true,
+      "grounding_span": "helping me write copy in a way that conveys a message quickly"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as brainstorming and idea generator",
+      "label_negative": "Getting stuck staring at a problem alone",
+      "bipolarity_complete": true,
+      "grounding_span": "AI also helps me brainstorm, finding different ways to look at a problem"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as accountability and follow-up assistant",
+      "label_negative": "Relying solely on memory for follow-ups",
+      "bipolarity_complete": true,
+      "grounding_span": "it will give me an action item of following up"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as supplement to creative process",
+      "label_negative": "AI driving creative decisions without human direction",
+      "bipolarity_complete": true,
+      "grounding_span": "I am absolutely driving the creative decision"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as compromise to creative integrity",
+      "label_negative": "Inauthenticity of AI-generated content",
+      "bipolarity_complete": true,
+      "grounding_span": "struggling with the 'inauthenticity' of the finished product"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI as supplement to creative process",
+      "label_negative": "Belief that creative work is uniquely human and non-formulaic",
+      "bipolarity_complete": true,
+      "grounding_span": "it kind of exposes how formulaic everything can really be"
+    },
+    {
+      "id": "n8",
+      "type": "Construct",
+      "label": "Embracing AI despite replacement concerns",
+      "label_negative": "Irresponsible AI adoption that replaces humans",
+      "bipolarity_complete": true,
+      "grounding_span": "it should be used to enhance, not flat out replace"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "This saves tons of time"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Creative autonomy",
+      "grounding_span": "I still feel like I am in control"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Authenticity and integrity of output",
+      "grounding_span": "struggling with the 'inauthenticity' of the finished product"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Job security and skill relevance",
+      "grounding_span": "they have done harm to real people by getting rid of jobs"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Satisfaction with AI for time-saving",
+      "valence": "positive",
+      "grounding_span": "This saves tons of time"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Cautious verification stance toward AI outputs",
+      "valence": "negative",
+      "grounding_span": "struggling with the 'inauthenticity' of the finished product"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Concern about AI replacing jobs",
+      "valence": "negative",
+      "grounding_span": "concerns regarding AI replacing people and people losing their jobs"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Optimism about future AI adoption",
+      "valence": "positive",
+      "grounding_span": "figure out how to responsibly adopt AI and how to enhance the irreplacable human qualities"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through conversation",
+      "grounding_span": "we have a conversation until it does"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Analogical reasoning — uses concrete analogies to evaluate AI",
+      "grounding_span": "I have always equated AI to training a new employee"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n13",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n8",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n8",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n5",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n7",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

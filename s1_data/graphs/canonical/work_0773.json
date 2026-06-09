@@ -1,0 +1,207 @@
+{
+  "transcript_id": "work_0773",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as test case reviewer and regression testing aid",
+      "label_negative": "Manual test case review without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "use AI to look over my test cases to see if there's anything I may have missed"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for meeting summaries and communication",
+      "label_negative": "Relying solely on original materials like slideshows",
+      "bipolarity_complete": true,
+      "grounding_span": "use it to summarize our retrospective meetings and other adjacent department meetings"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as safe space for asking questions without social risk",
+      "label_negative": "Asking questions in meetings and risking looking silly",
+      "bipolarity_complete": true,
+      "grounding_span": "I can ask it to explain things without looking silly at a meeting"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI for repetitive simple tasks",
+      "label_negative": "AI handling high-priority or creative tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I wouldn't feel safe delegating things that are high priority or letting AI decide how to approach test case generation for blockers but more so with repetitive tasks"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as test case reviewer and regression testing aid",
+      "label_negative": "AI replacing human testing entirely",
+      "bipolarity_complete": true,
+      "grounding_span": "That combined with my own exploratory testing led to some really fast defect identification"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as evolving tool requiring human adaptation",
+      "label_negative": "AI making human roles redundant",
+      "bipolarity_complete": true,
+      "grounding_span": "I'd see it as needed to learn how to leverage AI and evolve with it"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI reliability for technical tasks vs. interpersonal tasks",
+      "label_negative": "AI handling feeling-based interpersonal situations",
+      "bipolarity_complete": true,
+      "grounding_span": "on the work side of things its great but when asking how to approach another colleague or anything feeling based it can be a bit off base"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Quality assurance and defect detection",
+      "grounding_span": "led to some really fast defect identification"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Understanding and knowledge acquisition",
+      "grounding_span": "really get a good understanding in my own time"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Professional reputation and social acceptance",
+      "grounding_span": "without looking silly at a meeting"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "Mainly for saving time"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Career advancement and adaptability",
+      "grounding_span": "there'll always be something I can work on to remain competitive"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Satisfaction with AI for unit testing",
+      "valence": "positive",
+      "grounding_span": "its made me feel extremely satisfied when I used it for test case generation"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Cautious delegation based on importance and creativity",
+      "valence": "ambivalent",
+      "grounding_span": "I wouldn't feel safe delegating things that are high priority or letting AI decide how to approach test case generation for blockers"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "positive",
+      "grounding_span": "I'd see it as needed to learn how to leverage AI and evolve with it"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Recognition of AI limitations in interpersonal contexts",
+      "valence": "negative",
+      "grounding_span": "when asking how to approach another colleague or anything feeling based it can be a bit off base"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Risk-based delegation calibration",
+      "grounding_span": "when I see opportunities to save time without a big risk of something important being missed I'll delegate lower priority tasks"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Verification-oriented approach",
+      "grounding_span": "I always double check after though"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n4",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

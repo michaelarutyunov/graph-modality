@@ -1,0 +1,188 @@
+{
+  "transcript_id": "work_0039",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as task decomposition tool",
+      "label_negative": "AI as unreliable or hallucinatory assistant",
+      "bipolarity_complete": true,
+      "grounding_span": "put the brief into a bot and ask it to break it down into component tasks, or for suggestions on how to approach it"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as collaborative partner vs delegator",
+      "label_negative": "AI as fully autonomous task completer",
+      "bipolarity_complete": true,
+      "grounding_span": "more collaboration - i cant really think of complete tasks it could handle on its own"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Authenticity of AI-generated content",
+      "label_negative": "AI-sounding text that invites judgment",
+      "bipolarity_complete": true,
+      "grounding_span": "i am also wary about using it for text i'll be sharing, for fear of it sounding like AI/not like me"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI hallucination in spreadsheet solutions",
+      "bipolarity_complete": true,
+      "grounding_span": "frustrated when i ask it how to do something in sheets, and it hallucinates a solution"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as efficiency tool",
+      "label_negative": "AI as long-term employment risk",
+      "bipolarity_complete": true,
+      "grounding_span": "just helping me do my job better and quicker. i guess theres a longer term issue of how long before it could do all my tasks"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI use sanctioned by workplace",
+      "label_negative": "Workplace AI culture: job erosion and quality decline",
+      "bipolarity_complete": true,
+      "grounding_span": "our CEO is very keen... but there is also a negative side with our in-house AI software being used to rewrite articles, and a fear in the newsrooms that this is costing jobs"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "just helping me do my job better and quicker"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Personal authenticity and unique voice",
+      "grounding_span": "for fear of it sounding like AI/not like me"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Professional competence",
+      "grounding_span": "frustrated when i ask it how to do something in sheets, and it hallucinates a solution"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Job security and skill relevance",
+      "grounding_span": "maybe theres no point getting good at sheets and slides, and i need to focus on bigger picture strategy/leadership learning"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI for document analysis",
+      "valence": "positive",
+      "grounding_span": "satisfied when i saw how well it could put together a full google doc and collaborate on edits"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with AI hallucination",
+      "valence": "negative",
+      "grounding_span": "frustrated when i ask it how to do something in sheets, and it hallucinates a solution"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Pragmatic acceptance of AI as a tool",
+      "valence": "ambivalent",
+      "grounding_span": "i dont realy have any qualms using it for my role... i guess theres a longer term issue of how long before it could do all my tasks"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Concern about improper AI use by others",
+      "valence": "mixed",
+      "grounding_span": "i sometimes read stuff from others and think, that sounds like AI, and judge them a bit... but then i do it myself"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement with limited back-and-forth",
+      "grounding_span": "might try rephrasing once or twice, like saying 'i dont have that option'. will probably keep trying if its something i really need"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic cost-benefit analysis of AI use",
+      "grounding_span": "i dont realy have any qualms using it for my role - not hurting anybody, just helping me do my job better and quicker"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,215 @@
+{
+  "transcript_id": "work_0014",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI output accuracy and reliability",
+      "label_negative": "AI output inaccuracy and unreliability",
+      "bipolarity_complete": true,
+      "grounding_span": "Sometimes I worry about the accuracy of the output"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "Task clarity for AI use",
+      "label_negative": "Task ambiguity hindering AI use",
+      "bipolarity_complete": true,
+      "grounding_span": "The problems were more straightforward and I knew exactly what I was asking for"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Time efficiency of AI use",
+      "label_negative": "Time wasted due to AI inaccuracies or back-and-forth",
+      "bipolarity_complete": true,
+      "grounding_span": "if I have to spend time checking what the AI has produced then it might not save me much time overall"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as collaborative advisor vs. autonomous executor",
+      "label_negative": "AI as unreliable autonomous executor",
+      "bipolarity_complete": true,
+      "grounding_span": "if I want advice for how to do something I'll explain my problem and then ask follow up questions"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Appropriate scope of AI use",
+      "label_negative": "Overuse of AI for trivial tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "People use it for finding an alternative to a word in a context where good writing isn't really essential"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "Trust in AI based on past experience",
+      "label_negative": "Distrust due to AI failures",
+      "bipolarity_complete": true,
+      "grounding_span": "being told something had been done when it hadn't"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI as productivity enhancer",
+      "label_negative": "AI as threat to human skills and job security",
+      "bipolarity_complete": true,
+      "grounding_span": "I want to be more confident using it so that I can be more productive at work"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "I want to be more confident using it so that I can be more productive at work"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Accuracy and correctness",
+      "grounding_span": "Anything that requires a high level of accuracy I'd prefer to do myself"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Skill preservation and career advancement",
+      "grounding_span": "I think it's very important. I think over the next few years people who don't want to/can't use AI in their work are going to get squeezed out"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Cautious optimism about AI productivity gains",
+      "valence": "positive",
+      "grounding_span": "I want to be more confident using it so that I can be more productive at work"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with AI inaccuracies and wasted time",
+      "valence": "negative",
+      "grounding_span": "It was mostly the time wasted, but also being told something had been done when it hadn't"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Skepticism toward overuse of AI for trivial tasks",
+      "valence": "negative",
+      "grounding_span": "People use it for finding an alternative to a word in a context where good writing isn't really essential"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Preference for human control in high-accuracy tasks",
+      "valence": "negative",
+      "grounding_span": "Anything that requires a high level of accuracy I'd prefer to do myself"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Cost-benefit analysis of time investment",
+      "grounding_span": "if I have to spend time checking what the AI has produced then it might not save me much time overall"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Task-based delegation vs. collaboration distinction",
+      "grounding_span": "if I want advice for how to do something I'll explain my problem and then ask follow up questions"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n4",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,198 @@
+{
+  "transcript_id": "work_0948",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as supplement to creative process",
+      "label_negative": "AI for boring or routine tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "The more interested I am in a task, the more I want to take charge of it and do the majority myself"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as delegator for clear tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "If it's something I haven't fully grasped yet, I collaborate and brainstorm with AI"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as convenience tool vs necessity",
+      "label_negative": "AI as source of suspicion and concern",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is seen widely in the company as both a necessity and a helpful support"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI reliability and accuracy in generated content",
+      "label_negative": "AI unreliability for long-form content",
+      "bipolarity_complete": true,
+      "grounding_span": "I found the output quite frustrating, because it is a longer format than ChatGPT would usually support"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as job threat",
+      "label_negative": "AI as opportunity for role evolution",
+      "bipolarity_complete": true,
+      "grounding_span": "I believe the majority of my job will probably be overtaken by AI one day"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI use within corporate compliance boundaries",
+      "label_negative": "Unregulated AI usage",
+      "bipolarity_complete": true,
+      "grounding_span": "our use of AI becomes more internally regulated due to the potential compliance risks"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Personal fulfillment through creative engagement",
+      "grounding_span": "The more interested I am in a task, the more I want to take charge of it"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "AI is seen widely in the company as both a necessity and a helpful support to help us increase what we can achieve"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Quality of output",
+      "grounding_span": "I had to give a lot more oversight, guidance and suggestion than I expected"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Professional competence and future-proofing",
+      "grounding_span": "I am actively trying to learn more about these areas and improve my skills in prompting so I can keep ahead of the curve"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Preference for human handling of creative tasks",
+      "valence": "positive",
+      "grounding_span": "The more interested I am in a task, the more I want to take charge of it"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with AI for data tasks",
+      "valence": "negative",
+      "grounding_span": "I found the output quite frustrating"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Pragmatic acceptance of AI as a tool",
+      "valence": "mixed",
+      "grounding_span": "AI is seen widely in the company as both a necessity and a helpful support"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Proactive adaptation to AI disruption",
+      "valence": "positive",
+      "grounding_span": "I am actively trying to learn more about these areas and improve my skills in prompting"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Task-dependent delegation vs. collaboration",
+      "grounding_span": "It really varies depending on the complexity of what I need and how 'fleshed out' the task is in my mind"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Proactive learning and skill maintenance",
+      "grounding_span": "I am actively trying to learn more about these areas and improve my skills in prompting so I can keep ahead of the curve"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

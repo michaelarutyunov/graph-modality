@@ -1,0 +1,169 @@
+{
+  "transcript_id": "work_0413",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as efficiency tool",
+      "label_negative": "Manual execution of routine tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "It reduces the time needed to recap the meeting which is really helpful"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI trustworthiness and verification",
+      "label_negative": "AI unreliability for complex tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "there is a way to go before I can entirely trust AI to create accurate spreadsheets"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as independent executor without iteration",
+      "bipolarity_complete": true,
+      "grounding_span": "I would be more inclined to collaborate for complicated things"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI evaluation of domain-specific tasks",
+      "label_negative": "Over-reliance on AI without background knowledge",
+      "bipolarity_complete": true,
+      "grounding_span": "You can't evaluate the difference between good or best if you don't already have the background knowledge"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI use as cheating vs. legitimate tool",
+      "label_negative": "AI as legitimate tool like calculators",
+      "bipolarity_complete": true,
+      "grounding_span": "Using AI feels a little like cheating - even though it's really a similar paradigm shift"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "It reduces the time needed to recap the meeting which is really helpful"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Accuracy and reliability",
+      "grounding_span": "there is a way to go before I can entirely trust AI to create accurate spreadsheets"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Mastery and competence",
+      "grounding_span": "I do enjoy creating a well-constructed spreadsheet, there's a level of satisfaction"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "It reduces the time needed to recap the meeting which is really helpful"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI errors",
+      "valence": "negative",
+      "grounding_span": "it is frustrating as I have to consider every small thing"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Ambivalence about AI as cheating vs. evolution",
+      "valence": "ambivalent",
+      "grounding_span": "Using AI feels a little like cheating - even though it's really a similar paradigm shift"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Cautious trust with verification",
+      "valence": "mixed",
+      "grounding_span": "I know I have to check the outputs carefully to see if there are any missed interpretations"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative iterative refinement — works back and forth with AI",
+      "grounding_span": "handling things in steps, for situations where I want to consider one output before refining"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Verification-oriented — cross-checks AI outputs against other sources",
+      "grounding_span": "if I had not understood enough about finances to see there was a discrepancy, I would not have investigated"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

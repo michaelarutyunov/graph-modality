@@ -1,0 +1,181 @@
+{
+  "transcript_id": "creativity_0023",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as brainstorming and idea generator",
+      "label_negative": "AI as one-way output generator",
+      "bipolarity_complete": true,
+      "grounding_span": "I prefer chatbots with follow up questions, as without them it feels one way"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI refinement and finessing of copy",
+      "label_negative": "Human copywriting effort",
+      "bipolarity_complete": true,
+      "grounding_span": "AI helps me execute them very efficiently"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI image generation capability",
+      "label_negative": "AI image/video generation inadequacy",
+      "bipolarity_complete": true,
+      "grounding_span": "80% of the images and videos are not what was desired"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as supplement to creative process",
+      "label_negative": "Unique human creativity",
+      "bipolarity_complete": true,
+      "grounding_span": "everyone would have similar ideas based on AI models"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI reliance vs. maintaining independent thinking",
+      "label_negative": "Over-reliance on AI",
+      "bipolarity_complete": true,
+      "grounding_span": "their biggest assets are still their own brain"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative exploration and ideation",
+      "grounding_span": "explore all possible options"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "AI helps me execute them very efficiently"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Creative authenticity and human expression",
+      "grounding_span": "our creativity would be diminished"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Preference for conversational AI models",
+      "valence": "positive",
+      "grounding_span": "I prefer chatbots with follow up questions"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for copywriting and ideation",
+      "valence": "positive",
+      "grounding_span": "I was happy with the results"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI image generation",
+      "valence": "negative",
+      "grounding_span": "80% of the images and videos are not what was desired"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Concern about creativity loss",
+      "valence": "negative",
+      "grounding_span": "our creativity would be diminished"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Optimism about human brain value",
+      "valence": "positive",
+      "grounding_span": "their biggest assets are still their own brain"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Comparative evaluation of AI models",
+      "grounding_span": "different models have different abilities"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic cost-benefit evaluation",
+      "grounding_span": "I have been using free models for them"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

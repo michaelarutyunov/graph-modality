@@ -1,0 +1,149 @@
+{
+  "transcript_id": "creativity_0074",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as tool for salvage and enhancement of imperfect recordings",
+      "label_negative": "AI as source of artifacts and inconsistencies",
+      "bipolarity_complete": true,
+      "grounding_span": "It feels great to be able to use a recording that was not ideal in the first place"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for repetitive simple tasks",
+      "label_negative": "AI as replacement of creative act",
+      "bipolarity_complete": true,
+      "grounding_span": "It has allowed me to focus more on the fun, rewarding parts of the job, as the more tedious and monotonous elements are becoming easier to automate"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as threat to artistic endeavors",
+      "label_negative": "AI as benign creative assistant",
+      "bipolarity_complete": true,
+      "grounding_span": "the generative AI that can create songs out of thin air worry me a lot"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as planning and structuring tool",
+      "label_negative": "AI as unreliable or distracting source",
+      "bipolarity_complete": true,
+      "grounding_span": "It tends to be my first resource when I am looking for information on a piece of gear"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Personal fulfillment through creative engagement",
+      "grounding_span": "Making the art is the most important part"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Professional competence",
+      "grounding_span": "I can split the instruments and apply separate processing and levels to each piece of the band to make it sound passable"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Economic viability of music profession",
+      "grounding_span": "makes idea of trying to become a profitable artist even more difficult"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Positive appreciation for AI as research catalyst",
+      "valence": "positive",
+      "grounding_span": "It feels great to be able to use a recording that was not ideal in the first place"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Concern for artists directly impacted by AI",
+      "valence": "negative",
+      "grounding_span": "the generative AI that can create songs out of thin air worry me a lot"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Skepticism toward AI industry's vision",
+      "valence": "negative",
+      "grounding_span": "It feels like the people creating this technology want the ai to do the work for you"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic tool selection based on effectiveness",
+      "grounding_span": "There can be artifacts, and inconsistencies but it has been improving consistently over time"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Value-driven boundary setting between enhancement and replacement",
+      "grounding_span": "as soon as the AI is making the song for you, it really defeats the purpose"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

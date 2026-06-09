@@ -1,0 +1,271 @@
+{
+  "transcript_id": "work_0812",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as planning and ideation tool",
+      "label_negative": "AI as source of irrelevant bloat",
+      "bipolarity_complete": true,
+      "grounding_span": "planning out and ideating about the software feature I'm implementing"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as data manipulation tool",
+      "label_negative": "Manual data transformation",
+      "bipolarity_complete": true,
+      "grounding_span": "data manipulation and transformation tasks"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as research assistant",
+      "label_negative": "AI as poor summarizer",
+      "bipolarity_complete": true,
+      "grounding_span": "deep research on various science related topics"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI adherence to user focus",
+      "label_negative": "AI veering off track with irrelevant suggestions",
+      "bipolarity_complete": true,
+      "grounding_span": "veering off track of the main focus"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI for precise creative details",
+      "label_negative": "Human control for novel creative tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "very fine precise creative details"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as delegable task executor",
+      "label_negative": "AI as co-driver requiring human collaboration",
+      "bipolarity_complete": true,
+      "grounding_span": "delegate a task and monitor it initially"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI as busy work handler",
+      "label_negative": "Human handling of hard problem-solving",
+      "bipolarity_complete": true,
+      "grounding_span": "giving it the busy work"
+    },
+    {
+      "id": "n8",
+      "type": "Construct",
+      "label": "AI reliability and accuracy",
+      "label_negative": "AI errors causing wasted time",
+      "bipolarity_complete": true,
+      "grounding_span": "AI had been using as reference the C++ documentation for the library instead of Python"
+    },
+    {
+      "id": "n9",
+      "type": "Construct",
+      "label": "AI as inevitable surpasser of human ability",
+      "label_negative": "Human value trending to zero",
+      "bipolarity_complete": true,
+      "grounding_span": "AI will take over and completely exceed my ability"
+    },
+    {
+      "id": "n10",
+      "type": "Construct",
+      "label": "AI as lower-level abstraction handler",
+      "label_negative": "Human as higher-order vision driver",
+      "bipolarity_complete": true,
+      "grounding_span": "AI will continue to take over the lower levels of abstraction work"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "planning out and ideating about the software feature"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Creative autonomy and control",
+      "grounding_span": "I knew that I had to specifically design the order of pages"
+    },
+    {
+      "id": "n13",
+      "type": "Value",
+      "label": "Wealth accumulation before AI dominance",
+      "grounding_span": "I must gather enough wealth before then"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Satisfaction with AI for planning and data tasks",
+      "valence": "positive",
+      "grounding_span": "planning out and ideating about the software feature"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Frustration with AI veering off track",
+      "valence": "negative",
+      "grounding_span": "veering off track of the main focus"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Frustration with AI errors (wrong documentation)",
+      "valence": "negative",
+      "grounding_span": "AI had been using as reference the C++ documentation for the library instead of Python"
+    },
+    {
+      "id": "n17",
+      "type": "Stance",
+      "label": "Resignation toward AI surpassing human ability",
+      "valence": "negative",
+      "grounding_span": "my value will continue to trend to 0"
+    },
+    {
+      "id": "n18",
+      "type": "Stance",
+      "label": "Determination to accumulate wealth before AI dominance",
+      "valence": "mixed",
+      "grounding_span": "I must gather enough wealth before then"
+    },
+    {
+      "id": "n19",
+      "type": "CognitiveStyleMarker",
+      "label": "Delegation with monitoring — delegates tasks but supervises initially",
+      "grounding_span": "delegate a task and monitor it initially"
+    },
+    {
+      "id": "n20",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic foresight — views AI trajectory as inevitable and plans accordingly",
+      "grounding_span": "I must gather enough wealth before then"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n13",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n13",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n14",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n8",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n17",
+      "target": "n9",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n18",
+      "target": "n9",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n18",
+      "target": "n10",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n19",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n19",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n9",
+      "target": "n20",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n10",
+      "target": "n20",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n6",
+      "target": "n7",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

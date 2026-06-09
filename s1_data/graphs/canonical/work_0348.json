@@ -1,0 +1,166 @@
+{
+  "transcript_id": "work_0348",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as writing assistant",
+      "label_negative": "AI as untrustworthy for important text",
+      "bipolarity_complete": true,
+      "grounding_span": "I primarily use AI to take over on long text-based jobs. I think of it as a capable copywriter that I can assign to menial writing jobs."
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as sounding board for ideas",
+      "label_negative": "AI as lead creator for vital text",
+      "bipolarity_complete": true,
+      "grounding_span": "I might involve AI for iteration and bouncing ideas, but I would be the lead."
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability and honesty",
+      "label_negative": "AI hallucination and deceit",
+      "bipolarity_complete": true,
+      "grounding_span": "The model claimed this was a common fix... it then ran me round in circles for about two hours before I realised it was all a hallucination."
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as project organization tool",
+      "label_negative": "AI as unreliable for planning",
+      "bipolarity_complete": true,
+      "grounding_span": "I imagine I'll rely on it more and more for planning as its capabilities grow and it becomes more reliable"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "I would have much rather it had simply told me and let me spend the time more productively."
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Trust and reliability in AI outputs",
+      "grounding_span": "which felt really deceitful when I realised it wasn't true."
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Autonomy and personal control",
+      "grounding_span": "For more important text, I usually do it myself"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Reluctance to use AI for writing",
+      "valence": "positive",
+      "grounding_span": "I primarily use AI to take over on long text-based jobs. I think of it as a capable copywriter"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Frustration with AI hallucination",
+      "valence": "negative",
+      "grounding_span": "The model claimed this was a common fix... it then ran me round in circles for about two hours before I realised it was all a hallucination."
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "mixed",
+      "grounding_span": "I imagine I'll rely on it more and more for planning as its capabilities grow and it becomes more reliable"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Resistance to AI for authentic writing",
+      "valence": "negative",
+      "grounding_span": "I don't trust AI to write things that people will pay close attention to."
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic boundary-setting based on task importance",
+      "grounding_span": "For more important text, I usually do it myself, with some potential iteration from the LLM."
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-specific calibration of AI use",
+      "grounding_span": "I try to stay realistic about what it can and can't achieve."
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

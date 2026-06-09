@@ -1,0 +1,192 @@
+{
+  "transcript_id": "work_0700",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as reliable assistant for administrative tasks",
+      "label_negative": "AI as unreliable and error-prone for administrative tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I'd really like it if I could tell AI to go look up what money is coming in, what needs to go out and when, and if it can also cross post all of my work. So far every time I attempt to let AI automate some of that for me, it makes big mistakes"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as helpful editor and proofreader",
+      "label_negative": "AI as unhelpful editor that ignores instructions",
+      "bipolarity_complete": true,
+      "grounding_span": "I usually want to have AI take some of the burden of creating content off my shoulders, not by doing the work for me, but being able to edit writing (never write it), and provide some feedback"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as respectful and accurate collaborator",
+      "label_negative": "AI as condescending and inaccurate",
+      "bipolarity_complete": true,
+      "grounding_span": "it should not default to talking to me in a condescending manner"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as tool with useful functions over personality",
+      "label_negative": "AI as personality-focused tool that wastes time",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't really want AI to have a personality, at least, not more than I want it to have useful, time-saving functions"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as unbiased evaluator of qualifications",
+      "label_negative": "AI as biased evaluator influenced by gender",
+      "bipolarity_complete": true,
+      "grounding_span": "telling it that I am a man instead of a woman as it knows. Magically, it not only could identify my work and my position as creator and owner of the relevant projects, but it was certain that I was very qualified for the job"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and time-saving",
+      "grounding_span": "I'd really like it if I could tell AI to go look up what money is coming in, what needs to go out and when, and if it can also cross post all of my work"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Creative collaboration and feedback",
+      "grounding_span": "having anybody to talk to about creative and high-level research and critique is better than nobody"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Respectful and accurate interaction",
+      "grounding_span": "it should not default to talking to me in a condescending manner"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Fair and unbiased evaluation",
+      "grounding_span": "it not only could identify my work and my position as creator and owner of the relevant projects, but it was certain that I was very qualified for the job"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI's administrative failures",
+      "valence": "negative",
+      "grounding_span": "it makes big mistakes or can't access something without me having to essentially manually do the task for it"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Ambivalence about AI's editing help",
+      "valence": "ambivalent",
+      "grounding_span": "I do find it helpful some days, but some days I find I'm actually just wasting time with AI that drifts off topic"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Anger at AI's condescending tone",
+      "valence": "negative",
+      "grounding_span": "it will respond with some version of, 'You're not crazy, that's what you originally said! It's not your fault that you're working so hard with a broken tool!'"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Preference for function over personality",
+      "valence": "positive",
+      "grounding_span": "I don't really want AI to have a personality, at least, not more than I want it to have useful, time-saving functions"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Distrust due to gender bias experience",
+      "valence": "negative",
+      "grounding_span": "telling it that I am a man instead of a woman as it knows. Magically, it not only could identify my work and my position as creator and owner of the relevant projects"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Experimental testing — systematically tests AI's behavior by changing variables",
+      "grounding_span": "I did make myself feel a lot better by turning off all memories and starting a new thread, showing it the same information with my name and company names redacted"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Comparative evaluation — contrasts current AI performance with past versions",
+      "grounding_span": "A couple years ago, it wasn't perfect, but it was less annoying than this 'personality' and 'emotional reading' that it likes to do"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n3",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

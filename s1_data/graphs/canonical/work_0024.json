@@ -1,0 +1,166 @@
+{
+  "transcript_id": "work_0024",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as efficiency tool for data analysis",
+      "label_negative": "Manual slow data gathering",
+      "bipolarity_complete": true,
+      "grounding_span": "AI was able to quickly gather details regarding all of the meetings held by the American Medical Association"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as formatting and synthesizing tool",
+      "label_negative": "AI poor formatting output",
+      "bipolarity_complete": true,
+      "grounding_span": "I still struggle getting it to format information in a way that I intend"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as task-specific tool",
+      "label_negative": "AI as ongoing collaborative partner",
+      "bipolarity_complete": true,
+      "grounding_span": "I typically assign it specific tasks"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI integration into existing software",
+      "label_negative": "AI limited to standalone use",
+      "bipolarity_complete": true,
+      "grounding_span": "to be able to design and present it in a variety of ways using tools like Slides and Sheets"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Efficiency and speed in work",
+      "grounding_span": "help me work more efficiently and accurately for my clients"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Professional competence and presentation quality",
+      "grounding_span": "presenting details in an infographic format for a client would be outstanding"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Client success and satisfaction",
+      "grounding_span": "aggregate large amounts of meeting and visitor data much more quickly than I can as a human"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "I was very happy with that"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Frustration with AI formatting",
+      "valence": "negative",
+      "grounding_span": "I still struggle getting it to format information in a way that I intend"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI formatting",
+      "valence": "positive",
+      "grounding_span": "I would love if AI could take over formatting"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Optimism about future AI integration",
+      "valence": "positive",
+      "grounding_span": "My hope is that AI will help me work more efficiently and accurately"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Task decomposition into separate sessions",
+      "grounding_span": "I may then have separate sessions where I ask about the individual organizations"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through back-and-forth questioning",
+      "grounding_span": "I always need to ask follow up questions to refine the data"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n3",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

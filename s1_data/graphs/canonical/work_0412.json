@@ -1,0 +1,206 @@
+{
+  "transcript_id": "work_0412",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as efficiency tool",
+      "label_negative": "AI as time-consuming hindrance",
+      "bipolarity_complete": true,
+      "grounding_span": "it significantly reduces the time I spend on a task"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as fully autonomous agent",
+      "bipolarity_complete": true,
+      "grounding_span": "I have more of a collaborative relationship with AI"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI mistakes and factual discrepancies",
+      "bipolarity_complete": true,
+      "grounding_span": "it can still make mistakes, e.g. a slight factual discrepancy here or there"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI adherence to instructions",
+      "label_negative": "AI struggling with instructions",
+      "bipolarity_complete": true,
+      "grounding_span": "I feel particularly satisfied when the AI follows all these instructions nearly perfectly"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as ideation partner",
+      "label_negative": "AI as mere executor",
+      "bipolarity_complete": true,
+      "grounding_span": "almost like an intelligent business partner to bounce ideas off"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "Human agency and initiative",
+      "label_negative": "AI-driven passivity",
+      "bipolarity_complete": true,
+      "grounding_span": "I am the one coming up with the ideas"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "Human soul in writing",
+      "label_negative": "AI-generated soulless content",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't see AI ever having the ability to inculcate 'human soul' as such into its writing"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "Efficiency takes precedence for me"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Accuracy and reliability",
+      "grounding_span": "I check each line with a fine-tooth comb"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Strategic growth and improvement",
+      "grounding_span": "the future belongs to those who learn to wield and master the use of AI"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Creative authenticity and human expression",
+      "grounding_span": "deep relatability, which will always require a human to incorporate into it"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "I feel particularly satisfied when the AI follows all these instructions nearly perfectly"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Frustration with AI errors",
+      "valence": "negative",
+      "grounding_span": "I find myself particularly frustrated when it struggles to follow these instructions"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Cautious trust requiring oversight",
+      "valence": "negative",
+      "grounding_span": "I don't trust it enough yet for it to work independently of me"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "positive",
+      "grounding_span": "I only see my relationship with AI becoming more"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement with limited back-and-forth",
+      "grounding_span": "my collaboration with AI involves a lot of manual iteration and back-and-forth discussions"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Proactive initiative — adopts AI independently before workplace training",
+      "grounding_span": "My job requires a lot of proactive initiative and agency"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,192 @@
+{
+  "transcript_id": "work_0999",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative drafting partner",
+      "label_negative": "AI as one-shot output generator",
+      "bipolarity_complete": true,
+      "grounding_span": "I go back and forth with the model"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI accuracy in legal analysis",
+      "label_negative": "AI hallucination and inaccuracy",
+      "bipolarity_complete": true,
+      "grounding_span": "it is not 100% accurate and does miss key provisions"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability with legislation",
+      "label_negative": "AI hallucination with legislation",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is not very good with legislation and tends to hallucinate sections"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI use for administrative efficiency",
+      "label_negative": "AI use for substantive legal reasoning",
+      "bipolarity_complete": true,
+      "grounding_span": "using it to make my day to day work faster, especially with administrative tasks"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as enhancement not replacement",
+      "label_negative": "AI as replacement for human skills",
+      "bipolarity_complete": true,
+      "grounding_span": "I see AI as an enhancement not a replacement"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "Personal voice in client communication",
+      "label_negative": "AI-generated client communication",
+      "bipolarity_complete": true,
+      "grounding_span": "I like to speak in my own written voice and style"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional competence and accuracy",
+      "grounding_span": "I will assess it's output critically like I would when reviewing work sent to me by another lawyer"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and productivity",
+      "grounding_span": "increase output and efficiency"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Authentic self-expression",
+      "grounding_span": "speak in my own written voice and style"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI confirming expert thinking",
+      "valence": "positive",
+      "grounding_span": "the model explained it was exactly how I was intending the clause to work"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI legal inaccuracies",
+      "valence": "negative",
+      "grounding_span": "I have felt frustrated with it when I have asked it points of law and it gets them wrong"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Concern for junior lawyers relying on AI",
+      "valence": "negative",
+      "grounding_span": "This worries me as junior lawyers may use it for this and not know it is incorrect"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Satisfaction with AI expanding perspective",
+      "valence": "positive",
+      "grounding_span": "it suggested a few things I hadn't considered but which will be worth mentioning"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement and critical testing",
+      "grounding_span": "I will get it to refine and edit the clause down for me until I'm happy with it"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-specific boundary setting",
+      "grounding_span": "I still do that work myself"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

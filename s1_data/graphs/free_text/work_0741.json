@@ -1,0 +1,170 @@
+{
+  "transcript_id": "work_0741",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI accuracy and reliability",
+      "label_negative": "AI inaccuracy and unreliability",
+      "bipolarity_complete": true,
+      "grounding_span": "This AI is very unreliable right now"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as efficiency tool for quick answers",
+      "label_negative": "AI as time-consuming or unhelpful",
+      "bipolarity_complete": true,
+      "grounding_span": "I tend to ask a complete simple question that I need an answer right away"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as research and comprehension aid",
+      "label_negative": "Manual slow research without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I use that a lot when researching regulations. It allows me to get answers much quicker"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI training and improvement",
+      "label_negative": "Stagnant or unreliable AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I had fun training that one. It seemed to make corrections faster"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI for mundane tasks freeing up human interaction",
+      "label_negative": "AI replacing human jobs entirely",
+      "bipolarity_complete": true,
+      "grounding_span": "we can use it to do some of the more mundane tasks so they can spend more time building the relationships"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Regulatory compliance and reputation",
+      "grounding_span": "we are regulated so we wouldn't want to violate any regulations, or offend anybody"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and productivity",
+      "grounding_span": "I am all about finding shortcuts and working smarter, not harder"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Confidence in decision-making",
+      "grounding_span": "It also helps give me confidence if what I 'think' I know is correct"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Human connection and relationship building",
+      "grounding_span": "dealing with membership, they still want some human interaction"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI unreliability",
+      "valence": "negative",
+      "grounding_span": "I often feel frustrated with it because it's so unreliable"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction from training AI and seeing improvement",
+      "valence": "positive",
+      "grounding_span": "I felt good watching it improve"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Openness to AI for all tasks",
+      "valence": "positive",
+      "grounding_span": "There isn't anything I prefer to do myself if AI can help"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Confidence in AI for research and rewording",
+      "valence": "positive",
+      "grounding_span": "I use that a lot when researching regulations. It allows me to get answers much quicker"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic efficiency-seeking — prefers shortcuts and concise answers",
+      "grounding_span": "I am all about finding shortcuts and working smarter, not harder"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative training mindset — uses AI despite unreliability to improve it",
+      "grounding_span": "I keep asking to try to help get it trained"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

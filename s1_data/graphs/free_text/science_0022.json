@@ -1,0 +1,169 @@
+{
+  "transcript_id": "science_0022",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as research scout for materials and patents",
+      "label_negative": "Traditional manual research methods",
+      "bipolarity_complete": true,
+      "grounding_span": "AI to search for what people are doing for specific gases, and what material they are working on"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as clarification assistant for reading",
+      "label_negative": "Independent struggle with complex texts",
+      "bipolarity_complete": true,
+      "grounding_span": "if there are things along the way that I am reading that I need some clarification on, then I will ask AI"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability for technical calculations",
+      "label_negative": "AI unreliability for domain-specific steps",
+      "bipolarity_complete": true,
+      "grounding_span": "I do not think AI is familiar with how that process works, and it would end up wasting my time"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI trustworthiness based on source verification",
+      "label_negative": "AI hallucination or unreliable sourcing",
+      "bipolarity_complete": true,
+      "grounding_span": "verifying that by simply checking the source it is pulling the information from, reputable sources only"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as administrative assistant for email and data",
+      "label_negative": "Manual handling of admin tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I would like for it to handle my basic admin stuff, scan my email during a specific date and provide a summary"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "it would end up wasting my time"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Domain expertise and accuracy",
+      "grounding_span": "over 10 years experience allows me to be able to tell if the model is far off reality"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Trustworthy information",
+      "grounding_span": "reputable sources only"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Positive reliance on AI for research scouting",
+      "valence": "positive",
+      "grounding_span": "I use AI for quick conversions of course, researching material products"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Skepticism toward AI for technical calculations",
+      "valence": "negative",
+      "grounding_span": "I do not think AI is familiar with how that process works, and it would end up wasting my time"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Conditional trust in AI outputs with verification",
+      "valence": "ambivalent",
+      "grounding_span": "I typically trust AI with the researching aspect and providing data from the net, verifying that by simply checking the source"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Aspirational desire for AI in admin tasks",
+      "valence": "positive",
+      "grounding_span": "I would like for it to handle my basic admin stuff"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Experience-driven validation — uses domain expertise to filter AI outputs",
+      "grounding_span": "over 10 years experience allows me to be able to tell if the model is far off reality"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Source verification habit — checks AI-provided sources for credibility",
+      "grounding_span": "verifying that by simply checking the source it is pulling the information from, reputable sources only"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

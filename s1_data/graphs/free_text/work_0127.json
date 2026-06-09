@@ -1,0 +1,162 @@
+{
+  "transcript_id": "work_0127",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as compassionate care improvement tool",
+      "label_negative": "AI as impersonal or detached tool",
+      "bipolarity_complete": true,
+      "grounding_span": "I definitely want to be a better caregiver/assistant"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as collaborative brainstorming partner",
+      "label_negative": "AI as one-way suggestion giver",
+      "bipolarity_complete": true,
+      "grounding_span": "I like to bounce ideas back n forth"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for understanding patient needs beyond surface complaints",
+      "label_negative": "AI for surface-level or generic advice",
+      "bipolarity_complete": true,
+      "grounding_span": "bounced ideas back n forth with AI to figure out what she really wanted"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI for de-escalation and communication strategies",
+      "label_negative": "AI for scripted or one-size-fits-all responses",
+      "bipolarity_complete": true,
+      "grounding_span": "ask AI what I could do to calm down the mood"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI for tailoring activities to individual preferences",
+      "label_negative": "AI for generic activity suggestions",
+      "bipolarity_complete": true,
+      "grounding_span": "if the person hates singing or movies and AI suggests media..then I let AI know"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Compassionate patient care",
+      "grounding_span": "create a fun and safe environment to tailor my patients experiences"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional growth and self-improvement",
+      "grounding_span": "I definitely want to be a better caregiver/assistant"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Patient well-being and satisfaction",
+      "grounding_span": "She was calm and was able to stay in her room to rest afterwards"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI-assisted patient understanding",
+      "valence": "positive",
+      "grounding_span": "I felt very good about that"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Confidence in irreplaceability of human touch",
+      "valence": "positive",
+      "grounding_span": "Nah I don't think I'll ever be too dependent on AI in my field"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Openness to future AI use for evolving communication",
+      "valence": "positive",
+      "grounding_span": "I could use some help trying to understand those who are older and younger"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Reflective after-action analysis — learns from past situations",
+      "grounding_span": "Afterwards with the more dramatic reactions"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative tailoring — adjusts AI suggestions based on patient feedback",
+      "grounding_span": "I can tailor the responses a bit more"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

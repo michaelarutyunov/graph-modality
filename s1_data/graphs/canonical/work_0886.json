@@ -1,0 +1,169 @@
+{
+  "transcript_id": "work_0886",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as efficiency tool",
+      "label_negative": "AI for nuanced human judgment tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "we mostly use it to enhance efficiency with emailing and note taking"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as proofreading assistant",
+      "label_negative": "AI-generated content used without verification",
+      "bipolarity_complete": true,
+      "grounding_span": "Adjustments will usually be made, there have been some instances of people failing to proof read"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as independent task delegator",
+      "bipolarity_complete": true,
+      "grounding_span": "Only collaboration, at my level of the company there isn't much room for independent designation of tasks to AI Systems yet"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Human judgment in triaging complex maintenance issues",
+      "label_negative": "AI triaging without nuanced understanding",
+      "bipolarity_complete": true,
+      "grounding_span": "many jobs can initially appear to be simple and low priority, but they may be more urgent and involve an intricate understanding of issue"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Emotional support and reassurance in customer service",
+      "label_negative": "Impersonal AI communication without empathy",
+      "bipolarity_complete": true,
+      "grounding_span": "Part of my role is to council them through the issue and reassure them"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and speed in work",
+      "grounding_span": "Saving time generating templates for bulk email dissemination is very satisfying, saving a significant amount of time"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional reputation and credibility",
+      "grounding_span": "this can be quite embarrassing for any company to experience"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Customer and staff well-being",
+      "grounding_span": "they might feel more helpless and frustrated by the situation"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for time-saving",
+      "valence": "positive",
+      "grounding_span": "Saving time generating templates for bulk email dissemination is very satisfying"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for proofreading and coding",
+      "valence": "negative",
+      "grounding_span": "there have been some instances of people failing to proof read and remove incorrect information"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Confidence in human judgment over AI",
+      "valence": "negative",
+      "grounding_span": "I don't know how an AI system would deal with some of the challenges of complicated maintenance work"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Optimism about future AI adoption",
+      "valence": "positive",
+      "grounding_span": "I will likely try to use it in different types of tasks and observe whether this enhances the workflow"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic experimentation with AI limitations",
+      "grounding_span": "I will likely try to use it in different types of tasks and observe whether this enhances the workflow"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Empathic perspective-taking — focuses on human connection and care",
+      "grounding_span": "if they had to receive this news through an LLM AI System without any recourse to escalate the issue further, they might feel more helpless and frustrated"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

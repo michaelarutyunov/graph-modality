@@ -1,0 +1,148 @@
+{
+  "transcript_id": "creativity_0001",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as creative catalyst for brainstorming",
+      "label_negative": "AI as creative driver that replaces human artistry",
+      "bipolarity_complete": true,
+      "grounding_span": "I'm using it mostly for brainstorming out of creative blocks"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for technical and workflow tasks",
+      "label_negative": "AI for creative composition and songwriting",
+      "bipolarity_complete": true,
+      "grounding_span": "I'm much more interested in it helping with technical tasks"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Human creative control and final judgment",
+      "label_negative": "AI-driven creative decisions",
+      "bipolarity_complete": true,
+      "grounding_span": "I like to keep control of that, for sure"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as idea generator without creative ownership",
+      "label_negative": "AI as autonomous creative force",
+      "bipolarity_complete": true,
+      "grounding_span": "I just want it to throw lots of ideas at the wall"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Creative autonomy and human artistry",
+      "grounding_span": "Writing the rhythms and melodies by hand is the crucial human element"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and reduced procrastination",
+      "grounding_span": "I probably spend less time brainstorming or procrastinating"
+    },
+    {
+      "id": "n7",
+      "type": "Stance",
+      "label": "Positive embrace of AI for brainstorming and technical tasks",
+      "valence": "positive",
+      "grounding_span": "I'm using it mostly for brainstorming out of creative blocks"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Negative stance toward AI in creative composition",
+      "valence": "negative",
+      "grounding_span": "I'm not interested in that"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Concern about AI-generated music flooding the market",
+      "valence": "negative",
+      "grounding_span": "Spotify has already flooded their editorial playlists with 'fake' artist profiles"
+    },
+    {
+      "id": "n10",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through feedback loops",
+      "grounding_span": "I'll just tell it its being cheesy for this or that reason and eventually we get there"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Instrument-first creative process",
+      "grounding_span": "I'm usually more instrument-first"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n7",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n8",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n10",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n10",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

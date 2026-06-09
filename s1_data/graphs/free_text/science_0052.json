@@ -1,0 +1,212 @@
+{
+  "transcript_id": "science_0052",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI efficiency and scaling in incident response",
+      "label_negative": "Manual analysis of every incident",
+      "bipolarity_complete": true,
+      "grounding_span": "far more efficient than having to do manual analysis on every single cyber incident"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI accuracy and trustworthiness",
+      "label_negative": "AI hallucinations and inaccuracies",
+      "bipolarity_complete": true,
+      "grounding_span": "Accuracy/hallucinations could be problem"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI security and data privacy",
+      "label_negative": "Data leaks and exposure of sensitive information",
+      "bipolarity_complete": true,
+      "grounding_span": "concerns with AI security and data leaks"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI autonomy in taking remediation actions",
+      "label_negative": "Human oversight and manual action",
+      "bipolarity_complete": true,
+      "grounding_span": "still reserved on allowing AI to actually take actions"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI ability to prove safety and detect attacks",
+      "label_negative": "AI that cannot verify its own outputs",
+      "bipolarity_complete": true,
+      "grounding_span": "can prove every claim and action is safe before anything touches production"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Operational efficiency and scaling",
+      "grounding_span": "helps with efficiency and scaling"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Reliable and accurate incident response",
+      "grounding_span": "ensure that the agent is giving an accurate summary"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Data security and confidentiality",
+      "grounding_span": "data that I am not able to feed to public models"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Safe and controlled automation",
+      "grounding_span": "do not let AI make edits to evidence files"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Positive toward AI for efficiency",
+      "valence": "positive",
+      "grounding_span": "far more efficient than having to do manual analysis"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Negative toward AI due to accuracy concerns",
+      "valence": "negative",
+      "grounding_span": "Accuracy/hallucinations could be problem"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Negative toward AI due to security risks",
+      "valence": "negative",
+      "grounding_span": "concerns with AI security and data leaks"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Reserved toward AI autonomy",
+      "valence": "negative",
+      "grounding_span": "still reserved on allowing AI to actually take actions"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Aspirational toward AI that proves safety",
+      "valence": "positive",
+      "grounding_span": "An AI that not only drafts remediation plans but can prove every claim"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Ensemble verification thinking — using multiple agents to cross-check",
+      "grounding_span": "multiple agents generate summaries with the same data and have the different agents verify each other's work"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Cautious incremental prototyping — focusing on pipeline before verification",
+      "grounding_span": "just focusing on getting the data input, summary processing and result output pathway sorted out"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

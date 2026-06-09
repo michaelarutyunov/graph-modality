@@ -1,0 +1,160 @@
+{
+  "transcript_id": "science_0122",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as time-saving tool",
+      "label_negative": "Manual time-consuming analysis",
+      "bipolarity_complete": true,
+      "grounding_span": "Having AI search for keywords reduced the time I would have taken to read the papers"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI fabrication and hallucination",
+      "bipolarity_complete": true,
+      "grounding_span": "sometimes I have found that it makes up research (even with citations)"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as research starting point",
+      "label_negative": "AI for generating original ideas",
+      "bipolarity_complete": true,
+      "grounding_span": "I will stick to having it help me make connections/analyze already published papers"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Personal judgment in defining research focus",
+      "label_negative": "AI-driven research direction",
+      "bipolarity_complete": true,
+      "grounding_span": "I did not use AI to generate my list of research ideas because it is what interests me and where my personal strengths lie"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Research efficiency",
+      "grounding_span": "reduced the time I would have taken to read the papers"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Epistemic accuracy and understanding",
+      "grounding_span": "I would go to the bibliography in the paper, find the research title, look for it online and read it"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Personal intellectual ownership",
+      "grounding_span": "it is what interests me and where my personal strengths lie that will help me determine my statement"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Scientific advancement through novel connections",
+      "grounding_span": "be more confident that I am conducting a study on a topic that is not already well-studied"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Positive appreciation for AI as research catalyst",
+      "valence": "positive",
+      "grounding_span": "AI is a tool that can be helpful, and it should be embraced as such"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI hallucination",
+      "valence": "negative",
+      "grounding_span": "I am cautious about using it because sometimes I have found that it makes up research"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Preference for AI in analysis over idea generation",
+      "valence": "positive",
+      "grounding_span": "I will stick to having it help me make connections/analyze already published papers"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Systematic verification through source checking",
+      "grounding_span": "I would go to the bibliography in the paper, find the research title, look for it online and read it"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Context-sensitive judgment — evaluates AI suggestions based on purpose and audience",
+      "grounding_span": "I did not use AI to generate my list of research ideas because it is what interests me"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

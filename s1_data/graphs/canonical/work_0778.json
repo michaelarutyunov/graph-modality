@@ -1,0 +1,169 @@
+{
+  "transcript_id": "work_0778",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as supplement to creative process",
+      "label_negative": "AI as complete task delegator",
+      "bipolarity_complete": true,
+      "grounding_span": "I like to use AI as a creative jumping off point"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI hallucination and fabrication",
+      "bipolarity_complete": true,
+      "grounding_span": "It gave me a list, but then I couldnt find like 90% of them because they were fabricated"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as information provider vs teacher",
+      "label_negative": "AI's general output without personalization",
+      "bipolarity_complete": true,
+      "grounding_span": "I know my students better than any AI model could"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "Delegative AI use",
+      "bipolarity_complete": true,
+      "grounding_span": "I'm more likely to collaborate"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as editing assistant",
+      "label_negative": "Complete reliance on AI output",
+      "bipolarity_complete": true,
+      "grounding_span": "my skills of extracting the information and editing it to be specific to my needs is a skill that AI hasn't taken over yet"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative and effective teaching",
+      "grounding_span": "creative ideas to integrate it into an activity that the students would enjoy and help them retain the information"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Epistemic accuracy and understanding",
+      "grounding_span": "I couldnt find like 90% of them because they were fabricated"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional autonomy",
+      "grounding_span": "I know my students better than any AI model could"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Resistance to AI in creative work",
+      "valence": "positive",
+      "grounding_span": "I like to use AI as a creative jumping off point"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI fabrications",
+      "valence": "negative",
+      "grounding_span": "It bothered me that the model made up the references"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Preference for collaboration over delegation",
+      "valence": "positive",
+      "grounding_span": "I'm more likely to collaborate"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Confidence in own research skills",
+      "valence": "positive",
+      "grounding_span": "my skills of extracting the information and editing it to be specific to my needs is a skill that AI hasn't taken over yet"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative iterative refinement — works back and forth with AI",
+      "grounding_span": "I might pick one and then edit it to be more specific and appropriate to my target audience"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-specific delegation based on task nature",
+      "grounding_span": "If i want to delegate something completely, it would probably be something that doesnt require creativity"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

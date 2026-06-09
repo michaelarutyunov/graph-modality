@@ -3,7 +3,7 @@
 import os
 from pathlib import Path
 
-from classification.split import (
+from s5_classification.split import (
     LABEL_MAP,
     SEED,
     create_split,

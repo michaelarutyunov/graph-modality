@@ -1,0 +1,157 @@
+{
+  "transcript_id": "work_0938",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as template requiring human refinement",
+      "label_negative": "AI as fully autonomous and reliable",
+      "bipolarity_complete": true,
+      "grounding_span": "I need to use AI as a template and then alter its output to be more specific or tailored"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as fully delegated independent agent",
+      "bipolarity_complete": true,
+      "grounding_span": "Definitely collaborate, although it would be great to be able to fully delegate"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability and up-to-date knowledge",
+      "label_negative": "AI outdated or inaccurate knowledge",
+      "bipolarity_complete": true,
+      "grounding_span": "it may not be up to date with the latest Dfe Guidance, so I can't fully rely on it's knowledge"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as time-saver for complex scheduling",
+      "label_negative": "Manual time-consuming scheduling",
+      "bipolarity_complete": true,
+      "grounding_span": "This saved hours of work"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as tool for mundane tasks freeing time for human-centered work",
+      "label_negative": "AI encroaching on human-centered tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "If I can learn to manage using AI for more mundane and time consuming tasks this would allow me to spend more time on projects that AI can't fully help with"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "This saved hours of work"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Quality and tailored output",
+      "grounding_span": "alter its output to be more specific or tailored for our needs"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Human-centered engagement",
+      "grounding_span": "spend more time on projects that AI can't fully help with (like fundraising, or interviewing children)"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for complex scheduling",
+      "valence": "positive",
+      "grounding_span": "This saved hours of work"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Cautious reliance due to knowledge gaps",
+      "valence": "ambivalent",
+      "grounding_span": "I can't fully rely on it's knowledge"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Optimism about evolving role as AI manager",
+      "valence": "positive",
+      "grounding_span": "I view it as my role is evolving into one of managing AI"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement — uses AI output as draft then customizes",
+      "grounding_span": "Collaboration comes from me refining the response to something useable"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Proactive initiative — adopts AI independently before workplace training",
+      "grounding_span": "I use AI through my own initiative"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

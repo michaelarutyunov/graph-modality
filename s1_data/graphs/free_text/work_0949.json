@@ -1,0 +1,169 @@
+{
+  "transcript_id": "work_0949",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative learning partner",
+      "label_negative": "AI as black-box delegation tool",
+      "bipolarity_complete": true,
+      "grounding_span": "I would utilize AI to essentially give me a starting template or basic implementation to work off of, and include plenty of detail and documentation"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for menial and redundant tasks",
+      "label_negative": "AI for complex autonomous tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "writing redundant code OR what I consider 'basic' code"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability and accuracy",
+      "label_negative": "AI errors and misinterpretations",
+      "bipolarity_complete": true,
+      "grounding_span": "there tends to be some small errors or slight differences in what I was asking for"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as external memory and error-tracking system",
+      "label_negative": "Manual tracking without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I would use AI to essentially keep a running list of all of these pieces and what they do"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Human creative direction and strategic judgment",
+      "label_negative": "AI autonomous decision-making",
+      "bipolarity_complete": true,
+      "grounding_span": "The part of the job that I believe is most difficult to replace is the actual creative direction of what needs to be done"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and productivity",
+      "grounding_span": "more work can be done in less time and using less resources"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Learning and skill development",
+      "grounding_span": "helps me break down complex tasks into smaller parts that are easier to understand and remember"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Human autonomy and control",
+      "grounding_span": "I gain a level of control over the implementation process without delegating it entirely to the AI"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Positive satisfaction with AI as error-tracker",
+      "valence": "positive",
+      "grounding_span": "I noticed a clear difference once I started doing this"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI errors in complex tasks",
+      "valence": "negative",
+      "grounding_span": "there tends to be some small errors or slight differences"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Optimistic expectation of AI improvement",
+      "valence": "positive",
+      "grounding_span": "I hope to eventually be able to use AI to help me jumpstart tasks quickly"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Preference for collaborative over delegative AI use",
+      "valence": "positive",
+      "grounding_span": "My approach tends to be more focused on collaboration rather than delegation"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Incremental task decomposition and iterative refinement",
+      "grounding_span": "I opt to break the task down into pieces, and have the AI either help with or write entire code snippets"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic efficiency optimization",
+      "grounding_span": "if I'm able to utilize the AI effectively for the task at hand, there are virtually no tasks where I would explicitly PREFER to handle them on my own"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

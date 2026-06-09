@@ -1,0 +1,189 @@
+{
+  "transcript_id": "work_0678",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as administrative efficiency tool",
+      "label_negative": "AI as time-consuming or unreliable for data tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "it can save me so much time on the admin side"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI in sermon preparation",
+      "label_negative": "Personal embodied sermon writing",
+      "bipolarity_complete": true,
+      "grounding_span": "I feel like I need to have embodied what the bible has said"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability for structured data tasks",
+      "label_negative": "AI unreliability for structured data tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "it keeps getting things wrong regardless of how clear my prompt was"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as tool vs spiritual authority",
+      "label_negative": "AI as voice of God",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is not the voice of God. It is a tool to use for ministry not to act as God."
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Healthy boundaries in AI use",
+      "label_negative": "Over-dependence on AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't want to become so dependent on AI that I can't live without"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Pastoral presence and relational care",
+      "grounding_span": "free me up to be with the people"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Spiritual authenticity and discernment",
+      "grounding_span": "AI is not the voice of God"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Productivity and time savings",
+      "grounding_span": "save me so much time on the admin side"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for organizing knowledge",
+      "valence": "positive",
+      "grounding_span": "It made me feel really satisfied when I was able to create a very practical handover document"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI for data tasks",
+      "valence": "negative",
+      "grounding_span": "I've been angry when I've been doing a task such as trying to create a decent CSV file"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Cautious optimism about future AI use",
+      "valence": "mixed",
+      "grounding_span": "I feel like it will get better but I have to have good boundaries"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Resistance to AI in sermon writing",
+      "valence": "negative",
+      "grounding_span": "I'm not happy doing as I feel like I need to have embodied what the bible has said"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Task-dependent delegation vs collaboration",
+      "grounding_span": "Depending on the task, I will either begin a task with it and work together throughout, whereas there are some tasks I now delegate"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Boundary-setting and stewardship mindset",
+      "grounding_span": "I have to have good boundaries in place like any relationship"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n3",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

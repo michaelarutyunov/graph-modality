@@ -1,0 +1,174 @@
+{
+  "transcript_id": "work_0146",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as research assistant",
+      "label_negative": "Manual research and organization",
+      "bipolarity_complete": true,
+      "grounding_span": "AI helps me to research and organize the information"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI hallucination and errors",
+      "bipolarity_complete": true,
+      "grounding_span": "the model gets minor things like dates mixed up"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI adherence to instructions",
+      "label_negative": "AI deviating from instructions",
+      "bipolarity_complete": true,
+      "grounding_span": "Claude is also better at following instructions"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI writing style naturalness",
+      "label_negative": "AI robotic writing style",
+      "bipolarity_complete": true,
+      "grounding_span": "The writing flows more smoothly and sounds a lot more natural"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as extension of self",
+      "label_negative": "AI as separate tool",
+      "bipolarity_complete": true,
+      "grounding_span": "basically an extension of me"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "AI helps me to research and organize the information in a way that is concise and informative"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Trustworthiness and accuracy",
+      "grounding_span": "I always fact-check anything the model generates"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Personalized workflow integration",
+      "grounding_span": "I have a trained GPT that knows exactly how I like the powerpoints and pdfs to be formatted"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "AI helps me to research and organize the information in a way that is concise and informative"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI errors",
+      "valence": "negative",
+      "grounding_span": "When OpenAI got rid of the legacy models like 4o I was really frustrated"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Preference for Claude over GPT-5",
+      "valence": "positive",
+      "grounding_span": "I have since switch to Claude AI and found that the models perform creative writing and research tasks much better"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "positive",
+      "grounding_span": "I know AI is constantly evolving and I evolve with it"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative verification and manual fact-checking",
+      "grounding_span": "I always fact-check anything the model generates"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Adaptive tool switching based on performance",
+      "grounding_span": "I have since switch to Claude AI"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

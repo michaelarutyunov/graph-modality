@@ -1,0 +1,269 @@
+{
+  "transcript_id": "work_0035",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI in therapeutic context",
+      "label_negative": "AI as limited to routine, non-creative tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "it just spit out all these great ideas that I had not thought of yet"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as time-saving tool",
+      "label_negative": "AI as threat to professional authenticity",
+      "bipolarity_complete": true,
+      "grounding_span": "I'd like to eventually try one of the AI programs for monitoring sessions and taking notes to relieve my administration time"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as tool to cover blind spots and biases",
+      "label_negative": "AI as inadequate substitute for human consultation",
+      "bipolarity_complete": true,
+      "grounding_span": "I'd like to use it as a sounding board more for dual diagnoses"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI for social media content automation",
+      "label_negative": "AI as outdated or irrelevant in pop culture",
+      "bipolarity_complete": true,
+      "grounding_span": "I would love for AI to get better trained on current trends in social media"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI in therapeutic context",
+      "label_negative": "AI as replacement for human warmth",
+      "bipolarity_complete": true,
+      "grounding_span": "AI does a wonderful service for my clients as supportive to therapy"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI impact on skill maintenance",
+      "label_negative": "AI as motivator for continuing education",
+      "bipolarity_complete": true,
+      "grounding_span": "it gives me some level of competition I understand"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI's ability to produce authentic voice",
+      "label_negative": "AI as homogenizer of personal communication",
+      "bipolarity_complete": true,
+      "grounding_span": "I like to freehand the emails so that I make sure I still come across as me"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Creativity and innovation",
+      "grounding_span": "it just spit out all these great ideas that I had not thought of yet"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Work-life balance",
+      "grounding_span": "relieve my administration time"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Authentic therapeutic relationship and human connection",
+      "grounding_span": "human warmth and a therapeutic relationship"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Professional growth and skill maintenance",
+      "grounding_span": "invest in continuing education so that I stay on top of my game"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Personalized client communication",
+      "grounding_span": "I take it and personally edit it much more based on what I already know about the client"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Resistance to AI in creative work",
+      "valence": "positive",
+      "grounding_span": "it felt really wonderful to have some of that mental labor relieved"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Aspirational hope for AI as practical assistant",
+      "valence": "positive",
+      "grounding_span": "I would actually like to use more of it"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Satisfaction with AI for meeting notes",
+      "valence": "mixed",
+      "grounding_span": "I haven't tried it yet but think it's a cool option, I just need to research further"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Preference for human authenticity in client communication",
+      "valence": "positive",
+      "grounding_span": "I like to freehand the emails so that I make sure I still come across as me"
+    },
+    {
+      "id": "n17",
+      "type": "Stance",
+      "label": "Recognition of AI as competitive motivator",
+      "valence": "ambivalent",
+      "grounding_span": "it gives me some level of competition I understand"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative iterative refinement — works back and forth with AI",
+      "grounding_span": "I tend to draft it myself first long hand and then run it through AI and ask for a more concise version"
+    },
+    {
+      "id": "n19",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-specific delegation — uses AI for brainstorming but retains personalization",
+      "grounding_span": "most of the times I tend to just need a starting point from it"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n13",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n17",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n7",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n19",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n19",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n19",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n19",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n19",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n19",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n7",
+      "target": "n19",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

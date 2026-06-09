@@ -1,0 +1,197 @@
+{
+  "transcript_id": "work_0013",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as creative assistant preserving human authorship",
+      "label_negative": "AI as autonomous creator replacing human",
+      "bipolarity_complete": true,
+      "grounding_span": "I did not want AI writing the book for me. I only wanted it as an assistant."
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability and accuracy in factual tasks",
+      "label_negative": "AI unreliability and factual errors",
+      "bipolarity_complete": true,
+      "grounding_span": "I found I had to be careful, because it wasn't always correct"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as efficiency tool for business tasks",
+      "label_negative": "AI as inefficient or overcomplicated for business",
+      "bipolarity_complete": true,
+      "grounding_span": "For my direct sales business the more it can do for me the better."
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI instruction following in graphic generation",
+      "label_negative": "AI failure to follow instructions in graphics",
+      "bipolarity_complete": true,
+      "grounding_span": "Most AIs don't follow the instructions as well as they should"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as brainstorming partner enhancing ideas",
+      "label_negative": "AI as unhelpful or stifling in brainstorming",
+      "bipolarity_complete": true,
+      "grounding_span": "I feel satisfied when AI brainstorms with me and takes an idea I had and makes it even better."
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative integrity and human artistry",
+      "grounding_span": "When the humanity is taken out of art it ceases to be art."
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and productivity in business",
+      "grounding_span": "It helps me work faster."
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Accuracy and truthfulness",
+      "grounding_span": "I found I had to be careful, because it wasn't always correct"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Creative inspiration and idea enhancement",
+      "grounding_span": "takes an idea I had and makes it even better"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Firm resistance to AI writing the novel",
+      "valence": "negative",
+      "grounding_span": "I did not want AI writing the book for me."
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Cautious trust in AI for historical accuracy",
+      "valence": "ambivalent",
+      "grounding_span": "I found I had to be careful, because it wasn't always correct"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Enthusiasm for AI automation in business",
+      "valence": "positive",
+      "grounding_span": "For my direct sales business the more it can do for me the better."
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Frustration with AI in graphic generation",
+      "valence": "negative",
+      "grounding_span": "My frustrations usually occur when it comes to asking for graphics."
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Satisfaction with AI as brainstorming partner",
+      "valence": "positive",
+      "grounding_span": "I feel satisfied when AI brainstorms with me"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-dependent delegation — different AI roles for creative vs. business tasks",
+      "grounding_span": "For the novel is was an assistant while I did the work. For my direct sales business the more it can do for me the better."
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative verification — double-checking AI outputs for accuracy",
+      "grounding_span": "I found I had to be careful, because it wasn't always correct and I found myself needing to double check things"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,156 @@
+{
+  "transcript_id": "work_0506",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI for identification tasks",
+      "label_negative": "AI for creative tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "identification of different plants, shrubs, tress, pests"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as creative companion",
+      "label_negative": "AI as autonomous creative decision-maker",
+      "bipolarity_complete": true,
+      "grounding_span": "I prefer to handle creative tasks myself for sure, like landscaping projects... but I enjoy hearing the AI's opinion"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability in identification",
+      "label_negative": "AI unreliability in live view creative context",
+      "bipolarity_complete": true,
+      "grounding_span": "Satisfaction often comes with identification purposes, the model is often correct"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Fact-checking AI outputs",
+      "label_negative": "Blind trust in AI outputs",
+      "bipolarity_complete": true,
+      "grounding_span": "I often do fact check the model, to make sure it is correct"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Accurate knowledge about plants and pests",
+      "grounding_span": "identification of different plants, shrubs, tress, pests"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative autonomy and personal expression",
+      "grounding_span": "I prefer to handle creative tasks myself for sure"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Reliable and efficient tool use",
+      "grounding_span": "Satisfaction often comes with identification purposes, the model is often correct"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Satisfaction with AI for identification",
+      "valence": "positive",
+      "grounding_span": "Satisfaction often comes with identification purposes, the model is often correct"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Frustration with AI live view for creative help",
+      "valence": "negative",
+      "grounding_span": "frustration, It's typically with live view, when I'm asking the AI something in real time"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Preference for human creative control",
+      "valence": "positive",
+      "grounding_span": "I prefer to handle creative tasks myself for sure"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Openness to AI as companion",
+      "valence": "positive",
+      "grounding_span": "I will continue to use it the way I've explained in this interview"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Verification-oriented reasoning — cross-checks AI outputs with external sources",
+      "grounding_span": "I often do fact check the model, to make sure it is correct. I do this by typing the name of the species into Google"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based task partitioning — separates identification from creative tasks",
+      "grounding_span": "I prefer to handle creative tasks myself for sure, like landscaping projects... but I enjoy hearing the AI's opinion"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

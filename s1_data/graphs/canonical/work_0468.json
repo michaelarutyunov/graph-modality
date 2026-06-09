@@ -1,0 +1,200 @@
+{
+  "transcript_id": "work_0468",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI for repetitive simple tasks",
+      "label_negative": "Doing monotonous tasks manually",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI to help me do monotonous tasks (like alphabetizing)"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as brainstorming and idea generator",
+      "label_negative": "Sole reliance on own creativity",
+      "bipolarity_complete": true,
+      "grounding_span": "brainstorming ideas (especially when I need multiple ideas and am running out of steam)"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "Relying solely on own memory",
+      "bipolarity_complete": true,
+      "grounding_span": "help me make sure I cover all my bases / include all the information I otherwise would have forgotten"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as formatting and synthesizing tool",
+      "label_negative": "Manual execution of detailed formatting",
+      "bipolarity_complete": true,
+      "grounding_span": "AI's definitely excels in the creativity and brainstorming department, but can lead to a lot of frustration in the (detailed) formatting department"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI accuracy and trustworthiness",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is still pretty error-ridden"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "Human irreplaceability through unique experience and perspective",
+      "label_negative": "AI replacing human educators",
+      "bipolarity_complete": true,
+      "grounding_span": "there will always be a capacity in education where humans are necessary"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "Preserving personal creativity",
+      "label_negative": "Reliance on AI dulling creativity",
+      "bipolarity_complete": true,
+      "grounding_span": "I could definitely see a reliance on AI for speed and efficiency causing my creative sword to dull"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "lesson planning would be nearly impossible time-wise without having pre-built support"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Creative autonomy",
+      "grounding_span": "I really enjoy creativity-based work, so I usually do a lot of that myself"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Educational quality and accuracy",
+      "grounding_span": "it wouldn't make sense to base a child's education on AI without direct supervision"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI for brainstorming",
+      "valence": "positive",
+      "grounding_span": "there's typically at least one or two good ideas that come out of the situation"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with AI formatting",
+      "valence": "negative",
+      "grounding_span": "I should have just done it myself"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "mixed",
+      "grounding_span": "hopefully, getting better, more reliable, effective, and efficient as AI progresses"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Confidence in human irreplaceability in teaching",
+      "valence": "positive",
+      "grounding_span": "there will always be a capacity in education where humans are necessary"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Verification-oriented — cross-checks AI outputs against other sources",
+      "grounding_span": "ask for a sample rubric for a project to compare to one I have developed"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Selective delegation — preserves core creative tasks for self",
+      "grounding_span": "I really enjoy creativity-based work, so I usually do a lot of that myself"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n7",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n4",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,174 @@
+{
+  "transcript_id": "work_0721",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as research accelerator",
+      "label_negative": "AI as unreliable source requiring verification",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I give it a rough rundown of my codebase's architecture and what I envision the solution being"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for repetitive simple tasks",
+      "label_negative": "AI for core logic and complex coding",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I may ask it to prepare some boilerplate code, but I like to code all the other logic myself"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI hallucination and incorrect solutions",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I am wary of potential hallucinations or logic issues if I ask AI to code anything other than boilerplate"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as autonomous agent replacing human judgment",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I envision using it as almost a pair-programming buddy in the future to bounce ideas off of"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Maintaining personal expertise and project connection",
+      "label_negative": "Over-reliance on AI leading to skill atrophy",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I would want to keep my skills sharp in those areas so that I am able know what AI is doing"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "It is a huge productivity boost to just use it for boilerplate"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Code quality and correctness",
+      "grounding_span": "The AI was able to help me pinpoint the code that was causing a side effect"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Personal competence and skill development",
+      "grounding_span": "This also ensures I know all the logic of my codebase since I wrote it myself"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for debugging",
+      "valence": "positive",
+      "grounding_span": "The AI was able to help me pinpoint the code that was causing a side effect"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI hallucination",
+      "valence": "negative",
+      "grounding_span": "The AI seemed to be misunderstanding the problem... some of them did not appear to exist upon researching them"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "positive",
+      "grounding_span": "I envision using it as almost a pair-programming buddy in the future"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Resistance to offloading significant coding to AI",
+      "valence": "negative",
+      "grounding_span": "I am hesitant to offload any significant sections to it"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Context sanitization and problem abstraction",
+      "grounding_span": "I will give it a cleaned up version of the problem I am facing that will remove most of the context"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement with limited back-and-forth",
+      "grounding_span": "I will read over the correspondence and if there are any pieces I want edited, I will ask it to edit that specific piece"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

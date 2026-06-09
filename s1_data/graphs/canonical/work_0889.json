@@ -1,0 +1,206 @@
+{
+  "transcript_id": "work_0889",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as creative phrasing assistant",
+      "label_negative": "AI-generated inauthentic or cheesy phrasing",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "helping to phrase an email or how to best word a title or a slide"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for routine technical tasks",
+      "label_negative": "AI misunderstanding instructions leading to frustration",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "help write code or formulae for whatever tool I'm using"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as learning and study aid",
+      "label_negative": "Blind application without understanding",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I asked for more clarification on how it was actually working as well so I understood the formula itself"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as supplement to creative process",
+      "label_negative": "AI-generated cheesy or inauthentic content",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "certain creative tasks like jokes, good one liners for slides"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI hallucination and wrong outputs",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "AI is pretty bad at interpreting data and analysing it and spitting goood stuff out that isn't hallucinated/wrong"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as supplementary aide to human expertise",
+      "label_negative": "Over-reliance on AI leading to skill atrophy",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "maintaining those skills are still super important"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Authentic personal expression",
+      "grounding_span": "doesn't sound like something I would say so it doesn't feel genuine"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "It saves a lot of time"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Deep understanding",
+      "grounding_span": "I wouldn't have found my exact solution on google but now I can get my exact solution and an exact description of why it's working"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Competence and control over work",
+      "grounding_span": "we would still want experts to understand what the AI is doing"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "the solution was correct right away"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with AI errors",
+      "valence": "negative",
+      "grounding_span": "I was getting frustrated because I was telling teh AI over and over to just move the content"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Preference for human creativity in design",
+      "valence": "negative",
+      "grounding_span": "I prefer to not take the help there and work with it myself"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "positive",
+      "grounding_span": "once that's figured out. i will be using for that use case for sure"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Commitment to maintaining skills independently",
+      "valence": "positive",
+      "grounding_span": "maintaining those skills are still super important"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement with limited back-and-forth",
+      "grounding_span": "I write it in my words first and then feed it to the AI and then let it come up with a better version"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Preference for fresh start when stuck",
+      "grounding_span": "I usually start out a new conversation if I'm honest or just do the work without AI"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

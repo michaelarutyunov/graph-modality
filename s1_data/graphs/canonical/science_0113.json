@@ -1,0 +1,187 @@
+{
+  "transcript_id": "science_0113",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as time-saving tool",
+      "label_negative": "AI as inadequate for complex logic and nuanced tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI to speed up this process... asking it to handle long but simple function writes"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as research assistant",
+      "label_negative": "AI as unreliable for deep or novel research",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI to research some of the classifier models and also help me fix any errors"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI trustworthiness and verification",
+      "label_negative": "Traditional sources (Stack Overflow, repos) as more credible",
+      "bipolarity_complete": true,
+      "grounding_span": "it is easier to find examples or trusted sources that can teach me something new that I feel is more credible"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI ability to handle human errors and edge cases",
+      "label_negative": "AI inability to anticipate common human errors",
+      "bipolarity_complete": true,
+      "grounding_span": "it would be helpful for AI to be a little more well-versed in common human errors"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI understanding of language and visualization",
+      "label_negative": "AI limited to text-based understanding",
+      "bipolarity_complete": true,
+      "grounding_span": "AI development needs a deeper understanding of language and visualization"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "time saving where I knew AI could be helpful"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Epistemic accuracy and understanding",
+      "grounding_span": "find examples or trusted sources that can teach me something new that I feel is more credible"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Robustness and error-free systems",
+      "grounding_span": "handle any errors that get thrown back at me"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Creative problem-solving",
+      "grounding_span": "AI lacks the finesse or creativity that humans have"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Strategic use of AI for simple tasks",
+      "valence": "positive",
+      "grounding_span": "I use AI to speed up this process"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with over-reliance on AI for complex logic",
+      "valence": "negative",
+      "grounding_span": "it wasn't really able to handle the logic"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Preference for traditional sources for credibility",
+      "valence": "negative",
+      "grounding_span": "it is easier to find examples or trusted sources that can teach me something new that I feel is more credible"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Satisfaction with AI for error-checking",
+      "valence": "positive",
+      "grounding_span": "it would be helpful for AI to be a little more well-versed in common human errors"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Aspiration for AI with deeper understanding of language and visualization",
+      "valence": "positive",
+      "grounding_span": "AI development needs a deeper understanding of language and visualization"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative validation and clarification seeking",
+      "grounding_span": "I really just run the code and try to handle any errors that get thrown back at me and then try to improve it as I go"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic task decomposition based on complexity",
+      "grounding_span": "when I felt like I hit a wall with the AI... I had to go through the data / process step by step"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,183 @@
+{
+  "transcript_id": "creativity_0120",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as ideation partner",
+      "label_negative": "AI as absent or unavailable for feedback",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI to run through ideas I have about certain projects, more so to have a trailing thought process and receive some feedback from it"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as confidence-building assistant",
+      "label_negative": "AI as source of doubt or error",
+      "bipolarity_complete": true,
+      "grounding_span": "Having AI so readily available has helped my confidence when working alone"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI unreliability and inaccuracy",
+      "bipolarity_complete": true,
+      "grounding_span": "I have found that it is always accurate so this is no longer a concern for me"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as practical tool for calculations and conversions",
+      "label_negative": "AI as unnecessary or untrustworthy for calculations",
+      "bipolarity_complete": true,
+      "grounding_span": "I used AI to do some basic maths... I asked for a conversion and briefly, for reasoning"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as precise creative director tool",
+      "label_negative": "AI as director overriding human control",
+      "bipolarity_complete": true,
+      "grounding_span": "I definitely feel in control of the creative decisions. The AI feels like an assistant rather than a director"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI-generated patterns feasibility",
+      "label_negative": "AI limited to non-spatial tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "if the AI's understanding of space and connection improved, it could help in other areas such as pattern making"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Creative confidence and self-assurance",
+      "grounding_span": "builds my confidence enough to feel as though I can trust my instincts"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Workflow efficiency",
+      "grounding_span": "my work has been smoother"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Creative autonomy",
+      "grounding_span": "I definitely feel in control of the creative decisions"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Understanding and awareness of AI capabilities",
+      "grounding_span": "this would change the game for me"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Positive view of AI as idea generator",
+      "valence": "positive",
+      "grounding_span": "I use AI to run through ideas I have about certain projects"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Confidence in AI as a key skill",
+      "valence": "positive",
+      "grounding_span": "I have found that it is always accurate so this is no longer a concern for me"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "The AI feels like an assistant rather than a director"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Optimistic anticipation of AI evolution in pattern making",
+      "valence": "positive",
+      "grounding_span": "if AI were able to create a multipiece pattern spread out across printable A4 paper, this would change the game for me"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Structured iterative validation — uses AI to systematically check and refine work",
+      "grounding_span": "Having AI reiterate that builds my confidence enough to feel as though I can trust my instincts"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Context-dependent tool use — uses AI when alone, colleagues when available",
+      "grounding_span": "If I am working in store, I tend not to use it as much because I can talk to colleagues"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

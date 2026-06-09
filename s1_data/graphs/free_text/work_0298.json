@@ -1,0 +1,204 @@
+{
+  "transcript_id": "work_0298",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as creative brainstorming partner for tailored activities",
+      "label_negative": "AI as generic advice giver lacking specificity",
+      "bipolarity_complete": true,
+      "grounding_span": "using AI, i can find new ideas that are specifically tailored to each child"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as administrative assistant for routine tasks",
+      "label_negative": "AI as unable to handle personalized paperwork",
+      "bipolarity_complete": true,
+      "grounding_span": "I also like to use AI for my administrative tasks, such as email mockups and lesson plans"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as jumping-off point for human refinement",
+      "label_negative": "AI as complete solution without human input",
+      "bipolarity_complete": true,
+      "grounding_span": "I find that I can refine better than I can design. So, if Im stuck on an idea, i use AI as sort of my jumping off point"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI responsiveness to detailed context",
+      "label_negative": "AI inability to adapt when given insufficient information",
+      "bipolarity_complete": true,
+      "grounding_span": "i realize now that i was not giving the chatbot enough information but even when i would point out an error or repetition it did not seem to recognize that"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as tool for worker support and connection",
+      "label_negative": "AI as irrelevant to emotional needs of workers",
+      "bipolarity_complete": true,
+      "grounding_span": "i would hope it could be for this [creating platforms to help people in my profession connect with each other]"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI reliability in training contexts",
+      "label_negative": "AI inconsistency and inaccuracy in training",
+      "bipolarity_complete": true,
+      "grounding_span": "when trying to use my Ai for working training it was VERY hit or miss. somethings it got absolutely incorrect while other times it gave me great insight"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Personalized care and connection with children",
+      "grounding_span": "the connections you foster with the kids, and i believe that taking the time to plan these thoughtful activities for/with them is a great way to make those connections"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency in administrative tasks",
+      "grounding_span": "i do wish AI could handle some of the more tiring administrative tasks"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Worker well-being and peer support",
+      "grounding_span": "working with foster children is not easy... there are not a lot of resources for us to get help or support"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for creative inspiration",
+      "valence": "positive",
+      "grounding_span": "using AI, i can find new ideas that are specifically tailored to each child"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI's lack of specificity in behavioral advice",
+      "valence": "negative",
+      "grounding_span": "The AI kept giving me very general pieces of advice, things i had already tried and knew were not the right approach"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Wish for AI to handle more administrative burden",
+      "valence": "positive",
+      "grounding_span": "i do wish AI could handle some of the more tiring administrative tasks"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Hope for AI to support worker networks",
+      "valence": "positive",
+      "grounding_span": "i would hope it could be for this [creating platforms to help people in my profession connect with each other]"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Mixed experience with AI in training",
+      "valence": "mixed",
+      "grounding_span": "when trying to use my Ai for working training it was VERY hit or miss"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement — uses AI as base then personalizes",
+      "grounding_span": "I find that I can refine better than I can design. So, if Im stuck on an idea, i use AI as sort of my jumping off point"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Privacy-first approach — describes tasks abstractly to protect client info",
+      "grounding_span": "My main priority is always privacy when it comes to the children"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

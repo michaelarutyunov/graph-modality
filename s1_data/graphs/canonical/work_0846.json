@@ -1,0 +1,174 @@
+{
+  "transcript_id": "work_0846",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as route optimization tool",
+      "label_negative": "Manual route planning and address extraction",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I've been trying to use AI to help me extract relevant addresses or locations from lists, emails, and websites to help me determine worthwhile assignments and efficient routes"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI inaccuracy and unreliability",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I would need to know that the AI's determination is accurate"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for communication tasks",
+      "label_negative": "Human handling of communication and scheduling",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I still handle things like updating my schedule of assignments and responding to emails from schedulers. I don't think AI is ready to handle those tasks yet"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as evolving technology worth staying updated with",
+      "label_negative": "AI as disruptive replacement",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I see AI as the latest in a series of technological advances that have enhanced rather than replaced my field"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI for automated requirement extraction from standards",
+      "label_negative": "Manual reading and extraction of project requirements",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I would like to start using AI to read project instructions and extract all the requirements for completing assignments for the project"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "It's helpful because it instantly extracts the addresses"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Accuracy and reliability",
+      "grounding_span": "I wouldn't want there to be an error like responding inappropriately or not at all or misplacing an assignment due date"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Skill preservation and professional adaptability",
+      "grounding_span": "I'm not concerned with AI taking over any of the skills required for my job since it requires me to physically go to different locations"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "I have been most satisfied with its ability to extract data"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Hesitation to delegate final judgment to AI",
+      "valence": "negative",
+      "grounding_span": "I've been making that determination on my own, but I'd like to get to the point of trusting the AI's judgement"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "positive",
+      "grounding_span": "I think AI will get better, and I will be able to rely on it being accurate in time"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI for scheduling",
+      "valence": "negative",
+      "grounding_span": "I don't think AI is ready to handle those tasks yet"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Incremental trust building through consistent reliability",
+      "grounding_span": "I work back and forth with the AI on these tasks because it isn't able to handle it entirely on its own from start to finish"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic calibration based on task stakes and verifiability",
+      "grounding_span": "With the rewording responses tasks, less input from me is needed because there aren't many steps involved"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,205 @@
+{
+  "transcript_id": "work_0316",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as inspiration source for complex problems",
+      "label_negative": "AI as unreliable direct implementer",
+      "bipolarity_complete": true,
+      "grounding_span": "the solution it provides usually provides a great start or sparks some ideas of possible implementation"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for simple, well-defined tasks",
+      "label_negative": "AI for complex, high-detail tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I rarely delegate large tasks to AI, only small bit-sized tasks are delegated fully"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability in data analysis",
+      "label_negative": "AI unreliability in financial backtesting",
+      "bipolarity_complete": true,
+      "grounding_span": "the robustness of data analysis by current models feels better than anything I could create myself"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Human control over high-detail tasks",
+      "label_negative": "AI delegation of high-detail tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "Any task that requires a high-level of attention to detail, such as mapping a transaction history from a foreign format into our internal format, I prefer to do as it makes me feel in control of the outcome"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as learning accelerator",
+      "label_negative": "Traditional slow learning via search",
+      "bipolarity_complete": true,
+      "grounding_span": "AI helps me learn quickly. Instead of searching stack overflow for ages trying to figure stuff out, I can ask AI and get the answer plus an explanation"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "Developer role evolving to code reviewer",
+      "label_negative": "Developer role as primary coder",
+      "bipolarity_complete": true,
+      "grounding_span": "my role of a developer turning more into the role a code reviewer, rather than a developer"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "it's convenient to use AI"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Data quality and accuracy",
+      "grounding_span": "ensure data quality is the best possible"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Continuous learning and skill development",
+      "grounding_span": "AI helps me learn quickly"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "High-level orchestration and quality assurance",
+      "grounding_span": "my skill as a code reviewer and knowledge of high-level coding practices is most important"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI for data analysis",
+      "valence": "positive",
+      "grounding_span": "I was amazed when it created a massive robust correlation analysis of the portfolio"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with AI inaccuracies in backtesting",
+      "valence": "negative",
+      "grounding_span": "the model did not understand the specifics of calculating time-weighted performance and made many errors and incorrect assumptions"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Preference for human control over high-detail tasks",
+      "valence": "negative",
+      "grounding_span": "I prefer to do as it makes me feel in control of the outcome"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Optimism about AI as learning tool",
+      "valence": "positive",
+      "grounding_span": "AI helps me learn quickly"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Strategic acceptance of AI for simple tasks",
+      "valence": "positive",
+      "grounding_span": "I want to use it to automate the simpler tasks as much as possible"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative brainstorming with AI — brings own ideas first",
+      "grounding_span": "I brainstorm solution ideas, and if I can't find one that doesn't have clear problems, I consult AI"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Selective delegation — only small, well-defined tasks",
+      "grounding_span": "I rarely delegate large tasks to AI, only small bit-sized tasks are delegated fully"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n3",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

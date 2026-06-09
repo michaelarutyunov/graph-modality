@@ -1,0 +1,141 @@
+{
+  "transcript_id": "work_0494",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as quick answer provider",
+      "label_negative": "AI as slow or irrelevant responder",
+      "bipolarity_complete": true,
+      "grounding_span": "The answer has to be quick and direct"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI voice recognition accuracy with accented speech",
+      "label_negative": "AI voice recognition failure with accented speech",
+      "bipolarity_complete": true,
+      "grounding_span": "Even though I have a [REDACTED] accent, sometimes the Ai will respond to a request that was not even similar to what I asked for"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI with company-specific knowledge",
+      "label_negative": "AI ignorance of foreign-named products",
+      "bipolarity_complete": true,
+      "grounding_span": "doesn't recognize an item that is commonly called by a foreign name"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as time-saving tool",
+      "label_negative": "AI as time-wasting tool due to errors",
+      "bipolarity_complete": true,
+      "grounding_span": "having wasted precious time"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Productivity and efficient task completion",
+      "grounding_span": "less than 60 seconds to make a decision"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Accuracy in product substitution",
+      "grounding_span": "finding the best product substitutions"
+    },
+    {
+      "id": "n7",
+      "type": "Stance",
+      "label": "Frustration with AI transcription errors",
+      "valence": "negative",
+      "grounding_span": "Frustration is when the Ai totally misses the mark"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Pragmatic acceptance of AI as a tool",
+      "valence": "positive",
+      "grounding_span": "That is the only task that I can use Ai for"
+    },
+    {
+      "id": "n9",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic task segmentation — uses AI only for bounded, verifiable tasks",
+      "grounding_span": "That is the only task that I can use Ai for"
+    },
+    {
+      "id": "n10",
+      "type": "CognitiveStyleMarker",
+      "label": "Voice-first interaction preference under time pressure",
+      "grounding_span": "We voice text with Ai more often than type, because it's faster"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n7",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n9",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n10",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n3",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

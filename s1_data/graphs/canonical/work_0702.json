@@ -1,0 +1,191 @@
+{
+  "transcript_id": "work_0702",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI unreliability for routine tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "it made so many mistakes it actually wasn't saving me time"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as helper for complicated tasks",
+      "label_negative": "AI unhelpfulness for special tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "It did a surprisingly good job and I was able to tweak it and use it"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as step-by-step guidance tool",
+      "label_negative": "AI inaccuracy in software guidance",
+      "bipolarity_complete": true,
+      "grounding_span": "AI kept asking me to do things that were either incorrect or options that didn't exist"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as drafting assistant for emails",
+      "label_negative": "AI poor tone and accuracy in email",
+      "bipolarity_complete": true,
+      "grounding_span": "it did a poor job with tone (too formal and wordy) and sometimes got information wrong"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI trustworthiness and verification",
+      "label_negative": "AI distrust for complex tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't really trust AI to do important tasks like data analysis or summaries of complex documents"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "It saved me a lot of time"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Accuracy and reliability",
+      "grounding_span": "it made so many mistakes"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional competence",
+      "grounding_span": "I work with faculty on complex topics in teaching and learning"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Frustration with AI errors",
+      "valence": "negative",
+      "grounding_span": "it made so many mistakes it actually wasn't saving me time"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "It did a surprisingly good job and I was able to tweak it and use it"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI for software guidance",
+      "valence": "negative",
+      "grounding_span": "It was such a waste of time because AI kept asking me to do things that were either incorrect"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI for email drafting",
+      "valence": "negative",
+      "grounding_span": "it did a poor job with tone (too formal and wordy) and sometimes got information wrong"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "mixed",
+      "grounding_span": "I hope to use it more as it evolves. Right now, I don't really trust AI to do important tasks"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic outcome focus — evaluates AI based on practical results",
+      "grounding_span": "it made so many mistakes it actually wasn't saving me time"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Back-to-basics problem-solving when AI fails",
+      "grounding_span": "I read Qualtrics help articles instead and was able to figure it out"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

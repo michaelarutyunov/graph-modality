@@ -1,0 +1,187 @@
+{
+  "transcript_id": "work_0874",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as unbiased advice source",
+      "label_negative": "AI as biased or incomplete advice source",
+      "bipolarity_complete": true,
+      "grounding_span": "I just use the suggestions to get some unbiased advice that I may not have considered"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as efficiency tool for research",
+      "label_negative": "AI as time-consuming or unreliable research tool",
+      "bipolarity_complete": true,
+      "grounding_span": "AI can pull the answer for me in seconds, while a Google search would require going through many sites"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI accuracy and truthfulness",
+      "label_negative": "AI hallucination and false confidence",
+      "bipolarity_complete": true,
+      "grounding_span": "AI model provides me with information that is false but presents it as true"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as support for new role learning",
+      "label_negative": "AI as crutch hindering independent skill development",
+      "bipolarity_complete": true,
+      "grounding_span": "I ask AI questions about new terminology"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI use in personal student assessment",
+      "label_negative": "AI-generated impersonal feedback",
+      "bipolarity_complete": true,
+      "grounding_span": "Asking for an AI model to create all comments about one of my students seems impersonal"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as conversational partner for reflection",
+      "label_negative": "AI as transactional tool only",
+      "bipolarity_complete": true,
+      "grounding_span": "When I'm seeking advice or reflecting on my teaching pedagogy, I'm more likely to have a back-and-forth conversation"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional competence and confidence",
+      "grounding_span": "I will feel more confident in my day-to-day interactions"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Personal connection with students",
+      "grounding_span": "I like to come up with my own feedback since I know the students best"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "AI can pull the answer for me in seconds"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI efficiency",
+      "valence": "positive",
+      "grounding_span": "AI can make me feel satisfied when it provides a very specific answer that would have taken me a long time to find"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI false confidence",
+      "valence": "negative",
+      "grounding_span": "I'd say I feel frustrated when the AI model provides me with information that is false but presents it as true"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Preference for personal judgment in student feedback",
+      "valence": "negative",
+      "grounding_span": "I prefer to handle tasks that I am used to performing without AI"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Openness to AI for new role learning",
+      "valence": "positive",
+      "grounding_span": "I ask AI questions about new terminology"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Context-dependent interaction style — adapts between conversational and transactional based on task",
+      "grounding_span": "I think my style of interaction depends on the type of conversation that I am having"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Verification-oriented skepticism — double-checks AI when suspicion arises",
+      "grounding_span": "I only double-check AI responses when I have a suspicion that the information is hard to find"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

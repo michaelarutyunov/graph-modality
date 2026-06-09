@@ -1,0 +1,229 @@
+{
+  "transcript_id": "work_0237",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as concise planning tool",
+      "label_negative": "AI as verbose over-explainer",
+      "bipolarity_complete": true,
+      "grounding_span": "just for the AI to make a little lesson schedule and spit it back to me"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI writing style alignment with user preference",
+      "label_negative": "AI writing style mismatch (overly simplistic or colorful)",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't like the way AI writes...the word choices and sentence structure feels 'too perfect'"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as jumping-off point for lesson planning",
+      "label_negative": "AI as direct content generator to be copied",
+      "bipolarity_complete": true,
+      "grounding_span": "I never copy and paste from AI and instead try to use it as a jumping-off point"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI compatibility with pedagogical depth and standards",
+      "label_negative": "AI oversimplification or neglect of key concepts",
+      "bipolarity_complete": true,
+      "grounding_span": "would be simplified down too much to allow us to understand the underlying scientific principles"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI creativity and novelty",
+      "label_negative": "AI reliance on existing data limiting novelty",
+      "bipolarity_complete": true,
+      "grounding_span": "AI 'creativity' doesn't really help me...it's hard to generate an idea that's really novel"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI alignment with educational authenticity values",
+      "label_negative": "AI use conflicting with academic honesty expectations",
+      "bipolarity_complete": true,
+      "grounding_span": "schools are expected to have a level of academic honesty and authenticity above a corporate setting"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and time-saving in lesson planning",
+      "grounding_span": "if I have a 50 minute class period...just for the AI to make a little lesson schedule and spit it back to me"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Pedagogical integrity and conceptual depth",
+      "grounding_span": "I like to build my lessons in a way that reinforces previous lessons"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Personal creativity and authentic expression",
+      "grounding_span": "I write and paint as hobbies...I want to tailor them to my class and my students"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Professional authenticity and ethical standards",
+      "grounding_span": "schools are expected to have a level of academic honesty and authenticity"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI verbosity and format mismatch",
+      "valence": "negative",
+      "grounding_span": "Having to parse a 5-paragraph response for just the information I want is less useful"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Skepticism toward AI writing style",
+      "valence": "negative",
+      "grounding_span": "I don't like the way AI writes...it conflates 'simple terms' with 'young audience'"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Preference for AI as starting point, not final product",
+      "valence": "positive",
+      "grounding_span": "I never copy and paste from AI and instead try to use it as a jumping-off point"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Dissatisfaction with AI pedagogical depth",
+      "valence": "negative",
+      "grounding_span": "no matter what AI gave me, it felt clunky"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Resistance to AI in creative and personalized tasks",
+      "valence": "negative",
+      "grounding_span": "I prefer to do any kind of writing or creative work myself"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Concern about AI undermining skill value in society",
+      "valence": "negative",
+      "grounding_span": "I fear that these skills will become less desired by employers and by society"
+    },
+    {
+      "id": "n17",
+      "type": "Stance",
+      "label": "Conditional openness to future AI use if improved",
+      "valence": "mixed",
+      "grounding_span": "If an AI chatbot comes out that gives me amazing responses...I will probably use it a lot more"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through back-and-forth prompting",
+      "grounding_span": "I often have to go back in forth after that to get a response that's usable for me"
+    },
+    {
+      "id": "n19",
+      "type": "CognitiveStyleMarker",
+      "label": "Preference for minimal, direct output without elaboration",
+      "grounding_span": "I don't need a bulleted list, I don't need explanations, I don't need a 'helpful tips' section"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n17",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n19",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n4",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

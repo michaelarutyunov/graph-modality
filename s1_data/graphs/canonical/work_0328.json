@@ -1,0 +1,150 @@
+{
+  "transcript_id": "work_0328",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as insufficiently creative or impersonal",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I use AI to collaborate in creating all of my material."
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI memory reliability in long conversations",
+      "label_negative": "AI memory loss in extended interactions",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "The models lose information if conversations go on too long."
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for PowerPoint slide generation",
+      "label_negative": "AI-generated slides lacking personality",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I don't feel like AI can put personality into them."
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Human irreplaceability through unique experience and perspective",
+      "label_negative": "AI replacement of human teaching",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "The human component of the hands on cooking lessons is very important, and not recreateable by AI in a meaningful way."
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Business growth and profitability",
+      "grounding_span": "expanded from my original idea into a very profitable, turn key business"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative control and originality",
+      "grounding_span": "I prefer to design the slides for the lessons."
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Authentic human connection in teaching",
+      "grounding_span": "The human interaction is important, and necessary."
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Excitement about AI enabling business expansion",
+      "valence": "positive",
+      "grounding_span": "I was very excited when I first got started in content creation with AI."
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI as memory aid",
+      "valence": "negative",
+      "grounding_span": "The models lose information if conversations go on too long. It can be frustrating."
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "I am very satisfied with how I already use it."
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Ambivalence about AI taking over slide creation",
+      "valence": "negative",
+      "grounding_span": "The stuff AI creates for slides now is a little too dry and boring, or too cheesy if I ask for more personality."
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement with limited back-and-forth",
+      "grounding_span": "I ask for rewrites several times over until its perfect"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Structured framework-first approach",
+      "grounding_span": "The most important thing for me to create is the outline in the beginning."
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

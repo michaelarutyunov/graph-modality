@@ -1,0 +1,174 @@
+{
+  "transcript_id": "work_0374",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as coding assistant for ideas and explanations",
+      "label_negative": "AI as unreliable or unhelpful for complex issues",
+      "bipolarity_complete": true,
+      "grounding_span": "I use it when I need ideas, explanations, syntactical questions, or to get examples to help with coding"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as validation tool after own research",
+      "label_negative": "AI as primary research source",
+      "bipolarity_complete": true,
+      "grounding_span": "I tend to rely on searching the web, and then conversing with AI to validate my understanding"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as collaborative partner vs delegator",
+      "label_negative": "AI as complete task delegator",
+      "bipolarity_complete": true,
+      "grounding_span": "I tend to collaborate with AI rather than delegate a complete task"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI reliability and accuracy",
+      "label_negative": "AI hallucination and unhelpful loops",
+      "bipolarity_complete": true,
+      "grounding_span": "it kept giving me a 'fix' that is the exact same code as what I already had"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Workplace-sanctioned AI use and its side effects",
+      "label_negative": "Unsupervised AI reliance leading to quality issues",
+      "bipolarity_complete": true,
+      "grounding_span": "I see developers getting lazy and solely rely on Copilot"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "Copilot is provided by my company... to help speed up the development process"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Epistemic understanding and validation",
+      "grounding_span": "conversing with AI to validate my understanding"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional competence and code quality",
+      "grounding_span": "I have to be more careful while reviewing since I noticed code is overcomplicated, not performant"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for coding assistance",
+      "valence": "positive",
+      "grounding_span": "Copilot wasn't 100% perfect but it was close. I ended up using most of the code"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI unhelpful loops",
+      "valence": "negative",
+      "grounding_span": "After numerous attempts of telling Copilot that no code changes happened, it still kept giving me the same code snippet"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Concern about over-reliance on AI by colleagues",
+      "valence": "negative",
+      "grounding_span": "I see developers getting lazy and solely rely on Copilot. This affects me greatly"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Hope for AI to become highly reliable like Stack Overflow",
+      "valence": "positive",
+      "grounding_span": "I hope to see AI evolve into the next stack overflow where 90% of the time it is correct"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative cross-validation — uses web search and AI to complement each other",
+      "grounding_span": "I would go read articles online... Then, I would go back and ask AI"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative dialogue with AI — provides context and problem statement, then iterates",
+      "grounding_span": "Typically it starts off with a background or some context of what I am trying to achieve. Then, I give the problem statement"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

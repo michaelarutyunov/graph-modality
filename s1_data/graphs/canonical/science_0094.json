@@ -1,0 +1,154 @@
+{
+  "transcript_id": "science_0094",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as research accelerator",
+      "label_negative": "Traditional self-directed learning without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "Using AI tools meant this learning process was significantly faster as it synthesised the relevant information and provided sample code for me to modify"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as writing assistant",
+      "label_negative": "Manual literature search and writing without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I used AI tools for assistance in code writing during multiple stages, for general ideas and content when report writing, and also for suggesting key literature and recent relevant findings"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI inaccuracy requiring verification",
+      "bipolarity_complete": true,
+      "grounding_span": "I would wish for better accuracy to reduce the time spent verifying"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Preserving personal creativity",
+      "label_negative": "Delegating creative idea generation to AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I simply wanted to do for myself as I believe idea generation is the area where I can most demonstrate my ability"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "Using AI tools meant this learning process was significantly faster"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Personal intellectual ownership",
+      "grounding_span": "I simply wanted to do for myself as I believe idea generation is the area where I can most demonstrate my ability"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Research integrity and accuracy",
+      "grounding_span": "I would wish for better accuracy to reduce the time spent verifying"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "I am satisfied with how AI has assisted me for my projects"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Cautious skepticism about AI accuracy",
+      "valence": "mixed",
+      "grounding_span": "I would wish for better accuracy to reduce the time spent verifying"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Commitment to collaborative creative process",
+      "valence": "positive",
+      "grounding_span": "I simply wanted to do for myself as I believe idea generation is the area where I can most demonstrate my ability"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic delegation with oversight",
+      "grounding_span": "I would quickly test the code to catch errors which would happen occasionally"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based boundary setting — clear separation of AI-appropriate vs. human-only tasks",
+      "grounding_span": "I simply wanted to do for myself as I believe idea generation is the area where I can most demonstrate my ability"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n8",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

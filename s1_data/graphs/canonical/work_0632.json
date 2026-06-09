@@ -1,0 +1,233 @@
+{
+  "transcript_id": "work_0632",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as information provider vs teacher",
+      "label_negative": "AI as adaptive teacher",
+      "bipolarity_complete": true,
+      "grounding_span": "I must make a distinction between asking for information and being taught new information"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for clarity and conciseness in writing",
+      "label_negative": "AI verbosity and fluff",
+      "bipolarity_complete": true,
+      "grounding_span": "Perpelexity gives me the starting point of a good paper in three pages where as the other Ais will give me 20 pages of nothing actionable"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability and honesty",
+      "label_negative": "AI hallucination and error",
+      "bipolarity_complete": true,
+      "grounding_span": "I have to check every number and every fact and every source"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as brainstorming and idea generator",
+      "label_negative": "AI as complete task executor",
+      "bipolarity_complete": true,
+      "grounding_span": "It's a starting place. As I said, it can sometimes be a good structure to follow"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI for repetitive simple tasks",
+      "label_negative": "AI usefulness for complex nuanced tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "If I have to create an add with a picture, I can use AI. If I need to do that 100 x thats Ai, a simple thing thats repetative"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI optimistic bias in interpretation",
+      "label_negative": "AI accurate context-aware interpretation",
+      "bipolarity_complete": true,
+      "grounding_span": "some one could be yelling at you in another language and it will say this is playful"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI as productivity enhancer",
+      "label_negative": "AI as time-wasting frustration",
+      "bipolarity_complete": true,
+      "grounding_span": "This definitely makes work faster"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "This definitely makes work faster"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Accuracy and factual reliability",
+      "grounding_span": "I have to check every number and every fact and every source"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Learning and understanding",
+      "grounding_span": "I will get AI to extract that information, so I can put it into a proper PDF"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Business growth and profitability",
+      "grounding_span": "It means I could then build better business"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI for communications",
+      "valence": "positive",
+      "grounding_span": "Perpelexity gives me the starting point of a good paper in three pages"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Frustration with AI training difficulty",
+      "valence": "negative",
+      "grounding_span": "It isn't very good at identifying where you are having the issue in understanding"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "negative",
+      "grounding_span": "some one could be yelling at you in another language and it will say this is playful"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Excitement about AI's potential for automation",
+      "valence": "positive",
+      "grounding_span": "if there was an easy way, and an easy interface, that you could set up workflows with a couple of click that would be fantastic"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Frustration with AI errors",
+      "valence": "negative",
+      "grounding_span": "three houts later I was frustrated because I could have been working on more meaningful work"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic multi-tool orchestration — uses different AI models for different strengths",
+      "grounding_span": "I often fall back to Perplexity (free version) as it's short, concise, and to the point. I might then take that information and use Claude or ChatGPt for extrapolation"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through conversation",
+      "grounding_span": "I will then start a new conversation with a different direction focussing on what I need now"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

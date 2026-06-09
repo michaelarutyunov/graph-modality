@@ -1,0 +1,166 @@
+{
+  "transcript_id": "science_0018",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as verification backup for unfamiliar domain knowledge",
+      "label_negative": "AI as primary source for unfamiliar domain knowledge",
+      "bipolarity_complete": true,
+      "grounding_span": "I mostly used AI to back up what I found since I hadn't experimented in using baffles in a heat exchanger before"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as time-saving tool for foundational equations",
+      "label_negative": "Manual lookup for foundational equations",
+      "bipolarity_complete": true,
+      "grounding_span": "I used AI in order to cut down on the time it took to complete this introductory task"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI in experimental design and safety screening",
+      "label_negative": "Manual iterative experimental design without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I would love for AI to help me in making decisions about how to set up my experiment"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Company policy restricting AI in data collection",
+      "label_negative": "Permissive AI use in data collection",
+      "bipolarity_complete": true,
+      "grounding_span": "my company would not allow the use of AI in the actual data collection process"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "cut down on the time it took to complete this introductory task"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Accuracy and reliability",
+      "grounding_span": "I compared what the AI model gave me with what I had previously known, and I compared it to literature equations"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Safety",
+      "grounding_span": "AI can also scan for most safety concerns, which is of utmost importance"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Positive toward AI as verification backup",
+      "valence": "positive",
+      "grounding_span": "I mostly used AI to back up what I found"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Positive toward AI as time-saver",
+      "valence": "positive",
+      "grounding_span": "I used AI in order to cut down on the time"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Aspirational desire for AI in experimental design",
+      "valence": "positive",
+      "grounding_span": "I would love for AI to help me in making decisions about how to set up my experiment"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Acceptance of policy restrictions on AI",
+      "valence": "mixed",
+      "grounding_span": "my company would not allow the use of AI in the actual data collection process"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Cross-referencing verification — compares AI output with known sources",
+      "grounding_span": "I compared what the AI model gave me with what I had previously known, and I compared it to literature equations"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic task segmentation — uses AI only for bounded, verifiable tasks",
+      "grounding_span": "I used AI in order to cut down on the time it took to complete this introductory task"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

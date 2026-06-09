@@ -1,0 +1,169 @@
+{
+  "transcript_id": "work_0052",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative learning partner",
+      "label_negative": "AI as autonomous task executor",
+      "bipolarity_complete": true,
+      "grounding_span": "I like to use AI as a learning tool by verifying against my current build and taking into consideration what it provides as feedback and learning from it"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI knowledge recency and accuracy",
+      "label_negative": "AI outdated or inaccurate advice",
+      "bipolarity_complete": true,
+      "grounding_span": "the current model is not exactly up to date on the latest version of PowerBI, etc we use in our industry. This leads to outdated advice or not up to date recommendations on queries"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for low-priority repetitive tasks",
+      "label_negative": "AI for core judgment and expectation management",
+      "bipolarity_complete": true,
+      "grounding_span": "working together to enhance and optimize low priority tasks, repetitive things, etc is where AI can really shine"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Organizational endorsement of AI",
+      "label_negative": "Organizational skepticism or restriction of AI",
+      "bipolarity_complete": true,
+      "grounding_span": "My company has openly embraced AI and its widely recommended to use AI where possible"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as productivity and value enhancer",
+      "label_negative": "AI as unnecessary or unhelpful tool",
+      "bipolarity_complete": true,
+      "grounding_span": "I view it as a tool to use and collaborate with to make me more productive and a valued asset with the teams I work with"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Personal skill development and learning",
+      "grounding_span": "I end up learning more and building my knowledge base on the topics I require assistance on"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Workplace productivity and efficiency",
+      "grounding_span": "make me more productive and a valued asset with the teams I work with"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Reliable and accurate information",
+      "grounding_span": "the more up to date they are the more I can rely on the most accurate information"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI as learning accelerator",
+      "valence": "positive",
+      "grounding_span": "the efforts and collaboration I utilized while 'partering' with AI have made my learnings within the realms of SQL/PowerBI have been exponentially faster"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with outdated AI knowledge",
+      "valence": "negative",
+      "grounding_span": "the current model is not exactly up to date on the latest version of PowerBI, etc we use in our industry. This leads to outdated advice"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Optimistic anticipation of AI evolution",
+      "valence": "positive",
+      "grounding_span": "I look forward to see the AI models grow and learn, the more up to date they are the more I can rely on the most accurate information"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Preference for collaborative over delegated AI use",
+      "valence": "positive",
+      "grounding_span": "I prefer to collaborate throughout the task rather than delegating entire segments to the AI model"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative learning through verification and feedback",
+      "grounding_span": "I like to use AI as a learning tool by verifying against my current build and taking into consideration what it provides as feedback and learning from it"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Task differentiation based on complexity and judgment",
+      "grounding_span": "A lot of supply planning is about managing expectations and reacting with things don't go as expected, this (at the moment) I do not expect AI to handle"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

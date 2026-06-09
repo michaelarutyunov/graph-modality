@@ -1,0 +1,174 @@
+{
+  "transcript_id": "science_0046",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI reliability for conceptual vs mathematical tasks",
+      "label_negative": "AI unreliability for mathematical tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I would mostly stick with AI responses to my research questions in the instance that there is no math involved in giving an accurate response"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI consistency across rephrased questions",
+      "label_negative": "AI inconsistency and pandering",
+      "bipolarity_complete": true,
+      "grounding_span": "AI tends to pander to their sensibilities and changes its answer depending on how they phrase a question"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI source accuracy and verifiability",
+      "label_negative": "AI hallucination and fabricated sources",
+      "bipolarity_complete": true,
+      "grounding_span": "the sources were either retracted from the journals they were published in or entirely hallucinated"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as preliminary research guide",
+      "label_negative": "AI as unreliable for final decisions",
+      "bipolarity_complete": true,
+      "grounding_span": "I used AI mostly when researching the relevant technical details for electrical components"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI ability to vet empirical formulas",
+      "label_negative": "AI inability to vet empirical formulas",
+      "bipolarity_complete": true,
+      "grounding_span": "getting the AI to be able to vet the efficacy and specific use cases of empirical formula/equations"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Research efficiency and time savings",
+      "grounding_span": "its alot more work to double-check the AI than it is to find a section in a familiar reference text"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Accuracy and trustworthiness of information",
+      "grounding_span": "the fundamental premise behind a good research tool is that it provides accurate and unbiased information"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Safety and ethical responsibility",
+      "grounding_span": "if the information is going to have ramifications that effect people directly in terms of health and safety"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Preference for AI in conceptual research",
+      "valence": "positive",
+      "grounding_span": "I would mostly stick with AI responses to my research questions in the instance that there is no math involved"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Skepticism due to inconsistency",
+      "valence": "negative",
+      "grounding_span": "The inconsistency tends to make me skeptical of the AI response"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with hallucination",
+      "valence": "negative",
+      "grounding_span": "I have experienced plenty of hallucinations regrading the reference material"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Desire for AI to vet empirical formulas",
+      "valence": "positive",
+      "grounding_span": "Another area that would be good to focus on is getting the AI to be able to vet the efficacy and specific use cases of empirical formula/equations"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Consistency-checking verification strategy",
+      "grounding_span": "I tend to ask more questions that are similar to the original question but with more complexity that includes parts of the original response"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Safety-tiered verification approach",
+      "grounding_span": "if the information is going to have ramifications that effect people directly in terms of health and safety, I use an alternative and more rigid verification process"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

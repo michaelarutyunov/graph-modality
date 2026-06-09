@@ -1,0 +1,174 @@
+{
+  "transcript_id": "work_0520",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI for modular content tasks",
+      "label_negative": "AI for creative synthesis tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I will delegate this to the AI, since I don't find it misses things often enough to need my input"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as collaborative helper for client-facing work",
+      "label_negative": "AI as independent delegator for client-facing work",
+      "bipolarity_complete": true,
+      "grounding_span": "I will always collaborate with the model on the work"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability in following detailed instructions",
+      "label_negative": "AI unreliability in following detailed instructions",
+      "bipolarity_complete": true,
+      "grounding_span": "the results were so bad I had to scrap nearly everything"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI ability to produce unique creative designs",
+      "label_negative": "AI tendency to produce generic templated designs",
+      "bipolarity_complete": true,
+      "grounding_span": "the designs have a very generic feel in both look and flow"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as productivity enhancer for remedial work",
+      "label_negative": "AI as threat to job or skill development",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't see AI as taking over my job, but as something that will continue to help me"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Client satisfaction and professional quality",
+      "grounding_span": "don't meet the standards our client expects"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and time efficiency",
+      "grounding_span": "improving my productivity and reducing time spent on little things"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Creative fulfillment and focus on design",
+      "grounding_span": "allow us to focus on what we truly love, the creative design process"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for modular tasks",
+      "valence": "positive",
+      "grounding_span": "I will delegate this to the AI, since I don't find it misses things often enough"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI for wireframing",
+      "valence": "negative",
+      "grounding_span": "the results were so bad I had to scrap nearly everything"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Optimism about AI's future role",
+      "valence": "positive",
+      "grounding_span": "I think it will be a key to allowing us to focus on what we truly love"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Disappointment with AI's creative output",
+      "valence": "negative",
+      "grounding_span": "the designs have a very generic feel"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative collaborative refinement — works back-and-forth with AI",
+      "grounding_span": "I will start working with the AI to create a hierarchy of information, which often means I have to request edits"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Task-contingent delegation — decides based on complexity and client visibility",
+      "grounding_span": "For simple things like extracting feedback... I will delegate this to the AI"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n4",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

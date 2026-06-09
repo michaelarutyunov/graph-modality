@@ -1,0 +1,205 @@
+{
+  "transcript_id": "work_0189",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as efficiency tool for complex or unfamiliar code",
+      "label_negative": "Manual analysis of lengthy or unfamiliar code",
+      "bipolarity_complete": true,
+      "grounding_span": "I will default to AI if the code block in question is very lengthy (more than 150 lines of code)"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as domain knowledge gap filler",
+      "label_negative": "Self-reliance within own expertise",
+      "bipolarity_complete": true,
+      "grounding_span": "I will also default to AI if the domain of expertise is outside of my knowledge base"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as collaborative design partner",
+      "label_negative": "AI as one-shot solution generator",
+      "bipolarity_complete": true,
+      "grounding_span": "I'll engage in a conversation about which technologies would fit that particular project"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI code understanding and selective copying",
+      "label_negative": "Blind acceptance of AI-generated code",
+      "bipolarity_complete": true,
+      "grounding_span": "I will not copy more than 200 lines of code from a LLM though, I like to know exactly what I'm copying over"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as productivity enhancer for software engineering",
+      "label_negative": "AI as threat to core skills",
+      "bipolarity_complete": true,
+      "grounding_span": "these tools make us more proficient"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI context limitation causing circular conversations",
+      "label_negative": "AI with sufficient context providing clear solutions",
+      "bipolarity_complete": true,
+      "grounding_span": "Sometimes it's difficult to give the LLMs enough context to figure out precisely what the issue is"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI as future overseer of AI agents",
+      "label_negative": "AI as direct doer without human oversight",
+      "bipolarity_complete": true,
+      "grounding_span": "I imagine I'll end up configuring AI agents at some point to do the brunt of my work, perhaps with me checking the output"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Maintaining problem-solving skills",
+      "grounding_span": "I prefer to solve things myself, as it keeps my mental problem solving skills sharp"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Efficiency and productivity",
+      "grounding_span": "these tools make us more proficient"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Understanding and control over code",
+      "grounding_span": "I like to know exactly what I'm copying over and what the result of that code will be"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Preference for self-reliance in familiar domains",
+      "valence": "positive",
+      "grounding_span": "I will always default to handling a task myself"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI for unfamiliar domains",
+      "valence": "positive",
+      "grounding_span": "I'll rely heavily on AI, even for more simple tasks because I'm not as familiar with the code syntax"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Frustration with AI context limitations",
+      "valence": "negative",
+      "grounding_span": "I've had conversations that seem to go in circles with no clear solution"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Optimism about future AI agent oversight",
+      "valence": "positive",
+      "grounding_span": "I imagine I'll end up configuring AI agents at some point to do the brunt of my work"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Default to self-reliance before AI use",
+      "grounding_span": "I will always default to handling a task myself"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Selective code copying with understanding",
+      "grounding_span": "I will not copy more than 200 lines of code from a LLM though, I like to know exactly what I'm copying over"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

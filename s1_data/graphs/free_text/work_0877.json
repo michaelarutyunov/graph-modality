@@ -1,0 +1,181 @@
+{
+  "transcript_id": "work_0877",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as organizer and pattern detector for coding tasks",
+      "label_negative": "Manual counting and pattern detection",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "It is easier for AI to count the number of a particlar diagnosis as opposed to me counting them myself"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI use constrained by confidentiality",
+      "label_negative": "Unconstrained AI use with sensitive data",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I only utilize AI for tasks where no confidnetial information is dislcosed"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as efficiency enhancer for review and quality control",
+      "label_negative": "Manual review without AI assistance",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "AI would allow me to organize and review it more quickly"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as tool for helping others work more efficiently",
+      "label_negative": "Keeping AI skills to oneself",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "being able to share my ability to utilize AI and show others how easy It can be is really satifiying"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as complement to human expertise, not replacement",
+      "label_negative": "AI replacing human judgment entirely",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "There should always be a second set of eyes to make sure work products are as accuate as possible"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Accuracy and quality in medical coding",
+      "valence": null,
+      "grounding_span": "I have to read each medical provider's note on a patient to ensure that the documentation matches the diagnosis"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Patient confidentiality and data privacy",
+      "valence": null,
+      "grounding_span": "the notes sometimes contain protected health information such as namesand other PII, and this could potentially violate confidentiality"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and productivity",
+      "valence": null,
+      "grounding_span": "streamlining others to improve efficiency"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Helping others and collegiality",
+      "valence": null,
+      "grounding_span": "I like seeing other people perform more efficiently and I like making their jobs easier"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for pattern detection and error spotting",
+      "valence": "positive",
+      "grounding_span": "It definitely satisfies my inner perfectionist"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with EHR limitations that AI helps overcome",
+      "valence": "negative",
+      "grounding_span": "it is also frustrasting to have to check the work of an electronic health record"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Pride in being an AI pioneer and helping colleagues",
+      "valence": "positive",
+      "grounding_span": "being able to share my ability to utilize AI and show others how easy It can be is really satifiying"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Confidence in own ability to spot errors, AI as enhancer",
+      "valence": "positive",
+      "grounding_span": "I'm pretty confident in my ability to spot them"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative querying and fine-tuning pattern recognition",
+      "valence": null,
+      "grounding_span": "sometimes I'll ask for a straightforward answer, and other times I'll ask for addtional information, which has suprisingly helped me fine-tune my pattern recognition abilites"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic boundary-setting based on confidentiality",
+      "valence": null,
+      "grounding_span": "I only utilize AI for tasks where no confidnetial information is dislcosed"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

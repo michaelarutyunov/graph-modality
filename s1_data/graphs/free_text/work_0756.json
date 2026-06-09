@@ -1,0 +1,194 @@
+{
+  "transcript_id": "work_0756",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as research organizer and keyword optimizer",
+      "label_negative": "Manual research and keyword placement",
+      "bipolarity_complete": true,
+      "grounding_span": "I often use AI to help me with research, either by giving it the topic and asking it to provide the information I need or by dumping a bunch of my own research and asking the AI to organize it for me"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as creative brainstorming and editing assistant",
+      "label_negative": "Solely human creative process",
+      "bipolarity_complete": true,
+      "grounding_span": "It helps me brainstorm ideas for new plots or characters or names. It also helps me with sentence structure"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability and accuracy",
+      "label_negative": "AI hallucination and misinformation",
+      "bipolarity_complete": true,
+      "grounding_span": "Half the items it suggested I look into turned out to be non-existent"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as routine task delegator preserving human creativity",
+      "label_negative": "AI as replacement for human creativity",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is a tool and it's not meant to be a replacement for human creativity. It's meant to take on the more routine and mundane tasks"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Skill maintenance through deliberate non-use of AI",
+      "label_negative": "Over-reliance on AI leading to skill atrophy",
+      "bipolarity_complete": true,
+      "grounding_span": "It's important to me to maintain that skillset, so sometimes I even do it myself if it's a challenging project"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "Social stigma against AI in self-publishing community",
+      "label_negative": "Open acceptance of AI in self-publishing",
+      "bipolarity_complete": true,
+      "grounding_span": "there is, however, a massive trend against using AI in the indie/self-publishing industry, so I'm very quiet about my usage of it online"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "AI helps me fit things like that into my articles in a natural sounding way and also checks for keyword stuffing for me"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Creative autonomy and skill preservation",
+      "grounding_span": "I want to make sure I don't lose my skillset"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Social acceptance and reputation",
+      "grounding_span": "Anyone who is 'caught' using AI in the indie world gets flamed online, which can destroy a new author's career"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for research and keyword tasks",
+      "valence": "positive",
+      "grounding_span": "AI helps me fit things like that into my articles in a natural sounding way"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI hallucination",
+      "valence": "negative",
+      "grounding_span": "Half the items it suggested I look into turned out to be non-existent"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Deliberate non-use to maintain skills",
+      "valence": "positive",
+      "grounding_span": "I'll take a break and do it myself for a few days to make sure I'm keeping up on my creativity"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Concealment of AI use due to stigma",
+      "valence": "negative",
+      "grounding_span": "I just never mention it or involve myself in conversations relating to AI"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Belief in AI as tool not replacement",
+      "valence": "positive",
+      "grounding_span": "AI is a tool and it's not meant to be a replacement for human creativity"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Mood-dependent task delegation",
+      "grounding_span": "Often, it depends more on mood than pure logic"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Deliberate skill maintenance through periodic manual practice",
+      "grounding_span": "If I've been delegating that task to AI for a straight week, I'll take a break and do it myself for a few days"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -13,34 +13,38 @@ Three frozen modality representations are produced:
 
 ## Your Responsibilities
 
-1. **Text encoding.** Run `encoding/text_encoder.py` to produce 768-dim sentence-transformer embeddings for all transcripts. Embeddings are cached to `cache/text_embeddings.npy`. Never re-encode if cache exists. Default: human-only turns (speaker_filter="Human").
+1. **Text encoding.** Run `s4_encoding/text_encoder.py` to produce 768-dim sentence-transformer embeddings for all transcripts. Embeddings are cached to `cache/text_embeddings_human_only.npy`. Never re-encode if cache exists. Default: human-only turns (speaker_filter="Human").
 
-2. **Graph statistics.** Run `encoding/graph_stats.py` to compute 30-dim feature vectors from canonicalised graphs. Features include structural metrics (density, diameter, degree), node type distributions, construct quality (bipolarity), stance valence, centrality, and cognitive style markers. This is deterministic — no training, same output every time.
+2. **Graph statistics.** Run `s4_encoding/graph_stats_encoder.py` to compute 30-dim feature vectors from canonicalised graphs. Features include structural metrics (density, diameter, degree), node type distributions, construct quality (bipolarity), stance valence, centrality, and cognitive style markers. This is deterministic — no training, same output every time. Cached to `cache/graph_stats.npy`.
 
-3. **GIN autoencoder (self-supervised).** Train a 2-layer GIN autoencoder on ALL 1,250 graphs with no classification labels. The encoder learns to represent graph structure; the decoder reconstructs node types and edges from the graph embedding. After training, the encoder is **frozen** and used to produce 128-dim graph embeddings via `encoding/gnn/encode.py`.
+3. **GIN autoencoder (self-supervised).** Run `s4_encoding/graph_gnn_encoder.py` to train a 2-layer GIN autoencoder on ALL 1,250 graphs with no classification labels. The encoder learns to represent graph structure; the decoder reconstructs node types from per-node embeddings. After training, the encoder is **frozen**. Run `s4_encoding/graph_gnn_encoder.py --encode` for frozen inference producing 128-dim embeddings cached to `cache/gin_embeddings_canonical.npy`. Both train and encode live in a single file — the ``--encode`` flag switches between modes.
 
-4. **Modality embedding dataset.** Run `encoding/build_dataset.py` to package all three frozen embeddings into .npz files per split (train/val/test) and per target (AI adoption, cohort). This is the single source of truth for downstream classifiers.
+4. **Modality embedding dataset.** Run `s4_encoding/build_dataset.py` to package all three frozen embeddings into .npz files per split and per target (AI adoption, cohort). Saved to `cache/modality_dataset/`. This is the single source of truth for downstream classifiers.
 
-5. **Cache discipline.** All encodings are cached. Never recompute if cache exists.
+5. **Cache discipline.** All encodings are cached. Never recompute if cache exists. Cache files: `cache/text_embeddings_human_only.npy`, `cache/graph_stats.npy`, `cache/gin_embeddings_canonical.npy`, `cache/modality_dataset/*.npz`.
 
 ## Key Files
 
 | File | Role |
 |---|---|
-| `encoding/text_encoder.py` | SBERT embeddings (768-dim), frozen, human-only turns |
-| `encoding/graph_stats.py` | Route 2 feature vectors (30-dim), deterministic |
-| `encoding/gnn/dataset.py` | PyG Dataset — converts graphs to Data objects (388-dim node features) |
-| `encoding/gnn/autoencoder.py` | **GIN autoencoder** — self-supervised training, target-agnostic |
-| `encoding/gnn/encode.py` | **Frozen encoder inference** — produces 128-dim embeddings for any graph set |
-| `encoding/build_dataset.py` | Packages frozen embeddings as .npz per split/target |
-| `canonicalisation/canonical_map.json` | Locked vocabulary — graph_stats.py relies on canonical labels |
+| `s4_encoding/text_encoder.py` | SBERT embeddings (768-dim), frozen, human-only turns |
+| `s4_encoding/graph_stats_encoder.py` | 30-dim deterministic graph features (networkx) |
+| `s4_encoding/graph_gnn_encoder.py` | GIN autoencoder (train) + frozen inference (--encode) — 128-dim |
+| `s4_encoding/graph_dataset.py` | PyG Dataset wrapper — node features (388-dim), edge indices |
+| `s4_encoding/build_dataset.py` | Package frozen embeddings as .npz per split/target |
+| `cache/text_embeddings_human_only.npy` + `_ids.json` | Cached text embeddings |
+| `cache/graph_stats.npy` + `_ids.json` | Cached graph statistics |
+| `cache/gin_embeddings_canonical.npy` + `_ids.json` | Cached GIN embeddings |
+| `cache/gin_encoder_canonical.pt` | Trained GIN encoder weights |
+| `cache/modality_dataset/` | .npz files per split/target |
+| `s3_canonicalisation/canonical_map.json` | Locked vocabulary — graph_stats_encoder.py relies on canonical labels |
 
-### Deprecated files
+### Archived
 
 | File | Fate |
 |---|---|
-| `encoding/gnn/model.py` | Replaced by autoencoder.py — conflated GIN+classifier, task-supervised |
-| `encoding/gnn/train.py` | Replaced by autoencoder.py — trained GIN with classification loss |
+| `s4_encoding/_archived/model.py` | Task-supervised GIN (Phase 3) — conflated encoder+classifier |
+| `s4_encoding/_archived/train.py` | Task-supervised training loop (Phase 3) — conflated encoder+classifier |
 
 ## Conventions
 
@@ -48,16 +52,16 @@ Three frozen modality representations are produced:
 - Label encoder (GNN node features): `all-MiniLM-L6-v2` (384-dim)
 - Graph statistics: 30 normalized float32 features per transcript
 - GIN autoencoder: 388-dim input, 256-dim hidden, 128-dim bottleneck, 2 layers
-- Autoencoder loss: node type reconstruction (cross-entropy) + edge prediction (binary cross-entropy on adjacency)
+- Autoencoder loss: node type reconstruction (cross-entropy on 4-class)
 - Autoencoder training: ALL 1,250 graphs (no split needed — no labels)
 - Optimizer: Adam, lr=1e-3, weight_decay=1e-4
 - All encodings are CPU-compatible — no GPU required
 
-## Architecture Principle
+## Architecture
 
 ```
 Training phase (run once):
-  graph ──→ [GIN encoder] ──→ 128-dim ──→ [decoder] ──→ reconstructed node types + edges
+  graph ──→ [GIN encoder] ──→ 128-dim ──→ [decoder] ──→ reconstructed node types
               ↑ gradient from reconstruction loss only — NO classification labels
 
 Inference phase (frozen):
@@ -71,9 +75,12 @@ The key insight: the GIN encoder NEVER sees a classification label during traini
 ## Common Pitfalls
 
 - Training GIN with classification loss — this conflates encoding with task learning. Use autoencoder loss only.
-- Forgetting that `graph_stats.py` expects canonicalised graphs, not free-text
+- Using full transcript instead of human-only — default `speaker_filter="Human"` removes interviewer confound.
+- Forgetting that `graph_stats_encoder.py` expects canonicalised graphs, not free-text
 - Using the wrong embedding model for node features (MiniLM, not mpnet)
+- Forgetting the `--encode` flag on `graph_gnn_encoder.py` — it trains by default; use `--encode` for frozen inference
 - Training autoencoder on a split — use ALL graphs (no labels needed)
 - Not freezing the encoder before downstream use — classifier gradients must not flow back
 - Overwriting cached embeddings without `--force` — cache-first is the default
 - `torch_geometric` DataLoader batching: all graphs in a batch must have the same node feature dimension
+- Expecting graph-only embeddings to classify well — the frozen autoencoder is target-agnostic; graph-only classification collapses to chance on cohort (by design)

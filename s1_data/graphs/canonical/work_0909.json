@@ -1,0 +1,180 @@
+{
+  "transcript_id": "work_0909",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as coding assistant",
+      "label_negative": "AI as full-task delegator (vibe-coding)",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is an assistant that can help me do low-level tasks quicker"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "Maintaining full control over coding experiments",
+      "label_negative": "Delegating coding to AI without oversight",
+      "bipolarity_complete": true,
+      "grounding_span": "I prefer to keep full control on what I do"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI accuracy in numerical tasks",
+      "label_negative": "AI imprecision in text rephrasing",
+      "bipolarity_complete": true,
+      "grounding_span": "the AI agent updated it perfectly"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI understanding of specific constraints",
+      "label_negative": "Vague prompting leading to iterations",
+      "bipolarity_complete": true,
+      "grounding_span": "I wanted the output with specific constraints and I wasn't expressing them exactly"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI integration into workflow",
+      "label_negative": "AI as separate tool without deep integration",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is deeply integrated across your entire workflow"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "help me do low-level tasks quicker"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Research integrity and accuracy",
+      "grounding_span": "code experiments producing scientific results that will be published"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Autonomy and personal control",
+      "grounding_span": "I prefer to keep full control on what I do"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Quality of output",
+      "grounding_span": "it took many iterations to get a satisfying version"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "the most satisfying experience was when I managed to describe exactly the code changes I wanted, and the AI agent updated it perfectly"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Reluctance to use AI for writing",
+      "valence": "negative",
+      "grounding_span": "The most annoying one, instead, is for sure related to writing my thesis"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Preference for maintaining control over coding",
+      "valence": "positive",
+      "grounding_span": "I prefer to keep full control on what I do"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Openness to improving workflow with AI",
+      "valence": "positive",
+      "grounding_span": "my workflow and tools will evolve and change very quickly"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Structured and deliberate workflow optimization",
+      "grounding_span": "I'm quite structured and I thought thoroughly about my workflow"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Reflective learning from experience",
+      "grounding_span": "it would have been better to spend more time crafting a better prompt instead of iterating over and over"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

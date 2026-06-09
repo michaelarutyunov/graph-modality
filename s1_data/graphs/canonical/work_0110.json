@@ -1,0 +1,191 @@
+{
+  "transcript_id": "work_0110",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as endless revision suggester",
+      "label_negative": "AI as endless regressive corrector",
+      "bipolarity_complete": true,
+      "grounding_span": "AI tends to make endless corrections even when they aren't improvements"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as brainstorming and idea generator",
+      "label_negative": "AI as incapable of artful design",
+      "bipolarity_complete": true,
+      "grounding_span": "If it's generic commercial work, then sure, I'll use it for brainstorming. If it's illustrative or something more artful, I will never delegate to AI"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Human soul in writing",
+      "label_negative": "AI-generated creative work lacking soul",
+      "bipolarity_complete": true,
+      "grounding_span": "You can always feel the soul in work that's human made. AI can never replicate that"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as writing reviewer and editor",
+      "label_negative": "AI as provider of cringy generic ideas",
+      "bipolarity_complete": true,
+      "grounding_span": "It's really great at professional writing... It significantly slims the time it takes to get from a rough draft to a polished final"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Openness about AI use with colleagues",
+      "label_negative": "Private AI use due to stigma",
+      "bipolarity_complete": true,
+      "grounding_span": "People used to use it openly, now it's more private"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative authenticity and human expression",
+      "grounding_span": "I value work that is human made"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and productivity in writing",
+      "grounding_span": "It significantly slims the time it takes to get from a rough draft to a polished final"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional reputation and social acceptance",
+      "grounding_span": "The stigma surrounding AI is becoming more prominent"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Reluctance to use AI for writing",
+      "valence": "positive",
+      "grounding_span": "It helps immensely with writing critique"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI errors",
+      "valence": "negative",
+      "grounding_span": "AI has frustrated me when it offers bad ideas"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Concern for artists directly impacted by AI",
+      "valence": "negative",
+      "grounding_span": "I will never delegate to AI"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Openness to AI as creative catalyst",
+      "valence": "positive",
+      "grounding_span": "If it's generic commercial work, then sure, I'll use it for brainstorming"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Discretion about AI use due to stigma",
+      "valence": "mixed",
+      "grounding_span": "People used to use it openly, now it's more private"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative iterative refinement — works back and forth with AI",
+      "grounding_span": "I send drafts back and forth with AI, I edit their revised version of my draft, ask for feedback"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based task allocation — creative vs. mundane",
+      "grounding_span": "If it's generic commercial work, then sure, I'll use it for brainstorming. If it's illustrative or something more artful, I will never delegate to AI"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

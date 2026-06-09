@@ -1,0 +1,156 @@
+{
+  "transcript_id": "work_0234",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as tool for routine legal work",
+      "label_negative": "AI hallucination and inaccuracy in legal research",
+      "bipolarity_complete": true,
+      "grounding_span": "I've noticed AIs are terrible looking them up and prone to hallucination"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as writing assistant for drafting",
+      "label_negative": "AI as autonomous task completer",
+      "bipolarity_complete": true,
+      "grounding_span": "More collaboration, I haven't really worked with giving it a complete task"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI delegation for simple tasks",
+      "label_negative": "AI delegation for high-stakes tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I would be happy to delegate and focus my skills to the areas where they are needed"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI integration into workflow",
+      "label_negative": "Manual control over workflow",
+      "bipolarity_complete": true,
+      "grounding_span": "Calendar integration, letting AI run my calendar. Though so far, I have been resistant as mistakes could be costly"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Accuracy and compliance in legal work",
+      "grounding_span": "I always double check. I never trust the AIs answer without my own verification"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Professional efficiency",
+      "grounding_span": "I would be happy to delegate and focus my skills to the areas where they are needed"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Risk avoidance",
+      "grounding_span": "mistakes could be costly"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Satisfaction with AI for drafting",
+      "valence": "positive",
+      "grounding_span": "I have been satisfied with basic memos, emails etc."
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Frustration with research AI",
+      "valence": "negative",
+      "grounding_span": "I haven't really been frustrated except seeing that it is still quite limited with case research"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "ambivalent",
+      "grounding_span": "I would stay cautious but hope to expand"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Caution toward AI in high-risk tasks",
+      "valence": "negative",
+      "grounding_span": "I have been resistant as mistakes could be costly"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Verification-oriented — cross-checks AI outputs against other sources",
+      "grounding_span": "I always double check. I never trust the AIs answer without my own verification"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic delegation with fallback confidence",
+      "grounding_span": "If it becomes reliable in areas like docket management and case research, I would gladly let it handle those areas"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

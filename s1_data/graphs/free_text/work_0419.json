@@ -1,0 +1,243 @@
+{
+  "transcript_id": "work_0419",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as logic checker in specialized domains",
+      "label_negative": "Reliance on fallible AI for expert validation",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "checking myself and my logic in areas where my coworkers don't have the expertise to check me"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as research assistant for hard-to-find information",
+      "label_negative": "AI providing unverifiable or outdated information",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "AI was able to scrape old search engine tags...to confirm that our existing chairs' official limit was only 300lbs"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as collaborative dialogue partner",
+      "label_negative": "AI as one-shot answer provider",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "the conversation always evolves into a dialogue"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI use restricted by organizational security policies",
+      "label_negative": "Unrestricted AI use for sensitive data",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "IT at my job requires that I do myself because they don't trust the AI platforms to keep data confidential"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as writing editor preserving personal voice",
+      "label_negative": "AI as ghostwriter replacing personal voice",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I prefer to write my own emails and use AI to edit them"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as tool for upskilling and staying relevant",
+      "label_negative": "AI as threat to job security",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I can either be fearful and fall behind...or I can make myself valuable in an AI world and ride the wave"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional competence and accuracy",
+      "valence": null,
+      "grounding_span": "checking myself and my logic in areas where my coworkers don't have the expertise to check me"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Epistemic understanding and confidence",
+      "valence": null,
+      "grounding_span": "it set my mind at ease to see so many sources corroborating it"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Collaborative synergy and shared accomplishment",
+      "valence": null,
+      "grounding_span": "I usually celebrate with the AI when I feel good about our conclusion"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Data security and compliance",
+      "valence": null,
+      "grounding_span": "IT at my job requires that I do myself because they don't trust the AI platforms to keep data confidential"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Authentic self-expression",
+      "valence": null,
+      "grounding_span": "I can tell when it's an AI's writing, not mine"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Career resilience and adaptability",
+      "valence": null,
+      "grounding_span": "I can either be fearful and fall behind...or I can make myself valuable in an AI world and ride the wave"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Satisfaction with AI as logic checker",
+      "valence": "positive",
+      "grounding_span": "checking myself and my logic in areas where my coworkers don't have the expertise to check me"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Gratitude for AI's ability to find corroborating evidence",
+      "valence": "positive",
+      "grounding_span": "it set my mind at ease to see so many sources corroborating it"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Enjoyment of collaborative dialogue with AI",
+      "valence": "positive",
+      "grounding_span": "I usually celebrate with the AI when I feel good about our conclusion"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Frustration with IT restrictions on AI use",
+      "valence": "negative",
+      "grounding_span": "I'd prefer to collaborate with AI, but i'm not allowed"
+    },
+    {
+      "id": "n17",
+      "type": "Stance",
+      "label": "Preference for AI as editor over ghostwriter",
+      "valence": "positive",
+      "grounding_span": "I prefer to write my own emails and use AI to edit them"
+    },
+    {
+      "id": "n18",
+      "type": "Stance",
+      "label": "Optimistic embrace of AI for career growth",
+      "valence": "positive",
+      "grounding_span": "I can either be fearful and fall behind...or I can make myself valuable in an AI world and ride the wave"
+    },
+    {
+      "id": "n19",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative dialogue refinement — starts comprehensive then evolves through back-and-forth",
+      "valence": null,
+      "grounding_span": "I try to present everything up front, but the conversation always evolves into a dialogue"
+    },
+    {
+      "id": "n20",
+      "type": "CognitiveStyleMarker",
+      "label": "Proactive upskilling orientation — views AI as opportunity to adapt and grow",
+      "valence": null,
+      "grounding_span": "I can either be fearful and fall behind...or I can make myself valuable in an AI world and ride the wave"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n13",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n17",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n18",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n3",
+      "target": "n19",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n20",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n5",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

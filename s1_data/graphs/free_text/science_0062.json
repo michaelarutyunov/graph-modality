@@ -1,0 +1,169 @@
+{
+  "transcript_id": "science_0062",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as fresh perspective when team is stuck",
+      "label_negative": "Team stuck in homogeneous thinking",
+      "bipolarity_complete": true,
+      "grounding_span": "AI helped bring in ideas we hadn't previously thought of which was nice and fresh in a time where we felt a little stuck"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as coding and image processing assistant",
+      "label_negative": "Manual trial-and-error coding",
+      "bipolarity_complete": true,
+      "grounding_span": "AI also helped me a lot in the coding/denoising aspect of the image processing"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability in software navigation and troubleshooting",
+      "label_negative": "AI providing incorrect or incomplete step-by-step guidance",
+      "bipolarity_complete": true,
+      "grounding_span": "the response will leave out details or be factually incorrect"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as literature and background research tool",
+      "label_negative": "Manual literature search without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I utilized AI to help me find scholarly sources and previous studies"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Hands-on learning and personal exploration of software",
+      "label_negative": "Relying on AI for software learning",
+      "bipolarity_complete": true,
+      "grounding_span": "I am happy to spend this time on my own, exploring different software"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Research progress and overcoming obstacles",
+      "grounding_span": "AI has certainly helped me get through some of these complex sections"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Accurate and reliable technical output",
+      "grounding_span": "the response will leave out details or be factually incorrect"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Personal competence and self-directed learning",
+      "grounding_span": "I am happy to spend this time on my own, exploring different software"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Positive appreciation for AI's fresh ideas",
+      "valence": "positive",
+      "grounding_span": "AI helped bring in ideas we hadn't previously thought of which was nice and fresh"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI's inaccurate troubleshooting",
+      "valence": "negative",
+      "grounding_span": "the response will leave out details or be factually incorrect"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI in coding and image processing",
+      "valence": "positive",
+      "grounding_span": "AI also helped me a lot in the coding/denoising aspect"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Preference for hands-on learning without AI",
+      "valence": "negative",
+      "grounding_span": "I am happy to spend this time on my own, exploring different software"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Comparative validation — side-by-side testing of AI suggestions",
+      "grounding_span": "I will make a copy of my script and implement its suggestions, run them both, and compare the images side-by-side"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic prioritization — focusing on foundational tasks first",
+      "grounding_span": "the best way to clean up the 3D models is through the 2D image processing before transforming it, so I am most concerned with this at the moment"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,156 @@
+{
+  "transcript_id": "science_0097",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as time-saving tool",
+      "label_negative": "Manual time-consuming analysis",
+      "bipolarity_complete": true,
+      "grounding_span": "AI can save an enormous amount of time, especially when dealing with sophisticated numerical analyses"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI unreliability requiring verification",
+      "bipolarity_complete": true,
+      "grounding_span": "Without verification could be risky, as wrong result will not just be time consuming but will also make us question everything"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as literature discovery tool",
+      "label_negative": "AI inadequacy in literature search due to paywalls and hallucinations",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is not yet fully capable of such work, due to paywall restrictions, evaluation of literature for unreported molecules and sometimes provide hallucinated results"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as ideation partner",
+      "label_negative": "AI limited to execution without innovation",
+      "bipolarity_complete": true,
+      "grounding_span": "I would hope that AI can do literature search and also learn from existing literatures, but also come with a bit of innovation in terms of route design for novel molecule synthesis"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Research efficiency",
+      "grounding_span": "AI saves a lot of time since we can provide it with a list of suppliers and their website and the AI does the rest of searching and cost estimation"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Experimental rigor and validity",
+      "grounding_span": "Without verification could be risky, as wrong result will not just be time consuming but will also make us question everything"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Scientific advancement and innovation",
+      "grounding_span": "it would be nice to provide AI with a starting material and a target molecule, it would spew out the synthetic route of it"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Skepticism toward AI for complex tasks",
+      "valence": "positive",
+      "grounding_span": "We are always trying to integrate AI into our work flow because it can save an enormous amount of time"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Cautious stance on unverified AI statistical analysis",
+      "valence": "negative",
+      "grounding_span": "Without verification could be risky, as wrong result will not just be time consuming but will also make us question everything"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Negative stance toward AI for literature search",
+      "valence": "negative",
+      "grounding_span": "Literature search is one key area that we did not use AI at all, because based on our experience, AI is not yet fully capable of such work"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI route planning",
+      "valence": "positive",
+      "grounding_span": "I would hope that AI can do literature search and also learn from existing literatures, but also come with a bit of innovation in terms of route design for novel molecule synthesis"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative collaborative problem-solving",
+      "grounding_span": "The work ideation were conversed extensively with AI prior to execution"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic verification — simple checks for accuracy",
+      "grounding_span": "We do evaluate the ANOVA results AI provided using existing statistical software designed for these work"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

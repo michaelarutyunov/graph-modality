@@ -1,0 +1,174 @@
+{
+  "transcript_id": "work_0835",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as supplement to creative process",
+      "label_negative": "AI generating basic or unchallenging examples",
+      "bipolarity_complete": true,
+      "grounding_span": "sometimes AI comes up with creative and illuminating examples"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability and accuracy in generated content",
+      "label_negative": "AI generating nonsense or false claims",
+      "bipolarity_complete": true,
+      "grounding_span": "when the model generates nonsense questions like asking to prove a false claim"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as tool requiring human oversight",
+      "label_negative": "AI as autonomous replacement for human work",
+      "bipolarity_complete": true,
+      "grounding_span": "Always collaboration, I would never hand something off entirely to AI"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI use in maintaining authentic human connection in teaching",
+      "label_negative": "AI use that undermines teacher-student relationship",
+      "bipolarity_complete": true,
+      "grounding_span": "it does mean something to read the words of a real human when developing a bond of trust"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as occasional resource for specific tasks",
+      "label_negative": "AI as integral part of daily workflow",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't often use AI through the course of my workday, but rather on an as-needed basis"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Intellectual engagement and deeper understanding",
+      "grounding_span": "if the problem is something like a 'plug-and-chug' ... that's not particularly helpful in driving a deeper understanding"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Authentic human connection in teaching",
+      "grounding_span": "developing a bond of trust that is crucial to teacher-student relationship"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional autonomy",
+      "grounding_span": "I prefer to do on my own so that I'm more engaged with the students"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for brainstorming",
+      "valence": "positive",
+      "grounding_span": "when I'm able to have a LLM generate an interesting and insightful example problem -- that's really satisfying"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI errors",
+      "valence": "negative",
+      "grounding_span": "when the model generates nonsense questions like asking to prove a false claim, that can be quite frustrating"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Skepticism about AI replacing teachers",
+      "valence": "negative",
+      "grounding_span": "it seems silly to suggest AI could take over much, if any, aspect of teaching in a meaningful way"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Openness to increasing AI use in future",
+      "valence": "positive",
+      "grounding_span": "If it can do more things and be more reliable and less harmful to the environment then sure, why wouldn't I find ways to expand my usage"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Quality assessment through personal problem-solving experience",
+      "grounding_span": "base the assessment of quality of example on how challenging it was for me or what neat tricks or ideas it might require"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative iterative refinement — works back and forth with AI",
+      "grounding_span": "I just ask for example problems testing for X, Y, and Z. Then I may follow up with clarifying prompts"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,148 @@
+{
+  "transcript_id": "science_0007",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as efficient research filter",
+      "label_negative": "Traditional manual literature search",
+      "bipolarity_complete": true,
+      "grounding_span": "it does the looking for you can mostly returns relevant articles and papers so it saves a lot of time"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for document parsing and information extraction",
+      "label_negative": "Manual reading of full documents",
+      "bipolarity_complete": true,
+      "grounding_span": "I also used it a lot of parsing documents so I would upload a pdf into the AI agent and ask it to find specific information"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability and accuracy for technical outputs",
+      "label_negative": "AI inaccuracy and insufficient detail for technical designs",
+      "bipolarity_complete": true,
+      "grounding_span": "the responses are either inaccurate or cannot produce the desired output to a good enough level of detail"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as potential technical design assistant",
+      "label_negative": "Manual CAD design work",
+      "bipolarity_complete": true,
+      "grounding_span": "making technical drawings would be amazing as it would save a lot of time using CAD software's"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Research efficiency and time savings",
+      "grounding_span": "saves a lot of time that would be wasted using traditional methods"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Scientific rigor and accuracy",
+      "grounding_span": "I check over myself to verify the contents of it and if the source is actually relevant"
+    },
+    {
+      "id": "n7",
+      "type": "Stance",
+      "label": "Positive valuation of AI for research filtering",
+      "valence": "positive",
+      "grounding_span": "it saves a lot of time that would be wasted using traditional methods"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Skepticism toward AI for technical design",
+      "valence": "negative",
+      "grounding_span": "AI hasn't gotten to the point where it can create accurate detailed technical drawings and designs yet"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Aspirational desire for AI in CAD",
+      "valence": "positive",
+      "grounding_span": "making technical drawings would be amazing as it would save a lot of time"
+    },
+    {
+      "id": "n10",
+      "type": "CognitiveStyleMarker",
+      "label": "Verification-oriented approach — cross-checks AI outputs against sources",
+      "grounding_span": "Any source the AI gives me I check over myself to verify the contents of it"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic task segmentation — distinguishes AI-suitable from AI-unsuitable tasks",
+      "grounding_span": "I think AI hasn't gotten to the point where it can create accurate detailed technical drawings"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n8",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n10",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n10",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

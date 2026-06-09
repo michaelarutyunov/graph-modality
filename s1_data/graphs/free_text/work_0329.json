@@ -1,0 +1,228 @@
+{
+  "transcript_id": "work_0329",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as codebase comprehension and refactoring assistant",
+      "label_negative": "AI-generated code that is difficult to maintain and debug",
+      "bipolarity_complete": true,
+      "grounding_span": "AI helped me a lot go through all these codebases so that I can quickly grasp how they function"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as writing and polishing assistant",
+      "label_negative": "Manual drafting and polishing without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I will let the AI to finish and polish the documentation"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as memory and note-taking assistant",
+      "label_negative": "Relying on own memory and manual note-taking",
+      "bipolarity_complete": true,
+      "grounding_span": "The AI models free my brain from remembering so many miscellaneous trivia objects"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Human oversight and responsibility for AI output",
+      "label_negative": "Blind trust in AI without verification",
+      "bipolarity_complete": true,
+      "grounding_span": "it is my responsibility to ensure my work quality"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Maintaining knowledge to oversee AI",
+      "label_negative": "Letting skills atrophy as AI takes over",
+      "bipolarity_complete": true,
+      "grounding_span": "I need to improve my knowledge to keep up with it"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as evolving collaborative partner",
+      "label_negative": "Static tool with no mutual learning",
+      "bipolarity_complete": true,
+      "grounding_span": "we are evolving together"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "Workplace openness to AI",
+      "label_negative": "Workplace fear and rejection of AI",
+      "bipolarity_complete": true,
+      "grounding_span": "the majority of the employees ... have a strong tendency to reject new things"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Work efficiency and productivity",
+      "grounding_span": "AI models saved me tremendous time on wording"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Work quality and responsibility",
+      "grounding_span": "it is my responsibility to ensure my work quality"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Personal growth and knowledge",
+      "grounding_span": "AI will definitely broaden my eyes and lead me to more techniques and knowledge"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Autonomy and control over work",
+      "grounding_span": "I do enjoy building the 'bedrock' of my projects"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI for code comprehension and refactoring",
+      "valence": "positive",
+      "grounding_span": "AI helped me a lot go through all these codebases"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Frustration with AI when it deviates from coding standards",
+      "valence": "negative",
+      "grounding_span": "it's no longer following the coding standard of the codebase, which made the debugging really difficult"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Preference for human oversight and initial structure",
+      "valence": "positive",
+      "grounding_span": "I like to write the placeholder classes myself now"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Optimism about evolving together with AI",
+      "valence": "positive",
+      "grounding_span": "we are evolving together"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Skepticism about workplace becoming more comfortable with AI",
+      "valence": "negative",
+      "grounding_span": "I am not sure, though, if my workplace would become more comfortable with AI"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Proactive structuring and scaffolding for AI tasks",
+      "grounding_span": "I create placeholder classes and functions as a starting point for the AI"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Reflective learning from AI outputs",
+      "grounding_span": "I need to study these new knowledge that AI brought me"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

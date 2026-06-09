@@ -1,0 +1,156 @@
+{
+  "transcript_id": "science_0054",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as literature summarization tool",
+      "label_negative": "AI as unreliable hallucinator",
+      "bipolarity_complete": true,
+      "grounding_span": "if AI helped me find every relevant paper and summarise it without me feeling like I've missed any key points then I would be happy"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as NMR data resolver",
+      "label_negative": "AI as unreliable for novel chemistry",
+      "bipolarity_complete": true,
+      "grounding_span": "I would sometimes ask for help in resolving NMR data, which is maybe where it's more helpful as it has the answer in front of it"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as threat to personal achievement and pride",
+      "label_negative": "AI as enabler of personal achievement",
+      "bipolarity_complete": true,
+      "grounding_span": "using AI feels like a cheap cop-out that devalues your hard work"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Human expertise as invaluable for cutting-edge research",
+      "label_negative": "AI as capable of independent research",
+      "bipolarity_complete": true,
+      "grounding_span": "human expertise is invaluable"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Personal achievement and pride in one's work",
+      "grounding_span": "I pride myself on my ability to find answers myself: that's why I do the research I do"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Epistemic understanding and comprehensive literature review",
+      "grounding_span": "find every relevant paper and summarise it without me feeling like I've missed any key points"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Trustworthy and accurate scientific output",
+      "grounding_span": "AI would hallucinate answers to things, suggest structures which are chemically impossible"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Positive openness to AI for literature summarization",
+      "valence": "positive",
+      "grounding_span": "if AI helped me find every relevant paper and summarise it without me feeling like I've missed any key points then I would be happy"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Negative stance toward AI for synthesis and thesis writing",
+      "valence": "negative",
+      "grounding_span": "I couldn't use it for anything other than asking it to suggest structures"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Ambivalent stance toward AI for NMR data resolution",
+      "valence": "ambivalent",
+      "grounding_span": "I would sometimes ask for help in resolving NMR data, which is maybe where it's more helpful"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Skeptical stance toward AI's future role in research",
+      "valence": "negative",
+      "grounding_span": "I don't see how it will be functional for a scientific researcher unless it can actually do the research itself"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Pride-driven self-reliance in problem-solving",
+      "grounding_span": "I pride myself on my ability to find answers myself"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Verification-oriented cautiousness",
+      "grounding_span": "I will always look elsewhere as well, to make sure I'm not 100% reliant on an answer that may be completely wrong"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

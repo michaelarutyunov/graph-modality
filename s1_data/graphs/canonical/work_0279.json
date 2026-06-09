@@ -1,0 +1,195 @@
+{
+  "transcript_id": "work_0279",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as practical problem solver",
+      "label_negative": "Traditional time-consuming search methods",
+      "bipolarity_complete": true,
+      "grounding_span": "AI, while sometimes not fully correct, gets me to the solution faster"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI outdated or incorrect suggestions",
+      "bipolarity_complete": true,
+      "grounding_span": "both AI models were making suggestions off of outdated code practices and functions"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI adherence to instructions",
+      "label_negative": "AI forgetting or ignoring instructions",
+      "bipolarity_complete": true,
+      "grounding_span": "when the AI model forgets instructions that I clearly had in my conversation"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI integration into existing software",
+      "label_negative": "AI not built into or usable within context",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is not built in or usable within the context"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as debugging assistant",
+      "label_negative": "AI as independent task completer",
+      "bipolarity_complete": true,
+      "grounding_span": "my collaboration is more of a collaboration effort"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as analytical delegate for data and research",
+      "label_negative": "Manual design without AI input",
+      "bipolarity_complete": true,
+      "grounding_span": "I will usually delegate the design work to the AI with minimal input"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "Human oversight of AI-generated code",
+      "label_negative": "Full AI autonomy in code production",
+      "bipolarity_complete": true,
+      "grounding_span": "a human still needs to review the code to ensure it won't break a larger ecosystem"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "gets me to the solution faster"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Code quality and correctness",
+      "grounding_span": "ensure that the resulting code is usable, completely functional, and secure"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Professional autonomy",
+      "grounding_span": "I had to do my own research and consult documentation"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI for debugging",
+      "valence": "positive",
+      "grounding_span": "AI, while sometimes not fully correct, gets me to the solution faster"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with AI's impractical suggestions",
+      "valence": "negative",
+      "grounding_span": "both AI models were making suggestions off of outdated code practices and functions"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Frustration with AI errors",
+      "valence": "negative",
+      "grounding_span": "when the AI model forgets instructions that I clearly had in my conversation"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Optimism about future AI integration",
+      "valence": "positive",
+      "grounding_span": "I'll most likely be continuing to adopt AI in my development"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Task-specific interaction pattern adaptation",
+      "grounding_span": "This depends on the circumstance"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic tool selection based on effectiveness",
+      "grounding_span": "it is not time efficient to utilize AI for much more than that"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

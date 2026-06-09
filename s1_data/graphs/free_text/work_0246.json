@@ -1,0 +1,195 @@
+{
+  "transcript_id": "work_0246",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative brainstorming partner",
+      "label_negative": "AI as non-collaborative tool",
+      "bipolarity_complete": true,
+      "grounding_span": "I build on the ideas that the AI initially comes up with for the lesson and we explore them together"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI ability to understand specific needs",
+      "label_negative": "AI inability to grasp specific requirements",
+      "bipolarity_complete": true,
+      "grounding_span": "when I need something very specific and I am not able to get the AI to understand exactly what that is"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as time-saving resource creator",
+      "label_negative": "AI as time-consuming to learn",
+      "bipolarity_complete": true,
+      "grounding_span": "I would like to learn how to do this in the future as I feel it could save time once I've mastered it"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Personalized teaching tasks reserved for human",
+      "label_negative": "AI-delegated personalized tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "Things like writing targets for my pupils I would want to keep doing myself"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as idea generator when stuck",
+      "label_negative": "AI as unhelpful when stuck",
+      "bipolarity_complete": true,
+      "grounding_span": "The times I am most satisfied is when I'm really stuck for ideas and AI helps me to come up with something"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI role in teaching irreplaceable by AI",
+      "label_negative": "AI capable of replacing teaching",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't think AI could ever take over teaching"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Effective lesson planning and adaptation",
+      "grounding_span": "I might ask how to incorporate elements of speech and language into the game"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "I feel it could save time once I've mastered it"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Personalized pupil support",
+      "grounding_span": "I know my pupils very well which is vital for writing the targets"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Human relationships in teaching",
+      "grounding_span": "the most important part of teaching is building relationships"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI as brainstorming aid",
+      "valence": "positive",
+      "grounding_span": "The times I am most satisfied is when I'm really stuck for ideas and AI helps me to come up with something"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with AI not understanding specific needs",
+      "valence": "negative",
+      "grounding_span": "when I need something very specific and I am not able to get the AI to understand exactly what that is"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Optimistic interest in learning AI for resource creation",
+      "valence": "positive",
+      "grounding_span": "I would like to learn how to do this in the future"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Resistance to AI in personalized target writing",
+      "valence": "negative",
+      "grounding_span": "Things like writing targets for my pupils I would want to keep doing myself"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Belief that AI cannot replace teaching",
+      "valence": "negative",
+      "grounding_span": "I don't think AI could ever take over teaching"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative collaborative exploration — builds on AI ideas step by step",
+      "grounding_span": "I build on the ideas that the AI initially comes up with for the lesson and we explore them together"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Pupil-centered reflection — evaluates AI suggestions against deep knowledge of students",
+      "grounding_span": "I know my pupils well so I reflect on the AI's suggestions and move forward with what would work for my particular pupils"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

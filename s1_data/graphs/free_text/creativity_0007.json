@@ -1,0 +1,205 @@
+{
+  "transcript_id": "creativity_0007",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as optimization assistant for trends and algorithms",
+      "label_negative": "AI as threat to authentic voice",
+      "bipolarity_complete": true,
+      "grounding_span": "Having an engine to keep up with algorithms, feature changes, and trends to point those details in the right direction is helpful"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as guide for creative direction",
+      "label_negative": "Human in driver's seat making creative decisions",
+      "bipolarity_complete": true,
+      "grounding_span": "I definitely feel like AI is guiding the direction, which is the part I feel uneasy about"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as industry knowledge substitute",
+      "label_negative": "Personal research and staying in tune with industry standards",
+      "bipolarity_complete": true,
+      "grounding_span": "I am less in tune with industry standards, so to speak. Before AI, I dedicated more time to researching what was changing with social media"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as supplement to creative process",
+      "label_negative": "AI as substitute for human creativity",
+      "bipolarity_complete": true,
+      "grounding_span": "AI should be a supplement to the stages of the creative process, not a substitute"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as assistant not crutch",
+      "label_negative": "AI as crutch replacing skill development",
+      "bipolarity_complete": true,
+      "grounding_span": "I'm using AI as a true assistant and not crutch"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI representation of diverse identities",
+      "label_negative": "AI bias in representation (colorism, texturism, featurism)",
+      "bipolarity_complete": true,
+      "grounding_span": "if I plug my photo into an image generator/manipulators, I can all but guarantee that my skin will be lightened, my hair texture will be loosened"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Authentic self-expression",
+      "grounding_span": "I still make sure the 'bones' are authentically me"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Creative success and relevance",
+      "grounding_span": "keeps me honest and up with the times"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Personal growth and skill development",
+      "grounding_span": "I'm making a conscious effort to continue my education"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Cultural representation and equity",
+      "grounding_span": "cultural competency remains important in the development of creative AI"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Unease about AI guiding creative direction",
+      "valence": "negative",
+      "grounding_span": "I definitely feel like AI is guiding the direction, which is the part I feel uneasy about"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Appreciation for AI optimization help",
+      "valence": "positive",
+      "grounding_span": "Having an engine to keep up with algorithms, feature changes, and trends to point those details in the right direction is helpful"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Concern about AI limiting discovery",
+      "valence": "negative",
+      "grounding_span": "I'm afraid that some of the discovery that drives expression could be lost"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Commitment to using AI as assistant not crutch",
+      "valence": "positive",
+      "grounding_span": "I'm using AI as a true assistant and not crutch"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Critique of AI bias in representation",
+      "valence": "negative",
+      "grounding_span": "it's dangerous for an AI engine to send the message that the ideal is anything and everything BUT what you are"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Authenticity-preserving integration — uses AI for optimization while maintaining core creative identity",
+      "grounding_span": "I still make sure the 'bones' are authentically me"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Conscious skill development alongside AI use — proactive learning to avoid dependency",
+      "grounding_span": "I'm making a conscious effort to continue my education, so I'm using AI as a true assistant and not crutch"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n4",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

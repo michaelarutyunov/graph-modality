@@ -1,0 +1,149 @@
+{
+  "transcript_id": "science_0064",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as brainstorming and validation tool",
+      "label_negative": "AI as unreliable for specialized document analysis",
+      "bipolarity_complete": true,
+      "grounding_span": "AI tools were employed to try and source this information"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability for specialized policy context",
+      "label_negative": "AI unreliability due to lack of professional context",
+      "bipolarity_complete": true,
+      "grounding_span": "without the specific professional context and overview that I have"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as time-saving tool",
+      "label_negative": "AI as time-wasting due to need for rework",
+      "bipolarity_complete": true,
+      "grounding_span": "I decided to use AI primarily for time management reasons"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as springboard for further research",
+      "label_negative": "AI as complete autonomous solution",
+      "bipolarity_complete": true,
+      "grounding_span": "The AI essentially provided me with a springboard to find the information myself"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Efficiency and time management",
+      "grounding_span": "time management reasons"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Professional expertise and contextual understanding",
+      "grounding_span": "applying my own expertise and knowledge of the London locale"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Trust and reliability in AI outputs",
+      "grounding_span": "I am left unable to fully trust AI to do such tasks for me"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Positive stance toward AI for brainstorming and validation",
+      "valence": "positive",
+      "grounding_span": "AI tools were employed to try and source this information"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Negative stance toward AI for specialized document analysis",
+      "valence": "negative",
+      "grounding_span": "the AI tools were not particularly useful"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Ambivalent stance toward AI reliability",
+      "valence": "ambivalent",
+      "grounding_span": "I am left unable to fully trust AI to do such tasks for me"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative validation using own expertise",
+      "grounding_span": "I verify or validate what it produces by applying my own expertise"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic experimentation with AI limitations",
+      "grounding_span": "I have tried it there, but I have had limited success"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

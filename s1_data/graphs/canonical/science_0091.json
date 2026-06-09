@@ -1,0 +1,179 @@
+{
+  "transcript_id": "science_0091",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as thought partner for logic checking",
+      "label_negative": "AI as unreliable statistical advisor",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI LLMs as a sense check"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as idea generator for novel experimental angles",
+      "label_negative": "AI as threat to originality and control",
+      "bipolarity_complete": true,
+      "grounding_span": "Coming up with a novel twist on your ideas"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as data manipulation tool",
+      "label_negative": "AI as misleading interpreter",
+      "bipolarity_complete": true,
+      "grounding_span": "An alternative interpretation of the data as a sense check"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Maintaining control over research process",
+      "label_negative": "Losing control to AI automation",
+      "bipolarity_complete": true,
+      "grounding_span": "I can't let go of too much control"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI for subjective data analysis",
+      "label_negative": "AI overstepping into subjective judgment",
+      "bipolarity_complete": true,
+      "grounding_span": "AI could transform that aspect of research too"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Scientific validity and accuracy",
+      "grounding_span": "what statistical tests would really be most scientifically valid"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Personal intellectual ownership",
+      "grounding_span": "keep track of the things that you delivered from your reasoning and scientific know-how"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Human expertise and adaptability",
+      "grounding_span": "statistics colleagues are too few, and too busy"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Positive reliance on AI for statistical validation",
+      "valence": "positive",
+      "grounding_span": "if they agreed with me, it must be correct, right?"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Positive view of AI as idea generator",
+      "valence": "ambivalent",
+      "grounding_span": "Coming up with a novel twist on your ideas"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Reluctance to use AI for writing",
+      "valence": "negative",
+      "grounding_span": "I don't want to accept all the applications from researchers around the world"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Resistance to AI for subjective content",
+      "valence": "negative",
+      "grounding_span": "that's where I start to feel uncomfortable"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Cross-validation with multiple LLMs",
+      "grounding_span": "I then check that answer with a different LLM"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Boundary-setting based on control and risk assessment",
+      "grounding_span": "I can't let go of too much control"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n5",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

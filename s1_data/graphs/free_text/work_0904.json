@@ -1,0 +1,176 @@
+{
+  "transcript_id": "work_0904",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative sounding board for idea generation",
+      "label_negative": "Solo ideation without external input",
+      "bipolarity_complete": true,
+      "grounding_span": "I use it alot to bounce off ideas"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as focus and organization aid for scattered thinking",
+      "label_negative": "Unassisted scattered thinking",
+      "bipolarity_complete": true,
+      "grounding_span": "I have ADHD and I find that it helps me get more focused on topics"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as time-saving research tool",
+      "label_negative": "Time-consuming manual research",
+      "bipolarity_complete": true,
+      "grounding_span": "it cut the amount of time used up on research by a significant amount"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as draft reviewer for communication",
+      "label_negative": "Unreviewed self-written communication",
+      "bipolarity_complete": true,
+      "grounding_span": "I might send a draft of a work email to make sure I am not missing anything"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Personal ownership of creative design work",
+      "label_negative": "AI-generated designs for sale",
+      "bipolarity_complete": true,
+      "grounding_span": "I do not feel comfortable selling anything I did not make myself"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as collaborative partner mimicking office camaraderie",
+      "label_negative": "Isolated solo work without collaboration",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI to imitate the way I would solve things in the office"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "cut the amount of time used up on research by a significant amount"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Cognitive clarity and focus",
+      "grounding_span": "helps me get more focused on topics"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Authenticity and personal integrity in creative work",
+      "grounding_span": "I do not feel comfortable selling anything I did not make myself"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Collaborative problem-solving",
+      "grounding_span": "I use AI to imitate the way I would solve things in the office"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI for time savings",
+      "valence": "positive",
+      "grounding_span": "finding tools that cut down the time I spent on other tasks was always extremely satisfying"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Resistance to AI in creative design",
+      "valence": "negative",
+      "grounding_span": "I do not feel comfortable selling anything I did not make myself"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Preference for collaborative interaction pattern",
+      "valence": "positive",
+      "grounding_span": "I will collaborate with it throughout a task"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative externalization — uses AI as a thinking partner to structure thoughts",
+      "grounding_span": "I use it alot to bounce off ideas"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative drafting and review — writes own draft then refines with AI",
+      "grounding_span": "I always write a draft first rather than telling AI to create one on its own"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

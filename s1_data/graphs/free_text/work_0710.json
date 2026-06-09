@@ -1,0 +1,187 @@
+{
+  "transcript_id": "work_0710",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as creative catalyst for writing",
+      "label_negative": "AI as insufficient for final writing",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is not good enough to write news articles as well as professional journalists"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as efficient information sifter",
+      "label_negative": "Manual sifting through large documents",
+      "bipolarity_complete": true,
+      "grounding_span": "sift through large blocks of text for information that is relevant to news coverage"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI accuracy in summarization tasks",
+      "label_negative": "AI errors requiring verification",
+      "bipolarity_complete": true,
+      "grounding_span": "I have found AI to be particularly accurate at these types of tasks"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as collaborative iterative partner",
+      "label_negative": "AI as independent autonomous agent",
+      "bipolarity_complete": true,
+      "grounding_span": "I generally collaborate with AI. I give it instructions and then I often refine those instructions later"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as speed enabler in deadline-driven work",
+      "label_negative": "Time-consuming manual processes",
+      "bipolarity_complete": true,
+      "grounding_span": "speed is particularly important in the newspaper business"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "Human-centered journalism as AI-resistant domain",
+      "label_negative": "Data-driven journalism as AI-replaceable",
+      "bipolarity_complete": true,
+      "grounding_span": "I have been prioritizing the types of stories that AI is not good enough to generate — stories that have more human angles rather than data angles"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Creative productivity and overcoming writer's block",
+      "grounding_span": "AI allows me to break a creative block when writing stories"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and speed in news production",
+      "grounding_span": "speed is particularly important in the newspaper business"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Journalistic integrity and human judgment",
+      "grounding_span": "news organizations will not want to put their entire reputation in the hands of an AI"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI as creative block breaker",
+      "valence": "positive",
+      "grounding_span": "I generally feel particularly satisfied when AI allows me to break a creative block"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Trust in AI accuracy for summarization",
+      "valence": "positive",
+      "grounding_span": "I have found AI to be particularly accurate at these types of tasks"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Pragmatic openness to expanding AI use",
+      "valence": "positive",
+      "grounding_span": "I expect AI to continue playing an increasing role in my work"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Skepticism about AI replacing human journalists",
+      "valence": "negative",
+      "grounding_span": "I don't think they will replace humans"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement — starts broad then narrows",
+      "grounding_span": "I generally start with more open ended prompts and then make them more specific as needed"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic domain prioritization — focuses on human angles",
+      "grounding_span": "I have been prioritizing the types of stories that AI is not good enough to generate — stories that have more human angles"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

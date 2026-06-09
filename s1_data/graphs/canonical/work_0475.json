@@ -1,0 +1,169 @@
+{
+  "transcript_id": "work_0475",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as supplement to creative process",
+      "label_negative": "AI as repetitive, generic tool",
+      "bipolarity_complete": true,
+      "grounding_span": "we both suggest changes and we work like that until it feels right"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as efficiency tool",
+      "label_negative": "AI for tasks requiring personal voice and authenticity",
+      "bipolarity_complete": true,
+      "grounding_span": "I used AI to create a content calendar for me"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI hallucination and error",
+      "bipolarity_complete": true,
+      "grounding_span": "half the suggestions aren't even real, that is annoying"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Workplace acceptance of AI use",
+      "label_negative": "AI use hidden due to community stigma",
+      "bipolarity_complete": true,
+      "grounding_span": "I try to keep my use of it to myself so that I don't leave myself open to angry people"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI capability for complex tasks",
+      "label_negative": "AI as unreliable autonomous agent",
+      "bipolarity_complete": true,
+      "grounding_span": "I would need to feel more confident in it actually just doing what I ask it to"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Personal authenticity and unique voice",
+      "grounding_span": "I think it's important that I keep my voice and personality in my writing"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "it would save me a lot of time"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Social belonging and avoidance of conflict",
+      "grounding_span": "I try to keep my use of it to myself so that I don't leave myself open to angry people"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Resistance to AI in creative work",
+      "valence": "positive",
+      "grounding_span": "I think a time when I was particularly satisfied is when I used AI to create a content calendar for me"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI errors",
+      "valence": "negative",
+      "grounding_span": "I do get frustrated when an Etsy listing uses phrases like 'Step into...'"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI hallucination",
+      "valence": "negative",
+      "grounding_span": "half the suggestions aren't even real, that is annoying"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Cautious approach to AI autonomy",
+      "valence": "ambivalent",
+      "grounding_span": "I would need to feel more confident in it actually just doing what I ask it to"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement with limited back-and-forth",
+      "grounding_span": "we both suggest changes and we work like that until it feels right"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-specific delegation based on task nature",
+      "grounding_span": "for things like my social media posts or blog posts I will write those myself"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

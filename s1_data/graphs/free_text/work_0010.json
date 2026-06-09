@@ -1,0 +1,189 @@
+{
+  "transcript_id": "work_0010",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as research starting point and fact-checker",
+      "label_negative": "AI as sole source of knowledge without personal understanding",
+      "bipolarity_complete": true,
+      "grounding_span": "I'm basically using it as a starting point for my own research, and then I return to it to fact-check my research"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for novel unfamiliar tasks",
+      "label_negative": "AI for routine mastered tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I only really turn to AI when something new turns up"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for simple how-to questions",
+      "label_negative": "AI for nuanced judgment calls",
+      "bipolarity_complete": true,
+      "grounding_span": "It's useful when I ask simple 'how to' questions though"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as delegation tool rather than collaborator",
+      "label_negative": "AI as collaborative partner throughout process",
+      "bipolarity_complete": true,
+      "grounding_span": "It's much more delegation than it is collaboration"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Maintaining personal knowledge and skills",
+      "label_negative": "Over-reliance on AI diminishing knowledge",
+      "bipolarity_complete": true,
+      "grounding_span": "I'm very keen to maintain my knowledge and I guess I see over-reliance on AI as a way to diminish what I know"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Personal competence and self-reliance",
+      "grounding_span": "I'll know the answer myself"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and accuracy in work",
+      "grounding_span": "It's useful for efficiency"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Career adaptability and future-proofing",
+      "grounding_span": "the only option is to widen that skillset now while AI is still developing"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for research and verification",
+      "valence": "positive",
+      "grounding_span": "I pretty much use it exclusively for research"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI for nuanced bookkeeping",
+      "valence": "negative",
+      "grounding_span": "I get quite frustrated"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Proactive concern about job displacement",
+      "valence": "negative",
+      "grounding_span": "I'm definitely aware that AI could cover that scope in the near or distant future"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Intentional limitation of AI use to preserve knowledge",
+      "valence": "ambivalent",
+      "grounding_span": "I don't think I'd widen the way I use it any time soon"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Step-by-step decomposition of tasks",
+      "grounding_span": "I just find it simpler to break it down at every step"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Learning-by-doing with AI as check",
+      "grounding_span": "I'll use this question as a starting point for my own study, rather than asking the AI for the answer"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

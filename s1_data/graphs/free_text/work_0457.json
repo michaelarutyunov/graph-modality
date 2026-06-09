@@ -1,0 +1,194 @@
+{
+  "transcript_id": "work_0457",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as efficient pre-editor for low-level edits",
+      "label_negative": "AI as error-prone editor requiring manual correction",
+      "bipolarity_complete": true,
+      "grounding_span": "having those pre-edits done felt like it made the workflow more efficient"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI rule-based editing with limited contextual understanding",
+      "label_negative": "AI nuanced contextual editing",
+      "bipolarity_complete": true,
+      "grounding_span": "The AI editor could not always understand these nuances"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI knowledge cutoff causing misinterpretation of recent events",
+      "label_negative": "AI up-to-date knowledge",
+      "bipolarity_complete": true,
+      "grounding_span": "if a paper referred to something very recent, after the AI's knowledge cutoff, it would assume that the author was referring to the future"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as competitive threat in freelancing",
+      "label_negative": "AI as tool for opportunity creation",
+      "bipolarity_complete": true,
+      "grounding_span": "I sometimes wonder if any of the bids were written by real human beings"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI use as potential dishonesty in job applications",
+      "label_negative": "AI use as acceptable optimization",
+      "bipolarity_complete": true,
+      "grounding_span": "I worry about whether employers would spot that, think of it as cheating, and disqualify me"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Work efficiency and productivity",
+      "grounding_span": "taking less time on a given document was important"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Accuracy and quality in editing",
+      "grounding_span": "I still had to read the document carefully because sometimes the AI editor made mistakes"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Fair competition and authenticity",
+      "grounding_span": "I worry about whether employers would spot that, think of it as cheating, and disqualify me"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI efficiency gains",
+      "valence": "positive",
+      "grounding_span": "having those pre-edits done felt like it made the workflow more efficient"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI contextual errors",
+      "valence": "negative",
+      "grounding_span": "It was sometimes frustrating to have to undo an AI edit"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Worry about AI competition in freelancing",
+      "valence": "negative",
+      "grounding_span": "I sometimes wonder if any of the bids were written by real human beings"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Ambivalence about using AI for job applications",
+      "valence": "ambivalent",
+      "grounding_span": "The dilemma is having to choose between trying to compete with AI vs. using it but being considered dishonest for doing so"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Careful verification and thorough review",
+      "grounding_span": "It mainly ensured that I did my own careful reading"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Wish for more control and communication with AI",
+      "grounding_span": "I did wish I could communicate with it"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

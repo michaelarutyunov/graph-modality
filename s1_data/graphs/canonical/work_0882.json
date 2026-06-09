@@ -1,0 +1,221 @@
+{
+  "transcript_id": "work_0882",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as brainstorming and idea generator",
+      "label_negative": "AI as sole or primary workhorse",
+      "bipolarity_complete": true,
+      "grounding_span": "I like using AI as an initial starting point ... and something to end with"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI trustworthiness and verification",
+      "label_negative": "AI confident hallucination",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't really trust a lot of the output because it is so prone to confident hallucinations"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as efficiency tool for data analysis",
+      "label_negative": "Manual rewording without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "the most useful thing AI does for me is rewording - it just makes the process go faster"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as search tool for simple queries",
+      "label_negative": "AI as autonomous task completer",
+      "bipolarity_complete": true,
+      "grounding_span": "I'm always right there along side it, mostly because I don't trust it much"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Personal touch in client communications",
+      "label_negative": "AI-mediated communication",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't want to completely let go of the human aspect just yet"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI inaccuracy and hallucination",
+      "bipolarity_complete": true,
+      "grounding_span": "I know that AI can be inaccurate (sometimes wildly)"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional competence",
+      "grounding_span": "if you rely on AI and it gets it wrong, you're still at fault ... it's still my reputation at stake"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "it just makes the process go faster"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Authenticity and personal integrity",
+      "grounding_span": "having that human touch ... is just important"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Cautious appreciation for AI's unique capabilities",
+      "valence": "ambivalent",
+      "grounding_span": "little to no other tool else can really do what it does - answer nuanced questions, quickly, for free"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Distrust due to hallucination experience",
+      "valence": "negative",
+      "grounding_span": "I don't really trust a lot of the output because it is so prone to confident hallucinations"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI for wording tasks",
+      "valence": "positive",
+      "grounding_span": "the most useful thing AI does for me is rewording - it just makes the process go faster"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Resistance to AI in client communication",
+      "valence": "negative",
+      "grounding_span": "I'm not a massive fan of the idea that its just bots talking to bots"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Satisfaction with AI discovering obscure case",
+      "valence": "positive",
+      "grounding_span": "when an obscure case surfaces in seconds with the help of AI - that's great"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Frustration with AI errors",
+      "valence": "negative",
+      "grounding_span": "those times were I correct it and it either rebuffs me with the same hallucination or just keeps apologising ... that gets kind of annoying"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Piecewise decomposition of queries",
+      "grounding_span": "I word my questions to get answers piece by piece instead of giving it a chunk of information"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain expertise as primary filter",
+      "grounding_span": "a lot of it is just down to whether you know your stuff or not - you can tell pretty quickly"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n5",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

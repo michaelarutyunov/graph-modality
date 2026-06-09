@@ -1,0 +1,202 @@
+{
+  "transcript_id": "creativity_0037",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as bridge between mental creativity and execution",
+      "label_negative": "Inability to translate creative vision into tangible form",
+      "bipolarity_complete": true,
+      "grounding_span": "I have more creativity in my mind than in my hand so AI helps me in that regard"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as creative collaborator and idea spark",
+      "label_negative": "AI as unresponsive or frustrating tool",
+      "bipolarity_complete": true,
+      "grounding_span": "AI provides excellent collaboration and can spark more creativity for me"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability in image editing and refinement",
+      "label_negative": "AI inability to edit images without introducing errors",
+      "bipolarity_complete": true,
+      "grounding_span": "the AI just could not seem to do it... it might even elicit more errors"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI eloquence in creative writing",
+      "label_negative": "Personal struggle with wording and tone",
+      "bipolarity_complete": true,
+      "grounding_span": "AI's creative writing is fantastic. It can help me put my thoughts to paper"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI enabling multi-layered creative projects",
+      "label_negative": "Limitation to single-medium creation",
+      "bipolarity_complete": true,
+      "grounding_span": "instead of creating just a coloring page, I can expand to create a passage with the coloring page"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI accessibility vs. impact on human artists",
+      "label_negative": "AI taking work away from artists",
+      "bipolarity_complete": true,
+      "grounding_span": "I do have concerns about taking work away from artists"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Creative self-expression and actualization",
+      "grounding_span": "I have more creativity in my mind than in my hand so AI helps me in that regard"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "I can create social media faster when I don't have to spend time struggling with getting the words out"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Artistic community and fairness",
+      "grounding_span": "I do have concerns about taking work away from artists"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Enthusiasm for AI as creative enabler",
+      "valence": "positive",
+      "grounding_span": "I feel like it opens me up to endless possibilities"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI image editing limitations",
+      "valence": "negative",
+      "grounding_span": "the AI just could not seem to do it... it might even elicit more errors"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Awe at AI writing quality",
+      "valence": "positive",
+      "grounding_span": "I was floored by the results. It was so on point with my intention"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Concern about AI displacing human artists",
+      "valence": "negative",
+      "grounding_span": "I do have concerns about taking work away from artists"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative experimentation and platform exploration",
+      "grounding_span": "I am still playing around with all different AIs for image creation"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Vision-driven creative expansion — building multi-layered projects from core ideas",
+      "grounding_span": "This leads me to brainstorming what else I could create along those lines"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n6",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

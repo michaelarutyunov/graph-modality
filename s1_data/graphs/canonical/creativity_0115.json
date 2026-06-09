@@ -1,0 +1,223 @@
+{
+  "transcript_id": "creativity_0115",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as research assistant",
+      "label_negative": "AI as unreliable source for practical constraints",
+      "bipolarity_complete": true,
+      "grounding_span": "I'll have a chat with an AI to see what other chatter is out there, and see if I'm overlooking potential pitfalls"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as supplement to creative process",
+      "label_negative": "AI as creativity dead end or hallucination source",
+      "bipolarity_complete": true,
+      "grounding_span": "When I need some creative inspiration, I'll turn to the AI as a first pass"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI image generation capability",
+      "label_negative": "AI image generation as final product substitute",
+      "bipolarity_complete": true,
+      "grounding_span": "I'll get the base idea out via AI, and then I use that output to guide a painted image by hand"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI enabling laziness vs quality craftsmanship",
+      "label_negative": "AI misreading of craftsmanship level",
+      "bipolarity_complete": true,
+      "grounding_span": "The AI completely misread the craftsmanship level you were working at"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as writing displacement threat",
+      "label_negative": "AI as writing enhancement tool",
+      "bipolarity_complete": true,
+      "grounding_span": "Unfortunately I've given up writing. That has been the most easily displaced by AI"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as threat to artistic endeavors",
+      "label_negative": "AI as style confiner",
+      "bipolarity_complete": true,
+      "grounding_span": "The AI has pushed me to a more psychedelic, abstract shapes plus organic creatures"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI as future music composition enabler",
+      "label_negative": "AI as music creativity diminisher",
+      "bipolarity_complete": true,
+      "grounding_span": "I'm really intrigued about the possibility of reigniting my musical interests with AI"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Creative exploration and ideation",
+      "grounding_span": "I do a lot of experimenting and testing"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Authentic skill and craftsmanship",
+      "grounding_span": "very intricate hand-embroidered and appliqued eyes"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Commercial viability and quality",
+      "grounding_span": "things I wouldn't have painted just on my own, but are 'out there' enough I can get actual purchasers"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Creative autonomy",
+      "grounding_span": "I personally don't feel it diminishes me or my creativity"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Positive satisfaction with AI for visualization",
+      "valence": "positive",
+      "grounding_span": "That really surprised me!"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Confidence in AI-proof craftsmanship",
+      "valence": "negative",
+      "grounding_span": "I was disappointed once I thought about it a little more"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Frustration with AI's lack of cultural nuance",
+      "valence": "negative",
+      "grounding_span": "the AI didn't get it - it suggested Harry Potter candy (wrong era)"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Resignation toward job displacement",
+      "valence": "negative",
+      "grounding_span": "Unfortunately I've given up writing"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Concern about AI-generated music flooding the market",
+      "valence": "positive",
+      "grounding_span": "I'm really intrigued about the possibility of reigniting my musical interests with AI"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative experimentation and trial-and-error",
+      "grounding_span": "I do a lot of experimenting and testing"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-specific calibration of AI use",
+      "grounding_span": "I've had to keep my enthusiasm for it off the radar"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n5",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

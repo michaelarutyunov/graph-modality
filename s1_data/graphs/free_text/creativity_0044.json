@@ -1,0 +1,221 @@
+{
+  "transcript_id": "creativity_0044",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as research and outlining partner",
+      "label_negative": "AI as unreliable or overreaching creative collaborator",
+      "bipolarity_complete": true,
+      "grounding_span": "research and outlining partner - a tool for the most part"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI fact-checking and verification reliability",
+      "label_negative": "AI inaccuracy in data extraction from visuals",
+      "bipolarity_complete": true,
+      "grounding_span": "it couldn't read it accurately. This meant I still had to spend a lot of time verifying"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as cognitive flow maintainer",
+      "label_negative": "AI as source of generic or unhelpful output",
+      "bipolarity_complete": true,
+      "grounding_span": "it helps keep things moving if I'm 'dreading the blank page'"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI creative feedback quality",
+      "label_negative": "AI feedback as too zealous and generic",
+      "bipolarity_complete": true,
+      "grounding_span": "it is too zealous with what should be changed, giving feedback that is both vague and broad"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI adaptation to personal writing style",
+      "label_negative": "AI generic voice and template-like output",
+      "bipolarity_complete": true,
+      "grounding_span": "I've carefully developed a custom instructions template and fed the project multiple articles of mine to help guide the style"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI impact on creative work market",
+      "label_negative": "AI replacing human creative jobs",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is taking over these freelance positions, but I'm personally ok with that"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI as enhancer of creative works",
+      "label_negative": "AI deadening overall voice and feeling",
+      "bipolarity_complete": true,
+      "grounding_span": "AI can be used as a tool to improve creative works"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "the time to write an article I would say is 25 to 50% faster"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Cognitive flow and creative momentum",
+      "grounding_span": "the main benefit is cognitive flow"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Authentic personal voice and style",
+      "grounding_span": "it's important to keep my voice in the writing"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Accuracy and truthfulness",
+      "grounding_span": "fact check everything I might use for the article"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Pragmatic acceptance of AI in low-end work",
+      "valence": "positive",
+      "grounding_span": "I'm personally ok with that. I'd like AI to take over a lot of work"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Skepticism toward AI creative feedback",
+      "valence": "negative",
+      "grounding_span": "I take its opinion with a grain of salt"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Optimism about AI enhancing creativity",
+      "valence": "positive",
+      "grounding_span": "AI can be used as a tool to improve creative works"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Concern about AI deadening voice",
+      "valence": "negative",
+      "grounding_span": "it does 'deaden' overall voice and feeling of writing throughout the web"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Systematic multi-tool verification workflow",
+      "grounding_span": "ask another (usually different AI) to fact check everything"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic calibration of AI reliance based on task",
+      "grounding_span": "I take its opinion with a grain of salt, but it can be helpful"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n12",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

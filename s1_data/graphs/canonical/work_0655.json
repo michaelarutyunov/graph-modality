@@ -1,0 +1,217 @@
+{
+  "transcript_id": "work_0655",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as professional polish tool",
+      "label_negative": "AI as unreliable text editor that alters quotes",
+      "bipolarity_complete": true,
+      "grounding_span": "Helping me polish and condense fairly short (~1000 words) articles"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as headline and subhead generator",
+      "label_negative": "AI as insufficiently specific headline generator",
+      "bipolarity_complete": true,
+      "grounding_span": "help craft snappy ledes, headlines, and subheads"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as comprehension aid for unfamiliar topics",
+      "label_negative": "AI as inadequate for interview preparation",
+      "bipolarity_complete": true,
+      "grounding_span": "I have used AI to come up with questions for interviews, and it does a great job"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as time-saving tool",
+      "label_negative": "AI as unnecessary crutch when time is ample",
+      "bipolarity_complete": true,
+      "grounding_span": "I was past deadline... I popped the entire story into an AI assistant, which condensed it and made it sound more professional"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI use as cheating vs. legitimate tool",
+      "label_negative": "AI use as cheating",
+      "bipolarity_complete": true,
+      "grounding_span": "I held off on using AI in writing because I considered that to be cheating"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "Customer privacy concerns with AI",
+      "label_negative": "Non-disclosure of AI use to clients",
+      "bipolarity_complete": true,
+      "grounding_span": "I have not discussed my AI use with the publisher or my editor"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional accuracy and reliability",
+      "grounding_span": "Make this more concise but do not change any quotes"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "I was past deadline... it did an outstanding job"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Job security and skill relevance",
+      "grounding_span": "I don't want them to realize how easy it would be for them to rely more on AI instead of me"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Authenticity and personal integrity",
+      "grounding_span": "I held off on using AI in writing because I considered that to be cheating"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Cautious trust in AI for text polishing with verification",
+      "valence": "ambivalent",
+      "grounding_span": "It does make me more cautious... I triple checked that it did not misattribute any of those quotes"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI for title generation",
+      "valence": "positive",
+      "grounding_span": "they give me a good jumping-off point"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Positive evaluation of AI for interview questions",
+      "valence": "positive",
+      "grounding_span": "it does a great job"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Gratitude for AI as a guide",
+      "valence": "positive",
+      "grounding_span": "It did an outstanding job"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Strategic concealment of AI use",
+      "valence": "mixed",
+      "grounding_span": "I have not discussed my AI use with the publisher or my editor"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Pragmatic acceptance of AI as a tool",
+      "valence": "positive",
+      "grounding_span": "I think it is perfectly fine to rely on technology in some cases"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Verification-oriented — cross-checks AI outputs against other sources",
+      "grounding_span": "With two windows open on my computer, I checked my original text with what the model produced"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic concealment — selective disclosure of tool use to protect professional standing",
+      "grounding_span": "I do not talk openly about using these tools"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

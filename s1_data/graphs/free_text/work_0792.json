@@ -1,0 +1,157 @@
+{
+  "transcript_id": "work_0792",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as efficient generator of military documentation",
+      "label_negative": "Manual writing of military documents",
+      "bipolarity_complete": true,
+      "grounding_span": "AI helped me to write an evaluation for one of my Soldiers and it turned out great"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as tool for text rewriting and formatting",
+      "label_negative": "Manual rewriting without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I have also used it to reword certain texts to fit into a criteria I am looking for"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI integration in workplace acceptance",
+      "label_negative": "Resistance to AI adoption",
+      "bipolarity_complete": true,
+      "grounding_span": "Others are seeing the benefit of having AI produce some of the repetitive tasks"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Personal control over email style",
+      "label_negative": "AI-generated email communication",
+      "bipolarity_complete": true,
+      "grounding_span": "I have a specific style of emailing to be both professional and personable"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as tool for future complex outputs",
+      "label_negative": "Manual creation of complex documents",
+      "bipolarity_complete": true,
+      "grounding_span": "Using AI to build schedules and eventually more complex outputs such as Microsoft Excel sheets"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Professional efficiency and productivity",
+      "grounding_span": "using AI made the process much simpler and faster for me"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Personal authenticity and style",
+      "grounding_span": "I have a specific style of emailing to be both professional and personable"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Skill development and integration",
+      "grounding_span": "I have looked at different AI options that specialize in different aspects to learn more"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for evaluation writing",
+      "valence": "positive",
+      "grounding_span": "AI helped me to write an evaluation for one of my Soldiers and it turned out great"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Preference for personal control over email",
+      "valence": "negative",
+      "grounding_span": "I have a specific style of emailing to be both professional and personable"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Optimism about future AI integration",
+      "valence": "positive",
+      "grounding_span": "Using AI to build schedules and eventually more complex outputs such as Microsoft Excel sheets"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Methodical upfront information provision with iterative refinement",
+      "grounding_span": "I typically provide the totality of the information in one submission, and then ask for specific rewrites"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Proactive exploration of specialized AI tools",
+      "grounding_span": "I have looked at different AI options that specialize in different aspects to learn more"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

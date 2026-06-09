@@ -1,0 +1,226 @@
+{
+  "transcript_id": "work_0376",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as double-checker and second pair of eyes",
+      "label_negative": "AI as unreliable or hallucinating source",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I use AI as an assistant that can double check my work and provide me a new perspective"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as report comparison assistant",
+      "label_negative": "Manual comparison without AI assistance",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I used AI to help create a chart to compare all units, and used AI to help figure out which upgrades, parts, and accessories are actually relevant"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability and factuality",
+      "label_negative": "AI hallucination and inaccuracy",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "AI is also used for fact-checking and ensuring what the researcher claims aligns logically with their results"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Human handling of sensitive interpersonal communication",
+      "label_negative": "AI-mediated sensitive communication",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I prefer personally writing emails or arranging meetings to break the bad news to users"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Confidentiality in AI use",
+      "label_negative": "AI access to sensitive research data",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I often have to resort to manually analyzing the data or running analysis on my own programs due to data privacy concerns"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as task decomposition tool",
+      "label_negative": "Delegating entire tasks to AI independently",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I would break down complex tasks into smaller portions and use AI to aid me bit-by-bit"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI as enhancement tool not replacement",
+      "label_negative": "AI replacing human skills and judgment",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I use AI as a supplement to make my work better and further our research as opposed to do my work for me"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Research integrity and accuracy",
+      "valence": null,
+      "grounding_span": "ensuring what the researcher claims aligns logically with their results"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Efficiency and cost reduction",
+      "valence": null,
+      "grounding_span": "we were able to save tens of thousands of dollars with this method"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Interpersonal trust and nuanced communication",
+      "valence": null,
+      "grounding_span": "I know how best to deal with each individual person"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Privacy and data security",
+      "valence": null,
+      "grounding_span": "we cannot take the risk of the data being incorporated into AI training datasets"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Critical thinking and skill development",
+      "valence": null,
+      "grounding_span": "we need to be creative, maintain good people-skills, and be able to critically think"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Satisfaction with AI for technical setup",
+      "valence": "positive",
+      "grounding_span": "we were able to save tens of thousands of dollars with this method, and purchased equipment that many of our users were very happy with"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Frustration with AI hallucination",
+      "valence": "negative",
+      "grounding_span": "the AI model I used struggled heavily, hallucinating information, presenting inaccuracies, and ultimately failing to provide the help I expected"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Preference for personal curation over AI recommendations",
+      "valence": "positive",
+      "grounding_span": "I actually actively recommend colleagues to try incorporating AI into their work"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Confidence in AI as a key skill",
+      "valence": "positive",
+      "grounding_span": "I have been able to increase my overall work efficiency without sacrificing any human aspects"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Systematic iterative decomposition of tasks",
+      "valence": null,
+      "grounding_span": "I would break down complex tasks into smaller portions and use AI to aid me bit-by-bit"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Context-sensitive interpersonal calibration",
+      "valence": null,
+      "grounding_span": "I know how best to deal with each individual person"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n13",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n6",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n5",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

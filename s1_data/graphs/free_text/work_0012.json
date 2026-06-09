@@ -1,0 +1,197 @@
+{
+  "transcript_id": "work_0012",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as writing assistant for rough drafts",
+      "label_negative": "Manual writing without AI assistance",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI for writing-heavy tasks, such as drafting emails"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as idea completer",
+      "label_negative": "AI misunderstanding or failing to capture ideas",
+      "bipolarity_complete": true,
+      "grounding_span": "sometimes it comes up with the words I could not to complete my thought"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability and hallucination risk",
+      "label_negative": "AI accuracy and trustworthiness",
+      "bipolarity_complete": true,
+      "grounding_span": "Hallucinations are a problem, so my approach is often using AI to start in the right direction, but I always assume the AI is lying to me"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI use for simple/repetitive coding",
+      "label_negative": "AI use for complex coding tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "For simple or repetitive coding I will use AI, but for complex tasks I prefer to do them myself"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI delegation for low-risk tasks",
+      "label_negative": "AI collaboration for high-risk tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "For really simple stuff with lots of boilerplate, I completely delegate to the AI"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "Skill maintenance through limited AI use",
+      "label_negative": "Skill deterioration from over-reliance on AI",
+      "bipolarity_complete": true,
+      "grounding_span": "my own skillset deteriorates if I use AI too much in that area"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "I find it is much quicker to write a couple rough sentences"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional quality output",
+      "grounding_span": "the writing was such high quality that I could be a journalist"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Personal competence and skill preservation",
+      "grounding_span": "I think those skills are important to maintain in order to know how to correctly guide the AI"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for writing tasks",
+      "valence": "positive",
+      "grounding_span": "I was very pleased"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Cautious distrust due to hallucinations",
+      "valence": "negative",
+      "grounding_span": "I always assume the AI is lying to me"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Hesitation to use AI for complex coding",
+      "valence": "negative",
+      "grounding_span": "I am hesitant to use AI for [complex coding]"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Optimistic expectation of increased AI use",
+      "valence": "positive",
+      "grounding_span": "As it gets better I will lean on it more and more"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic experimentation — treats AI as optional speed tool",
+      "grounding_span": "Often I will use AI to see if I can do a task faster than if I did it manually. If it does not work, then it is fine"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Conservative assume-the-worst approach to AI outputs",
+      "grounding_span": "This is the conservative assume-the-worst approach"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

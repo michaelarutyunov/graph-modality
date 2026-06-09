@@ -1,0 +1,182 @@
+{
+  "transcript_id": "science_0015",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as efficient research filter",
+      "label_negative": "AI as source of final accurate answers",
+      "bipolarity_complete": true,
+      "grounding_span": "AI was useful for general guidance but specifics were ordinarily proven incorrect"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI reliability for recent specific research",
+      "bipolarity_complete": true,
+      "grounding_span": "AI's strength was in quoting past research that was over 10 years ago and is still being cited today. It is not particularly accurate in quoting recent research"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for professional communication",
+      "label_negative": "AI as content generator for scientific specifics",
+      "bipolarity_complete": true,
+      "grounding_span": "Several students used AI to find the best format to present their findings and actually found some good guidance here"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as threat to student learning assessment",
+      "label_negative": "Student uncritical acceptance of AI output",
+      "bipolarity_complete": true,
+      "grounding_span": "The students that approached this the way I would have done, used the AI for initial general direction and then used this to craft search terms for the major databases"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI trustworthiness and verification",
+      "label_negative": "AI fallibility requiring constant verification",
+      "bipolarity_complete": true,
+      "grounding_span": "It takes a lot of confidence, particularly in an area such as medicine, to say to students 'you can trust what this AI is saying'"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Research integrity and accuracy",
+      "grounding_span": "ALWAYS to confirm this themselves"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Research efficiency",
+      "grounding_span": "The students found AI useful to 'whittle down' this initial conventional step"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Critical thinking and skill development",
+      "grounding_span": "The students that approached this the way I would have done, used the AI for initial general direction and then used this to craft search terms"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Frustration with AI for software guidance",
+      "valence": "positive",
+      "grounding_span": "AI was useful for general guidance"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Negative view of AI for specific recent research",
+      "valence": "negative",
+      "grounding_span": "specifics were ordinarily proven incorrect"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Cautious stance on AI trust in medicine",
+      "valence": "ambivalent",
+      "grounding_span": "It takes a lot of confidence, particularly in an area such as medicine, to say to students 'you can trust what this AI is saying'"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Verification-first approach — always cross-check AI claims with trusted databases",
+      "grounding_span": "ALWAYS to confirm this themselves"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic task delegation — uses AI only for specific, bounded tasks",
+      "grounding_span": "AI was useful for general guidance but specifics were ordinarily proven incorrect"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

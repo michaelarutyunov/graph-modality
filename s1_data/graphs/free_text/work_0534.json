@@ -1,0 +1,164 @@
+{
+  "transcript_id": "work_0534",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as creative brainstorming partner",
+      "label_negative": "AI as repetitive suggestion generator",
+      "bipolarity_complete": true,
+      "grounding_span": "I use ai mostly for thinking through designs"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for ideation vs. hands-on creation",
+      "label_negative": "AI for actual pixel art creation",
+      "bipolarity_complete": true,
+      "grounding_span": "I prefer to do the actual creation of the art myself and to only use ai as a brainstorming partner"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI novelty and diversity of suggestions",
+      "label_negative": "AI repetitiveness and lack of novelty",
+      "bipolarity_complete": true,
+      "grounding_span": "It has a tendency to suggest the same specific modifications over and over"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI integration with visual input",
+      "label_negative": "Text-only AI interaction",
+      "bipolarity_complete": true,
+      "grounding_span": "I like the models where you can upload images"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Human artistic vision as essential driver",
+      "label_negative": "Fully automated AI art creation",
+      "bipolarity_complete": true,
+      "grounding_span": "it would still need a human component to drive it to make better art with an artists eye"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative inspiration and novel ideas",
+      "grounding_span": "helped me come up with a more cohesive design that hadn't actually occurred to me on my own"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Artistic craft and personal skill preservation",
+      "grounding_span": "I prefer to do the actual creation of the art myself"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and productivity in design process",
+      "grounding_span": "I might even come back after I've started a design"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI as creative consultant",
+      "valence": "positive",
+      "grounding_span": "It was really helpful"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI repetitiveness",
+      "valence": "negative",
+      "grounding_span": "pretty repetitive suggestions from ai that do get frustrating"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Concern about AI automation in art",
+      "valence": "negative",
+      "grounding_span": "it does worry me some, so many things can be automated with ai"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Hope for improved AI diversity",
+      "valence": "positive",
+      "grounding_span": "I'd like to see ai get a bit less repetitive"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative back-and-forth refinement",
+      "grounding_span": "definitely back and forth. I might even come back after I've started a design"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Visual-contextual thinking",
+      "grounding_span": "I like the models where you can upload images so I don't have to describe in detail"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

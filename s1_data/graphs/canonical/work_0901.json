@@ -1,0 +1,246 @@
+{
+  "transcript_id": "work_0901",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI for repetitive simple tasks",
+      "label_negative": "AI for tasks requiring deep expertise",
+      "bipolarity_complete": true,
+      "grounding_span": "tasks that do not require a lot of expertise, but are tedious"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as code template generator",
+      "label_negative": "Manual code writing from scratch",
+      "bipolarity_complete": true,
+      "grounding_span": "creating code templates"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as comprehensive search tool",
+      "label_negative": "Traditional search engines",
+      "bipolarity_complete": true,
+      "grounding_span": "replacement for google to ask questions"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI reliability and edge case handling",
+      "label_negative": "AI mistakes and omissions",
+      "bipolarity_complete": true,
+      "grounding_span": "it might make mistakes, or skip something"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Self-reliance for debugging to maintain skill",
+      "label_negative": "Delegating debugging to AI",
+      "bipolarity_complete": true,
+      "grounding_span": "To keep sharp"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI leading to skill atrophy through over-reliance",
+      "label_negative": "Balanced AI use preserving skills",
+      "bipolarity_complete": true,
+      "grounding_span": "people get over-dependent because of the convenience they offer"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI context switching breaking meditative coding state",
+      "label_negative": "AI integration preserving flow",
+      "bipolarity_complete": true,
+      "grounding_span": "constant context switching between the code and the LLM disallows getting into that meditative stance"
+    },
+    {
+      "id": "n8",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "Delegative AI use",
+      "bipolarity_complete": true,
+      "grounding_span": "Collaboration is my go-to"
+    },
+    {
+      "id": "n9",
+      "type": "Construct",
+      "label": "AI for frontend generation while I handle business logic",
+      "label_negative": "Full-stack manual development",
+      "bipolarity_complete": true,
+      "grounding_span": "I created the business logic, while using LLM to generate a frontend"
+    },
+    {
+      "id": "n10",
+      "type": "Construct",
+      "label": "AI reliability and edge case handling",
+      "label_negative": "AI frustration when failing on complex tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "It handled all the edge cases well"
+    },
+    {
+      "id": "n11",
+      "type": "Construct",
+      "label": "AI training and improvement",
+      "label_negative": "Diminishing returns in AI improvement",
+      "bipolarity_complete": true,
+      "grounding_span": "The LLM isn't improving as quick as it used to in 2023"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "tedious"
+    },
+    {
+      "id": "n13",
+      "type": "Value",
+      "label": "Skill preservation and professional adaptability",
+      "grounding_span": "To keep sharp"
+    },
+    {
+      "id": "n14",
+      "type": "Value",
+      "label": "Deep focus and immersion in work",
+      "grounding_span": "meditative stance that a coder gets into"
+    },
+    {
+      "id": "n15",
+      "type": "Value",
+      "label": "Reliability and correctness",
+      "grounding_span": "handle all the edge cases well"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "It handled all the edge cases well. I didn't have to do much."
+    },
+    {
+      "id": "n17",
+      "type": "Stance",
+      "label": "Frustration with AI errors",
+      "valence": "negative",
+      "grounding_span": "The LLM just couldn't figure it out"
+    },
+    {
+      "id": "n18",
+      "type": "Stance",
+      "label": "Cautious reliance on AI",
+      "valence": "ambivalent",
+      "grounding_span": "Feels like it is reaching an upper limit. I might be wrong though."
+    },
+    {
+      "id": "n19",
+      "type": "CognitiveStyleMarker",
+      "label": "Task-dependent delegation vs. collaboration",
+      "grounding_span": "Collaboration is my go-to"
+    },
+    {
+      "id": "n20",
+      "type": "CognitiveStyleMarker",
+      "label": "Concern about over-dependence and skill atrophy",
+      "grounding_span": "people get over-dependent because of the convenience they offer"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n15",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n13",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n13",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n14",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n15",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n16",
+      "target": "n10",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n17",
+      "target": "n10",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n18",
+      "target": "n11",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n8",
+      "target": "n19",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n20",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n7",
+      "target": "n8",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

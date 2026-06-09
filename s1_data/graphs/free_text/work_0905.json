@@ -1,0 +1,186 @@
+{
+  "transcript_id": "work_0905",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "Manual search control for accuracy",
+      "label_negative": "AI default search with less accuracy",
+      "bipolarity_complete": true,
+      "grounding_span": "I still prefer to manually build out my search parameters"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI-assisted messaging for candidate outreach",
+      "label_negative": "Manual messaging without AI variation",
+      "bipolarity_complete": true,
+      "grounding_span": "I do utilize AI for messaging"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI candidate ranking based on job description",
+      "label_negative": "AI candidate ranking based on actual hires",
+      "bipolarity_complete": true,
+      "grounding_span": "the candidates labeled the strongest are usually not a fit"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI threat to recruiter job security",
+      "label_negative": "AI as complement to recruiter role",
+      "bipolarity_complete": true,
+      "grounding_span": "AI creating a decrease in need of recruiters and sourcers"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Human assessment of soft skills and culture fit",
+      "label_negative": "AI-only candidate assessment",
+      "bipolarity_complete": true,
+      "grounding_span": "there will always be a need for assessing the soft skills of a person"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Recruitment accuracy and fit",
+      "grounding_span": "my own searching has been more accurate"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "using AI helps differentiate the messages"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Career relevance and adaptability",
+      "grounding_span": "we will have to change and adapt with AI to stay relevant"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Preference for manual search control",
+      "valence": "positive",
+      "grounding_span": "I still prefer to manually build out my search parameters"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for messaging variation",
+      "valence": "positive",
+      "grounding_span": "using AI helps differentiate the messages"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI ranking mismatch",
+      "valence": "negative",
+      "grounding_span": "the candidates labeled the strongest are usually not a fit"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Concern about AI reducing recruiter demand",
+      "valence": "negative",
+      "grounding_span": "AI creating a decrease in need of recruiters and sourcers"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Acceptance of inevitable AI adaptation",
+      "valence": "mixed",
+      "grounding_span": "it is inevitable that we will have to change and adapt with AI"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Manual control preference — prefers hands-on search refinement",
+      "grounding_span": "I still prefer to manually build out my search parameters"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic adaptation — uses AI for specific tasks while maintaining core skills",
+      "grounding_span": "we will have to change and adapt with AI to stay relevant"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,156 @@
+{
+  "transcript_id": "work_0281",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as confidential thinking partner",
+      "label_negative": "AI as unreliable source requiring full verification",
+      "bipolarity_complete": true,
+      "grounding_span": "I will use a chatbot to help. I find that chatting about the problem usually either leads to the answer I'm looking for"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "Source traceability and trustworthiness",
+      "label_negative": "Opaque AI outputs with unknown origin",
+      "bipolarity_complete": true,
+      "grounding_span": "I always check Google first because I can see exactly what site the information is coming from and discern whether it is a reliable source or not"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as efficiency tool",
+      "label_negative": "AI as cause of workforce reduction",
+      "bipolarity_complete": true,
+      "grounding_span": "I worry that at some point, they will start transferring people to other departments because there won't be enough work for us"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI use sanctioned by workplace",
+      "label_negative": "Unsanctioned AI use due to reliability concerns",
+      "bipolarity_complete": true,
+      "grounding_span": "It is generally not encouraged because it is not considered a reliable source"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Epistemic accuracy and understanding",
+      "grounding_span": "I have to double check everything which takes longer"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Job security and skill relevance",
+      "grounding_span": "I worry that at some point, they will start transferring people to other departments"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "the program we use with the speech-to-text and other advances features are making the work much more efficient"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Positive view of AI as thinking partner",
+      "valence": "positive",
+      "grounding_span": "I find it extra satisfying when I'm able to figure out the answer myself as I'm typing the prompt itself"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Caution due to lack of source transparency",
+      "valence": "negative",
+      "grounding_span": "I don't know if the information is trustworthy (as I don't know the orignal source)"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Worry about AI's negative impact on jobs",
+      "valence": "negative",
+      "grounding_span": "I worry that at some point, they will start transferring people to other departments"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Pragmatic openness to expanding AI use",
+      "valence": "positive",
+      "grounding_span": "If our work were to change and include more writing and less editing, I might consider using AI to help formulate templates"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative problem articulation — uses writing to clarify thinking",
+      "grounding_span": "just the act of writing it out and explaining the issue is enough for the puzzle pieces to fall into the right spots"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Hierarchical source prioritization — prefers verifiable sources first",
+      "grounding_span": "I always check Google first because I can see exactly what site the information is coming from"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

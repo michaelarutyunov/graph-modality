@@ -1,0 +1,130 @@
+{
+  "transcript_id": "science_0116",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as research accelerator",
+      "label_negative": "Traditional exhaustive literature search",
+      "bipolarity_complete": true,
+      "grounding_span": "AI has a greater ability to narrow the field of a user's query"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI unreliability for technical content understanding",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't fully trust that an AI model can identify this as key information it needs to include"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for summarization and research",
+      "label_negative": "AI untrustworthiness for summarization",
+      "bipolarity_complete": true,
+      "grounding_span": "the trust in an AI model to do this correctly, with absolutely no mistakes just isn't there for me yet"
+    },
+    {
+      "id": "n4",
+      "type": "Value",
+      "label": "Research efficiency",
+      "grounding_span": "AI has the ability to speed this process up"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Accuracy and reliability",
+      "grounding_span": "I don't fully trust that an AI model can identify this as key information it needs to include"
+    },
+    {
+      "id": "n6",
+      "type": "Stance",
+      "label": "Positive stance toward AI for initial paper discovery",
+      "valence": "positive",
+      "grounding_span": "AI has a greater ability to narrow the field of a user's query"
+    },
+    {
+      "id": "n7",
+      "type": "Stance",
+      "label": "Satisfaction with AI summaries",
+      "valence": "negative",
+      "grounding_span": "the trust in an AI model to do this correctly, with absolutely no mistakes just isn't there for me yet"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Aspirational hope for AI as practical assistant",
+      "valence": "positive",
+      "grounding_span": "If I knew a model had a good understanding of the mathematics and physics behind a subject, it would make it much easier to trust a summary"
+    },
+    {
+      "id": "n9",
+      "type": "CognitiveStyleMarker",
+      "label": "Experience-driven calibration of trust",
+      "grounding_span": "I think I still have trouble asking AI tools to say, summarise a paper for me"
+    },
+    {
+      "id": "n10",
+      "type": "CognitiveStyleMarker",
+      "label": "Verification through independent validation",
+      "grounding_span": "I simply searched for the papers and read the abstract of each, and saved the ones that were relevant"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n7",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n8",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n9",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n10",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

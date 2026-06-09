@@ -1,0 +1,199 @@
+{
+  "transcript_id": "work_0320",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as tool for overcoming creative block",
+      "label_negative": "AI as unreliable source of filler ideas",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI to help come up with fresh ideas or new ways of thinking to pursue"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as helper for complicated tasks",
+      "label_negative": "AI as threat to cognitive exercise",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is the fastest and most efficient way to do that"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI hallucination and filler content",
+      "bipolarity_complete": true,
+      "grounding_span": "Often AI will come up with things that are far-fetched, inaccurate, random"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as supplementary aide to human expertise",
+      "label_negative": "AI involvement in core trained tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "when things get out of my area of knowledge or, again, if I hit a road block, that is when I use AI"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as ongoing collaborative partner",
+      "bipolarity_complete": true,
+      "grounding_span": "My 'collaboration' with AI is limited entirely to whatever I need help with at that current moment"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as mental health understanding aid",
+      "label_negative": "Over-reliance on AI leading to mental atrophy",
+      "bipolarity_complete": true,
+      "grounding_span": "The brain is a muscle and I want to ensure that it's healthy and getting as much exercise as possible"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Creative problem-solving",
+      "grounding_span": "help come up with fresh ideas or new ways of thinking to pursue"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "fastest and most efficient way"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Epistemic accuracy and understanding",
+      "grounding_span": "narrow down whatever it comes up with and pursue those ideas independently"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Professional autonomy",
+      "grounding_span": "I prefer to handle most of my main tasks that I am specifically trained/educated to do by myself"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Cognitive health and self-efficacy",
+      "grounding_span": "The brain is a muscle and I want to ensure that it's healthy and getting as much exercise as possible"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI for brainstorming",
+      "valence": "positive",
+      "grounding_span": "My most satisfied usage of AI was when I first decided to use it for a brainstorming purpose"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Skepticism and caution toward AI",
+      "valence": "negative",
+      "grounding_span": "I am very skeptical of most of the ideas it comes up with"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Intentional caution about over-reliance",
+      "valence": "negative",
+      "grounding_span": "I have a couple of coworkers who have developed a reliance on AI...that caused me to really evaluate about where I use AI"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Openness to increasing AI use in future",
+      "valence": "positive",
+      "grounding_span": "I can see myself continuing to observe how other people use it and hopefully finding more ways to utilize it"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative prompt refinement",
+      "grounding_span": "it will take a good few tries and prompt revising before it comes up with what I'm really looking for"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic domain compartmentalization",
+      "grounding_span": "If it's main tasks I'm educated for, like financial statements and such, AI is not involved"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

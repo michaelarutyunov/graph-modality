@@ -1,0 +1,192 @@
+{
+  "transcript_id": "work_0186",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as black-box delegator",
+      "bipolarity_complete": true,
+      "grounding_span": "I like to understand not just what the model is doing but the reasons behind its choice"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as initial direction setter for unfamiliar domains",
+      "label_negative": "AI as time-wasting loop in debugging",
+      "bipolarity_complete": true,
+      "grounding_span": "Feeding the logs into LLMs and asking them to find the errors/failures and positing on the causes can often help me find the solution"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as coding assistant",
+      "label_negative": "AI as threat to human skill development",
+      "bipolarity_complete": true,
+      "grounding_span": "AI will increasingly take over the job of run-of-the-mill coding and testing"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Human puzzle-solving satisfaction in technical tasks",
+      "label_negative": "AI taking over enjoyable discovery process",
+      "bipolarity_complete": true,
+      "grounding_span": "I enjoy crawling through a DOM to find the best ways of locating elements for E2E testing"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Human-AI partnership leveraging complementary strengths",
+      "label_negative": "Human-AI competition for skills",
+      "bipolarity_complete": true,
+      "grounding_span": "learning how to work with AI and harness its strengths, then applying in areas where human input is still valuable"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Deep understanding",
+      "grounding_span": "I like to understand not just what the model is doing but the reasons behind its choice"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "simply increasing our productivity"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Intellectual satisfaction and enjoyment",
+      "grounding_span": "I get a dopamine hit when the selector works, like solving a puzzle"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Human uniqueness and value",
+      "grounding_span": "human-centric strengths to round things out, resulting in something better than either AI or humans alone"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Preference for collaborative AI use",
+      "valence": "positive",
+      "grounding_span": "Definitely collaborative"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI as initial direction setter",
+      "valence": "positive",
+      "grounding_span": "I did like how AI was able to pull together starting code to leverage the API"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI for debugging",
+      "valence": "negative",
+      "grounding_span": "AI ran around in circles helping me to debug something, and it was making the code more and more convoluted"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Dismissal of AI takeover concerns",
+      "valence": "positive",
+      "grounding_span": "I think that AI will increasingly take over the job of run-of-the-mill coding and testing"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Resistance to AI for code writing due to enjoyment",
+      "valence": "negative",
+      "grounding_span": "I would prefer to explore ways of building a solution myself (minus the boilerplate code)"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative sense-making — seeks to understand AI's reasoning",
+      "grounding_span": "I like to understand not just what the model is doing but the reasons behind its choice"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic complementarity thinking",
+      "grounding_span": "learning how to work with AI and harness its strengths, then applying in areas where human input is still valuable"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n3",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

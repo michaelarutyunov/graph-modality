@@ -1,0 +1,215 @@
+{
+  "transcript_id": "work_0400",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI for drafting professional correspondence",
+      "label_negative": "Human-drafted professional correspondence",
+      "bipolarity_complete": true,
+      "grounding_span": "I'll use an AI assistant to help draft or check my correspondence via DM or email"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI use perceived as unprofessional",
+      "label_negative": "AI use perceived as professional",
+      "bipolarity_complete": true,
+      "grounding_span": "I worry that if a partner or advertiser checks my message using one of those AI detector websites like Quillbot that they'll feel as though I'm not being professional"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for repetitive non-creative tasks",
+      "label_negative": "AI for creative fine-grained tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I'm comfortable using AI-assistance tools for very repetitive and non-creative tasks like tracking a subject"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI reliability and accuracy",
+      "label_negative": "AI hallucination and outdated information",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't really trust AI to provide reliable and comprehensive research at this stage in its development"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as delegative tool",
+      "label_negative": "AI as collaborative partner",
+      "bipolarity_complete": true,
+      "grounding_span": "I rarely collaborate... that work is very delegative"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI threatening job skills redundancy",
+      "label_negative": "AI enhancing job skills and positioning",
+      "bipolarity_complete": true,
+      "grounding_span": "I worry, likewise, that the skillset I've acquired with video editing... is going to become redundant"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional reputation and authenticity",
+      "grounding_span": "they'll feel as though I'm not being professional"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "it saved so much time versus my typical workflow"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Creative control and personal skill",
+      "grounding_span": "For more creative tasks... I prefer to do that myself"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Job security and irreplaceability",
+      "grounding_span": "I don't want to be replaceable"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Cautious avoidance of AI for communication due to professionalism concerns",
+      "valence": "negative",
+      "grounding_span": "I often decide not to use AI to draft my messages because of that concern"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI for repetitive video editing tasks",
+      "valence": "positive",
+      "grounding_span": "I was surprised by how good of a job it did tracking the subject's face and applying effects. That felt satisfying"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Frustration with AI confidently providing incorrect information",
+      "valence": "negative",
+      "grounding_span": "The high degree of certitude that an AI assistant will use to communicate information that is objectively incorrect can make the interaction feel very frustrating"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Anxiety about skills becoming redundant due to AI",
+      "valence": "negative",
+      "grounding_span": "I worry, likewise, that the skillset I've acquired... is going to become redundant"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Hope for more customizable and higher-level AI tools",
+      "valence": "positive",
+      "grounding_span": "I hope that AI tools are integrated into video editing software to the point where I can give higher level instructions"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Context-dependent boundary setting — distinguishes between contexts where AI is acceptable or not",
+      "grounding_span": "I'll typically only use AI to draft my messages if I'm reasonably confident that the collaborator or advertiser I'm communicating with is using AI to draft their messages"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Proactive skill positioning — strategically uses AI to maintain relevance",
+      "grounding_span": "I've sought to work freelance... to situate myself so that I'm a person who is known for using these tools effectively"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

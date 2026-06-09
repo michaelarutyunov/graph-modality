@@ -1,0 +1,174 @@
+{
+  "transcript_id": "science_0010",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI for routine technical tasks",
+      "label_negative": "Traditional manual search through IEEE libraries",
+      "bipolarity_complete": true,
+      "grounding_span": "It was a quick search tool in IEEE libraries"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as automatic response drafter with human oversight",
+      "label_negative": "AI as overwhelming word vomit",
+      "bipolarity_complete": true,
+      "grounding_span": "it sometimes word vomits and feels overwhelming to use"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as learning and study aid",
+      "label_negative": "Learning through struggle and alternative consideration",
+      "bipolarity_complete": true,
+      "grounding_span": "without struggle or alternative options being considered, it is difficult to retain information"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as formatting and synthesizing tool",
+      "label_negative": "Manual formatting and calculator population",
+      "bipolarity_complete": true,
+      "grounding_span": "I feel like I waste a lot of time making things look pretty when it is something I could delegate to an AI"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI trustworthiness and verification",
+      "label_negative": "Skeptical verification of AI outputs",
+      "bipolarity_complete": true,
+      "grounding_span": "if something 'seems' right, and is in the ballpark of being correct then I might trust it"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Accurate information retrieval",
+      "grounding_span": "It was a quick search tool in IEEE libraries"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Deep understanding and mastery",
+      "grounding_span": "without struggle or alternative options being considered, it is difficult to retain information"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "I feel like I waste a lot of time making things look pretty"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Positive toward AI for quick problem-solving",
+      "valence": "positive",
+      "grounding_span": "It was a quick search tool in IEEE libraries"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI training difficulty",
+      "valence": "negative",
+      "grounding_span": "This kills creativity and also makes it difficult to defend decisions"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Positive desire for AI to automate data entry",
+      "valence": "positive",
+      "grounding_span": "I feel like I waste a lot of time making things look pretty when it is something I could delegate to an AI"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Conditional trust based on verifiability",
+      "valence": "ambivalent",
+      "grounding_span": "if something 'seems' right, and is in the ballpark of being correct then I might trust it"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Experience-driven calibration of trust",
+      "grounding_span": "if something 'seems' right, and is in the ballpark of being correct then I might trust it"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Learning through independent struggle",
+      "grounding_span": "without struggle or alternative options being considered, it is difficult to retain information"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

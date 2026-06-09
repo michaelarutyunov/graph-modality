@@ -1,0 +1,201 @@
+{
+  "transcript_id": "work_0415",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as learning companion for unfamiliar tasks",
+      "label_negative": "Independent struggle with unfamiliar tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "guiding me through unfamiliar tasks"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as efficiency tool for formatting and formulas",
+      "label_negative": "Manual formatting and formula lookup",
+      "bipolarity_complete": true,
+      "grounding_span": "formatting, looking up Excel formulas"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as writing assistant for drafts and edits",
+      "label_negative": "Writing entirely from scratch without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "get AI to write an initial draft I edit, or to tweak something I have already written"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as automation enabler for Power Automate",
+      "label_negative": "Manual configuration of automations",
+      "bipolarity_complete": true,
+      "grounding_span": "use the copilot feature all the time to adjust the settings to make everything work right"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI privacy and model juggling burden",
+      "label_negative": "Clear and stable AI privacy landscape",
+      "bipolarity_complete": true,
+      "grounding_span": "juggling understanding of privacy concerns and all the different models"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as enhancer of human capability (Excel analogy)",
+      "label_negative": "AI as threat to job security",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is like Excel for accountants - it enhances capability rather than replaces the need for understanding"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Personal learning and skill development",
+      "grounding_span": "I am learning"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "more productivity and reduced worker stress"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Data security and privacy",
+      "grounding_span": "layer of protection for any company data security issues"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Creative enjoyment and personal expression",
+      "grounding_span": "I enjoy making pretty pictures"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Understanding and control over AI outputs",
+      "grounding_span": "you still need to be able to understand what AI is doing so you can identify problems"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI for automation",
+      "valence": "positive",
+      "grounding_span": "I just love automations"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Frustration with AI privacy and model complexity",
+      "valence": "negative",
+      "grounding_span": "My largest frustration with AI right now is juggling understanding of privacy concerns"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Optimistic view of AI as job enhancer",
+      "valence": "positive",
+      "grounding_span": "it can lead to more productivity and reduced worker stress"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Preference for keeping graphic design personal",
+      "valence": "negative",
+      "grounding_span": "I still make my own graphics, even though there are AI tools out there for it"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative threshold-based task delegation — switches to manual after 3-4 corrections",
+      "grounding_span": "If I have had to make 3 or 4 corrections, I will just take what it gave me and finish it myself"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Privacy-conscious abstraction — uses generic placeholders to protect data",
+      "grounding_span": "ask the AI models these things with generic naming and such so I can make the specific changes for myself"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n10",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": [
+    "[work_0415] direct Stance→Value edge disallowed: n15 --[EXPRESSED_VIA]--> n10"
+  ]
+}

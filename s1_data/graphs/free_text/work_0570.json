@@ -1,0 +1,169 @@
+{
+  "transcript_id": "work_0570",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as exploratory partner for understanding",
+      "label_negative": "AI as unreliable for production-critical tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I will use AI when it's an exploratory question that I can utilize AI to help explore"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as productivity tool for large file analysis",
+      "label_negative": "Manual navigation of large codebases",
+      "bipolarity_complete": true,
+      "grounding_span": "doing an analysis of large files so that I don't have to understand everything in the file to make specific changes"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability and accuracy",
+      "label_negative": "AI hallucination and wild goose chases",
+      "bipolarity_complete": true,
+      "grounding_span": "the AI was sending me on a wild goose chase that took time to validate"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Human oversight for correctness",
+      "label_negative": "AI autonomous code generation without validation",
+      "bipolarity_complete": true,
+      "grounding_span": "I will not use AI, or I will specifically validate everything that AI creates and re-write it myself"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI understanding of business context",
+      "label_negative": "AI inability to grasp full codebase context",
+      "bipolarity_complete": true,
+      "grounding_span": "the majority of my job is understanding business requirements and understand where to implement those requirements across the 20+ code bases"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "using AI just saves me from clicking into another window"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Code correctness and reliability",
+      "grounding_span": "I will not use AI, or I will specifically validate everything that AI creates and re-write it myself"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional autonomy and skill preservation",
+      "grounding_span": "I don't think AI is really going to take over any substantial portion of my job in the foreseeable future"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI as exploratory aid",
+      "valence": "positive",
+      "grounding_span": "I'm not sure whether or not I would have gotten to the solution without AI's help in analyzing the DLL internals"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI inaccuracies",
+      "valence": "negative",
+      "grounding_span": "the AI was sending me on a wild goose chase that took time to validate"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Skepticism about AI replacing core job functions",
+      "valence": "negative",
+      "grounding_span": "I don't think AI is really going to take over any substantial portion of my job in the foreseeable future"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Cautious trust in AI for bounded tasks",
+      "valence": "ambivalent",
+      "grounding_span": "I will not use AI, or I will specifically validate everything that AI creates and re-write it myself"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through back-and-forth",
+      "grounding_span": "I will collaborate throughout the exploratory process because I'm usually in a refining process where my questions are getting clearer"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain compartmentalization — strict boundaries between exploration and production",
+      "grounding_span": "I will use AI when it's an exploratory question... But when it's an actual change that will make it to production, I will not use AI"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

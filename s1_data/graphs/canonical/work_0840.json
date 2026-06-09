@@ -1,0 +1,185 @@
+{
+  "transcript_id": "work_0840",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI for summarization and research",
+      "label_negative": "Manual reading and interpretation",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "summarize longer emails sent to me by team members, so I can make sure that I am understanding the project details correctly"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as writing assistant for drafting",
+      "label_negative": "Manual codebase creation from scratch",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "help me draft the codebases for some software projects"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI collaboration based on implementation specificity",
+      "label_negative": "AI collaboration regardless of specificity",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "If I have specific plan on how I want a feature implemented, I'll do the tweak myself, but if I'm less specific with an implementation, and want to try different versions, I'll go back and worth with the AI"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as coding assistant",
+      "label_negative": "AI use for non-coding tasks like scheduling and emails",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "For anything related to writing code, I am always willing to work with AI. For other tasks, like scheduling, and writing emails I usually do them myself"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI for repetitive simple tasks",
+      "label_negative": "AI use for complex tasks",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "These tasks feel simple enough that I'm not sure if using AI will actually save me much time"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as knowledge resource for unfamiliar domains",
+      "label_negative": "AI as unnecessary for familiar domains",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I was unfamiliar with that specific type of database, so the AI was really helpful for the task"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI impact on skill maintenance",
+      "label_negative": "Personal skill maintenance despite AI improvement",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I don't spend too much extra time with maintaining skills in areas where AI could take over. AI will probably continue to get better at coding at a rate faster than me"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "save me much time"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Productivity and efficient task completion",
+      "grounding_span": "implement the feature in a timely manner"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Cognitive clarity and understanding",
+      "grounding_span": "make sure that I am understanding the project details correctly"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "A time using AI felt particularly satisfying was when I had been tasked with implementing a database feature"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Openness to increasing AI use in future",
+      "valence": "mixed",
+      "grounding_span": "For anything related to writing code, I am always willing to work with AI. For other tasks, like scheduling, and writing emails I usually do them myself"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Pragmatic acceptance of AI as a tool",
+      "valence": "positive",
+      "grounding_span": "AI will probably continue to get better at coding at a rate faster than me"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Task-dependent collaboration style",
+      "grounding_span": "If I have specific plan on how I want a feature implemented, I'll do the tweak myself, but if I'm less specific with an implementation, and want to try different versions, I'll go back and worth with the AI"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic cost-benefit analysis of AI use",
+      "grounding_span": "These tasks feel simple enough that I'm not sure if using AI will actually save me much time"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

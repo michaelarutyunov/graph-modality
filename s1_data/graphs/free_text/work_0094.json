@@ -1,0 +1,231 @@
+{
+  "transcript_id": "work_0094",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as source of ideas and alternative angles",
+      "label_negative": "AI as source of definitive answers",
+      "bipolarity_complete": true,
+      "grounding_span": "I'm comfy to rely on AI as a source of ideas more than definitive answers"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI hallucination and accuracy concerns",
+      "label_negative": "AI reliability and trustworthiness",
+      "bipolarity_complete": true,
+      "grounding_span": "hallucination has been a common issue with LLMs"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as creative collaborator without fact-checking",
+      "label_negative": "AI requiring fact-checking and verification",
+      "bipolarity_complete": true,
+      "grounding_span": "In fields where there is no correct answer... I enjoy interacting with AI without a need to fact check"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI training bias and social implications",
+      "label_negative": "AI serving all groups equally",
+      "bipolarity_complete": true,
+      "grounding_span": "poorly trained some models were to create images of black people... social implications that some people were simply better served"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as private creative partner",
+      "label_negative": "AI as shared team member with clients",
+      "bipolarity_complete": true,
+      "grounding_span": "I tend to keep them to myself rather than share them directly with clients"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI consistency and personality stability",
+      "label_negative": "AI model upgrades causing disruption",
+      "bipolarity_complete": true,
+      "grounding_span": "a model upgrade... can really unsettle users and undermine the idea of trusting an AI tool like a recognisable person"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Creative exploration and idea generation",
+      "grounding_span": "gleaned ideas from the timed framework it suggested"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Epistemic understanding and knowledge synthesis",
+      "grounding_span": "AI can be very good at synthesising answers to questions which few authors are likely to have written about"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Social equity and fair representation",
+      "grounding_span": "social implications that some people were simply better served than others"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Professional reputation and trustworthiness",
+      "grounding_span": "my reputation or trustworthiness may be at risk from sharing creative hallucination as fact"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Curatorial skill and creative control",
+      "grounding_span": "I see my work with generative AI as being part of the filter, a curator"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Comfort with AI for ideas, wariness for facts",
+      "valence": "ambivalent",
+      "grounding_span": "I'm comfy to rely on AI as a source of ideas more than definitive answers at the moment"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Anger at AI training bias",
+      "valence": "negative",
+      "grounding_span": "This got me angry, to some extent... because of the social implications"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Satisfaction with achieving creative vision via AI",
+      "valence": "positive",
+      "grounding_span": "It felt extremely satisfying to identify... an image which produced the feelings I had been looking for"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Openness to future AI integration with clients",
+      "valence": "positive",
+      "grounding_span": "I think this will probably change, as a necessity for transparency"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Resistance to AI from clients and public",
+      "valence": "negative",
+      "grounding_span": "I've been a little surprised by resistance to AI input from time to time"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Exploratory back-and-forth ideation",
+      "grounding_span": "I enjoy chatting in a live mode... I'll look for answers which surprise me or grab my attention"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative filtering and curation",
+      "grounding_span": "I enjoy the process of not having that at first, and either working towards it or finding something new and better on the way"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n3",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,229 @@
+{
+  "transcript_id": "work_0703",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as communication bridge to upper management",
+      "label_negative": "Struggling to distill details for executives",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "AI helps me figure out what pieces of data may be important to communicate and how to format it"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as detail-oriented thinking partner",
+      "label_negative": "AI as superficial or insufficiently contextual",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "The more detail I give it, the more understanding I put into my prompts, the better AI is able to understand my intentions"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as analytical guide for prioritization",
+      "label_negative": "AI as rigid or unhelpful when uncertain",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "AI eventually helped me group these into price bands"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as fact-checker and oversight tool",
+      "label_negative": "AI as unreliable or misleading",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "AI currently is helping me fact-check myself"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as organizational memory and scorekeeper",
+      "label_negative": "AI as disconnected from business reality",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I would like AI to be able to evaluate how effective the model was"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as consultant for strategic analysis",
+      "label_negative": "AI as mere email-writing tool",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I'm really the one pioneering the approach of having it be a consultant for us"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI dependency on user's own knowledge",
+      "label_negative": "AI as autonomous and infallible",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "It wasn't the AI's fault, we just weren't aware of how to reconcile freight"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Effective executive communication",
+      "grounding_span": "tell them what the answer is, show that you've done the work to come to that conclusion, then provide the next steps"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Comprehensive understanding and detail mastery",
+      "grounding_span": "I need to know every aspect of whatever I get into so that I don't overlook anything"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Analytical accuracy and appropriate granularity",
+      "grounding_span": "don't overcomplicate by making price/ounce the primary analysis, but definitely include it as a supporting lens"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Business process clarity and self-awareness",
+      "grounding_span": "it was essentially our own lack of knowledge into what we really needed"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Strategic decision-making and ROI evaluation",
+      "grounding_span": "help us understand the financial impact so that we could better strategize"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Satisfaction with AI when given sufficient context",
+      "valence": "positive",
+      "grounding_span": "My experience has mostly been satisfactory, especially when I provide enough context to get what I want"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Frustration with AI when it exposes own knowledge gaps",
+      "valence": "negative",
+      "grounding_span": "it was particularly frustrating, but it was essentially our own lack of knowledge"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Optimistic vision of AI as organizational memory",
+      "valence": "positive",
+      "grounding_span": "I basically envision AI being able to be a scorekeeper for our business"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Proactive adaptation to AI rather than fear of replacement",
+      "valence": "positive",
+      "grounding_span": "If you don't, THEN you'll lose your job"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Detail-oriented exhaustive analysis — needs full context before acting",
+      "grounding_span": "I'm someone who likes a lot of detail. Like I need to know every aspect"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative contextual prompting — feeds extensive background to AI",
+      "grounding_span": "I give it a lot of detail up front"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n13",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

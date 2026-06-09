@@ -1,0 +1,156 @@
+{
+  "transcript_id": "work_0535",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI for impersonal tasks",
+      "label_negative": "AI for sensitive personal tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "Those calls or questions are less personal in nature - more universal"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as efficiency tool",
+      "label_negative": "AI as threat to skill maintenance",
+      "bipolarity_complete": true,
+      "grounding_span": "I see AI more as a tool to enhance my work than competition"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability in chaotic meetings",
+      "label_negative": "AI failure to meet requirements",
+      "bipolarity_complete": true,
+      "grounding_span": "the AI doesn't meet all my requirements"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as research starting point",
+      "label_negative": "AI as one-shot answer provider",
+      "bipolarity_complete": true,
+      "grounding_span": "I start with a broad topic and then guide it through more specific topics as we go"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Authentic personal expression",
+      "grounding_span": "I like these emails to sound natural and authentic"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and speed in work",
+      "grounding_span": "getting things done efficiently and to a high standard"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Epistemic accuracy and understanding",
+      "grounding_span": "I like to know what the latest research says"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Preference for personal touch in patient emails",
+      "valence": "negative",
+      "grounding_span": "I prefer writing sensitive or potentially difficult emails on my own"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Frustration with AI's inability to handle complex constraints",
+      "valence": "negative",
+      "grounding_span": "I get frustrated when I'm trying to craft an agenda or schedule and the AI doesn't meet all my requirements"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Positive appreciation for AI as research catalyst",
+      "valence": "positive",
+      "grounding_span": "I see AI more as a tool to enhance my work than competition"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with collaborative workflow",
+      "valence": "positive",
+      "grounding_span": "I start with a broad topic and then guide it through more specific topics as we go"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative iterative refinement — works back and forth with AI",
+      "grounding_span": "I usually try once or twice to get the AI to refine it. If that doesn't work, I do it myself"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-specific delegation based on task nature",
+      "grounding_span": "Those calls or questions are less personal in nature - more universal"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n3",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

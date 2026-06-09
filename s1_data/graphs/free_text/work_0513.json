@@ -1,0 +1,236 @@
+{
+  "transcript_id": "work_0513",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as idea generator for engaging lessons",
+      "label_negative": "AI as unreliable source of ready-to-use materials",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI for idea generation"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as tool requiring specific prompts and fine-tuning",
+      "label_negative": "AI as autonomous solution without human refinement",
+      "bipolarity_complete": true,
+      "grounding_span": "I find I have more success if I ask for a specific request"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Teacher ownership of core content knowledge",
+      "label_negative": "AI-mediated content understanding",
+      "bipolarity_complete": true,
+      "grounding_span": "I prefer to read content myself rather than rely on a summary"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as assistant for formatting and refinement",
+      "label_negative": "AI as primary creator of instructional materials",
+      "bipolarity_complete": true,
+      "grounding_span": "get help with formatting maybe, rather than have to sort through and refine AI output"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI reliability and accuracy in educational materials",
+      "label_negative": "AI errors causing confusion and loss of trust",
+      "bipolarity_complete": true,
+      "grounding_span": "it was riddled with errors"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as enhancer of student engagement and reflection",
+      "label_negative": "AI as replacement for authentic learning experiences",
+      "bipolarity_complete": true,
+      "grounding_span": "I used two that were a big hit"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI as aid for student writing development",
+      "label_negative": "AI as generator of complete student work",
+      "bipolarity_complete": true,
+      "grounding_span": "help them brainstorm, organize, become more concise or develop their ideas"
+    },
+    {
+      "id": "n8",
+      "type": "Construct",
+      "label": "AI transparency in sourcing information",
+      "label_negative": "AI obfuscation of sources",
+      "bipolarity_complete": true,
+      "grounding_span": "AI just garbles it all and doesn't tell us where it's from"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Student engagement and meaningful learning",
+      "grounding_span": "my students were still energetic and engaged"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Teacher expertise and content mastery",
+      "grounding_span": "I need to know the material I'm teaching well"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Critical thinking and source evaluation",
+      "grounding_span": "learn how to question the source of information"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Authentic human connection in education",
+      "grounding_span": "the experience of reading, writing, viewing, representing, speaking and listening is very much tied to being in person together"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Satisfaction with AI for creative lesson ideas",
+      "valence": "positive",
+      "grounding_span": "I used two that were a big hit"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Frustration with AI errors causing classroom disruption",
+      "valence": "negative",
+      "grounding_span": "I felt so badly that everyone was thrown off and confused by it"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Confidence in irreplaceability of human teacher",
+      "valence": "positive",
+      "grounding_span": "I don't fear AI will be a match for what I do"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Cautious optimism about AI as student writing aid",
+      "valence": "ambivalent",
+      "grounding_span": "it is very tempting for them to use AI to just do the whole thing, but where is the learning in that?"
+    },
+    {
+      "id": "n17",
+      "type": "Stance",
+      "label": "Concern about AI's lack of source transparency",
+      "valence": "negative",
+      "grounding_span": "AI just garbles it all and doesn't tell us where it's from, it creates a problem"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative prompt refinement — fine-tuning based on initial output",
+      "grounding_span": "I can fine tune or shift the prompt if it's not giving me what I'm looking for"
+    },
+    {
+      "id": "n19",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based boundary setting — clear separation of AI-appropriate vs. human-owned tasks",
+      "grounding_span": "I prefer to read content myself rather than rely on a summary"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n13",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n17",
+      "target": "n8",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n19",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n6",
+      "target": "n7",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,139 @@
+{
+  "transcript_id": "work_0591",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as validation partner for client needs",
+      "label_negative": "Relying solely on own judgment without AI validation",
+      "bipolarity_complete": true,
+      "grounding_span": "ask it to review the information I uncovered and let me know areas I need to dive into more details"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as tool to cover blind spots and biases",
+      "label_negative": "AI as crutch that prevents skill development",
+      "bipolarity_complete": true,
+      "grounding_span": "the more I and my peers use it, the more we will learn from it, probably the less we will need it"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as proofreading assistant",
+      "label_negative": "Manual drafting and proofreading without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I use it to help draft emails and proofread my messages"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI unreliability in structured tasks (Excel)",
+      "bipolarity_complete": true,
+      "grounding_span": "It would be great if AI could do a better job of creating excel docs and reading those docs"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Client success and satisfaction",
+      "grounding_span": "help my client be successful"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Professional growth and skill maintenance",
+      "grounding_span": "the more we will learn from it"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "I use it to help draft emails and proofread my messages"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Satisfaction with AI uncovering blind spots",
+      "valence": "positive",
+      "grounding_span": "it provided several additional questions I could ask the client and gave me areas that I didnt think of"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Cautious optimism about AI in education",
+      "valence": "positive",
+      "grounding_span": "the more I and my peers use it, the more we will learn from it"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI in complex Excel tasks",
+      "valence": "negative",
+      "grounding_span": "I have not had a lot of success with AI when using those"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Structured iterative validation — uses AI to systematically check and refine work",
+      "grounding_span": "I put all my answers into AI and ask it to review the information I uncovered and let me know areas I need to dive into more details"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative learning orientation — adopts and shares best practices with peers",
+      "grounding_span": "I gained best practices from my peers on how to use it. We have created common prompts and we share them with each other"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

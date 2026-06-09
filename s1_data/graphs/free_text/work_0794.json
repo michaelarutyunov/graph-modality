@@ -1,0 +1,144 @@
+{
+  "transcript_id": "work_0794",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI for marketing research",
+      "label_negative": "AI for deep client research",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is generally used just for marketing research"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI answer consistency as reliability indicator",
+      "label_negative": "AI answer inconsistency as error indicator",
+      "bipolarity_complete": true,
+      "grounding_span": "ask the same question three times to check for consistency"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Trust in AI for non-essential tasks",
+      "label_negative": "Distrust in AI for essential client work",
+      "bipolarity_complete": true,
+      "grounding_span": "we see marketing as 'non-essential' from a consultants point of view"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Personal knowledge and client interaction as value",
+      "label_negative": "AI-generated regurgitated information",
+      "bipolarity_complete": true,
+      "grounding_span": "The personal interaction is what sets us apart"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Time efficiency",
+      "grounding_span": "saves a lot of time"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Accuracy and credibility in client deliverables",
+      "grounding_span": "we want to provide accurate answers and have all the knowledge to back up our reports"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional credibility and client trust",
+      "grounding_span": "we must be able to talk the talk, not just regurgitate information"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Satisfaction with AI for marketing research",
+      "valence": "positive",
+      "grounding_span": "I feel particularly satisfied pretty much everytime I use AI in this way"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Skepticism toward AI for deep research",
+      "valence": "negative",
+      "grounding_span": "there is a distrust of the answers"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Shared team cynicism reinforcing caution",
+      "valence": "negative",
+      "grounding_span": "MY colleagues have influenced me by agreeing with my general cynisism ove rthe use of AI"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Methodical consistency checking — repeated queries for verification",
+      "grounding_span": "ask the same question three times to check for consistency"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain compartmentalisation — strict boundary between marketing and client work",
+      "grounding_span": "AI is generally used just for marketing research. For deep research into a particular subject we don't use AI"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

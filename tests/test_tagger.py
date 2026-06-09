@@ -1,6 +1,6 @@
 """Tests for extraction.tagger."""
 
-from extraction.tagger import Turn, format_for_extraction, parse_transcript
+from s2_extraction.tagger import Turn, format_for_extraction, parse_transcript
 
 
 def test_parse_simple_transcript():

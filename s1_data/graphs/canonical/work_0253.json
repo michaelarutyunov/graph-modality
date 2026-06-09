@@ -1,0 +1,182 @@
+{
+  "transcript_id": "work_0253",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as blueprint provider for unfamiliar tasks",
+      "label_negative": "AI as unreliable guide requiring troubleshooting",
+      "bipolarity_complete": true,
+      "grounding_span": "The AI gave me a blueprint to follow, but there were hiccups along the way"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as research starting point",
+      "label_negative": "AI as slower or less accurate than own expertise",
+      "bipolarity_complete": true,
+      "grounding_span": "It is much faster than combing through message boards"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI code quality and reliability",
+      "label_negative": "AI code that is incorrect or unhelpful",
+      "bipolarity_complete": true,
+      "grounding_span": "The code it provided worked! It got very close in style to the original reports"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI for repetitive simple tasks",
+      "label_negative": "AI for complex or domain-specific tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I would honestly rather just have AI do all of the simple tasks or the tasks I know it can handle"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI responsiveness to user feedback",
+      "label_negative": "AI ignoring user complaints and repeating errors",
+      "bipolarity_complete": true,
+      "grounding_span": "The difference was in how the AI communicated and listened to my complaints"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as step-by-step guidance tool",
+      "label_negative": "AI operating autonomously without oversight",
+      "bipolarity_complete": true,
+      "grounding_span": "Without a programmer to guide it, it will not be helpful"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "My work needs to get done. I don't care how that is achieved"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional competence",
+      "grounding_span": "I know the best way to handle this, so AI would honestly just be slower and probably less accurate"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Control and reliability in work outcomes",
+      "grounding_span": "Without a programmer to guide it, it will not be helpful"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "Sometimes it was great and I felt really accomplished"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI for coding",
+      "valence": "negative",
+      "grounding_span": "Other times, it was a frustrating experience that felt like banging my head against a wall"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Pragmatic acceptance of AI as a tool",
+      "valence": "positive",
+      "grounding_span": "I would honestly rather just have AI do all of the simple tasks"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Frustration with AI's assumption of expertise",
+      "valence": "negative",
+      "grounding_span": "Unchecked AI makes a hell of a lot of mistakes"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative trial-and-error approach",
+      "grounding_span": "I would create my own skeleton, then ask about formatting"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic tool selection based on effectiveness",
+      "grounding_span": "I had to consult multiple models until I found a good one"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

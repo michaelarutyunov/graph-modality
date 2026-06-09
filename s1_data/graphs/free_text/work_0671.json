@@ -1,0 +1,157 @@
+{
+  "transcript_id": "work_0671",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as lesson planning assistant for generating ideas and materials",
+      "label_negative": "Manual lesson planning without AI assistance",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI mostly to help get ideas for lesson plans, generate lists of examples of grammar and language points, and to generate games"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as real-time classroom adaptation tool",
+      "label_negative": "Inability to adapt quickly without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "it's great for the on the go nature of teaching and being flexible"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI output quality and polish",
+      "label_negative": "AI output awkwardness requiring tweaking",
+      "bipolarity_complete": true,
+      "grounding_span": "they come out a bit awkward and i still have to tweak them"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Preservation of core teaching expertise",
+      "label_negative": "Over-reliance on AI eroding skills",
+      "bipolarity_complete": true,
+      "grounding_span": "i want to make sure that I thoroughly understand the grammar that i teach, and that i'm not relying on constantly looking things up or asking AI to expain it for me"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Collaborative vs directive AI interaction",
+      "label_negative": "Directive AI interaction",
+      "bipolarity_complete": true,
+      "grounding_span": "if i need ideas for a lesson and i don't really know where I'm starting then it is definitely more collaborative. other times i know exactly what I want and ask the AI to do it"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Teaching effectiveness and student engagement",
+      "grounding_span": "it worked great. it really helped me out when i was in a tight spot"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional competence and skill maintenance",
+      "grounding_span": "i want to make sure that I thoroughly understand the grammar that i teach"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "it's great for the on the go nature of teaching and being flexible"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for real-time adaptation",
+      "valence": "positive",
+      "grounding_span": "it worked great. it really helped me out when i was in a tight spot"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI output quality",
+      "valence": "negative",
+      "grounding_span": "they come out a bit awkward and i still have to tweak them"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Intentional caution about over-reliance",
+      "valence": "ambivalent",
+      "grounding_span": "i want to make sure that I thoroughly understand the grammar that i teach, and that i'm not relying on constantly looking things up or asking AI to expain it for me"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Context-dependent interaction style — shifts between collaborative and directive based on task clarity",
+      "grounding_span": "if i need ideas for a lesson and i don't really know where I'm starting then it is definitely more collaborative. other times i know exactly what I want and ask the AI to do it"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Intentional skill preservation — conscious boundary setting to maintain expertise",
+      "grounding_span": "i want to make sure that I thoroughly understand the grammar that i teach, and that i'm not relying on constantly looking things up or asking AI to expain it for me"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n5",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

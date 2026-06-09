@@ -1,0 +1,174 @@
+{
+  "transcript_id": "work_0445",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as efficiency tool",
+      "label_negative": "AI as threat to cognitive skills",
+      "bipolarity_complete": true,
+      "grounding_span": "my workflows and efficiency have definitely improved with AI"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI unreliability and overselling capabilities",
+      "bipolarity_complete": true,
+      "grounding_span": "it quickly became apparent that it was way more complex than the AI had originally led me to believe"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Human writing and creative control",
+      "label_negative": "AI-generated writing without human touch",
+      "bipolarity_complete": true,
+      "grounding_span": "Writing is an art, and if everything ends up being written by AI, i would view it as a problem"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as autonomous task delegator",
+      "bipolarity_complete": true,
+      "grounding_span": "I find it to be much more successful and accurate when you work through a project with it step by step"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as tool for critical thinking about AI",
+      "label_negative": "AI preserving critical thinking",
+      "bipolarity_complete": true,
+      "grounding_span": "I worry that as I'm increasingly challenging my brain less and less to problem solve, I might be losing the ability to think critically"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "saves me hours every week"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Human cognitive exercise and skill preservation",
+      "grounding_span": "I worry about the cognitive effect it might be having on me"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Authentic personal expression",
+      "grounding_span": "this is inherently human, and should remain that"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "upon completion of the working CRM, I was delighted"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for email drafting",
+      "valence": "negative",
+      "grounding_span": "I abandoned the project and wasted hours on it"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Concern about improper AI use by others",
+      "valence": "ambivalent",
+      "grounding_span": "I'm a little more mindful with how I do so"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Reluctance to use AI for writing",
+      "valence": "negative",
+      "grounding_span": "I would never ask AI to write an entire article"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Systematic iterative decomposition of tasks",
+      "grounding_span": "work through a project with it step by step"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Metacognitive awareness of cognitive decline",
+      "grounding_span": "I worry about the cognitive effect it might be having on me"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n4",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n4",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

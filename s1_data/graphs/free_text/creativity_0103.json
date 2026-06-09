@@ -1,0 +1,181 @@
+{
+  "transcript_id": "creativity_0103",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as brainstorming and inspiration tool",
+      "label_negative": "AI as unreliable for precise image editing",
+      "bipolarity_complete": true,
+      "grounding_span": "AI only fits well into the preliminary stages of my work"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI ability to follow precise instructions",
+      "label_negative": "AI tendency to alter unintended aspects of image",
+      "bipolarity_complete": true,
+      "grounding_span": "they often struggle with instructions to only change specific artifacts"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as time-saving design option narrow-down tool",
+      "label_negative": "AI as requiring manual verification and correction",
+      "bipolarity_complete": true,
+      "grounding_span": "It saves me time by helping to narrow down design options"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as field disruptor democratizing design",
+      "label_negative": "AI as threat to mid-low range interior designers",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is going to be a field disruptor for anyone in the remodeling space"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as future precise image editor",
+      "label_negative": "AI as current limited image manipulator",
+      "bipolarity_complete": true,
+      "grounding_span": "I'd like to see it able to incorporated further down my production line"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative efficiency and time savings",
+      "grounding_span": "It saves me time by helping to narrow down design options"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Client satisfaction and accurate visualization",
+      "grounding_span": "clients want to see what these different design choices look like on their exact house"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional adaptability and market relevance",
+      "grounding_span": "I see interior designers working on mid-low range projects being the first ones affected"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Positive appreciation for AI in brainstorming",
+      "valence": "positive",
+      "grounding_span": "AI only fits well into the preliminary stages of my work"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI's inability to follow precise instructions",
+      "valence": "negative",
+      "grounding_span": "they often struggle with instructions to only change specific artifacts"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Pragmatic acceptance of AI limitations",
+      "valence": "mixed",
+      "grounding_span": "I've pushed the limits on what it can do for me"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Concern about AI disrupting mid-low range designers",
+      "valence": "negative",
+      "grounding_span": "I see interior designers working on mid-low range projects being the first ones affected"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Optimistic expectation for future AI precision",
+      "valence": "positive",
+      "grounding_span": "I'd like to see it able to incorporated further down my production line"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Hybrid workflow integration — combines AI inspiration with manual execution",
+      "grounding_span": "I took those AI inspiration railings and found realistic images that I was able to photoshop"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Market segmentation reasoning — distinguishes high-end vs mid-low market impacts",
+      "grounding_span": "someone who could originally afford an interior designer might be someone who doesn't care to do the work"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

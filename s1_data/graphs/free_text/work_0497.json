@@ -1,0 +1,224 @@
+{
+  "transcript_id": "work_0497",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as librarian of the internet",
+      "label_negative": "AI as unreliable or misleading source",
+      "bipolarity_complete": true,
+      "grounding_span": "AI for me mostly acts as the librarian of the internet"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as tutor for new concepts",
+      "label_negative": "AI as confusing or unhelpful teacher",
+      "bipolarity_complete": true,
+      "grounding_span": "or to act as a tutor to teach me new concepts"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as code generator for specific tasks",
+      "label_negative": "AI as code generator for complex, half-built projects",
+      "bipolarity_complete": true,
+      "grounding_span": "Occasionally I'll get it to write code for me as well"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as collaborator in terminal (Claude Code)",
+      "label_negative": "AI as context-dependent web chat requiring full context",
+      "bipolarity_complete": true,
+      "grounding_span": "There are rare moments where it feels like I am speaking with a colleague and an equal"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as noise reducer for internet research",
+      "label_negative": "AI as noise amplifier or misleading guide",
+      "bipolarity_complete": true,
+      "grounding_span": "Once I'm given a direction by the AI and no longer need to navigate the 'noise' of the internet"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as tool for high-level planning and low-level implementation",
+      "label_negative": "AI as tool for messy middle ground problem solving",
+      "bipolarity_complete": true,
+      "grounding_span": "AI tends to be good at very high level, or very low level"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI as convincing but potentially misleading",
+      "label_negative": "AI as honest and calibrated communicator",
+      "bipolarity_complete": true,
+      "grounding_span": "give AI models too much precedence because they sound so *convincing*"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficient information gathering",
+      "grounding_span": "gather information about topics / resources"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Personal skill development and understanding",
+      "grounding_span": "to act as a tutor to teach me new concepts"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Productivity in programming",
+      "grounding_span": "producing meaningful work, I only see value in programming"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Autonomy and control over problem-solving",
+      "grounding_span": "I take care of most of the rest of the process myself"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Collaborative partnership",
+      "grounding_span": "it feels like I am speaking with a colleague and an equal"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Satisfaction with AI as information gatherer",
+      "valence": "positive",
+      "grounding_span": "AI for me mostly acts as the librarian of the internet"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Frustration with AI in messy middle ground",
+      "valence": "negative",
+      "grounding_span": "AI struggles with this kind of problem solving, and often causes more frustration than anything"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Satisfaction with Claude Code as collaborative tool",
+      "valence": "positive",
+      "grounding_span": "There are rare moments where it feels like I am speaking with a colleague and an equal"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Skepticism about AI's convincing tone",
+      "valence": "negative",
+      "grounding_span": "give AI models too much precedence because they sound so *convincing*"
+    },
+    {
+      "id": "n17",
+      "type": "Stance",
+      "label": "Indifference to AI taking over jobs",
+      "valence": "mixed",
+      "grounding_span": "I can't say I'm worried"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Self-reliant problem-solving with targeted AI queries",
+      "grounding_span": "I take care of most of the rest of the process myself"
+    },
+    {
+      "id": "n19",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic calibration of AI use based on task complexity",
+      "grounding_span": "AI tends to be good at very high level, or very low level"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n13",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n17",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n19",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

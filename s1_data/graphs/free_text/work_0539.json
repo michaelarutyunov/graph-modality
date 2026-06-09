@@ -1,0 +1,161 @@
+{
+  "transcript_id": "work_0539",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as efficient task delegator for repetitive work",
+      "label_negative": "AI as unreliable for complex tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "repetitive tasks I'd rather not do in Excel"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as collaborative research assistant",
+      "label_negative": "AI as sole research source",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI web research as an addition to my web research"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI code generation reliability",
+      "label_negative": "AI code instability over long conversations",
+      "bipolarity_complete": true,
+      "grounding_span": "AI randomly changes the code after longer conversations"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI search comprehensiveness",
+      "label_negative": "AI search limited to generic terms",
+      "bipolarity_complete": true,
+      "grounding_span": "the AI generally uses generic search terms"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "Within an hour I was able to get the complete working code"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Epistemic thoroughness",
+      "grounding_span": "I check them first, and then, if the links are correct"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Skill development and future-proofing",
+      "grounding_span": "I am considering to acquire new skills"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Satisfaction with AI for rapid code generation",
+      "valence": "positive",
+      "grounding_span": "Within an hour I was able to get the complete working code"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Frustration with AI code instability",
+      "valence": "negative",
+      "grounding_span": "AI randomly changes the code after longer conversations"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Pragmatic openness to AI as supplement",
+      "valence": "positive",
+      "grounding_span": "I use AI web research as an addition to my web research"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Cautious verification of AI outputs",
+      "valence": "ambivalent",
+      "grounding_span": "I check them first, and then, if the links are correct"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through human-AI collaboration",
+      "grounding_span": "I'll ask the AI to find the footballers names. Then I'll check a few sources"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Proactive skill diversification beyond AI",
+      "grounding_span": "I am considering to acquire new skills"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

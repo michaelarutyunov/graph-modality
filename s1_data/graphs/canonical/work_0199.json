@@ -1,0 +1,182 @@
+{
+  "transcript_id": "work_0199",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as independent task executor without collaboration",
+      "bipolarity_complete": true,
+      "grounding_span": "Definitely collaboration. In the realm of idea bouncing or research, I essentially interview AI"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for text generation",
+      "label_negative": "Manual document creation without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I also use AI to generate documents such as word documents to report and summarise data"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI unreliability and contradiction in calculations",
+      "bipolarity_complete": true,
+      "grounding_span": "It made repeated and quite simple mistakes and contradicted itself"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as time-saving tool",
+      "label_negative": "AI as unnecessary or inefficient for hands-on work",
+      "bipolarity_complete": true,
+      "grounding_span": "It is more of a time save than anything for me"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Personal expression in emails and informal reports",
+      "label_negative": "AI-generated emails and reports",
+      "bipolarity_complete": true,
+      "grounding_span": "Emails I see as a personal expression and dont think should be written by anyone (or anything!) other than myself"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as file management and comparison tool",
+      "label_negative": "Manual file searching",
+      "bipolarity_complete": true,
+      "grounding_span": "use AI to search through folders with hundreds of files to find what I am looking for quickly"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "save us all time if we can use it productively"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Creative authenticity and human expression",
+      "grounding_span": "Emails I see as a personal expression"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Accuracy and factual reliability",
+      "grounding_span": "It made repeated and quite simple mistakes and contradicted itself"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for brainstorming",
+      "valence": "positive",
+      "grounding_span": "When AI gives me a bunch of ideas I can take to the lab I find it satisfying"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI errors",
+      "valence": "negative",
+      "grounding_span": "I got a bit frustrated today as the tool was helping with a prediction based calculation"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Concern about AI replacing jobs",
+      "valence": "positive",
+      "grounding_span": "I personally dont believe or worry about AI taking my job"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Preference for personal control over email",
+      "valence": "negative",
+      "grounding_span": "Writing emails and informal lab reports I prefer to do myself even though AI could do them"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative back-and-forth questioning",
+      "grounding_span": "I essentially interview AI and delve deeper into a topic"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based boundary setting — clear separation of AI-appropriate vs. human-only tasks",
+      "grounding_span": "Emails I see as a personal expression and dont think should be written by anyone (or anything!) other than myself"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,169 @@
+{
+  "transcript_id": "work_0151",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI memory reliability in long conversations",
+      "label_negative": "AI failing to prepare for real-world scenarios",
+      "bipolarity_complete": true,
+      "grounding_span": "I often use it when preparing for my workday, such as rehearsing conversations I'm going to be having with people"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as tool for feedback and critique",
+      "label_negative": "AI generating unnecessary or irrelevant critique",
+      "bipolarity_complete": true,
+      "grounding_span": "I do sometimes have problems with the AI seeming to give me critiques for no good reason"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for data analysis and report writing",
+      "label_negative": "AI writing reports without nuance",
+      "bipolarity_complete": true,
+      "grounding_span": "I also wouldn't use it for writing reports, since my writing skills are fairly sound and I imagine that it wouldn't be able to provide nuance"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI integration in police force: trust vs. caution",
+      "label_negative": "AI not trusted due to lack of knowledge",
+      "bipolarity_complete": true,
+      "grounding_span": "there is not enough known about it for it to be trusted"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI impact on skill maintenance",
+      "label_negative": "AI taking over areas of strength, pushing to weaker areas",
+      "bipolarity_complete": true,
+      "grounding_span": "I worry that I'll be pushed more into areas where my skills are not that great"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Professional competence",
+      "grounding_span": "AI keeps me prepared"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Personal competence and skill development",
+      "grounding_span": "my writing skills are fairly sound"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Workload balance and role security",
+      "grounding_span": "freeing up the workload for a lot of us on the force but probably also forcing us to take on more work in other areas"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "AI keeps me prepared"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI errors",
+      "valence": "negative",
+      "grounding_span": "I ultimately felt very unprepared, or like I'd prepared for the wrong kinds of things"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Concern about AI replacing skills",
+      "valence": "negative",
+      "grounding_span": "I worry that I'll be pushed more into areas where my skills are not that great"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "positive",
+      "grounding_span": "As AI improves, I expect it to hopefully develop into more natural discussions"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Scenario-based role-play and iterative refinement",
+      "grounding_span": "I give the AI a basic rundown of the most principle kind of elements of the situation"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic boundary-setting based on task importance",
+      "grounding_span": "I definitely don't use AI (and am extra cautious to not have it on my history) when dealing with personal data"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

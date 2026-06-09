@@ -1,0 +1,175 @@
+{
+  "transcript_id": "work_0368",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as ideation partner",
+      "label_negative": "AI as black-box solution provider",
+      "bipolarity_complete": true,
+      "grounding_span": "my main goal is to understand how to do it myself, and AI tools are invaluable to me in these types of explanations"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI verifiability and accuracy",
+      "label_negative": "AI for complex, unverifiable tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "The tasks I trust AI to complete alone are typically very simple in nature"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Code ownership and understanding",
+      "label_negative": "AI-generated code without personal understanding",
+      "bipolarity_complete": true,
+      "grounding_span": "code I don't understand or code I haven't written myself is not very useful in the long term when it comes time to debug"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI surprise with working solution",
+      "label_negative": "AI failure on simple issues",
+      "bipolarity_complete": true,
+      "grounding_span": "the most satisfying results achieved from AI are those that surprise me with a working solution out of the box"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI up-to-date knowledge",
+      "label_negative": "AI over-focusing on outdated examples",
+      "bipolarity_complete": true,
+      "grounding_span": "if the models were able to better use online information (like up-to-date documentation) they read about and successfully tie their learnings in without over-focusing on examples"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Personal competence and skill development",
+      "grounding_span": "my main goal is to understand how to do it myself"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "any typing I can save is optimal"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Ownership and comprehension of code",
+      "grounding_span": "I also like to have complete control and understanding of my code"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Enjoyment and fun in programming",
+      "grounding_span": "I do have fun programming in my work"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI as collaborative partner",
+      "valence": "positive",
+      "grounding_span": "AI tools are invaluable to me in these types of explanations"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI errors",
+      "valence": "negative",
+      "grounding_span": "A super trivial solution that was overlooked by each AI model I asked"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "the most satisfying results achieved from AI are those that surprise me with a working solution out of the box"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Openness to increasing AI use in future",
+      "valence": "positive",
+      "grounding_span": "I'd be more inclined to ask more questions and use their code examples without feeling like I need to go learn more about it myself"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative back-and-forth questioning",
+      "grounding_span": "I have a back-and-forth conversation and ask the AI to provide usage examples, then decide how I can implement those examples"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based boundary setting — clear separation of AI-appropriate vs. human-only tasks",
+      "grounding_span": "I typically don't let the AI handle the entire task for me"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

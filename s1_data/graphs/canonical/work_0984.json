@@ -1,0 +1,157 @@
+{
+  "transcript_id": "work_0984",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as brainstorming and idea generator",
+      "label_negative": "Sole reliance on traditional sketchbook methods",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI to help me brainstorm ideas and help me get through the bottleneck of creativity"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for administrative tasks",
+      "label_negative": "Manual handling of administrative tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I also use AI for email responses, and am starting to try to implement automation for this"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as supplement to creative process",
+      "label_negative": "Passive acceptance of AI ideas without understanding",
+      "bipolarity_complete": true,
+      "grounding_span": "I always try to assess and understand why the ideas work, and I see this as a learning process"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Trust in AI for client communication",
+      "label_negative": "Distrust in AI for personal client emails",
+      "bipolarity_complete": true,
+      "grounding_span": "as my trust in AI has grown, I've started to use AI generated responses more and more"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as efficiency tool",
+      "label_negative": "Manual time tracking and invoicing",
+      "bipolarity_complete": true,
+      "grounding_span": "I am currently creating a HTML app through AI that I can use in my browser which will track my hours"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative productivity and efficiency",
+      "grounding_span": "AI takes a lot of the burden away, and ultimately helps me deliver the best possible outcome I can to my clients"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Personal creative skill development",
+      "grounding_span": "I always try to assess and understand why the ideas work, and I see this as a learning process, which, if anything, will improve my creativity"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "I see this saving lots of time and allowing me to focus more on the design side of things"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for marketing research",
+      "valence": "positive",
+      "grounding_span": "I used AI to help me write my business plan, and this made the whole process so much simpler and quicker, and the final business plan that I had was really high quality. This was very satisfying indeed."
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Optimism about expanding AI use in accounting",
+      "valence": "positive",
+      "grounding_span": "I'm starting to consider using AI to streamline this too"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "positive",
+      "grounding_span": "I very much look forward to continuing to learn and collaborate with AI in the future"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative task expansion — gradually increasing AI's role",
+      "grounding_span": "Learning about what can be achieved, and implementing it as I go, so as to maximise my efficiency"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Reflective learning from AI output — adapts AI suggestions into own skills",
+      "grounding_span": "I always try to assess and understand why the ideas work, and I see this as a learning process"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,169 @@
+{
+  "transcript_id": "work_0649",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI accuracy in data entry and categorization",
+      "label_negative": "AI inaccuracy in data entry and categorization",
+      "bipolarity_complete": true,
+      "grounding_span": "AI or auto fill doesn't always get those parts right"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as editing assistant",
+      "label_negative": "AI as fully autonomous tool",
+      "bipolarity_complete": true,
+      "grounding_span": "More collaboration...there's usually some editing to the text that needs to happen"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI tool specialization and switching",
+      "label_negative": "AI tool stagnation or unreliability",
+      "bipolarity_complete": true,
+      "grounding_span": "It's gotten better, but all that editing in the earlier days was really frustrating"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as productivity enhancer",
+      "label_negative": "AI as unnecessary or ineffective tool",
+      "bipolarity_complete": true,
+      "grounding_span": "I'll at least give them a try and see if they help boost production in any way"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Human irreplaceability through unique experience and perspective",
+      "label_negative": "Human obsolescence due to AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I'm human, and more adaptable...Robots can't do everything, there will always be a place for humans"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Business efficiency and cost-effectiveness",
+      "grounding_span": "boost my bottom line"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Control and accuracy",
+      "grounding_span": "I like keeping control of that part"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Human agency and control",
+      "grounding_span": "I'm human, and more adaptable"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Frustration with AI transcription errors",
+      "valence": "negative",
+      "grounding_span": "all that editing in the earlier days was really frustrating"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Openness to increasing AI use in future",
+      "valence": "positive",
+      "grounding_span": "I'm open to trying the new tools that come out"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Pragmatic acceptance of AI as a tool",
+      "valence": "mixed",
+      "grounding_span": "I know they're not always great at first, so I'm also open to trying them again later on"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Confidence in human adaptability over AI",
+      "valence": "positive",
+      "grounding_span": "I'm human, and more adaptable"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic experimentation and abandonment of unworkable approaches",
+      "grounding_span": "I'll at least give them a try and see if they help boost production in any way"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Adaptive career flexibility — shifts focus rather than resisting change",
+      "grounding_span": "if AI took over my job, I'd shift and find something else to do"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

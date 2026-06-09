@@ -1,0 +1,207 @@
+{
+  "transcript_id": "work_0459",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as idea generator for outlines and brainstorming",
+      "label_negative": "AI as writer of full chapters",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is getting pretty good at writing plot outlines"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI's ability to maintain narrative continuity and concrete details",
+      "label_negative": "AI's tendency to lose context and produce generic descriptions",
+      "bipolarity_complete": true,
+      "grounding_span": "the writing lacks context and concrete details"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as collaborative iterative partner",
+      "label_negative": "AI as independent delegator",
+      "bipolarity_complete": true,
+      "grounding_span": "I tend to go back and forth to collaborate with it during a task"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Open AI use in writing community",
+      "label_negative": "Secret AI use due to social backlash",
+      "bipolarity_complete": true,
+      "grounding_span": "I approach these tools with caution... because I fear the backlash"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as threat to writer livelihood",
+      "label_negative": "AI as efficiency tool that doesn't replace human writers",
+      "bipolarity_complete": true,
+      "grounding_span": "a lot of people think that AI is going to put writers out of work"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI handling grunt work to free up creative writing",
+      "label_negative": "AI encroaching on creative writing itself",
+      "bipolarity_complete": true,
+      "grounding_span": "If I can use AI to do all the grunt work... then it frees up more time for me to do the thing I enjoy most"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Creative autonomy and human nuance",
+      "grounding_span": "the small creative details that I like to add in myself"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and productivity",
+      "grounding_span": "allows me to write more efficiently"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Social acceptance and professional reputation",
+      "grounding_span": "I fear the backlash that could come with anyone knowing I'm using AI"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for outlines and brainstorming",
+      "valence": "positive",
+      "grounding_span": "I've had a lot of success with using AI for plot lines and brainstorming"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI for full chapter writing",
+      "valence": "negative",
+      "grounding_span": "I was super frustrated"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Cautious secretive use due to social pressure",
+      "valence": "ambivalent",
+      "grounding_span": "I approach these tools with caution... essentially forcing me to use it secretly"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Optimism about AI as future personal assistant",
+      "valence": "positive",
+      "grounding_span": "I can see myself using it to create book covers... as a personal assistant of sorts"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through back-and-forth collaboration",
+      "grounding_span": "I often pick out specific things and ask it to tweak specific spots"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic task decomposition: delegating grunt work, retaining creative core",
+      "grounding_span": "If I can use AI to do all the grunt work... then it frees up more time for me to do the thing I enjoy most"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n3",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

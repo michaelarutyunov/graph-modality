@@ -1,0 +1,242 @@
+{
+  "transcript_id": "creativity_0058",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI capturing personal creative voice",
+      "label_negative": "AI failing to capture personal style",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't feel like it can ever really capture my style"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for client work vs personal work",
+      "label_negative": "AI for personal creative work",
+      "bipolarity_complete": true,
+      "grounding_span": "I do use AI in video scripting when I'm doing client videos. I don't use it for my own videos"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as research assistant",
+      "label_negative": "AI as unreliable fact provider",
+      "bipolarity_complete": true,
+      "grounding_span": "AI can be very helpful in finding details and stories... when it's honest"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as creative director requiring heavy guidance",
+      "label_negative": "AI as autonomous writer",
+      "bipolarity_complete": true,
+      "grounding_span": "I'm definitely driving the creative decisions. That's the only way to get anything good out of it"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI enabling new creative possibilities",
+      "label_negative": "AI restricting creative expression",
+      "bipolarity_complete": true,
+      "grounding_span": "AI opens up that possibility for me"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI ethics in style and voice appropriation",
+      "label_negative": "AI respecting original creators' styles",
+      "bipolarity_complete": true,
+      "grounding_span": "I do worry a great deal about how AI learns creative writing (lifting the voices of popular authors)"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI market saturation with low-quality content",
+      "label_negative": "AI maintaining or improving content quality",
+      "bipolarity_complete": true,
+      "grounding_span": "I worry about the market being crowded with awful books"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Authentic self-expression",
+      "grounding_span": "My writing has (and should have) a very distinctive style. It's my voice"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Financial sustainability",
+      "grounding_span": "I also want to make money. That's what buys travel and coffee"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Creative control and authorship",
+      "grounding_span": "I'm definitely driving the creative decisions"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Ethical integrity",
+      "grounding_span": "I want to know that I'm not stealing someone else's style when I use it"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Rejection of AI for personal creative work",
+      "valence": "negative",
+      "grounding_span": "I would never use AI for my own videos"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Pragmatic acceptance of AI for client work",
+      "valence": "mixed",
+      "grounding_span": "I do use AI in video scripting when I'm doing client videos"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Cautious trust in AI for research",
+      "valence": "ambivalent",
+      "grounding_span": "I always double-check any 'facts' I get from AI"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Frustration with AI's creative limitations",
+      "valence": "negative",
+      "grounding_span": "AI was still an absolutely terrible writer"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Hope for AI enabling new projects",
+      "valence": "positive",
+      "grounding_span": "AI opens up that possibility for me"
+    },
+    {
+      "id": "n17",
+      "type": "Stance",
+      "label": "Ethical concern about AI style appropriation",
+      "valence": "negative",
+      "grounding_span": "I do worry a great deal about how AI learns creative writing"
+    },
+    {
+      "id": "n18",
+      "type": "Stance",
+      "label": "Concern about market saturation",
+      "valence": "negative",
+      "grounding_span": "I worry about the market being crowded with awful books"
+    },
+    {
+      "id": "n19",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based boundary setting",
+      "grounding_span": "I don't use it for my own videos, because I don't feel like it can ever really capture my style"
+    },
+    {
+      "id": "n20",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative directive refinement",
+      "grounding_span": "I take a portion of what it writes (if it's good) or tell it what to change (if it isn't), and tell it how to expand it"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n17",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n18",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n19",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n20",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

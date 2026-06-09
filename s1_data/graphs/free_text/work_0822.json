@@ -1,0 +1,271 @@
+{
+  "transcript_id": "work_0822",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative partner for troubleshooting and learning",
+      "label_negative": "AI as independent task completer",
+      "bipolarity_complete": true,
+      "grounding_span": "I typically collaborate with AI throughout"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as delegated employee for oversight",
+      "label_negative": "AI as fully autonomous agent",
+      "bipolarity_complete": true,
+      "grounding_span": "I think of it as delegating these tasks to another employee and checking their work"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Creative control over subjective tasks",
+      "label_negative": "AI handling subjective creative tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "color grading my images and footage is a very subjective task that my reputation depends on"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI accuracy and up-to-date information",
+      "label_negative": "AI providing outdated or incorrect information",
+      "bipolarity_complete": true,
+      "grounding_span": "giving me the wrong steps to complete a task in an outdated software application"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI contextual memory across conversations",
+      "label_negative": "AI lack of contextual memory",
+      "bipolarity_complete": true,
+      "grounding_span": "lack of contextual memory across conversations"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as soundboard for ideas",
+      "label_negative": "AI as mere tool for execution",
+      "bipolarity_complete": true,
+      "grounding_span": "I sometimes use AI as a soundboard for ideas and future endeavors"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI ability to mirror human thought process",
+      "label_negative": "AI inability to align with human reasoning",
+      "bipolarity_complete": true,
+      "grounding_span": "the model was able to mirror my thought process"
+    },
+    {
+      "id": "n8",
+      "type": "Construct",
+      "label": "Future role shift from task completion to oversight",
+      "label_negative": "Current role of hands-on task completion",
+      "bipolarity_complete": true,
+      "grounding_span": "I will be there more for oversight"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Professional reputation and consistency",
+      "grounding_span": "my reputation depends on"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "saves quite a bit of time"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Personal authenticity in client communication",
+      "grounding_span": "communicate with my clients in my own words"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Innovation and experimentation",
+      "grounding_span": "experiment with a new idea"
+    },
+    {
+      "id": "n13",
+      "type": "Value",
+      "label": "Strategic adaptation to technological change",
+      "grounding_span": "diverted much of my resources away from web design and SEO"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Satisfaction with AI as collaborative partner",
+      "valence": "positive",
+      "grounding_span": "I typically collaborate with AI throughout"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Satisfaction with AI as delegated employee",
+      "valence": "positive",
+      "grounding_span": "I think of it as delegating these tasks to another employee and checking their work"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Preference for human control over subjective tasks",
+      "valence": "negative",
+      "grounding_span": "color grading my images and footage is a very subjective task that my reputation depends on"
+    },
+    {
+      "id": "n17",
+      "type": "Stance",
+      "label": "Frustration with outdated information",
+      "valence": "negative",
+      "grounding_span": "giving me the wrong steps to complete a task in an outdated software application"
+    },
+    {
+      "id": "n18",
+      "type": "Stance",
+      "label": "Frustration with lack of contextual memory",
+      "valence": "negative",
+      "grounding_span": "lack of contextual memory across conversations"
+    },
+    {
+      "id": "n19",
+      "type": "Stance",
+      "label": "Impressed with AI mirroring thought process",
+      "valence": "positive",
+      "grounding_span": "I was very impressed with how well the model was able to mirror my thought process"
+    },
+    {
+      "id": "n20",
+      "type": "Stance",
+      "label": "Anticipatory adaptation to future AI role",
+      "valence": "mixed",
+      "grounding_span": "I will need to adapt to a role that will then involve the set-up of tasks less than the completion"
+    },
+    {
+      "id": "n21",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through examples",
+      "grounding_span": "as I gave more examples, the model was able to refine its analyses much closer to mine"
+    },
+    {
+      "id": "n22",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic forward-thinking and resource reallocation",
+      "grounding_span": "diverted much of my resources away from web design and SEO due to the future capability"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n13",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n14",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n17",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n18",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n19",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n20",
+      "target": "n8",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n21",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n7",
+      "target": "n21",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n8",
+      "target": "n22",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,183 @@
+{
+  "transcript_id": "work_0482",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as communication tone refiner",
+      "label_negative": "Unaided drafting of sensitive messages",
+      "bipolarity_complete": true,
+      "grounding_span": "ask the model to deliver the message in a more professional tone"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as information structurer and planner",
+      "label_negative": "Manual organization of complex information",
+      "bipolarity_complete": true,
+      "grounding_span": "AI will then incorporate the deadline into body of the message and suggest a checklist"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability for up-to-date information",
+      "label_negative": "AI reliance on potentially outdated data",
+      "bipolarity_complete": true,
+      "grounding_span": "the AI model may not have complete up-to-date information"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as time-saving summarizer",
+      "label_negative": "Manual review of lengthy meeting recordings",
+      "bipolarity_complete": true,
+      "grounding_span": "ask AI to review the transcript to provide me key details"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as sensitive communication assistant",
+      "label_negative": "Independent drafting of difficult rejection messages",
+      "bipolarity_complete": true,
+      "grounding_span": "I asked AI to review the rejection and help me draft a paragraph"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as administrative task assistant",
+      "label_negative": "AI replacing human relational role",
+      "bipolarity_complete": true,
+      "grounding_span": "AI has its place in helping my administrative tasks and responsibilities"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional communication effectiveness",
+      "grounding_span": "handle professionally to not upset the student further"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Accuracy and reliability of information",
+      "grounding_span": "the AI model may not have complete up-to-date information"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Time efficiency and productivity",
+      "grounding_span": "save time, put more focus on other tasks"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Human connection and relational support",
+      "grounding_span": "being someone to lean on as they navigate their decision to start college"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI for difficult communications",
+      "valence": "positive",
+      "grounding_span": "In an instant, AI crafted the response I had spent a long time going back and forth"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Caution about AI for location searches",
+      "valence": "negative",
+      "grounding_span": "I would be worried that AI would suggest that location as part of their research"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Appreciation for AI as time-saver",
+      "valence": "positive",
+      "grounding_span": "This has helped me save time, put more focus on other tasks"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Eagerness to expand AI use",
+      "valence": "positive",
+      "grounding_span": "the more eager I am to apply it to my daily work tasks"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through additional requests",
+      "grounding_span": "if my question was phrased too simple, I will ask AI to re-write the passage with an additional request"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Selective delegation based on task characteristics",
+      "grounding_span": "I mostly collaborate with AI, but sometimes I will delegate complete tasks"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

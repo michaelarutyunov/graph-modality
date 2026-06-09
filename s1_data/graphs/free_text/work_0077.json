@@ -1,0 +1,185 @@
+{
+  "transcript_id": "work_0077",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as efficiency tool for busywork",
+      "label_negative": "AI as threat to creative autonomy",
+      "bipolarity_complete": true,
+      "grounding_span": "items that require a lot of leg work... not nearly as fast"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI authenticity and naturalness",
+      "label_negative": "AI inauthenticity and unnatural feel",
+      "bipolarity_complete": true,
+      "grounding_span": "same kind of inauthentic, unnatural feel"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability and accuracy",
+      "label_negative": "AI hallucination and false information",
+      "bipolarity_complete": true,
+      "grounding_span": "false information, bad recommendations, and hallucinations"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as creative partner",
+      "label_negative": "AI as replacement for human creativity",
+      "bipolarity_complete": true,
+      "grounding_span": "prefer the stretching of my creative muscles"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI societal impact awareness",
+      "label_negative": "AI profit-driven without consequences",
+      "bipolarity_complete": true,
+      "grounding_span": "people who are profiting off of AI and perhaps not giving enough consideration to the consequences"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "not nearly as fast"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Creative self-expression",
+      "grounding_span": "stretching of my creative muscles"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Trustworthy information",
+      "grounding_span": "false information, bad recommendations, and hallucinations"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Social justice and ethical responsibility",
+      "grounding_span": "people who are profiting off of AI and perhaps not giving enough consideration to the consequences"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for specific tasks",
+      "valence": "positive",
+      "grounding_span": "poems where the first letter of each sentence spelled out student's names"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI unreliability",
+      "valence": "negative",
+      "grounding_span": "false information, bad recommendations, and hallucinations making it basically unusable"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Preference for human creativity over AI",
+      "valence": "negative",
+      "grounding_span": "prefer the stretching of my creative muscles compared to mindless busywork"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Concern about AI societal harms",
+      "valence": "negative",
+      "grounding_span": "people who are profiting off of AI and perhaps not giving enough consideration to the consequences"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Fun-based task delegation — uses enjoyment as heuristic for what to keep vs delegate",
+      "grounding_span": "I decide categories distinction's based off of how much fun they appear to be"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement — gives rough ideas, receives output, then tailors",
+      "grounding_span": "I usually give it my thoughts about what I want roughly, get back their first version of ideas, then I tailor them"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

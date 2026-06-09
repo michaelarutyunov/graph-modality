@@ -1,0 +1,199 @@
+{
+  "transcript_id": "work_0481",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI for subjective data analysis",
+      "label_negative": "AI for objective tasks (statistics, facts)",
+      "bipolarity_complete": true,
+      "grounding_span": "I like to use AI for more subjective things (like phrasing or rewriting)"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI hallucination and fabrication",
+      "bipolarity_complete": true,
+      "grounding_span": "AI models tend to hallucinate instead of admitting they can't find something"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as efficiency tool",
+      "label_negative": "Manual effort for organization and formatting",
+      "bipolarity_complete": true,
+      "grounding_span": "Rather than having to type everything out and organize it myself, I just gave the AI most of the workouts"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as skill development enabler",
+      "label_negative": "Maintaining skills through personal practice",
+      "bipolarity_complete": true,
+      "grounding_span": "It is possible to lose practice with any skill because of AI"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI accuracy in numerical tasks",
+      "label_negative": "Current AI inaccuracy",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is only going to improve and become more accurate in the future"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Human judgment and nuanced understanding",
+      "grounding_span": "I can make the final decision if I want to incorporate the AI's advice or not"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Trustworthiness and accuracy",
+      "grounding_span": "the accuracy of statistics and context is extremely important"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "helps them get tasks done better and more efficiently"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Skill maintenance and self-reliance",
+      "grounding_span": "doing it yourself and remembering"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Preference for AI on simple tasks only",
+      "valence": "positive",
+      "grounding_span": "I like to use AI for more subjective things"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Distrust of AI reliability",
+      "valence": "negative",
+      "grounding_span": "I trust myself to find accurate and relevant information more than AI"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with AI hallucination",
+      "valence": "negative",
+      "grounding_span": "I quickly became frustrated because I could tell almost all of the information I was being given was hallucinated"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "I used AI to help create a workout plan for a month, and that was pretty helpful"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Concern about AI replacing skills",
+      "valence": "negative",
+      "grounding_span": "It is possible to lose practice with any skill because of AI"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "positive",
+      "grounding_span": "I see myself using AI more for tasks I consider to be objectively based in the future"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Deliberate boundary-setting between objective and subjective tasks",
+      "grounding_span": "I like to use AI for more subjective things (like phrasing or rewriting) ... I trust myself more with the accuracy"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative iterative refinement — works back and forth with AI",
+      "grounding_span": "I will need to go back and forth with the AI to get a better suggestion or give it more context"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

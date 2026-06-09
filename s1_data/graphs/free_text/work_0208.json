@@ -1,0 +1,184 @@
+{
+  "transcript_id": "work_0208",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as writing and document review assistant",
+      "label_negative": "AI as unreliable for sensitive policy recommendations",
+      "bipolarity_complete": true,
+      "grounding_span": "I use for mainly for reviewing documents and writing things"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as collaborative tool with iterative prompting",
+      "label_negative": "AI as independent task delegator",
+      "bipolarity_complete": true,
+      "grounding_span": "I would collaborate, adding prompts or clarifying changes as I go"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI capability for text-based analysis",
+      "label_negative": "AI incapability for spatial/map interpretation",
+      "bipolarity_complete": true,
+      "grounding_span": "I have not found accessible AI that is good at interpreting maps"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as style-matching writing tool via samples",
+      "label_negative": "AI without personalized style adaptation",
+      "bipolarity_complete": true,
+      "grounding_span": "feeding AI writing samples has helped quite a bit"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Human judgment in policy and community decisions",
+      "label_negative": "AI-driven policy and community decisions",
+      "bipolarity_complete": true,
+      "grounding_span": "there needs to be personal input when dealing with people and communities"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency in writing and document review",
+      "grounding_span": "just want the ease of writing it with AI"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Accuracy and responsibility in policy recommendations",
+      "grounding_span": "You want to closely review what you are recommending or sending to someone"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Human contextual understanding and relationship",
+      "grounding_span": "personal input when dealing with people and communities"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI as writing assistant",
+      "valence": "positive",
+      "grounding_span": "I use for mainly for reviewing documents and writing things"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI's map interpretation limitation",
+      "valence": "negative",
+      "grounding_span": "I have not found accessible AI that is good at interpreting maps"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Openness to expanding AI use",
+      "valence": "positive",
+      "grounding_span": "I could see myself using it more"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Resistance to AI in policy and community decisions",
+      "valence": "negative",
+      "grounding_span": "AI could never replace"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative collaborative prompting — refines outputs through back-and-forth",
+      "grounding_span": "I would collaborate, adding prompts or clarifying changes as I go"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-specific task allocation — uses AI only for text, handles spatial analysis manually",
+      "grounding_span": "I just do it myself and maybe use AI to help me write later"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,199 @@
+{
+  "transcript_id": "work_0522",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as time-saving creative enabler",
+      "label_negative": "AI as unreliable obstacle",
+      "bipolarity_complete": true,
+      "grounding_span": "I do love how much time it saves me and how much more it opens me creatively"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI instruction-following reliability",
+      "label_negative": "AI inability to follow simple instructions",
+      "bipolarity_complete": true,
+      "grounding_span": "the ability to follow directions is my biggest paint point"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as starting point requiring human polish",
+      "label_negative": "AI as fully autonomous final output",
+      "bipolarity_complete": true,
+      "grounding_span": "it is a great starting point and makes my life easier because I don't have to think so hard to get a writing task started"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI suitability for niche specialized domains",
+      "label_negative": "AI inadequacy for niche specialized domains",
+      "bipolarity_complete": true,
+      "grounding_span": "it is too niche for AI to grasp the understanding"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Human creative touch and consistency",
+      "label_negative": "AI-generated generic output",
+      "bipolarity_complete": true,
+      "grounding_span": "I also prefer to do some of the graphic design elements myself, like icon and small graphic creation so I can add my own flare and consistency among elements"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative expression and quality",
+      "grounding_span": "we understand the importance of the human touch"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "saves me a lot of time"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Client satisfaction and customization",
+      "grounding_span": "better able to customize web pages to my clients needs"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI's time-saving and creative expansion",
+      "valence": "positive",
+      "grounding_span": "I do love how much time it saves me and how much more it opens me creatively"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI's declining reliability and instruction-following",
+      "valence": "negative",
+      "grounding_span": "I have been more frustrated lately, especially with ChatGPT as it seems to be getting worse"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Cautious openness to future AI integration",
+      "valence": "ambivalent",
+      "grounding_span": "I will always be cautious around it since I see how often it can't follow simple instructions"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Preference for human touch in creative tasks",
+      "valence": "positive",
+      "grounding_span": "I also prefer to do some of the graphic design elements myself"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement — uses AI as draft then polishes manually",
+      "grounding_span": "I will ask it to do several rewrites on its own and then once I'm happy with it I go in and rewrite it to my standards"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-dependent delegation — hands-on for niche/creative, hands-off for technical",
+      "grounding_span": "When I work with extremely specialized clients it's better for me to write content myself"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n4",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

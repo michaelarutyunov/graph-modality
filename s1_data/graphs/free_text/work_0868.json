@@ -1,0 +1,181 @@
+{
+  "transcript_id": "work_0868",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI instruction simplicity for better performance",
+      "label_negative": "AI instruction complexity causing worse performance",
+      "bipolarity_complete": true,
+      "grounding_span": "the model performs better with fewer instructions"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as collaborative partner in iterative tasks",
+      "label_negative": "AI as independent tool with minimal interaction",
+      "bipolarity_complete": true,
+      "grounding_span": "it is an extremely collaborative task"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI context retention and conversation coherence",
+      "label_negative": "AI forgetting conversation history and context",
+      "bipolarity_complete": true,
+      "grounding_span": "the model forgets the conversation history"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI ability to handle large datasets",
+      "label_negative": "AI struggling with large datasets",
+      "bipolarity_complete": true,
+      "grounding_span": "the model seems to struggle with larger data sets"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI creativity and exceeding expectations",
+      "label_negative": "AI lacking creativity and falling short",
+      "bipolarity_complete": true,
+      "grounding_span": "a very creative assumptive close - I really didn't think the AI had it in them"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Work quality and accuracy",
+      "grounding_span": "assess the work for completion and accuracy"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and productivity",
+      "grounding_span": "I typically break them down into smaller portions"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional autonomy and adaptability",
+      "grounding_span": "I am pretty good with adapting and have a secure position"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI translation performance",
+      "valence": "positive",
+      "grounding_span": "I don't mind the translation's performance"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI context loss",
+      "valence": "negative",
+      "grounding_span": "It was very frustrating working with this model because each question was a new conversation"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Impressed by AI creativity in test call",
+      "valence": "positive",
+      "grounding_span": "I really didn't think the AI had it in them to come up with it"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Confidence in job security despite AI",
+      "valence": "positive",
+      "grounding_span": "I don't worry about it. I am pretty good with adapting and have a secure position"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Hope for improved AI reliability",
+      "valence": "positive",
+      "grounding_span": "I hope that the AI models get smarter"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative testing and refinement approach",
+      "grounding_span": "edit instructions and perform test calls with it"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Task decomposition into manageable parts",
+      "grounding_span": "I typically break them down into smaller portions"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

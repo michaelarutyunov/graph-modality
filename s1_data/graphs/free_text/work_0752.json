@@ -1,0 +1,207 @@
+{
+  "transcript_id": "work_0752",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as debugging and research tool",
+      "label_negative": "Manual search and implementation",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI mostly for debugging code"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for boilerplate code generation",
+      "label_negative": "AI for complex code generation",
+      "bipolarity_complete": true,
+      "grounding_span": "I will sometimes use AI to write boilerplate code"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as collaborative iterative partner",
+      "label_negative": "AI as independent task delegator",
+      "bipolarity_complete": true,
+      "grounding_span": "I'm much more likely to collaborate throughout a task, taking an iterative approach"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Code ownership and understanding",
+      "label_negative": "AI-generated code without understanding",
+      "bipolarity_complete": true,
+      "grounding_span": "it is much harder for me to debug and improve upon code that I haven't written myself"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as pragmatic tool without emotional attachment",
+      "label_negative": "AI as emotionally engaging partner",
+      "bipolarity_complete": true,
+      "grounding_span": "I honestly don't really assign much emotion to the outputs of AI"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "Proactive AI skill adoption",
+      "label_negative": "Passive resistance to AI",
+      "bipolarity_complete": true,
+      "grounding_span": "it's just best to get ahead of the curve on the use of AI tools"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "Organizational AI bubble and correction",
+      "label_negative": "Sustained organizational AI enthusiasm",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is a little bit of a growing bubble"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and productivity",
+      "grounding_span": "it has essentially replaced the process I would previously follow"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Competence and control over work",
+      "grounding_span": "it is much harder for me to debug and improve upon code that I haven't written myself"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Pragmatic adaptability",
+      "grounding_span": "if it works it works, if it doesn't, either I have to fix it with better prompting"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI for debugging and research",
+      "valence": "positive",
+      "grounding_span": "it has essentially replaced the process I would previously follow"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Preference for manual complex coding",
+      "valence": "negative",
+      "grounding_span": "I do not like to do this, as it is much harder for me to debug and improve upon code that I haven't written myself"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Emotional neutrality toward AI",
+      "valence": "ambivalent",
+      "grounding_span": "I honestly don't really assign much emotion to the outputs of AI"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Proactive embrace of AI tools",
+      "valence": "positive",
+      "grounding_span": "it's just best to get ahead of the curve on the use of AI tools"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Skepticism about organizational AI hype",
+      "valence": "negative",
+      "grounding_span": "companies realise that it isn't quite as powerful a tool as they think"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative guided problem-solving",
+      "grounding_span": "taking an iterative approach, guiding the AI to the correct solutions"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic outcome-focused evaluation",
+      "grounding_span": "if it works it works, if it doesn't, either I have to fix it with better prompting or it's beyond the scope of the LLM"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n3",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

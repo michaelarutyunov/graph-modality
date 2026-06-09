@@ -1,0 +1,235 @@
+{
+  "transcript_id": "work_0393",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as coding assistant for unfamiliar languages",
+      "label_negative": "AI as unnecessary for familiar languages",
+      "bipolarity_complete": true,
+      "grounding_span": "most helpful when coding in languages I am less familiar with or when using SQL"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as autonomous agent for core coding",
+      "bipolarity_complete": true,
+      "grounding_span": "I typically involve the model in the early stages if there is code I am trying to better understand"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI context overhead vs. iterative workflow",
+      "label_negative": "AI seamless integration with minimal context",
+      "bipolarity_complete": true,
+      "grounding_span": "Each time I talk with the model I must begin a new conversation. This involves repeatedly giving the model background"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI tendency toward robust solutions vs. iterative approach",
+      "label_negative": "AI alignment with incremental changes",
+      "bipolarity_complete": true,
+      "grounding_span": "the model opt to make large changes or robust solutions when most of the time I want to take a more iterative approach"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI effectiveness for unit test generation",
+      "label_negative": "AI for high-stakes production code",
+      "bipolarity_complete": true,
+      "grounding_span": "Unit tests have no prod implications, I do not need to look them over as carefully"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "Organizational mandate vs. genuine utility",
+      "label_negative": "Voluntary AI use based on need",
+      "bipolarity_complete": true,
+      "grounding_span": "my org and manger expectation is to use them regularly. I would still use them without this, but not as often"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI as assistant for complex work",
+      "label_negative": "AI as generic task delegation tool",
+      "bipolarity_complete": true,
+      "grounding_span": "models will be developed with more of a personal assistant mentality. That they will learn and retain my workflow"
+    },
+    {
+      "id": "n8",
+      "type": "Construct",
+      "label": "AI as tone checker for professional communication",
+      "label_negative": "AI condescending or overly apologetic tone",
+      "bipolarity_complete": true,
+      "grounding_span": "the way they speak comes off as condescending or 'yes man' like"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "I was using the model to try to iterate quickly on test scripts"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Code quality and correctness",
+      "grounding_span": "I prefer to handle most coding tasks myself"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Efficiency and speed in communication",
+      "grounding_span": "the model should pay attention to the way I am talking about the mistake and customize how apologetic they are"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI for simple syntax issues",
+      "valence": "positive",
+      "grounding_span": "most helpful when coding in languages I am less familiar with"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Frustration with AI's inability to maintain context",
+      "valence": "negative",
+      "grounding_span": "I was quite frustrated because the model kept trying to make robust and comprehensive test scripts"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Resistance to mandated AI use for meaningless tests",
+      "valence": "negative",
+      "grounding_span": "the tool use requirement has led to the bloat of meaningless unit tests"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Optimism about AI as future personal assistant",
+      "valence": "positive",
+      "grounding_span": "It is my hope that models will be developed with more of a personal assistant mentality"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Frustration with AI when it deviates from tone",
+      "valence": "negative",
+      "grounding_span": "the way they speak comes off as condescending or 'yes man' like"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative and incremental approach to coding",
+      "grounding_span": "most of the time I want to take a more iterative approach"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Preference for minimal context overhead and direct communication",
+      "grounding_span": "sometimes a 'my bad, fixed!' is all that would be needed"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n8",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n8",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n6",
+      "target": "n7",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,169 @@
+{
+  "transcript_id": "work_0682",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as occasional resource for specific tasks",
+      "label_negative": "AI as unreliable outdated guide",
+      "bipolarity_complete": true,
+      "grounding_span": "AI has been helping me learn"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as collaborative solution refiner",
+      "label_negative": "AI as incomplete code provider",
+      "bipolarity_complete": true,
+      "grounding_span": "gave my macro code to an AI and it cleaned it up"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as drafting assistant for emails",
+      "label_negative": "AI as unnecessary for simple tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "Rewording emails is simple enough"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as autonomous guesser",
+      "bipolarity_complete": true,
+      "grounding_span": "Almost always collaborating when I am doing a work-related task"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as practical problem solver",
+      "label_negative": "AI as dead-end when constraints mismatch",
+      "bipolarity_complete": true,
+      "grounding_span": "Despite the frustration and time sink it pays off when its complete"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "saves me a few minutes each morning"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Skill development and learning",
+      "grounding_span": "learning Power Automate"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Control and guidance in task execution",
+      "grounding_span": "I prefer to get a task as far as I can"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "When my fist Power Automate ran successfully"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with outdated AI information",
+      "valence": "negative",
+      "grounding_span": "It seems to be describing an older Power Automate version"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI errors",
+      "valence": "negative",
+      "grounding_span": "It keeps wanting to incorporate Python code but I want everything to be run with excel or macros"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Pragmatic acceptance of AI as a tool",
+      "valence": "positive",
+      "grounding_span": "I will continue to use it as a resource"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative step-by-step problem decomposition",
+      "grounding_span": "tell it to just give me one step at a time"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Preparatory groundwork before AI involvement",
+      "grounding_span": "I prefer to get a task as far as I can"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

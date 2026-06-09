@@ -1,0 +1,151 @@
+{
+  "transcript_id": "work_0645",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as creative collaborator for iterative refinement",
+      "label_negative": "AI as one-shot answer provider",
+      "bipolarity_complete": true,
+      "grounding_span": "For the logo, I might have exchanged 50 messages with the chatbot before reaching the final version"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as administrative assistant for efficiency",
+      "label_negative": "AI as time-consuming administrative burden",
+      "bipolarity_complete": true,
+      "grounding_span": "For more administrative stuff, it's more straightforward, maybe because I don't like it, so I wanna be done with it as soon as I can"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability for software-specific instructions",
+      "label_negative": "AI unreliability due to outdated data",
+      "bipolarity_complete": true,
+      "grounding_span": "It's usually when I ask something specific about Gimp or GSheet. It's like the chatbot doesn't know exactly how the software looks like, and its data is outdated"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as learning partner for skill development",
+      "label_negative": "AI as crutch hindering personal skill growth",
+      "bipolarity_complete": true,
+      "grounding_span": "I hope I can learn about photography and picture editing thanks to AI. So I won't have to ask for help every time"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Creative satisfaction and quality output",
+      "grounding_span": "When it gives me really good ideas of elements to put in my logo, gives me a pleasant looking picture of a logo for my shop, or when its advice on editing my products' pictures result in great quality pictures, then I'm really satisfied"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Time efficiency and reduced drudgery",
+      "grounding_span": "For boring administrative tasks, however, AI will always be welcome to help me! I prefer to spend more time and energy on making macrame and taking pictures"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Personal competence and autonomy",
+      "grounding_span": "I hope I can learn about photography and picture editing thanks to AI. So I won't have to ask for help every time"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Satisfaction with AI in creative tasks",
+      "valence": "positive",
+      "grounding_span": "When it gives me really good ideas of elements to put in my logo, gives me a pleasant looking picture of a logo for my shop, or when its advice on editing my products' pictures result in great quality pictures, then I'm really satisfied"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Frustration with AI for software-specific instructions",
+      "valence": "negative",
+      "grounding_span": "It's like the chatbot doesn't know exactly how the software looks like, and its data is outdated, so it tells me to select an option that doesn't exist"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Openness to AI for administrative tasks",
+      "valence": "positive",
+      "grounding_span": "For boring administrative tasks, however, AI will always be welcome to help me!"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Expectation of decreasing AI reliance over time",
+      "valence": "mixed",
+      "grounding_span": "I might get more comfortable on the creative side of the business, so I might ask less stuff about that. For the administrative tasks, I think it will stay the same. So I might use AI less with time, but it will still be present"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative detail-by-detail problem decomposition",
+      "grounding_span": "I go one detail at a time. I tell the chatbot about one particular thing I want to do or change, see its advice, work on it, sometimes ask clarification or complain about the result or the advice not working, and only once I'm satisfied with that detail, I go on with another one"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic mood-dependent feedback provision",
+      "grounding_span": "Depends on my mood 😅Most of the time, I don't take the time to give feedback, I just move on to the next question"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

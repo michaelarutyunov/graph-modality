@@ -1,0 +1,169 @@
+{
+  "transcript_id": "work_0006",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as delegated writer for flexible tasks",
+      "label_negative": "AI as writer for tasks requiring exact format or style",
+      "bipolarity_complete": true,
+      "grounding_span": "I am more willing to let the AI use its judgement"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as collaborative editor for complex documents",
+      "label_negative": "AI as sole writer for complex documents",
+      "bipolarity_complete": true,
+      "grounding_span": "I will write up a bit of the proposal and then have the AI clean it up"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability in following instructions",
+      "label_negative": "AI unreliability in following instructions",
+      "bipolarity_complete": true,
+      "grounding_span": "It produced a well written document that was over the limit"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI integration with existing systems",
+      "label_negative": "AI isolation from existing systems",
+      "bipolarity_complete": true,
+      "grounding_span": "cannot review emails or documents in my folders"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI adaptation to personal writing style",
+      "label_negative": "AI generic writing style",
+      "bipolarity_complete": true,
+      "grounding_span": "the AI models start to understand your writing style"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and productivity",
+      "grounding_span": "makes the process cumbersome and less efficient"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Quality and accuracy of output",
+      "grounding_span": "It produced a well written document that was over the limit"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Authentic communication",
+      "grounding_span": "how touching the email was and how valued it made people feel"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for motivational email",
+      "valence": "positive",
+      "grounding_span": "I received many comments about how touching the email was"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI for word count compliance",
+      "valence": "negative",
+      "grounding_span": "It produced a well written document that was over the limit. This happened twice and it was very frustrating"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Openness to expanded AI use with better integration",
+      "valence": "positive",
+      "grounding_span": "If my work expands the use of AI to connect to other applications, I will use it much more"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Preference for delegating most tasks to AI",
+      "valence": "positive",
+      "grounding_span": "I am open to delegating most work to the AI"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Delegation with review — prefers to delegate then review",
+      "grounding_span": "Delegating tasks. I will also review them afterwards"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Prompt refinement — iteratively adjusts prompts to achieve desired output",
+      "grounding_span": "I adjusted the prompt and eventually it worked"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

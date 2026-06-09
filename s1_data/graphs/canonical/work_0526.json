@@ -1,0 +1,219 @@
+{
+  "transcript_id": "work_0526",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI for administrative tasks",
+      "label_negative": "Manual handling of routine tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "write standard emails that do not require a lot of specific information"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for summarization and research",
+      "label_negative": "Manual summarization and note-taking",
+      "bipolarity_complete": true,
+      "grounding_span": "summarize meetings and complex emails"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Company policy restricting AI tool use",
+      "label_negative": "Unconstrained AI use",
+      "bipolarity_complete": true,
+      "grounding_span": "policy actually prohibits reliance on AI in many tasks"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Confidentiality in AI use",
+      "label_negative": "Human handling of privacy-sensitive tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "anything that deals with an inmate's PII is handled without using AI"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as supplementary aide to human expertise",
+      "label_negative": "Human judgment for expertise-based tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "Picking books for the prison's library is something I like to rely on myself for"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI capability for complex tasks",
+      "label_negative": "AI as collaborative partner",
+      "bipolarity_complete": true,
+      "grounding_span": "it tends to be the latter"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI as productivity enhancer",
+      "label_negative": "AI requiring explicit requests",
+      "bipolarity_complete": true,
+      "grounding_span": "Google Gemini created notes for the video lectures without me even having to ask"
+    },
+    {
+      "id": "n8",
+      "type": "Construct",
+      "label": "AI as tool for career advancement",
+      "label_negative": "No AI impact on job landscape",
+      "bipolarity_complete": true,
+      "grounding_span": "I wonder what the job landscape will look like"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "AI helps cut down on that time"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Privacy and data security",
+      "grounding_span": "to ensure their privacy"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Professional judgment and expertise",
+      "grounding_span": "since I have a master's in library science"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Risk avoidance",
+      "grounding_span": "policy actually prohibits reliance on AI"
+    },
+    {
+      "id": "n13",
+      "type": "Value",
+      "label": "Accuracy and reliability",
+      "grounding_span": "making sure I did not miss any essential points"
+    },
+    {
+      "id": "n14",
+      "type": "Value",
+      "label": "Future preparedness for children",
+      "grounding_span": "what the job landscape will look like by the time my children"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "Google Gemini created notes for the video lectures without me even having to ask, which made going over the content of the videos afterwards easier"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Worry about AI's negative impact on jobs",
+      "valence": "negative",
+      "grounding_span": "I wonder what the job landscape will look like"
+    },
+    {
+      "id": "n17",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "mixed",
+      "grounding_span": "if leadership changes, those attitudes may change with it, and I can see routine tasks being handled more often by AI"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Boundary-setting and stewardship mindset",
+      "grounding_span": "I only feel comfortable using the built-in AI tools offered by Gmail"
+    },
+    {
+      "id": "n19",
+      "type": "CognitiveStyleMarker",
+      "label": "Future-oriented thinking — considering long-term implications for children",
+      "grounding_span": "I wonder what the job landscape will look like by the time my children"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n13",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n14",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n15",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n8",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n17",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n3",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n8",
+      "target": "n19",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

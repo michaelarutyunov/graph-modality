@@ -1,0 +1,180 @@
+{
+  "transcript_id": "science_0124",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as literature discovery tool",
+      "label_negative": "AI as unreliable source for final decisions",
+      "bipolarity_complete": true,
+      "grounding_span": "AI has been extremely good at helping us quickly identify papers"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for summarization and research",
+      "label_negative": "AI producing misleading or incorrect information",
+      "bipolarity_complete": true,
+      "grounding_span": "AI has produced summaries of papers or patents that were misleading or contained outright incorrect information"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as knowledge resource for unfamiliar domains",
+      "label_negative": "AI as insufficient for domain-specific protocol development",
+      "bipolarity_complete": true,
+      "grounding_span": "we used AI to search and summarize information in areas where our expertise was lacking"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI completeness in protocol development",
+      "label_negative": "AI missing critical steps or variables in protocols",
+      "bipolarity_complete": true,
+      "grounding_span": "purification protocols will sometimes be missing a critical step or important variables such as temperature"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Confidentiality in AI use",
+      "label_negative": "Risk of sharing sensitive data with AI",
+      "bipolarity_complete": true,
+      "grounding_span": "there a bit of concern over confidentially with data that we might share with an AI system"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Research efficiency",
+      "grounding_span": "quick screen for publications that we might have interest in"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Accuracy and reliability",
+      "grounding_span": "We're still not 100% convinced that AI is reliable enough to replace a human"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Intellectual property protection",
+      "grounding_span": "concern over confidentially with data"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Competence in new research domains",
+      "grounding_span": "none of had experience in that area"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Positive valuation of AI for literature screening",
+      "valence": "positive",
+      "grounding_span": "AI has been extremely good at helping us quickly identify papers"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Cautious skepticism toward AI reliability",
+      "valence": "negative",
+      "grounding_span": "We're still not 100% convinced that AI is reliable enough to replace a human when it comes to things like data analysis"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Dissatisfaction with AI for protocol development",
+      "valence": "negative",
+      "grounding_span": "our attempts at asking those kinds of questions have led to unsatisfactory answers"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "ambivalent",
+      "grounding_span": "It would be great to simply ask AI things like ... but ... unsatisfactory"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Human-in-the-loop verification — uses AI only as initial filter, then human reviews full text",
+      "grounding_span": "Humans use the summaries to pick out interesting publications and then pull the full text for a thorough review"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-specific gap-filling — uses AI to compensate for lack of expertise in unfamiliar areas",
+      "grounding_span": "we used AI to search and summarize information in areas where our expertise was lacking"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n3",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

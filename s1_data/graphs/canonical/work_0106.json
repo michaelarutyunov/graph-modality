@@ -1,0 +1,183 @@
+{
+  "transcript_id": "work_0106",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as brainstorming and idea generator",
+      "label_negative": "AI as non-collaborative or unhelpful for ideation",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI mostly to help me form ideas"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as independent task delegator",
+      "bipolarity_complete": true,
+      "grounding_span": "I more so collaborate"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as time-saving tool",
+      "label_negative": "Manual handling of repetitive tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I would rather have AI help me because it's repetitive and time consuming"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as agenda creation assistant",
+      "label_negative": "Manual agenda creation under time pressure",
+      "bipolarity_complete": true,
+      "grounding_span": "AI made me feel satisfied when it helped me create an agenda"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI impact on skill maintenance",
+      "label_negative": "Over-reliance on AI leading to skill atrophy",
+      "bipolarity_complete": true,
+      "grounding_span": "I will always maintain my skills and not solely rely on AI"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI adoption in workplace",
+      "label_negative": "Colleagues' resistance to AI due to unfamiliarity",
+      "bipolarity_complete": true,
+      "grounding_span": "I am more so one of the only people that use AI"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Effective meeting preparation and provider support",
+      "grounding_span": "help me create an agenda for my meeting for my child care providers"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "I was really busy that day doing other tasks"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Personal autonomy and skill preservation",
+      "grounding_span": "I will always maintain my skills and not solely rely on AI"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Workplace innovation and progress",
+      "grounding_span": "I feel that maybe I can show others how AI can help at work"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI for campaign planning",
+      "valence": "positive",
+      "grounding_span": "AI made me feel satisfied when it helped me create an agenda"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Openness to future AI for repetitive tasks",
+      "valence": "positive",
+      "grounding_span": "I would rather have AI help me because it's repetitive and time consuming"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Commitment to maintaining skills independently",
+      "valence": "positive",
+      "grounding_span": "I will always maintain my skills and not solely rely on AI"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Optimism about training others to use AI safely",
+      "valence": "positive",
+      "grounding_span": "I feel that maybe I can show others how AI can help at work"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative broadening then narrowing — starts broad then specifies",
+      "grounding_span": "I more so start broadly and then get a little specific"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative co-construction — presents problem and builds on AI output",
+      "grounding_span": "I mostly give AI a problem I am facing and look for it to help me with a solution"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

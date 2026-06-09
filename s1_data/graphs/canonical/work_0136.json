@@ -1,0 +1,166 @@
+{
+  "transcript_id": "work_0136",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI for repetitive simple tasks",
+      "label_negative": "Manual execution of repetitive tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I normally use AI for repetitive tasks such as creating duplicates of pages"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as supplement to creative process",
+      "label_negative": "Human creative work",
+      "bipolarity_complete": true,
+      "grounding_span": "I currently do not use AI for any creative tasks"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI errors and mistakes",
+      "bipolarity_complete": true,
+      "grounding_span": "I always check the individual files for mistakes after it has sent me the .ZIP but I haven't had any issues so far"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI autonomy in task execution",
+      "label_negative": "Human oversight and intervention",
+      "bipolarity_complete": true,
+      "grounding_span": "I just give it the information upfront and it is very good at what it does"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "This saves me a lot of time and it's very boring work doing it manually"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Creative autonomy",
+      "grounding_span": "I really enjoy completing the design process myself"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Originality and uniqueness",
+      "grounding_span": "I also feel it will be more original and unique if I create it myself"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "I was really satisfied as this saved me hours of very boring repetitive work"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Resistance to AI in creative work",
+      "valence": "negative",
+      "grounding_span": "I would never use AI for that"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Confidence in AI as a key skill",
+      "valence": "positive",
+      "grounding_span": "I haven't had any issues so far"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Pragmatic acceptance of skill obsolescence",
+      "valence": "mixed",
+      "grounding_span": "one day my job will probably be obsolete ... There's nothing I can do about that so I don't let it get to me"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Task-specific compartmentalization",
+      "grounding_span": "I currently do not use AI for any creative tasks"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic acceptance of technological change",
+      "grounding_span": "There's nothing I can do about that so I don't let it get to me"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n11",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

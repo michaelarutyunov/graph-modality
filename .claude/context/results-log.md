@@ -78,7 +78,7 @@ Initial results showed a **perfect val macro-F1 = 1.0** ceiling effect across al
 |---|---|
 | classifier | LogisticRegression (C=1.0, class_weight=balanced, max_iter=1000) |
 | feature dim | 798 (768 text + 30 graph stats) |
-| graph stats source | canonicalised graphs via `encoding/graph_stats.py` |
+| graph stats source | canonicalised graphs via `s4_encoding/graph_stats_encoder.py` |
 | val macro-F1 | **0.9122** (Δ = +0.0090 vs baseline) |
 | test macro-F1 | **0.8390** (Δ = +0.0161 vs baseline) |
 | top permutation features | diameter_norm (0.0092), component_ratio (0.0036), mixed_stance_frac (0.0034), max_degree_norm (0.0023) |
@@ -311,7 +311,7 @@ The concept graph modality carries some structural signal that differentiates gr
 
 ### Architecture Principle
 
-The key design change from Phase 3: **encoders produce fixed vectors; only classifiers learn per-target.** The GIN autoencoder is self-supervised (node type reconstruction on all 1,250 graphs), never sees classification labels. This is the graph equivalent of SBERT for text — a frozen representation encoding what the data IS, not what it predicts. The old task-supervised GIN (`encoding/gnn/model.py`, `encoding/gnn/train.py`) conflated encoding with classification, making it impossible to cleanly measure modality complementarity.
+The key design change from Phase 3: **encoders produce fixed vectors; only classifiers learn per-target.** The GIN autoencoder is self-supervised (node type reconstruction on all 1,250 graphs), never sees classification labels. This is the graph equivalent of SBERT for text — a frozen representation encoding what the data IS, not what it predicts. The old task-supervised GIN (`s4_encoding/_archived/model.py`, `s4_encoding/_archived/train.py`) conflated encoding with classification, making it impossible to cleanly measure modality complementarity.
 
 ### GIN Autoencoder
 
@@ -327,9 +327,9 @@ The key design change from Phase 3: **encoders produce fixed vectors; only class
 | best loss | 0.0002 |
 | **final node type accuracy** | **1.0000** (100%) |
 | node features | 4-dim type one-hot + 384-dim MiniLM label embedding = 388 |
-| encoder weights | `cache/gin_encoder.pt` (1.07 MB) |
+| encoder weights | `cache/gin_encoder_canonical.pt` (1.07 MB) |
 | embedding dim | 128 |
-| embedding cache | `cache/gin_embeddings.npy` (1,250 × 128) |
+| embedding cache | `cache/gin_embeddings_canonical.npy` (1,250 × 128) |
 
 **Training note:** The autoencoder converges rapidly — 95.2% node type accuracy after 1 epoch, 99.99% by epoch 2, reaching 100% at epoch 4. The node type reconstruction task is easy (node features already contain the type one-hot), but the 128-dim bottleneck forces the encoder to compress graph topology into a compact vector. The decoder is discarded after training; only the encoder is saved.
 
@@ -351,7 +351,7 @@ Label distribution (cohort): workforce=700/150/150, creatives=87/19/19, scientis
 
 ### Classifier Architectures
 
-Four architectures in `classification/fusion/models.py`, all consuming frozen modality embeddings:
+Four architectures in `s5_classification/models.py` (split into single/stacked/gated/late), all consuming frozen modality embeddings:
 
 | architecture | description | parameters (text+graph) |
 |---|---|---|

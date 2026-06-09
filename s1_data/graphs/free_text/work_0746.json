@@ -1,0 +1,192 @@
+{
+  "transcript_id": "work_0746",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative partner for document creation",
+      "label_negative": "AI as fully autonomous document creator",
+      "bipolarity_complete": true,
+      "grounding_span": "I would typically collaborate with the AI through a task, I might talk with it about what i need it to create in a document and then ask for amendments"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as automated information extractor with human oversight",
+      "label_negative": "AI as fully autonomous categorizer without human review",
+      "bipolarity_complete": true,
+      "grounding_span": "I'm happy to send them over to the software which then extracts the information and I'll cast my eye over it before confirming"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as confidence booster in solo role",
+      "label_negative": "AI as unnecessary or untrustworthy in solo role",
+      "bipolarity_complete": true,
+      "grounding_span": "the AI provides a bit of support for what I'm doing, if im comfortable with the work and the AI is then I have a greater degree of confidence in it"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as time-saving tool for specialized tasks",
+      "label_negative": "AI as time-wasting or unreliable for specialized tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "it was able to draft it up very quickly and ask me for the input information ... which saved me hours and hours of typing and research"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Manual task allocation requiring job knowledge",
+      "label_negative": "AI-automated task allocation without human judgment",
+      "bipolarity_complete": true,
+      "grounding_span": "I definitely prefer to handle booking down the tasks onto the correct job sheets myself as they require knowledge of the jobs that is outside of an AI's capabilities"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "Human oversight for financial accuracy",
+      "label_negative": "AI auto-categorization without human verification",
+      "bipolarity_complete": true,
+      "grounding_span": "I also prefer to match the transactions myself with the help of AI but never allowing AI to auto categorise or match transactions due to risks with miskeeping accounts"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "saved me hours and hours of typing and research"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Accuracy and risk mitigation",
+      "grounding_span": "risks with miskeeping accounts"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Professional confidence and support",
+      "grounding_span": "I have a greater degree of confidence in it than if it was just me doing it myself"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI-assisted contract drafting",
+      "valence": "positive",
+      "grounding_span": "saved me hours and hours of typing and research which was really appreciated"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Preference for manual job sheet allocation",
+      "valence": "negative",
+      "grounding_span": "I definitely prefer to handle booking down the tasks onto the correct job sheets myself"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Cautious approach to AI in financial tasks",
+      "valence": "ambivalent",
+      "grounding_span": "never allowing AI to auto categorise or match transactions due to risks with miskeeping accounts"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Optimism about future AI delegation",
+      "valence": "positive",
+      "grounding_span": "as AI gets smarter there will be more areas that I will be able to delegate to AI to complete tasks quicker"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative collaborative refinement — back-and-forth with AI for document creation",
+      "grounding_span": "I might talk with it about what i need it to create in a document and then ask for amendments based on what it creates before checking I'm happy"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Risk-conscious oversight — maintains human verification for accuracy-critical tasks",
+      "grounding_span": "I'll cast my eye over it before confirming I'm happy with it"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n6",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

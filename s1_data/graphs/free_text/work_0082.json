@@ -1,0 +1,217 @@
+{
+  "transcript_id": "work_0082",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as syntax executor for technical tasks",
+      "label_negative": "Manual coding without AI assistance",
+      "bipolarity_complete": true,
+      "grounding_span": "let the bot just take care of the syntax"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI adherence to team conventions",
+      "label_negative": "AI deviation from team standards",
+      "bipolarity_complete": true,
+      "grounding_span": "make sure it sticks to my team's general conventions"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI use in personal communication",
+      "label_negative": "AI use in impersonal communication",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't use bots in communication like emails and teams messages because I find it impersonal"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI autonomy in code review",
+      "label_negative": "Human responsibility for code review",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't use it to review or finalize mine or others' code because if it misses something then I'm still responsible"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as efficiency booster with human oversight",
+      "label_negative": "Complete AI takeover of work",
+      "bipolarity_complete": true,
+      "grounding_span": "we use it insofar as it makes us more efficient but we don't allow a complete AI takeover"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI impact on skill maintenance",
+      "label_negative": "Over-reliance leading to skill loss",
+      "bipolarity_complete": true,
+      "grounding_span": "I fear I will become over-reliant on the bots and lose ability to manually do certain things"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "makes us more efficient"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional accountability and responsibility",
+      "grounding_span": "I still am held responsible for code I write and review"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Personal authenticity in communication",
+      "grounding_span": "I find it impersonal and unnecessary"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Skill preservation and professional competence",
+      "grounding_span": "maximize my own reliability in the places where AI has gaps"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI as syntax executor",
+      "valence": "positive",
+      "grounding_span": "let the bot just take care of the syntax"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with AI not following conventions",
+      "valence": "negative",
+      "grounding_span": "the cursor assistant refused to abide by some of our syntax and naming standards"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Rejection of AI for personal communication",
+      "valence": "negative",
+      "grounding_span": "I don't use bots in communication like emails and teams messages because I find it impersonal"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Rejection of AI for code review due to responsibility",
+      "valence": "negative",
+      "grounding_span": "I don't use it to review or finalize mine or others' code because if it misses something then I'm still responsible"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Acceptance of AI as efficiency tool with boundaries",
+      "valence": "positive",
+      "grounding_span": "we use it insofar as it makes us more efficient but we don't allow a complete AI takeover"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Concern about over-reliance and skill loss",
+      "valence": "negative",
+      "grounding_span": "I fear I will become over-reliant on the bots and lose ability to manually do certain things"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative review-and-refine loop",
+      "grounding_span": "I feed it context and logic, it drafts, I review or iterate, and this loop continues until a task is done"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Boundary-setting around AI autonomy",
+      "grounding_span": "I don't allow it complete independence because I still am held responsible"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n4",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

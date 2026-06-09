@@ -1,0 +1,167 @@
+{
+  "transcript_id": "work_0249",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative brainstorming partner",
+      "label_negative": "AI as autonomous decision-maker",
+      "bipolarity_complete": true,
+      "grounding_span": "I find it helpful to consult an AI to bounce ideas off"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability and trustworthiness",
+      "label_negative": "AI unreliability and lack of trust",
+      "bipolarity_complete": true,
+      "grounding_span": "I'd be concerned about the reliability - this is my business after all"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as step-by-step guidance tool",
+      "label_negative": "AI as black-box solution provider",
+      "bipolarity_complete": true,
+      "grounding_span": "I rarely just set the AI off to do its own thing"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI assumption of user expertise",
+      "label_negative": "AI adaptation to user skill level",
+      "bipolarity_complete": true,
+      "grounding_span": "the AI assumes, I think, a level of experience that I may not have"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI for administrative and creative tasks",
+      "label_negative": "AI for core hands-on business tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "the administrative and creative side of the business is being helped by AI now"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Business control and security",
+      "grounding_span": "I need to maintain some control and security over it"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Personal understanding and skill development",
+      "grounding_span": "I think its important that I can have a firm grasp on the problem and how to fix it"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "this would be a time saver"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with collaborative problem-solving",
+      "valence": "positive",
+      "grounding_span": "Its been very satisfying learning helpful formulas and shortcuts"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI's assumption of expertise",
+      "valence": "negative",
+      "grounding_span": "its also frustrating that the AI assumes a level of experience that I may not have"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Openness to future automation",
+      "valence": "positive",
+      "grounding_span": "I'd definitely be interested in ways that AI could take more of the load off me"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative step-by-step reasoning",
+      "grounding_span": "I'm just working collaboratively because that's what I'm used to"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Learning-oriented exploration",
+      "grounding_span": "I'm mostly enjoying the experience and learning new things"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n3",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

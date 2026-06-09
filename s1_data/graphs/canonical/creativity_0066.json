@@ -1,0 +1,217 @@
+{
+  "transcript_id": "creativity_0066",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as incomprehensible wall",
+      "bipolarity_complete": true,
+      "grounding_span": "it almost feels like the AI is able to read my mind"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as rapid asset generator",
+      "label_negative": "Manual creation from scratch",
+      "bipolarity_complete": true,
+      "grounding_span": "it can just generate an asset for me based on my description"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as quick visualization tool for own ideas",
+      "label_negative": "Creating without visual reference",
+      "bipolarity_complete": true,
+      "grounding_span": "generate a concept image that I can then take into blender and start modeling from scratch"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI output quality and appropriateness",
+      "label_negative": "AI output inconsistency and artifacts",
+      "bipolarity_complete": true,
+      "grounding_span": "there is often inconsistencies and unwanted artifacts that appear"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as supplement to creative process",
+      "label_negative": "Fragmented tool use without integration",
+      "bipolarity_complete": true,
+      "grounding_span": "I have add AI into all aspects of the creative process"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as threat to creative workforce",
+      "label_negative": "Job security for talented artists",
+      "bipolarity_complete": true,
+      "grounding_span": "talented people will lose their jobs once AI can create production ready assets"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI as source of engaging content",
+      "label_negative": "Backlash from users knowing AI was used",
+      "bipolarity_complete": true,
+      "grounding_span": "backlash from users if they know that AI was used to create some of the assets"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Creative expression and vision realization",
+      "grounding_span": "get much closer to what I was trying to achieve"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "greatly increase the time to create an asset"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Professional integrity and ethical practice",
+      "grounding_span": "talented people will lose their jobs"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Resistance to AI in creative work",
+      "valence": "positive",
+      "grounding_span": "it felt both amazing and frustrating using AI for this as when it works, it is absolutely amazing"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with AI errors",
+      "valence": "negative",
+      "grounding_span": "there is often inconsistencies and unwanted artifacts that appear. This can actually cause a lot of wasted time"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Concern about job displacement",
+      "valence": "negative",
+      "grounding_span": "talented people will lose their jobs once AI can create production ready assets"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Concern about user backlash",
+      "valence": "negative",
+      "grounding_span": "backlash from users if they know that AI was used to create some of the assets"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "positive",
+      "grounding_span": "we will start seeing more consistent results coming out of some of these newer AIs"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative experimentation and trial-and-error",
+      "grounding_span": "With repeated prompts and retries to get a decent base"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic tool switching",
+      "grounding_span": "Try a combination of either a fresh new chat to start the process over or try a different AI model"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

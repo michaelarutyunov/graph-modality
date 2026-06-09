@@ -1,0 +1,249 @@
+{
+  "transcript_id": "work_0550",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI for mechanical task automation (LaTeX conversion)",
+      "label_negative": "AI as threat to academic integrity",
+      "bipolarity_complete": true,
+      "grounding_span": "I use it to speed up certain tasks"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as tool for lesson planning",
+      "label_negative": "AI-generated lessons lacking personality and engagement",
+      "bipolarity_complete": true,
+      "grounding_span": "The lesson plans are usually bland, they are generally well structured but drab"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for generating practice materials",
+      "label_negative": "AI as shortcut for student cheating",
+      "bipolarity_complete": true,
+      "grounding_span": "I use Ai to generate additional questions for curriculum content"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Human teacher's personal touch in slideshows and video lessons",
+      "label_negative": "AI-generated slideshows and video lessons",
+      "bipolarity_complete": true,
+      "grounding_span": "I make the slideshows, it has to have my own personality in it"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI for teaching mechanics of math",
+      "label_negative": "AI for deep conceptual discussion",
+      "bipolarity_complete": true,
+      "grounding_span": "I would love to have AI teach the mechanics of calculating the mean, median and mode, but for me to take a dive into the conceptual understanding"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as collaborator for iterative refinement",
+      "label_negative": "AI as single-query tool",
+      "bipolarity_complete": true,
+      "grounding_span": "I will collaborate with it if I am making a worksheet, I will keep suggesting adjustments"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI as learning and research tool",
+      "label_negative": "AI as cheating tool",
+      "bipolarity_complete": true,
+      "grounding_span": "I started exploring the 'study and learn' tools I got obsessed and taught myself a whole bunch of new math concepts"
+    },
+    {
+      "id": "n8",
+      "type": "Construct",
+      "label": "AI delegation for simple tasks",
+      "label_negative": "AI delegation for interesting skills",
+      "bipolarity_complete": true,
+      "grounding_span": "If I find a skill interesting I will learn it inside and out, but if I don't I will find a shortcut"
+    },
+    {
+      "id": "n9",
+      "type": "Construct",
+      "label": "AI as data manipulation tool",
+      "label_negative": "AI for deep discussion between student and teacher",
+      "bipolarity_complete": true,
+      "grounding_span": "I would love AI to save me lots of time entering and organizing data but deep discussion needs to be between student and teacher"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "I use it to speed up certain tasks"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Student engagement and learning",
+      "grounding_span": "I want students to be excited"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Human connection and relationship",
+      "grounding_span": "Human health is based on human social connection"
+    },
+    {
+      "id": "n13",
+      "type": "Value",
+      "label": "Deep understanding",
+      "grounding_span": "take a dive into the conceptual understanding of these terms"
+    },
+    {
+      "id": "n14",
+      "type": "Value",
+      "label": "Mastery and competence",
+      "grounding_span": "To be an expert you need to know a thing well"
+    },
+    {
+      "id": "n15",
+      "type": "Value",
+      "label": "Academic integrity",
+      "grounding_span": "We need to figure systems to ensure academic integrity fast"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Enthusiasm for AI as learning and efficiency tool",
+      "valence": "positive",
+      "grounding_span": "I got obsessed and taught myself a whole bunch of new math concepts"
+    },
+    {
+      "id": "n17",
+      "type": "Stance",
+      "label": "Negative view of AI for specific recent research",
+      "valence": "negative",
+      "grounding_span": "Teachers are afraid and see AI as a threat"
+    },
+    {
+      "id": "n18",
+      "type": "Stance",
+      "label": "Positive desire for AI to automate data entry",
+      "valence": "positive",
+      "grounding_span": "I need it to save me a lot of time, inputting data"
+    },
+    {
+      "id": "n19",
+      "type": "Stance",
+      "label": "Frustration with student AI misuse",
+      "valence": "negative",
+      "grounding_span": "it can be frightening to see students be pulled in lose so much precious time abusing and being abused by technology"
+    },
+    {
+      "id": "n20",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement and perfectionism",
+      "grounding_span": "I will keep suggesting adjustments with a canvas until it gets stuck and I take over to perfect it"
+    },
+    {
+      "id": "n21",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-specific delegation based on task nature",
+      "grounding_span": "If I find a skill interesting I will learn it inside and out, but if I don't I will find a shortcut"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n13",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n13",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n14",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n16",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n17",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n18",
+      "target": "n9",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n19",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n20",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n8",
+      "target": "n21",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

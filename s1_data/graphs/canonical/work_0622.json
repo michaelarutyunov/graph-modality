@@ -1,0 +1,156 @@
+{
+  "transcript_id": "work_0622",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI for communication refinement",
+      "label_negative": "AI as unreliable communication assistant",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is good at offering alternative ways to state or communicate key points"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as analytical delegate for data and research",
+      "label_negative": "AI as untrustworthy analytical partner",
+      "bipolarity_complete": true,
+      "grounding_span": "detecting trends in date or research, deducing insights or context, I will sometimes defer the entire or initial task to AI"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI consistency in executive-level communication",
+      "label_negative": "AI inconsistency in executive-level communication",
+      "bipolarity_complete": true,
+      "grounding_span": "AI isn't consistently successful in helping distill key points or reframing points to the right level of content desired for upper-level business management"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as skill development enabler",
+      "label_negative": "AI as skill-replacing tool",
+      "bipolarity_complete": true,
+      "grounding_span": "I only see AI as a tool to improve my skills, not one to replace my skills"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Effective communication and persuasion",
+      "grounding_span": "help make the points connect in a fluid way to prevent hard transitions"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and accuracy in analytical tasks",
+      "grounding_span": "detecting trends in date or research, deducing insights or context"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Skill development and learning",
+      "grounding_span": "I put my actions and growth in new challenges over leveraging AI as a tool when performing"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Satisfaction with AI for communications",
+      "valence": "positive",
+      "grounding_span": "AI is good at offering alternative ways to state or communicate key points"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Frustration with AI inconsistency for executive communication",
+      "valence": "negative",
+      "grounding_span": "AI isn't consistently successful in helping distill key points or reframing points to the right level of content desired for upper-level business management"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "positive",
+      "grounding_span": "I only see AI as a tool to improve my skills, not one to replace my skills"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "positive",
+      "grounding_span": "I only hope that my relationship with AI technologies in my work matures and grows"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative iterative refinement — works back and forth with AI",
+      "grounding_span": "I always draft my initial thoughts with rank them in priority to the conversation or presentation. I add the necessary details that I want to make sure build the context needed behind the points. And i ask AI to review and offer suggestions on structure or presentation."
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Task-dependent delegation vs. collaboration",
+      "grounding_span": "Around communications or refinement, it's very much a collaborator. For other tasks, such as detecting trends in date or research, deducing insights or context, I will sometimes defer the entire or initial task to AI and then review or double-check"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,149 @@
+{
+  "transcript_id": "science_0073",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as time-saving tool",
+      "label_negative": "AI as unreliable for complex analysis",
+      "bipolarity_complete": true,
+      "grounding_span": "it saved me a lot of time generating simple code"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI trustworthiness and verification",
+      "label_negative": "Distrust in AI for analytical work",
+      "bipolarity_complete": true,
+      "grounding_span": "i could not trust AI judgement on the analytic work"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Human control over critical decisions",
+      "label_negative": "AI autonomy over critical decisions",
+      "bipolarity_complete": true,
+      "grounding_span": "I preferred to be in control of the error analysis and comorbidity research"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI capability for deep analysis",
+      "label_negative": "AI limitation to surface-level tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "i would really appreciate if AI could conduct deep analysis"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "saving me a lot of time"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Research integrity and accuracy",
+      "grounding_span": "i wanted to be really sure about the final result"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Scientific advancement through deep analysis",
+      "grounding_span": "it would definitely help a lot"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Positive toward AI for coding tasks",
+      "valence": "positive",
+      "grounding_span": "it saved me a lot of time generating simple code"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Negative view of AI for specific recent research",
+      "valence": "negative",
+      "grounding_span": "i could not trust AI judgement on the analytic work"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Aspirational hope for AI as practical assistant",
+      "valence": "positive",
+      "grounding_span": "i would really appreciate if AI could conduct deep analysis"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Verification-oriented approach",
+      "grounding_span": "i read and debugged the code instead of copy pasting it entirely"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-specific cautiousness — prioritising control in health contexts",
+      "grounding_span": "I preferred to be in control of the error analysis and comorbidity research"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n4",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

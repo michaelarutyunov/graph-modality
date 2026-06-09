@@ -1,0 +1,232 @@
+{
+  "transcript_id": "creativity_0011",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as timesaver for rote tasks",
+      "label_negative": "AI as unnecessary complication for simple tasks",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "generally as a timesaver for rote tasks"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as tool for mockups and rough drafts",
+      "label_negative": "AI as final product without human refinement",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "occasionally to make mockups of things that I want to produce with greater skill"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as supervisor-required assistant",
+      "label_negative": "AI as autonomous decision-maker",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I'm playing supervisor to some extent"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI for personal projects with lower stakes",
+      "label_negative": "AI for high-stakes professional work",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "projects that are either unpaid or involve multiple changes"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as creative sounding board for ideas",
+      "label_negative": "AI as replacement for human creativity",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "a better sounding board now"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI reliability and need for manual cleanup",
+      "label_negative": "AI perfect output without human intervention",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "it did well, but wasn't perfect"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI training data and artist attribution",
+      "label_negative": "AI using styles without attribution",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "their images being used to train AI, essentially allowing it to create works that use their style without attribution"
+    },
+    {
+      "id": "n8",
+      "type": "Construct",
+      "label": "AI output verification and critical thinking",
+      "label_negative": "Blind acceptance of AI output",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "some who do take what AI says as gospel and they fail to fact-check"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Creative control and artistic integrity",
+      "grounding_span": "I'm playing supervisor to some extent"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "it saved some time"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Professional quality and client satisfaction",
+      "grounding_span": "ensured it looked realistic, no floating hands"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Fair compensation and attribution for artists",
+      "grounding_span": "makes it harder to convince people to pay for commissioned work"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Pragmatic acceptance of AI as tool",
+      "valence": "positive",
+      "grounding_span": "AI are just another set of tools, just like Photoshop and Wacom tablets"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Wariness about AI limitations",
+      "valence": "negative",
+      "grounding_span": "old enough to be wary of AI's current limitations"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Concern about AI undermining artist livelihoods",
+      "valence": "negative",
+      "grounding_span": "makes it harder to convince people to pay for commissioned work"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Optimism about AI as creative assistant",
+      "valence": "positive",
+      "grounding_span": "I would hope that it would evolve to become more sophisticated"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic task delegation — uses AI only for specific, bounded tasks",
+      "grounding_span": "I have used AI for my graphic design work sparingly"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement — uses AI output as starting point, then manually perfects",
+      "grounding_span": "I still had to go in and separate the logo"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n13",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

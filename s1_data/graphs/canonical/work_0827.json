@@ -1,0 +1,199 @@
+{
+  "transcript_id": "work_0827",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborator for iterative refinement",
+      "label_negative": "AI for writing from scratch",
+      "bipolarity_complete": true,
+      "grounding_span": "I usually write a full draft myself. I find if I don't then it's harder for the AI to pick up on the context"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as analytical tool for parsing documents",
+      "label_negative": "AI for document analysis without reasoning",
+      "bipolarity_complete": true,
+      "grounding_span": "as long as it gives good reasoning for why it thinks the answer it's provided is correct, I'll usually accept it first time"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI inaccuracy and fabrication",
+      "bipolarity_complete": true,
+      "grounding_span": "Gemini kept making things up that weren't in the original statement"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI for low-stakes tasks",
+      "label_negative": "AI for low-stakes tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "the forms need to be completely accurate, and our AI-like automation already makes mistakes"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Personal authenticity in client communication",
+      "label_negative": "AI-generated artificiality",
+      "bipolarity_complete": true,
+      "grounding_span": "there's an artificiality to it that makes it obvious quickly that it hasn't been written by a human"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI for repetitive simple tasks",
+      "label_negative": "AI for creative or nuanced tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "If the automation aspects get better, then I could see myself using it more for the more repetitve parts of my job"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Accuracy and factual reliability",
+      "grounding_span": "We can't submit false information so I couldn't use it"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Client trust and credibility",
+      "grounding_span": "I don't think my employer would want clients to feel like they are talking with robots"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Time efficiency and reduced drudgery",
+      "grounding_span": "I could see myself using it more for the more repetitve parts of my job that I'd rather not do"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for document analysis",
+      "valence": "positive",
+      "grounding_span": "as long as it gives good reasoning for why it thinks the answer it's provided is correct, I'll usually accept it first time"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Resistance to AI in sensitive tasks",
+      "valence": "negative",
+      "grounding_span": "Gemini kept making things up that weren't in the original statement"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Cautious skepticism about AI accuracy",
+      "valence": "negative",
+      "grounding_span": "I'd be nervous about using AI for those tasks as the forms need to be completely accurate"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Resistance to AI in client communication",
+      "valence": "negative",
+      "grounding_span": "there's an artificiality to it that makes it obvious quickly that it hasn't been written by a human"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Openness to future AI for repetitive tasks",
+      "valence": "positive",
+      "grounding_span": "If the automation aspects get better, then I could see myself using it more for the more repetitve parts of my job"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative iterative refinement — works back and forth with AI",
+      "grounding_span": "I usually write a full draft myself. I find if I don't then it's harder for the AI to pick up on the context"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Proactive fact-checking — verifies AI outputs despite low perceived risk",
+      "grounding_span": "as long as it gives good reasoning for why it thinks the answer it's provided is correct, I'll usually accept it first time"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

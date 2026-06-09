@@ -1,0 +1,121 @@
+{
+  "transcript_id": "work_0000",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as competitive edge when behind",
+      "label_negative": "AI as unnecessary when ahead",
+      "bipolarity_complete": true,
+      "grounding_span": "I tend to use it more often when I need to 'compete' with them"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as problem-solving tool when stuck",
+      "label_negative": "Self-reliance when not stuck",
+      "bipolarity_complete": true,
+      "grounding_span": "I turn to AI when I'm stuck"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI output quality with detailed context",
+      "label_negative": "AI output quality with sparse context",
+      "bipolarity_complete": true,
+      "grounding_span": "I gave a lot of details in this specific scenario"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as starting point requiring modification",
+      "label_negative": "AI as perfect final output",
+      "bipolarity_complete": true,
+      "grounding_span": "I always modify them. They're never 'perfect'"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Sales performance and competitiveness",
+      "grounding_span": "I made the most sales that month out of my whole team"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Personal improvement and self-betterment",
+      "grounding_span": "use it to better myself instead of competing"
+    },
+    {
+      "id": "n7",
+      "type": "Stance",
+      "label": "Satisfaction with AI when detailed context provided",
+      "valence": "positive",
+      "grounding_span": "I was very satisfied because I made the most sales that month"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Openness to AI as self-improvement tool",
+      "valence": "positive",
+      "grounding_span": "I prefer to work with AI and use it to better myself"
+    },
+    {
+      "id": "n9",
+      "type": "CognitiveStyleMarker",
+      "label": "Context-rich upfront prompting",
+      "grounding_span": "I gave a lot of details in this specific scenario"
+    },
+    {
+      "id": "n10",
+      "type": "CognitiveStyleMarker",
+      "label": "Competitive calibration of tool use",
+      "grounding_span": "I tend to use it more often when I need to 'compete' with them"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n8",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n10",
+      "relation": "MODULATED_BY"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

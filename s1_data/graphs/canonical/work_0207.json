@@ -1,0 +1,255 @@
+{
+  "transcript_id": "work_0207",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as code generation assistant",
+      "label_negative": "AI as code generator for ambiguous requirements",
+      "bipolarity_complete": true,
+      "grounding_span": "I typically use AI to write Julia code with well understood requirements"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as strategic thinking partner",
+      "label_negative": "AI as uncritical affirmator",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI to analyze parts of the codebase and ask it to provide architectural and strategic insights"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI's tendency to fill in blanks without clarification",
+      "label_negative": "AI's tendency to ask clarifying questions before generating",
+      "bipolarity_complete": true,
+      "grounding_span": "What I often see if the AI is eager to 'fill in the blanks' instead of pausing to ask for clarification"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI feedback as useful but fallible",
+      "label_negative": "AI's uncritical affirmation",
+      "bipolarity_complete": true,
+      "grounding_span": "My concern is the AI isn't bold or confident enough to strike down actual bad ideas"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI's understanding of project-specific context",
+      "label_negative": "AI's lack of project-specific intuition",
+      "bipolarity_complete": true,
+      "grounding_span": "The AI seems much more intelligent with general world knowledge, than specifically about my code base"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as project persistence enabler",
+      "label_negative": "AI's inability to maintain persistent project memory",
+      "bipolarity_complete": true,
+      "grounding_span": "better tools in my case means automatically maintaining memory about a project"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "Reading knowledge of coding languages via AI",
+      "label_negative": "AI's inability to understand semantics of code elements",
+      "bipolarity_complete": true,
+      "grounding_span": "wrote overly complicated graph code (not understanding semantics of nodes in the graph)"
+    },
+    {
+      "id": "n8",
+      "type": "Construct",
+      "label": "AI as instant subject matter expert",
+      "label_negative": "AI as replacement for deep learning",
+      "bipolarity_complete": true,
+      "grounding_span": "with AI we can come up with expert-at-anything with pretty short call-up time"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "wrote RPC package all by itself with fully working tests"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Strategic decision-making and ROI evaluation",
+      "grounding_span": "aiming to maximize business value"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Understanding and control over codebase",
+      "grounding_span": "lacks intuition about what's most relevant about a particular piece of code"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Critical thinking and skill development",
+      "grounding_span": "force me to think through the problem more thoroughly"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "most satisfied: wrote RPC package all by itself with fully working tests"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Frustration with AI errors",
+      "valence": "negative",
+      "grounding_span": "It would be nice if there was an interview process from the AI before it generates large amounts of code"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Negative stance toward AI for sincere communication",
+      "valence": "negative",
+      "grounding_span": "My concern is the AI isn't bold or confident enough to strike down actual bad ideas"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Frustration with AI's lack of novelty in design",
+      "valence": "negative",
+      "grounding_span": "it's very rare that the AI understands 'what's important here'"
+    },
+    {
+      "id": "n17",
+      "type": "Stance",
+      "label": "Satisfaction with AI for unit testing",
+      "valence": "positive",
+      "grounding_span": "pretty happy: wrote tests for exist code while discovering bugs"
+    },
+    {
+      "id": "n18",
+      "type": "Stance",
+      "label": "Frustration with AI's semantic misunderstanding in graph code",
+      "valence": "negative",
+      "grounding_span": "frustrated: wrote overly complicated graph code (not understanding semantics of nodes in the graph)"
+    },
+    {
+      "id": "n19",
+      "type": "Stance",
+      "label": "Acceptance of AI-driven shift from deep learning to on-demand competence",
+      "valence": "mixed",
+      "grounding_span": "it has deprioritized learning skills such as SQL...with AI we can come up with expert-at-anything"
+    },
+    {
+      "id": "n20",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through conversation",
+      "grounding_span": "it usually ends up being an iterative process, where an ongoing conversation provides the full details"
+    },
+    {
+      "id": "n21",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic prioritization of learning investment",
+      "grounding_span": "it has deprioritized learning skills such as SQL...with AI we can come up with expert-at-anything"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n13",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n17",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n18",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n19",
+      "target": "n8",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n20",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n8",
+      "target": "n21",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n3",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

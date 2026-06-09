@@ -1,0 +1,217 @@
+{
+  "transcript_id": "science_0058",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as tool for unfamiliar technical tasks",
+      "label_negative": "Traditional manual coding via StackOverflow",
+      "bipolarity_complete": true,
+      "grounding_span": "I didn't have enough familiarity with any image-related python libraries, and figured ChatGPT would be faster than searching through StackOverflow"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI involvement in analytical calculations",
+      "label_negative": "Personal enjoyment and ownership of analytical work",
+      "bipolarity_complete": true,
+      "grounding_span": "I enjoy the analytical calculations most, so I don't want AI to take over that portion"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI use in paper writing",
+      "label_negative": "Paper writing as personal intellectual product",
+      "bipolarity_complete": true,
+      "grounding_span": "I consider using AI for paper-writing a form of plagiarism so I also refuse use it for that"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI reliability for complex code",
+      "label_negative": "AI errors in complex code",
+      "bipolarity_complete": true,
+      "grounding_span": "code was complex enough where AI makes too many errors"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI trustworthiness for large datasets",
+      "label_negative": "Manual verification of large datasets",
+      "bipolarity_complete": true,
+      "grounding_span": "at the moment I don't trust it's accuracy and refuse to use it on something that is to large for me to verify by hand"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI assistance in grant writing",
+      "label_negative": "Manual grant writing by PIs",
+      "bipolarity_complete": true,
+      "grounding_span": "If AI could apply to grants that would be nice"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "ChatGPT would be faster than searching through StackOverflow"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Intellectual ownership and integrity",
+      "grounding_span": "Paper writing is a product of my research. That should be my own work"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Personal enjoyment and meaningful engagement",
+      "grounding_span": "I enjoy the analytical calculations most"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Accuracy and reliability",
+      "grounding_span": "I don't trust it's accuracy"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Pragmatic acceptance of AI for image processing",
+      "valence": "positive",
+      "grounding_span": "I had ChatGPT generate a few python scripts to help with processing the large numbers of images"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Resistance to AI in analytical calculations",
+      "valence": "negative",
+      "grounding_span": "I enjoy the analytical calculations most, so I don't want AI to take over that portion"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Rejection of AI for paper writing",
+      "valence": "negative",
+      "grounding_span": "I consider using AI for paper-writing a form of plagiarism so I also refuse use it for that"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Distrust of AI for complex code",
+      "valence": "negative",
+      "grounding_span": "code was complex enough where AI makes too many errors"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Distrust of AI for large datasets",
+      "valence": "negative",
+      "grounding_span": "at the moment I don't trust it's accuracy and refuse to use it on something that is to large for me to verify by hand"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Openness to AI for grant writing",
+      "valence": "positive",
+      "grounding_span": "If AI could apply to grants that would be nice"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-specific boundary setting — clear delineation of AI-appropriate vs. AI-inappropriate tasks",
+      "grounding_span": "I enjoy the analytical calculations most, so I don't want AI to take over that portion"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic verification through visual inspection and backups",
+      "grounding_span": "I decided to just make a backup of the image I was using ... and then run what it gave me and look at the output"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

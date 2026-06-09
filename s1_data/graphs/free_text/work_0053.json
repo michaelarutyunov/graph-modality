@@ -1,0 +1,163 @@
+{
+  "transcript_id": "work_0053",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as professional communication enhancer",
+      "label_negative": "AI as ineffective communication tool",
+      "bipolarity_complete": true,
+      "grounding_span": "AI helps me with writing internal and external emails to help sound a bit more professional"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as idea generator for banking tasks",
+      "label_negative": "AI as unhelpful for generating useful ideas",
+      "bipolarity_complete": true,
+      "grounding_span": "It also helps me come up with different ideas to try inside the banking world"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI use constrained by PII privacy requirements",
+      "label_negative": "AI use without PII constraints",
+      "bipolarity_complete": true,
+      "grounding_span": "I cannot put PII into any AI models for legal and privacy reasons"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as iterative feedback tool",
+      "label_negative": "AI as one-shot autonomous generator",
+      "bipolarity_complete": true,
+      "grounding_span": "giving it feedback on what ideas I do or dont like and just telling it to generate new ideas from those constraints"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI reliance vs. maintaining independent thinking",
+      "label_negative": "Full AI automation without skill preservation",
+      "bipolarity_complete": true,
+      "grounding_span": "I have to have a balance of using AI and not just so I don't lose out on being able to effectively think freely"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Professional competence and effective communication",
+      "grounding_span": "help sound a bit more professional"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Innovation and problem-solving in banking",
+      "grounding_span": "come up with different ideas to try inside the banking world"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Compliance and data security",
+      "grounding_span": "legal and privacy reasons"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Cognitive autonomy and creative thinking",
+      "grounding_span": "effectively think freely"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI's inability to handle redacted context",
+      "valence": "negative",
+      "grounding_span": "It could not give me anything useful without removing all the important bits of information"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI for professional email drafting",
+      "valence": "positive",
+      "grounding_span": "AI helps me with writing internal and external emails to help sound a bit more professional"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Cautious optimism about AI's future in banking",
+      "valence": "mixed",
+      "grounding_span": "I think the banking industry will be forced to include more AI features and uses"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative constraint-based refinement",
+      "grounding_span": "giving it feedback on what ideas I do or dont like and just telling it to generate new ideas from those constraints"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Deliberate balancing of AI use and independent thinking",
+      "grounding_span": "I have to have a balance of using AI and not just so I don't lose out on being able to effectively think freely"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

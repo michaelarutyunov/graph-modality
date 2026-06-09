@@ -1,0 +1,174 @@
+{
+  "transcript_id": "work_0384",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI for deterministic tasks",
+      "label_negative": "AI for creative or context-dependent tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "anything that's relatively deterministic i'm comfortable using ai, otherwise i prefer to do it myself"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as time saver for routine work",
+      "label_negative": "AI as time waster due to misunderstanding",
+      "bipolarity_complete": true,
+      "grounding_span": "using ai for the aforementioned code comments or js docs can be a major time saver"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for quick client context",
+      "label_negative": "Manual research for client context",
+      "bipolarity_complete": true,
+      "grounding_span": "quickly get an idea of what a client's application is supposed to do by asking ai"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Company AI push vs practical utility",
+      "label_negative": "Company AI alignment with actual needs",
+      "bipolarity_complete": true,
+      "grounding_span": "the company pushes their own ai pretty hard but i don't find it to be very good"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI use as a skill",
+      "label_negative": "AI as replacement threat",
+      "bipolarity_complete": true,
+      "grounding_span": "the use of ai is itself a skill and the degree to which it will take over is likely to be gradual"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "major time saver"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Quality and accuracy",
+      "grounding_span": "it's usually not completely correct so i make small edits after that"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Autonomy and control",
+      "grounding_span": "i would still prefer to do things how i've described"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for routine tasks",
+      "valence": "positive",
+      "grounding_span": "using ai for the aforementioned code comments or js docs can be a major time saver"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI misunderstanding context",
+      "valence": "negative",
+      "grounding_span": "it can be frustrating when it totally misunderstands or misses important context"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Skepticism toward company AI push",
+      "valence": "negative",
+      "grounding_span": "the company pushes their own ai pretty hard but i don't find it to be very good"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Confidence in human skills over AI",
+      "valence": "positive",
+      "grounding_span": "i'm pretty confident no serious knowledge-based work is at serious risk anytime soon"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Task decomposition and selective delegation",
+      "grounding_span": "i'll often write out all the test steps without comments, then ask for comments for each action"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic calibration based on experience",
+      "grounding_span": "i tend to just avoid using it as much as possible for this reason"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

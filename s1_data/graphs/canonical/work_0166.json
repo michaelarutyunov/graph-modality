@@ -1,0 +1,174 @@
+{
+  "transcript_id": "work_0166",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as tool for lesson planning",
+      "label_negative": "AI as independent autonomous creator",
+      "bipolarity_complete": true,
+      "grounding_span": "I go back and forth. I would love to be able to let it handle things independently, but it is too difficult to get an end result that I would be satisfied with."
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI personalization to teacher's style and context",
+      "label_negative": "Generic one-size-fits-all AI output",
+      "bipolarity_complete": true,
+      "grounding_span": "lesson plans should be personalised to the style and methods that are appropriate for both me and my students"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability for grading and assessment",
+      "label_negative": "AI errors undermining trust and accountability",
+      "bipolarity_complete": true,
+      "grounding_span": "It can still make mistakes and I think that can set bad standards for students"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI for PowerPoint slide generation",
+      "label_negative": "AI inability to generate complete PowerPoints",
+      "bipolarity_complete": true,
+      "grounding_span": "I have not been satisfied with the ability of AI's to generate complete powerpoints for me"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as supplement to creative process",
+      "label_negative": "AI as time-consuming collaboration",
+      "bipolarity_complete": true,
+      "grounding_span": "it gives me more time to focus on creating more interesting and engaging lessons"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Teacher accountability and student trust",
+      "grounding_span": "I should be the one accountable for my students work"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Student-centered personalized education",
+      "grounding_span": "create more interesting and engaging lessons"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "it gives me more time to focus"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Frustration with AI in complex Excel tasks",
+      "valence": "positive",
+      "grounding_span": "it usually creates a decent worksheet that needs few (if any) changes"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI for PowerPoint generation",
+      "valence": "negative",
+      "grounding_span": "I have not been satisfied with the ability of AI's to generate complete powerpoints for me"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI's inability to reconsider grading",
+      "valence": "negative",
+      "grounding_span": "I don't let it do marking for me"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Optimism about future AI personalization",
+      "valence": "positive",
+      "grounding_span": "Hopefully, it gets better at understanding me and how I like to teach"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative iterative refinement — works back and forth with AI",
+      "grounding_span": "By working together, I can give it more context over time and shape the results into something that I like"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Adaptive integration — combines AI ideas with own existing concepts",
+      "grounding_span": "I focus on enhancing or changing my skills so that I can use AI to come up with a better process/result"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

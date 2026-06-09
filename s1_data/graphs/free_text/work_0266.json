@@ -1,0 +1,179 @@
+{
+  "transcript_id": "work_0266",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as information retrieval and summarization tool",
+      "label_negative": "Manual searching and reading full documents",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "It helps me find what I'm looking for much faster than me trying to search"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for document comparison and difference identification",
+      "label_negative": "Manual copy-paste comparison using external tool",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "The AI will automatically pull the documents and tell me what the updates/differences are"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for troubleshooting technical issues",
+      "label_negative": "Manual troubleshooting without AI assistance",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I will also use AI to help me troubleshoot any technical issues or errors with Windows"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as productivity enhancer without replacing human role",
+      "label_negative": "AI as potential job replacement",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "I see it has enhancing productivity, but I do not think it can fully take over"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Preference for manual step-by-step execution for high-stakes technical tasks",
+      "label_negative": "AI summarization for high-stakes technical tasks",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "those I prefer to follow step-by-step rather than having it summarized because it is so technical"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "valence": null,
+      "grounding_span": "It saves me time for not only trying to search for the document myself"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Accuracy and reliability in technical tasks",
+      "valence": null,
+      "grounding_span": "missing a step can lead to a much bigger issue and possibly a failed update"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Patient care and client satisfaction",
+      "valence": null,
+      "grounding_span": "help our clients improve patient care"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Human expertise and client relationships",
+      "valence": null,
+      "grounding_span": "there is also a personal aspect and customer/client relationship we maintain"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for document comparison",
+      "valence": "positive",
+      "grounding_span": "I now no longer have to copy and paste 2 versions into this tool"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Confidence in AI as productivity enhancer, not replacement",
+      "valence": "positive",
+      "grounding_span": "I see it has enhancing productivity, but I do not think it can fully take over"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Preference for manual execution in high-stakes tasks",
+      "valence": "negative",
+      "grounding_span": "those I prefer to follow step-by-step rather than having it summarized"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Task-specific delegation based on stakes and verifiability",
+      "valence": null,
+      "grounding_span": "those I prefer to follow step-by-step rather than having it summarized because it is so technical"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative learning and sharing within team",
+      "valence": null,
+      "grounding_span": "Our team often shares insights of what worked for them, and even shares new ways they use Copilot"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n5",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

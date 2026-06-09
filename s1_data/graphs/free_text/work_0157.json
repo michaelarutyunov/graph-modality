@@ -1,0 +1,225 @@
+{
+  "transcript_id": "work_0157",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative brainstorming partner for student diagnostics",
+      "label_negative": "AI as unreliable initial analyzer requiring correction",
+      "bipolarity_complete": true,
+      "grounding_span": "it helps me come up with some different ways of explaining or different methods of practice"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as time-saving content generator",
+      "label_negative": "Manual content creation consuming excessive time",
+      "bipolarity_complete": true,
+      "grounding_span": "it generates the slides I want which saves me a massive amount of time"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as differentiation enabler for individualized student support",
+      "label_negative": "Inability to provide individualized support due to time constraints",
+      "bipolarity_complete": true,
+      "grounding_span": "it has helped me differentiate more and provide the students who need extra support with more support"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as collaborative writing partner for parent feedback",
+      "label_negative": "AI handling parent feedback autonomously without personal touch",
+      "bipolarity_complete": true,
+      "grounding_span": "that is more a collaborative writing session as it is too personal for it to do on its own"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as context-sensitive diagnostic tool",
+      "label_negative": "AI as context-blind generic analyzer",
+      "bipolarity_complete": true,
+      "grounding_span": "if I forgot to tell it that the student is ESL then it may come up with a reason for the disconnect that is far more general"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as metaphor generator for abstract concepts",
+      "label_negative": "Inability to find effective teaching metaphors",
+      "bipolarity_complete": true,
+      "grounding_span": "The AI really helped me frame it in very concrete terms of knowing two different languages"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "Teacher direct engagement with student writing",
+      "label_negative": "AI-mediated grading and feedback on student writing",
+      "bipolarity_complete": true,
+      "grounding_span": "I do not let AI grade or provide student feedback on writing"
+    },
+    {
+      "id": "n8",
+      "type": "Construct",
+      "label": "AI as collaborative colleague vs autonomous tool",
+      "label_negative": "AI as autonomous task completer without human collaboration",
+      "bipolarity_complete": true,
+      "grounding_span": "I never just give it something to do. It is a constant back and forth collaboration"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Student understanding and learning outcomes",
+      "grounding_span": "it really clicked with the student"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Teacher-student relationship and personal connection",
+      "grounding_span": "I would lose such a rich part of our relationships"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Professional efficiency and time savings",
+      "grounding_span": "saves me a massive amount of time"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Equitable and individualized instruction",
+      "grounding_span": "differentiate more and provide the students who need extra support with more support"
+    },
+    {
+      "id": "n13",
+      "type": "Value",
+      "label": "Teacher professional growth and insight",
+      "grounding_span": "help me think even deeper and provide even more insightful analysis"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Satisfaction with AI as diagnostic collaborator",
+      "valence": "positive",
+      "grounding_span": "it really clicked with the student"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Frustration with AI's initial lack of context",
+      "valence": "negative",
+      "grounding_span": "it may come up with a reason for the disconnect that is far more general"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Firm boundary against AI in student writing assessment",
+      "valence": "negative",
+      "grounding_span": "I do not let AI grade or provide student feedback on writing"
+    },
+    {
+      "id": "n17",
+      "type": "Stance",
+      "label": "Positive anticipation of deeper collaboration",
+      "valence": "positive",
+      "grounding_span": "I think it will continue to evolve and help me think even deeper"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative diagnostic refinement through context provision",
+      "grounding_span": "if I go 'that doesn't sound quite right here because he is paying attention and is engaged, but English IS his second language' then it will take that information and make a more specific and often more accurate answer"
+    },
+    {
+      "id": "n19",
+      "type": "CognitiveStyleMarker",
+      "label": "Proactive specification and memory utilization",
+      "grounding_span": "I have learned to be proactive in my requests by being very specific about what I want and don't want and what I am trying to achieve"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n13",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n14",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n17",
+      "target": "n8",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n8",
+      "target": "n19",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n7",
+      "target": "n8",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

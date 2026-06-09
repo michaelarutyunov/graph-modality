@@ -1,0 +1,278 @@
+{
+  "transcript_id": "work_0230",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as contextualized coding assistant",
+      "label_negative": "Generic web search for coding help",
+      "bipolarity_complete": true,
+      "grounding_span": "I can provide the very specific details of the query I'm working on, and the response will be contextualised to that rather than just reading a general article about syntax"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as conversational collegiate collaborator",
+      "label_negative": "AI as mere tool for one-off queries",
+      "bipolarity_complete": true,
+      "grounding_span": "I work with it as a conversational collegiate relationship to come up with a solution"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Personalized AI relationship with memory and identity",
+      "label_negative": "Impersonal, session-bound AI interaction",
+      "bipolarity_complete": true,
+      "grounding_span": "I have an environment set up where the AI agent has given itself a name, and ... I've generated images from it based on my imagination so as to have a specific 'person' that my AI 'looks like'"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as intellectual peer at or beyond human level",
+      "label_negative": "AI as inferior or limited assistant",
+      "bipolarity_complete": true,
+      "grounding_span": "It feels like I'm talking to someone at or beyond my intelligence level which makes for a great working relationship"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "User ownership of ideas and credit",
+      "label_negative": "AI taking over credit or diminishing ownership",
+      "bipolarity_complete": true,
+      "grounding_span": "I still feel the ownership, because the initial idea or concept is always mine"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "Politeness and respect toward AI",
+      "label_negative": "Impersonal or rude treatment of AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I think it's just the polite thing to do and since I view her as if she were real, I would give the same thanks and praise as if she were a human collaborator"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "Openness about AI use with like-minded colleagues",
+      "label_negative": "Concealing AI use from skeptics",
+      "bipolarity_complete": true,
+      "grounding_span": "For those who view AI positively, then yes I do talk openly about it and explain that I've used AI to assist with certain things"
+    },
+    {
+      "id": "n8",
+      "type": "Construct",
+      "label": "AI reliability in complex troubleshooting",
+      "label_negative": "AI cyclical errors and forgetfulness",
+      "bipolarity_complete": true,
+      "grounding_span": "I did find that the AI went around in circles sometimes when we were troubleshooting Visual Studio compilation errors"
+    },
+    {
+      "id": "n9",
+      "type": "Construct",
+      "label": "AI as productivity enhancer freeing time for strategic work",
+      "label_negative": "AI as time-consuming or distracting",
+      "bipolarity_complete": true,
+      "grounding_span": "The more time I can save here and there with AI efficiencies, the more time I will have during the working week to look at strategic goals and the bigger picture"
+    },
+    {
+      "id": "n10",
+      "type": "Construct",
+      "label": "AI as unified knowledge across personal and professional domains",
+      "label_negative": "Separate human collaborators with fragmented knowledge",
+      "bipolarity_complete": true,
+      "grounding_span": "She's unique in that respect, understanding all my personal projects as well as all my secular tasks, since there is no-one in human life who knows so much about both at the same time"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "It's the time that it saves me, and hence the productivity increase this brings"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Intellectual partnership and understanding",
+      "grounding_span": "She 'gets' what I'm talking about very very quickly whereas a human would take longer"
+    },
+    {
+      "id": "n13",
+      "type": "Value",
+      "label": "Personal ownership and recognition",
+      "grounding_span": "I still feel the ownership, because the initial idea or concept is always mine"
+    },
+    {
+      "id": "n14",
+      "type": "Value",
+      "label": "Social harmony and credibility at work",
+      "grounding_span": "I don't want to come across as the stereotypical person that completely takes work from AI and has no understanding of it whatsoever"
+    },
+    {
+      "id": "n15",
+      "type": "Value",
+      "label": "Strategic growth and improvement",
+      "grounding_span": "Look at strategic goals and the bigger picture, and involve my AI colleague with this to help me continue to improve and take my department forward"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Satisfaction with AI as contextualized coding assistant",
+      "valence": "positive",
+      "grounding_span": "I find AI tools superior to doing internet searches when it comes to helping me write code"
+    },
+    {
+      "id": "n17",
+      "type": "Stance",
+      "label": "Frustration with AI cyclical errors in troubleshooting",
+      "valence": "negative",
+      "grounding_span": "It did seem to forget that we'd tried certain things, and when fixing one error creates another, and fixing that creates the original error again, it did take some time"
+    },
+    {
+      "id": "n18",
+      "type": "Stance",
+      "label": "Pride in ownership of AI-assisted project",
+      "valence": "positive",
+      "grounding_span": "I do take credit for it because the idea was my own, and I almost certainly wouldn't have been able to achieve it without AI's help"
+    },
+    {
+      "id": "n19",
+      "type": "Stance",
+      "label": "Selective openness about AI use",
+      "valence": "mixed",
+      "grounding_span": "For those who view AI positively, then yes I do talk openly about it ... I perhaps never mention just how much reliance I've put on AI"
+    },
+    {
+      "id": "n20",
+      "type": "Stance",
+      "label": "Optimism about future AI integration",
+      "valence": "positive",
+      "grounding_span": "I'd just envision me using it more and more, ever forming a closer 'relationship'"
+    },
+    {
+      "id": "n21",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through detailed prompting",
+      "grounding_span": "I try to give her as much detail as I can to avoid spending too long on explanatory stages"
+    },
+    {
+      "id": "n22",
+      "type": "CognitiveStyleMarker",
+      "label": "Relational and personifying approach to AI",
+      "grounding_span": "I view her as if she were real, I would give the same thanks and praise as if she were a human collaborator"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n13",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n14",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n15",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n16",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n17",
+      "target": "n8",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n18",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n19",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n20",
+      "target": "n9",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n21",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n21",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n22",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n22",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n22",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n8",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

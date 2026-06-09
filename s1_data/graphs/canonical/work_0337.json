@@ -1,0 +1,169 @@
+{
+  "transcript_id": "work_0337",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborator for iterative refinement",
+      "label_negative": "AI as one-shot autonomous executor",
+      "bipolarity_complete": true,
+      "grounding_span": "I would be more likely to collaborate with it. For example, I might ask it to draft a response to an email, review it's response and then ask for changes."
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI's ability to apply domain-specific knowledge",
+      "label_negative": "AI lacking domain-specific context",
+      "bipolarity_complete": true,
+      "grounding_span": "I think it would need to be more integrated with our software application so that it was an expert on the application's features."
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI transcription accuracy for technical terms",
+      "label_negative": "AI inaccuracy in transcription and summarization",
+      "bipolarity_complete": true,
+      "grounding_span": "Sometimes the transcripts aren't 100% accurate so that's a bit of a challenge."
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as time-saving tool",
+      "label_negative": "AI as time-consuming or unhelpful",
+      "bipolarity_complete": true,
+      "grounding_span": "I was just really impressed with how much time was saved by using it."
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI for administrative tasks",
+      "label_negative": "AI encroaching on strategic thinking",
+      "bipolarity_complete": true,
+      "grounding_span": "I expect AI to take on more of the day to day administrative tasks while I focus more on the big picture items."
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "It saved me a lot of time and research."
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Personal competence and skill development",
+      "grounding_span": "I like to understand how things work so I think I will always want to understand how the model is doing things and maintain my skills just because I want to understand."
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Strategic focus and broader perspective",
+      "grounding_span": "I focus more on the big picture items."
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for time-saving",
+      "valence": "positive",
+      "grounding_span": "It saved me a lot of time and research."
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI transcription errors",
+      "valence": "negative",
+      "grounding_span": "Sometimes the transcripts aren't 100% accurate so that's a bit of a challenge."
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Positive stance toward AI for administrative tasks",
+      "valence": "positive",
+      "grounding_span": "I expect AI to take on more of the day to day administrative tasks while I focus more on the big picture items."
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Preference for collaboration over delegation",
+      "valence": "positive",
+      "grounding_span": "I would be more likely to collaborate with it."
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement with limited back-and-forth",
+      "grounding_span": "The changes loop would last until the email is the way I want it."
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Desire for deep understanding of underlying mechanisms",
+      "grounding_span": "I like to understand how things work so I think I will always want to understand how the model is doing things."
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

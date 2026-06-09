@@ -1,0 +1,184 @@
+{
+  "transcript_id": "science_0061",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as productivity multiplier for familiar tasks",
+      "label_negative": "AI as time sink for complex tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "the greatest example of the power of AI as a productivity tool"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as first port of call for problem-solving",
+      "label_negative": "Traditional search or self-reliance",
+      "bipolarity_complete": true,
+      "grounding_span": "I have developed the habit of turning to AI as a first port of call"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability on simple vs complex tasks",
+      "label_negative": "AI unreliability on complex tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "performance rapidly degrades with the complexity of the task"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI use constrained by privacy and skill concerns",
+      "label_negative": "Unconstrained AI use",
+      "bipolarity_complete": true,
+      "grounding_span": "I cannot share code with any AI tool for privacy reasons"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as magic wand for peripheral tasks",
+      "label_negative": "AI requiring deep involvement",
+      "bipolarity_complete": true,
+      "grounding_span": "I just wanted the app as if waving a magic wand"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "boost your productivity"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Intellectual autonomy and skill preservation",
+      "grounding_span": "not wanting to see my own skills fade too much"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Seamless task completion for non-core work",
+      "grounding_span": "I just wanted the app as if waving a magic wand"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Positive stance on AI for rapid code generation",
+      "valence": "positive",
+      "grounding_span": "to start with a complex paper and end up with it translated into code in one day was extraordinary"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Ambivalent stance on AI as first port of call",
+      "valence": "ambivalent",
+      "grounding_span": "Sometimes it is extraordinarily useful, sometimes not so much"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Negative stance on AI for complex tasks",
+      "valence": "negative",
+      "grounding_span": "the time debugging the AI provided code is often just as long as building it from scratch"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with AI for peripheral app development",
+      "valence": "negative",
+      "grounding_span": "I had to dig in myself and google lots of things, when I just wanted the app as if waving a magic wand"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative back-and-forth prompting",
+      "grounding_span": "chatting back and forth with chatGPT come up with the code"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic calibration of tool use based on task complexity",
+      "grounding_span": "It seems to be an art to prompt models correctly and to understand their limitations"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n2",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

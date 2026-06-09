@@ -1,0 +1,191 @@
+{
+  "transcript_id": "science_0014",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as literature discovery tool",
+      "label_negative": "Manual slow literature search",
+      "bipolarity_complete": true,
+      "grounding_span": "AI assisted heavily in finding estimates for prices, such as engine prices, since it could scan a number of research papers for figures much faster than I could manually"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as writing assistant",
+      "label_negative": "AI writing without human rephrasing",
+      "bipolarity_complete": true,
+      "grounding_span": "I would write each paragraph initially in semi-note form, then ask AI to rewrite this for a professional report"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI unreliability for model building",
+      "bipolarity_complete": true,
+      "grounding_span": "For the Excel cost model, I found that AI did not create a very reliable model"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI trustworthiness and verification",
+      "label_negative": "AI trustworthiness without verification",
+      "bipolarity_complete": true,
+      "grounding_span": "I wouldn't trust AI to fully complete any tasks without needed to double check them"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as formatting tool for graphs",
+      "label_negative": "Manual graph formatting",
+      "bipolarity_complete": true,
+      "grounding_span": "If AI could work on producing accurate graphs from my data and formatting these to align with a paper"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Research efficiency",
+      "grounding_span": "This saved a lot of time in the report writing process"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Research integrity and accuracy",
+      "grounding_span": "I would double check these sources to make sure that they were valid and correct"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Personal enjoyment of research process",
+      "grounding_span": "I enjoy the process of conducting the research myself"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Negative stance toward AI for literature search",
+      "valence": "positive",
+      "grounding_span": "AI assisted heavily in finding estimates for prices, such as engine prices, since it could scan a number of research papers for figures much faster than I could manually"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Positive appreciation for AI as writing editor",
+      "valence": "positive",
+      "grounding_span": "This saved a lot of time in the report writing process"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Cautious skepticism toward AI reliability",
+      "valence": "negative",
+      "grounding_span": "For the Excel cost model, I found that AI did not create a very reliable model"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Cautious trust with verification",
+      "valence": "negative",
+      "grounding_span": "I wouldn't trust AI to fully complete any tasks without needed to double check them"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Desire for AI graph formatting tool",
+      "valence": "positive",
+      "grounding_span": "If AI could work on producing accurate graphs from my data and formatting these to align with a paper, this would probably be the most helpful tool I can think of"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Verification-oriented — cross-checks AI outputs against other sources",
+      "grounding_span": "I would double check these sources to make sure that they were valid and correct"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic task delegation — uses AI only for specific, bounded tasks",
+      "grounding_span": "I would use AI for much of the original research, making sure to ask for sources for its information"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

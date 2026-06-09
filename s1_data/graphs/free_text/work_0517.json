@@ -1,0 +1,219 @@
+{
+  "transcript_id": "work_0517",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as time-saving code generator for repetitive tasks",
+      "label_negative": "Manual coding of repetitive tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I might see myself using AI to help generate code while I'm working on these projects to help me save time"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as bridge for unfamiliar programming languages",
+      "label_negative": "Struggling alone with unfamiliar languages",
+      "bipolarity_complete": true,
+      "grounding_span": "I might use it to generate code for a coding language that I'm not very well-versed in"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as ideation partner for analysis direction",
+      "label_negative": "Struggling alone with ideation",
+      "bipolarity_complete": true,
+      "grounding_span": "AI actually provided tons of surprisingly adept suggestions for statistical tests, analysis direction, and ideas for me"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI output quality and error risk",
+      "label_negative": "AI output reliability and error-free code",
+      "bipolarity_complete": true,
+      "grounding_span": "I miss an error that the AI output within the code"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Workplace gray area around AI use",
+      "label_negative": "Openly sanctioned or discouraged AI use",
+      "bipolarity_complete": true,
+      "grounding_span": "it's in this sort of gray area, where people don't talk about it"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI use as secretive or cautious due to workplace norms",
+      "label_negative": "Open and accepted AI use",
+      "bipolarity_complete": true,
+      "grounding_span": "I've been much more cautious about my usage of AI as it's not something that I would want people to know that I use"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "Maintaining foundational skills vs. relying on AI for niche details",
+      "label_negative": "Full reliance on AI for all knowledge",
+      "bipolarity_complete": true,
+      "grounding_span": "it's always good to maintain a basic level of understanding of things like coding languages and statistical tests"
+    },
+    {
+      "id": "n8",
+      "type": "Construct",
+      "label": "AI as fundamental to current productivity norms",
+      "label_negative": "Working without AI at previous productivity levels",
+      "bipolarity_complete": true,
+      "grounding_span": "it has become so fundamental to my efficiency nowadays, that without it -- I don't think I would be able to output what has become the 'norm'"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Productivity and time efficiency",
+      "grounding_span": "to help me save time"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Competence and skill maintenance",
+      "grounding_span": "maintain a basic level of understanding"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Professional reputation and avoiding scrutiny",
+      "grounding_span": "caused me a lot of a paranoia in assuming that they thought I was using AI in my work"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Enjoyment and variety in work",
+      "grounding_span": "I genuinely like this as it's not something that I usually do during my usual day-to-day operations"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Satisfaction with AI for ideation",
+      "valence": "positive",
+      "grounding_span": "AI actually provided tons of surprisingly adept suggestions"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Frustration and paranoia from AI errors",
+      "valence": "negative",
+      "grounding_span": "caused me a lot of a paranoia in assuming that they thought I was using AI in my work"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Cautious reliance on AI due to workplace ambiguity",
+      "valence": "ambivalent",
+      "grounding_span": "I've been much more cautious about my usage of AI"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Acceptance of AI as essential for current output",
+      "valence": "positive",
+      "grounding_span": "it has become so fundamental to my efficiency nowadays"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Methodical step-by-step explanation to avoid misunderstandings",
+      "grounding_span": "explain it in a very methodical way to ensure that mistakes or misunderstandings don't happen"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Quality assurance and testing orientation",
+      "grounding_span": "I would never hand it off completely and I find that my job is much too detail-oriented and I personally would not be comfortable without testing it out or at least QAing the results"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n13",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n8",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n8",
+      "target": "n7",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

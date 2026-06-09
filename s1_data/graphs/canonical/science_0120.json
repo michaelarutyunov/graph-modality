@@ -1,0 +1,131 @@
+{
+  "transcript_id": "science_0120",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as code generation assistant",
+      "label_negative": "Manual coding from scratch",
+      "bipolarity_complete": true,
+      "grounding_span": "much faster to decompose specific coding problems and communicate what I wanted to an AI rather than writing the code myself"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI's ability to apply domain-specific knowledge",
+      "label_negative": "AI's lack of access to contextual information",
+      "bipolarity_complete": true,
+      "grounding_span": "Sometimes decisions are made using information that the AI doesn't have access to"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI memory of past interactions as bias",
+      "label_negative": "AI treating each problem independently",
+      "bipolarity_complete": true,
+      "grounding_span": "AI models that remember interactions are often biased towards methods I've discussed with it earlier"
+    },
+    {
+      "id": "n4",
+      "type": "Value",
+      "label": "Efficiency and reduced cognitive load",
+      "grounding_span": "freed up some mental bandwidth for formulating solutions"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Domain-informed accuracy",
+      "grounding_span": "I know from experience that this is a real geologic feature"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Methodological independence and appropriateness",
+      "grounding_span": "even if they aren't appropriate for the task at hand"
+    },
+    {
+      "id": "n7",
+      "type": "Stance",
+      "label": "Positive toward AI for coding tasks",
+      "valence": "positive",
+      "grounding_span": "much faster to decompose specific coding problems and communicate what I wanted to an AI"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Frustration with AI's inability to maintain context",
+      "valence": "negative",
+      "grounding_span": "It is much easier to just add a comment line saying 'these points are legit, keep them in'"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Negative stance toward AI due to hidden biases and reproducibility concerns",
+      "valence": "negative",
+      "grounding_span": "AI models that remember interactions are often biased towards methods I've discussed with it earlier"
+    },
+    {
+      "id": "n10",
+      "type": "CognitiveStyleMarker",
+      "label": "Goal-oriented problem decomposition",
+      "grounding_span": "decompose specific coding problems and communicate what I wanted to an AI"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Empirical verification through testing",
+      "grounding_span": "test the functions on small synthetic datasets"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n8",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n10",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,218 @@
+{
+  "transcript_id": "work_0618",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI use within corporate compliance boundaries",
+      "label_negative": "Manual document review without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I frequently query this custom GPT to confirm the content of said documents align with our internal and industry standards"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for repetitive simple tasks",
+      "label_negative": "Manual execution of repetitive tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I have attempted to automate some easy and repetitive tasks, like document summarization to GPT"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI hallucination and error",
+      "bipolarity_complete": true,
+      "grounding_span": "it consistently cannot export it on the template as a word doc with correct formatting"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI for low-stakes tasks",
+      "label_negative": "Human-only high-stakes tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "the stakes are too high if a mistake is made so I would always want to complete the review myself"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as collaborative partner",
+      "label_negative": "AI as one-shot delegator",
+      "bipolarity_complete": true,
+      "grounding_span": "It's usually a conversation where I ask it for a deliverable and then I review and request revisions"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI for mental load reduction",
+      "label_negative": "Mental load without AI assistance",
+      "bipolarity_complete": true,
+      "grounding_span": "handling my mental load as a working mom"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI as supplement to creative process",
+      "label_negative": "Traditional team bonding without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "We used AI to make a team GPT and then had it brainstorm its own name for us and make a graphic of itself"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional competence",
+      "grounding_span": "Making just one mistake or missing a regulation or permit could kill a multi-million dollar project"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "it doesn't save me any time to have AI complete it"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Personal autonomy and skill preservation",
+      "grounding_span": "I have always been very intentional about using my brain"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Team cohesion and shared standards",
+      "grounding_span": "It helped us to bond as a team"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with AI formatting",
+      "valence": "negative",
+      "grounding_span": "AI just could not get the formatting right"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Distrust due to hallucination experience",
+      "valence": "negative",
+      "grounding_span": "the AI had hallucinated, and I had to share that with my boss"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Desire for AI to handle routine compliance tasks",
+      "valence": "positive",
+      "grounding_span": "I frequently query this custom GPT to confirm the content"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "positive",
+      "grounding_span": "Where AI is most exciting to me... is in handling my mental load"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Positive view of team AI practices for continuity",
+      "valence": "positive",
+      "grounding_span": "It helped us to bond as a team"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative verification and follow-up",
+      "grounding_span": "I review and request revisions on that deliverable"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Deliberate skill preservation through manual practice",
+      "grounding_span": "I have always been very intentional about using my brain"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n5",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n4",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

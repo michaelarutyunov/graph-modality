@@ -1,0 +1,174 @@
+{
+  "transcript_id": "work_0734",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as data processing and automation tool",
+      "label_negative": "Manual data handling without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI to help manage our team's email inboxes every day"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability for specific operational tasks",
+      "label_negative": "AI failure on nuanced operational tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "it kept giving me hours of the main store and not the pharmacy inside the store"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as enabler of workforce reduction and efficiency",
+      "label_negative": "AI causing job loss or resistance",
+      "bipolarity_complete": true,
+      "grounding_span": "I was able to reduce my staffing by 3 people in my call center by using AI to distribute tasks"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as tool for higher-level strategic focus",
+      "label_negative": "AI causing skill atrophy or stagnation",
+      "bipolarity_complete": true,
+      "grounding_span": "I am not able to focus more on financial improvements elsewhere that I wasn't able to get to before"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI capability in document and data processing",
+      "label_negative": "AI limitation in operational warehouse planning",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is great at writing documents, processing data, and helping improve resumes, but hasn't been great at operations and planning for warehousing"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Operational efficiency and cost reduction",
+      "grounding_span": "I was able to reduce my staffing by 3 people in my call center"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Strategic improvement and growth",
+      "grounding_span": "I am not able to focus more on financial improvements elsewhere"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Trust and understanding in technology adoption",
+      "grounding_span": "people don't trust what they don't understand but once they saw how it could save them time"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Enthusiastic adoption of AI for automation",
+      "valence": "positive",
+      "grounding_span": "I am all about putting everything into AI that I can"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI failure on nuanced tasks",
+      "valence": "negative",
+      "grounding_span": "it kept giving me hours of the main store and not the pharmacy inside the store and we wasted 2 hours"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI success in data grouping",
+      "valence": "positive",
+      "grounding_span": "the AI was able to group stores together for me and tell me where induction points should be"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Optimism about expanding AI use",
+      "valence": "positive",
+      "grounding_span": "I will continue to grow the relationship"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic iterative refinement of instructions",
+      "grounding_span": "I am adjusting my instructions to get the AI to make changes to the data"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Opportunity-seeking task delegation mindset",
+      "grounding_span": "My hope is to move it into AI and then onto the next area for me to work on"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

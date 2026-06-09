@@ -1,0 +1,144 @@
+{
+  "transcript_id": "work_0276",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as collaborative conversational partner",
+      "label_negative": "AI as direct solution provider or replacement for own creativity",
+      "bipolarity_complete": true,
+      "grounding_span": "I find the conversations themselves to inspire me to come up with my own ideas"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as compromise to creative integrity",
+      "label_negative": "AI use that replaces personal creative effort",
+      "bipolarity_complete": true,
+      "grounding_span": "I've never used AI in a way that I thought was going against my personal integrity"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as thinking partner for reasoning",
+      "label_negative": "AI as shortcut for quick task completion without depth",
+      "bipolarity_complete": true,
+      "grounding_span": "I want something that's going to have more of an impact"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as acceptable conversation partner vs. unacceptable ghostwriter",
+      "label_negative": "AI as complete replacement for human authorship",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't see conversations to inspire creativity as a bad thing - it's no different than talking with a fellow writer friend"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Creative autonomy",
+      "grounding_span": "I love thinking of creative solutions"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Meaningful impact through engaging learning materials",
+      "grounding_span": "I want something that's going to have more of an impact"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Societal benefit and prevention of cognitive laziness",
+      "grounding_span": "I want it to make society better, but not turn it into a technology that's going to make people lazy and dumb"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "it inspired me to create an interactive game that incorporated real-world scenarios and it was a huge hit"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Concern about AI-induced laziness",
+      "valence": "negative",
+      "grounding_span": "I'm concerned that people will use it as an excuse to become cognitively and creatively lazy"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Commitment to keep using AI to stay relevant",
+      "valence": "positive",
+      "grounding_span": "I want to keep the conversation going. If it's not broke, why fix it?"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Conversational exploratory ideation",
+      "grounding_span": "I'll usually start off a conversation like... I'll usually do a follow-up question"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Solo creative work with preference for independent ideation",
+      "grounding_span": "I work better solo"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

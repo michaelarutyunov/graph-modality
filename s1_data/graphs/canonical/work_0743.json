@@ -1,0 +1,175 @@
+{
+  "transcript_id": "work_0743",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as language improver for proposals",
+      "label_negative": "AI as voice-removing editor",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI sometimes to help me improve the language of those proposals"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as initial draft generator",
+      "label_negative": "AI as independent task completer",
+      "bipolarity_complete": true,
+      "grounding_span": "I will start by writing my own answers to each of the sections/questions in the application, and then upload to an LLM for a review"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI text formality vs natural voice",
+      "label_negative": "AI text matching personal tone",
+      "bipolarity_complete": true,
+      "grounding_span": "AI generated text tends to be far more formal than what I would write"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as brainstorming and idea generator",
+      "label_negative": "AI generating safe or conventional ideas",
+      "bipolarity_complete": true,
+      "grounding_span": "When I used AI for brainstorming or ideation it often comes up with very 'safe' or conventional ideas"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as strategic thinking partner",
+      "label_negative": "AI as threat to skill maintenance",
+      "bipolarity_complete": true,
+      "grounding_span": "I will be able to use AI as a tool to assist me to become more productive"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Authentic personal expression",
+      "grounding_span": "I would prefer the result to sound like me rather than the AI"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Effective communication in proposals",
+      "grounding_span": "make sure I have covered the key points in my answers and to give suggestions for improvement"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Innovation and creating new knowledge",
+      "grounding_span": "It is very easy to come up with ideas that everyone else is doing"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "give me time to think about what is important in my projects"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for wording tasks",
+      "valence": "positive",
+      "grounding_span": "I use AI sometimes to help me improve the language of those proposals so they are more effective"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI's lack of personal voice",
+      "valence": "negative",
+      "grounding_span": "AI edits remove my 'voice' from the text"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI for brainstorming",
+      "valence": "negative",
+      "grounding_span": "it often comes up with very 'safe' or conventional ideas"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "positive",
+      "grounding_span": "I will be able to use AI as a tool to assist me to become more productive"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement and human touch",
+      "grounding_span": "I will start by writing my own answers to each of the sections/questions in the application, and then upload to an LLM for a review"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Value-driven boundary setting — limits AI use to preserve personal authenticity",
+      "grounding_span": "I read it and cannot imagine myself writing like this"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

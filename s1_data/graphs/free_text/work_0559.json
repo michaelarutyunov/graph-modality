@@ -1,0 +1,175 @@
+{
+  "transcript_id": "work_0559",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as time-saving tool for specific tasks",
+      "label_negative": "Manual time-consuming editing",
+      "bipolarity_complete": true,
+      "grounding_span": "What used to take me an hour or so, manually editing a photo, can now take just a minute"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI transparency and process visibility",
+      "label_negative": "AI black-box automation",
+      "bipolarity_complete": true,
+      "grounding_span": "I want to see the process because I want to know what's going on so that if something goes awry I can fix it immediately"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Personalized human communication vs AI-generated text",
+      "label_negative": "AI-generated robotic responses",
+      "bipolarity_complete": true,
+      "grounding_span": "I'd prefer to type the emails myself because I feel like personalized communication is important and I don't want my responses to sound robotic"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Human oversight and coordination of diverse tasks",
+      "label_negative": "Full AI automation of job",
+      "bipolarity_complete": true,
+      "grounding_span": "it's the coordination of those small parts that, I think, require a human to oversee"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Company policy restricting AI tool use",
+      "label_negative": "Unrestricted AI tool adoption",
+      "bipolarity_complete": true,
+      "grounding_span": "our company limits which tools we can use in order to ensure that work is of a certain standard"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "It's amazing to see how much time the technology can save me"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Control and quality assurance",
+      "grounding_span": "so that if something goes awry I can fix it immediately, and so I can make sure I don't accidentally leave those errors"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Authentic client relationships",
+      "grounding_span": "personalized communication is important and I don't want my responses to sound robotic"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Professional standards and quality",
+      "grounding_span": "ensure that work is of a certain standard"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for photo editing",
+      "valence": "positive",
+      "grounding_span": "I find using it in Photoshop very satisfying"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Preference for manual email composition",
+      "valence": "negative",
+      "grounding_span": "I'd prefer to type the emails myself"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Confidence in human oversight role",
+      "valence": "positive",
+      "grounding_span": "I'm not concerned about AI taking over because my job consists of a lot of different small things"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Acceptance of company AI restrictions",
+      "valence": "mixed",
+      "grounding_span": "our company limits which tools we can use in order to ensure that work is of a certain standard"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative process monitoring — prefers to see and intervene during AI process",
+      "grounding_span": "I collaborate throughout the process. I want to see the process"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Context-dependent tool adoption — adapts AI use based on role and employer",
+      "grounding_span": "If and when I have to work for a different person, my role and responsibilities will change, and at that point I may find a need for integrating more AI"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

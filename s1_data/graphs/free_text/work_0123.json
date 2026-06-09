@@ -1,0 +1,204 @@
+{
+  "transcript_id": "work_0123",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as grounding guide for unfamiliar terrain",
+      "label_negative": "AI as unreliable or conflicting source",
+      "bipolarity_complete": true,
+      "grounding_span": "having someone or something with confident information that can help us navigate the unknown waters is tremendously helpful"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI trustworthiness for critical analysis",
+      "label_negative": "AI unreliability and inconsistency",
+      "bipolarity_complete": true,
+      "grounding_span": "This is where trust (or lack thereof) comes in for me with AI"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as honest constructive critic",
+      "label_negative": "AI as pandering cheerleader",
+      "bipolarity_complete": true,
+      "grounding_span": "I would not trust it with feedback, either, as so many models focus on pandering to the user"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as logistical planning assistant",
+      "label_negative": "AI as poor at local timing and logistics",
+      "bipolarity_complete": true,
+      "grounding_span": "I trust it more with helping me come up with a game plan of actions, or a schedule"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as democratizing tool for independent creators",
+      "label_negative": "AI as job-stealing tool for wealthy gatekeepers",
+      "bipolarity_complete": true,
+      "grounding_span": "AI can open doorways for people to scale their own movies and shows independently without having to secure funding"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as tool vs AI as creative originator",
+      "label_negative": "AI as originator of creative content",
+      "bipolarity_complete": true,
+      "grounding_span": "The other murky area is where AI comes up with the creative content. That should not be able to be awarded or thought of in the same arena as human-created content"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Creative autonomy and self-direction",
+      "grounding_span": "I'd like to be at the forefront of integrating AI into live action filming"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional integrity and accuracy",
+      "grounding_span": "Professionally, I depend on constructive criticism rather than praise"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Empowerment of independent creators",
+      "grounding_span": "AI can open doorways for people to scale their own movies and shows independently"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Positive embrace of AI as business partner",
+      "valence": "positive",
+      "grounding_span": "why not harness it and use it to my advantage?"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Distrust of AI for critical feedback",
+      "valence": "negative",
+      "grounding_span": "I would not trust it with feedback"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with AI inconsistency",
+      "valence": "negative",
+      "grounding_span": "I input the same pilot episode into four different models, and received four different outputs"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Hope for AI as democratizing force",
+      "valence": "positive",
+      "grounding_span": "AI can open doorways for people to scale their own movies and shows independently"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Resistance to AI as creative originator",
+      "valence": "negative",
+      "grounding_span": "That should not be able to be awarded or thought of in the same arena as human-created content"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Experiential local knowledge calibration",
+      "grounding_span": "I can tell you how long it would take me to walk or use the subway between any two locations in Manhattan or Brooklyn without having to think about it"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement with reality checks",
+      "grounding_span": "I have to do a lot of adjusting since it is pretty bad with timing between locations versus what my brain immediately knows"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n4",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

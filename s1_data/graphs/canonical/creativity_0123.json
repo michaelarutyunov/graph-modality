@@ -1,0 +1,205 @@
+{
+  "transcript_id": "creativity_0123",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as thinking partner for reasoning",
+      "label_negative": "AI as writing tool producing final content",
+      "bipolarity_complete": true,
+      "grounding_span": "For me it's more of a thinking tool than a writing tool"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as idea generator for novel experimental angles",
+      "label_negative": "AI producing generic or non-human output",
+      "bipolarity_complete": true,
+      "grounding_span": "I'm looking for that nugget of gold that is a new way of thinking about these topics"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as fast but imperfect assistant",
+      "label_negative": "AI as perfect autonomous creator",
+      "bipolarity_complete": true,
+      "grounding_span": "It's almost like I have an intern. They're not perfect but they do the work quick"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Workplace acceptance of AI use",
+      "label_negative": "Workplace restriction or caution toward AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I hope that my workplace embraces AI"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as supplementary aide to human expertise",
+      "label_negative": "AI as jack of all trades without depth",
+      "bipolarity_complete": true,
+      "grounding_span": "Have a mode where you can say 'creativity mode' or 'editorial mode' and it would have some level of expertise"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI visual quality for professional use",
+      "label_negative": "AI visuals as terrible and unusable",
+      "bipolarity_complete": true,
+      "grounding_span": "the visuals as they are now are terrible. I would not use any of them"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Creative productivity and efficiency",
+      "grounding_span": "I can get project started much quicker"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Novelty and creative insight",
+      "grounding_span": "find novel ways to present the information"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Creative and strategic human expertise",
+      "grounding_span": "human creativity is gonna go the way of journalism"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Authentic human communication",
+      "grounding_span": "AI will eventually be really, really good at sounding human"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Positive view of AI as thinking partner",
+      "valence": "positive",
+      "grounding_span": "I am all for using AI"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Caution due to workplace restrictions",
+      "valence": "negative",
+      "grounding_span": "I have to be careful on how much I'm using the tool"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Resistance to AI in creative work",
+      "valence": "positive",
+      "grounding_span": "It was great. So when I am using AI, I'm looking for that nugget of gold"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Resistance to AI in creative work",
+      "valence": "negative",
+      "grounding_span": "human creativity is gonna go the way of journalism"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Hope for improved AI visuals with ethical safeguards",
+      "valence": "mixed",
+      "grounding_span": "I hope that the photography/video production capabilities of AI will improve a lot. But not so much where nefarious people are sending out fake videos"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative prompt refinement",
+      "grounding_span": "I ran it through AI many times to see how to connect"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Analogical bridging between disparate themes",
+      "grounding_span": "how to connect the very corporate purpose practice people into the fun movie Summer Blockbuster"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,211 @@
+{
+  "transcript_id": "work_0311",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as drafting assistant for routine templates",
+      "label_negative": "Manual drafting of routine templates",
+      "bipolarity_complete": true,
+      "grounding_span": "I typically use AI to draft those templates"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI's ability to match desired tone and formality",
+      "label_negative": "AI's tendency to produce overly casual or stiff writing",
+      "bipolarity_complete": true,
+      "grounding_span": "The templates are usually too casual; when I ask it to make it more formal, the writing becomes stiff"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI's understanding of audience and context",
+      "label_negative": "Human's superior contextual knowledge",
+      "bipolarity_complete": true,
+      "grounding_span": "AI doesn't know the details of the scenario as well as I do"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI's ability to follow precise instructions",
+      "label_negative": "AI's failure to follow precise instructions",
+      "bipolarity_complete": true,
+      "grounding_span": "I gave it very clear instructions and it still was not able to pull out all the bullet points"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI's formatting reliability",
+      "label_negative": "AI's formatting errors",
+      "bipolarity_complete": true,
+      "grounding_span": "the formatting got messed up"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI integration with secure data",
+      "label_negative": "Security concerns blocking AI integration",
+      "bipolarity_complete": true,
+      "grounding_span": "If it became secure enough, I'd love for AI to have access to my work email"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "Human touch in sensitive industry",
+      "label_negative": "AI replacing human interaction",
+      "bipolarity_complete": true,
+      "grounding_span": "agents and buyers/sellers like to have a 'human touch'"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "to save myself time"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Accuracy and precision",
+      "grounding_span": "I wanted it verbatim"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Security and trust",
+      "grounding_span": "the security issue remains a blocker"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Human connection and personalization",
+      "grounding_span": "human touch"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI for drafting templates",
+      "valence": "positive",
+      "grounding_span": "I typically use AI to draft those templates"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Frustration with AI's tone and formatting issues",
+      "valence": "negative",
+      "grounding_span": "AI did make me feel fairly frustrated once"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Cautious optimism about future AI use",
+      "valence": "mixed",
+      "grounding_span": "I could see my relationship evolving to have it take over some tasks, but not very many"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Skepticism about AI replacing human roles in industry",
+      "valence": "negative",
+      "grounding_span": "It does not seem to be in the near future"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through back-and-forth",
+      "grounding_span": "I usually do a bit of back and forth"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Context-driven audience adaptation",
+      "grounding_span": "I have to take into account the target audience"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

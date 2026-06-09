@@ -1,0 +1,201 @@
+{
+  "transcript_id": "work_0181",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as writing assistant",
+      "label_negative": "Struggling alone with wording",
+      "bipolarity_complete": true,
+      "grounding_span": "AI can help put it into simpler terms"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as writing assistant for drafting",
+      "label_negative": "Manual drafting without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI primarily for drafting communications"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as project organization tool",
+      "label_negative": "Manual project organization",
+      "bipolarity_complete": true,
+      "grounding_span": "use it to help me get organized for different projects"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI use for sensitive data",
+      "label_negative": "Unrestricted AI access to sensitive data",
+      "bipolarity_complete": true,
+      "grounding_span": "I can't get too in depth with it because of sensitive information"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Human expertise in project planning",
+      "label_negative": "AI-driven project planning",
+      "bipolarity_complete": true,
+      "grounding_span": "I prefer to plan project outlines myself because I have years of experience"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI understanding of business context",
+      "label_negative": "AI lacking specialized knowledge",
+      "bipolarity_complete": true,
+      "grounding_span": "It wasn't quite grasping what my job is"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "Automation reliability in complex environments",
+      "label_negative": "Flawless automation",
+      "bipolarity_complete": true,
+      "grounding_span": "even they mess up...they still encounter many errors"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Effective communication",
+      "grounding_span": "help put it into simpler terms"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "help me get organized for different projects"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Privacy and data security",
+      "grounding_span": "sensitive information"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Professional autonomy",
+      "grounding_span": "I prefer to plan project outlines myself"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Career advancement and relevance",
+      "grounding_span": "what areas I would naturally explore as my career progresses"
+    },
+    {
+      "id": "n13",
+      "type": "Value",
+      "label": "Operational reliability",
+      "grounding_span": "they still encounter many errors that require human intervention"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Satisfaction with AI for communications",
+      "valence": "positive",
+      "grounding_span": "AI can help put it into simpler terms"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Frustration with AI's inability to maintain context",
+      "valence": "negative",
+      "grounding_span": "It wasn't quite grasping what my job is"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Excitement about AI's potential for automation",
+      "valence": "ambivalent",
+      "grounding_span": "even they mess up...there will still need to be human eyes"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative iterative refinement — works back and forth with AI",
+      "grounding_span": "I often ask for tweaks in tone or content and keep going until something feels right"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic calibration based on task stakes and verifiability",
+      "grounding_span": "from experience and knowing how different times of the year can affect these departments, I know it can be closer to two weeks"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n13",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n14",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

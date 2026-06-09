@@ -1,0 +1,179 @@
+{
+  "transcript_id": "work_0686",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI reliability and factuality",
+      "label_negative": "AI as unreliable hallucinator",
+      "bipolarity_complete": true,
+      "grounding_span": "verify factual information in a quicker way"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as research assistant",
+      "label_negative": "AI as inadequate for subjective/complex topics",
+      "bipolarity_complete": true,
+      "grounding_span": "AI models typically struggle with more complex, subjective topics"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability in citations",
+      "label_negative": "AI as provider of unreliable sources",
+      "bipolarity_complete": true,
+      "grounding_span": "provided several articles that were not reputable"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as efficiency tool",
+      "label_negative": "AI as unnecessary for skilled researchers",
+      "bipolarity_complete": true,
+      "grounding_span": "I am faster and more efficient at finding information generally, so I may use AI less"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as verification-requiring tool",
+      "label_negative": "AI as autonomous reliable agent",
+      "bipolarity_complete": true,
+      "grounding_span": "still needs to be verified by a human"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Epistemic accuracy and understanding",
+      "grounding_span": "verify factual information"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "improve my efficiency when researching"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Personal autonomy and skill preservation",
+      "grounding_span": "maintaining your skills"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "the information is very helpful and accurate, especially for common knowledge type information"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Positive stance toward AI for initial paper discovery",
+      "valence": "negative",
+      "grounding_span": "This is particularly annoying because you would think that the model would be good at finding a paper"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Cautious trust in AI",
+      "valence": "ambivalent",
+      "grounding_span": "I try not to overly rely on AI content and do my due diligence to check anything suspicious"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Openness to increasing AI use in future",
+      "valence": "positive",
+      "grounding_span": "my colleagues have a fairly positive approach towards using AI in their daily lives which has definitely made me more open"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Systematic verification through source checking",
+      "grounding_span": "I will look at its cited sources where relevant and verify the information at the source itself"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement of queries",
+      "grounding_span": "I might break down the topic into smaller sub-topics if I notice the AI is struggling"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

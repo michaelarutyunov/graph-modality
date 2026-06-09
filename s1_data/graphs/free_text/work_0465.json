@@ -1,0 +1,184 @@
+{
+  "transcript_id": "work_0465",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as research tool for quick factual lookup",
+      "label_negative": "AI as unreliable or insufficient for complex research",
+      "bipolarity_complete": true,
+      "grounding_span": "I love using AI for research"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI in report writing and drafting",
+      "label_negative": "Human-crafted reports with personal touch",
+      "bipolarity_complete": true,
+      "grounding_span": "when it comes to actually writing these reports, I prefer to do it myself"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI accuracy and reliability",
+      "label_negative": "AI inaccuracy or hallucination",
+      "bipolarity_complete": true,
+      "grounding_span": "found it be accurate"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Workplace acceptance of AI",
+      "label_negative": "Workplace indifference or lack of AI integration",
+      "bipolarity_complete": true,
+      "grounding_span": "AI doesn't come up in conversation very often"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Human judgment and expertise",
+      "label_negative": "AI replacing human judgment",
+      "bipolarity_complete": true,
+      "grounding_span": "human judgment is very important and unlikely to be affected by AI"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "It saved me a bit of time"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional autonomy and personal style",
+      "grounding_span": "I've gotten into a bit of a routine with how I draft things"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Accuracy and trustworthiness",
+      "grounding_span": "found it be accurate"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI for quick factual lookup",
+      "valence": "positive",
+      "grounding_span": "I was quite satisfied then"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Preference for human-crafted reports",
+      "valence": "negative",
+      "grounding_span": "I prefer to do it myself"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Openness to AI-assisted drafting if permitted",
+      "valence": "positive",
+      "grounding_span": "I'd be okay if we were given permission to have AI draft parts of our letters"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Indifference to AI in workplace culture",
+      "valence": "mixed",
+      "grounding_span": "AI doesn't come up in conversation very often"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Single-query, non-iterative research style",
+      "grounding_span": "I almost never go back and forth"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Routine-based, experience-driven task approach",
+      "grounding_span": "I have been doing this job for over 10 years now and I've gotten into a bit of a routine"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

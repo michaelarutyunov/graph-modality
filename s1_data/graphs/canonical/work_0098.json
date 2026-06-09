@@ -1,0 +1,230 @@
+{
+  "transcript_id": "work_0098",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as time-saving tool",
+      "label_negative": "Self-directed thorough engagement without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I only really ask AI if I'm in a time crunch and need a more efficient way of doing something"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as conceptual clarifier for research",
+      "label_negative": "Independent struggle with unfamiliar concepts",
+      "bipolarity_complete": true,
+      "grounding_span": "ask ai what it means and to explain it in a way for a college chem major to understand"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as systematic troubleshooter",
+      "label_negative": "Trial-and-error without AI guidance",
+      "bipolarity_complete": true,
+      "grounding_span": "ask for the ai to do troubleshooting if my reaction doesn't go as planned"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI for summarization and research",
+      "label_negative": "Manual reading and comprehension of full papers",
+      "bipolarity_complete": true,
+      "grounding_span": "used AI to summarize the findings, intro, results/data, and other parts of the papers"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as efficient quiz/test creator",
+      "label_negative": "Manual creation of exam questions and activities",
+      "bipolarity_complete": true,
+      "grounding_span": "coming up with questions to use on exam prep materials, ideas for in class activities like demos"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI use in core academic work (writing, analysis) as ethical concern",
+      "label_negative": "Unethical or over-reliant AI use",
+      "bipolarity_complete": true,
+      "grounding_span": "my research groups approve the use of ethical AI"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI use in education",
+      "label_negative": "AI overuse in classrooms",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't think this is good for all scenarios"
+    },
+    {
+      "id": "n8",
+      "type": "Construct",
+      "label": "AI as clinical information source",
+      "label_negative": "AI replacing human doctor emotional benefit",
+      "bipolarity_complete": true,
+      "grounding_span": "AI has the capacity to help doctors diagnose conditions and make up treatment plans pretty efficiently"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "more efficient than reading the papers myself"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Learning and understanding",
+      "grounding_span": "understand/clarify concepts in the research group"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Productivity and efficient task completion",
+      "grounding_span": "pretty short amount of time"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Ethical and responsible AI use",
+      "grounding_span": "approve the use of ethical AI"
+    },
+    {
+      "id": "n13",
+      "type": "Value",
+      "label": "Human touch in healthcare",
+      "grounding_span": "emotional benefit of having a human doctor vs a robot one"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Satisfaction with AI summaries",
+      "valence": "positive",
+      "grounding_span": "The AI summarized it pretty well and although I had to manually copy and paste the text into the bot, it was still a bit more efficient"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Frustration with student AI misuse",
+      "valence": "negative",
+      "grounding_span": "I don't think this is good for all scenarios"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Optimism about AI as partner in patient assessment",
+      "valence": "positive",
+      "grounding_span": "AI can be a pretty useful study tool in med school in its most basic forms"
+    },
+    {
+      "id": "n17",
+      "type": "Stance",
+      "label": "Satisfaction with AI diagnostic help",
+      "valence": "positive",
+      "grounding_span": "AI has the capacity to help doctors diagnose conditions and make up treatment plans pretty efficiently"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Context-dependent selective AI use — uses AI only when time-pressed or for specific clarifications",
+      "grounding_span": "I only really ask AI if I'm in a time crunch and need a more efficient way of doing something"
+    },
+    {
+      "id": "n19",
+      "type": "CognitiveStyleMarker",
+      "label": "Preference for single-turn interactions unless task complexity requires follow-up",
+      "grounding_span": "Unless the task is somewhat complicated ... I usually just ask the ai once and take the results to deal with myself"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n13",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n14",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n8",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n17",
+      "target": "n8",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n19",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n19",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

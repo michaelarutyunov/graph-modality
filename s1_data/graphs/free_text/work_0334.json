@@ -1,0 +1,172 @@
+{
+  "transcript_id": "work_0334",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI for boilerplate and repetitive code generation",
+      "label_negative": "AI for complex business logic implementation",
+      "bipolarity_complete": true,
+      "grounding_span": "generate boilerplate code"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "Single-shot detailed prompting",
+      "label_negative": "Multi-turn iterative refinement",
+      "bipolarity_complete": true,
+      "grounding_span": "pack the initial prompt with enough detail that it's completed in one shot"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Human ownership of core business logic",
+      "label_negative": "AI implementation of core business logic",
+      "bipolarity_complete": true,
+      "grounding_span": "prefer to implement the main business logic myself"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as assistant for tedious tasks",
+      "label_negative": "AI as autonomous agent for feature generation",
+      "bipolarity_complete": true,
+      "grounding_span": "mostly it's automating the writing of what would otherwise be the tedious simple stuff"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI reliability in multi-turn conversations",
+      "label_negative": "AI unreliability in multi-turn conversations",
+      "bipolarity_complete": true,
+      "grounding_span": "multi-turn conversations ... it just doesn't get something"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and time savings",
+      "grounding_span": "saved a couple of hours of wiring up a bundle of interlinked Terraform resources"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Code quality and correctness",
+      "grounding_span": "need to be able to very quickly understand what has been produced and identify if it is truly correct"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Knowledge retention and skill maintenance",
+      "grounding_span": "I need to be extra vigilant about ensuring that my skills are well practiced and my understanding deep"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with single-shot success",
+      "valence": "positive",
+      "grounding_span": "The best satisfaction comes from the prompt and response hitting the mark first time"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with multi-turn failures",
+      "valence": "negative",
+      "grounding_span": "The biggest frustrations have happened when I have used multi-turn conversations ... it just doesn't get something"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Cautious openness to expanding AI role",
+      "valence": "ambivalent",
+      "grounding_span": "I'll probably start experimenting more with letting it implement the main logic. I'll keep the leash short"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Front-loaded detailed specification",
+      "grounding_span": "pack the initial prompt with enough detail that it's completed in one shot"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Quality gate vigilance",
+      "grounding_span": "I need to be extra vigilant about ensuring that my skills are well practiced and my understanding deep"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n3",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

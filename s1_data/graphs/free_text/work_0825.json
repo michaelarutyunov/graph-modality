@@ -1,0 +1,167 @@
+{
+  "transcript_id": "work_0825",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as research and brainstorming assistant",
+      "label_negative": "AI as writer of creative text",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is a valuable tool, a great assistant, but it needs to remain an assistant"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI enabling multitasking and efficiency",
+      "label_negative": "AI causing distraction or inefficiency",
+      "bipolarity_complete": true,
+      "grounding_span": "allows me to multitask a lot more efficiently"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability and consistency",
+      "label_negative": "AI unreliability or frustration",
+      "bipolarity_complete": true,
+      "grounding_span": "I've only ever had them have a minor hiccup here or there"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Preserving authorial authenticity and creative enjoyment",
+      "label_negative": "AI encroaching on creative core",
+      "bipolarity_complete": true,
+      "grounding_span": "I do not want the AI to help with the written part in any way, shape or form"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as tool for editing grammar",
+      "label_negative": "AI editing creative content",
+      "bipolarity_complete": true,
+      "grounding_span": "I wouldn't have a problem with an AI fixing my grammar because editing grammar is not fun"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and efficient time use",
+      "grounding_span": "allows me to multitask a lot more efficiently so that I can get more writing done"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Creative fulfillment and personal accomplishment",
+      "grounding_span": "the writing is the fun part. It's where the creativity really gets to shine"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Authenticity and ethical integrity",
+      "grounding_span": "it would be disingenuous to publish a book that I did not write in its entirety"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI as assistant",
+      "valence": "positive",
+      "grounding_span": "As long as the AI gets the job done, I'm happy"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Firm boundary against AI writing",
+      "valence": "negative",
+      "grounding_span": "I do not want the AI to help with the written part in any way, shape or form"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Openness to AI for editing",
+      "valence": "positive",
+      "grounding_span": "I may attempt to use AI to help with the editing process"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Broad-to-narrow information gathering",
+      "grounding_span": "I like to start broad and that allows me to pick and choose what details I think are most important"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Patient and consistent tool use",
+      "grounding_span": "I'm a pretty patient person so perhaps that's why"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

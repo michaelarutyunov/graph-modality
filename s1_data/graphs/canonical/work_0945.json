@@ -1,0 +1,197 @@
+{
+  "transcript_id": "work_0945",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as efficiency tool",
+      "label_negative": "Manual handling of quick tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "if it is a very simple CSS fix or a quick one-liner that needs changed, I'd prefer just asking Copilot since it will locate the file and line faster than I will"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as architectural thinking partner for complex tasks",
+      "label_negative": "AI as unreliable for large-scale changes without refinement",
+      "bipolarity_complete": true,
+      "grounding_span": "if we are making modifications that are more significant, like adding Server-Side Rendering for a specific page for example, I will usually think about the change on my own, ask Gemini or some other LLM from an architectural standpoint, devise a workflow, then prompt the coding agent to make an attempt"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI risk in version control operations",
+      "label_negative": "Safe manual version control",
+      "bipolarity_complete": true,
+      "grounding_span": "whenever it comes to pushing changes or dealing with GitHub I tend to ensure I am the one performing the task. This kind of task is different because I feel there is only a tiny hallucination needed to do something dreadful like pushing to main directly"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI understanding of codebase context",
+      "label_negative": "AI lack of holistic codebase understanding",
+      "bipolarity_complete": true,
+      "grounding_span": "The bulk of my frustrations come from a lack of understanding most of the time, like not grasping the entirety of the codebase"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as junior developer or coworker",
+      "label_negative": "Human junior developer role",
+      "bipolarity_complete": true,
+      "grounding_span": "I am almost positive the job I am currently doing is the same one that AI could do years from now. I am all but certain AI will be able to act as a Junior developer and propose solutions back to Seniors"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as specification-driven autonomous agent",
+      "label_negative": "Hands-on coding by human",
+      "bipolarity_complete": true,
+      "grounding_span": "I envision a more hands-off approach where AI I am less interacting with the codebase itself and more-so devising a specifications sheet more or less that gets sent to an agent and 15-30 minutes later I see the proposed changes and can test / approve them as necessary"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "maximizing efficiency whilst still using it safely"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Risk avoidance",
+      "grounding_span": "there is only a tiny hallucination needed to do something dreadful like pushing to main directly"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Professional competence and future-proofing",
+      "grounding_span": "I am actively pursuing different areas in Tech that I feel will be safer, and I am also trying to push for higher levels faster than normal to make it out of the Junior role"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "if it is a very simple CSS fix or a quick one-liner that needs changed, I'd prefer just asking Copilot since it will locate the file and line faster than I will"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI for coding",
+      "valence": "negative",
+      "grounding_span": "The bulk of my frustrations come from a lack of understanding most of the time, like not grasping the entirety of the codebase"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Caution toward AI in high-risk tasks",
+      "valence": "negative",
+      "grounding_span": "whenever it comes to pushing changes or dealing with GitHub I tend to ensure I am the one performing the task"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Optimism about AI as future tool",
+      "valence": "positive",
+      "grounding_span": "I envision a more hands-off approach where AI I am less interacting with the codebase itself and more-so devising a specifications sheet"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Task triaging by complexity",
+      "grounding_span": "It really depends on the type of task that it is and the amount of changes being made"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic career planning considering AI impact",
+      "grounding_span": "I am actively pursuing different areas in Tech that I feel will be safer, and I am also trying to push for higher levels faster than normal"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n3",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

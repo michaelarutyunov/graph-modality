@@ -1,0 +1,187 @@
+{
+  "transcript_id": "work_0985",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as editorial assistant for writing",
+      "label_negative": "AI as content generator requiring heavy revision",
+      "bipolarity_complete": true,
+      "grounding_span": "I'd rather do the upfront work and generate new things rather than have to fix AI"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as research assistant for summarization and background",
+      "label_negative": "AI as unreliable source of false information",
+      "bipolarity_complete": true,
+      "grounding_span": "I will use AI to summarize documents"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI environmental impact awareness",
+      "label_negative": "Unrestricted AI use without environmental concern",
+      "bipolarity_complete": true,
+      "grounding_span": "I am a bit leery of AI since it has environmental impacts"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI reliability and accuracy",
+      "label_negative": "AI hallucination and false citations",
+      "bipolarity_complete": true,
+      "grounding_span": "AI gave false citations and false information"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as limited in creativity replacement",
+      "label_negative": "AI as capable of replacing human creativity",
+      "bipolarity_complete": true,
+      "grounding_span": "I think the idea that it can replace creativity in humans, at least right now, is limited"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "I'd rather do the upfront work and generate new things rather than have to fix AI"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Environmental sustainability",
+      "grounding_span": "I am a bit leery of AI since it has environmental impacts"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Epistemic reliability",
+      "grounding_span": "AI gave false citations and false information. That is incredibly frustrating"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Human creativity and authenticity",
+      "grounding_span": "I think the idea that it can replace creativity in humans, at least right now, is limited"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Preference for AI as editor over generator",
+      "valence": "positive",
+      "grounding_span": "I'd rather do the upfront work and generate new things rather than have to fix AI"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI false information",
+      "valence": "negative",
+      "grounding_span": "AI gave false citations and false information. That is incredibly frustrating"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Caution due to environmental impact",
+      "valence": "negative",
+      "grounding_span": "I am a bit leery of AI since it has environmental impacts, this makes me cautious when using it"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Skepticism about AI replacing creativity",
+      "valence": "negative",
+      "grounding_span": "I think the idea that it can replace creativity in humans, at least right now, is limited"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Satisfaction with AI as editor and starting point",
+      "valence": "positive",
+      "grounding_span": "I have been satisfied using it as an editor or a starting point for some of my other work"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Preference for upfront creation over revision",
+      "grounding_span": "I'd rather do the upfront work and generate new things rather than have to fix AI"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic adaptability to AI changes",
+      "grounding_span": "If AI takes over some things, I'll adapt and find other things to use my time for"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

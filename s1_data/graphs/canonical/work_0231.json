@@ -1,0 +1,203 @@
+{
+  "transcript_id": "work_0231",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as research assistant",
+      "label_negative": "AI as unreliable source without verification",
+      "bipolarity_complete": true,
+      "grounding_span": "I always ask for citations so I can just click the links and not rely on the model because it does make mistakes"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as tool for routine legal work",
+      "label_negative": "AI for legal reasoning and advice",
+      "bipolarity_complete": true,
+      "grounding_span": "When it comes to reasoning, like how could these laws apply to the current situation I am researching for, I use my own reasoning"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability and factuality",
+      "label_negative": "Blind trust in AI without verification",
+      "bipolarity_complete": true,
+      "grounding_span": "I actually learned over time to not trust anything it says 100% when it has to be factual"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as supplement to creative process",
+      "label_negative": "AI as limited to routine tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "It actually found a legal angle that I had not considered yet"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as skill development enabler",
+      "label_negative": "AI as threat to professional skills",
+      "bipolarity_complete": true,
+      "grounding_span": "the best thing I can do in maintaining my skills is learning how to utilize Ai efficiently"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as tool for routine legal work",
+      "label_negative": "AI replacing human judgment in legal work",
+      "bipolarity_complete": true,
+      "grounding_span": "I have to think about the human aspect of it. I have to speak and try to influence others to agree with my stance, which Ai can't do"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Epistemic accuracy and understanding",
+      "grounding_span": "I always ask for citations so I can just click the links and not rely on the model because it does make mistakes"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Professional competence and effective advocacy",
+      "grounding_span": "the tactic won in court"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "it can save me hours of reading"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Professional autonomy",
+      "grounding_span": "I have to think about the human aspect of it"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "It actually found a legal angle that I had not considered yet. It was amazing!"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Cautious about AI accuracy after incident",
+      "valence": "negative",
+      "grounding_span": "I actually learned over time to not trust anything it says 100% when it has to be factual"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Cautious skepticism toward AI reliability",
+      "valence": "positive",
+      "grounding_span": "I hope that as the technology develops, it stops making as many mistakes"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Skepticism toward colleagues' overtrust",
+      "valence": "negative",
+      "grounding_span": "they trust it too much and make legal mistakes because they don't research it"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative verification through citation checking",
+      "grounding_span": "I always ask for citations so I can just click the links and not rely on the model"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based boundary setting — clear separation of AI-appropriate vs. human-only tasks",
+      "grounding_span": "I actually learned over time to not trust anything it says 100% when it has to be factual"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

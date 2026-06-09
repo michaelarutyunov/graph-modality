@@ -1,0 +1,161 @@
+{
+  "transcript_id": "science_0117",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as literature discovery tool",
+      "label_negative": "Traditional slow literature search",
+      "bipolarity_complete": true,
+      "grounding_span": "I found using the AI helpful and much faster than looking for things myself"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI reliability in proof generation",
+      "label_negative": "AI errors in proof generation",
+      "bipolarity_complete": true,
+      "grounding_span": "often there were mistakes in the given proofs"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as tool for generating visual and video elements",
+      "label_negative": "AI inability for visual reasoning and diagram generation",
+      "bipolarity_complete": true,
+      "grounding_span": "AI cannot reliably generate mathematical diagrams, and also struggles with visual reasoning"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI reliability in proof generation",
+      "label_negative": "Human proof-reading for mathematical documents",
+      "bipolarity_complete": true,
+      "grounding_span": "I tried to get AIs to proof-read the final Latex document"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Research efficiency",
+      "grounding_span": "helpful and much faster than looking for things myself"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Mathematical rigor and correctness",
+      "grounding_span": "verify the correctness by reading and trying to understand"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Visual reasoning capability",
+      "grounding_span": "the ability to reason diagrammatically and produce mathematically rigorous diagrams"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Negative stance toward AI for literature search",
+      "valence": "positive",
+      "grounding_span": "I found using the AI helpful and much faster than looking for things myself"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Negative toward AI for proof generation due to errors",
+      "valence": "negative",
+      "grounding_span": "often there were mistakes in the given proofs"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Negative toward AI for tasks requiring deep understanding",
+      "valence": "negative",
+      "grounding_span": "AI cannot reliably generate mathematical diagrams, and also struggles with visual reasoning"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Negative toward AI for proof generation due to errors",
+      "valence": "negative",
+      "grounding_span": "there were quite a few mistakes that the AI made"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "First-pass then verify approach",
+      "grounding_span": "I would always ask that first, and then double check sources"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-specific delegation based on task nature",
+      "grounding_span": "AI cannot reliably generate mathematical diagrams...so it would be essentially useless in these domains"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n3",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

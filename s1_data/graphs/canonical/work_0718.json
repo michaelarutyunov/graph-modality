@@ -1,0 +1,217 @@
+{
+  "transcript_id": "work_0718",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI for repetitive simple tasks",
+      "label_negative": "AI as threat to creative uniqueness and personal touch",
+      "bipolarity_complete": true,
+      "grounding_span": "I have used a few AI tools for small, specific tasks, such as using AI tools to edit pictures"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as last resort for design tasks",
+      "label_negative": "Full AI design generation replacing human creativity",
+      "bipolarity_complete": true,
+      "grounding_span": "I wouldn't mind more access to tools that make things easier"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Personal customer communication",
+      "label_negative": "AI-mediated customer communication",
+      "bipolarity_complete": true,
+      "grounding_span": "using an AI response would really work against me"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI image generation capability",
+      "label_negative": "Human-created art and design",
+      "bipolarity_complete": true,
+      "grounding_span": "AI making their careers obsolete"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Design complexity as protection against copying",
+      "label_negative": "Simple designs easily copied",
+      "bipolarity_complete": true,
+      "grounding_span": "it would take some skill and lot of effort to create an item with all of the functionality mine has"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as brainstorming and idea generator",
+      "label_negative": "Human-generated unique ideas",
+      "bipolarity_complete": true,
+      "grounding_span": "I do plan to try generating more creative product ideas by talking to creative focused AI tools"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "accomplish in approximately a minute of computational time what would take me much longer"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Personal connection and customer relationships",
+      "grounding_span": "they really appreciate the care and personal touches we put into our business"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Creative authenticity and human expression",
+      "grounding_span": "one of the things that makes my business stand out is that I both design and print my unique designs"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Ethical and responsible AI use",
+      "grounding_span": "trained nonconsensually with the art of those creatives"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI for photo editing",
+      "valence": "positive",
+      "grounding_span": "It was very satisfying to discover that the photo editing tool could accomplish in approximately a minute"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Openness to future AI for repetitive tasks",
+      "valence": "positive",
+      "grounding_span": "I wouldn't mind more access to tools that make things easier"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Mixed feelings about AI in customer service",
+      "valence": "negative",
+      "grounding_span": "using an AI response would really work against me"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Resistance to AI in creative work",
+      "valence": "negative",
+      "grounding_span": "AI making their careers obsolete"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Worry about AI-generated designs affecting uniqueness",
+      "valence": "negative",
+      "grounding_span": "I am most worried about that, though, because one of the things that makes my business stand out"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Openness to AI as creative catalyst",
+      "valence": "mixed",
+      "grounding_span": "I do plan to try generating more creative product ideas by talking to creative focused AI tools"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Task-specific compartmentalization",
+      "grounding_span": "I tend to decide what I will only sell in person and what I am willing to put online based on how challenging the 3d design is"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Ethical and community-conscious reasoning about AI impact",
+      "grounding_span": "I think everyone heavily involved with the creation and evolution of AI should really think about the impact AI is having on replacing creatives"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n6",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

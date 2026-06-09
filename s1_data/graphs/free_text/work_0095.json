@@ -1,0 +1,238 @@
+{
+  "transcript_id": "work_0095",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as personal query tool",
+      "label_negative": "Traditional search engine use",
+      "bipolarity_complete": true,
+      "grounding_span": "I use it for personal queries which I would have normally tasked a search engine with"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as content creation and editing assistant",
+      "label_negative": "Manual content creation without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI to create email bodies which I then edit and also to mass edit documents"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for document mass editing",
+      "label_negative": "Manual document editing",
+      "bipolarity_complete": true,
+      "grounding_span": "I asked AI to replace 'they' with the names of each student from a list and to correct the grammar"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI for translation of legal documents",
+      "label_negative": "Manual translation without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I have also used AI for translations of legal documents"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI use with personal editing for authenticity",
+      "label_negative": "Unedited AI-generated content",
+      "bipolarity_complete": true,
+      "grounding_span": "I make sure to do my own edits as well so as to add my personal touch to it"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI use for confidential information",
+      "label_negative": "Avoiding AI for confidential information due to security concerns",
+      "bipolarity_complete": true,
+      "grounding_span": "I also normally do not use AI when it comes to confidential information as I am not yet sure how secure it is"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI as collaborative problem-solving partner",
+      "label_negative": "AI as independent task delegator",
+      "bipolarity_complete": true,
+      "grounding_span": "I often use AI to solve difficult contest-level math problems... I correct it and then prompt the model to redo that section"
+    },
+    {
+      "id": "n8",
+      "type": "Construct",
+      "label": "AI as learning tool and teacher",
+      "label_negative": "AI as mere task automation tool",
+      "bipolarity_complete": true,
+      "grounding_span": "AI can be a very good teacher rather than just something that does things for you"
+    },
+    {
+      "id": "n9",
+      "type": "Construct",
+      "label": "AI for complex tasks and LaTeX creation",
+      "label_negative": "Sticking to simple tasks without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I want to use it for more complex tasks... I am hoping to be able to create LaTeX documents using AI"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "saving myself a lot of time"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Personal authenticity and professional style",
+      "grounding_span": "add my personal touch to it"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Security and confidentiality",
+      "grounding_span": "I am not yet sure how secure it is"
+    },
+    {
+      "id": "n13",
+      "type": "Value",
+      "label": "Learning and skill development",
+      "grounding_span": "I can then get inspiration to create my own problems"
+    },
+    {
+      "id": "n14",
+      "type": "Value",
+      "label": "Accuracy and correctness",
+      "grounding_span": "If I spot any mistakes in its reasoning, I correct it"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Satisfaction with AI for routine tasks after overcoming frustration",
+      "valence": "positive",
+      "grounding_span": "once I switched models and come up with a rewording of the prompt, I was able to make the correct edits to the document and thus saving myself a lot of time"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Frustration with AI's inability to follow precise editing instructions",
+      "valence": "negative",
+      "grounding_span": "The first time using AI to create the report card comments was frustrating because it was hard to get the model to make mass edits"
+    },
+    {
+      "id": "n17",
+      "type": "Stance",
+      "label": "Cautiousness about AI for confidential information",
+      "valence": "negative",
+      "grounding_span": "I also normally do not use AI when it comes to confidential information as I am not yet sure how secure it is"
+    },
+    {
+      "id": "n18",
+      "type": "Stance",
+      "label": "Optimism about using AI for more complex tasks",
+      "valence": "positive",
+      "grounding_span": "I want to use it for more complex tasks"
+    },
+    {
+      "id": "n19",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement and reverse engineering",
+      "grounding_span": "I begin with the prompt stating the problem and then, using the given answer, I prompt the model again to reverse engineer its solution"
+    },
+    {
+      "id": "n20",
+      "type": "CognitiveStyleMarker",
+      "label": "Learning-oriented review and adaptation",
+      "grounding_span": "I always carefully review what AI creates for me; so that I can fix it if needed, or to learn from it"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n14",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n13",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n15",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n17",
+      "target": "n6",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n18",
+      "target": "n9",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n7",
+      "target": "n19",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n8",
+      "target": "n20",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n6",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

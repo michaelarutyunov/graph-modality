@@ -1,0 +1,202 @@
+{
+  "transcript_id": "work_0370",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as time-saving tool",
+      "label_negative": "AI as unnecessary or untrustworthy for preparation",
+      "bipolarity_complete": true,
+      "grounding_span": "I generally turn to AI for help with tasks that I do not have time to do"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI ability to produce age-appropriate content",
+      "label_negative": "AI producing content above student level",
+      "bipolarity_complete": true,
+      "grounding_span": "AI often creates content that is obviously written above the level that a student of a certain age would write"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as formatting and synthesizing tool",
+      "label_negative": "AI inability to correctly format visual elements",
+      "bipolarity_complete": true,
+      "grounding_span": "I did not ask AI for help because I didn't think the practice test it created would be correctly formatted"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Human diagnostic skill vs AI",
+      "label_negative": "AI replacing human diagnostic interaction",
+      "bipolarity_complete": true,
+      "grounding_span": "I am very experienced with interacting with a student to find out where he or she is having difficulty"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as personal relationship maintainer",
+      "label_negative": "AI replacing human relationship",
+      "bipolarity_complete": true,
+      "grounding_span": "I build personal relationships with my students and their families and they tend to stay with me"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "tasks that I do not have time to do"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Student comprehension and age-appropriate learning",
+      "grounding_span": "AI gives an explanation that is on a level that my student can easily understand"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Personal authenticity and unique voice",
+      "grounding_span": "the writing that the student is producing is age-appropriate and uses the student's own words"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Authentic human connection and trust",
+      "grounding_span": "both the parents and the students appreciate the human touch and having a real person to talk to and learn from"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "it is particularly satisfying when AI gives an explanation that is on a level that my student can easily understand"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI formatting",
+      "valence": "negative",
+      "grounding_span": "I did not ask AI for help because I didn't think the practice test it created would be correctly formatted"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Preference for human editing of student writing",
+      "valence": "negative",
+      "grounding_span": "If a student needs help with editing a paper, I prefer to do that myself"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Confidence in human irreplaceability in teaching",
+      "valence": "positive",
+      "grounding_span": "I don't really concern myself with being replaced by AI"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Frustration with AI formatting",
+      "valence": "positive",
+      "grounding_span": "When AI becomes more capable of creating math tests that include all of the geometric figures and symbols... I will use it to create more of the practice tests"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic task delegation — uses AI only for specific, bounded tasks",
+      "grounding_span": "I tend to delegate complete tasks for it to handle independently"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based selective use — uses AI only for certain subjects/tasks",
+      "grounding_span": "I generally turn to AI for help with tasks that I do not have time to do, or ask AI specific questions"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

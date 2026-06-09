@@ -1,0 +1,242 @@
+{
+  "transcript_id": "work_0881",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as knowledge base for understanding topics",
+      "label_negative": "AI as unreliable or confusing source",
+      "bipolarity_complete": true,
+      "grounding_span": "I mainly use AI as a knowledge base to better understand topics"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as coding problem-solving assistant",
+      "label_negative": "AI as source of irrelevant or misleading code suggestions",
+      "bipolarity_complete": true,
+      "grounding_span": "If I run into problems with code or need to quickly learn how to use an external library I might use an AI model"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Confidentiality-preserving AI interaction",
+      "label_negative": "Unsafe AI interaction risking data exposure",
+      "bipolarity_complete": true,
+      "grounding_span": "This is to keep what I am working on confidential"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as iterative learning partner",
+      "label_negative": "AI as one-shot answer provider",
+      "bipolarity_complete": true,
+      "grounding_span": "Sometimes that back and forth is a better approach because it gives me a deeper understanding"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Self-handling of data-intensive tasks",
+      "label_negative": "Delegating data-intensive tasks to AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I mostly handle data intensive tasks myself because they can contain sensitive data"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "Self-building automation with future expansion",
+      "label_negative": "Using AI to build automation without foresight",
+      "bipolarity_complete": true,
+      "grounding_span": "I prefer to build out myself because I have a good idea of where a project might be developing towards"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI as collaborative problem-solving partner",
+      "label_negative": "AI as independent implementer without validation",
+      "bipolarity_complete": true,
+      "grounding_span": "I will collaborate with the model to solve a problem and implement the fix to validate that it works"
+    },
+    {
+      "id": "n8",
+      "type": "Construct",
+      "label": "AI accuracy for less common languages",
+      "label_negative": "AI mixing up concepts from different languages",
+      "bipolarity_complete": true,
+      "grounding_span": "When using less common languages, sometimes the models would mix up concepts with more commonly used languages"
+    },
+    {
+      "id": "n9",
+      "type": "Construct",
+      "label": "AI as future physical assistant in embedded work",
+      "label_negative": "AI limited to digital interactions",
+      "bipolarity_complete": true,
+      "grounding_span": "I hope to have AI integrated in a more physical form, i.e, robotics"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Deep understanding and learning",
+      "grounding_span": "gives me a deeper understanding of the error and might give me additional ideas"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Data security and responsibility",
+      "grounding_span": "Failing to protect this data can result in server ramifications, not only for me but the company and customers"
+    },
+    {
+      "id": "n12",
+      "type": "Value",
+      "label": "Efficient and future-proof system design",
+      "grounding_span": "I can build the ecosystem that is needed now with additional features which can be used later"
+    },
+    {
+      "id": "n13",
+      "type": "Value",
+      "label": "Skill maintenance and personal growth",
+      "grounding_span": "To maintain my skill, I continue to practice these skills on my own"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Satisfaction with AI as knowledge resource",
+      "valence": "positive",
+      "grounding_span": "I mainly use AI as a knowledge base to better understand topics"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Frustration with AI inaccuracy for niche languages",
+      "valence": "negative",
+      "grounding_span": "A time that I was frustrated was during the early stages of LLM"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Preference for self-handling sensitive tasks",
+      "valence": "negative",
+      "grounding_span": "I mostly handle data intensive tasks myself because they can contain sensitive data"
+    },
+    {
+      "id": "n17",
+      "type": "Stance",
+      "label": "Optimism about future physical AI integration",
+      "valence": "positive",
+      "grounding_span": "I hope to have AI integrated in a more physical form"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Systematic modular decomposition for future reuse",
+      "grounding_span": "knowing how to break down different components of your system for reuse"
+    },
+    {
+      "id": "n19",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative validation and clarification seeking",
+      "grounding_span": "I will go back to ask clarification questions or ask about related implementations"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n12",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n14",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n8",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n17",
+      "target": "n9",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n19",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n7",
+      "target": "n19",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n6",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

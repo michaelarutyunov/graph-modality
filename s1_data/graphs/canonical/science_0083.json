@@ -1,0 +1,167 @@
+{
+  "transcript_id": "science_0083",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI inaccuracy and unreliability",
+      "bipolarity_complete": true,
+      "grounding_span": "bad experience with AI in terms of accuracy"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as efficiency tool",
+      "label_negative": "AI as core analytical tool",
+      "bipolarity_complete": true,
+      "grounding_span": "I solely use AI to reword sentences, as it saves a little bit time"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as non-plagiarizing advisor for presentation",
+      "label_negative": "AI as untrustworthy source for content",
+      "bipolarity_complete": true,
+      "grounding_span": "someone who I know is not going to plagiarise my work, to give me advice"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Personal enjoyment of analytical work",
+      "label_negative": "Delegation of analytical work to AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I find those parts quite fun. Nothing is more satisfying than calculating your own % yield"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as formatting and synthesizing tool",
+      "label_negative": "Manual data compilation",
+      "bipolarity_complete": true,
+      "grounding_span": "I want it to be able to compile the data exactly I want"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Research integrity and accuracy",
+      "grounding_span": "bad experience with AI in terms of accuracy, so much so that I had contact my professor"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "it saves a little bit time"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Personal agency and satisfaction",
+      "grounding_span": "Nothing is more satisfying than calculating your own % yield"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Distrust due to past accuracy failure",
+      "valence": "negative",
+      "grounding_span": "bad experience with AI in terms of accuracy"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Pragmatic acceptance for rewording and advice",
+      "valence": "positive",
+      "grounding_span": "I solely use AI to reword sentences, as it saves a little bit time"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Desire for AI data compilation tool",
+      "valence": "positive",
+      "grounding_span": "I can't put into words how much I want it to be able to compile the data exactly I want"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Experience-driven cautious calibration",
+      "grounding_span": "it was the past experience that I had, it caused me over 3 hours of researching a niche topic"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement with limited back-and-forth",
+      "grounding_span": "I can just tell it my ideas, and how I want a sentence to come across, and it fires back some ideas, and I can go back forth to dial it just how I want it"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

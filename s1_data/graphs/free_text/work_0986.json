@@ -1,0 +1,204 @@
+{
+  "transcript_id": "work_0986",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as marketing copy assistant",
+      "label_negative": "AI as source of generic, inauthentic copy",
+      "bipolarity_complete": true,
+      "grounding_span": "I give AI the basics of what the course is about and ask it to help me come up with marketing centered copy"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as workflow automation enabler",
+      "label_negative": "AI as source of technical integration frustration",
+      "bipolarity_complete": true,
+      "grounding_span": "I have also started using n8n to work on putting tasks into place that use AI and automation to make my workflow smoother"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as time-saving tool for routine tasks",
+      "label_negative": "AI as threat to human skill maintenance",
+      "bipolarity_complete": true,
+      "grounding_span": "It frees my time up for other things"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as learning and development catalyst",
+      "label_negative": "AI as distraction from core work",
+      "bipolarity_complete": true,
+      "grounding_span": "it gives me time to take courses on how to better understand"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as operational tool needing human direction",
+      "label_negative": "AI as fully autonomous replacement",
+      "bipolarity_complete": true,
+      "grounding_span": "I see it taking over operational procedures, but still needing some direction and human interaction"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Authenticity and human touch in communication",
+      "grounding_span": "I have to make sure those phrases aren't used because it makes it very obvious that AI has done the copy"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficiency and productivity",
+      "grounding_span": "It frees my time up for other things"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Continuous learning and skill development",
+      "grounding_span": "it gives me time to take courses on how to better understand"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Human agency and strategic oversight",
+      "grounding_span": "still needing some direction and human interaction to keep it on track"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for marketing copy",
+      "valence": "positive",
+      "grounding_span": "I give AI the basics of what the course is about and ask it to help me come up with marketing centered copy"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI's generic language patterns",
+      "valence": "negative",
+      "grounding_span": "I find AI tends to use the same phrases a lot - Unleash, Unlock, Master, etc."
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Frustration with technical integration of AI and automation",
+      "valence": "negative",
+      "grounding_span": "when trying to pair it with a call to Gemini or something, there can be some frustrations"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Excitement when automation works",
+      "valence": "positive",
+      "grounding_span": "when the tasks completes - it's amazing"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Worry about AI taking over certain areas",
+      "valence": "negative",
+      "grounding_span": "I do worry about AI taking over certain areas"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Optimism about AI freeing human mind for new focuses",
+      "valence": "positive",
+      "grounding_span": "that also can allow the human mind to branch out and find other things to focus on"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement — back-and-forth editing to achieve desired output",
+      "grounding_span": "I definitely remind the messaging"
+    },
+    {
+      "id": "n17",
+      "type": "CognitiveStyleMarker",
+      "label": "Pragmatic experimentation — learning by doing and troubleshooting",
+      "grounding_span": "I am still learning what AI can do"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n17",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

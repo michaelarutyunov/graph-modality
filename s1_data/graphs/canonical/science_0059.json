@@ -1,0 +1,150 @@
+{
+  "transcript_id": "science_0059",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI for summarization and research",
+      "label_negative": "Manual reading and note-taking",
+      "bipolarity_complete": true,
+      "grounding_span": "I used AI to highlight the key points and also summarize them"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as practical support tool",
+      "label_negative": "AI taking over analytical reasoning",
+      "bipolarity_complete": true,
+      "grounding_span": "I used AI as more of a support tool while I worked on in depth type of work"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI trustworthiness and verification",
+      "label_negative": "Blind trust in AI outputs",
+      "bipolarity_complete": true,
+      "grounding_span": "I ended up double-checking for the AI to note all the points adequately"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as research and synthesis tool",
+      "label_negative": "AI limited to single-document summarization",
+      "bipolarity_complete": true,
+      "grounding_span": "AI to be at its disposal for gathering more insights from various sources"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "it helped with time compared to actually having to read everything manually"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Analytical control and personal insight",
+      "grounding_span": "I liked to depend on my own reasoning for some stuff"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Accuracy and reliability",
+      "grounding_span": "ensure that something was not missed or mischaracterized"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Seamless workflow integration",
+      "grounding_span": "make the actual research flow more smoothly"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI summaries",
+      "valence": "positive",
+      "grounding_span": "It made narrowing the focus on the more relevant data very easy"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Cautious verification stance toward AI outputs",
+      "valence": "ambivalent",
+      "grounding_span": "trusting the AI-generated outputs without relinquishing control of the accuracy"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with AI for complex synthesis",
+      "valence": "positive",
+      "grounding_span": "The lifting of such a synthesis itself could save much time"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Verification-oriented — cross-checks AI outputs against other sources",
+      "grounding_span": "I would also contrast the AI themes to my notes to ascertain how far off they are"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Task-specific delegation — uses AI for summarization but not for personal satisfaction tasks",
+      "grounding_span": "I used AI as more of a support tool while I worked on in depth type of work"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

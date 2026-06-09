@@ -8,7 +8,7 @@
 
 | version | file | date | change summary | rationale |
 |---|---|---|---|---|
-| v1 | `extraction/prompts/v1.txt` | 2026-06-07 | Initial extraction prompt | Based on ENGINEERING.md §5.2. Four entity types (Construct, Value, Stance, CognitiveStyleMarker), four relation types (SERVES, EXPRESSED_VIA, MODULATED_BY, CONFLICTS_WITH). Human-turn-only node extraction. Maximum 2 CSM per transcript. |
+| v1 | `s2_extraction/prompts/v1.txt` | 2026-06-07 | Initial extraction prompt | Based on ENGINEERING.md §5.2. Four entity types (Construct, Value, Stance, CognitiveStyleMarker), four relation types (SERVES, EXPRESSED_VIA, MODULATED_BY, CONFLICTS_WITH). Human-turn-only node extraction. Maximum 2 CSM per transcript. |
 
 ---
 
@@ -62,7 +62,7 @@ Reviewed 6 graphs across 3 splits (2 workforce, 2 creatives, 1 scientist, plus w
 **Agnes:** skipped — API endpoint unknown.  
 **Tiebreaker used:** N/A (one-sided result)
 
-**Sample IDs:** `extraction/model_comparison/sample_ids.txt` (4 workforce, 3 creatives, 3 scientists)
+**Sample IDs:** `s2_extraction/model_comparison/sample_ids.txt` (4 workforce, 3 creatives, 3 scientists)
 
 **Claude metrics (10/10 after retry of science_0060):**
 - Mean nodes: 15.1 (range 11–21)
@@ -88,7 +88,7 @@ Reviewed 6 graphs across 3 splits (2 workforce, 2 creatives, 1 scientist, plus w
 | mean nodes per graph | 14.9 |
 | mean edges per graph | 13.6 |
 | graphs with violations | 4 (0.3%) |
-| failure log | `extraction/failed.txt` is empty (0 entries) |
+| failure log | `s2_extraction/failed.txt` is empty (0 entries) |
 | backend | OpenAI-compatible, `response_format={"type": "json_object"}`, `max_tokens=8192` |
 |---|---|
 | transcripts processed | — |

@@ -1,0 +1,169 @@
+{
+  "transcript_id": "work_0623",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as thinking partner for complex decisions",
+      "label_negative": "AI as unreliable for final decisions",
+      "bipolarity_complete": true,
+      "grounding_span": "I just use it as a helpful tool to think things through"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI for brainstorming and problem solving",
+      "label_negative": "AI for rote or mechanical tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I mostly use it for brainstorming, or problem solving"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI accuracy in Excel and data tasks",
+      "label_negative": "AI inaccuracy in Excel and data tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "it just fell flat. None of the graphs really made sense"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Manual control over accuracy-critical tasks",
+      "label_negative": "AI delegation of accuracy-critical tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "I prefer to manually enter invoices. I pride myself on doing accurate work"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Familiarity with AI strengths and weaknesses",
+      "label_negative": "Unfamiliarity with AI capabilities",
+      "bipolarity_complete": true,
+      "grounding_span": "I am just more familiar with the strengths and weaknesses of the models"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Professional accuracy and reliability",
+      "grounding_span": "I pride myself on doing accurate work"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Efficient problem solving and understanding",
+      "grounding_span": "It helps me think through things"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Personal competence and skill maintenance",
+      "grounding_span": "the skills will always be there to check the work"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI as thinking partner",
+      "valence": "positive",
+      "grounding_span": "Its helping me see different angles and getting me to think in a way I normally wouldnt"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI in complex Excel tasks",
+      "valence": "negative",
+      "grounding_span": "It was frustrating as my excel skills are not a strong suit for graphs and I thought the AI would be a helpful tool, but it wasnt"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Preference for manual over AI in accuracy tasks",
+      "valence": "negative",
+      "grounding_span": "I prefer to manually enter invoices"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Confidence in AI use due to familiarity",
+      "valence": "positive",
+      "grounding_span": "I think I use it more than others at my workplace"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Back-and-forth iterative reasoning",
+      "grounding_span": "It is mostly a back and forth discussion"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based trust calibration",
+      "grounding_span": "I just kinda know when it will be helpful and when it wont"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

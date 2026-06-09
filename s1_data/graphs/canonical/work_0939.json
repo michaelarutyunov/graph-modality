@@ -1,0 +1,190 @@
+{
+  "transcript_id": "work_0939",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as efficiency tool",
+      "label_negative": "Manual scheduling without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "AI review my schedule and provide me with an efficient way to schedule the free time I do have"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as tone checker for professional communication",
+      "label_negative": "Raw emotional expression without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "use AI to review and make suggestions to make it better"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for repetitive simple tasks",
+      "label_negative": "AI for complex, nuanced tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "relegate AI to simple, calculated, or mathematical tasking"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as mediator for confrontational communication",
+      "label_negative": "Direct confrontational expression without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "incredibly helpful to use AI to reword what you would like to say into something more professional and calm"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI for data analysis",
+      "label_negative": "Manual data processing without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is going to take over much of the data input and analysis"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "efficient way to schedule the free time I do have"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional competence",
+      "grounding_span": "more professional and calm"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Authenticity and personal integrity",
+      "grounding_span": "express what you really want to say"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Job security and skill relevance",
+      "grounding_span": "I do not believe it would be to the point that it threatens my job itself"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for scheduling",
+      "valence": "positive",
+      "grounding_span": "AI review my schedule and provide me with an efficient way"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Satisfaction with AI for tone-check",
+      "valence": "positive",
+      "grounding_span": "incredibly helpful to use AI to reword"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Preference for AI on simple tasks only",
+      "valence": "negative",
+      "grounding_span": "shy away from using AI on more complex issues"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Optimism about AI's future role in data analysis",
+      "valence": "positive",
+      "grounding_span": "AI is going to take over much of the data input and analysis"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based boundary setting — clear separation of AI-appropriate vs. human-only tasks",
+      "grounding_span": "relegate AI to simple, calculated, or mathematical tasking"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Experience-driven calibration of trust",
+      "grounding_span": "I've used this AI enough I can tell when it recommends things out of the ordinary"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n3",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

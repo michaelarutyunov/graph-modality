@@ -1,0 +1,240 @@
+{
+  "transcript_id": "work_0708",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI for quick, low-stakes content",
+      "label_negative": "AI for high-stakes, original content",
+      "bipolarity_complete": true,
+      "grounding_span": "I use AI to make quick Instagram captions"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as scalable content production tool",
+      "label_negative": "Handcrafted, time-intensive content",
+      "bipolarity_complete": true,
+      "grounding_span": "I can A/B test the content via search console to see how well it ranks"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability for local details",
+      "label_negative": "AI unreliability for local details",
+      "bipolarity_complete": true,
+      "grounding_span": "I don't trust it fully there yet"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as troubleshooting assistant",
+      "label_negative": "Traditional search-based troubleshooting",
+      "bipolarity_complete": true,
+      "grounding_span": "it's been a lot more efficient at helping me solve WordPress problems"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as coding collaborator",
+      "label_negative": "Coding from scratch without AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I'll use it for CSS"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI use sanctioned by workplace",
+      "label_negative": "AI use prohibited by workplace",
+      "bipolarity_complete": true,
+      "grounding_span": "they're against AI content"
+    },
+    {
+      "id": "n7",
+      "type": "Construct",
+      "label": "AI as skill expander",
+      "label_negative": "AI as skill eroder",
+      "bipolarity_complete": true,
+      "grounding_span": "AI has helped me expand into SEO rapidly"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Efficiency and speed",
+      "grounding_span": "I can't dedicate as much time to handwritten content"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Content uniqueness and quality",
+      "grounding_span": "I still want these pages to be unique"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Professional competence and skill development",
+      "grounding_span": "I'm getting a lot better at reading and editing code"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Client satisfaction and reliability",
+      "grounding_span": "I don't know that I'd be able to effectively help my clients quickly without it"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI for captions",
+      "valence": "positive",
+      "grounding_span": "I definitely feel the most satisfied with Instagram captions"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Distrust of AI for local details",
+      "valence": "negative",
+      "grounding_span": "I don't trust it fully there yet"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Positive view of AI for troubleshooting",
+      "valence": "positive",
+      "grounding_span": "it's been a lot more efficient at helping me solve WordPress problems"
+    },
+    {
+      "id": "n15",
+      "type": "Stance",
+      "label": "Ambivalence about AI in coding",
+      "valence": "ambivalent",
+      "grounding_span": "Coding is hit or miss"
+    },
+    {
+      "id": "n16",
+      "type": "Stance",
+      "label": "Optimism about AI expanding skills",
+      "valence": "positive",
+      "grounding_span": "AI has helped me expand into SEO rapidly"
+    },
+    {
+      "id": "n17",
+      "type": "Stance",
+      "label": "Concern about skill value erosion",
+      "valence": "negative",
+      "grounding_span": "the real worry there is the value of the skill, like will it be gone soon?"
+    },
+    {
+      "id": "n18",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement and testing",
+      "grounding_span": "I'll start a conversation and go back and forth until we have a solid page done"
+    },
+    {
+      "id": "n19",
+      "type": "CognitiveStyleMarker",
+      "label": "Strategic experimentation and A/B testing",
+      "grounding_span": "I can A/B test the content via search console to see how well it ranks"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n7",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n15",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n16",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n17",
+      "target": "n7",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n19",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n18",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

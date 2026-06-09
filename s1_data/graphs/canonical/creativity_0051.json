@@ -1,0 +1,127 @@
+{
+  "transcript_id": "creativity_0051",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as brainstorming and idea generator",
+      "label_negative": "AI as replacement for human creativity",
+      "bipolarity_complete": true,
+      "grounding_span": "bounce off what direction I'd like to take it"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as writing assistant",
+      "label_negative": "AI as crutch that undermines personal voice",
+      "bipolarity_complete": true,
+      "grounding_span": "I got through a 20 page script, start to finish in a little over 12 hours"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as knowledge expander for authentic world-building",
+      "label_negative": "AI as source of inauthentic or generic descriptions",
+      "bipolarity_complete": true,
+      "grounding_span": "AI helped me describe these places, the language, the culture more vividly and authentically"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Authenticity of AI-generated content",
+      "label_negative": "Inability to distinguish authentic from AI-generated work",
+      "bipolarity_complete": true,
+      "grounding_span": "I believe in human discernment"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Creative autonomy",
+      "grounding_span": "it has to be my voice so I feel in control"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "I got through a 20 page script, start to finish in a little over 12 hours"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Authenticity and personal integrity",
+      "grounding_span": "people know what's real"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Satisfaction with AI as collaborative partner",
+      "valence": "positive",
+      "grounding_span": "It was like having another writer in the room to weigh pros and cons with"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Confidence in human judgment over AI",
+      "valence": "positive",
+      "grounding_span": "I don't have the fear that many writers do about AI taking over"
+    },
+    {
+      "id": "n10",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative iterative refinement — works back and forth with AI",
+      "grounding_span": "I'll take that framework and re-work it to fit my voice and style"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Collaborative dialogue — engages AI in back-and-forth discussion",
+      "grounding_span": "We discussed why or why not"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n10",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    }
+  ],
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

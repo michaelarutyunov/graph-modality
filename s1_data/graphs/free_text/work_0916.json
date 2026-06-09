@@ -1,0 +1,154 @@
+{
+  "transcript_id": "work_0916",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI for administrative and repetitive tasks",
+      "label_negative": "AI for core creative and fulfilling tasks",
+      "bipolarity_complete": true,
+      "grounding_span": "It's the more administrative and repetitive things that I want to push to AI"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as supportive tool for efficiency and consistency",
+      "label_negative": "AI as replacement or threat to human expertise",
+      "bipolarity_complete": true,
+      "grounding_span": "AI is definitely a supportive tool for us, not something that is taking over"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability in low-impact tasks",
+      "label_negative": "AI risk in high-impact client care",
+      "bipolarity_complete": true,
+      "grounding_span": "there is nothing that AI can mess up that will negatively impact the care our clients get"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as client support after hours",
+      "label_negative": "AI replacing human touch in client care",
+      "bipolarity_complete": true,
+      "grounding_span": "it was after business hours and they felt uncomfortable calling their nutritionist directly"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Professional fulfillment and autonomy",
+      "grounding_span": "I really love the goal-setting and nutritional planning sides of my job, so I would not want to delegate them"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and consistency in client communication",
+      "grounding_span": "I think it provides some consistency and definitely efficiency"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Client well-being and support",
+      "grounding_span": "it settled her down and gave her easy to follow instructions"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Satisfaction with current AI use",
+      "valence": "positive",
+      "grounding_span": "I am very satisfied with where we are at right now"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Pride in AI helping a client in distress",
+      "valence": "positive",
+      "grounding_span": "she was near a breakdown until she talked to the AI, but it settled her down"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Confidence in AI for low-impact tasks",
+      "valence": "positive",
+      "grounding_span": "there is nothing that AI can mess up that will negatively impact the care our clients get"
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Task boundary setting — clear delineation between AI-appropriate and human-essential tasks",
+      "grounding_span": "I would not want to delegate them. It's the more administrative and repetitive things that I want to push to AI"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement for high-stakes tasks",
+      "grounding_span": "There is definitely back and forth on performance reviews because they are so important"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n11",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

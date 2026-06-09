@@ -1,0 +1,161 @@
+{
+  "transcript_id": "science_0000",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as a tool for generating singular propensity scores",
+      "label_negative": "Traditional count-based risk factor ranking",
+      "bipolarity_complete": true,
+      "grounding_span": "Machine learning was used to generate a singular propensity score"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI adoption driven by external hype and investor pressure",
+      "label_negative": "AI adoption driven by scientific merit",
+      "bipolarity_complete": true,
+      "grounding_span": "It was likely driven by AI hype to satisfy the company investors"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI for model transparency and interpretability",
+      "label_negative": "AI as a black box",
+      "bipolarity_complete": true,
+      "grounding_span": "A tool for model transparency that can be easily understood by the medical team"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI use that preserves medical team's sense of contribution",
+      "label_negative": "AI use that undermines medical team's expertise",
+      "bipolarity_complete": true,
+      "grounding_span": "Keeping the medical team engaged in the project at a level where they felt their medical expertise was directly contributing"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Scientific validity and accuracy",
+      "grounding_span": "back-tested on historical member data"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Stakeholder satisfaction and trust",
+      "grounding_span": "satisfy the company investors"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Collaborative human expertise",
+      "grounding_span": "medical expertise was directly contributing to the project"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Pragmatic acceptance of AI for segmentation",
+      "valence": "positive",
+      "grounding_span": "It was helpful to have a singular metric to segment the population"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Skepticism toward AI adoption driven by hype",
+      "valence": "negative",
+      "grounding_span": "It was likely driven by AI hype to satisfy the company investors"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Desire for transparent AI tools",
+      "valence": "positive",
+      "grounding_span": "A tool for model transparency that can be easily understood by the medical team"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Caution about AI undermining team engagement",
+      "valence": "negative",
+      "grounding_span": "Keeping the medical team engaged in the project at a level where they felt their medical expertise was directly contributing"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Back-testing validation approach",
+      "grounding_span": "We back-tested on historical member data"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Stakeholder-aware decision making",
+      "grounding_span": "satisfy the company investors"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH"
+    },
+    {
+      "source": "n3",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "scientists",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,175 @@
+{
+  "transcript_id": "work_0805",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as writing assistant for drafting",
+      "label_negative": "AI as fully autonomous task executor",
+      "bipolarity_complete": true,
+      "grounding_span": "it is always collaborative when I use AI. I never entirely delegate tasks to it."
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "Human finalization and personalization of AI outputs",
+      "label_negative": "Unedited AI output",
+      "bipolarity_complete": true,
+      "grounding_span": "edit it to make it sound more like my writing style"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Personal enjoyment of manual implementation",
+      "label_negative": "Delegation of organization to AI",
+      "bipolarity_complete": true,
+      "grounding_span": "I enjoy the process of organizing things myself."
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI impact on skill maintenance",
+      "label_negative": "Over-reliance on AI leading to skill loss",
+      "bipolarity_complete": true,
+      "grounding_span": "I think it is important to maintain those skills, otherwise AI will take over."
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Realistic expectations of AI capabilities",
+      "label_negative": "Expectation of AI perfection",
+      "bipolarity_complete": true,
+      "grounding_span": "I know it is an imperfect system and do not have the expectation of perfection from it."
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Efficiency and time savings",
+      "grounding_span": "saves me a couple minutes here and there"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Creative authenticity and human expression",
+      "grounding_span": "make it sound more like my writing style"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Autonomy and personal control",
+      "grounding_span": "I enjoy the process of organizing things myself."
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Personal autonomy and skill preservation",
+      "grounding_span": "maintain those skills, otherwise AI will take over"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI for time-saving",
+      "valence": "positive",
+      "grounding_span": "I do feel satisfied when it produces high quality email responses for me though because that saves me a couple minutes here and there."
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Frustration with management's unrealistic expectations",
+      "valence": "positive",
+      "grounding_span": "I don't think AI has ever frustrated me, because I know it is an imperfect system"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Concern about AI replacing skills",
+      "valence": "negative",
+      "grounding_span": "people are becoming very reliant on AI which is why that path is being paved (the path for AI to take over)"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Openness to future collaborative expansion",
+      "valence": "positive",
+      "grounding_span": "as it improves, I will be able to collaborate in more ways than just for email communications."
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement with limited back-and-forth",
+      "grounding_span": "I read it over and ask it to adjust the tone, length, or details as necessary."
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Preference for hands-on, methodical tasks",
+      "grounding_span": "I simply enjoy the simple repetitive nature of it."
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

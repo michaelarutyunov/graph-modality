@@ -1,0 +1,169 @@
+{
+  "transcript_id": "work_0967",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as task management and overwhelm reducer",
+      "label_negative": "AI as source of rigid or unhelpful scheduling",
+      "bipolarity_complete": true,
+      "grounding_span": "reduce overwhelm, by helping me manage my day"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as collaborative iterative partner",
+      "label_negative": "AI as one-shot delegation tool",
+      "bipolarity_complete": true,
+      "grounding_span": "collaborate until I reach a point that I am happy with"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability in coding tasks",
+      "label_negative": "AI unreliability and errors in code",
+      "bipolarity_complete": true,
+      "grounding_span": "AI will claim that the code will do something, and I'll either clearly see it's not meeting my requirements or I'll try it and there will be some error"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as starting point for writing with tone control",
+      "label_negative": "AI as insufficient for nuanced tone",
+      "bipolarity_complete": true,
+      "grounding_span": "writing tasks tend to be where I might use AI as a starting point, and then handle the rest myself"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Human-in-the-loop oversight for quality and safety",
+      "label_negative": "Full AI autonomy without human check",
+      "bipolarity_complete": true,
+      "grounding_span": "there should be a human-in-the-loop to make sure things are working as expected"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and efficiency",
+      "grounding_span": "increase my development pace"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Quality and reliability",
+      "grounding_span": "make sure things are working as expected"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Personal expression and relationship nuance",
+      "grounding_span": "depending on the person I might want to tweak the tone because we have a particular relationship"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Satisfaction with AI when requirements are precise",
+      "valence": "positive",
+      "grounding_span": "satisfying moments are when I get the requirements just right, and I'm able to plug and play code"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI coding errors",
+      "valence": "negative",
+      "grounding_span": "frustrating because the AI will claim that the code will do something, and I'll either clearly see it's not meeting my requirements or I'll try it and there will be some error"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Preference for human control in writing tone",
+      "valence": "negative",
+      "grounding_span": "if I tried using AI as a starting point and didn't feel like it fit my goal"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Concern about skill obsolescence and need for human oversight",
+      "valence": "mixed",
+      "grounding_span": "I do have concerns in general. I've considered certifications (security related) and even maybe doing a degree in a field where AI will not be as dominant"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative collaborative refinement — back-and-forth adjustment",
+      "grounding_span": "collaborate until I reach a point that I am happy with"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Contextual adaptation — tailoring based on audience and relationship",
+      "grounding_span": "depending on the person I might want to tweak the tone because we have a particular relationship"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n4",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,177 @@
+{
+  "transcript_id": "work_0582",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as research assistant for obscure queries",
+      "label_negative": "Traditional search methods alone",
+      "bipolarity_complete": true,
+      "grounding_span": "if a query comes in that's very obscure ... I'll go straight to AI for help"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as efficiency booster through confirmation",
+      "label_negative": "Time-consuming exhaustive manual checking",
+      "bipolarity_complete": true,
+      "grounding_span": "having AI as a sounding board gets things done quicker"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as collaborative conversational partner",
+      "label_negative": "Working in isolation without feedback",
+      "bipolarity_complete": true,
+      "grounding_span": "it is nice to be able to bounce things off someone as though it's a conversation"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as tool for recovering lost knowledge",
+      "label_negative": "Lost knowledge remaining undiscovered",
+      "bipolarity_complete": true,
+      "grounding_span": "This info had been lost and wouldn't have been recovered without the help of AI"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as liberator from mundane work",
+      "label_negative": "AI as threat to human skills",
+      "bipolarity_complete": true,
+      "grounding_span": "I'm hopeful that AI will give humans more freedom to pursue less mundane lives"
+    },
+    {
+      "id": "n6",
+      "type": "Construct",
+      "label": "AI as enhancer of professional effectiveness",
+      "label_negative": "AI as replacement for librarian role",
+      "bipolarity_complete": true,
+      "grounding_span": "it makes me more effective in my role as a librarian"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Research efficiency and accuracy",
+      "grounding_span": "having AI as a sounding board gets things done quicker"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Intellectual companionship",
+      "grounding_span": "it is nice to be able to bounce things off someone as though it's a conversation"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Knowledge preservation and discovery",
+      "grounding_span": "This info had been lost and wouldn't have been recovered without the help of AI"
+    },
+    {
+      "id": "n10",
+      "type": "Value",
+      "label": "Human freedom and fulfillment",
+      "grounding_span": "AI will give humans more freedom to pursue less mundane lives"
+    },
+    {
+      "id": "n11",
+      "type": "Value",
+      "label": "Professional growth and skill development",
+      "grounding_span": "the time I save can be put into more interesting training"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Satisfaction with AI-assisted discovery",
+      "valence": "positive",
+      "grounding_span": "We finally discovered it was a bust of an influential scientist"
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Optimism about AI's long-term societal impact",
+      "valence": "positive",
+      "grounding_span": "I'm hopeful that AI will give humans more freedom to pursue less mundane lives"
+    },
+    {
+      "id": "n14",
+      "type": "Stance",
+      "label": "Contentment with AI as collaborative tool",
+      "valence": "positive",
+      "grounding_span": "It's more of a collaborative thing for me and my work"
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative back-and-forth reasoning",
+      "grounding_span": "It's almost always a back and forth. I'll ask a few questions, ask for thoughts, ask if I've missed anything"
+    },
+    {
+      "id": "n16",
+      "type": "CognitiveStyleMarker",
+      "label": "Historical analogical thinking",
+      "grounding_span": "It's a perfect parallel to other historic advancements for example the mills of the industrial revolution"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n10",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n6",
+      "target": "n11",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n12",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n14",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n16",
+      "relation": "MODULATED_BY"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

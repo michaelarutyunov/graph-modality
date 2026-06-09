@@ -1,0 +1,173 @@
+{
+  "transcript_id": "work_0786",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as idea generator and organizer",
+      "label_negative": "Unstructured personal task management",
+      "bipolarity_complete": true,
+      "grounding_span": "I'll just type in stuff I need to get done and AI will help organize it in a list or suggest other tasks"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as motivational and anxiety-reducing companion",
+      "label_negative": "Working alone without emotional support",
+      "bipolarity_complete": true,
+      "grounding_span": "It can help me ease anxiety, or just having a discussion with another 'person' about what I need to do"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as judgment-free explainer of fundamental concepts",
+      "label_negative": "Human judgment and fear of asking stupid questions",
+      "bipolarity_complete": true,
+      "grounding_span": "since it's not a human being, I felt more comfortable asking questions that might seem 'stupid'"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI reliability for practical tasks",
+      "label_negative": "AI unreliability requiring double-checking",
+      "bipolarity_complete": true,
+      "grounding_span": "Hopefully I can have more confidence in its answers (especially in regards to tax law) in the future and not have to spend so much time double checking"
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "AI as confidence-building assistant",
+      "label_negative": "Self-doubt without AI consultation",
+      "bipolarity_complete": true,
+      "grounding_span": "I almost always talk to AI about things before doing them, it helps me feel more self-confident"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Productivity and efficient task completion",
+      "grounding_span": "AI will help organize it in a list or suggest other tasks"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Emotional well-being and reduced stress",
+      "grounding_span": "It can help me ease anxiety"
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Understanding and knowledge acquisition",
+      "grounding_span": "I felt more comfortable asking questions that might seem 'stupid'"
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Professional confidence and validation",
+      "grounding_span": "Working with AI has really helped improve my personal confidence with my work"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Satisfaction with AI as a helpful tool",
+      "valence": "positive",
+      "grounding_span": "It was a very satisfying and productive experience overall"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Cautious skepticism toward AI reliability",
+      "valence": "mixed",
+      "grounding_span": "Hopefully I can have more confidence in its answers (especially in regards to tax law) in the future"
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Confidence in AI as a key skill",
+      "valence": "positive",
+      "grounding_span": "I almost always talk to AI about things before doing them, it helps me feel more self-confident"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative refinement through conversation",
+      "grounding_span": "My prompts usually are some kind of follow up from the information the AI gives me in its previous response"
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Proactive skill maintenance through secondary AI job and online discourse",
+      "grounding_span": "I have a second job working directly with AI so that really helps maintain my skills"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n12",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n5",
+      "target": "n14",
+      "relation": "MODULATED_BY"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

@@ -1,0 +1,175 @@
+{
+  "transcript_id": "work_0936",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as grammar and document creation tool",
+      "label_negative": "AI as cultural context provider",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "ai is really good for all the grammatical aspects of my job"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as time-saving delegator",
+      "label_negative": "AI as requiring excessive prompt engineering",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "It saves me time being able to delegate this side of my work"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI as culturally aware assistant",
+      "label_negative": "AI as culturally Americanized and irrelevant",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "ai are very americanised"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as quiz and activity creator",
+      "label_negative": "AI as missing the sweet spot of difficulty and engagement",
+      "bipolarity_complete": true,
+      "valence": null,
+      "grounding_span": "ai can never seem to find the right balance for difficulty"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Teaching efficiency and time savings",
+      "valence": null,
+      "grounding_span": "saves me like 20m-60m or work"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Culturally relevant and engaging education",
+      "valence": null,
+      "grounding_span": "things applicable to the nationality and cultural context of my students"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional autonomy and skill maintenance",
+      "valence": null,
+      "grounding_span": "I am not worried about ai taking over for a while"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Satisfaction with AI for grammar tasks",
+      "valence": "positive",
+      "grounding_span": "grammar tasks are within the ai scope of abilities, and they feel so streamline and easy"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Frustration with AI for cultural tasks",
+      "valence": "negative",
+      "grounding_span": "it is really hard to get ai to understand culture"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Ambivalence toward AI for quizzes",
+      "valence": "ambivalent",
+      "grounding_span": "I have never actually felt satisfied with the options I was given"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Optimism about future AI personalization",
+      "valence": "positive",
+      "grounding_span": "Hopefully as Ai evolves, there would be opportunity to create more indepth and customisable worksheets"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative prompt refinement and remixing",
+      "valence": null,
+      "grounding_span": "I tried to rework the prompt a couple of times"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-specific reliance on human networks for cultural nuance",
+      "valence": null,
+      "grounding_span": "In order to get cultural context I had to actually ask my native friends"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}

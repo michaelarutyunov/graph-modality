@@ -1,0 +1,171 @@
+{
+  "transcript_id": "work_0834",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as efficient content generator for structured materials",
+      "label_negative": "Manual creation of structured materials",
+      "bipolarity_complete": true,
+      "grounding_span": "AI model to generate a chart with the vocabulary to be covered"
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as writing assistant",
+      "label_negative": "AI as sole creator of story content",
+      "bipolarity_complete": true,
+      "grounding_span": "generate ideas for starting points for story time"
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "Human connection in grading student writing",
+      "label_negative": "AI-assisted grading of writing",
+      "bipolarity_complete": true,
+      "grounding_span": "I prefer to keep a close eye on the development of a student's abilities"
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as time-saving tool",
+      "label_negative": "AI as unnecessary when time is ample",
+      "bipolarity_complete": true,
+      "grounding_span": "AI came through in a pinch to help me put together a decent-looking presentation"
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Efficiency and time savings in lesson planning",
+      "grounding_span": "simplifies the process of my explaining the terms to the students"
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Human connection and relationship",
+      "grounding_span": "human connection that is quintessential to communication"
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Student development monitoring",
+      "grounding_span": "keep a close eye on the development of a student's abilities"
+    },
+    {
+      "id": "n8",
+      "type": "Stance",
+      "label": "Satisfaction with AI for structured materials",
+      "valence": "positive",
+      "grounding_span": "AI model will produce useable content directly"
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Openness to AI as creative catalyst",
+      "valence": "positive",
+      "grounding_span": "the existence of the content generated and my reaction to it is usually enough"
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Frustration with AI's inability to reconsider grading",
+      "valence": "negative",
+      "grounding_span": "I don't really believe in using LLMs to assist in grading writing pieces"
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Gratitude for AI as a guide",
+      "valence": "positive",
+      "grounding_span": "I was very satisfied when I had a limited amount of time"
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain-based boundary setting — clear separation of AI-appropriate vs. human-only tasks",
+      "grounding_span": "I don't really believe in using LLMs to assist in grading writing pieces"
+    },
+    {
+      "id": "n13",
+      "type": "CognitiveStyleMarker",
+      "label": "Independent adoption and pioneering use",
+      "grounding_span": "if a new product comes out with applicability to my needs, I can consider using it"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n6",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n4",
+      "target": "n5",
+      "relation": "SERVES"
+    },
+    {
+      "source": "n8",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n11",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n2",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n3",
+      "target": "n12",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n4",
+      "target": "n13",
+      "relation": "MODULATED_BY"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "relation": "CONFLICTS_WITH"
+    }
+  ],
+  "split": "workforce",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v3",
+  "validation_violations": []
+}
