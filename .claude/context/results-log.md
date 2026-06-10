@@ -616,3 +616,106 @@ Phase 2 should determine whether structure-only GIN clears the chance baseline a
 if not, combined with this result, the topology hypothesis is dead on this dataset and
 graph-stats (not GNN-derived graph structure) is the dataset's actual complementary
 signal.
+
+---
+
+## Method-Review Phase 2 — Graph-vs-Labels Disentanglement (2026-06-10)
+
+The decisive ablation (review concerns #2, #4; epic kill-criterion). Five single-modality
+embeddings were each probed with a fresh, fixed-capacity logistic regression
+(`s5_classification/ablation_probe.py::probe_variant`) across the same 10 protocol seeds
+and split procedure as Phase 1. Results: `results/method_review/phase2/summary.json`.
+
+| Variant | Source | Isolates |
+|---|---|---|
+| text | SBERT 768-d | raw-transcript text |
+| (c) label_bag | mean-pooled MiniLM label embeddings, no edges (P2.2) | pooled label semantics |
+| (b) structure_only | GIN trained on type one-hot + degree only (P2.1) | topology only |
+| (a) full_gin | GIN trained on type + label embeddings (Phase 5 default) | topology + label semantics |
+| (a') masked_gin | GIN with masked node-type objective (P2.3) | topology + labels, non-trivial objective |
+
+### Single-modality probe results (mean test macro-F1 ± 95% CI, 10 seeds)
+
+| target | variant | mean F1 | 95% CI |
+|---|---|---|---|
+| ai_adoption | text | 0.6369 | [0.618, 0.655] |
+| ai_adoption | label_bag (c) | 0.6814 | [0.658, 0.705] |
+| ai_adoption | structure_only (b) | 0.5658 | [0.536, 0.596] |
+| ai_adoption | full_gin (a) | 0.5714 | [0.556, 0.587] |
+| ai_adoption | masked_gin (a') | 0.5787 | [0.544, 0.613] |
+| cohort | text | 0.8593 | [0.849, 0.870] |
+| cohort | label_bag (c) | 0.7740 | [0.745, 0.803] |
+| cohort | structure_only (b) | 0.4230 | [0.394, 0.452] |
+| cohort | full_gin (a) | 0.4700 | [0.437, 0.503] |
+| cohort | masked_gin (a') | 0.5694 | [0.555, 0.584] |
+
+### Chance baseline (majority-class macro-F1, mean over 10 seeds)
+
+- ai_adoption: 0.3367
+- cohort: 0.2959
+
+### Paired deltas
+
+| target | comparison | mean Δ | 95% CI | real_effect |
+|---|---|---|---|---|
+| ai_adoption | (a) full_gin − (c) label_bag | **-0.1100** | [-0.135, -0.085] | False (negative) |
+| ai_adoption | (b) structure_only − chance | **+0.2291** | [0.199, 0.260] | **True** |
+| ai_adoption | (a') masked_gin − (a) full_gin | +0.0073 | [-0.029, 0.044] | False |
+| cohort | (a) full_gin − (c) label_bag | **-0.3040** | [-0.357, -0.251] | False (negative) |
+| cohort | (b) structure_only − chance | **+0.1272** | [0.098, 0.156] | **True** |
+| cohort | (a') masked_gin − (a) full_gin | **+0.0994** | [0.071, 0.128] | **True** |
+
+(`real_effect` here follows the protocol's directional definition: CI excludes 0 AND
+mean Δ ≥ +0.01. A significant *negative* delta — as for `(a)−(c)` on both targets — is
+reported as `real_effect=False` by that definition but is itself a strong, CI-excludes-0
+finding, called out explicitly below.)
+
+### Kill-criterion verdict
+
+The epic's pre-registered kill-criterion is: *if `(a)≈(c)` (delta CI includes 0) AND
+structure-only is at chance, the topology hypothesis is dead.*
+
+**Neither half of that conjunction holds, but not in the direction the criterion
+anticipated:**
+
+1. **`(a) ≈ (c)` is FALSE — but `(a) < (c)`, significantly.** On both targets, full-GIN
+   embeddings (topology + labels) score *significantly lower* than the label-bag baseline
+   (topology-free pooled labels): ai_adoption Δ=-0.110 [-0.135,-0.085], cohort
+   Δ=-0.304 [-0.357,-0.251], both CIs tightly excluding 0. The GIN is not "approximately
+   the label-bag" — message-passing through the autoencoder's node-type-reconstruction
+   objective actively *degrades* the pooled-label signal relative to simply averaging it.
+
+2. **`(b) − chance` is FALSE for the kill-criterion (structure is NOT at chance) — it's a
+   real positive effect on both targets.** structure_only clears chance by +0.229
+   (ai_adoption) and +0.127 (cohort), both CIs excluding 0 and ≥+0.01. Topology alone (4-d
+   type one-hot + degree, 128-d after the GIN) carries real classification signal — just
+   much less than text or even label_bag.
+
+**Verdict: the kill-criterion as literally specified is NOT met (both legs point away from
+"topology is dead"), but the epic's underlying concern is sharpened, not resolved
+favourably for the current GIN.** Topology *does* carry signal above chance (point 2), so
+"graph modality = pooled-label semantics in disguise" is too strong. But the *current*
+full-GIN encoding (node-type-reconstruction objective, type+label input) is **strictly
+worse than its own label-bag input** on both targets — the GIN is actively destroying
+information relative to a trivial mean-pool. This means the Phase 5 / Phase 1 "full GIN"
+embeddings used in the production fusion sweep are a poor representation of both topology
+and labels simultaneously.
+
+3. **`(a') − (a)` (masked objective vs default):** no real effect on ai_adoption
+   (CI includes 0), but a real **positive** effect on cohort (+0.0994, CI=[0.071,0.128]).
+   The masked node-type objective (P2.3, held-out reconstruction acc=0.978) produces a
+   meaningfully better encoder for cohort than the trivial pass-through objective — though
+   still below label_bag and text on cohort, and still not better than label_bag on
+   ai_adoption.
+
+### Implication for the deferred Phases 3-5 epic
+
+- The single biggest lever is **not** more data or a different fusion architecture — it's
+  the **GIN's self-supervised objective and/or input features**. The masked objective
+  (a') already recovers some of the gap on cohort; further work (e.g. training (a') with
+  structure_only inputs, or a contrastive objective) is the highest-leverage next step
+  before any new extraction.
+- Given finding 1, Phase 1's "text+stats is the only real fusion gain" (text+graph CI
+  includes 0) is now explained: the `graph` modality fed into Phase 1's fusion sweep was
+  `full_gin`, which this bead shows underperforms even a training-free label-bag — so its
+  near-zero fusion contribution is consistent, not surprising.
