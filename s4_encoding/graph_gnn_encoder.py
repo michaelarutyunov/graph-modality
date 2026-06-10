@@ -97,6 +97,15 @@ EARLY_STOPPING_PATIENCE = 15
 SCHEDULER_PATIENCE = 7
 SCHEDULER_FACTOR = 0.5
 
+# ── Masked-objective configuration (P2.3, variant a') ─────────────────────────
+MASK_RATIO = 0.15
+HOLDOUT_FRACTION = 0.10
+HOLDOUT_SEED = 0
+MASKED_ENCODER_PATH = CACHE_DIR / "gin_encoder_masked.pt"
+MASKED_CURVES_PATH = CACHE_DIR / "gin_autoencoder_curves_masked.png"
+MASKED_EMBEDDING_CACHE = CACHE_DIR / "gin_embeddings_masked.npy"
+MASKED_ID_CACHE = CACHE_DIR / "gin_embedding_ids_masked.json"
+
 
 # ═══════════════════════════════════════════════════════════════════════════════
 # Model architecture
@@ -186,6 +195,32 @@ def _node_type_accuracy(logits: torch.Tensor, labels: torch.Tensor) -> float:
     """Compute node type prediction accuracy."""
     preds = logits.argmax(dim=1)
     return (preds == labels).float().mean().item()
+
+
+def _mask_node_types(
+    x: torch.Tensor, ptr: torch.Tensor, mask_ratio: float
+) -> tuple[torch.Tensor, torch.Tensor]:
+    """Zero out the type one-hot (first ``N_NODE_TYPES`` dims) for a random subset
+    of nodes in each graph of the batch.
+
+    For each graph (delimited by consecutive ``ptr`` boundaries), at least one
+    node and at least ``mask_ratio`` of its nodes are masked. Returns
+    ``(x_masked, mask)`` where ``mask`` is a boolean tensor over all nodes
+    (True = masked) so the loss can be restricted to them.
+    """
+    n_total = x.shape[0]
+    mask = torch.zeros(n_total, dtype=torch.bool)
+    for i in range(len(ptr) - 1):
+        start, end = int(ptr[i]), int(ptr[i + 1])
+        n_nodes = end - start
+        if n_nodes == 0:
+            continue
+        n_mask = max(1, round(mask_ratio * n_nodes))
+        masked_idx = start + torch.randperm(n_nodes)[:n_mask]
+        mask[masked_idx] = True
+    x_masked = x.clone()
+    x_masked[mask, :N_NODE_TYPES] = 0.0
+    return x_masked, mask
 
 
 def _plot_training_curves(
@@ -359,6 +394,155 @@ def train_autoencoder(
     }
 
 
+def train_masked_autoencoder(
+    graph_dir: Path | None = None,
+    max_epochs: int = MAX_EPOCHS,
+    early_stopping_patience: int = EARLY_STOPPING_PATIENCE,
+    batch_size: int = BATCH_SIZE,
+    mask_ratio: float = MASK_RATIO,
+    holdout_fraction: float = HOLDOUT_FRACTION,
+    holdout_seed: int = HOLDOUT_SEED,
+) -> dict:
+    """Train the GIN autoencoder with a masked node-type objective (variant a').
+
+    Each epoch, ``mask_ratio`` of each graph's nodes (min 1) have their type
+    one-hot zeroed in the INPUT features; the decoder predicts the TRUE type
+    of only those masked nodes. This removes the input pass-through that made
+    the unmasked node-type objective trivially solvable (100% accuracy).
+
+    Trains on a 90/10 (``holdout_fraction``) split of the canonical graphs
+    (``random_state=holdout_seed``) and reports masked node-type accuracy on
+    the held-out 10% — the honest reconstruction metric.
+
+    Returns:
+        Dictionary with best_loss, best_epoch, epochs_run, train_losses,
+        train_accs, and ``holdout_accuracy``.
+    """
+    from sklearn.model_selection import train_test_split
+
+    device = torch.device("cpu")
+    print(f"Training on device: {device}")
+    print(f"Objective: masked node-type (mask_ratio={mask_ratio})")
+
+    if graph_dir is None:
+        graph_dir = CANONICAL_DIR
+
+    graph_paths = _load_all_graph_paths(graph_dir)
+    print(f"Loading {len(graph_paths)} graphs for self-supervised training...")
+    data_list = _precompute_graph_data(graph_paths, feature_mode="full")
+
+    train_data, holdout_data = train_test_split(
+        data_list, test_size=holdout_fraction, random_state=holdout_seed
+    )
+    print(f"Encoder-train: {len(train_data)}, encoder-holdout: {len(holdout_data)}")
+
+    loader = DataLoader(train_data, batch_size=batch_size, shuffle=True)
+    holdout_loader = DataLoader(holdout_data, batch_size=batch_size, shuffle=False)
+
+    model = GINAutoencoder(in_channels=IN_CHANNELS).to(device)
+    print(f"Model parameters: {sum(p.numel() for p in model.parameters()):,}")
+
+    criterion = nn.CrossEntropyLoss()
+    optimizer = torch.optim.Adam(model.parameters(), lr=LR, weight_decay=WEIGHT_DECAY)
+    scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(
+        optimizer,
+        mode="min",
+        patience=SCHEDULER_PATIENCE,
+        factor=SCHEDULER_FACTOR,
+    )
+
+    best_loss = float("inf")
+    best_epoch = 0
+    epochs_no_improve = 0
+    train_losses: list[float] = []
+    train_accs: list[float] = []
+
+    for epoch in range(1, max_epochs + 1):
+        model.train()
+        epoch_loss = 0.0
+        epoch_acc = 0.0
+        total_masked = 0
+        n_batches = 0
+
+        for batch in loader:
+            batch = batch.to(device)
+            node_labels = _get_node_type_labels(batch)
+            x_masked, mask = _mask_node_types(batch.x, batch.ptr, mask_ratio)
+            batch.x = x_masked
+
+            optimizer.zero_grad()
+            logits = model(batch)
+            loss = criterion(logits[mask], node_labels[mask])
+            loss.backward()
+            optimizer.step()
+
+            epoch_loss += loss.item()
+            epoch_acc += _node_type_accuracy(logits[mask], node_labels[mask]) * mask.sum().item()
+            total_masked += int(mask.sum().item())
+            n_batches += 1
+
+        avg_loss = epoch_loss / max(n_batches, 1)
+        avg_acc = epoch_acc / max(total_masked, 1)
+
+        train_losses.append(avg_loss)
+        train_accs.append(avg_acc)
+
+        scheduler.step(avg_loss)
+
+        improved = avg_loss < best_loss
+        if improved:
+            best_loss = avg_loss
+            best_epoch = epoch
+            epochs_no_improve = 0
+            CACHE_DIR.mkdir(parents=True, exist_ok=True)
+            torch.save(model.encoder.state_dict(), MASKED_ENCODER_PATH)
+            mark = "* best"
+        else:
+            epochs_no_improve += 1
+            mark = f"(no improve {epochs_no_improve}/{early_stopping_patience})"
+
+        print(f"  Epoch {epoch}: loss={avg_loss:.4f} masked_acc={avg_acc:.4f} {mark}")
+
+        if epochs_no_improve >= early_stopping_patience:
+            print(f"Early stopping at epoch {epoch}")
+            break
+
+    # Held-out masked node-type accuracy — the honest reconstruction metric.
+    model.eval()
+    holdout_acc_sum = 0.0
+    holdout_total = 0
+    with torch.no_grad():
+        for batch in holdout_loader:
+            batch = batch.to(device)
+            node_labels = _get_node_type_labels(batch)
+            x_masked, mask = _mask_node_types(batch.x, batch.ptr, mask_ratio)
+            batch.x = x_masked
+            logits = model(batch)
+            holdout_acc_sum += (
+                _node_type_accuracy(logits[mask], node_labels[mask]) * mask.sum().item()
+            )
+            holdout_total += int(mask.sum().item())
+    holdout_accuracy = holdout_acc_sum / max(holdout_total, 1)
+
+    _plot_training_curves(train_losses, train_accs, MASKED_CURVES_PATH)
+
+    print("\nMasked autoencoder training complete.")
+    print(f"  Best loss: {best_loss:.4f} at epoch {best_epoch}")
+    print(f"  Final train masked-accuracy: {train_accs[-1]:.4f}")
+    print(f"  Held-out masked-accuracy: {holdout_accuracy:.4f}")
+    print(f"  Epochs run: {len(train_losses)}")
+    print(f"  Encoder saved to: {MASKED_ENCODER_PATH}")
+
+    return {
+        "best_loss": best_loss,
+        "best_epoch": best_epoch,
+        "epochs_run": len(train_losses),
+        "train_losses": train_losses,
+        "train_accs": train_accs,
+        "holdout_accuracy": holdout_accuracy,
+    }
+
+
 # ═══════════════════════════════════════════════════════════════════════════════
 # Frozen encoder inference
 # ═══════════════════════════════════════════════════════════════════════════════
@@ -459,6 +643,67 @@ def encode_graphs(
     return result, all_ids
 
 
+def encode_graphs_masked(force: bool = False) -> tuple[np.ndarray, list[str]]:
+    """Frozen inference for the masked-objective encoder (variant a').
+
+    Runs over ALL 1,250 canonical graphs with full (388-d) features and NO
+    masking at inference. Cache-first: loads from
+    ``cache/gin_embeddings_masked.npy`` unless ``force=True``.
+
+    Returns:
+        (embeddings, transcript_ids) — aligned arrays.
+    """
+    if MASKED_EMBEDDING_CACHE.exists() and MASKED_ID_CACHE.exists() and not force:
+        print("loading cached GIN embeddings (masked objective)")
+        return np.load(MASKED_EMBEDDING_CACHE), json.loads(
+            MASKED_ID_CACHE.read_text(encoding="utf-8")
+        )
+
+    if not MASKED_ENCODER_PATH.exists():
+        raise FileNotFoundError(
+            f"Encoder weights not found at {MASKED_ENCODER_PATH}. "
+            "Run 'uv run python s4_encoding/graph_gnn_encoder.py --objective masked' first."
+        )
+
+    device = torch.device("cpu")
+    encoder = GINEncoder(in_channels=IN_CHANNELS).to(device)
+    encoder.load_state_dict(torch.load(MASKED_ENCODER_PATH, map_location=device, weights_only=True))
+    encoder.eval()
+    print(f"Loaded frozen GIN encoder from {MASKED_ENCODER_PATH}")
+
+    graph_paths = _load_all_graph_paths(CANONICAL_DIR)
+    dataset = GraphDataset(graph_paths, [-1] * len(graph_paths), feature_mode="full")
+    print(f"Pre-loading {len(dataset)} graphs...")
+    data_list = [dataset[i] for i in range(len(dataset))]
+
+    loader = DataLoader(data_list, batch_size=BATCH_SIZE, shuffle=False)
+    all_embeddings: list[np.ndarray] = []
+    all_ids: list[str] = []
+
+    print(f"Encoding {len(data_list)} graphs in batches of {BATCH_SIZE}...")
+    with torch.no_grad():
+        for batch in loader:
+            graph_emb, _node_emb = encoder(
+                batch.x.to(device),
+                batch.edge_index.to(device),
+                batch.batch.to(device),
+            )
+            all_embeddings.append(graph_emb.cpu().numpy())
+            all_ids.extend(batch.transcript_id)
+
+    result = np.concatenate(all_embeddings, axis=0)
+
+    CACHE_DIR.mkdir(parents=True, exist_ok=True)
+    np.save(MASKED_EMBEDDING_CACHE, result)
+    MASKED_ID_CACHE.write_text(json.dumps(all_ids, ensure_ascii=False), encoding="utf-8")
+    print(
+        f"cached {len(all_ids)} GIN embeddings "
+        f"({result.shape[1]}d, masked objective) -> {MASKED_EMBEDDING_CACHE}"
+    )
+
+    return result, all_ids
+
+
 # ═══════════════════════════════════════════════════════════════════════════════
 # CLI
 # ═══════════════════════════════════════════════════════════════════════════════
@@ -492,9 +737,27 @@ if __name__ == "__main__":
         help="Node feature mode (default: full = 4 type one-hot + 384 label embedding). "
         "'structure_only' = 4 type one-hot + degree (5-d), no label embeddings.",
     )
+    parser.add_argument(
+        "--objective",
+        type=str,
+        choices=["node_type", "masked"],
+        default="node_type",
+        help="Self-supervised objective (default: node_type, the existing pass-through "
+        "node-type reconstruction). 'masked' trains variant a' (P2.3): masks 15%% of "
+        "each graph's node types in the input and reconstructs only those, reporting "
+        "held-out accuracy on a 90/10 split. Independent of --feature-mode/--label-source "
+        "(always full features, canonical labels); writes to gin_*_masked.* caches.",
+    )
     args = parser.parse_args()
 
-    if args.encode:
+    if args.objective == "masked":
+        if args.encode:
+            embeddings, ids = encode_graphs_masked(force=args.force)
+            print(f"Done. Shape: {embeddings.shape}, IDs: {len(ids)}")
+        else:
+            results = train_masked_autoencoder()
+            print(f"\nHeld-out masked node-type accuracy: {results['holdout_accuracy']:.4f}")
+    elif args.encode:
         embeddings, ids = encode_graphs(
             force=args.force,
             label_source=args.label_source,
