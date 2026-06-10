@@ -32,7 +32,7 @@ import torch.nn.functional as F
 from torch_geometric.loader import DataLoader
 from torch_geometric.nn import GINConv, global_mean_pool
 
-from s4_encoding.graph_dataset import GraphDataset
+from s4_encoding.graph_dataset import FeatureMode, GraphDataset
 
 # ── Paths ────────────────────────────────────────────────────────────────────
 PROJECT_ROOT = Path(".")
@@ -48,15 +48,24 @@ FT_ENCODER_PATH = CACHE_DIR / "gin_encoder_free_text.pt"
 FT_CURVES_PATH = CACHE_DIR / "gin_autoencoder_curves_free_text.png"
 FT_EMBEDDING_CACHE = CACHE_DIR / "gin_embeddings_free_text.npy"
 FT_ID_CACHE = CACHE_DIR / "gin_embedding_ids_free_text.json"
+# Structure-only variant (P2.1) — separate encoder, curves, embeddings
+SO_ENCODER_PATH = CACHE_DIR / "gin_encoder_structure_only.pt"
+SO_CURVES_PATH = CACHE_DIR / "gin_autoencoder_curves_structure_only.png"
+SO_EMBEDDING_CACHE = CACHE_DIR / "gin_embeddings_structure_only.npy"
+SO_ID_CACHE = CACHE_DIR / "gin_embedding_ids_structure_only.json"
 
 
-def _encoder_path(label_source: str) -> Path:
-    """Return encoder weights path for a given label source."""
+def _encoder_path(label_source: str, feature_mode: FeatureMode = "full") -> Path:
+    """Return encoder weights path for a given label source / feature mode."""
+    if feature_mode == "structure_only":
+        return SO_ENCODER_PATH
     return FT_ENCODER_PATH if label_source == "free_text" else ENCODER_PATH
 
 
-def _curves_path(label_source: str) -> Path:
-    """Return training curves path for a given label source."""
+def _curves_path(label_source: str, feature_mode: FeatureMode = "full") -> Path:
+    """Return training curves path for a given label source / feature mode."""
+    if feature_mode == "structure_only":
+        return SO_CURVES_PATH
     return FT_CURVES_PATH if label_source == "free_text" else CURVES_PATH
 
 
@@ -67,6 +76,14 @@ def _graph_dir(label_source: str) -> Path:
 
 # ── Architecture constants ────────────────────────────────────────────────────
 IN_CHANNELS = 388  # 4 type one-hot + 384 label embedding
+IN_CHANNELS_STRUCTURE_ONLY = 5  # 4 type one-hot + degree
+
+
+def _in_channels(feature_mode: FeatureMode) -> int:
+    """Return GIN input channel count for a given feature mode."""
+    return IN_CHANNELS_STRUCTURE_ONLY if feature_mode == "structure_only" else IN_CHANNELS
+
+
 HIDDEN_DIM = 256
 OUT_CHANNELS = 128
 N_NODE_TYPES = 4  # Construct, Value, Stance, CognitiveStyleMarker
@@ -141,9 +158,9 @@ class GINAutoencoder(nn.Module):
     After training, ``self.encoder`` is extracted, frozen, and saved.
     """
 
-    def __init__(self):
+    def __init__(self, in_channels: int = IN_CHANNELS):
         super().__init__()
-        self.encoder = GINEncoder()
+        self.encoder = GINEncoder(in_channels=in_channels)
         self.node_type_head = nn.Linear(OUT_CHANNELS, N_NODE_TYPES)
 
     def forward(self, data) -> torch.Tensor:
@@ -213,11 +230,11 @@ def _load_all_graph_paths(graph_dir: Path | None = None) -> list[Path]:
     return paths
 
 
-def _precompute_graph_data(graph_paths: list[Path]) -> list:
+def _precompute_graph_data(graph_paths: list[Path], feature_mode: FeatureMode = "full") -> list:
     """Pre-load all graph Data objects to avoid re-encoding labels on each access."""
     dummy_labels = [-1] * len(graph_paths)
-    dataset = GraphDataset(graph_paths, dummy_labels)
-    print(f"Pre-loading {len(dataset)} graphs (sentence-transformer node label encoding)...")
+    dataset = GraphDataset(graph_paths, dummy_labels, feature_mode=feature_mode)
+    print(f"Pre-loading {len(dataset)} graphs (feature_mode={feature_mode})...")
     return [dataset[i] for i in range(len(dataset))]
 
 
@@ -227,6 +244,7 @@ def train_autoencoder(
     early_stopping_patience: int = EARLY_STOPPING_PATIENCE,
     batch_size: int = BATCH_SIZE,
     label_source: str = "canonical",
+    feature_mode: FeatureMode = "full",
 ) -> dict:
     """Train the GIN autoencoder on all graphs.
 
@@ -235,6 +253,7 @@ def train_autoencoder(
             ``label_source``.
         label_source: ``"canonical"`` (default) or ``"free_text"``.
             Determines graph directory, encoder save path, and curves path.
+        feature_mode: ``"full"`` (default, 388-d) or ``"structure_only"`` (5-d).
 
     Returns:
         Dictionary with best_loss, best_epoch, final_accuracy, epochs_run,
@@ -243,18 +262,19 @@ def train_autoencoder(
     device = torch.device("cpu")
     print(f"Training on device: {device}")
     print(f"Label source: {label_source}")
+    print(f"Feature mode: {feature_mode}")
 
     if graph_dir is None:
         graph_dir = _graph_dir(label_source)
 
     graph_paths = _load_all_graph_paths(graph_dir)
     print(f"Loading {len(graph_paths)} graphs for self-supervised training...")
-    data_list = _precompute_graph_data(graph_paths)
+    data_list = _precompute_graph_data(graph_paths, feature_mode=feature_mode)
 
     loader = DataLoader(data_list, batch_size=batch_size, shuffle=True)
     print(f"DataLoader created with {len(loader)} batches (batch_size={batch_size})")
 
-    model = GINAutoencoder().to(device)
+    model = GINAutoencoder(in_channels=_in_channels(feature_mode)).to(device)
     print(f"Model parameters: {sum(p.numel() for p in model.parameters()):,}")
 
     criterion = nn.CrossEntropyLoss()
@@ -308,7 +328,7 @@ def train_autoencoder(
             best_epoch = epoch
             epochs_no_improve = 0
             CACHE_DIR.mkdir(parents=True, exist_ok=True)
-            torch.save(model.encoder.state_dict(), _encoder_path(label_source))
+            torch.save(model.encoder.state_dict(), _encoder_path(label_source, feature_mode))
             mark = "* best"
         else:
             epochs_no_improve += 1
@@ -320,14 +340,14 @@ def train_autoencoder(
             print(f"Early stopping at epoch {epoch}")
             break
 
-    _plot_training_curves(train_losses, train_accs, _curves_path(label_source))
+    _plot_training_curves(train_losses, train_accs, _curves_path(label_source, feature_mode))
 
     print("\nAutoencoder training complete.")
     print(f"  Label source: {label_source}")
     print(f"  Best loss: {best_loss:.4f} at epoch {best_epoch}")
     print(f"  Final node type accuracy: {train_accs[-1]:.4f}")
     print(f"  Epochs run: {len(train_losses)}")
-    print(f"  Encoder saved to: {_encoder_path(label_source)}")
+    print(f"  Encoder saved to: {_encoder_path(label_source, feature_mode)}")
 
     return {
         "best_loss": best_loss,
@@ -344,8 +364,10 @@ def train_autoencoder(
 # ═══════════════════════════════════════════════════════════════════════════════
 
 
-def _cache_paths(label_source: str) -> tuple[Path, Path]:
-    """Return (embedding_cache, id_cache) keyed by label source."""
+def _cache_paths(label_source: str, feature_mode: FeatureMode = "full") -> tuple[Path, Path]:
+    """Return (embedding_cache, id_cache) keyed by label source / feature mode."""
+    if feature_mode == "structure_only":
+        return SO_EMBEDDING_CACHE, SO_ID_CACHE
     if label_source == "free_text":
         return FT_EMBEDDING_CACHE, FT_ID_CACHE
     return EMBEDDING_CACHE, ID_CACHE
@@ -356,11 +378,13 @@ def encode_graphs(
     encoder_weights: Path | None = None,
     force: bool = False,
     label_source: str = "canonical",
+    feature_mode: FeatureMode = "full",
 ) -> tuple[np.ndarray, list[str]]:
     """Produce 128-dim frozen graph embeddings.
 
     Cache-first: loads from cache unless ``force=True``. Cache paths are
-    keyed by ``label_source`` so canonical and free-text embeddings coexist.
+    keyed by ``label_source`` / ``feature_mode`` so canonical, free-text, and
+    structure-only embeddings coexist.
 
     Args:
         graph_dir: Directory containing graph JSON files. Defaults to
@@ -370,6 +394,7 @@ def encode_graphs(
         force: If True, re-encode even if cache exists.
         label_source: ``"canonical"`` (default) or ``"free_text"``.
             Determines both the default graph directory and the cache path.
+        feature_mode: ``"full"`` (default, 388-d) or ``"structure_only"`` (5-d).
 
     Returns:
         (embeddings, transcript_ids) — aligned arrays.
@@ -377,12 +402,12 @@ def encode_graphs(
     if graph_dir is None:
         graph_dir = FREE_TEXT_DIR if label_source == "free_text" else CANONICAL_DIR
     if encoder_weights is None:
-        encoder_weights = _encoder_path(label_source)
+        encoder_weights = _encoder_path(label_source, feature_mode)
 
-    emb_cache, id_cache = _cache_paths(label_source)
+    emb_cache, id_cache = _cache_paths(label_source, feature_mode)
 
     if emb_cache.exists() and id_cache.exists() and not force:
-        print(f"loading cached GIN embeddings ({label_source} labels)")
+        print(f"loading cached GIN embeddings ({label_source} labels, {feature_mode})")
         return np.load(emb_cache), json.loads(id_cache.read_text(encoding="utf-8"))
 
     if not encoder_weights.exists():
@@ -392,7 +417,7 @@ def encode_graphs(
         )
 
     device = torch.device("cpu")
-    encoder = GINEncoder().to(device)
+    encoder = GINEncoder(in_channels=_in_channels(feature_mode)).to(device)
     encoder.load_state_dict(torch.load(encoder_weights, map_location=device, weights_only=True))
     encoder.eval()
     print(f"Loaded frozen GIN encoder from {encoder_weights}")
@@ -402,7 +427,7 @@ def encode_graphs(
         raise FileNotFoundError(f"No graph files found in {graph_dir}")
 
     dummy_labels = [-1] * len(graph_paths)
-    dataset = GraphDataset(graph_paths, dummy_labels)
+    dataset = GraphDataset(graph_paths, dummy_labels, feature_mode=feature_mode)
     print(f"Pre-loading {len(dataset)} graphs...")
     data_list = [dataset[i] for i in range(len(dataset))]
 
@@ -428,7 +453,7 @@ def encode_graphs(
     id_cache.write_text(json.dumps(all_ids, ensure_ascii=False), encoding="utf-8")
     print(
         f"cached {len(all_ids)} GIN embeddings "
-        f"({result.shape[1]}d, {label_source} labels) → {emb_cache}"
+        f"({result.shape[1]}d, {label_source} labels, {feature_mode}) -> {emb_cache}"
     )
 
     return result, all_ids
@@ -459,14 +484,23 @@ if __name__ == "__main__":
         "Training: trains a separate encoder. "
         "Encoding: uses the matching encoder weights.",
     )
+    parser.add_argument(
+        "--feature-mode",
+        type=str,
+        choices=["full", "structure_only"],
+        default="full",
+        help="Node feature mode (default: full = 4 type one-hot + 384 label embedding). "
+        "'structure_only' = 4 type one-hot + degree (5-d), no label embeddings.",
+    )
     args = parser.parse_args()
 
     if args.encode:
         embeddings, ids = encode_graphs(
             force=args.force,
             label_source=args.label_source,
+            feature_mode=args.feature_mode,
         )
         print(f"Done. Shape: {embeddings.shape}, IDs: {len(ids)}")
     else:
-        results = train_autoencoder(label_source=args.label_source)
+        results = train_autoencoder(label_source=args.label_source, feature_mode=args.feature_mode)
         print(f"\nFinal node type reconstruction accuracy: {results['final_accuracy']:.4f}")
