@@ -392,6 +392,14 @@ def main() -> None:
         help="Output directory for graphs (default: version-namespaced, "
         "e.g. s1_data/graphs/v4/free_text; v3 keeps the legacy flat path)",
     )
+    parser.add_argument(
+        "--order",
+        type=str,
+        default="sorted",
+        choices=["sorted", "stratified"],
+        help="Batch ordering: 'sorted' (alphabetical) or 'stratified' "
+        "(round-robin across cohorts, so a --limit checkpoint samples all splits)",
+    )
     parser.add_argument("--force", action="store_true", help="Re-extract even if cache exists")
     args = parser.parse_args()
 
@@ -442,6 +450,15 @@ def main() -> None:
     ids: list[str] = []
     if args.split:
         ids = [tid for tid, rec in tagged.items() if rec["split"] == args.split]
+    elif args.order == "stratified":
+        # round-robin interleave across cohorts so a --limit checkpoint samples
+        # all splits proportionally-early (deterministic → resumable)
+        from itertools import zip_longest
+
+        by_split: dict[str, list[str]] = {}
+        for tid in sorted(tagged.keys()):
+            by_split.setdefault(tagged[tid]["split"], []).append(tid)
+        ids = [tid for group in zip_longest(*by_split.values()) for tid in group if tid is not None]
     else:
         ids = sorted(tagged.keys())
 
