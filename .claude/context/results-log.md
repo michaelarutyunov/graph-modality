@@ -2,6 +2,13 @@
 
 > **Purpose:** canonical record of all experiment results. Write once per experiment, never overwrite. This is the single source of truth for classification outcomes, route comparisons, and statistical tests.
 
+> **2026-06-10 update:** under repeated-seed evaluation (Method-Review Phase 1, see bottom),
+> the Phase 5 headline fusion gain is **not supported** for the GIN graph embedding —
+> text+graph and text+stats+graph deltas on the primary `ai_adoption` target have CIs
+> that include 0. The only delta surviving the pre-registered criterion is **text+stats**
+> (+0.0142, CI excludes 0). Treat the Phase 5 "Architecture Comparison Summary" and
+> "Synthesis" below as superseded point estimates, not confirmed effects.
+
 ---
 
 ## Phase 1 — Extraction
@@ -533,7 +540,7 @@ For cohort, gated fusion achieves the highest GRAPH-UNIQUE fraction (11.7% — 2
 
 ---
 
-## Phase 1 — Repeated-Evaluation Protocol (P1.3, bead 7p2, 2026-06-10)
+## Method-Review Phase 1 — Repeated-Evaluation Re-scoring (2026-06-10)
 
 The Phase 5 headline numbers above were a **single fixed split (seed=42)**, selected as
 the max over a 90-config sweep — exactly the practice `docs/METHOD_REVIEW.md` flagged as
@@ -581,9 +588,20 @@ Aggregate: `results/method_review/phase1/summary.json` (gitignored).
 
 ### Verdict (per the frozen protocol, §"What 'supported' means downstream")
 
+**Do any text-vs-fusion deltas survive repeated evaluation (CI excludes 0 AND mean Δ ≥ +0.01)?**
+
+- **ai_adoption (primary): YES for text+stats only.** Δ=+0.0142, CI=[0.0031, 0.0253] —
+  excludes 0 and clears the +0.01 threshold. text+graph (Δ=-0.0087, CI=[-0.0208, 0.0035])
+  and text+stats+graph (Δ=+0.0062, CI=[-0.0092, 0.0217]) do NOT survive — both CIs
+  include 0.
+- **cohort (secondary, confounded): NO for any combo.** All three deltas
+  (text+stats +0.0063, text+graph -0.0025, text+stats+graph -0.0001) have CIs that
+  include 0.
+
 **Fusion does NOT add signal over text on the primary target (ai_adoption) by the §7
-criterion.** The only "real" effect is **text+stats** (Δ=+0.0142, CI excludes 0, ≥+0.01) —
-i.e. **graph-stats**, not the GIN embedding, is the complementary modality. Both
+criterion** — except via graph-stats. The only "real" effect is **text+stats**
+(Δ=+0.0142, CI excludes 0, ≥+0.01) — i.e. **graph-stats**, not the GIN embedding, is the
+complementary modality. Both
 text+graph and text+stats+graph deltas have CIs that include 0 on ai_adoption — under
 repeated evaluation, the previously reported text+graph gains do not survive.
 
