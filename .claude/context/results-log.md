@@ -530,3 +530,71 @@ For cohort, gated fusion achieves the highest GRAPH-UNIQUE fraction (11.7% — 2
 - For CDT modality architecture: use frozen SBERT for text; graph modality with node-type autoencoder adds marginal value. Consider contrastive pre-training as a stronger self-supervised objective.
 - Future work: graph contrastive learning (Option C from design doc) — corrupt graph structure and train encoder to distinguish original vs corrupted. This forces the encoder to learn structure-preserving representations and may preserve more cohort-relevant patterns than node type prediction.
 - Attribution: apply GNNExplainer to the *conflated* GIN to understand what structural patterns it exploited, then design self-supervised objectives that preserve those patterns.
+
+---
+
+## Phase 1 — Repeated-Evaluation Protocol (P1.3, bead 7p2, 2026-06-10)
+
+The Phase 5 headline numbers above were a **single fixed split (seed=42)**, selected as
+the max over a 90-config sweep — exactly the practice `docs/METHOD_REVIEW.md` flagged as
+unsupported. P1.3 (`s5_classification/repeated_run.py`) re-ran the full
+`build_sweep() + build_sklearn_sweep()` matrix (90 configs) across the 10 frozen
+protocol seeds (`docs/method-review/00-evaluation-protocol.md`), 900 runs total.
+Selection per `(target, modality_combo)` is now the config with the highest **mean
+validation macro-F1 across seeds** — never the test-set max.
+
+Raw per-run rows: `results/method_review/phase1/runs.jsonl` (gitignored).
+Aggregate: `results/method_review/phase1/summary.json` (gitignored).
+
+### Selected configs (validation-selected, 10-seed test mean ± 95% CI)
+
+| target | modality combo | arch/backend | mean val F1 | mean test F1 | 95% CI |
+|---|---|---|---|---|---|
+| ai_adoption | text | late/torch | 0.6749 | 0.6444 | [0.624, 0.665] |
+| ai_adoption | stats | gated/torch | 0.6127 | 0.5680 | [0.537, 0.599] |
+| ai_adoption | graph | stacked/torch | 0.5888 | 0.5934 | [0.571, 0.616] |
+| ai_adoption | text+stats | late/torch | 0.6911 | 0.6587 | [0.638, 0.680] |
+| ai_adoption | text+graph | gated/torch | 0.6798 | 0.6358 | [0.607, 0.665] |
+| ai_adoption | text+stats+graph | late/torch | 0.6814 | 0.6507 | [0.629, 0.672] |
+| cohort | text | gated/torch | 0.8885 | 0.8788 | [0.853, 0.904] |
+| cohort | stats | logistic/sklearn | 0.3948 | 0.3985 | [0.373, 0.424] |
+| cohort | graph | svm/sklearn | 0.4865 | 0.4893 | [0.458, 0.521] |
+| cohort | text+stats | gated/torch | 0.8871 | 0.8851 | [0.859, 0.911] |
+| cohort | text+graph | gated/torch | 0.9003 | 0.8763 | [0.854, 0.899] |
+| cohort | text+stats+graph | stacked/torch | 0.8889 | 0.8787 | [0.848, 0.910] |
+
+### Paired text-vs-fusion deltas (primary target = ai_adoption)
+
+| target | fusion combo | mean Δ | 95% CI | real_effect (CI excl. 0 & Δ≥0.01) | McNemar p (seed=0) |
+|---|---|---|---|---|---|
+| ai_adoption | text+stats | **+0.0142** | [0.0031, 0.0253] | **True** | 0.581 |
+| ai_adoption | text+graph | -0.0087 | [-0.0208, 0.0035] | False | 0.824 |
+| ai_adoption | text+stats+graph | +0.0062 | [-0.0092, 0.0217] | False | 1.000 |
+| cohort | text+stats | +0.0063 | [-0.0031, 0.0157] | False | 1.000 |
+| cohort | text+graph | -0.0025 | [-0.0198, 0.0149] | False | 0.688 |
+| cohort | text+stats+graph | -0.0001 | [-0.0269, 0.0267] | False | 1.000 |
+
+### Chance baseline (majority-class macro-F1, mean over 10 seeds)
+
+- ai_adoption: 0.3367 (CI ≈ [0.3366, 0.3368])
+- cohort: 0.2959 (constant — class proportions stable across seeds)
+
+### Verdict (per the frozen protocol, §"What 'supported' means downstream")
+
+**Fusion does NOT add signal over text on the primary target (ai_adoption) by the §7
+criterion.** The only "real" effect is **text+stats** (Δ=+0.0142, CI excludes 0, ≥+0.01) —
+i.e. **graph-stats**, not the GIN embedding, is the complementary modality. Both
+text+graph and text+stats+graph deltas have CIs that include 0 on ai_adoption — under
+repeated evaluation, the previously reported text+graph gains do not survive.
+
+The cohort target (sanity-only, confounded) shows no real effects in either direction —
+consistent with all combos hovering near the gated/text baseline (0.876-0.885), within
+noise of each other.
+
+**Implication for Phase 2 (`n70`):** the kill-criterion question — does GIN topology
+(full vs structure-only vs label-bag) add signal — is now sharper: full-GIN fusion
+(text+graph) is *not* a real effect on ai_adoption even before the label-bag ablation.
+Phase 2 should determine whether structure-only GIN clears the chance baseline at all;
+if not, combined with this result, the topology hypothesis is dead on this dataset and
+graph-stats (not GNN-derived graph structure) is the dataset's actual complementary
+signal.

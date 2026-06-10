@@ -89,16 +89,16 @@ def _build_embeddings(
 # ═══════════════════════════════════════════════════════════════════════════════
 
 
-def _run_torch(cfg: ExperimentConfig) -> dict:
-    """Run a PyTorch experiment."""
-    train_data, val_data, test_data = _load_data(cfg)
+def _run_torch_on_data(
+    cfg: ExperimentConfig,
+    train_data: dict,
+    val_data: dict,
+    test_data: dict,
+) -> dict:
+    """Build, train, and evaluate a PyTorch model on pre-sliced data.
 
-    print(
-        f"  Train: {len(train_data['labels'])}, "
-        f"Val: {len(val_data['labels'])}, "
-        f"Test: {len(test_data['labels'])}"
-    )
-
+    No file I/O — returns the fitted model alongside training/test results.
+    """
     model = build_classifier(
         architecture=cfg.architecture,
         modality_dims=cfg.modality_dims,
@@ -121,6 +121,24 @@ def _run_torch(cfg: ExperimentConfig) -> dict:
     trainer = Trainer(model, train_cfg)
     train_results = trainer.fit(train_data, val_data)
     test_metrics = trainer.evaluate(test_data)
+
+    return {"model": model, "train_results": train_results, "test_metrics": test_metrics}
+
+
+def _run_torch(cfg: ExperimentConfig) -> dict:
+    """Run a PyTorch experiment, loading data and saving outputs to disk."""
+    train_data, val_data, test_data = _load_data(cfg)
+
+    print(
+        f"  Train: {len(train_data['labels'])}, "
+        f"Val: {len(val_data['labels'])}, "
+        f"Test: {len(test_data['labels'])}"
+    )
+
+    fit_result = _run_torch_on_data(cfg, train_data, val_data, test_data)
+    model = fit_result["model"]
+    train_results = fit_result["train_results"]
+    test_metrics = fit_result["test_metrics"]
 
     import torch
 
@@ -153,16 +171,16 @@ def _run_torch(cfg: ExperimentConfig) -> dict:
 # ═══════════════════════════════════════════════════════════════════════════════
 
 
-def _run_sklearn(cfg: ExperimentConfig) -> dict:
-    """Run a sklearn experiment."""
-    train_data, val_data, test_data = _load_data(cfg)
+def _run_sklearn_on_data(
+    cfg: ExperimentConfig,
+    train_data: dict,
+    val_data: dict,
+    test_data: dict,
+) -> dict:
+    """Build, fit, and evaluate a sklearn model on pre-sliced data.
 
-    print(
-        f"  Train: {len(train_data['labels'])}, "
-        f"Val: {len(val_data['labels'])}, "
-        f"Test: {len(test_data['labels'])}"
-    )
-
+    No file I/O — returns the fitted model alongside training/test results.
+    """
     model = SklearnClassifier(
         architecture=cfg.architecture,
         modality_names=sorted(cfg.modalities),
@@ -207,12 +225,30 @@ def _run_sklearn(cfg: ExperimentConfig) -> dict:
         "val_f1s": [],
     }
 
+    return {"model": model, "train_results": train_results, "test_metrics": test_metrics}
+
+
+def _run_sklearn(cfg: ExperimentConfig) -> dict:
+    """Run a sklearn experiment, loading data and saving outputs to disk."""
+    train_data, val_data, test_data = _load_data(cfg)
+
+    print(
+        f"  Train: {len(train_data['labels'])}, "
+        f"Val: {len(val_data['labels'])}, "
+        f"Test: {len(test_data['labels'])}"
+    )
+
+    fit_result = _run_sklearn_on_data(cfg, train_data, val_data, test_data)
+    model = fit_result["model"]
+    train_results = fit_result["train_results"]
+    test_metrics = fit_result["test_metrics"]
+
     output_dir = Path(cfg.output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
     joblib.dump(model, output_dir / "model.joblib")
 
     # Placeholder curve for sklearn (val F1 as single bar)
-    _save_sklearn_curve(val_f1, output_dir / "curves.png")
+    _save_sklearn_curve(train_results["best_val_f1"], output_dir / "curves.png")
 
     return {
         "train_results": train_results,
@@ -247,6 +283,26 @@ def _save_sklearn_curve(val_f1: float, save_path: Path) -> None:
 # ═══════════════════════════════════════════════════════════════════════════════
 # Unified runner
 # ═══════════════════════════════════════════════════════════════════════════════
+
+
+def run_experiment_on_data(
+    cfg: ExperimentConfig,
+    train_data: dict,
+    val_data: dict,
+    test_data: dict,
+) -> dict:
+    """Build, fit, and evaluate ``cfg`` on pre-sliced data dicts.
+
+    Dispatches to the torch or sklearn backend based on ``cfg.backend``. Performs
+    no file I/O — used by both ``train_run`` (which adds file I/O) and
+    ``repeated_run`` (which runs many seeds without persisting models).
+
+    Returns:
+        Dict with keys ``model``, ``train_results``, ``test_metrics``.
+    """
+    if cfg.backend == "sklearn":
+        return _run_sklearn_on_data(cfg, train_data, val_data, test_data)
+    return _run_torch_on_data(cfg, train_data, val_data, test_data)
 
 
 def run_experiment(cfg: ExperimentConfig) -> dict:

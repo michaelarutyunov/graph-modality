@@ -54,10 +54,10 @@ class SklearnClassifier:
         self.n_classes = n_classes
 
         cls = SKLEARN_CLASSES[architecture]
-        self.model: ClassifierMixin = cls(
-            class_weight="balanced",
-            random_state=seed,
-        )
+        if architecture == "gradient_boost":
+            self.model: ClassifierMixin = cls(random_state=seed)
+        else:
+            self.model = cls(class_weight="balanced", random_state=seed)
 
     def _extract(self, embeddings: dict[str, np.ndarray]) -> np.ndarray:
         """Concatenate selected modalities into a feature matrix.

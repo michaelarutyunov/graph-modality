@@ -19,6 +19,7 @@ dependencies = [
     "torch>=2.3",
     "torchvision>=0.18",
     "torch-geometric>=2.5",
+    "statsmodels>=0.14.6",
 ]
 
 [tool.uv.sources]
