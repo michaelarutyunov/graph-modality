@@ -18,9 +18,22 @@ from typing import Any
 # ── ontology constants ────────────────────────────────────────────────
 
 ENTITY_TYPES = frozenset({"Construct", "Value", "Stance", "CognitiveStyleMarker"})
-RELATION_TYPES = frozenset({"SERVES", "EXPRESSED_VIA", "MODULATED_BY", "CONFLICTS_WITH"})
+RELATION_TYPES = frozenset(
+    {
+        "SERVES",
+        "EXPRESSED_VIA",
+        "MODULATED_BY",
+        "CONFLICTS_WITH",
+        "SUBSUMES",
+        "IMPLIES",
+    }
+)
 VALID_VALENCES = frozenset({"positive", "negative", "mixed", "ambivalent"})
-MAX_COGNITIVE_STYLE_MARKERS = 2
+VALID_GROUNDING = frozenset({"explicit", "inferred"})
+# Relations that are inherently inferential and must cite both endpoint spans (ADR-0004)
+INFERENTIAL_RELATIONS = frozenset({"SUBSUMES", "IMPLIES"})
+# CSM ceiling removed in v4 — quality controlled by recurrence requirement instead
+CSM_MIN_SPANS = 2
 
 
 # ── public API ────────────────────────────────────────────────────────
@@ -47,7 +60,6 @@ def validate_graph(graph: dict[str, Any]) -> list[str]:
     node_type: dict[str, str] = {n["id"]: n["type"] for n in nodes}
 
     # ── per-node checks ────────────────────────────────────────────
-    csm_count = 0
 
     for n in nodes:
         nid = n.get("id", "?")
@@ -57,14 +69,66 @@ def validate_graph(graph: dict[str, Any]) -> list[str]:
         if ntype and ntype not in ENTITY_TYPES:
             violations.append(f"[{tid}] {nid}: unknown entity type '{ntype}'")
 
-        # Construct: bipolarity
-        if ntype == "Construct" and not n.get("label_negative"):
-            n["bipolarity_complete"] = False
-            violations.append(
-                f"[{tid}] {nid}: missing negative pole (label='{n.get('label', '?')}')"
-            )
+        # --- grounding checks (v4: lists required) ---
+        if ntype == "Construct":
+            # Constructs use per-pole grounding lists
+            pos_spans = n.get("grounding_spans_positive")
+            neg_spans = n.get("grounding_spans_negative")
+            if pos_spans is None and neg_spans is None:
+                # v3 backward compat: check old field name too
+                old_span = n.get("grounding_span")
+                if old_span:
+                    violations.append(
+                        f"[{tid}] {nid}: using deprecated 'grounding_span' on Construct "
+                        f"— use 'grounding_spans_positive' / 'grounding_spans_negative'"
+                    )
+                else:
+                    violations.append(
+                        f"[{tid}] {nid}: Construct missing grounding_spans_positive "
+                        f"and grounding_spans_negative"
+                    )
+            # bipolarity_complete must be consistent with grounding
+            bc = n.get("bipolarity_complete")
+            if (
+                bc is True
+                and pos_spans is not None
+                and neg_spans is not None
+                and (len(pos_spans) == 0 or len(neg_spans) == 0)
+            ):
+                violations.append(
+                    f"[{tid}] {nid}: bipolarity_complete=true but one pole has "
+                    f"empty grounding list "
+                    f"(positive={len(pos_spans)} spans, negative={len(neg_spans)} spans)"
+                )
+            if not n.get("label_negative") and bc is not False:
+                n["bipolarity_complete"] = False
+                violations.append(
+                    f"[{tid}] {nid}: missing negative pole label (label='{n.get('label', '?')}')"
+                )
+        else:
+            # Value, Stance, CSM: use unified grounding_spans list
+            spans = n.get("grounding_spans")
+            if spans is None:
+                old_span = n.get("grounding_span")
+                if old_span:
+                    violations.append(
+                        f"[{tid}] {nid}: using deprecated 'grounding_span' "
+                        f"— use 'grounding_spans' (list)"
+                    )
+                else:
+                    violations.append(f"[{tid}] {nid}: {ntype} missing grounding_spans")
 
-        # Stance: valence
+        # --- CSM recurrence check (v4: ≥2 spans required) ---
+        if ntype == "CognitiveStyleMarker":
+            spans = n.get("grounding_spans", [])
+            if isinstance(spans, list) and len(spans) < CSM_MIN_SPANS:
+                violations.append(
+                    f"[{tid}] {nid}: CognitiveStyleMarker has only {len(spans)} "
+                    f"grounding span(s); at least {CSM_MIN_SPANS} required "
+                    f"(from different [Human] turns)"
+                )
+
+        # --- Stance: valence ---
         if ntype == "Stance":
             valence = n.get("valence")
             if valence is None:
@@ -74,17 +138,6 @@ def validate_graph(graph: dict[str, Any]) -> list[str]:
                     f"[{tid}] {nid}: invalid valence '{valence}' "
                     f"(expected one of {sorted(VALID_VALENCES)})"
                 )
-
-        # CognitiveStyleMarker: count for ceiling check
-        if ntype == "CognitiveStyleMarker":
-            csm_count += 1
-
-    # ── CSM ceiling ────────────────────────────────────────────────
-    if csm_count > MAX_COGNITIVE_STYLE_MARKERS:
-        violations.append(
-            f"[{tid}] CognitiveStyleMarker count {csm_count} "
-            f"exceeds ceiling of {MAX_COGNITIVE_STYLE_MARKERS}"
-        )
 
     # ── edge checks ─────────────────────────────────────────────────
     for e in edges:
@@ -102,11 +155,68 @@ def validate_graph(graph: dict[str, Any]) -> list[str]:
         if rel not in RELATION_TYPES:
             violations.append(f"[{tid}] {src}→{tgt}: unknown relation '{rel}'")
 
+        # edge rationale required (v4)
+        if not e.get("rationale"):
+            violations.append(f"[{tid}] {src} --[{rel}]--> {tgt}: missing rationale")
+
+        # edge grounding required (v4, ADR-0004): explicit | inferred
+        grounding = e.get("grounding")
+        if grounding is None:
+            violations.append(f"[{tid}] {src} --[{rel}]--> {tgt}: missing grounding")
+        elif grounding not in VALID_GROUNDING:
+            violations.append(
+                f"[{tid}] {src} --[{rel}]--> {tgt}: invalid grounding '{grounding}' "
+                f"(expected one of {sorted(VALID_GROUNDING)})"
+            )
+        # inferential relations must be grounded as 'inferred' and cite endpoint spans
+        if rel in INFERENTIAL_RELATIONS and grounding == "explicit":
+            violations.append(
+                f"[{tid}] {src} --[{rel}]--> {tgt}: {rel} is inherently inferential "
+                f"but marked grounding='explicit'"
+            )
+
         # disallowed Stance → Value direct edge
         if node_type.get(src) == "Stance" and node_type.get(tgt) == "Value":
             violations.append(
                 f"[{tid}] direct Stance→Value edge disallowed: {src} --[{rel}]--> {tgt}"
             )
+
+        # relation type / node type consistency (v4 type signatures)
+        src_type = node_type.get(src, "")
+        tgt_type = node_type.get(tgt, "")
+        if src_type and tgt_type:
+            if rel == "SERVES" and not (src_type == "Construct" and tgt_type == "Value"):
+                violations.append(
+                    f"[{tid}] {src} --[SERVES]--> {tgt}: "
+                    f"SERVES requires Construct→Value, got {src_type}→{tgt_type}"
+                )
+            if rel == "EXPRESSED_VIA" and not (src_type == "Stance" and tgt_type == "Construct"):
+                violations.append(
+                    f"[{tid}] {src} --[EXPRESSED_VIA]--> {tgt}: "
+                    f"EXPRESSED_VIA requires Stance→Construct, got {src_type}→{tgt_type}"
+                )
+            if rel == "MODULATED_BY" and not (
+                src_type in ("Construct", "Stance") and tgt_type == "CognitiveStyleMarker"
+            ):
+                violations.append(
+                    f"[{tid}] {src} --[MODULATED_BY]--> {tgt}: "
+                    f"MODULATED_BY requires Construct|Stance→CSM, "
+                    f"got {src_type}→{tgt_type}"
+                )
+            if rel == "SUBSUMES" and not (src_type == "Value" and tgt_type == "Value"):
+                violations.append(
+                    f"[{tid}] {src} --[SUBSUMES]--> {tgt}: "
+                    f"SUBSUMES requires Value→Value, got {src_type}→{tgt_type}"
+                )
+            if rel == "IMPLIES" and not (src_type == "Construct" and tgt_type == "Construct"):
+                violations.append(
+                    f"[{tid}] {src} --[IMPLIES]--> {tgt}: "
+                    f"IMPLIES requires Construct→Construct, got {src_type}→{tgt_type}"
+                )
+
+    # ── domain check (v4) ───────────────────────────────────────────
+    if not graph.get("domain"):
+        violations.append(f"[{tid}] missing 'domain' field")
 
     return violations
 

@@ -226,6 +226,8 @@ s1_data/graphs/free_text/*
 !s1_data/graphs/free_text/.gitkeep
 s1_data/graphs/canonical/*
 !s1_data/graphs/canonical/.gitkeep
+# all extracted graphs are gitignored regardless of version subdir (v4, v4_think, …)
+s1_data/graphs/**/*.json
 cache/*
 !cache/.gitkeep
 results/*

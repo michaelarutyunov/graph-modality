@@ -1,0 +1,659 @@
+You are an expert cognitive mapping assistant. Extract a structured concept graph
+from the interview transcript below. Return a valid JSON object only — no preamble,
+no explanation, no markdown fences.
+
+DOMAIN
+======
+{domain}
+
+ONTOLOGY
+========
+
+Entity types:
+
+- Construct: a bipolar cognitive dimension used to evaluate the domain under
+  discussion. Each pole must be independently grounded in the transcript:
+  grounding_spans_positive lists verbatim [Human] phrases supporting the positive
+  pole; grounding_spans_negative lists phrases supporting the negative pole. Set
+  bipolarity_complete to true ONLY when both lists are non-empty. If only one pole
+  is grounded, leave the other list empty and set bipolarity_complete to false.
+  Do NOT invent the opposite pole — every pole must be traceable to a [Human] turn.
+
+- Value: a terminal motivational state that constructs serve. High-abstraction,
+  representing what the respondent ultimately cares about. The number of distinct
+  grounding_spans reflects the value's salience in the interview.
+
+- Stance: a valenced attitude position toward some aspect of the domain. Required
+  attribute: valence (see Valence Taxonomy below). grounding_spans may include
+  multiple spans if the stance recurs across turns.
+
+- CognitiveStyleMarker (CSM): a stable processing tendency — HOW the person
+  reasons, not WHAT they care about. To qualify as a CSM, the pattern must appear
+  across at least two different [Human] turns (recurrence as evidence of "stable
+  tendency"). Each CSM's grounding_spans must include at least one span from each
+  of two distinct turns. There is no fixed ceiling on CSM count; extract every
+  pattern that meets the recurrence test.
+
+Valence taxonomy (Stance nodes only):
+
+  positive  — favourable disposition toward the object
+  negative  — unfavourable disposition toward the object
+  mixed     — different valence toward different aspects of the same object
+              (e.g., positive about AI for routine tasks, negative for creative work)
+  ambivalent — simultaneous conflicting valence toward the same aspect
+              (e.g., "I trust it and I don't trust it at the same time")
+
+  When uncertain, prefer "mixed" over "ambivalent" — ambivalent requires evidence
+  of simultaneous conflict, not merely different attitudes toward different facets.
+
+Relation types:
+
+  SERVES         Construct → Value
+    The construct is instrumental to achieving the value.
+    Include a one-line rationale.
+
+  EXPRESSED_VIA  Stance → Construct
+    The stance is expressed through this evaluative dimension.
+    Include a one-line rationale.
+
+  MODULATED_BY   Construct → CognitiveStyleMarker
+                 OR Stance → CognitiveStyleMarker
+    The construct or stance is shaped by a cognitive processing tendency.
+    Include a one-line rationale.
+
+  CONFLICTS_WITH Construct ↔ Construct (undirected)
+    Use ONLY when the respondent explicitly expresses tension or contradiction
+    between the two constructs. The rationale MUST quote the [Human] span that
+    shows the conflict.
+
+  SUBSUMES       Value → Value (directed: more specific → broader)
+    One value is a specific instance or component of a broader value.
+    This relation is INFERRED (respondents rarely state value hierarchies
+    explicitly). Set grounding to "inferred" and make the rationale cite the
+    grounding spans of BOTH values that license the inference.
+
+  IMPLIES        Construct → Construct (directed)
+    One construct logically entails or presupposes the other.
+    This relation is INFERRED. Set grounding to "inferred" and make the
+    rationale cite the grounding spans of BOTH constructs that license the
+    inference.
+
+CONSTRAINTS
+===========
+
+1. Extract nodes from [Human] turns only. Use [AI] turns as context only.
+
+2. Every node must include verifiable grounding:
+   - Constructs: grounding_spans_positive (list) AND grounding_spans_negative
+     (list). bipolarity_complete is true ONLY when both lists are non-empty.
+   - Values, Stances, CSMs: grounding_spans (list of verbatim [Human] phrases).
+     A single-element list is fine when the entity appears once; longer lists
+     reflect higher salience.
+
+3. Every edge must include a rationale (one-line explanation of why the relation
+   holds). For CONFLICTS_WITH edges, the rationale MUST quote the [Human] span
+   demonstrating the conflict.
+
+3a. Every edge must include a grounding field, one of:
+   - "explicit": the relation itself is stated or directly quotable in a [Human]
+     span; the rationale quotes that span.
+   - "inferred": the relation is your inference, licensed by the endpoint nodes'
+     grounding spans; the rationale must cite the grounding spans of BOTH endpoint
+     nodes that license it.
+   SUBSUMES and IMPLIES are always "inferred". CONFLICTS_WITH is always "explicit".
+   Do NOT invent relations you cannot trace to grounded spans on both endpoints.
+
+4. No direct Stance → Value edges. Stances must connect to Values via Constructs.
+
+5. CognitiveStyleMarkers: extract every pattern that meets the recurrence test
+   (spans from at least two different [Human] turns). There is no ceiling on CSM
+   count — do NOT cap at 2.
+
+6. Extract every node and edge that meets the above criteria. Do not artificially
+   limit counts. If the transcript contains no evaluative content about the
+   domain, it is acceptable and correct to return zero nodes and zero edges.
+
+7. Discard any node you cannot ground in at least one [Human] turn.
+
+OUTPUT SCHEMA
+=============
+
+{
+  "transcript_id": "string",
+  "domain": "string",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct | Value | Stance | CognitiveStyleMarker",
+      "label": "string (positive-pole label for Constructs)",
+      "label_negative": "string or null (Construct only)",
+      "bipolarity_complete": "bool (Construct only — true iff both pole span lists are non-empty)",
+      "grounding_spans_positive": ["string", ...] or null (Construct only),
+      "grounding_spans_negative": ["string", ...] or null (Construct only),
+      "valence": "positive | negative | mixed | ambivalent | null (Stance only)",
+      "grounding_spans": ["string", ...] (Value, Stance, CSM — omit for Constructs)"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "SERVES | EXPRESSED_VIA | MODULATED_BY | CONFLICTS_WITH | SUBSUMES | IMPLIES",
+      "grounding": "explicit | inferred",
+      "rationale": "string (one-line; CONFLICTS_WITH quotes the conflict span; SUBSUMES/IMPLIES cite both endpoint spans)"
+    }
+  ]
+}
+
+EXAMPLES (use as quality reference for label specificity and structure)
+========================================================================
+
+Example 1 — Workforce cohort (task-oriented, pragmatic constructs):
+{
+  "transcript_id": "work_0981",
+  "domain": "AI's role in professional work",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "AI as comprehension aid for complex content",
+      "label_negative": "Independent struggle with difficult material",
+      "bipolarity_complete": true,
+      "grounding_spans_positive": [
+        "Reading research papers and summarizing contents that i don't quite understand"
+      ],
+      "grounding_spans_negative": [
+        "sometimes I just have to sit there and work through it on my own"
+      ]
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "AI as instrumental task tool",
+      "label_negative": "AI as collaborative ongoing partner",
+      "bipolarity_complete": true,
+      "grounding_spans_positive": [
+        "I'm getting what i need and then moving on"
+      ],
+      "grounding_spans_negative": [
+        "sometimes I go back and forth with it, refining things together"
+      ]
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI reliability and accuracy",
+      "label_negative": "AI hallucination and fabrication",
+      "bipolarity_complete": true,
+      "grounding_spans_positive": [
+        "it's usually pretty accurate when I ask for factual information"
+      ],
+      "grounding_spans_negative": [
+        "AI has also hallucinated citations for an entire paragraph which has made me extremely paranoid"
+      ]
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "Workplace-sanctioned AI use",
+      "label_negative": null,
+      "bipolarity_complete": false,
+      "grounding_spans_positive": [
+        "my colleagues have asked me to use AI if i'm struggling on a section during a meeting"
+      ],
+      "grounding_spans_negative": []
+    },
+    {
+      "id": "n5",
+      "type": "Construct",
+      "label": "Reserved domain for personal and creative judgment",
+      "label_negative": "AI-delegated personal and creative tasks",
+      "bipolarity_complete": true,
+      "grounding_spans_positive": [
+        "I don't believe I'll ever use it for personal messages and creative labor"
+      ],
+      "grounding_spans_negative": [
+        "maybe someday it'll draft my messages but that still feels wrong to me"
+      ]
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Epistemic understanding",
+      "grounding_spans": [
+        "ask it to resummarize it for me",
+        "ask targeted questions to figure it out"
+      ]
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Professional competence and accuracy",
+      "grounding_spans": [
+        "AI caught a mistake before I sent an email to an important collaborator"
+      ]
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Personal autonomy and self-expression",
+      "grounding_spans": [
+        "Everything else I tend to do on my own"
+      ]
+    },
+    {
+      "id": "n9",
+      "type": "Value",
+      "label": "Career success and professional standing",
+      "grounding_spans": [
+        "it matters that my colleagues see my work as reliable and careful"
+      ]
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Pragmatic satisfaction with AI as error-checker",
+      "valence": "positive",
+      "grounding_spans": [
+        "AI caught a mistake before I sent an email to an important collaborator"
+      ]
+    },
+    {
+      "id": "n11",
+      "type": "Stance",
+      "label": "Wariness toward AI due to hallucination experience",
+      "valence": "negative",
+      "grounding_spans": [
+        "AI has also hallucinated citations for an entire paragraph"
+      ]
+    },
+    {
+      "id": "n12",
+      "type": "Stance",
+      "label": "Optimistic openness to expanding AI use",
+      "valence": "positive",
+      "grounding_spans": [
+        "I think I'll use it more for research as the capability evolves"
+      ]
+    },
+    {
+      "id": "n13",
+      "type": "Stance",
+      "label": "Firm resistance to AI in personal domains",
+      "valence": "negative",
+      "grounding_spans": [
+        "I don't believe I'll ever use it for personal messages and creative labor"
+      ]
+    },
+    {
+      "id": "n14",
+      "type": "CognitiveStyleMarker",
+      "label": "Iterative targeted questioning — breaks problems into sub-questions",
+      "grounding_spans": [
+        "If that summary still doesn't help me understand, I'll ask targeted questions",
+        "I keep refining my question until I get what I need"
+      ]
+    },
+    {
+      "id": "n15",
+      "type": "CognitiveStyleMarker",
+      "label": "Domain compartmentalisation — firm boundaries around AI-appropriate tasks",
+      "grounding_spans": [
+        "I'll try to figure out the figures first before asking AI",
+        "I don't believe I'll ever use it for personal messages"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n6",
+      "relation": "SERVES",
+      "grounding": "inferred",
+      "rationale": "Using AI to understand complex content serves the goal of epistemic understanding"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES",
+      "grounding": "inferred",
+      "rationale": "Instrumental task use of AI directly supports professional competence"
+    },
+    {
+      "source": "n3",
+      "target": "n7",
+      "relation": "SERVES",
+      "grounding": "inferred",
+      "rationale": "Reliable AI outputs are a prerequisite for professional accuracy"
+    },
+    {
+      "source": "n4",
+      "target": "n7",
+      "relation": "SERVES",
+      "grounding": "inferred",
+      "rationale": "Colleague-sanctioned AI use reinforces professional competence norms"
+    },
+    {
+      "source": "n5",
+      "target": "n8",
+      "relation": "SERVES",
+      "grounding": "inferred",
+      "rationale": "Reserving personal domains for human judgment preserves autonomy"
+    },
+    {
+      "source": "n10",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA",
+      "grounding": "inferred",
+      "rationale": "Satisfaction with error-checking is expressed through the reliability construct"
+    },
+    {
+      "source": "n11",
+      "target": "n3",
+      "relation": "EXPRESSED_VIA",
+      "grounding": "inferred",
+      "rationale": "Wariness about hallucinations is expressed through the same reliability construct"
+    },
+    {
+      "source": "n12",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA",
+      "grounding": "inferred",
+      "rationale": "Optimism about expanding AI use is expressed through the comprehension construct"
+    },
+    {
+      "source": "n13",
+      "target": "n5",
+      "relation": "EXPRESSED_VIA",
+      "grounding": "inferred",
+      "rationale": "Resistance to personal-domain AI is expressed through the reserved-domain construct"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "relation": "MODULATED_BY",
+      "grounding": "inferred",
+      "rationale": "Comprehension strategy is shaped by iterative questioning cognitive style"
+    },
+    {
+      "source": "n5",
+      "target": "n15",
+      "relation": "MODULATED_BY",
+      "grounding": "inferred",
+      "rationale": "Domain boundaries are shaped by compartmentalisation tendency"
+    },
+    {
+      "source": "n11",
+      "target": "n14",
+      "relation": "MODULATED_BY",
+      "grounding": "inferred",
+      "rationale": "Wariness manifests through targeted verification rather than blanket rejection"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "relation": "CONFLICTS_WITH",
+      "grounding": "explicit",
+      "rationale": "Respondent treats AI as quick transactional tool for work ('I'm getting what i need and then moving on') yet firmly resists AI in personal domains ('I don't believe I'll ever use it for personal messages') — instrumental embrace vs. domain refusal are in tension"
+    },
+    {
+      "source": "n7",
+      "target": "n9",
+      "relation": "SUBSUMES",
+      "grounding": "inferred",
+      "rationale": "Professional competence ('AI caught a mistake before I sent an email to an important collaborator') is a specific component of broader career success ('it matters that my colleagues see my work as reliable and careful')"
+    },
+    {
+      "source": "n4",
+      "target": "n2",
+      "relation": "IMPLIES",
+      "grounding": "inferred",
+      "rationale": "Workplace sanction of AI use ('my colleagues have asked me to use AI if i'm struggling on a section during a meeting') entails instrumental task deployment ('I'm getting what i need and then moving on')"
+    }
+  ]
+}
+
+Example 2 — Scientist cohort (abstract, method-oriented constructs):
+{
+  "transcript_id": "science_0050",
+  "domain": "AI's role in scientific research",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "Construct",
+      "label": "Task verifiability enabling trust",
+      "label_negative": "Opaque outputs precluding trust",
+      "bipolarity_complete": true,
+      "grounding_spans_positive": [
+        "I prioritise giving AI tasks that can be checked easily"
+      ],
+      "grounding_spans_negative": [
+        "when I can't verify what the model did, I can't trust the output at all"
+      ]
+    },
+    {
+      "id": "n2",
+      "type": "Construct",
+      "label": "Task scope manageability for AI",
+      "label_negative": "Task scope too large for reliable AI performance",
+      "bipolarity_complete": true,
+      "grounding_spans_positive": [
+        "for small, well-defined subproblems it works quite reliably"
+      ],
+      "grounding_spans_negative": [
+        "AI struggles when the size of the project is too big"
+      ]
+    },
+    {
+      "id": "n3",
+      "type": "Construct",
+      "label": "AI adherence to researcher-specified method",
+      "label_negative": "AI deviation from requested approach",
+      "bipolarity_complete": true,
+      "grounding_spans_positive": [
+        "when it follows the method I specified, the results are consistent"
+      ],
+      "grounding_spans_negative": [
+        "instead of assisting in solving a prompt the way I request, sometimes AI will try to optimise its methods"
+      ]
+    },
+    {
+      "id": "n4",
+      "type": "Construct",
+      "label": "AI as genuine intellectual collaborator generating novel ideas",
+      "label_negative": null,
+      "bipolarity_complete": false,
+      "grounding_spans_positive": [
+        "a tool that is smart enough to bounce complex ideas off of and have its own interesting ideas"
+      ],
+      "grounding_spans_negative": []
+    },
+    {
+      "id": "n5",
+      "type": "Value",
+      "label": "Research integrity and methodological control",
+      "grounding_spans": [
+        "I have requested a certain method because I know it will work as intended",
+        "the method I choose matters as much as the result I get"
+      ]
+    },
+    {
+      "id": "n6",
+      "type": "Value",
+      "label": "Scientific advancement and knowledge creation",
+      "grounding_spans": [
+        "push the boundaries of science, it would be a great help"
+      ]
+    },
+    {
+      "id": "n7",
+      "type": "Value",
+      "label": "Productivity and efficient task completion",
+      "grounding_spans": [
+        "It was a big project with a tight deadline"
+      ]
+    },
+    {
+      "id": "n8",
+      "type": "Value",
+      "label": "Reproducible computational workflows",
+      "grounding_spans": [
+        "I need other researchers to be able to run my code and get the same results"
+      ]
+    },
+    {
+      "id": "n9",
+      "type": "Stance",
+      "label": "Cautious conditional trust in AI for bounded tasks",
+      "valence": "ambivalent",
+      "grounding_spans": [
+        "AI has let me down a lot of times, so I dont trust it to work without supervision"
+      ]
+    },
+    {
+      "id": "n10",
+      "type": "Stance",
+      "label": "Aspirational openness toward AI as intellectual partner",
+      "valence": "positive",
+      "grounding_spans": [
+        "if AI was able to produce its own mathematical theorems and push the boundaries of science"
+      ]
+    },
+    {
+      "id": "n11",
+      "type": "CognitiveStyleMarker",
+      "label": "Systematic decomposition of problems into verifiable sub-tasks",
+      "grounding_spans": [
+        "I will have verification code ready to go",
+        "I break every problem into pieces I can check independently before moving on"
+      ]
+    },
+    {
+      "id": "n12",
+      "type": "CognitiveStyleMarker",
+      "label": "Experience-driven pragmatic calibration of tool use",
+      "grounding_spans": [
+        "I could focus on the larger parts of the project that AI couldn't handle",
+        "after a few failures I learned what kinds of tasks to delegate and what to keep"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "n9",
+      "target": "n1",
+      "relation": "EXPRESSED_VIA",
+      "grounding": "inferred",
+      "rationale": "Conditional trust is expressed through the verifiability construct — trust is contingent on being able to check"
+    },
+    {
+      "source": "n9",
+      "target": "n2",
+      "relation": "EXPRESSED_VIA",
+      "grounding": "inferred",
+      "rationale": "The cautious stance is also expressed through scope concerns — trust depends on task size"
+    },
+    {
+      "source": "n10",
+      "target": "n4",
+      "relation": "EXPRESSED_VIA",
+      "grounding": "inferred",
+      "rationale": "Aspirational openness is expressed through the intellectual collaborator construct"
+    },
+    {
+      "source": "n1",
+      "target": "n5",
+      "relation": "SERVES",
+      "grounding": "inferred",
+      "rationale": "Requiring verifiable tasks serves the goal of methodological control"
+    },
+    {
+      "source": "n3",
+      "target": "n5",
+      "relation": "SERVES",
+      "grounding": "inferred",
+      "rationale": "Insisting on method adherence directly serves research integrity"
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "relation": "SERVES",
+      "grounding": "inferred",
+      "rationale": "Matching task scope to AI capability serves efficient task completion"
+    },
+    {
+      "source": "n1",
+      "target": "n7",
+      "relation": "SERVES",
+      "grounding": "inferred",
+      "rationale": "Verifiability enables trust which enables productive delegation"
+    },
+    {
+      "source": "n4",
+      "target": "n6",
+      "relation": "SERVES",
+      "grounding": "inferred",
+      "rationale": "Treating AI as an intellectual collaborator serves the goal of scientific advancement"
+    },
+    {
+      "source": "n1",
+      "target": "n11",
+      "relation": "MODULATED_BY",
+      "grounding": "inferred",
+      "rationale": "The verifiability construct is shaped by systematic decomposition cognitive style"
+    },
+    {
+      "source": "n2",
+      "target": "n11",
+      "relation": "MODULATED_BY",
+      "grounding": "inferred",
+      "rationale": "Scope management is also shaped by systematic decomposition"
+    },
+    {
+      "source": "n3",
+      "target": "n12",
+      "relation": "MODULATED_BY",
+      "grounding": "inferred",
+      "rationale": "Method adherence concern is shaped by experience-driven calibration"
+    },
+    {
+      "source": "n9",
+      "target": "n12",
+      "relation": "MODULATED_BY",
+      "grounding": "inferred",
+      "rationale": "The cautiously-trusting stance is shaped by pragmatic experience calibration"
+    },
+    {
+      "source": "n3",
+      "target": "n2",
+      "relation": "CONFLICTS_WITH",
+      "grounding": "explicit",
+      "rationale": "Respondent states 'sometimes AI will try to optimise its methods' (method deviation) yet also notes 'AI struggles when the size of the project is too big' — AI both overreaches (method deviation) and underperforms (scope limits), creating tension between wanting it to follow instructions and needing to constrain it"
+    },
+    {
+      "source": "n4",
+      "target": "n1",
+      "relation": "CONFLICTS_WITH",
+      "grounding": "explicit",
+      "rationale": "Wanting AI as a genuine intellectual collaborator ('have its own interesting ideas') conflicts with needing every task to be verifiable ('tasks that can be checked easily') — novel ideas are inherently hard to verify"
+    },
+    {
+      "source": "n8",
+      "target": "n5",
+      "relation": "SUBSUMES",
+      "grounding": "inferred",
+      "rationale": "Reproducible workflows ('I need other researchers to be able to run my code and get the same results') are a specific operationalisation of broader methodological control ('the method I choose matters as much as the result I get')"
+    },
+    {
+      "source": "n1",
+      "target": "n2",
+      "relation": "IMPLIES",
+      "grounding": "inferred",
+      "rationale": "Requiring verifiability ('I prioritise giving AI tasks that can be checked easily') entails constraining task scope ('for small, well-defined subproblems it works quite reliably')"
+    }
+  ]
+}
+
+TRANSCRIPT
+==========
+{transcript}

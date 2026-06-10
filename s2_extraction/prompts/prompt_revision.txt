@@ -1,0 +1,62 @@
+Structural problems in the ontology
+
+1. The relation schema makes topology nearly deterministic given node types.
+Each relation type has a fixed source/target type signature: SERVES is always Construct→Value, EXPRESSED_VIA always Stance→Construct, etc. So once you
+know the node-type multiset, the possible edge structure is heavily constrained — the graph is roughly a tripartite star pattern around Constructs. This
+is why "C:V ratio" keeps showing up as the only discriminative structural feature: it's close to the only structural degree of freedom the ontology
+allows. The "topology carries signal" hypothesis can't be fairly tested with a schema where topology is mostly a function of type counts.
+
+Fix: add relations that create genuine topological variance between same-type nodes:
+- SERVES chains or SUBSUMES: Value → Value (value hierarchies — laddering theory explicitly posits these)
+- IMPLIES / CO-OCCURS: Construct → Construct (directed, distinct from CONFLICTS_WITH) — Kelly's personal construct theory treats construct systems as
+networks, not flat lists
+- Allow MODULATED_BY on Stances, not just Constructs
+
+2. The max-2 CSM cap caused the H4 ceiling — and it's an arbitrary measurement clamp.
+You diagnosed the ceiling yourself in Phase 4. Capping a count variable at 2 destroys exactly the variance H4 needed. The cap was presumably there to
+prevent over-extraction, but a cap is the bluntest tool for that.
+
+Fix: remove the cap; instead require each CSM to cite grounding spans from two different human turns (recurrence as evidence of "stable tendency"). That
+controls over-extraction through evidence quality rather than truncation, and restores count variance.
+
+3. Bipolarity-by-fiat caused the H3 ceiling.
+"Must have both poles; if only one is inferrable, set bipolarity_complete to false" invites the LLM to invent the opposite pole (LLMs are excellent at
+generating antonyms), inflating completeness toward ceiling. The flag measures DeepSeek's antonym fluency, not respondent bipolarity.
+
+Fix: require a separate grounding_span for each pole. Bipolarity_complete = both poles independently grounded. This makes H3 testable again.
+
+4. No intensity/centrality attribute.
+A construct mentioned once in passing and one the respondent returns to five times are identical in the graph. Salience is arguably the most cognitively
+meaningful weight you could attach, and it's cheap: count of supporting turns or spans.
+
+Fix: require grounding_spans as a list and derive a salience weight; or add an explicit salience: peripheral|recurring|central attribute. This gives
+weighted-graph features downstream.
+
+5. The ontology is AI-evaluation-specific, undermining the CDT generality claim.
+"Construct: a bipolar cognitive dimension used to evaluate AI's role" hardcodes the interview topic into the entity definition. A "distinct modality for
+consumer digital twins" claim needs an ontology defined over the person, not over this dataset's subject matter.
+
+Fix: reword to topic-neutral ("…used to evaluate the domain under discussion") and pass the domain as a parameter. Costs nothing now, and is required for
+any second-dataset replication.
+
+Prompt-engineering gaps (smaller)
+
+- No target counts or stopping criterion. Mean 14.9 nodes/graph is whatever DeepSeek's verbosity prior produced. Different transcripts lengths will yield
+different graph sizes for extraction-budget reasons, not cognitive ones — and graph size correlates with cohort if transcript length does. Fix: either
+give a guideline ("extract every construct that meets the grounding test; do not limit count") or explicitly instruct exhaustiveness, then check
+node-count vs transcript-length correlation as a confound.
+- "Use sparingly" (CONFLICTS_WITH) is unquantified — classic deferred decision. Different model versions will interpret "sparingly" differently. Fix:
+replace with an evidence criterion: "only when the respondent explicitly expresses tension between the two constructs; quote the span on the edge."
+- No grounding for edges. Nodes need spans; relations don't. SERVES edges (Construct→Value) are pure inference and are the backbone of the graph. Fix:
+require a grounding_span or at least a one-line rationale per edge — this is where extractor priors leak in most.
+- No negative/empty-graph guidance. What should the model do with a transcript that's all logistics and no evaluative content? Without an explicit "it is
+acceptable to return few or zero nodes," LLMs hallucinate to fill quota.
+- Valence taxonomy: "mixed" vs "ambivalent" is a distinction most annotators (human or LLM) can't apply reliably without definitions and one example each.
+Either define operationally (mixed = different valence toward different aspects; ambivalent = simultaneous conflicting valence toward the same aspect) or
+collapse them.
+
+Priority order
+
+If you only do three: (1) per-pole grounding spans, (2) multi-span salience, (3) Construct↔Construct and Value→Value relations. The first two repair
+H3/H4; the third is the one that gives the topology hypothesis a real chance — right now the schema largely guarantees that graph structure reduces to
+node-type counts, which is exactly what your stats-only-≈-GIN-only results suggest.

@@ -62,7 +62,14 @@ MODELS = [
         "api_type": "openai",
         "api_key_env": "AGNES_API_KEY",
         "base_url": "https://apihub.agnes-ai.com/v1/chat/completions",
-        "max_tokens": 4096,
+        "max_tokens": 8192,
+        "system_message": (
+            "You must output valid JSON only. "
+            "No markdown fences, no preamble, no explanation — just the JSON object."
+        ),
+        "chat_template_kwargs": {
+            "enable_thinking": True,  # recommended for reasoning/agent tasks
+        },
     },
 ]
 
@@ -131,11 +138,17 @@ def _extract_openai(
     model_id: str,
     max_tokens: int,
     json_mode: bool = False,
+    system_message: str | None = None,
+    chat_template_kwargs: dict | None = None,
 ) -> str | None:
     """Extract via OpenAI-compatible API.  Returns raw text or None."""
     messages = [{"role": "user", "content": prompt}]
-    # DeepSeek JSON mode requires the word "json" in the prompt
-    if json_mode:
+    # System message for JSON guidance — always recommended for structured output.
+    # When json_mode is enabled, this is required by some providers (DeepSeek).
+    # When json_mode is unavailable (Agnes), this is the primary JSON guarantee.
+    if system_message:
+        messages.insert(0, {"role": "system", "content": system_message})
+    elif json_mode:
         messages.insert(0, {"role": "system", "content": "You must output valid JSON."})
 
     payload: dict = {
@@ -146,6 +159,8 @@ def _extract_openai(
     }
     if json_mode:
         payload["response_format"] = {"type": "json_object"}
+    if chat_template_kwargs:
+        payload["chat_template_kwargs"] = chat_template_kwargs
 
     body = json.dumps(payload).encode("utf-8")
 
@@ -325,7 +340,14 @@ def main() -> None:
             else:
                 json_mode = model_cfg.get("json_mode", False)
                 raw_text = _extract_openai(
-                    prompt, api_key, base_url, model_id, max_tokens, json_mode=json_mode
+                    prompt,
+                    api_key,
+                    base_url,
+                    model_id,
+                    max_tokens,
+                    json_mode=json_mode,
+                    system_message=model_cfg.get("system_message"),
+                    chat_template_kwargs=model_cfg.get("chat_template_kwargs"),
                 )
 
             if raw_text is None:

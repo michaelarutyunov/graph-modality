@@ -48,6 +48,9 @@ MODELS = [
         "api_key_env": "AGNES_API_KEY",
         "base_url": "https://apihub.agnes-ai.com/v1/chat/completions",
         "max_tokens": 2048,
+        "chat_template_kwargs": {
+            "enable_thinking": True,  # recommended for reasoning tasks
+        },
     },
 ]
 
@@ -118,6 +121,8 @@ def _call_openai(
 
     if model_cfg.get("json_mode"):
         body["response_format"] = {"type": "json_object"}
+    if model_cfg.get("chat_template_kwargs"):
+        body["chat_template_kwargs"] = model_cfg["chat_template_kwargs"]
 
     body_bytes = json.dumps(body, ensure_ascii=False).encode("utf-8")
 
@@ -270,9 +275,8 @@ def _compare(deepseek: dict, agnes: dict) -> None:
     print(f"\n{'Metric':<35} {'Career Stage':>15} {'AI Adoption':>15}")
     print("-" * 67)
     print(f"{'Agreement rate':<35} {cs_agree / n:>14.1%}  {ai_agree / n:>14.1%}")
-    print(
-        f"{'DeepSeek uncertain rate':<35} {cs_ds_uncertain / n:>14.1%}  {ai_ds_uncertain / n:>14.1%}"
-    )
+    ds_unc = f"{cs_ds_uncertain / n:>14.1%}  {ai_ds_uncertain / n:>14.1%}"
+    print(f"{'DeepSeek uncertain rate':<35} {ds_unc}")
     print(
         f"{'Agnes uncertain rate':<35} {cs_ag_uncertain / n:>14.1%}  {ai_ag_uncertain / n:>14.1%}"
     )

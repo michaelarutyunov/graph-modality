@@ -5,7 +5,8 @@ runs structural validation.  Cache-first: never re-extracts if output exists.
 
 Usage:
     uv run python extraction/extractor.py                          # all uncached (DeepSeek)
-    uv run python extraction/extractor.py --backend anthropic      # use Claude
+    uv run python s2_extraction/extractor.py --backend anthropic      # Use Claude
+    uv run python s2_extraction/extractor.py --backend agnes           # Use Agnes 2.0 Flash
     uv run python extraction/extractor.py --tid work_0000          # single transcript
     uv run python extraction/extractor.py --split workforce        # one split
     uv run python extraction/extractor.py --limit 100              # first N uncached
@@ -33,8 +34,22 @@ load_dotenv()
 
 PROMPT_DIR = Path("s2_extraction/prompts")
 TAGGED_DIR = Path("s1_data/tagged")
-GRAPH_DIR = Path("s1_data/graphs/free_text")
+GRAPH_DIR = Path("s1_data/graphs/free_text")  # legacy v3 corpus — locked, never overwrite
 FAILED_LOG = Path("s2_extraction/failed.txt")
+
+
+def _graph_dir_for(prompt_version: str) -> Path:
+    """Output directory for a prompt version.
+
+    v3 keeps the legacy flat path (``s1_data/graphs/free_text``) for
+    backward-compatibility with the locked corpus. Every other version is
+    namespaced (``s1_data/graphs/<version>/free_text``) so a new extraction
+    can never read or overwrite the locked v3 graphs.
+    """
+    if prompt_version == "v3":
+        return GRAPH_DIR
+    return Path(f"s1_data/graphs/{prompt_version}/free_text")
+
 
 # ── backends ─────────────────────────────────────────────────────────
 
@@ -42,10 +57,24 @@ BACKENDS = {
     "deepseek": {
         "type": "openai",
         "model": "deepseek-chat",
-        "api_key_env": "ANTHROPIC_AUTH_TOKEN",
+        "api_key_env": "DEEPSEEK_API_KEY",
         "base_url": "https://api.deepseek.com/v1/chat/completions",
         "max_tokens": 8192,
         "json_mode": True,
+    },
+    "deepseek-think": {
+        "type": "openai",
+        "model": "deepseek-v4-pro",
+        "api_key_env": "DEEPSEEK_API_KEY",
+        "base_url": "https://api.deepseek.com/v1/chat/completions",
+        # thinking consumes output tokens; raise the budget so reasoning does not
+        # crowd out the JSON answer (the Phase-1 truncation failure mode)
+        "max_tokens": 16384,
+        "json_mode": True,
+        "extra_payload": {
+            "thinking": {"type": "enabled"},
+            "reasoning_effort": "high",
+        },
     },
     "anthropic": {
         "type": "anthropic",
@@ -53,6 +82,21 @@ BACKENDS = {
         "api_key_env": "ANTHROPIC_API_KEY",
         "base_url": "https://api.anthropic.com",
         "max_tokens": 4096,
+    },
+    "agnes": {
+        "type": "openai",
+        "model": "agnes-2.0-flash",
+        "api_key_env": "AGNES_API_KEY",
+        "base_url": "https://apihub.agnes-ai.com/v1/chat/completions",
+        "max_tokens": 8192,
+        "json_mode": False,  # Agnes does not support response_format={type: json_object}
+        "system_message": (
+            "You must output valid JSON only. "
+            "No markdown fences, no preamble, no explanation — just the JSON object."
+        ),
+        "chat_template_kwargs": {
+            "enable_thinking": True,  # recommended for reasoning/agent tasks
+        },
     },
 }
 
@@ -118,9 +162,17 @@ def _call_openai(
     model: str,
     max_tokens: int,
     json_mode: bool = False,
+    system_message: str | None = None,
+    chat_template_kwargs: dict | None = None,
+    extra_payload: dict | None = None,
 ) -> str | None:
-    messages = [{"role": "user", "content": prompt}]
-    if json_mode:
+    messages: list[dict] = [{"role": "user", "content": prompt}]
+    # System message for JSON guidance — always recommended for structured output.
+    # When json_mode is enabled, this is required by some providers (DeepSeek).
+    # When json_mode is unavailable (Agnes), this is the primary JSON guarantee.
+    if system_message:
+        messages.insert(0, {"role": "system", "content": system_message})
+    elif json_mode:
         messages.insert(0, {"role": "system", "content": "You must output valid JSON."})
 
     payload: dict = {
@@ -131,6 +183,10 @@ def _call_openai(
     }
     if json_mode:
         payload["response_format"] = {"type": "json_object"}
+    if chat_template_kwargs:
+        payload["chat_template_kwargs"] = chat_template_kwargs
+    if extra_payload:
+        payload.update(extra_payload)
 
     body = json.dumps(payload).encode("utf-8")
 
@@ -161,20 +217,25 @@ def extract_one(
     transcript_id: str,
     formatted_transcript: str,
     backend: dict,
-    prompt_version: str = "v3",
+    prompt_version: str = "v4",
     split: str = "unknown",
+    domain: str = "AI's role in professional work",
+    out_dir: Path | None = None,
     anthropic_client: Anthropic | None = None,
 ) -> dict | None:
     """Extract a concept graph for a single transcript.
 
-    Checks cache first.  Retries on API failure with backoff.
+    Checks cache first.  Retries on API failure with backoff.  Writes to
+    ``out_dir`` (defaults to the version-namespaced dir for ``prompt_version``).
     """
-    cache_path = GRAPH_DIR / f"{transcript_id}.json"
+    if out_dir is None:
+        out_dir = _graph_dir_for(prompt_version)
+    cache_path = out_dir / f"{transcript_id}.json"
     if cache_path.exists():
         return json.loads(cache_path.read_text(encoding="utf-8"))
 
     template = _load_prompt(prompt_version)
-    prompt = template.replace("{transcript}", formatted_transcript)
+    prompt = template.replace("{transcript}", formatted_transcript).replace("{domain}", domain)
 
     # Call API
     if backend["type"] == "anthropic":
@@ -191,6 +252,9 @@ def extract_one(
             model=backend["model"],
             max_tokens=backend["max_tokens"],
             json_mode=backend.get("json_mode", False),
+            system_message=backend.get("system_message"),
+            chat_template_kwargs=backend.get("chat_template_kwargs"),
+            extra_payload=backend.get("extra_payload"),
         )
 
     if raw_text is None:
@@ -219,7 +283,7 @@ def extract_one(
             print(f"  [{transcript_id}] VIOLATION: {v}")
 
     # Cache
-    GRAPH_DIR.mkdir(parents=True, exist_ok=True)
+    out_dir.mkdir(parents=True, exist_ok=True)
     cache_path.write_text(json.dumps(graph, indent=2, ensure_ascii=False), encoding="utf-8")
     return graph
 
@@ -242,7 +306,9 @@ def extract_batch(
     transcript_ids: list[str],
     tagged: dict[str, dict],
     backend: dict,
-    prompt_version: str = "v3",
+    prompt_version: str = "v4",
+    domain: str = "AI's role in professional work",
+    out_dir: Path | None = None,
     anthropic_client: Anthropic | None = None,
 ) -> tuple[int, int]:
     success = 0
@@ -266,6 +332,8 @@ def extract_batch(
             backend=backend,
             prompt_version=prompt_version,
             split=rec["split"],
+            domain=domain,
+            out_dir=out_dir,
             anthropic_client=anthropic_client,
         )
 
@@ -301,17 +369,34 @@ def main() -> None:
         "--backend",
         type=str,
         default="deepseek",
-        choices=["deepseek", "anthropic"],
+        choices=["deepseek", "deepseek-think", "anthropic", "agnes"],
         help="Backend to use (default: deepseek)",
     )
     parser.add_argument(
         "--prompt-version",
         type=str,
-        default="v3",
-        help="Prompt version (default: v3)",
+        default="v4",
+        help="Prompt version (default: v4)",
+    )
+    parser.add_argument(
+        "--domain",
+        type=str,
+        default="AI's role in professional work",
+        help="Domain description for topic-neutral ontology "
+        "(default: AI's role in professional work)",
+    )
+    parser.add_argument(
+        "--out-dir",
+        type=str,
+        default=None,
+        help="Output directory for graphs (default: version-namespaced, "
+        "e.g. s1_data/graphs/v4/free_text; v3 keeps the legacy flat path)",
     )
     parser.add_argument("--force", action="store_true", help="Re-extract even if cache exists")
     args = parser.parse_args()
+
+    out_dir = Path(args.out_dir) if args.out_dir else _graph_dir_for(args.prompt_version)
+    print(f"Output dir: {out_dir}")
 
     backend = BACKENDS[args.backend]
     api_key = os.environ.get(backend["api_key_env"])
@@ -333,13 +418,15 @@ def main() -> None:
             sys.exit(1)
         rec = tagged[args.tid]
         if args.force:
-            (GRAPH_DIR / f"{args.tid}.json").unlink(missing_ok=True)
+            (out_dir / f"{args.tid}.json").unlink(missing_ok=True)
         result = extract_one(
             transcript_id=args.tid,
             formatted_transcript=rec["formatted"],
             backend=backend,
             prompt_version=args.prompt_version,
             split=rec["split"],
+            domain=args.domain,
+            out_dir=out_dir,
             anthropic_client=anthropic_client,
         )
         if result is None:
@@ -359,7 +446,7 @@ def main() -> None:
         ids = sorted(tagged.keys())
 
     if not args.force:
-        uncached = [tid for tid in ids if not (GRAPH_DIR / f"{tid}.json").exists()]
+        uncached = [tid for tid in ids if not (out_dir / f"{tid}.json").exists()]
         skipped = len(ids) - len(uncached)
         if skipped:
             print(f"Skipping {skipped} cached transcripts (use --force to re-extract)")
@@ -381,6 +468,8 @@ def main() -> None:
         tagged=tagged,
         backend=backend,
         prompt_version=args.prompt_version,
+        domain=args.domain,
+        out_dir=out_dir,
         anthropic_client=anthropic_client,
     )
     print(f"\nDone. {success} succeeded, {failure} failed.")
