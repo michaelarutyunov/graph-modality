@@ -13,7 +13,7 @@ from pathlib import Path
 import numpy as np
 from sklearn.model_selection import train_test_split
 
-from s4_encoding.build_dataset import _load_ai_adoption_labels
+from s4_encoding.build_dataset import _load_ai_adoption_labels, _load_ambivalence_labels
 from s4_encoding.graph_gnn_encoder import encode_graphs
 from s4_encoding.graph_stats_encoder import compute_all_stats
 from s4_encoding.text_encoder import encode_transcripts
@@ -40,6 +40,8 @@ def make_split(target: str, seed: int) -> tuple[list[str], list[str], list[str]]
         ids_to_labels = load_transcript_ids_with_labels()
     elif target == "ai_adoption":
         ids_to_labels = _load_ai_adoption_labels()
+    elif target == "stance_ambivalence":
+        ids_to_labels = _load_ambivalence_labels()
     else:
         raise ValueError(f"Unknown target: {target!r}")
 

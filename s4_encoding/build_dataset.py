@@ -32,11 +32,15 @@ PROJECT_ROOT = Path(".")
 CACHE_DIR = PROJECT_ROOT / "cache"
 DATASET_DIR = CACHE_DIR / "modality_dataset"
 DEMOGRAPHICS_PATH = CACHE_DIR / "demographics.jsonl"
+AMBIVALENCE_PATH = CACHE_DIR / "ambivalence.jsonl"
 
 # ── AI adoption label mapping ────────────────────────────────────────────────
 # Binary classification: tool_user=0, integrated=1. novice/power_user excluded.
 AI_LABEL_MAP = {"tool_user": 0, "integrated": 1}
 AI_EXCLUDED = {"novice", "power_user"}
+
+# ── Ambivalence label mapping ────────────────────────────────────────────────
+AMBIVALENCE_LABEL_MAP = {"low": 0, "med": 1, "high": 2}
 
 
 def _load_modality_arrays(
@@ -97,6 +101,31 @@ def _load_ai_adoption_labels() -> dict[str, int]:
             labels[tid] = AI_LABEL_MAP[raw_label]
 
     print(f"AI adoption labels: {len(labels)} transcripts (excluded {excluded})")
+    return labels
+
+
+def _load_ambivalence_labels() -> dict[str, int]:
+    """Load stance_ambivalence consensus labels, mapping low/med/high -> 0/1/2.
+
+    Returns dict of transcript_id -> ordinal label.
+    """
+    if not AMBIVALENCE_PATH.exists():
+        raise FileNotFoundError(
+            f"Ambivalence labels file not found at {AMBIVALENCE_PATH}. "
+            "Run the ambivalence labeler + consensus pipeline first."
+        )
+
+    labels: dict[str, int] = {}
+    with open(AMBIVALENCE_PATH, encoding="utf-8") as f:
+        for line in f:
+            if not line.strip():
+                continue
+            record = json.loads(line)
+            tid = record["transcript_id"]
+            raw_label = record["stance_ambivalence"]["label"]
+            labels[tid] = AMBIVALENCE_LABEL_MAP[raw_label]
+
+    print(f"Ambivalence labels: {len(labels)} transcripts")
     return labels
 
 
