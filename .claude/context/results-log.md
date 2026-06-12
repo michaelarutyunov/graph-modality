@@ -764,3 +764,94 @@ performance is low because label semantics are excluded by design,
 but the RELATIVE advantage of typed topology is reliable.
 
 ---
+
+### Null-Ladder Edge Test (v4, ai_adoption) --- FAIL
+
+**Date:** 2026-06-12
+**Target:** ai_adoption (tool_user/integrated)
+**Protocol:** 10-seed frozen CI (42-51)
+
+**Arms:**
+- Null: 11-dim bag-of-types histogram
+  (node type + edge type frequencies + mean degree) -> LogisticRegression
+- Alternative: GINEConv(typed) 128-dim frozen embeddings -> LogisticRegression
+
+**Results:**
+- Chance baseline: 0.3367
+- GINEConv mean macro-F1: 0.5373
+- Histogram mean macro-F1: 0.5345
+- Mean delta: +0.0028
+- 95% CI: [-0.0172, +0.0228]
+- CI excludes 0: False
+- Mean delta >= +0.01: False
+
+**Per-seed:**
+| Seed | GINE F1 | Hist F1 | delta |
+|------|---------|---------|-------|
+| 42 | 0.5163 | 0.5163 | +0.0000 |
+| 43 | 0.5156 | 0.5634 | -0.0478 |
+| 44 | 0.5217 | 0.4999 | +0.0218 |
+| 45 | 0.5591 | 0.5486 | +0.0106 |
+| 46 | 0.5921 | 0.6350 | -0.0429 |
+| 47 | 0.5047 | 0.4833 | +0.0214 |
+| 48 | 0.5080 | 0.5037 | +0.0044 |
+| 49 | 0.5426 | 0.5357 | +0.0069 |
+| 50 | 0.5434 | 0.5317 | +0.0117 |
+| 51 | 0.5691 | 0.5272 | +0.0420 |
+
+**Verdict:** FAIL
+**Interpretation:** Typed relational structure does NOT reliably beat the bag-of-types null under the CI criterion -- the edge-type hypothesis is not supported.
+
+---
+
+### Phase 2.6 — v4 structure_only > chance
+
+**Date:** 2026-06-12 | **Protocol:** 10-seed frozen CI (42-51)
+
+**Target: ai_adoption (tool_user/integrated)**
+
+- Mean F1: 0.5389 +/- 0.0376
+- Chance: 0.3367
+- Mean delta: +0.2022
+- 95% CI: [+0.1753, +0.2290]
+- CI excludes 0: True
+- delta >= +0.01: True
+- **Verdict: PASS**
+
+| Seed | F1 | delta vs chance |
+|------|----|----|
+| 42 | 0.4818 | +0.1451 |
+| 43 | 0.5787 | +0.2420 |
+| 44 | 0.5270 | +0.1903 |
+| 45 | 0.5535 | +0.2168 |
+| 46 | 0.5868 | +0.2501 |
+| 47 | 0.4999 | +0.1632 |
+| 48 | 0.5159 | +0.1792 |
+| 49 | 0.5255 | +0.1888 |
+| 50 | 0.5923 | +0.2556 |
+| 51 | 0.5270 | +0.1903 |
+
+**Target: cohort (workforce/creatives/scientists)**
+
+- Mean F1: 0.3382 +/- 0.0424
+- Chance: 0.2959
+- Mean delta: +0.0423
+- 95% CI: [+0.0120, +0.0726]
+- CI excludes 0: True
+- delta >= +0.01: True
+- **Verdict: PASS**
+
+| Seed | F1 | delta vs chance |
+|------|----|----|
+| 42 | 0.3574 | +0.0615 |
+| 43 | 0.3045 | +0.0086 |
+| 44 | 0.3386 | +0.0427 |
+| 45 | 0.4443 | +0.1484 |
+| 46 | 0.3131 | +0.0172 |
+| 47 | 0.3308 | +0.0349 |
+| 48 | 0.3104 | +0.0145 |
+| 49 | 0.3572 | +0.0613 |
+| 50 | 0.3256 | +0.0297 |
+| 51 | 0.3002 | +0.0043 |
+
+---

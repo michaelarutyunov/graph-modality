@@ -69,6 +69,11 @@ V4_GINE_ENCODER_PATH = CACHE_DIR / "gine_encoder_v4_think.pt"
 V4_GINE_CURVES_PATH = CACHE_DIR / "gine_autoencoder_curves_v4_think.png"
 V4_GINE_EMBEDDING_CACHE = CACHE_DIR / "gine_embeddings_v4_think.npy"
 V4_GINE_ID_CACHE = CACHE_DIR / "gine_embedding_ids_v4_think.json"
+# v4_think GIN structure_only — separate encoder, curves, embeddings
+V4_SO_ENCODER_PATH = CACHE_DIR / "gin_encoder_v4_structure_only.pt"
+V4_SO_CURVES_PATH = CACHE_DIR / "gin_autoencoder_curves_v4_structure_only.png"
+V4_SO_EMBEDDING_CACHE = CACHE_DIR / "gin_embeddings_v4_structure_only.npy"
+V4_SO_ID_CACHE = CACHE_DIR / "gin_embedding_ids_v4_structure_only.json"
 
 
 def _encoder_path(label_source: str, feature_mode: FeatureMode = "full") -> Path:
