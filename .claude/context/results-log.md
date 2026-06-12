@@ -719,3 +719,48 @@ and labels simultaneously.
   includes 0) is now explained: the `graph` modality fed into Phase 1's fusion sweep was
   `full_gin`, which this bead shows underperforms even a training-free label-bag — so its
   near-zero fusion contribution is consistent, not surprising.
+
+### Null-Ladder Edge Test (v4) --- PASS
+
+**Date:** 2026-06-12
+**Target:** cohort (workforce/creatives/scientists)
+**Protocol:** 10-seed frozen CI (42-51)
+
+**Arms:**
+- Null: 11-dim bag-of-types histogram
+  (node type + edge type frequencies + mean degree) -> LogisticRegression
+- Alternative: GINEConv(typed) 128-dim frozen embeddings -> LogisticRegression
+
+**Results:**
+- GINEConv mean macro-F1: 0.3335 +/- 0.0360
+- Histogram mean macro-F1: 0.3048 +/- 0.0435
+- Mean delta: +0.0287
+- 95% CI: [+0.0094, +0.0480]
+- CI excludes 0: True
+- Mean delta >= +0.01: True
+
+**Per-seed:**
+| Seed | GINE F1 | Hist F1 | delta |
+|------|---------|---------|-------|
+| 42 | 0.3141 | 0.2895 | +0.0246 |
+| 43 | 0.3417 | 0.2907 | +0.0510 |
+| 44 | 0.3649 | 0.3421 | +0.0229 |
+| 45 | 0.4002 | 0.3625 | +0.0378 |
+| 46 | 0.3348 | 0.3118 | +0.0230 |
+| 47 | 0.3522 | 0.3285 | +0.0237 |
+| 48 | 0.2688 | 0.2730 | -0.0043 |
+| 49 | 0.3403 | 0.3575 | -0.0172 |
+| 50 | 0.3132 | 0.2636 | +0.0496 |
+| 51 | 0.3049 | 0.2289 | +0.0761 |
+
+**Verdict:** PASS
+**Interpretation:** Typed relational structure carries signal beyond
+bag-of-types -- edge-type-aware GNN beats the no-wiring null under
+the 10-seed CI protocol. The mean delta (+0.0287 macro-F1) exceeds
+the +0.01 threshold and the 95% CI [+0.0094, +0.0480] excludes zero.
+8 of 10 seeds show positive delta. Both arms operate near chance
+(~0.30-0.33, 3-class) with structure_only features -- the absolute
+performance is low because label semantics are excluded by design,
+but the RELATIVE advantage of typed topology is reliable.
+
+---

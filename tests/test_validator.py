@@ -1,6 +1,6 @@
 """Tests for extraction.validator — v4 schema."""
 
-from s2_extraction.validator import is_valid, validate_graph
+from s2_extraction.validator import fix_modulated_by_direction, is_valid, validate_graph
 
 
 def _make_graph(
@@ -580,3 +580,85 @@ def test_is_valid_false_for_broken_graph():
         ],
     )
     assert not is_valid(g)
+
+
+# ── fix_modulated_by_direction ─────────────────────────────────────────
+
+
+def test_fix_reversed_modulated_by_csm_to_construct():
+    """CSM→Construct should be flipped to Construct→CSM."""
+    g = _make_graph(
+        nodes=[
+            _csm("c1", "iterative-style"),
+            _construct("n1", "AI speed ↔ quality", "quality"),
+        ],
+        edges=[_edge("c1", "n1", "MODULATED_BY", "iterative style shapes speed concern")],
+    )
+    assert not is_valid(g)  # fails before fix
+    n_fixed = fix_modulated_by_direction(g)
+    assert n_fixed == 1
+    assert g["edges"][0]["source"] == "n1"
+    assert g["edges"][0]["target"] == "c1"
+    assert is_valid(g)  # passes after fix
+
+
+def test_fix_reversed_modulated_by_csm_to_stance():
+    """CSM→Stance should be flipped to Stance→CSM (v4 allows Stance source)."""
+    g = _make_graph(
+        nodes=[
+            _csm("c1", "compartmentalizer"),
+            _stance("s1", "optimistic-about-email", "positive"),
+        ],
+        edges=[_edge("c1", "s1", "MODULATED_BY", "compartmentalization shapes optimism")],
+    )
+    assert not is_valid(g)
+    n_fixed = fix_modulated_by_direction(g)
+    assert n_fixed == 1
+    assert g["edges"][0]["source"] == "s1"
+    assert g["edges"][0]["target"] == "c1"
+    assert is_valid(g)
+
+
+def test_fix_leaves_correct_modulated_by_alone():
+    """Correct Construct→CSM edges should not be touched."""
+    g = _make_graph(
+        nodes=[
+            _construct("n1", "AI speed ↔ quality", "quality"),
+            _csm("c1", "verification-first"),
+        ],
+        edges=[_edge("n1", "c1", "MODULATED_BY", "speed concern shaped by verification")],
+    )
+    assert is_valid(g)
+    n_fixed = fix_modulated_by_direction(g)
+    assert n_fixed == 0
+    assert is_valid(g)
+
+
+def test_fix_ignores_non_modulated_by_edges():
+    """Only MODULATED_BY edges are inspected."""
+    g = _make_graph(
+        nodes=[
+            _csm("c1", "iterative"),
+            _construct("n1", "a ↔ b", "b"),
+            _value("v1", "efficiency"),
+        ],
+        edges=[
+            _edge("c1", "n1", "MODULATED_BY", "style shapes construct"),  # reversed
+            _edge("n1", "v1", "SERVES", "construct serves value"),  # fine
+        ],
+    )
+    n_fixed = fix_modulated_by_direction(g)
+    assert n_fixed == 1
+    # SERVES edge untouched
+    assert g["edges"][1]["source"] == "n1"
+    assert g["edges"][1]["target"] == "v1"
+
+
+def test_fix_no_crash_on_missing_nodes():
+    """Gracefully handles edges referencing non-existent nodes."""
+    g = _make_graph(
+        nodes=[_csm("c1", "style")],
+        edges=[_edge("c1", "ghost", "MODULATED_BY", "?")],
+    )
+    n_fixed = fix_modulated_by_direction(g)
+    assert n_fixed == 0  # ghost node has no type, can't match

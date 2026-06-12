@@ -224,3 +224,37 @@ def validate_graph(graph: dict[str, Any]) -> list[str]:
 def is_valid(graph: dict[str, Any]) -> bool:
     """Return True if the graph passes all structural checks."""
     return len(validate_graph(graph)) == 0
+
+
+def fix_modulated_by_direction(graph: dict[str, Any]) -> int:
+    """Auto-correct MODULATED_BY edges where CSM is the source.
+
+    Some extractions (3/1250 in v4_think) write CSM→Construct|Stance
+    instead of the schema-required Construct|Stance→CSM.  The rationale
+    text confirms the CSM is the modulator (e.g. "tendency shapes the
+    construct"), so the semantics are correct — only the arrow direction
+    is flipped.  This function swaps source/target on such edges.
+
+    Returns:
+        Number of edges corrected.
+    """
+    nodes: list[dict[str, Any]] = graph.get("nodes", [])
+    edges: list[dict[str, Any]] = graph.get("edges", [])
+
+    node_type: dict[str, str] = {n["id"]: n["type"] for n in nodes}
+    fixed = 0
+
+    for e in edges:
+        if e.get("relation") != "MODULATED_BY":
+            continue
+        src = e.get("source", "")
+        tgt = e.get("target", "")
+        src_type = node_type.get(src, "")
+        tgt_type = node_type.get(tgt, "")
+
+        # Detect reversed direction: CSM as source, Construct|Stance as target
+        if src_type == "CognitiveStyleMarker" and tgt_type in ("Construct", "Stance"):
+            e["source"], e["target"] = tgt, src
+            fixed += 1
+
+    return fixed

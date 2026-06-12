@@ -1,10 +1,16 @@
-"""Graph GNN encoder — self-supervised GIN for target-agnostic graph embeddings.
+"""Graph GNN encoder — self-supervised GIN/GINE for target-agnostic graph embeddings.
 
 Two-stage pipeline:
   1. Train: Self-supervised autoencoder (node type reconstruction) on ALL graphs.
   2. Encode: Frozen encoder inference → 128-dim embeddings (cache-first, like text_encoder).
 
-Architecture: 2-layer GIN encoder (388→256→128) → global mean pool → graph embedding.
+Architecture:
+  - GIN: 2-layer GIN encoder (388→256→128) → global mean pool → graph embedding.
+    Edge-type-agnostic — ignores edge_attr.
+  - GINE: 2-layer GINEConv encoder (5→256→128) → global mean pool. Consumes
+    edge_attr (6-dim relation type one-hot) for edge-type-aware message passing.
+    Uses structure_only node features (type one-hot + degree, 5-d).
+
 A node type decoder head (Linear(128, 4)) reconstructs entity types from per-node
 embeddings before pooling. After training, only the encoder is saved.
 
@@ -14,8 +20,10 @@ Node types require neighbourhood information — a node's type depends on
 what it connects to.
 
 Usage:
-    uv run python encoding/graph_gnn_encoder.py          # train autoencoder
-    uv run python encoding/graph_gnn_encoder.py --encode # frozen inference
+    uv run python s4_encoding/graph_gnn_encoder.py                    # train GIN autoencoder
+    uv run python s4_encoding/graph_gnn_encoder.py --encode           # frozen GIN inference
+    uv run python s4_encoding/graph_gnn_encoder.py --encoder gine     # train GINE autoencoder (v4)
+    uv run python s4_encoding/graph_gnn_encoder.py --encoder gine --encode  # frozen GINE inference
 """
 
 from __future__ import annotations
@@ -30,9 +38,11 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from torch_geometric.loader import DataLoader
-from torch_geometric.nn import GINConv, global_mean_pool
+from torch_geometric.nn import GINConv, GINEConv, global_mean_pool
 
-from s4_encoding.graph_dataset import FeatureMode, GraphDataset
+from s4_encoding.graph_dataset import RELATIONS, FeatureMode, GraphDataset
+
+EDGE_DIM = len(RELATIONS)  # 6 for v4 (includes SUBSUMES, IMPLIES)
 
 # ── Paths ────────────────────────────────────────────────────────────────────
 PROJECT_ROOT = Path(".")
@@ -53,6 +63,12 @@ SO_ENCODER_PATH = CACHE_DIR / "gin_encoder_structure_only.pt"
 SO_CURVES_PATH = CACHE_DIR / "gin_autoencoder_curves_structure_only.png"
 SO_EMBEDDING_CACHE = CACHE_DIR / "gin_embeddings_structure_only.npy"
 SO_ID_CACHE = CACHE_DIR / "gin_embedding_ids_structure_only.json"
+# v4_think GINEConv (edge-type-aware) — separate encoder, curves, embeddings
+V4_FREE_TEXT_DIR = PROJECT_ROOT / "s1_data" / "graphs" / "v4_think" / "free_text"
+V4_GINE_ENCODER_PATH = CACHE_DIR / "gine_encoder_v4_think.pt"
+V4_GINE_CURVES_PATH = CACHE_DIR / "gine_autoencoder_curves_v4_think.png"
+V4_GINE_EMBEDDING_CACHE = CACHE_DIR / "gine_embeddings_v4_think.npy"
+V4_GINE_ID_CACHE = CACHE_DIR / "gine_embedding_ids_v4_think.json"
 
 
 def _encoder_path(label_source: str, feature_mode: FeatureMode = "full") -> Path:
@@ -175,6 +191,73 @@ class GINAutoencoder(nn.Module):
     def forward(self, data) -> torch.Tensor:
         """Produce node type logits for all nodes in the batch."""
         _graph_emb, node_emb = self.encoder(data.x, data.edge_index, data.batch)
+        return self.node_type_head(node_emb)
+
+
+class GINEEncoder(nn.Module):
+    """Target-agnostic GINE encoder producing 128-dim graph embeddings.
+
+    Like GINEncoder but consumes edge attributes (relation types) via GINEConv.
+    GINEConv linearly projects edge features from ``edge_dim`` to ``in_channels``
+    and **adds** them to node features before the MLP (not concatenation).
+    The MLP input dimension stays ``in_channels``.
+    """
+
+    def __init__(
+        self,
+        in_channels: int = IN_CHANNELS_STRUCTURE_ONLY,
+        hidden: int = HIDDEN_DIM,
+        out_channels: int = OUT_CHANNELS,
+        edge_dim: int = EDGE_DIM,
+    ):
+        super().__init__()
+
+        mlp1 = nn.Sequential(
+            nn.Linear(in_channels, hidden),
+            nn.ReLU(),
+            nn.Linear(hidden, hidden),
+        )
+        self.conv1 = GINEConv(mlp1, edge_dim=edge_dim)
+        self.bn1 = nn.BatchNorm1d(hidden)
+
+        mlp2 = nn.Sequential(
+            nn.Linear(hidden, hidden),
+            nn.ReLU(),
+            nn.Linear(hidden, out_channels),
+        )
+        self.conv2 = GINEConv(mlp2, edge_dim=edge_dim)
+        self.bn2 = nn.BatchNorm1d(out_channels)
+
+    def forward(
+        self,
+        x: torch.Tensor,
+        edge_index: torch.Tensor,
+        edge_attr: torch.Tensor,
+        batch: torch.Tensor,
+    ) -> tuple[torch.Tensor, torch.Tensor]:
+        """Forward pass returning both per-node and graph-level embeddings."""
+        h = F.relu(self.bn1(self.conv1(x, edge_index, edge_attr)))
+        node_emb = F.relu(self.bn2(self.conv2(h, edge_index, edge_attr)))
+        graph_emb = global_mean_pool(node_emb, batch)
+        return graph_emb, node_emb
+
+
+class GINEAutoencoder(nn.Module):
+    """Self-supervised GINE: encode typed graph structure, reconstruct node types.
+
+    Same objective as GINAutoencoder but uses GINEConv which consumes
+    edge attributes (6-dim relation type one-hot). The encoder must learn
+    to use typed relational structure to predict node types.
+    """
+
+    def __init__(self, in_channels: int = IN_CHANNELS_STRUCTURE_ONLY, edge_dim: int = EDGE_DIM):
+        super().__init__()
+        self.encoder = GINEEncoder(in_channels=in_channels, edge_dim=edge_dim)
+        self.node_type_head = nn.Linear(OUT_CHANNELS, N_NODE_TYPES)
+
+    def forward(self, data) -> torch.Tensor:
+        """Produce node type logits for all nodes in the batch."""
+        _graph_emb, node_emb = self.encoder(data.x, data.edge_index, data.edge_attr, data.batch)
         return self.node_type_head(node_emb)
 
 
@@ -705,11 +788,214 @@ def encode_graphs_masked(force: bool = False) -> tuple[np.ndarray, list[str]]:
 
 
 # ═══════════════════════════════════════════════════════════════════════════════
+# GINEConv (edge-type-aware) — v4_think graphs
+# ═══════════════════════════════════════════════════════════════════════════════
+
+
+def train_gine_autoencoder(
+    graph_dir: Path | None = None,
+    max_epochs: int = MAX_EPOCHS,
+    early_stopping_patience: int = EARLY_STOPPING_PATIENCE,
+    batch_size: int = BATCH_SIZE,
+) -> dict:
+    """Train GINE autoencoder on v4_think graphs (structure_only, edge-type-aware).
+
+    Uses GINEConv which consumes ``edge_attr`` (6-dim relation type one-hot),
+    enabling the encoder to learn from typed relational structure. Node features
+    are structure_only (5-dim: type one-hot + degree) per the epic spec.
+
+    Returns:
+        Dictionary with best_loss, best_epoch, final_accuracy, epochs_run,
+        train_losses, train_accs.
+    """
+    device = torch.device("cpu")
+    print(f"Training GINE autoencoder on device: {device}")
+    print(f"Graph dir: {graph_dir or V4_FREE_TEXT_DIR}")
+    print("Node features: structure_only (5-d)")
+    print(f"Edge features: {EDGE_DIM}-dim relation type one-hot")
+
+    if graph_dir is None:
+        graph_dir = V4_FREE_TEXT_DIR
+
+    graph_paths = _load_all_graph_paths(graph_dir)
+    print(f"Loading {len(graph_paths)} graphs for self-supervised training...")
+    data_list = _precompute_graph_data(graph_paths, feature_mode="structure_only")
+
+    loader = DataLoader(data_list, batch_size=batch_size, shuffle=True)
+    print(f"DataLoader created with {len(loader)} batches (batch_size={batch_size})")
+
+    model = GINEAutoencoder(in_channels=IN_CHANNELS_STRUCTURE_ONLY, edge_dim=EDGE_DIM).to(device)
+    print(f"Model parameters: {sum(p.numel() for p in model.parameters()):,}")
+
+    criterion = nn.CrossEntropyLoss()
+    optimizer = torch.optim.Adam(model.parameters(), lr=LR, weight_decay=WEIGHT_DECAY)
+    scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(
+        optimizer,
+        mode="min",
+        patience=SCHEDULER_PATIENCE,
+        factor=SCHEDULER_FACTOR,
+    )
+
+    best_loss = float("inf")
+    best_epoch = 0
+    epochs_no_improve = 0
+    train_losses: list[float] = []
+    train_accs: list[float] = []
+
+    for epoch in range(1, max_epochs + 1):
+        model.train()
+        epoch_loss = 0.0
+        epoch_acc = 0.0
+        total_nodes = 0
+        n_batches = 0
+
+        for batch in loader:
+            batch = batch.to(device)
+            node_labels = _get_node_type_labels(batch)
+
+            optimizer.zero_grad()
+            logits = model(batch)
+            loss = criterion(logits, node_labels)
+            loss.backward()
+            optimizer.step()
+
+            epoch_loss += loss.item()
+            epoch_acc += _node_type_accuracy(logits, node_labels) * batch.num_nodes
+            total_nodes += int(batch.num_nodes)
+            n_batches += 1
+
+        avg_loss = epoch_loss / max(n_batches, 1)
+        avg_acc = epoch_acc / max(total_nodes, 1)
+
+        train_losses.append(avg_loss)
+        train_accs.append(avg_acc)
+
+        scheduler.step(avg_loss)
+
+        improved = avg_loss < best_loss
+        if improved:
+            best_loss = avg_loss
+            best_epoch = epoch
+            epochs_no_improve = 0
+            CACHE_DIR.mkdir(parents=True, exist_ok=True)
+            torch.save(model.encoder.state_dict(), V4_GINE_ENCODER_PATH)
+            mark = "* best"
+        else:
+            epochs_no_improve += 1
+            mark = f"(no improve {epochs_no_improve}/{early_stopping_patience})"
+
+        print(f"  Epoch {epoch}: loss={avg_loss:.4f} acc={avg_acc:.4f} {mark}")
+
+        if epochs_no_improve >= early_stopping_patience:
+            print(f"Early stopping at epoch {epoch}")
+            break
+
+    _plot_training_curves(train_losses, train_accs, V4_GINE_CURVES_PATH)
+
+    print("\nGINE autoencoder training complete.")
+    print(f"  Best loss: {best_loss:.4f} at epoch {best_epoch}")
+    print(f"  Final node type accuracy: {train_accs[-1]:.4f}")
+    print(f"  Epochs run: {len(train_losses)}")
+    print(f"  Encoder saved to: {V4_GINE_ENCODER_PATH}")
+
+    return {
+        "best_loss": best_loss,
+        "best_epoch": best_epoch,
+        "final_accuracy": train_accs[-1],
+        "epochs_run": len(train_losses),
+        "train_losses": train_losses,
+        "train_accs": train_accs,
+    }
+
+
+def encode_graphs_gine(
+    graph_dir: Path | None = None,
+    encoder_weights: Path | None = None,
+    force: bool = False,
+) -> tuple[np.ndarray, list[str]]:
+    """Produce 128-dim frozen GINE embeddings from v4_think graphs.
+
+    Cache-first: loads from ``V4_GINE_EMBEDDING_CACHE`` unless ``force=True``.
+
+    Returns:
+        (embeddings, transcript_ids) — aligned arrays.
+    """
+    if graph_dir is None:
+        graph_dir = V4_FREE_TEXT_DIR
+    if encoder_weights is None:
+        encoder_weights = V4_GINE_ENCODER_PATH
+
+    if V4_GINE_EMBEDDING_CACHE.exists() and V4_GINE_ID_CACHE.exists() and not force:
+        print("loading cached GINE embeddings (v4_think, structure_only)")
+        return np.load(V4_GINE_EMBEDDING_CACHE), json.loads(
+            V4_GINE_ID_CACHE.read_text(encoding="utf-8")
+        )
+
+    if not encoder_weights.exists():
+        raise FileNotFoundError(
+            f"GINE encoder weights not found at {encoder_weights}. "
+            "Run 'uv run python s4_encoding/graph_gnn_encoder.py --encoder gine' first."
+        )
+
+    device = torch.device("cpu")
+    encoder = GINEEncoder(in_channels=IN_CHANNELS_STRUCTURE_ONLY, edge_dim=EDGE_DIM).to(device)
+    encoder.load_state_dict(torch.load(encoder_weights, map_location=device, weights_only=True))
+    encoder.eval()
+    print(f"Loaded frozen GINE encoder from {encoder_weights}")
+
+    graph_paths = sorted(graph_dir.glob("*.json"))
+    if not graph_paths:
+        raise FileNotFoundError(f"No graph files found in {graph_dir}")
+
+    dummy_labels = [-1] * len(graph_paths)
+    dataset = GraphDataset(graph_paths, dummy_labels, feature_mode="structure_only")
+    print(f"Pre-loading {len(dataset)} graphs...")
+    data_list = [dataset[i] for i in range(len(dataset))]
+
+    loader = DataLoader(data_list, batch_size=BATCH_SIZE, shuffle=False)
+    all_embeddings: list[np.ndarray] = []
+    all_ids: list[str] = []
+
+    print(f"Encoding {len(data_list)} graphs in batches of {BATCH_SIZE}...")
+    with torch.no_grad():
+        for batch in loader:
+            graph_emb, _node_emb = encoder(
+                batch.x.to(device),
+                batch.edge_index.to(device),
+                batch.edge_attr.to(device),
+                batch.batch.to(device),
+            )
+            all_embeddings.append(graph_emb.cpu().numpy())
+            all_ids.extend(batch.transcript_id)
+
+    result = np.concatenate(all_embeddings, axis=0)
+
+    CACHE_DIR.mkdir(parents=True, exist_ok=True)
+    np.save(V4_GINE_EMBEDDING_CACHE, result)
+    V4_GINE_ID_CACHE.write_text(json.dumps(all_ids, ensure_ascii=False), encoding="utf-8")
+    print(
+        f"cached {len(all_ids)} GINE embeddings "
+        f"({result.shape[1]}d, v4_think, structure_only) -> {V4_GINE_EMBEDDING_CACHE}"
+    )
+
+    return result, all_ids
+
+
+# ═══════════════════════════════════════════════════════════════════════════════
 # CLI
 # ═══════════════════════════════════════════════════════════════════════════════
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="GIN graph encoder: train or encode.")
+    parser = argparse.ArgumentParser(description="GIN/GINE graph encoder: train or encode.")
+    parser.add_argument(
+        "--encoder",
+        type=str,
+        choices=["gin", "gine"],
+        default="gin",
+        help="Encoder architecture (default: gin). "
+        "'gine' uses GINEConv (edge-type-aware) with v4_think graphs "
+        "and structure_only features.",
+    )
     parser.add_argument(
         "--encode",
         action="store_true",
@@ -727,7 +1013,8 @@ if __name__ == "__main__":
         default="canonical",
         help="Which graph labels to use (default: canonical). "
         "Training: trains a separate encoder. "
-        "Encoding: uses the matching encoder weights.",
+        "Encoding: uses the matching encoder weights. "
+        "Ignored when --encoder=gine (always free_text, structure_only).",
     )
     parser.add_argument(
         "--feature-mode",
@@ -735,7 +1022,8 @@ if __name__ == "__main__":
         choices=["full", "structure_only"],
         default="full",
         help="Node feature mode (default: full = 4 type one-hot + 384 label embedding). "
-        "'structure_only' = 4 type one-hot + degree (5-d), no label embeddings.",
+        "'structure_only' = 4 type one-hot + degree (5-d), no label embeddings. "
+        "Ignored when --encoder=gine (always structure_only).",
     )
     parser.add_argument(
         "--objective",
@@ -746,11 +1034,19 @@ if __name__ == "__main__":
         "node-type reconstruction). 'masked' trains variant a' (P2.3): masks 15%% of "
         "each graph's node types in the input and reconstructs only those, reporting "
         "held-out accuracy on a 90/10 split. Independent of --feature-mode/--label-source "
-        "(always full features, canonical labels); writes to gin_*_masked.* caches.",
+        "(always full features, canonical labels); writes to gin_*_masked.* caches. "
+        "Ignored when --encoder=gine.",
     )
     args = parser.parse_args()
 
-    if args.objective == "masked":
+    if args.encoder == "gine":
+        if args.encode:
+            embeddings, ids = encode_graphs_gine(force=args.force)
+            print(f"Done. Shape: {embeddings.shape}, IDs: {len(ids)}")
+        else:
+            results = train_gine_autoencoder()
+            print(f"\nFinal node type reconstruction accuracy: {results['final_accuracy']:.4f}")
+    elif args.objective == "masked":
         if args.encode:
             embeddings, ids = encode_graphs_masked(force=args.force)
             print(f"Done. Shape: {embeddings.shape}, IDs: {len(ids)}")

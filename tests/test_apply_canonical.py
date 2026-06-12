@@ -102,6 +102,7 @@ def test_apply_all_output_count_matches_input(tmp_path, sample_map):
     for i in range(3):
         g = {
             "transcript_id": f"t{i}",
+            "domain": "AI's role in professional work",
             "nodes": [
                 {
                     "id": "n1",
@@ -109,7 +110,8 @@ def test_apply_all_output_count_matches_input(tmp_path, sample_map):
                     "label": "trust ↔ distrust",
                     "label_negative": "distrust",
                     "bipolarity_complete": True,
-                    "grounding_span": "test",
+                    "grounding_spans_positive": ["test positive span"],
+                    "grounding_spans_negative": ["test negative span"],
                 }
             ],
             "edges": [],
@@ -128,10 +130,11 @@ def test_apply_all_output_count_matches_input(tmp_path, sample_map):
     ac.MAP_PATH = map_path
     try:
         canon_dir = tmp_path / "canonical"
-        total, clean, unmapped = apply_all(free_text_dir=free, canonical_dir=canon_dir)
+        total, clean, unmapped, fixed = apply_all(free_text_dir=free, canonical_dir=canon_dir)
         assert total == 3
         assert clean == 3
         assert unmapped == 0
+        assert fixed == 0  # no MODULATED_BY edges to fix in test data
         assert len(list(canon_dir.glob("*.json"))) == 3
     finally:
         ac.MAP_PATH = orig_map

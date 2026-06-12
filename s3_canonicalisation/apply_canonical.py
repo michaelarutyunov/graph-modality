@@ -13,7 +13,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from s2_extraction.validator import validate_graph
+from s2_extraction.validator import fix_modulated_by_direction, validate_graph
 
 FREE_TEXT_DIR = Path("s1_data/graphs/free_text")
 CANONICAL_DIR = Path("s1_data/graphs/canonical")
@@ -67,11 +67,11 @@ def canonicalise_graph(graph: dict, canonical_map: dict[str, dict[str, str]]) ->
 def apply_all(
     free_text_dir: Path = FREE_TEXT_DIR,
     canonical_dir: Path = CANONICAL_DIR,
-) -> tuple[int, int, int]:
+) -> tuple[int, int, int, int]:
     """Canonicalise all free-text graphs.
 
     Returns:
-        (total, canonicalised, unmapped_labels).
+        (total, canonicalised, unmapped_labels, fixed_edges).
     """
     canonical_map = load_canonical_map()
     canonical_dir.mkdir(parents=True, exist_ok=True)
@@ -84,8 +84,17 @@ def apply_all(
     total_unmapped = 0
     total_violations = 0
 
+    total_fixed_edges = 0
+
     for i, path in enumerate(paths):
         g = json.loads(path.read_text(encoding="utf-8"))
+
+        # Auto-correct known extraction artifacts before canonicalisation
+        # (e.g. MODULATED_BY with CSM as source — see ADR-0004 / bead graph-modality-70b)
+        n_fixed = fix_modulated_by_direction(g)
+        if n_fixed:
+            total_fixed_edges += n_fixed
+
         cg = canonicalise_graph(g, canonical_map)
 
         # Re-validate
@@ -103,19 +112,21 @@ def apply_all(
         if (i + 1) % 250 == 0:
             print(f"  {i + 1}/{total}...")
 
-    return total, total - total_violations, total_unmapped
+    return total, total - total_violations, total_unmapped, total_fixed_edges
 
 
 def main() -> None:
     """Apply canonical labels to all free-text graphs and write to s1_data/graphs/canonical/."""
     print(f"Canonicalising graphs from {FREE_TEXT_DIR} → {CANONICAL_DIR}")
-    total, clean, unmapped = apply_all()
+    total, clean, unmapped, fixed = apply_all()
 
     print("\nDone.")
     print(f"  Graphs processed:    {total}")
     print(f"  Clean (0 violations): {clean}")
     print(f"  With violations:      {total - clean}")
     print(f"  Unmapped labels:      {unmapped}")
+    if fixed:
+        print(f"  Auto-corrected edges: {fixed} (MODULATED_BY direction)")
     print(f"  Output:               {CANONICAL_DIR}/")
 
 

@@ -19,7 +19,7 @@ if TYPE_CHECKING:
     from pathlib import Path
 
 ENTITY_TYPES = ["Construct", "Value", "Stance", "CognitiveStyleMarker"]
-RELATIONS = ["SERVES", "EXPRESSED_VIA", "MODULATED_BY", "CONFLICTS_WITH"]
+RELATIONS = ["SERVES", "EXPRESSED_VIA", "MODULATED_BY", "CONFLICTS_WITH", "SUBSUMES", "IMPLIES"]
 TYPE_TO_IDX = {t: i for i, t in enumerate(ENTITY_TYPES)}
 REL_TO_IDX = {r: i for i, r in enumerate(RELATIONS)}
 
@@ -99,14 +99,14 @@ class GraphDataset(Dataset):
                 .contiguous()
             )  # (2, n_edges)
 
-            edge_attr = torch.zeros(len(edges), 4)
+            edge_attr = torch.zeros(len(edges), len(RELATIONS))
             for i, e in enumerate(edges):
                 rel = e.get("relation", "?")
                 if rel in REL_TO_IDX:
                     edge_attr[i, REL_TO_IDX[rel]] = 1.0
         else:
             edge_index = torch.zeros((2, 0), dtype=torch.long)
-            edge_attr = torch.zeros((0, 4))
+            edge_attr = torch.zeros((0, len(RELATIONS)))
 
         y = (
             torch.tensor(self._labels[idx], dtype=torch.long)
