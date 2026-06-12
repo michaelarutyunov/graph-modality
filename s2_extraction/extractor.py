@@ -67,8 +67,23 @@ BACKENDS = {
         "model": "deepseek-v4-pro",
         "api_key_env": "DEEPSEEK_API_KEY",
         "base_url": "https://api.deepseek.com/v1/chat/completions",
-        # thinking consumes output tokens; raise the budget so reasoning does not
-        # crowd out the JSON answer (the Phase-1 truncation failure mode)
+        # max_tokens is a SHARED cap over reasoning_content + content. v4-pro at
+        # high effort emits 12-15k reasoning tokens, so 16384 truncated the JSON
+        # in ~30% of calls. 32768 leaves ~17k for content after reasoning.
+        "max_tokens": 32768,
+        "json_mode": True,
+        "extra_payload": {
+            "thinking": {"type": "enabled"},
+            "reasoning_effort": "high",
+        },
+    },
+    "deepseek-flash": {
+        "type": "openai",
+        "model": "deepseek-v4-flash",
+        "api_key_env": "DEEPSEEK_API_KEY",
+        "base_url": "https://api.deepseek.com/v1/chat/completions",
+        # lighter model — reasons less, so it should fit a smaller budget and run
+        # cheaper/faster than v4-pro (pending faithfulness A/B)
         "max_tokens": 16384,
         "json_mode": True,
         "extra_payload": {
@@ -237,36 +252,50 @@ def extract_one(
     template = _load_prompt(prompt_version)
     prompt = template.replace("{transcript}", formatted_transcript).replace("{domain}", domain)
 
-    # Call API
-    if backend["type"] == "anthropic":
-        if anthropic_client is None:
-            raise ValueError("Anthropic client required for anthropic backend")
-        raw_text = _call_anthropic(
-            prompt, anthropic_client, backend["model"], backend["max_tokens"]
-        )
-    else:
-        raw_text = _call_openai(
-            prompt,
-            api_key=os.environ[backend["api_key_env"]],
-            base_url=backend["base_url"],
-            model=backend["model"],
-            max_tokens=backend["max_tokens"],
-            json_mode=backend.get("json_mode", False),
-            system_message=backend.get("system_message"),
-            chat_template_kwargs=backend.get("chat_template_kwargs"),
-            extra_payload=backend.get("extra_payload"),
-        )
+    # Call API — retry on empty content (thinking models can return HTTP 200
+    # with empty content if the reasoning budget is exhausted under load)
+    graph: dict | None = None
+    last_exc: json.JSONDecodeError | None = None
+    for attempt in range(MAX_RETRIES):
+        if backend["type"] == "anthropic":
+            if anthropic_client is None:
+                raise ValueError("Anthropic client required for anthropic backend")
+            raw_text = _call_anthropic(
+                prompt, anthropic_client, backend["model"], backend["max_tokens"]
+            )
+        else:
+            raw_text = _call_openai(
+                prompt,
+                api_key=os.environ[backend["api_key_env"]],
+                base_url=backend["base_url"],
+                model=backend["model"],
+                max_tokens=backend["max_tokens"],
+                json_mode=backend.get("json_mode", False),
+                system_message=backend.get("system_message"),
+                chat_template_kwargs=backend.get("chat_template_kwargs"),
+                extra_payload=backend.get("extra_payload"),
+            )
 
-    if raw_text is None:
-        _log_failure(transcript_id, "API call failed after retries")
-        return None
+        if raw_text is None:
+            _log_failure(transcript_id, "API call failed after retries")
+            return None
 
-    # Parse
-    try:
         json_text = _strip_markdown_fences(raw_text)
-        graph = json.loads(json_text)
-    except json.JSONDecodeError as exc:
-        _log_failure(transcript_id, f"JSON decode error: {exc}")
+        try:
+            graph = json.loads(json_text)
+            break
+        except json.JSONDecodeError as exc:
+            last_exc = exc
+            if not json_text:
+                # empty content — retry the call
+                if attempt < MAX_RETRIES - 1:
+                    time.sleep(RETRY_DELAYS[attempt])
+                continue
+            _log_failure(transcript_id, f"JSON decode error: {exc}")
+            return None
+
+    if graph is None:
+        _log_failure(transcript_id, f"JSON decode error: {last_exc}")
         return None
 
     # Metadata — always use the true transcript_id
@@ -310,22 +339,21 @@ def extract_batch(
     domain: str = "AI's role in professional work",
     out_dir: Path | None = None,
     anthropic_client: Anthropic | None = None,
+    concurrency: int = 1,
 ) -> tuple[int, int]:
     success = 0
     failure = 0
 
-    for i, tid in enumerate(transcript_ids):
+    valid_ids = []
+    for tid in transcript_ids:
         if tid not in tagged:
             print(f"  [{tid}] not found in tagged data — skipping")
             failure += 1
-            continue
+        else:
+            valid_ids.append(tid)
 
+    def _run(tid: str) -> tuple[str, dict | None]:
         rec = tagged[tid]
-        print(
-            f"[{i + 1}/{len(transcript_ids)}] {tid} "
-            f"({rec['split']}, {rec['n_human_turns']} human turns)..."
-        )
-
         result = extract_one(
             transcript_id=tid,
             formatted_transcript=rec["formatted"],
@@ -336,18 +364,26 @@ def extract_batch(
             out_dir=out_dir,
             anthropic_client=anthropic_client,
         )
+        return tid, result
 
-        if result is None:
-            failure += 1
-        else:
-            success += 1
-            v_count = len(result.get("validation_violations", []))
-            n_nodes = len(result.get("nodes", []))
-            n_edges = len(result.get("edges", []))
-            status = f"{n_nodes} nodes, {n_edges} edges"
-            if v_count:
-                status += f", {v_count} violations"
-            print(f"  → {status}")
+    from concurrent.futures import ThreadPoolExecutor, as_completed
+
+    with ThreadPoolExecutor(max_workers=concurrency) as executor:
+        futures = {executor.submit(_run, tid): tid for tid in valid_ids}
+        for i, future in enumerate(as_completed(futures)):
+            tid, result = future.result()
+            if result is None:
+                failure += 1
+                print(f"[{i + 1}/{len(valid_ids)}] {tid}: FAILED")
+            else:
+                success += 1
+                v_count = len(result.get("validation_violations", []))
+                n_nodes = len(result.get("nodes", []))
+                n_edges = len(result.get("edges", []))
+                status = f"{n_nodes} nodes, {n_edges} edges"
+                if v_count:
+                    status += f", {v_count} violations"
+                print(f"[{i + 1}/{len(valid_ids)}] {tid} → {status}")
 
     return success, failure
 
@@ -369,7 +405,7 @@ def main() -> None:
         "--backend",
         type=str,
         default="deepseek",
-        choices=["deepseek", "deepseek-think", "anthropic", "agnes"],
+        choices=["deepseek", "deepseek-think", "deepseek-flash", "anthropic", "agnes"],
         help="Backend to use (default: deepseek)",
     )
     parser.add_argument(
@@ -401,6 +437,12 @@ def main() -> None:
         "(round-robin across cohorts, so a --limit checkpoint samples all splits)",
     )
     parser.add_argument("--force", action="store_true", help="Re-extract even if cache exists")
+    parser.add_argument(
+        "--concurrency",
+        type=int,
+        default=1,
+        help="Number of concurrent API calls in batch mode (default: 1)",
+    )
     args = parser.parse_args()
 
     out_dir = Path(args.out_dir) if args.out_dir else _graph_dir_for(args.prompt_version)
@@ -488,6 +530,7 @@ def main() -> None:
         domain=args.domain,
         out_dir=out_dir,
         anthropic_client=anthropic_client,
+        concurrency=args.concurrency,
     )
     print(f"\nDone. {success} succeeded, {failure} failed.")
 
