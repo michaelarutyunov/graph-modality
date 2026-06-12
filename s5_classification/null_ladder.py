@@ -7,20 +7,21 @@ beyond a bag-of-types null (node+edge-type frequency histogram)?
 Design:
   - Both arms use STRUCTURE_ONLY features (type+degree, 5-d) — no label semantics
   - Null: per-graph 11-dim feature vector (4 node-type bins + 6 edge-type bins
-    + mean degree) → LogisticRegression classifier. Captures type DISTRIBUTION
+    + mean degree) -> LogisticRegression classifier. Captures type DISTRIBUTION
     but ZERO wiring/topology information.
-  - Alternative: GINEConv(typed) encoder → frozen 128-dim embeddings →
+  - Alternative: GINEConv(typed) encoder -> frozen 128-dim embeddings ->
     LogisticRegression classifier. Captures wiring WITH edge-type labels.
-  - Target: cohort (workforce/creatives/scientists)
   - 10 seeds (42-51), frozen encoder per seed, paired per-seed deltas
   - CI criterion: 95% CI on mean delta excludes 0 AND mean delta >= +0.01 macro-F1
 
 Usage:
-    PYTHONPATH=. uv run python s5_classification/null_ladder.py
+    PYTHONPATH=. uv run python s5_classification/null_ladder.py --target cohort
+    PYTHONPATH=. uv run python s5_classification/null_ladder.py --target ai_adoption
 """
 
 from __future__ import annotations
 
+import argparse
 import json
 from pathlib import Path
 
@@ -29,6 +30,7 @@ from scipy import stats
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import f1_score
 
+from s4_encoding.build_dataset import _load_ai_adoption_labels, _load_ambivalence_labels
 from s4_encoding.graph_gnn_encoder import (
     V4_FREE_TEXT_DIR,
     encode_graphs_gine,
@@ -36,19 +38,68 @@ from s4_encoding.graph_gnn_encoder import (
 )
 from s5_classification.repeated_eval import make_split
 from s5_classification.split import load_transcript_ids_with_labels
+from s5_classification.structure_only_probe import majority_class_macro_f1
 
 # ── Paths ────────────────────────────────────────────────────────────────────
 CACHE_DIR = Path("cache")
 LADDER_DIR = CACHE_DIR / "null_ladder"
-HISTOGRAM_CACHE = LADDER_DIR / "histogram_features.npy"
-HISTOGRAM_IDS_CACHE = LADDER_DIR / "histogram_ids.json"
-RESULTS_PATH = LADDER_DIR / "results.json"
 
 # ── Constants ────────────────────────────────────────────────────────────────
 SEEDS = list(range(42, 52))  # 42..51 inclusive
 NODE_TYPES = ["Construct", "Value", "Stance", "CognitiveStyleMarker"]
 RELATIONS = ["SERVES", "EXPRESSED_VIA", "MODULATED_BY", "CONFLICTS_WITH", "SUBSUMES", "IMPLIES"]
-TARGET = "cohort"
+
+
+# ── Target-specific helpers ──────────────────────────────────────────────────
+
+
+def _load_labels(target: str) -> dict[str, int]:
+    """Load transcript_id -> integer label for a given target."""
+    if target == "cohort":
+        return load_transcript_ids_with_labels()
+    elif target == "ai_adoption":
+        return _load_ai_adoption_labels()
+    elif target == "stance_ambivalence":
+        return _load_ambivalence_labels()
+    else:
+        raise ValueError(f"Unknown target: {target!r}")
+
+
+def _chance_baseline(target: str) -> float:
+    """Majority-class macro-F1 (constant for cohort/ai_adoption; computed for ambivalence)."""
+    if target == "cohort":
+        return 0.2959
+    elif target == "ai_adoption":
+        return 0.3367
+    elif target == "stance_ambivalence":
+        ids_to_labels = _load_ambivalence_labels()
+        y = np.array(list(ids_to_labels.values()), dtype=np.int64)
+        return majority_class_macro_f1(y)
+    else:
+        raise ValueError(f"Unknown target: {target!r}")
+
+
+def _class_names(target: str) -> list[str]:
+    """Human-readable class names for per-class reporting."""
+    if target == "cohort":
+        return ["workforce", "creatives", "scientists"]
+    elif target == "ai_adoption":
+        return ["tool_user", "integrated"]
+    elif target == "stance_ambivalence":
+        return ["low", "med", "high"]
+    else:
+        raise ValueError(f"Unknown target: {target!r}")
+
+
+def _histogram_cache_path(target: str) -> tuple[Path, Path]:
+    """Return (features_cache, ids_cache) keyed by target."""
+    d = LADDER_DIR / target
+    return d / "histogram_features.npy", d / "histogram_ids.json"
+
+
+def _results_path(target: str) -> Path:
+    """Return results JSON path keyed by target."""
+    return LADDER_DIR / target / "results.json"
 
 
 # ═══════════════════════════════════════════════════════════════════════════════
@@ -56,7 +107,9 @@ TARGET = "cohort"
 # ═══════════════════════════════════════════════════════════════════════════════
 
 
-def build_histogram_features(graph_dir: Path | None = None) -> tuple[np.ndarray, list[str]]:
+def build_histogram_features(
+    target: str, graph_dir: Path | None = None
+) -> tuple[np.ndarray, list[str]]:
     """Build 11-dim bag-of-types feature vectors for all graphs.
 
     Features (11 dims):
@@ -71,11 +124,11 @@ def build_histogram_features(graph_dir: Path | None = None) -> tuple[np.ndarray,
     if graph_dir is None:
         graph_dir = V4_FREE_TEXT_DIR
 
-    if HISTOGRAM_CACHE.exists() and HISTOGRAM_IDS_CACHE.exists():
+    feat_cache, ids_cache = _histogram_cache_path(target)
+
+    if feat_cache.exists() and ids_cache.exists():
         print("Loading cached histogram features...")
-        return np.load(HISTOGRAM_CACHE), json.loads(
-            HISTOGRAM_IDS_CACHE.read_text(encoding="utf-8")
-        )
+        return np.load(feat_cache), json.loads(ids_cache.read_text(encoding="utf-8"))
 
     paths = sorted(graph_dir.glob("*.json"))
     if not paths:
@@ -95,7 +148,6 @@ def build_histogram_features(graph_dir: Path | None = None) -> tuple[np.ndarray,
         n_nodes = len(nodes)
         n_edges = len(edges)
 
-        # Node type histogram (normalised by node count)
         node_hist = np.zeros(len(NODE_TYPES), dtype=np.float32)
         for n in nodes:
             nt = n.get("type", "")
@@ -104,7 +156,6 @@ def build_histogram_features(graph_dir: Path | None = None) -> tuple[np.ndarray,
         if n_nodes > 0:
             node_hist /= n_nodes
 
-        # Edge type histogram (normalised by edge count)
         edge_hist = np.zeros(len(RELATIONS), dtype=np.float32)
         for e in edges:
             rel = e.get("relation", "?")
@@ -113,21 +164,19 @@ def build_histogram_features(graph_dir: Path | None = None) -> tuple[np.ndarray,
         if n_edges > 0:
             edge_hist /= n_edges
 
-        # Mean degree
         mean_degree = (2.0 * n_edges / n_nodes) if n_nodes > 0 else 0.0
 
-        fv = np.concatenate(
-            [node_hist, edge_hist, np.array([mean_degree], dtype=np.float32)]
-        )
+        fv = np.concatenate([node_hist, edge_hist, np.array([mean_degree], dtype=np.float32)])
         features_list.append(fv)
         ids.append(g.get("transcript_id", p.stem))
 
-    result = np.stack(features_list, axis=0)  # (N, 11)
+    result = np.stack(features_list, axis=0)
 
     LADDER_DIR.mkdir(parents=True, exist_ok=True)
-    np.save(HISTOGRAM_CACHE, result)
-    HISTOGRAM_IDS_CACHE.write_text(json.dumps(ids, ensure_ascii=False), encoding="utf-8")
-    print(f"Cached {len(ids)} histogram features → {HISTOGRAM_CACHE}")
+    feat_cache.parent.mkdir(parents=True, exist_ok=True)
+    np.save(feat_cache, result)
+    ids_cache.write_text(json.dumps(ids, ensure_ascii=False), encoding="utf-8")
+    print(f"Cached {len(ids)} histogram features -> {feat_cache}")
 
     return result, ids
 
@@ -155,19 +204,18 @@ def _train_and_eval(
     return float(f1_score(y_test, preds, average="macro"))
 
 
-def run_seed(seed: int) -> dict:
+def run_seed(seed: int, target: str) -> dict:
     """Run one seed of the null-ladder protocol.
 
     Returns:
         Dict with seed, gine_f1, hist_f1, delta.
     """
-    print(f"\n{'='*60}")
-    print(f"Seed {seed}")
-    print(f"{'='*60}")
+    print(f"\n{'=' * 60}")
+    print(f"Seed {seed} (target={target})")
+    print(f"{'=' * 60}")
 
-    # ── Split ────────────────────────────────────────────────────────────
-    train_ids, _val_ids, test_ids = make_split(TARGET, seed)
-    ids_to_labels = load_transcript_ids_with_labels()
+    train_ids, _val_ids, test_ids = make_split(target, seed)
+    ids_to_labels = _load_labels(target)
 
     y_train = np.array([ids_to_labels[tid] for tid in train_ids], dtype=np.int64)
     y_test = np.array([ids_to_labels[tid] for tid in test_ids], dtype=np.int64)
@@ -176,25 +224,21 @@ def run_seed(seed: int) -> dict:
     print("  Training GINE autoencoder...")
     gine_results = train_gine_autoencoder(
         graph_dir=V4_FREE_TEXT_DIR,
-        max_epochs=100,  # full training per seed
+        max_epochs=100,
     )
     print(f"    Best loss: {gine_results['best_loss']:.4f} (epoch {gine_results['best_epoch']})")
 
-    # Encode (uses the just-trained encoder — cached at V4_GINE_ENCODER_PATH)
     gine_embs, gine_ids = encode_graphs_gine(force=True)
 
-    # Slice to split
     gine_lookup = {tid: i for i, tid in enumerate(gine_ids)}
     gine_train = np.array([gine_embs[gine_lookup[tid]] for tid in train_ids])
     gine_test = np.array([gine_embs[gine_lookup[tid]] for tid in test_ids])
 
-    # Use val set for... LogisticRegression doesn't have early stopping.
-    # We train on train and evaluate on test directly.
     gine_f1 = _train_and_eval(gine_train, y_train, gine_test, y_test, seed)
     print(f"  GINEConv(typed) test macro-F1: {gine_f1:.4f}")
 
     # ── Histogram arm ────────────────────────────────────────────────────
-    hist_feats, hist_ids = build_histogram_features()
+    hist_feats, hist_ids = build_histogram_features(target)
     hist_lookup = {tid: i for i, tid in enumerate(hist_ids)}
     hist_train = np.array([hist_feats[hist_lookup[tid]] for tid in train_ids])
     hist_test = np.array([hist_feats[hist_lookup[tid]] for tid in test_ids])
@@ -203,7 +247,7 @@ def run_seed(seed: int) -> dict:
     print(f"  Histogram (bag-of-types) test macro-F1: {hist_f1:.4f}")
 
     delta = gine_f1 - hist_f1
-    print(f"  Δ (GINE - histogram): {delta:+.4f}")
+    print(f"  delta (GINE - histogram): {delta:+.4f}")
 
     return {
         "seed": seed,
@@ -222,22 +266,32 @@ def run_seed(seed: int) -> dict:
 
 def main() -> None:
     """Run the full null-ladder protocol and record the verdict."""
+    parser = argparse.ArgumentParser(description="Null-ladder edge test")
+    parser.add_argument(
+        "--target",
+        type=str,
+        choices=["cohort", "ai_adoption", "stance_ambivalence"],
+        default="cohort",
+        help="Classification target (default: cohort)",
+    )
+    args = parser.parse_args()
+    target: str = args.target
+
     print("=" * 60)
     print("NULL-LADDER EDGE TEST")
-    print(f"Target: {TARGET}")
+    print(f"Target: {target}")
     print(f"Seeds: {SEEDS[0]}-{SEEDS[-1]} ({len(SEEDS)} seeds)")
-    print("Null: 11-dim bag-of-types histogram → LogisticRegression")
-    print("Alt:  GINEConv(typed) 128-dim embeddings → LogisticRegression")
+    print("Null: 11-dim bag-of-types histogram -> LogisticRegression")
+    print("Alt:  GINEConv(typed) 128-dim embeddings -> LogisticRegression")
+    print(f"Chance baseline: {_chance_baseline(target):.4f}")
     print("=" * 60)
 
-    # Pre-build histogram features once (deterministic)
     print("\nBuilding histogram features...")
-    build_histogram_features()
+    build_histogram_features(target)
 
-    # Run all seeds
     results: list[dict] = []
     for seed in SEEDS:
-        r = run_seed(seed)
+        r = run_seed(seed, target)
         results.append(r)
 
     # ── Statistics ───────────────────────────────────────────────────────
@@ -249,68 +303,60 @@ def main() -> None:
     std_delta = float(np.std(deltas, ddof=1))
     n = len(deltas)
 
-    # 95% CI via t-distribution
     ci_low, ci_high = stats.t.interval(0.95, df=n - 1, loc=mean_delta, scale=std_delta / np.sqrt(n))
 
-    # Verdict
     ci_excludes_zero = bool(ci_low > 0 or ci_high < 0)
     meets_threshold = bool(mean_delta >= 0.01)
     verdict = "PASS" if (ci_excludes_zero and meets_threshold) else "FAIL"
 
     # ── Output ───────────────────────────────────────────────────────────
-    print(f"\n{'='*60}")
+    print(f"\n{'=' * 60}")
     print("RESULTS")
-    print(f"{'='*60}")
+    print(f"{'=' * 60}")
     print("\nPer-seed scores:")
     for r in results:
         print(
             f"  Seed {r['seed']:2d}:  GINE={r['gine_f1']:.4f}  "
-            f"Hist={r['hist_f1']:.4f}  Δ={r['delta']:+.4f}"
+            f"Hist={r['hist_f1']:.4f}  delta={r['delta']:+.4f}"
         )
 
     print("\nSummary:")
-    gine_mean = np.mean(gine_scores)
-    gine_std = np.std(gine_scores, ddof=1)
-    hist_mean = np.mean(hist_scores)
-    hist_std = np.std(hist_scores, ddof=1)
+    gine_mean = float(np.mean(gine_scores))
+    gine_std = float(np.std(gine_scores, ddof=1))
+    hist_mean = float(np.mean(hist_scores))
+    hist_std = float(np.std(hist_scores, ddof=1))
     print(f"  GINE mean macro-F1:     {gine_mean:.4f} +/- {gine_std:.4f}")
     print(f"  Histogram mean macro-F1: {hist_mean:.4f} +/- {hist_std:.4f}")
-    print(f"  Mean Δ:                  {mean_delta:+.4f}")
+    print(f"  Mean delta:              {mean_delta:+.4f}")
     print(f"  95% CI:                  [{ci_low:+.4f}, {ci_high:+.4f}]")
     print(f"  CI excludes 0:           {ci_excludes_zero}")
-    print(f"  Mean Δ ≥ +0.01:          {meets_threshold}")
+    print(f"  Mean delta >= +0.01:     {meets_threshold}")
     print(f"\n  VERDICT: {verdict}")
 
     # ── Per-class breakdown ──────────────────────────────────────────────
-    # Compute per-class F1 for the last seed (representative)
     print(f"\nPer-class F1 (seed {SEEDS[-1]}):")
-    ids_to_labels = load_transcript_ids_with_labels()
-    _train_ids, _val_ids, test_ids = make_split(TARGET, SEEDS[-1])
+    ids_to_labels = _load_labels(target)
+    _train_ids, _val_ids, test_ids = make_split(target, SEEDS[-1])
     y_test = np.array([ids_to_labels[tid] for tid in test_ids], dtype=np.int64)
 
-    # GINE
     gine_embs, gine_ids = encode_graphs_gine()
     gine_lookup = {tid: i for i, tid in enumerate(gine_ids)}
     gine_test = np.array([gine_embs[gine_lookup[tid]] for tid in test_ids])
+    gine_train_arr = np.array([gine_embs[gine_lookup[tid]] for tid in _train_ids])
+    y_gine_train = np.array([ids_to_labels[tid] for tid in _train_ids], dtype=np.int64)
     clf_g = LogisticRegression(class_weight="balanced", max_iter=2000, random_state=SEEDS[-1])
-    clf_g.fit(
-        np.array([gine_embs[gine_lookup[tid]] for tid in _train_ids]),
-        np.array([ids_to_labels[tid] for tid in _train_ids], dtype=np.int64),
-    )
+    clf_g.fit(gine_train_arr, y_gine_train)
     gine_preds = clf_g.predict(gine_test)
 
-    # Histogram
-    hist_feats, hist_ids = build_histogram_features()
+    hist_feats, hist_ids = build_histogram_features(target)
     hist_lookup = {tid: i for i, tid in enumerate(hist_ids)}
     hist_test = np.array([hist_feats[hist_lookup[tid]] for tid in test_ids])
+    hist_train_arr = np.array([hist_feats[hist_lookup[tid]] for tid in _train_ids])
     clf_h = LogisticRegression(class_weight="balanced", max_iter=2000, random_state=SEEDS[-1])
-    clf_h.fit(
-        np.array([hist_feats[hist_lookup[tid]] for tid in _train_ids]),
-        np.array([ids_to_labels[tid] for tid in _train_ids], dtype=np.int64),
-    )
+    clf_h.fit(hist_train_arr, y_gine_train)
     hist_preds = clf_h.predict(hist_test)
 
-    class_names = ["workforce", "creatives", "scientists"]
+    class_names = _class_names(target)
     for i, name in enumerate(class_names):
         gine_cf1 = f1_score(y_test == i, gine_preds == i)
         hist_cf1 = f1_score(y_test == i, hist_preds == i)
@@ -318,12 +364,14 @@ def main() -> None:
         print(f"  {name:12s}: GINE={gine_cf1:.4f}  Hist={hist_cf1:.4f}  delta={delta_cf1:+.4f}")
 
     # ── Persist ──────────────────────────────────────────────────────────
-    LADDER_DIR.mkdir(parents=True, exist_ok=True)
+    rp = _results_path(target)
+    rp.parent.mkdir(parents=True, exist_ok=True)
     payload = {
-        "target": TARGET,
+        "target": target,
+        "chance_baseline": _chance_baseline(target),
         "seeds": SEEDS,
-        "null_arm": "11-dim bag-of-types histogram → LogisticRegression",
-        "alt_arm": "GINEConv(typed) 128-dim embeddings → LogisticRegression",
+        "null_arm": "11-dim bag-of-types histogram -> LogisticRegression",
+        "alt_arm": "GINEConv(typed) 128-dim embeddings -> LogisticRegression",
         "results": results,
         "mean_delta": mean_delta,
         "std_delta": std_delta,
@@ -331,19 +379,17 @@ def main() -> None:
         "ci_excludes_zero": ci_excludes_zero,
         "meets_threshold": meets_threshold,
         "verdict": verdict,
-        "gine_mean_f1": float(np.mean(gine_scores)),
-        "hist_mean_f1": float(np.mean(hist_scores)),
+        "gine_mean_f1": gine_mean,
+        "hist_mean_f1": hist_mean,
     }
-    RESULTS_PATH.parent.mkdir(parents=True, exist_ok=True)
-    with open(RESULTS_PATH, "w") as f:
+    with open(rp, "w") as f:
         json.dump(payload, f, indent=2, ensure_ascii=False)
-    print(f"\nResults saved to {RESULTS_PATH}")
+    print(f"\nResults saved to {rp}")
 
-    # ── Record verdict in results-log.md ─────────────────────────────────
-    _append_verdict_to_log(payload)
+    _append_verdict_to_log(payload, target)
 
 
-def _append_verdict_to_log(payload: dict) -> None:
+def _append_verdict_to_log(payload: dict, target: str) -> None:
     """Append the null-ladder verdict to the results log."""
     log_path = Path(".claude/context/results-log.md")
 
@@ -351,12 +397,19 @@ def _append_verdict_to_log(payload: dict) -> None:
     mean_delta = payload["mean_delta"]
     ci_low, ci_high = payload["ci_95"]
 
+    if target == "cohort":
+        target_label = "cohort (workforce/creatives/scientists)"
+    elif target == "ai_adoption":
+        target_label = "ai_adoption (tool_user/integrated)"
+    else:
+        target_label = "stance_ambivalence (low/med/high)"
+
     entry = f"""
-### Null-Ladder Edge Test (v4) --- {verdict}
+### Null-Ladder Edge Test (v4, {target}) --- {verdict}
 
 **Date:** 2026-06-12
-**Target:** cohort (workforce/creatives/scientists)
-**Protocol:** 10-seed frozen CI ({payload['seeds'][0]}-{payload['seeds'][-1]})
+**Target:** {target_label}
+**Protocol:** 10-seed frozen CI ({payload["seeds"][0]}-{payload["seeds"][-1]})
 
 **Arms:**
 - Null: 11-dim bag-of-types histogram
@@ -364,22 +417,20 @@ def _append_verdict_to_log(payload: dict) -> None:
 - Alternative: GINEConv(typed) 128-dim frozen embeddings -> LogisticRegression
 
 **Results:**
-- GINEConv mean macro-F1: {payload['gine_mean_f1']:.4f}
-- Histogram mean macro-F1: {payload['hist_mean_f1']:.4f}
+- Chance baseline: {payload.get("chance_baseline", "N/A")}
+- GINEConv mean macro-F1: {payload["gine_mean_f1"]:.4f}
+- Histogram mean macro-F1: {payload["hist_mean_f1"]:.4f}
 - Mean delta: {mean_delta:+.4f}
 - 95% CI: [{ci_low:+.4f}, {ci_high:+.4f}]
-- CI excludes 0: {payload['ci_excludes_zero']}
-- Mean delta >= +0.01: {payload['meets_threshold']}
+- CI excludes 0: {payload["ci_excludes_zero"]}
+- Mean delta >= +0.01: {payload["meets_threshold"]}
 
 **Per-seed:**
 | Seed | GINE F1 | Hist F1 | delta |
-|------|---------|---------|---|
+|------|---------|---------|-------|
 """
     for r in payload["results"]:
-        entry += (
-            f"| {r['seed']} | {r['gine_f1']:.4f} | "
-            f"{r['hist_f1']:.4f} | {r['delta']:+.4f} |\n"
-        )
+        entry += f"| {r['seed']} | {r['gine_f1']:.4f} | {r['hist_f1']:.4f} | {r['delta']:+.4f} |\n"
 
     if verdict == "PASS":
         interpretation = (
@@ -400,7 +451,6 @@ def _append_verdict_to_log(payload: dict) -> None:
 ---
 """
 
-    # Append to log
     with open(log_path, "a") as f:
         f.write(entry)
     print(f"Verdict appended to {log_path}")
