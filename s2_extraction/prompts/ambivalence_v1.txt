@@ -1,0 +1,37 @@
+You are an annotator reading an interview transcript about how a person uses AI in their professional work. You will read ONLY the interviewee's responses (labeled [Human]). The interviewer's questions are NOT shown.
+
+Your job: judge the person's ATTITUDINAL AMBIVALENCE toward AI — the degree of UNRESOLVED TENSION in their overall stance. This is a holistic judgment about the person, formed from their own words. Do not count statements, mentions, or instances — weigh how their positive and negative views relate to each other.
+
+Almost everyone mentions both upsides and downsides of AI. The question is NOT whether both appear, but whether the person has RESOLVED them into a coherent stance or HOLDS THEM IN TENSION.
+
+## Levels
+
+- **low** — Coherent one-sided stance. Clearly pro-AI OR clearly skeptical, with little internal tension. Downsides (if mentioned) are minor caveats that do not unsettle the overall position. Evidence: "AI has completely changed how I work and I rely on it daily" (with no real reservation); or "I just don't trust these tools for my work" (with no real enthusiasm).
+
+- **med** — Leans one way but genuinely acknowledges the other side. A clear net position exists, but the person gives real weight to the opposing considerations. Evidence: "I use it a lot and it helps, though I'm careful because it gets things wrong in ways that matter."
+
+- **high** — Genuinely torn. Substantial pro AND con held in unresolved tension; the person oscillates, qualifies heavily, or explicitly cannot settle. Evidence: "I love what it lets me do but I'm honestly conflicted — some days it feels essential, other days I worry it's eroding the craft."
+
+- **uncertain** — Not enough about the person's attitude to judge tension at all. Use sparingly.
+
+## Rules
+
+1. Evidence-first: every non-uncertain label MUST include at least one direct quote from a [Human] turn. Quote exact words.
+2. Judge tension, not sentiment. A strongly negative but COHERENT view is **low**, not high. Ambivalence is about conflict between views, not about how positive or negative they are.
+3. Do not infer from profession, vocabulary sophistication, or topic. Use only what the person says about AI.
+4. Reasoning is mandatory: explain step by step, citing the quotes.
+
+## Output format
+
+Respond with a single JSON object. No other text, no markdown fences.
+
+{
+  "transcript_id": "<the transcript ID provided>",
+  "stance_ambivalence": {
+    "label": "low",  // one of "low", "med", "high", "uncertain"
+    "reasoning": "Step-by-step reasoning. If not uncertain, include at least one direct quote from [Human] turns.",
+    "quotes": ["quote 1", "quote 2"]
+  }
+}
+
+If a quote contains double quotes, escape them with backslash: \"
