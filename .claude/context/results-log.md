@@ -855,3 +855,50 @@ but the RELATIVE advantage of typed topology is reliable.
 | 51 | 0.3002 | +0.0043 |
 
 ---
+
+## Stance ambivalence target
+
+*Labeling and adjudication completed 2026-06-14.*
+
+The `stance_ambivalence` target was added as a cleaner, lexically non-obvious primary label to replace `ai_adoption` for graph-vs-text signal tests. It is ordinal: `low` (coherent one-sided stance), `med` (leans one way with genuine acknowledgment of the other), `high` (genuinely torn).
+
+### Labeling pipeline
+
+| Step | Output |
+|---|---|
+| Agnes (`agnes-2.0-flash`) | `cache/ambivalence_agnes.jsonl` |
+| Haiku (`claude-haiku-4-5-20251001`) | `cache/ambivalence_haiku.jsonl` |
+| Agreement report | `cache/ambivalence_disagreements.json` |
+| Kimi k2.6 adjudication | `cache/ambivalence_adjudications.json`, `cache/ambivalence_adjudication_details.jsonl` |
+| Final consensus | `cache/ambivalence.jsonl` |
+
+### Inter-annotator agreement
+
+| metric | value |
+|---|---|
+| Transcripts | 1,250 |
+| Agreements | 973 |
+| Disagreements | 277 (22.2%) |
+| Agreement rate | 77.8% |
+| Cohen's κ | 0.504 (moderate) |
+
+### Adjudication method
+
+Kimi k2.6 judged each disagreement using the full human transcript, the `ambivalence_v1.txt` rubric, and the two anonymized annotator judgments (randomized A/B order) with their reasonings and supporting quotes. All 277 disagreements were resolved with zero API errors.
+
+### Final consensus distribution
+
+| label | count | fraction |
+|---|---|---|
+| low | 352 | 28.2% |
+| med | 843 | 67.4% |
+| high | 55 | 4.4% |
+| uncertain / manual_review | 0 | 0.0% |
+
+**Total usable:** 1,250 / 1,250.
+
+### Notes
+
+- The target is ready for `null_ladder.py` and `structure_only_probe.py` (both already accept `--target stance_ambivalence`).
+- Class imbalance is severe, especially the small `high` class. This is documented as a known limitation; no post-hoc relabeling was performed.
+- Full audit trail is in `cache/ambivalence_adjudication_details.jsonl`.
