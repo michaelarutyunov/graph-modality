@@ -17,7 +17,7 @@ This separation is critical: it means we can cleanly measure whether adding grap
    - **sklearn**: Traditional classifiers — LogisticRegression, RandomForest, GradientBoosting, SVC. One-shot fit, no epochs. All operate on concatenated modality features.
    Compare single-modality baselines against fusion combinations. Record macro-F1, per-class F1, confusion matrices.
 
-3. **Experiment runner.** Use `s5_classification/train_run.py` with `ExperimentConfig` dataclass to run reproducible experiments. Supports `--sweep torch` (42 experiments), `--sweep sklearn` (48 experiments), or `--sweep all` (90 experiments). Each run saves: model weights (.pt or .joblib), curves, per-example predictions, metrics JSON. Sweep across architectures, modality combinations, targets, and backends. Note: `stance_ambivalence` is available for specialized probes (`null_ladder.py`, `structure_only_probe.py`, `repeated_eval.py`) but is not yet registered in `train_config.py`/`train_run.py`.
+3. **Experiment runner.** Use `s5_classification/train_run.py` with `ExperimentConfig` dataclass to run reproducible experiments. Supports `--sweep torch`, `--sweep sklearn`, or `--sweep all`. Each run saves: model weights (.pt or .joblib), curves, per-example predictions, metrics JSON. Sweep across architectures, modality combinations, targets, and backends. `stance_ambivalence` is a **first-class target** across the full path — `train_config.Target`/`TARGET_CLASSES` (3 classes), both sweep builders, `train_run.py`/`repeated_run.py` (P6.2) — alongside the probes (`null_ladder.py`, `structure_only_probe.py`, `h_edge.py`). For imbalanced targets use class-weighted loss: `ExperimentConfig.class_weight="balanced"` (torch; sklearn estimators are balanced by default), surfaced via `repeated_run.py --class-weight balanced`. `repeated_run.py` / `ablation_run.py` accept `--target` and `--out-dir` (write target-specific result dirs to avoid clobbering).
 
 4. **Disentanglement analysis.** Build complementarity matrices (2×2: text correct/wrong vs graph correct/wrong) to quantify GRAPH-UNIQUE signal — examples where graph classifies correctly and text does not. This directly answers "does the frozen graph modality add complementary signal?" See `s6_notebooks/05_fusion_analysis.py`.
 
@@ -44,10 +44,13 @@ This separation is critical: it means we can cleanly measure whether adding grap
 | `s5_classification/baseline.py` | Text-only LR (Phase 3 reference, sklearn) |
 | `s5_classification/analysis_feature_importance.py` | Permutation importance — which graph features matter |
 | `s5_classification/analysis_stats.py` | Stats-only per-class report — graph topology discriminability |
-| `s5_classification/null_ladder.py` | Null-ladder test (typed GIN vs bag-of-types) — supports `stance_ambivalence` |
-| `s5_classification/structure_only_probe.py` | Topology-only probe — supports `stance_ambivalence` |
+| `s5_classification/null_ladder.py` | Null-ladder test (typed GINE vs bag-of-types histogram) — supports `stance_ambivalence` |
+| `s5_classification/structure_only_probe.py` | Topology-only probe (untyped GIN, structure-only feats) — supports `stance_ambivalence` |
+| `s5_classification/h_edge.py` | H_edge 2-D edge ablation: histogram → untyped GINConv → typed GINEConv (structure-only, v4_think, 10-seed CI) |
+| `s5_classification/ablation_run.py` | Graph-vs-labels disentanglement runner (text/label_bag/structure_only/full_gin/masked_gin) — `--target`/`--out-dir` |
+| `s5_classification/ablation_probe.py` | Single-modality logistic probe over one frozen embedding (class-weighted) |
 | `s5_classification/repeated_eval.py` | Repeated-split data slicing — supports `stance_ambivalence` |
-| `s5_classification/repeated_run.py` | Repeated-evaluation runner across 10 seeds |
+| `s5_classification/repeated_run.py` | Repeated-evaluation runner across 10 seeds — `--target`/`--class-weight`/`--out-dir` |
 | `s6_notebooks/02_graph_exploration.py` | Cohort topology, H1-H4 previews |
 | `s6_notebooks/03_classification_results.py` | Results presentation, confusion matrices, route comparison |
 | `s6_notebooks/04_structural_analysis.py` | H1-H4 statistical tests, AI adoption exploratory |

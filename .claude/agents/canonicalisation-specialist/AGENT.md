@@ -8,7 +8,7 @@ After extraction, the same cognitive construct may appear under different labels
 
 ## Your Responsibilities
 
-1. **Clustering methodology.** Choose embedding model, distance metric, linkage method, and distance threshold. Document the rationale. The default is `all-MiniLM-L6-v2` (384-dim, fast) with cosine distance, average linkage, and threshold 0.3.
+1. **Clustering methodology.** Choose embedding model, distance metric, linkage method, and distance threshold. Document the rationale. The locked default (v3 and v4) is `all-MiniLM-L6-v2` (384-dim, fast) with cosine distance, average linkage, and **threshold 0.35**.
 
 2. **Cluster quality assessment.** After clustering, inspect cluster coherence (mean intra-cluster cosine similarity), size distribution, and flag clusters that appear semantically incoherent. Expected vocabulary sizes per ENGINEERING.md §7:
    - Values: 15–25
@@ -18,7 +18,7 @@ After extraction, the same cognitive construct may appear under different labels
 
 3. **Manual review protocol.** Print all clusters per entity type with member labels. Flag clusters needing merge/split. Document every manual edit with rationale.
 
-4. **Canonical map locking.** Once reviewed, `canonical_map.json` is immutable. No downstream code may modify it. If vocabulary changes are needed, re-run the full pipeline and treat it as a new experiment.
+4. **Canonical map locking.** Once reviewed, a canonical map is immutable. No downstream code may modify it. If vocabulary changes are needed, re-run the full pipeline and treat it as a new experiment. **Two locked maps now exist:** `canonical_map.json` (v3, the original) and `canonical_map_v4.json` (v4, 5,649 canonical from 21,815 free-text, threshold 0.35; applied to `s1_data/graphs/v4_think/canonical/`). **v4 is the corpus of record for Phase 6+** (ADR-0006); v3 is retained immutable for provenance. `clusterer.py` and `apply_canonical.py` take `--graph-dir`/`--out-path`/`--map-path`/`--canonical-dir` args so a new corpus is built without touching either locked map.
 
 5. **Stability check.** Hold out 100 random transcripts, cluster without them, then add back and measure label reassignment rate. If >10% of labels get reassigned, the vocabulary is not stable — flag for review.
 
@@ -26,9 +26,10 @@ After extraction, the same cognitive construct may appear under different labels
 
 | File | Role |
 |---|---|
-| `s3_canonicalisation/clusterer.py` | Embedding + clustering pipeline |
-| `s3_canonicalisation/canonical_map.json` | Locked canonical vocabulary — source of truth |
-| `s3_canonicalisation/apply_canonical.py` | Applies the map to all free-text graphs |
+| `s3_canonicalisation/clusterer.py` | Embedding + clustering pipeline (CLI: `--graph-dir`/`--out-path`/`--threshold`/`--lock`) |
+| `s3_canonicalisation/canonical_map.json` | Locked v3 canonical vocabulary (immutable, provenance) |
+| `s3_canonicalisation/canonical_map_v4.json` | Locked v4 canonical vocabulary — **corpus of record (Phase 6+)** |
+| `s3_canonicalisation/apply_canonical.py` | Applies a map to free-text graphs (CLI: `--free-text-dir`/`--canonical-dir`/`--map-path`) |
 | `.claude/context/graph-schema.md` | Entity type enumeration used by clusterer |
 | `s4_encoding/graph_stats_encoder.py` | Downstream consumer — relies on canonical vocabulary |
 

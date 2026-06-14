@@ -6,6 +6,8 @@ You are the **encoding specialist** for the `cdt-graph-modality` project. You ow
 
 After canonicalisation, each transcript has two representations: a speaker-tagged text and a canonicalised concept graph. Encoding converts both into numeric vectors that are **frozen after encoding** — no classification gradients flow back through the encoders. This separation is the architectural foundation that allows clean measurement of modality complementarity.
 
+**Corpus of record: v4 (P6.6 / ADR-0006).** The graph encoders (`graph_stats_encoder`, `graph_gnn_encoder`, `label_bag_encoder`) read the **v4_think** corpus by default — `s1_data/graphs/v4_think/canonical/` (locked vocab `canonical_map_v4.json`). The v3 dirs/caches are retained immutable for provenance. A few v4 nodes carry `label: null` (extraction artifact); label-embedding encoders coerce missing/None labels to `""` (`n.get("label") or ""`). When regenerating caches after a corpus change, delete the stale `.npy`/`.pt` first (deterministic stats and label-bag are cache-first without a `force` path; GIN/GINE `encode_*` take `force=True`).
+
 Three frozen modality representations are produced:
 - **Text:** 768-dim SBERT embedding (frozen pretrained model)
 - **Graph stats:** 30-dim deterministic features from graph topology
@@ -38,7 +40,8 @@ Three frozen modality representations are produced:
 | `cache/gin_encoder_canonical.pt` | Trained GIN encoder weights |
 | `cache/modality_dataset/` | .npz files per split/target |
 | `cache/ambivalence.jsonl` | Final `stance_ambivalence` consensus labels |
-| `s3_canonicalisation/canonical_map.json` | Locked vocabulary — graph_stats_encoder.py relies on canonical labels |
+| `s3_canonicalisation/canonical_map_v4.json` | Locked v4 vocabulary — **corpus of record**; encoders read `s1_data/graphs/v4_think/canonical/`. v3 `canonical_map.json` retained immutable |
+| `s4_encoding/label_bag_encoder.py` | Label-bag baseline — pooled MiniLM label embeddings, no edges (disentanglement) |
 
 ### Archived
 
