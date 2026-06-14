@@ -88,6 +88,8 @@ def slice_modalities(target: str, ids: list[str]) -> dict[str, np.ndarray]:
         labels_dict = load_transcript_ids_with_labels()
     elif target == "ai_adoption":
         labels_dict = _load_ai_adoption_labels()
+    elif target == "stance_ambivalence":
+        labels_dict = _load_ambivalence_labels()
     else:
         raise ValueError(f"Unknown target: {target!r}")
 

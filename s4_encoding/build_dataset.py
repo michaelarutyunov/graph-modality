@@ -247,6 +247,25 @@ def build_dataset(label_source: str = "canonical") -> dict[str, Any]:
     print("\nPackaging AI adoption target...")
     ai_info = _package_target("ai_adoption", ai_splits, ai_labels)
 
+    # ── Stance ambivalence target ───────────────────────────────────────────
+    # Unlike ai_adoption (which inherits the cohort split and filters), the
+    # ambivalence target is stratified by its OWN ordinal label, because the
+    # `high` class is small (n=55) and a cohort-stratified split could leave a
+    # split nearly empty of it. make_split(seed=42) replicates split.py's
+    # two-stage stratified procedure on the ambivalence labels. Local import
+    # avoids a module-load cycle (repeated_eval imports from this module).
+    from s5_classification.repeated_eval import make_split
+
+    print("\nLoading stance_ambivalence labels and split...")
+    amb_labels = _load_ambivalence_labels()
+    amb_train, amb_val, amb_test = make_split("stance_ambivalence", seed=42)
+    amb_splits = {"train": amb_train, "val": amb_val, "test": amb_test}
+    for split_name, ids in amb_splits.items():
+        print(f"  stance_ambivalence {split_name}: {len(ids)} transcripts")
+
+    print("\nPackaging stance_ambivalence target...")
+    amb_info = _package_target("stance_ambivalence", amb_splits, amb_labels)
+
     # ── Metadata ────────────────────────────────────────────────────────────
     metadata = {
         "created_at": "2026-06-09",
@@ -262,6 +281,7 @@ def build_dataset(label_source: str = "canonical") -> dict[str, Any]:
         "targets": {
             "cohort": cohort_info,
             "ai_adoption": ai_info,
+            "stance_ambivalence": amb_info,
         },
     }
 
@@ -276,7 +296,7 @@ def load_dataset(target: str, split: str) -> dict[str, np.ndarray]:
     """Load one .npz file for a given target and split.
 
     Args:
-        target: ``"cohort"`` or ``"ai_adoption"``.
+        target: ``"cohort"``, ``"ai_adoption"``, or ``"stance_ambivalence"``.
         split: ``"train"``, ``"val"``, or ``"test"``.
 
     Returns:

@@ -410,7 +410,7 @@ def print_comparison_table(results: list[dict]) -> None:
     # Best by target
     print(f"\n{'=' * 110}")
     print("BEST BY TARGET")
-    for target in ["ai_adoption", "cohort"]:
+    for target in ["ai_adoption", "cohort", "stance_ambivalence"]:
         target_results = [
             r["metrics"] for r in results if "metrics" in r and r["metrics"].get("target") == target
         ]
@@ -433,7 +433,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--target",
         type=str,
-        choices=["ai_adoption", "cohort"],
+        choices=["ai_adoption", "cohort", "stance_ambivalence"],
         default=None,
         help="Run only experiments for a specific target.",
     )

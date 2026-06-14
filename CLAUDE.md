@@ -303,8 +303,12 @@ hypothesis on a new, lexically-non-obvious primary target (`stance_ambivalence`)
 - Verdict: old targets cannot deliver an honest topology claim → introduce a new target.
 
 ### Phase 6 🔜 — Complementarity retest on `stance_ambivalence` (NEW PRIMARY TARGET)
-Back to the original thesis, now on a fair target. Two hypotheses to test once the new labels
-land (`cache/ambivalence.jsonl`, currently being regenerated + adjudicated):
+Back to the original thesis, now on a fair target. **Labels are final** (ADR-0005):
+`cache/ambivalence.jsonl`, 1,250 usable, Agnes+Haiku labelled + Kimi-adjudicated, Cohen's
+κ=0.504. Design doc: `.claude/context/ambivalence-target.md`; label pipeline: ENGINEERING §4.4.
+**Severe class imbalance** — `med`=843 / `low`=352 / `high`=55 (4.4%) — is a binding
+constraint: use class-weighted loss, report per-class F1, and treat results on `high` (n=55) as
+low-power (METHOD_REVIEW class-imbalance concern). Two hypotheses:
 
 - **H_fusion (primary):** fusion(text + graph) macro-F1 > max(text-only, graph-only) on
   `stance_ambivalence`. The complementarity claim — combined > either modality alone. Graph

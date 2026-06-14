@@ -31,7 +31,7 @@ from s5_classification.train_config import (
 from s5_classification.train_run import run_experiment_on_data
 
 SEEDS = list(range(10))
-TARGETS: list[Target] = ["ai_adoption", "cohort"]
+TARGETS: list[Target] = ["ai_adoption", "cohort", "stance_ambivalence"]
 TEXT_ONLY_COMBO = ("text",)
 FUSION_COMBOS = (
     ("text", "stats"),

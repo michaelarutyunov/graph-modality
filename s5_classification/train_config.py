@@ -24,11 +24,12 @@ MODALITY_DIMS = {
 TARGET_CLASSES = {
     "cohort": 3,  # workforce, creatives, scientists
     "ai_adoption": 2,  # tool_user, integrated
+    "stance_ambivalence": 3,  # low, med, high (ordinal)
 }
 
 TorchArchitecture = Literal["single", "stacked", "gated", "late"]
 SklearnArchitecture = Literal["logistic", "random_forest", "gradient_boost", "svm"]
-Target = Literal["cohort", "ai_adoption"]
+Target = Literal["cohort", "ai_adoption", "stance_ambivalence"]
 Backend = Literal["torch", "sklearn"]
 LabelSource = Literal["canonical", "free_text"]
 
@@ -100,7 +101,7 @@ def build_sweep() -> list[ExperimentConfig]:
     """
     configs: list[ExperimentConfig] = []
 
-    targets: list[Target] = ["ai_adoption", "cohort"]
+    targets: list[Target] = ["ai_adoption", "cohort", "stance_ambivalence"]
 
     modality_combos = [
         ["text"],
@@ -148,7 +149,7 @@ def build_sklearn_sweep() -> list[ExperimentConfig]:
     """
     configs: list[ExperimentConfig] = []
 
-    targets: list[Target] = ["ai_adoption", "cohort"]
+    targets: list[Target] = ["ai_adoption", "cohort", "stance_ambivalence"]
 
     modality_combos = [
         ["text"],
