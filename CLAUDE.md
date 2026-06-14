@@ -74,12 +74,14 @@ docs/                     # CHARTER.md, ENGINEERING.md, PLAN.md
 | `s2_extraction/prompts/v1.txt` | Original prompt (no examples) — preserved, never deleted |
 | `s2_extraction/validator.py` | Structural constraint checks — run after every extraction |
 | **Canonicalisation** | |
-| `s3_canonicalisation/canonical_map.json` | Locked canonical vocabulary — source of truth for all node type counting |
+| `s3_canonicalisation/canonical_map_v4.json` | **Locked v4 canonical vocabulary — corpus of record (Phase 6+, ADR-0006)** |
+| `s3_canonicalisation/canonical_map.json` | Locked v3 canonical vocabulary — immutable, retained for provenance |
 | **Encoding** | |
 | `s4_encoding/text_encoder.py` | SBERT text embeddings (768-dim), human-only turns, frozen |
-| `s4_encoding/graph_stats_encoder.py` | Route 2 feature vector — 30 dimensions, networkx-derived, deterministic |
+| `s4_encoding/graph_stats_encoder.py` | Route 2 feature vector — 30 dimensions, networkx-derived, deterministic (reads v4) |
 | `s4_encoding/graph_dataset.py` | PyG Dataset — converts graphs to Data objects with node features |
-| `s4_encoding/graph_gnn_encoder.py` | GIN autoencoder + frozen inference — self-supervised, target-agnostic (train + encode in one file) |
+| `s4_encoding/graph_gnn_encoder.py` | GIN/GINE autoencoder + frozen inference — self-supervised, target-agnostic (train + encode in one file) |
+| `s4_encoding/label_bag_encoder.py` | Label-bag baseline — pooled MiniLM label embeddings, no edges (disentanglement) |
 | **Classification** | |
 | `s5_classification/split.py` | Fixed stratified 70/15/15 split (seed=42), cached split IDs |
 | `s5_classification/baseline.py` | Route 1 — text-only logistic regression (Phase 3 reference) |
@@ -94,7 +96,12 @@ docs/                     # CHARTER.md, ENGINEERING.md, PLAN.md
 | `s5_classification/sklearn_classifier.py` | Sklearn wrapper — any sklearn classifier behind Phase 5 interface |
 | `s5_classification/train_loop.py` | PyTorch training loop — Trainer, TrainingConfig, curve plotting |
 | `s5_classification/train_run.py` | Config-driven experiment runner — torch + sklearn backends |
-| `s5_classification/train_config.py` | ExperimentConfig dataclass + sweep builders (torch, sklearn, all) |
+| `s5_classification/train_config.py` | ExperimentConfig dataclass (incl. `class_weight`) + sweep builders (torch, sklearn, all) |
+| `s5_classification/repeated_run.py` | 10-seed repeated-eval runner (paired CIs, McNemar) — `--target`/`--class-weight`/`--out-dir` |
+| `s5_classification/null_ladder.py` | Edge null-ladder — typed GINEConv vs bag-of-types histogram (v4_think) |
+| `s5_classification/structure_only_probe.py` | Topology-only probe — untyped GIN, structure-only features |
+| `s5_classification/h_edge.py` | H_edge 2-D edge ablation — histogram → untyped GINConv → typed GINEConv (10-seed CI) |
+| `s5_classification/ablation_run.py` | Graph-vs-labels disentanglement — text/label_bag/structure_only/full_gin/masked_gin |
 
 ---
 
@@ -133,8 +140,9 @@ uv run python s1_data/download.py                              # Download datase
 uv run python s2_extraction/extractor.py                       # Run extraction with DeepSeek (default, skips cached)
 uv run python s2_extraction/extractor.py --backend anthropic  # Use Claude instead
 uv run python s2_extraction/model_comparison/run_comparison.py # 3-model comparison (Claude/DeepSeek/Agnes)
-uv run python s3_canonicalisation/clusterer.py                 # Build canonical vocabulary
-uv run python s3_canonicalisation/apply_canonical.py           # Apply to all graphs
+uv run python s3_canonicalisation/clusterer.py                 # Build v3 canonical vocabulary (default dirs)
+uv run python s3_canonicalisation/clusterer.py --graph-dir s1_data/graphs/v4_think/free_text --out-path s3_canonicalisation/canonical_map_v4.json --threshold 0.35 --lock  # Build+lock v4 vocab
+uv run python s3_canonicalisation/apply_canonical.py --free-text-dir s1_data/graphs/v4_think/free_text --canonical-dir s1_data/graphs/v4_think/canonical --map-path s3_canonicalisation/canonical_map_v4.json  # Apply v4 map
 uv run python s4_encoding/text_encoder.py                      # Encode transcripts → 768-dim (caches)
 uv run python s4_encoding/graph_stats_encoder.py               # Compute graph stats → 30-dim (caches)
 uv run python s4_encoding/graph_gnn_encoder.py                 # Train GIN autoencoder (canonical labels)
@@ -142,10 +150,11 @@ uv run python s4_encoding/graph_gnn_encoder.py --label-source free_text  # Train
 uv run python s4_encoding/graph_gnn_encoder.py --encode        # Frozen GIN inference (canonical)
 uv run python s4_encoding/graph_gnn_encoder.py --encode --label-source free_text  # Free-text inference
 uv run python s4_encoding/build_dataset.py                     # Package frozen embeddings → .npz
-uv run python s5_classification/train_run.py                         # Torch sweep (42 experiments)
-uv run python s5_classification/train_run.py --sweep sklearn         # Sklearn sweep (48 experiments)
-uv run python s5_classification/train_run.py --sweep all --dry-run   # Full plan (90 experiments)
-uv run python s5_classification/train_run.py --target ai_adoption    # Single-target sweep
+uv run python s5_classification/train_run.py --sweep all --dry-run   # Full single-shot sweep plan
+uv run python s5_classification/train_run.py --target stance_ambivalence  # Single-target sweep
+uv run python s5_classification/repeated_run.py --target stance_ambivalence --class-weight balanced --out-dir results/method_review/ambivalence_v4  # H_fusion 10-seed CI (v4)
+uv run python s5_classification/h_edge.py --target stance_ambivalence  # H_edge edge ablation (v4_think)
+uv run python s5_classification/ablation_run.py --target stance_ambivalence --out-dir results/method_review/ambivalence_ablation_v4  # graph-vs-labels disentanglement
 uv run python s5_classification/baseline.py                          # Text-only LR baseline (convenience)
 uv run python s5_classification/analysis_feature_importance.py       # Permutation importance analysis
 uv run python s5_classification/analysis_stats.py                    # Stats-only per-class report
