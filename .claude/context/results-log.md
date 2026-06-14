@@ -964,3 +964,78 @@ distributional features outperform the learned embedding here, foreshadowing tha
 GINEConv may struggle to beat simpler distributional/node-only features — the H_edge ablation
 must settle this directly. (Echoes METHOD_REVIEW: graph stats are "the cleanest topology
 evidence.")
+
+---
+
+## Phase 6 — H_edge: 2-D edge × feature ablation on `stance_ambivalence` (P6.4)
+
+**Date:** 2026-06-14 | **Bead:** `graph-modality-upg`
+**Runners:** `s5_classification/h_edge.py` (edge axis, v4_think, seeds 42–51) +
+`s5_classification/ablation_run.py --target stance_ambivalence` (feature axis, canonical,
+seeds 0–9). All arms: fixed-capacity class-weighted logistic probe. Chance = 0.269.
+
+### Edge axis — structure-only node features (type+degree, **no label semantics**), v4_think corpus
+
+The confound-free edge test: a win here cannot be label-text in disguise (METHOD_REVIEW #2/#4).
+
+| Rung | macro-F1 | 95% CI | Δ vs chance |
+|---|---|---|---|
+| no-edges (bag-of-types histogram) | 0.278 | [0.251, 0.304] | +0.009 |
+| untyped (GINConv, adjacency only) | 0.274 | [0.255, 0.293] | +0.006 |
+| typed (GINEConv, 6-d relation one-hot) | 0.274 | [0.253, 0.295] | +0.005 |
+
+| Paired delta | mean Δ | 95% CI | verdict |
+|---|---|---|---|
+| **typed − untyped (edge TYPE)** | **−0.001** | [−0.019, +0.018] | **FAIL** |
+| untyped − histogram (edge PRESENCE) | −0.003 | [−0.029, +0.022] | FAIL |
+| typed − histogram | −0.004 | [−0.033, +0.025] | FAIL |
+
+All three rungs sit **at chance**, and edge information — presence *or* type — adds **nothing**.
+The v4 edge ontology (ADR-0004's SUBSUMES/IMPLIES, added precisely to give edge-type a fair
+test) does **not** rescue the relational hypothesis on this target.
+
+### Feature axis — canonical graphs (the label-semantics kill-criterion)
+
+| Variant | macro-F1 | 95% CI |
+|---|---|---|
+| full_gin (type + label embeddings, with edges) | 0.326 | [0.308, 0.344] |
+| structure_only (type+degree, no labels) | 0.346 | [0.325, 0.368] |
+| text (SBERT) | 0.367 | [0.345, 0.388] |
+| masked_gin | 0.370 | [0.348, 0.391] |
+| **label_bag (pooled label embeddings, NO edges)** | **0.399** | [0.379, 0.419] |
+
+| Kill-criterion delta | mean Δ | 95% CI | reading |
+|---|---|---|---|
+| full_gin − label_bag | −0.072 | [−0.094, −0.050] | **edges HURT vs no-edge label-bag** |
+| structure_only − chance | +0.078 | [+0.056, +0.099] | distributional (type/degree) signal, not wiring |
+
+### Verdict: **H_edge — FAIL (edge-type) + topology is dead**
+
+1. **Edge-type adds nothing** (typed ≈ untyped ≈ histogram ≈ chance, structure-only) — the
+   primary criterion fails decisively and confound-free.
+2. **Kill-criterion satisfied:** `label_bag` (no edges) **beats** `full_gin` (with edges) by
+   +0.072 — adding the GNN/topology to label semantics does not help, it *hurts*. The learned
+   graph embedding's signal is **node-attribute / label semantics, not relational structure**
+   (METHOD_REVIEW concern #4, fully vindicated on the new target).
+
+### Synthesis across H_fusion + H_edge
+
+The signal for `stance_ambivalence` is **distributional node-attribute**, not relational:
+- Best overall is **graph stats 0.453** (H_fusion) — it encodes the **stance-valence
+  distribution** (a node attribute), the construct's most direct correlate.
+- Next is `label_bag` 0.399 (pooled concept-label semantics, no edges).
+- Everything that depends on **wiring** (GINConv, GINEConv, edge types) is at or below the
+  no-edge baselines, and at chance on structure-only features.
+
+The "structurally distinct modality" claim holds **only in the distributional sense** (graph
+node-attribute statistics carry signal text cannot recover: stats 0.453 > text 0.367, CI
+excludes 0). The **relational/topological** form of the claim is **unsupported** on this target —
+consistent across both hypotheses. This is the honest, publishable result the v4 + ambivalence
+detour was built to produce.
+
+### Caveat
+
+Edge axis is v4_think; feature axis is canonical (v3) — the two corpora differ. The edge-type
+conclusion is internally valid (typed vs untyped on the *same* v4_think corpus). The canonical
+`structure_only` beating chance (+0.078) while v4_think structure_only sits at chance reflects
+corpus + cached-encoder differences; both agree that the signal is *distributional*, not wiring.

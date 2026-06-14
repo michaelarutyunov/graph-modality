@@ -17,7 +17,7 @@ import numpy as np
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import f1_score
 
-from s4_encoding.build_dataset import _load_ai_adoption_labels
+from s4_encoding.build_dataset import _load_ai_adoption_labels, _load_ambivalence_labels
 from s5_classification.repeated_eval import make_split
 from s5_classification.split import load_transcript_ids_with_labels
 
@@ -36,6 +36,8 @@ def _load_labels(target: str) -> dict[str, int]:
         return load_transcript_ids_with_labels()
     if target == "ai_adoption":
         return _load_ai_adoption_labels()
+    if target == "stance_ambivalence":
+        return _load_ambivalence_labels()
     raise ValueError(f"Unknown target: {target!r}")
 
 

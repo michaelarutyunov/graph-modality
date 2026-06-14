@@ -48,15 +48,24 @@ RUNS_PATH = OUT_DIR / "runs.jsonl"
 SUMMARY_PATH = OUT_DIR / "summary.json"
 
 
-def run_all() -> dict:
-    """Run all 5 variants x 10 seeds x 2 targets, write runs.jsonl + summary.json."""
-    OUT_DIR.mkdir(parents=True, exist_ok=True)
+def run_all(targets: list[str] | None = None, out_dir: Path = OUT_DIR) -> dict:
+    """Run all 5 variants x 10 seeds, write runs.jsonl + summary.json.
+
+    Args:
+        targets: restrict to these targets (default: module ``TARGETS``).
+        out_dir: output directory (use a target-specific dir to avoid clobbering
+            other targets' results).
+    """
+    run_targets = [str(t) for t in (targets if targets is not None else TARGETS)]
+    out_dir.mkdir(parents=True, exist_ok=True)
+    runs_path = out_dir / "runs.jsonl"
+    summary_path = out_dir / "summary.json"
 
     rows: list[dict] = []
     chance_scores: dict[str, list[float]] = defaultdict(list)
 
-    with open(RUNS_PATH, "w") as f:
-        for target in TARGETS:
+    with open(runs_path, "w") as f:
+        for target in run_targets:
             for seed in SEEDS:
                 # Chance baseline (majority-class on the protocol split, same as P1.3).
                 train_data, _val_data, test_data = get_split_data(target, seed)
@@ -79,12 +88,16 @@ def run_all() -> dict:
                     rows.append(row)
                     f.write(json.dumps(row) + "\n")
 
-    summary = _build_summary(rows, chance_scores)
-    SUMMARY_PATH.write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
+    summary = _build_summary(rows, chance_scores, run_targets)
+    summary_path.write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
     return summary
 
 
-def _build_summary(rows: list[dict], chance_scores: dict[str, list[float]]) -> dict:
+def _build_summary(
+    rows: list[dict],
+    chance_scores: dict[str, list[float]],
+    targets: list[str],
+) -> dict:
     rows_by_key: dict[tuple[str, str], dict[int, dict]] = defaultdict(dict)
     for row in rows:
         rows_by_key[(row["target"], row["variant"])][row["seed"]] = row
@@ -140,7 +153,7 @@ def _build_summary(rows: list[dict], chance_scores: dict[str, list[float]]) -> d
         }
 
     deltas: dict[str, dict] = {}
-    for target in TARGETS:
+    for target in targets:
         deltas[f"{target}|full_gin-label_bag"] = {
             "comparison": "(a) full_gin - (c) label_bag",
             **_paired_delta(target, "full_gin", "label_bag"),
@@ -163,7 +176,21 @@ def _build_summary(rows: list[dict], chance_scores: dict[str, list[float]]) -> d
 
 
 if __name__ == "__main__":
-    summary = run_all()
+    import argparse
+
+    parser = argparse.ArgumentParser(description="Graph-vs-labels disentanglement runner.")
+    parser.add_argument(
+        "--target",
+        action="append",
+        choices=["ai_adoption", "cohort", "stance_ambivalence"],
+        default=None,
+        help="Restrict to a target (repeatable). Default: all module TARGETS.",
+    )
+    parser.add_argument("--out-dir", type=str, default=None, help="Output directory.")
+    args = parser.parse_args()
+
+    out_dir = Path(args.out_dir) if args.out_dir else OUT_DIR
+    summary = run_all(targets=args.target, out_dir=out_dir)
     print(json.dumps(summary["variants"], indent=2))
     print(json.dumps(summary["deltas"], indent=2))
     print(json.dumps(summary["chance_baseline"], indent=2))
