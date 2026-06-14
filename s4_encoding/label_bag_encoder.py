@@ -18,7 +18,8 @@ from pathlib import Path
 import numpy as np
 from sentence_transformers import SentenceTransformer
 
-CANONICAL_DIR = Path("s1_data/graphs/canonical")
+# v4 corpus (P6.6): all Phase 6 tests run on v4_think only.
+CANONICAL_DIR = Path("s1_data/graphs/v4_think/canonical")
 CACHE_DIR = Path("cache")
 EMBEDDING_CACHE = CACHE_DIR / "label_bag_embeddings.npy"
 ID_CACHE = CACHE_DIR / "label_bag_embedding_ids.json"
@@ -67,7 +68,7 @@ def encode_label_bag(
             all_embeddings.append(np.zeros(EMBEDDING_DIM, dtype=np.float32))
             continue
 
-        labels_text = [n.get("label", "") for n in nodes]
+        labels_text = [n.get("label") or "" for n in nodes]  # coerce None (v4 artifact) to ""
         node_embeddings = encoder.encode(
             labels_text, normalize_embeddings=True, show_progress_bar=False
         )

@@ -308,7 +308,19 @@ Back to the original thesis, now on a fair target. **Labels are final** (ADR-000
 κ=0.504. Design doc: `.claude/context/ambivalence-target.md`; label pipeline: ENGINEERING §4.4.
 **Severe class imbalance** — `med`=843 / `low`=352 / `high`=55 (4.4%) — is a binding
 constraint: use class-weighted loss, report per-class F1, and treat results on `high` (n=55) as
-low-power (METHOD_REVIEW class-imbalance concern). Two hypotheses:
+low-power (METHOD_REVIEW class-imbalance concern).
+
+**Corpus: v4 only (P6.6).** All Phase 6 tests run on the v4_think corpus. v4 was
+re-canonicalised (`s3_canonicalisation/canonical_map_v4.json`, locked; applied to
+`s1_data/graphs/v4_think/canonical/`); the graph encoders (`graph_stats_encoder`,
+`graph_gnn_encoder`, `label_bag_encoder`) now read v4 by default. The v3 `canonical_map.json`
+and v3 graph dirs remain immutable on disk for provenance.
+
+**Definitive verdict (results-log "Phase 6 — v4" section):** (1) modality-distinctness
+SUPPORTED — graph stats 0.433 > text 0.367, CI excludes 0; (2) complementarity NOT supported —
+no fusion beats stats-alone; (3) edge/relational hypothesis DEAD — edges add nothing,
+`label_bag` (no edges) > `full_gin` (with edges), `structure_only` at chance. Signal is
+distributional node-attribute, not topology. Two hypotheses:
 
 - **H_fusion (primary):** fusion(text + graph) macro-F1 > max(text-only, graph-only) on
   `stance_ambivalence`. The complementarity claim — combined > either modality alone. Graph

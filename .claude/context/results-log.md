@@ -1039,3 +1039,69 @@ Edge axis is v4_think; feature axis is canonical (v3) — the two corpora differ
 conclusion is internally valid (typed vs untyped on the *same* v4_think corpus). The canonical
 `structure_only` beating chance (+0.078) while v4_think structure_only sits at chance reflects
 corpus + cached-encoder differences; both agree that the signal is *distributional*, not wiring.
+
+---
+
+## Phase 6 — v4 re-canonicalisation: DEFINITIVE results (P6.6) — supersede all v3-corpus numbers above
+
+**Date:** 2026-06-14 | **Bead:** `graph-modality-dn6`
+**Why:** the H_fusion (P6.3) and H_edge feature-axis (P6.4) numbers above used the **v3** graph
+corpus (`free_text`/`canonical`, 2026-06-08) while the project's graphs are **v4_think**. Per
+user decision, all Phase 6 tests are re-run on **v4 only**. New locked vocabulary
+`s3_canonicalisation/canonical_map_v4.json` (5,649 canonical from 21,815 free-text, threshold
+0.35 — unchanged from v3), applied to `s1_data/graphs/v4_think/canonical/` (1250 graphs, 0
+unmapped). All graph encoders (stats, full-GIN, label_bag, structure_only, masked) recomputed on
+v4; text unchanged (human-only turns). v3 `canonical_map.json` left immutable.
+
+### H_fusion (v4) — `results/method_review/ambivalence_v4/`, 10 seeds, class-weighted
+
+| Arm | macro-F1 | 95% CI |
+|---|---|---|
+| text (SBERT) | 0.367 | [0.337, 0.398] |
+| GIN (v4, 128d) | 0.351 | [0.324, 0.379] |
+| **graph stats (v4, 30d)** | **0.433** | [0.405, 0.461] |
+| text + stats | 0.453 | [0.433, 0.473] |
+| text + stats + graph | 0.450 | [0.424, 0.476] |
+
+| Paired delta | mean Δ | 95% CI | verdict |
+|---|---|---|---|
+| **stats − text** (graph > text?) | **+0.066** | [+0.016, +0.116] | ✅ PASS |
+| text+stats − **stats** (fusion > best single?) | +0.020 | [−0.010, +0.051] | ❌ FAIL |
+| text+stats+graph − stats | +0.017 | [−0.017, +0.051] | ❌ FAIL |
+
+### H_edge feature-axis (v4) — `results/method_review/ambivalence_ablation_v4/`
+
+| Variant | macro-F1 | 95% CI |
+|---|---|---|
+| **label_bag (labels, NO edges)** | **0.402** | — |
+| text | 0.367 | — |
+| masked_gin | 0.345 | — |
+| full_gin (labels + topology) | 0.285 | — |
+| structure_only (type+degree) | 0.265 | ≈ chance |
+
+| Kill-criterion delta | mean Δ | 95% CI | reading |
+|---|---|---|---|
+| full_gin − label_bag | **−0.117** | [−…] excl. 0 | topology HURTS |
+| structure_only − chance | −0.004 | spans 0 | **at chance** |
+
+H_edge edge-axis was already v4_think (FAIL: typed ≈ untyped ≈ histogram ≈ chance; unchanged).
+
+### Definitive verdict (v4, single corpus)
+
+Identical conclusions to the v3 runs, now on one consistent corpus — and **cleaner**:
+1. **Modality-distinctness: SUPPORTED.** Graph stats (0.433) beat text (0.367), +0.066, CI
+   excludes 0. On a lexically-non-obvious target, distributional graph node-attributes carry
+   signal text cannot recover.
+2. **Complementarity (H_fusion): NOT SUPPORTED.** No fusion arm significantly beats the best
+   single modality (stats); text+stats − stats = +0.020, CI spans 0.
+3. **Relational/edge hypothesis (H_edge): DEAD.** Edge presence and type add nothing
+   (edge-axis at chance); `label_bag` (no edges) beats `full_gin` (with edges) by 0.117;
+   `structure_only` at chance.
+4. **Discrepancy resolved:** the v3 anomaly where canonical `structure_only` beat chance
+   (+0.078) is **gone on v4** — structure_only now sits at chance on *both* the v4 feature-axis
+   and the v4_think edge-axis. The signal is unambiguously **distributional node-attribute
+   (stance valence / label semantics), not topology**.
+
+The "structurally distinct modality" claim holds in the **distributional** sense only, on a
+single v4 corpus, with the circularity (independent labels) and lexical confound (non-obvious
+target) both controlled. This is the project's defensible end-state result.

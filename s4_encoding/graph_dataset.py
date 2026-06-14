@@ -76,7 +76,9 @@ class GraphDataset(Dataset):
         else:
             # ── node features: type one-hot (4) + label embedding (384) ──
             assert self._label_encoder is not None
-            labels_text = [n.get("label", "") for n in nodes]
+            # Coerce missing/None labels to "" — a few v4 nodes have label: null
+            # (extraction artifact); SBERT requires str inputs.
+            labels_text = [n.get("label") or "" for n in nodes]
             label_embeddings = self._label_encoder.encode(
                 labels_text, normalize_embeddings=True, show_progress_bar=False
             )

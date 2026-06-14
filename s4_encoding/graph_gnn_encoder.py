@@ -46,8 +46,9 @@ EDGE_DIM = len(RELATIONS)  # 6 for v4 (includes SUBSUMES, IMPLIES)
 
 # ── Paths ────────────────────────────────────────────────────────────────────
 PROJECT_ROOT = Path(".")
-CANONICAL_DIR = PROJECT_ROOT / "s1_data" / "graphs" / "canonical"
-FREE_TEXT_DIR = PROJECT_ROOT / "s1_data" / "graphs" / "free_text"
+# v4 corpus (P6.6): all Phase 6 tests run on v4_think only. v3 dirs archived on disk.
+CANONICAL_DIR = PROJECT_ROOT / "s1_data" / "graphs" / "v4_think" / "canonical"
+FREE_TEXT_DIR = PROJECT_ROOT / "s1_data" / "graphs" / "v4_think" / "free_text"
 CACHE_DIR = PROJECT_ROOT / "cache"
 ENCODER_PATH = CACHE_DIR / "gin_encoder_canonical.pt"
 CURVES_PATH = CACHE_DIR / "gin_autoencoder_curves_canonical.png"

@@ -163,7 +163,9 @@ def compute_all_stats(
         (stats_matrix, transcript_ids) where stats_matrix has shape (N, 36).
     """
     if graph_dir is None:
-        graph_dir = Path("s1_data/graphs/free_text")
+        # v4 corpus (P6.6): all Phase 6 tests run on v4_think only. Stats use node
+        # types + valence + structure (label-independent), so canonical==free_text here.
+        graph_dir = Path("s1_data/graphs/v4_think/canonical")
 
     if STATS_CACHE.exists() and ID_CACHE.exists():
         print("loading cached graph statistics")

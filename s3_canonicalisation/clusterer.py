@@ -163,20 +163,53 @@ def _print_sample_clusters(
 
 
 def main() -> None:
-    """Build canonical vocabulary from free-text labels and save to canonical_map.json."""
-    canonical_map = build_canonical_map()
+    """Build canonical vocabulary from free-text labels and save to a canonical map.
 
-    # Write output
-    OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
-    OUT_PATH.write_text(json.dumps(canonical_map, indent=2, ensure_ascii=False), encoding="utf-8")
-    print(f"\nCanonical map written to {OUT_PATH}")
+    Defaults reproduce the v3 build (free_text graphs, threshold 0.35). Pass
+    ``--graph-dir`` / ``--out-path`` to build a separate corpus's map (e.g. v4)
+    without touching the locked v3 ``canonical_map.json``.
+    """
+    import argparse
+    import datetime as _dt
 
-    # Summary
+    parser = argparse.ArgumentParser(description="Build canonical vocabulary.")
+    parser.add_argument("--graph-dir", type=str, default=str(GRAPH_DIR))
+    parser.add_argument("--out-path", type=str, default=str(OUT_PATH))
+    parser.add_argument("--threshold", type=float, default=DISTANCE_THRESHOLD)
+    parser.add_argument(
+        "--lock",
+        action="store_true",
+        help="Write a locked _meta block (lock immediately — no manual review step).",
+    )
+    args = parser.parse_args()
+
+    graph_dir = Path(args.graph_dir)
+    out_path = Path(args.out_path)
+
+    canonical_map: dict = build_canonical_map(
+        graph_dir=graph_dir, distance_threshold=args.threshold
+    )
+
+    vocab_sizes = {e: len(set(canonical_map[e].values())) for e in ENTITY_TYPES}
+    total_labels = sum(len(canonical_map[e]) for e in ENTITY_TYPES)
+    if args.lock:
+        canonical_map["_meta"] = {
+            "locked": True,
+            "locked_at": _dt.datetime.now(_dt.UTC).isoformat(),
+            "distance_threshold": args.threshold,
+            "embedding_model": "all-MiniLM-L6-v2",
+            "total_labels": total_labels,
+            "vocabulary_sizes": vocab_sizes,
+            "source_graph_dir": str(graph_dir),
+        }
+
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    out_path.write_text(json.dumps(canonical_map, indent=2, ensure_ascii=False), encoding="utf-8")
+    print(f"\nCanonical map written to {out_path} (locked={args.lock})")
+
     print("\nVocabulary sizes:")
     for etype in ENTITY_TYPES:
-        n_clusters = len(set(canonical_map[etype].values()))
-        n_labels = len(canonical_map[etype])
-        print(f"  {etype}: {n_clusters} canonical from {n_labels} free-text labels")
+        print(f"  {etype}: {vocab_sizes[etype]} canonical from {len(canonical_map[etype])} labels")
 
 
 if __name__ == "__main__":
