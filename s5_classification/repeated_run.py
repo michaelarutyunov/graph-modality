@@ -61,11 +61,29 @@ def _majority_class_macro_f1(train_labels: np.ndarray, test_labels: np.ndarray) 
     return float(f1_score(test_labels, preds, average="macro", zero_division=0))
 
 
-def run_all() -> dict:
-    """Run the full sweep x10 seeds, write runs.jsonl and summary.json."""
-    OUT_DIR.mkdir(parents=True, exist_ok=True)
+def run_all(
+    targets: list[str] | None = None,
+    class_weight: str | None = None,
+    out_dir: Path = OUT_DIR,
+) -> dict:
+    """Run the sweep x10 seeds, write runs.jsonl and summary.json.
 
-    base_configs = build_sweep() + build_sklearn_sweep()
+    Args:
+        targets: Restrict to these targets (default: module ``TARGETS``).
+        class_weight: ``"balanced"`` to apply inverse-frequency loss weights
+            (torch arm) — needed for imbalanced targets like
+            ``stance_ambivalence``. ``None`` (default) leaves the loss unweighted.
+        out_dir: Output directory for ``runs.jsonl`` / ``summary.json``. Use a
+            target-specific dir to avoid clobbering other targets' results.
+    """
+    run_targets: list[str] = [str(t) for t in (targets if targets is not None else TARGETS)]
+    out_dir.mkdir(parents=True, exist_ok=True)
+    runs_path = out_dir / "runs.jsonl"
+    summary_path = out_dir / "summary.json"
+
+    base_configs = [
+        c for c in (build_sweep() + build_sklearn_sweep()) if c.target in run_targets
+    ]
 
     rows: list[dict] = []
     chance_scores: dict[str, list[float]] = defaultdict(list)
@@ -73,7 +91,7 @@ def run_all() -> dict:
     # Cache split data per (target, seed) to avoid reloading modalities repeatedly.
     split_cache: dict[tuple[str, int], tuple[dict, dict, dict]] = {}
 
-    with open(RUNS_PATH, "w") as f:
+    with open(runs_path, "w") as f:
         for cfg in base_configs:
             for seed in SEEDS:
                 key = (cfg.target, seed)
@@ -87,7 +105,7 @@ def run_all() -> dict:
                     chance_f1 = _majority_class_macro_f1(train_data["labels"], test_data["labels"])
                     chance_scores[cfg.target].append(chance_f1)
 
-                seed_cfg = replace(cfg, seed=seed)
+                seed_cfg = replace(cfg, seed=seed, class_weight=class_weight)
                 print(
                     f"[{cfg.target}|{cfg.architecture}|{cfg.backend}|{cfg.modalities}] seed={seed}"
                 )
@@ -112,8 +130,8 @@ def run_all() -> dict:
                 rows.append(row)
                 f.write(json.dumps(row) + "\n")
 
-    summary = _build_summary(rows, chance_scores)
-    SUMMARY_PATH.write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
+    summary = _build_summary(rows, chance_scores, run_targets)
+    summary_path.write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
     return summary
 
 
@@ -121,7 +139,11 @@ def _config_key(target: str, modalities: list[str], architecture: str, backend: 
     return f"{target}|{'-'.join(modalities)}|{architecture}|{backend}"
 
 
-def _build_summary(rows: list[dict], chance_scores: dict[str, list[float]]) -> dict:
+def _build_summary(
+    rows: list[dict],
+    chance_scores: dict[str, list[float]],
+    targets: list[str],
+) -> dict:
     # Group rows by (target, modality_combo, architecture, backend)
     groups: dict[str, list[dict]] = defaultdict(list)
     for row in rows:
@@ -176,7 +198,7 @@ def _build_summary(rows: list[dict], chance_scores: dict[str, list[float]]) -> d
         rows_by_key[key][row["seed"]] = row
 
     deltas: dict[str, dict] = {}
-    for target in TARGETS:
+    for target in targets:
         text_sel_key = f"{target}|{'-'.join(TEXT_ONLY_COMBO)}"
         if text_sel_key not in selected:
             continue
@@ -235,7 +257,33 @@ def _build_summary(rows: list[dict], chance_scores: dict[str, list[float]]) -> d
 
 
 if __name__ == "__main__":
-    summary = run_all()
+    import argparse
+
+    parser = argparse.ArgumentParser(description="Repeated-evaluation runner (10 seeds).")
+    parser.add_argument(
+        "--target",
+        action="append",
+        choices=["ai_adoption", "cohort", "stance_ambivalence"],
+        default=None,
+        help="Restrict to a target (repeatable). Default: all module TARGETS.",
+    )
+    parser.add_argument(
+        "--class-weight",
+        choices=["balanced"],
+        default=None,
+        help="Apply inverse-frequency loss weights (torch arm). For imbalanced "
+        "targets like stance_ambivalence.",
+    )
+    parser.add_argument(
+        "--out-dir",
+        type=str,
+        default=None,
+        help="Output directory (default: results/method_review/phase1).",
+    )
+    args = parser.parse_args()
+
+    out_dir = Path(args.out_dir) if args.out_dir else OUT_DIR
+    summary = run_all(targets=args.target, class_weight=args.class_weight, out_dir=out_dir)
     print(json.dumps(summary["selected"], indent=2))
     print(json.dumps(summary["deltas"], indent=2))
     print(json.dumps(summary["chance_baseline"], indent=2))

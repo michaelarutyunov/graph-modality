@@ -47,6 +47,11 @@ class ExperimentConfig:
         graph_label_source: ``"canonical"`` (default) or ``"free_text"``.
             Which label set the GNN reads. Only affects ``graph`` modality.
             Graph stats (30-dim) use structural fields identical in both.
+        class_weight: ``"balanced"`` applies inverse-frequency class weights to
+            the loss (torch) — used for imbalanced targets like
+            ``stance_ambivalence`` (high=4.4%). ``None`` (default) is unweighted.
+            The sklearn backend always uses ``class_weight="balanced"`` where the
+            estimator supports it, independent of this field.
         hidden_dim: Hidden layer dimension (torch only).
         lr: Learning rate for Adam optimizer (torch only).
         weight_decay: Weight decay for Adam optimizer (torch only).
@@ -61,6 +66,7 @@ class ExperimentConfig:
     architecture: str
     backend: Backend = "torch"
     graph_label_source: LabelSource = "canonical"
+    class_weight: Literal["balanced"] | None = None
     hidden_dim: int = 256
     lr: float = 1e-3
     weight_decay: float = 1e-4

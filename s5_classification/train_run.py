@@ -116,6 +116,7 @@ def _run_torch_on_data(
         max_epochs=cfg.max_epochs,
         early_stopping_patience=cfg.early_stopping_patience,
         seed=cfg.seed,
+        class_weight=cfg.class_weight,
     )
 
     trainer = Trainer(model, train_cfg)

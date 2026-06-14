@@ -43,6 +43,7 @@ class TrainingConfig:
     scheduler_factor: float = 0.5
     batch_size: int = 32
     seed: int = 42
+    class_weight: str | None = None  # "balanced" → inverse-frequency loss weights
 
 
 class Trainer:
@@ -133,6 +134,16 @@ class Trainer:
         n_train = len(train_data["labels"])
         len(val_data["labels"])
         batch_size = self.config.batch_size
+
+        # Inverse-frequency class weights (sklearn "balanced" formula) for
+        # imbalanced targets. Computed from the TRAIN split only.
+        if self.config.class_weight == "balanced":
+            counts = np.bincount(
+                train_data["labels"].astype(int), minlength=self.config.n_classes
+            )
+            weights = n_train / (self.config.n_classes * np.maximum(counts, 1))
+            weight_tensor = torch.tensor(weights, dtype=torch.float32, device=self.device)
+            self.criterion = nn.CrossEntropyLoss(weight=weight_tensor)
 
         best_val_f1 = -1.0
         best_epoch = 0

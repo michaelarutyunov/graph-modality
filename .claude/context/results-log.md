@@ -902,3 +902,65 @@ Kimi k2.6 judged each disagreement using the full human transcript, the `ambival
 - The target is ready for `null_ladder.py` and `structure_only_probe.py` (both already accept `--target stance_ambivalence`).
 - Class imbalance is severe, especially the small `high` class. This is documented as a known limitation; no post-hoc relabeling was performed.
 - Full audit trail is in `cache/ambivalence_adjudication_details.jsonl`.
+
+---
+
+## Phase 6 — H_fusion: complementarity on `stance_ambivalence` (P6.3)
+
+**Date:** 2026-06-14 | **Bead:** `graph-modality-7zf`
+**Protocol:** 10-seed repeated eval (seeds 0–9, the fusion-harness convention — consistent
+with the prior `ai_adoption`/`cohort` fusion runs, *not* the null-ladder's 42–51), stratified
+by the ordinal label per seed. Val-based config selection per modality combo. Class-weighted
+loss (torch "balanced") + sklearn `class_weight="balanced"` for the imbalance. Mean test
+macro-F1 ± 95% t-CI. PASS = paired-delta CI excludes 0 **and** mean Δ ≥ +0.01.
+**Runner:** `s5_classification/repeated_run.py --target stance_ambivalence --class-weight balanced
+--out-dir results/method_review/ambivalence`.
+
+**Chance (majority-class macro-F1):** 0.269.
+
+### Single modality vs fusion (val-selected, mean test macro-F1 ± CI)
+
+| Arm | macro-F1 | 95% CI | selected |
+|---|---|---|---|
+| text (768d SBERT) | 0.367 | [0.337, 0.398] | torch/stacked |
+| graph / GIN (128d) | 0.388 | [0.360, 0.417] | torch/single |
+| **graph stats (30d)** | **0.453** | [0.432, 0.475] | torch/late |
+| text + graph | 0.393 | [0.374, 0.412] | torch/stacked |
+| text + stats | 0.446 | [0.428, 0.464] | sklearn/svm |
+| text + stats + graph | 0.448 | [0.430, 0.466] | sklearn/logistic |
+
+### Paired deltas
+
+| Comparison | mean Δ | 95% CI | PASS |
+|---|---|---|---|
+| fusion(text+stats) − **text** | +0.079 | [+0.037, +0.121] | ✅ |
+| fusion(text+stats+graph) − **text** | +0.081 | [+0.050, +0.113] | ✅ |
+| fusion(text+graph) − **text** | +0.026 | [−0.002, +0.054] | ❌ |
+| best fusion(text+stats+graph) − **best single (stats)** | −0.005 | [−0.032, +0.022] | ❌ |
+| text+stats − **stats** | −0.007 | [−0.019, +0.005] | ❌ |
+| **stats − text** (is graph > text?) | **+0.086** | [+0.047, +0.125] | ✅ |
+
+### Verdict: **H_fusion — FAIL (against best single modality)**
+
+Fusion beats *text* (the weakest arm) but **does not beat the strongest single modality,
+graph stats**. No fusion arm exceeds stats-alone (best fusion ≈ stats, CI spans 0). The signal
+graph carries is **not complementary** to text — it largely **subsumes** it. This is design-spec
+outcome #2 (distributional stance-balance carries the signal; combining modalities adds nothing).
+
+### The real finding: graph beats text on a lexically-non-obvious target
+
+The complementarity hypothesis fails, but the **modality-distinctness** evidence is the strongest
+in the project so far: **graph stats alone (0.453) beats text alone (0.367) by +0.086, CI
+[+0.047, +0.125] (excludes 0).** Exactly as the target was designed to test — with no lexical
+shortcut, text is the *weakest* modality and graph distributional structure carries the signal
+text cannot recover. Per-class F1 (low/med/high) shows stats lifting every class over text,
+incl. the rare `high` (0.21 vs 0.10); the weighted loss keeps `high` non-zero (n=8 in test →
+expected high variance).
+
+### Note for P6.4 (H_edge)
+
+**Deterministic 30-dim graph stats (0.453) beat the learned 128-dim GIN (0.388).** Hand-crafted
+distributional features outperform the learned embedding here, foreshadowing that a typed-edge
+GINEConv may struggle to beat simpler distributional/node-only features — the H_edge ablation
+must settle this directly. (Echoes METHOD_REVIEW: graph stats are "the cleanest topology
+evidence.")
