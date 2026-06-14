@@ -107,6 +107,9 @@ def _load_ai_adoption_labels() -> dict[str, int]:
 def _load_ambivalence_labels() -> dict[str, int]:
     """Load stance_ambivalence consensus labels, mapping low/med/high -> 0/1/2.
 
+    Transcripts labeled ``uncertain`` or ``manual_review`` are excluded from the
+    classification set but kept in the consensus file for auditability.
+
     Returns dict of transcript_id -> ordinal label.
     """
     if not AMBIVALENCE_PATH.exists():
@@ -116,6 +119,7 @@ def _load_ambivalence_labels() -> dict[str, int]:
         )
 
     labels: dict[str, int] = {}
+    excluded = 0
     with open(AMBIVALENCE_PATH, encoding="utf-8") as f:
         for line in f:
             if not line.strip():
@@ -123,9 +127,12 @@ def _load_ambivalence_labels() -> dict[str, int]:
             record = json.loads(line)
             tid = record["transcript_id"]
             raw_label = record["stance_ambivalence"]["label"]
+            if raw_label not in AMBIVALENCE_LABEL_MAP:
+                excluded += 1
+                continue
             labels[tid] = AMBIVALENCE_LABEL_MAP[raw_label]
 
-    print(f"Ambivalence labels: {len(labels)} transcripts")
+    print(f"Ambivalence labels: {len(labels)} transcripts (excluded {excluded})")
     return labels
 
 
@@ -193,7 +200,7 @@ def build_dataset(label_source: str = "canonical") -> dict[str, Any]:
         labels: dict[str, int],
     ) -> dict[str, Any]:
         """Package one target's worth of .npz files."""
-        shapes: dict[str, tuple] = {}
+        shapes: dict[str, dict[str, tuple]] = {}
         label_counts: dict[str, dict[str, int]] = {}
 
         for split_name, split_id_list in splits.items():

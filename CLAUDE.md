@@ -240,7 +240,19 @@ Every bead that dispatches parallel sub-agents must include an explicit **Merge 
 
 ## Current Phase
 
-**Phase 4 complete. Phase 5 — Target-Agnostic Modality Fusion — ready to start.**
+**Phases 1–5 complete. v4 edge-modality + Phase 2.6 kill-criterion ran and returned a
+mostly-negative result on the old targets. Now retesting the original complementarity
+hypothesis on a new, lexically-non-obvious primary target (`stance_ambivalence`).**
+
+> The v4 / Phase 2.6 detour established two things that reframe everything below:
+> (1) the old targets (`cohort`, `ai_adoption`) are unfair tests — `cohort` leaks profession
+> vocabulary into text (SBERT wins by keyword), and `ai_adoption`'s graph→target signal is
+> partly **circular** (same DeepSeek model produces both graph and label);
+> (2) on `ai_adoption` the typed-edge encoder (GINEConv) did **not** beat a bag-of-node-types
+> histogram (null-ladder FAIL, Δ=+0.003, CI spans 0). See ADR-0004 and `results-log.md`.
+> The response is a new endogenous, **lexically-non-obvious** target, `stance_ambivalence`,
+> independently labelled (Agnes + Haiku, neither is DeepSeek; user-adjudicated disagreements),
+> on which the core hypotheses get a fair retest.
 
 ### Phase 1 ✅ — Extraction (complete)
 - 1,250 transcripts extracted with DeepSeek (deepseek-chat, OpenAI-compatible endpoint, JSON mode)
@@ -272,15 +284,55 @@ Every bead that dispatches parallel sub-agents must include an explicit **Merge 
 - AI adoption exploratory: only C:V ratio differentiates tool_user vs integrated
 - Full results in `.claude/context/results-log.md` and `s6_notebooks/04_structural_analysis.py`
 
-### Phase 5 🔜 — Target-Agnostic Modality Fusion (epic `4h4`, 5 beads)
-- **Goal:** Test whether graph modalities add complementary signal when encoders are frozen (target-agnostic)
-- Bead A (`8d2`): GIN autoencoder — self-supervised, no classification labels
-- Bead B (`bbt`): Modality embedding dataset — package frozen embeddings as .npz
-- Bead C (`olc`): Classifier zoo + experiment runner — 4 architectures, config-driven
-- Bead D (`778`): Disentanglement analysis — complementarity matrices
-- Bead E (`6cu`): Summary report — synthesis in results-log.md
+### Phase 5 ✅ — Target-Agnostic Modality Fusion (complete)
+- Frozen-embedding fusion harness built: GIN autoencoder (self-supervised), `.npz` dataset
+  packaging, classifier zoo (single / stacked / gated / late), config-driven runner.
 - **Key design change:** Old `s4_encoding/gnn/model.py` and `train.py` (task-supervised GIN) are DEPRECATED (moved to `s4_encoding/_archived/`).
   New: `s4_encoding/graph_gnn_encoder.py` (self-supervised GIN, train+encode in one file) + `s5_classification/` (task-specific classifiers, flat directory).
+
+### v4 edge modality + Phase 2.6 kill-criterion ✅ — ran, mostly negative on old targets
+- **v4 auditable-edge ontology** (ADR-0004): v3 made edge-type a deterministic function of
+  endpoint node types, so the relational hypothesis was never fairly tested. v4 adds
+  `SUBSUMES` / `IMPLIES` / `CONFLICTS_WITH` (with grounding spans) to break that determinism.
+  Active prompt `s2_extraction/prompts/v4.txt`; all 1,250 transcripts re-extracted (v4_think).
+- **Null-ladder (GINEConv vs bag-of-types histogram) on `ai_adoption`: FAIL** —
+  Δ=+0.0028, CI=[−0.017, +0.023]. Typed edge wiring does not beat node-type counts here.
+- **structure_only > chance on `ai_adoption`: PASS** (+0.20) — but flagged **circular**
+  (DeepSeek labels its own graphs).
+- Verdict: old targets cannot deliver an honest topology claim → introduce a new target.
+
+### Phase 6 🔜 — Complementarity retest on `stance_ambivalence` (NEW PRIMARY TARGET)
+Back to the original thesis, now on a fair target. Two hypotheses to test once the new labels
+land (`cache/ambivalence.jsonl`, currently being regenerated + adjudicated):
+
+- **H_fusion (primary):** fusion(text + graph) macro-F1 > max(text-only, graph-only) on
+  `stance_ambivalence`. The complementarity claim — combined > either modality alone. Graph
+  arm includes the **30-dim deterministic graph-stats** modality (METHOD_REVIEW calls it the
+  cleanest topology evidence — zero label semantics), not just the learned GIN.
+- **H_edge (secondary):** an edge-typed graph encoder adds value over a node-only encoder.
+  This is a **2-D ablation, not a single ladder**, because two orthogonal confounds must be
+  separated:
+  - **Edge axis (ADR-0004):** `no edges → untyped edges (node-only GIN) → typed edges
+    (GINEConv)`. The old null-ladder jumped straight from histogram to GINEConv, conflating
+    "no structure" with "edge-typed structure"; the untyped middle rung isolates edge-type.
+  - **Feature axis (METHOD_REVIEW decisive ablation, concerns #2/#4):** `structure-only node
+    features (types/degree) ↔ +label-embedding node features`. Without this control a
+    GINEConv win is still attackable as "pooled label text in disguise." Infra already exists
+    (`structure-only GIN mode`, `label-bag baseline`, `graph-vs-labels disentanglement` from
+    the Phase 2.x kill-criterion commits) — Phase 6 re-runs that matrix on the new target.
+  - Capacity held ~equal across cells so a win reflects information, not parameter count.
+
+Evaluation protocol unchanged: 10-seed frozen CI (seeds 42–51), PASS = CI excludes 0 AND mean
+Δ ≥ +0.01 (`docs/method-review/00-evaluation-protocol.md`). Three publishable outcomes for
+H_edge per the design spec (clean win / distributional-only / text-learns-it-cheaply).
+
+- **Label production (in flight):** dual-backend Agnes + Haiku labeler → consensus + Cohen's κ
+  → Kimi/user adjudication of the 277 disagreements (bead `r3p`, in progress).
+- **Design + plan:** `docs/superpowers/specs/2026-06-12-ambivalence-target-design.md`,
+  `docs/superpowers/plans/2026-06-12-ambivalence-target.md`.
+- **Epic restructuring needed:** old replication epic `graph-modality-c21` was gated on a
+  Phase 2.6 PASS that didn't happen; it must be re-gated on the H_edge result on the new
+  target (or superseded). The ambivalence thread itself needs a tracking epic.
 
 
 <!-- BEGIN BEADS INTEGRATION v:1 profile:minimal hash:7510c1e2 -->

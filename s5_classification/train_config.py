@@ -139,7 +139,7 @@ def build_sweep() -> list[ExperimentConfig]:
 def build_sklearn_sweep() -> list[ExperimentConfig]:
     """Build the sklearn experiment sweep.
 
-    Covers the same modality combos × targets but with sklearn classifiers.
+    Covers the same modality combos x targets but with sklearn classifiers.
     All sklearn models work on concatenated features (equivalent to stacked fusion).
     Single-modality baselines included to compare against PyTorch single/mlp.
 

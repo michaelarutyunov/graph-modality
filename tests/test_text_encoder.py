@@ -1,4 +1,6 @@
-"""Tests for encoding.text_encoder."""
+"""Tests for s4_encoding.text_encoder."""
+
+from __future__ import annotations
 
 from unittest.mock import patch
 
@@ -34,12 +36,12 @@ def test_embedding_dtype():
 
 
 def test_cache_files_exist():
-    """After encoding, both cache files exist."""
+    """After encoding, both human-only cache files exist."""
     from pathlib import Path
 
     embeddings, _ = encode_transcripts()
-    assert Path("cache/text_embeddings.npy").exists(), "Embedding cache file missing"
-    assert Path("cache/text_embedding_ids.json").exists(), "ID cache file missing"
+    assert Path("cache/text_embeddings_human_only.npy").exists(), "Embedding cache file missing"
+    assert Path("cache/text_embedding_ids_human_only.json").exists(), "ID cache file missing"
     assert embeddings.shape[0] > 0, "No embeddings were cached"
 
 
@@ -47,12 +49,12 @@ def test_cache_files_exist():
 
 
 def test_idempotent(tmp_path):
-    """Second call to encode_transcripts() loads from cache (SentenceTransformer NOT called)."""
+    """Second call loads from cache (SentenceTransformer NOT called)."""
     # Mock the cache paths and data directory to use temp directory
     with (
-        patch("encoding.text_encoder.EMBEDDING_CACHE", tmp_path / "embeddings.npy"),
-        patch("encoding.text_encoder.ID_CACHE", tmp_path / "ids.json"),
-        patch("encoding.text_encoder.CACHE_DIR", tmp_path),
+        patch("s4_encoding.text_encoder.EMBEDDING_CACHE", tmp_path / "embeddings.npy"),
+        patch("s4_encoding.text_encoder.ID_CACHE", tmp_path / "ids.json"),
+        patch("s4_encoding.text_encoder.CACHE_DIR", tmp_path),
     ):
         # Create dummy tagged data
         tagged_dir = tmp_path / "tagged"
@@ -62,20 +64,20 @@ def test_idempotent(tmp_path):
         )
 
         # Mock SentenceTransformer at the module level to track construction
-        with patch("encoding.text_encoder.SentenceTransformer") as mock_st:
+        with patch("s4_encoding.text_encoder.SentenceTransformer") as mock_st:
             # Configure mock to return a functional encoder
             mock_encoder = mock_st.return_value
             mock_encoder.encode.return_value = np.array([[1.0, 2.0, 3.0]], dtype=np.float32)
 
             # First call - should construct SentenceTransformer
-            embeddings1, ids1 = encode_transcripts()
+            embeddings1, ids1 = encode_transcripts(speaker_filter=None)
             assert mock_st.call_count == 1, (
                 "SentenceTransformer should be constructed on first call"
             )
             assert mock_st.call_args[0] == ("all-mpnet-base-v2",), "Should use default model"
 
             # Second call - should load from cache
-            embeddings2, ids2 = encode_transcripts()
+            embeddings2, ids2 = encode_transcripts(speaker_filter=None)
             assert mock_st.call_count == 1, (
                 "SentenceTransformer should NOT be constructed on second call (should load cache)"
             )

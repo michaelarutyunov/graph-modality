@@ -1,3 +1,12 @@
 {
-  "hooks": {}
+  "hooks": {},
+  "permissions": {
+    "allow": [
+      "Bash(ruff check *)",
+      "Bash(uv run pytest *)",
+      "Bash(bd list *)",
+      "Bash(bd show *)",
+      "Bash(bd ready)"
+    ]
+  }
 }

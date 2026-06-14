@@ -483,7 +483,7 @@ def _answer_gate_questions(all_matrices, experiments):
     print("=" * 70)
     print(
         "(a) With target-agnostic encoders, graph modality adds complementary "
-        "signal over text alone, but the effect is small (+0.005–0.010 F1). "
+        "signal over text alone, but the effect is small (+0.005-0.010 F1). "
         "The GRAPH-UNIQUE cell is populated (3-12% of test examples), confirming "
         "that frozen GIN embeddings capture structural patterns not present in text."
     )
