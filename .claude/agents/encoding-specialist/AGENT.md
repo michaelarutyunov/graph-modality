@@ -19,9 +19,9 @@ Three frozen modality representations are produced:
 
 3. **GIN autoencoder (self-supervised).** Run `s4_encoding/graph_gnn_encoder.py` to train a 2-layer GIN autoencoder on ALL 1,250 graphs with no classification labels. The encoder learns to represent graph structure; the decoder reconstructs node types from per-node embeddings. After training, the encoder is **frozen**. Run `s4_encoding/graph_gnn_encoder.py --encode` for frozen inference producing 128-dim embeddings cached to `cache/gin_embeddings_canonical.npy`. Both train and encode live in a single file — the ``--encode`` flag switches between modes.
 
-4. **Modality embedding dataset.** Run `s4_encoding/build_dataset.py` to package all three frozen embeddings into .npz files per split and per target (AI adoption, cohort). Saved to `cache/modality_dataset/`. This is the single source of truth for downstream classifiers.
+4. **Modality embedding dataset.** Run `s4_encoding/build_dataset.py` to package all three frozen embeddings into .npz files per split and per target (AI adoption, cohort, stance_ambivalence). Saved to `cache/modality_dataset/`. This is the single source of truth for downstream classifiers. `stance_ambivalence` labels are loaded from `cache/ambivalence.jsonl`; uncertain/manual_review labels are excluded.
 
-5. **Cache discipline.** All encodings are cached. Never recompute if cache exists. Cache files: `cache/text_embeddings_human_only.npy`, `cache/graph_stats.npy`, `cache/gin_embeddings_canonical.npy`, `cache/modality_dataset/*.npz`.
+5. **Cache discipline.** All encodings are cached. Never recompute if cache exists. Cache files: `cache/text_embeddings_human_only.npy`, `cache/graph_stats.npy`, `cache/gin_embeddings_canonical.npy`, `cache/modality_dataset/*.npz`, `cache/ambivalence.jsonl`.
 
 ## Key Files
 
@@ -37,6 +37,7 @@ Three frozen modality representations are produced:
 | `cache/gin_embeddings_canonical.npy` + `_ids.json` | Cached GIN embeddings |
 | `cache/gin_encoder_canonical.pt` | Trained GIN encoder weights |
 | `cache/modality_dataset/` | .npz files per split/target |
+| `cache/ambivalence.jsonl` | Final `stance_ambivalence` consensus labels |
 | `s3_canonicalisation/canonical_map.json` | Locked vocabulary — graph_stats_encoder.py relies on canonical labels |
 
 ### Archived

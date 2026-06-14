@@ -235,6 +235,7 @@ Every bead that dispatches parallel sub-agents must include an explicit **Merge 
 | Results log | `.claude/context/results-log.md` |
 | Phase 1 post-mortem | `.claude/context/phase1-postmortem.md` |
 | Demographic variable selection | `.claude/context/demographic-variables.md` |
+| Ambivalence target design | `.claude/context/ambivalence-target.md` |
 
 ---
 

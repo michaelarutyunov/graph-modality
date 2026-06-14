@@ -17,7 +17,7 @@ This separation is critical: it means we can cleanly measure whether adding grap
    - **sklearn**: Traditional classifiers — LogisticRegression, RandomForest, GradientBoosting, SVC. One-shot fit, no epochs. All operate on concatenated modality features.
    Compare single-modality baselines against fusion combinations. Record macro-F1, per-class F1, confusion matrices.
 
-3. **Experiment runner.** Use `s5_classification/train_run.py` with `ExperimentConfig` dataclass to run reproducible experiments. Supports `--sweep torch` (42 experiments), `--sweep sklearn` (48 experiments), or `--sweep all` (90 experiments). Each run saves: model weights (.pt or .joblib), curves, per-example predictions, metrics JSON. Sweep across architectures, modality combinations, targets, and backends.
+3. **Experiment runner.** Use `s5_classification/train_run.py` with `ExperimentConfig` dataclass to run reproducible experiments. Supports `--sweep torch` (42 experiments), `--sweep sklearn` (48 experiments), or `--sweep all` (90 experiments). Each run saves: model weights (.pt or .joblib), curves, per-example predictions, metrics JSON. Sweep across architectures, modality combinations, targets, and backends. Note: `stance_ambivalence` is available for specialized probes (`null_ladder.py`, `structure_only_probe.py`, `repeated_eval.py`) but is not yet registered in `train_config.py`/`train_run.py`.
 
 4. **Disentanglement analysis.** Build complementarity matrices (2×2: text correct/wrong vs graph correct/wrong) to quantify GRAPH-UNIQUE signal — examples where graph classifies correctly and text does not. This directly answers "does the frozen graph modality add complementary signal?" See `s6_notebooks/05_fusion_analysis.py`.
 
@@ -44,6 +44,10 @@ This separation is critical: it means we can cleanly measure whether adding grap
 | `s5_classification/baseline.py` | Text-only LR (Phase 3 reference, sklearn) |
 | `s5_classification/analysis_feature_importance.py` | Permutation importance — which graph features matter |
 | `s5_classification/analysis_stats.py` | Stats-only per-class report — graph topology discriminability |
+| `s5_classification/null_ladder.py` | Null-ladder test (typed GIN vs bag-of-types) — supports `stance_ambivalence` |
+| `s5_classification/structure_only_probe.py` | Topology-only probe — supports `stance_ambivalence` |
+| `s5_classification/repeated_eval.py` | Repeated-split data slicing — supports `stance_ambivalence` |
+| `s5_classification/repeated_run.py` | Repeated-evaluation runner across 10 seeds |
 | `s6_notebooks/02_graph_exploration.py` | Cohort topology, H1-H4 previews |
 | `s6_notebooks/03_classification_results.py` | Results presentation, confusion matrices, route comparison |
 | `s6_notebooks/04_structural_analysis.py` | H1-H4 statistical tests, AI adoption exploratory |
@@ -83,7 +87,7 @@ This separation is critical: it means we can cleanly measure whether adding grap
 | Dimension | Values |
 |---|---|
 | Backend | torch, sklearn |
-| Target | AI adoption (binary), Cohort (3-class) |
+| Target | AI adoption (binary, n=1,224), Cohort (3-class, n=1,250), Stance ambivalence (3-class ordinal, n=1,250) |
 | Modalities | text, stats, graph, text+stats, text+graph, text+stats+graph |
 | Architecture (torch) | single, stacked, gated, late |
 | Architecture (sklearn) | logistic, random_forest, gradient_boost, svm |

@@ -8,9 +8,9 @@ This project extracts structured concept graphs from 1,250 AI-adoption interview
 
 ## Your Responsibilities
 
-1. **Prompt engineering.** Extraction prompts live in `s2_extraction/prompts/` as versioned `.txt` files. Never hardcode prompt text in Python. Each iteration increments the version number. Old versions are preserved.
+1. **Prompt engineering.** Extraction prompts live in `s2_extraction/prompts/` as versioned `.txt` files. Never hardcode prompt text in Python. Each iteration increments the version number. Old versions are preserved. This includes non-graph prompts such as `ambivalence_v1.txt`.
 
-2. **API integration.** The extractor calls LLM APIs (Anthropic, DeepSeek, Agnes) with retry logic, caching, and failure logging. API keys live in `.env`. Never commit keys.
+2. **API integration.** The extractor and labelers call LLM APIs (Anthropic, DeepSeek, Agnes, Kimi) with retry logic, caching, and failure logging. API keys live in `.env`. Never commit keys.
 
 3. **Validation.** Every extracted graph must pass through `s2_extraction/validator.py`. Invalid graphs are logged but don't halt the batch — extraction continues and failures are manually reviewed.
 
@@ -18,17 +18,23 @@ This project extracts structured concept graphs from 1,250 AI-adoption interview
 
 5. **Scale extraction.** Processing 300 transcripts in batches of 50. Cache-first: skip any transcript that already has a graph file. Retry on API failure with exponential backoff.
 
+6. **Ambivalence labeling (non-graph target).** `s2_extraction/ambivalence_labeler.py` labels all 1,250 transcripts with `stance_ambivalence` using Agnes and Haiku. Disagreements are adjudicated by `s2_extraction/ambivalence_adjudicator.py` (Kimi k2.6) and merged by `s2_extraction/ambivalence_consensus.py`. Labels are cached to `cache/ambivalence_*.jsonl` and finalized to `cache/ambivalence.jsonl`.
+
 ## Key Files
 
 | File | Role |
 |---|---|
 | `s2_extraction/prompts/v1.txt` | Active extraction prompt (version-controlled) |
 | `s2_extraction/tagger.py` | Speaker-tags transcripts before extraction |
-| `s2_extraction/extractor.py` | Main extraction loop with caching and retry |
+| `s2_extraction/extractor.py` | Main graph extraction loop with caching and retry |
 | `s2_extraction/validator.py` | Structural constraint enforcement |
+| `s2_extraction/ambivalence_labeler.py` | Dual-model `stance_ambivalence` labeler (Agnes + Haiku) |
+| `s2_extraction/ambivalence_adjudicator.py` | Kimi judge for resolving label disagreements |
+| `s2_extraction/ambivalence_consensus.py` | Merges agreements + adjudications into `cache/ambivalence.jsonl` |
 | `s2_extraction/model_comparison/run_comparison.py` | 3-model comparison experiment |
 | `.claude/context/extraction-log.md` | Extraction history and incident log |
 | `.claude/context/graph-schema.md` | Data contract — extraction output must match |
+| `.claude/context/ambivalence-target.md` | Design spec for the `stance_ambivalence` target |
 
 ## Coding Conventions
 
@@ -45,6 +51,9 @@ This project extracts structured concept graphs from 1,250 AI-adoption interview
 2. `extractor.py` — extract graphs → `s1_data/graphs/free_text/*.json`
 3. `validator.py` — structural validation (called by extractor)
 4. `model_comparison/run_comparison.py` — compare models on 10 fixed transcripts
+5. `ambivalence_labeler.py` — label `stance_ambivalence` with Agnes and Haiku → `cache/ambivalence_agnes.jsonl`, `cache/ambivalence_haiku.jsonl`
+6. `ambivalence_adjudicator.py` — resolve disagreements with Kimi → `cache/ambivalence_adjudications.json`
+7. `ambivalence_consensus.py --finalize` — merge into `cache/ambivalence.jsonl`
 
 ## Common Pitfalls
 

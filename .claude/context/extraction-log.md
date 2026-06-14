@@ -9,6 +9,7 @@
 | version | file | date | change summary | rationale |
 |---|---|---|---|---|
 | v1 | `s2_extraction/prompts/v1.txt` | 2026-06-07 | Initial extraction prompt | Based on ENGINEERING.md §5.2. Four entity types (Construct, Value, Stance, CognitiveStyleMarker), four relation types (SERVES, EXPRESSED_VIA, MODULATED_BY, CONFLICTS_WITH). Human-turn-only node extraction. Maximum 2 CSM per transcript. |
+| ambivalence_v1 | `s2_extraction/prompts/ambivalence_v1.txt` | 2026-06-12 | Ordinal attitudinal-ambivalence prompt | Labels transcripts `low`/`med`/`high`/`uncertain` by unresolved stance tension. Human turns only; requires quotes and reasoning. Dual-model labeling (Agnes + Haiku) with Kimi adjudication. |
 
 ---
 

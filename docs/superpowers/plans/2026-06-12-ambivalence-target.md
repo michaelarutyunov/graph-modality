@@ -8,7 +8,7 @@
 
 **Tech Stack:** Python 3.11, `uv`, stdlib `urllib` (OpenAI-compatible Agnes), Anthropic SDK (Haiku), scikit-learn (`cohen_kappa_score`, `f1_score`), PyTorch + PyG (existing probes), pytest.
 
-**Spec:** `docs/superpowers/specs/2026-06-12-ambivalence-target-design.md`
+**Spec:** `.claude/context/ambivalence-target.md`
 
 **Conventions:** All commands prefixed `PYTHONPATH=. uv run`. Tests set `BEADS_DB` to a temp path if they touch beads (these don't). Results written to new files, never overwriting.
 

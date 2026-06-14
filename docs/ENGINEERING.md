@@ -253,6 +253,27 @@ df = load_all().with_columns(
 )
 ```
 
+### 4.4 stance_ambivalence labels (non-graph target)
+
+The `stance_ambivalence` target is produced independently of the graph extractor to avoid circularity. It is an ordinal label (`low` / `med` / `high`) capturing unresolved attitudinal tension toward AI.
+
+Pipeline:
+
+1. **Dual labeling.** `s2_extraction/ambivalence_labeler.py` labels all 1,250 transcripts with Agnes (`agnes-2.0-flash`) and Haiku (`claude-haiku-4-5-20251001`). Each output includes `label`, `reasoning`, and supporting `quotes` under the `ambivalence_v1.txt` rubric.
+2. **Agreement check.** `s2_extraction/ambivalence_consensus.py --report` computes agreement and writes the disagreement worklist (`cache/ambivalence_disagreements.json`).
+3. **Adjudication.** `s2_extraction/ambivalence_adjudicator.py` sends each disagreement to Kimi k2.6 with the full transcript and the two anonymized annotator judgments (randomized A/B order). Kimi returns a chosen label, reasoning, and supporting quotes.
+4. **Finalize.** `s2_extraction/ambivalence_consensus.py --finalize` merges 973 direct agreements with the 277 Kimi adjudications into `cache/ambivalence.jsonl`.
+
+Final consensus (1,250 usable labels, 0 excluded):
+
+| label | count | fraction |
+|---|---|---|
+| low | 352 | 28.2% |
+| med | 843 | 67.4% |
+| high | 55 | 4.4% |
+
+`uncertain` and `manual_review` labels are kept in the consensus file for auditability but excluded from classification by `_load_ambivalence_labels()`.
+
 ---
 
 ## 5. graph extraction pipeline
@@ -1100,7 +1121,7 @@ class LateFusionClassifier(nn.Module):
 ```python
 @dataclass
 class ExperimentConfig:
-    target: str                    # "ai_adoption" | "cohort"
+    target: str                    # "ai_adoption" | "cohort" | "stance_ambivalence"
     modalities: list[str]          # ["text"] | ["text", "graph"] | ...
     architecture: str             # "single" | "stacked" | "gated" | "late"
     hidden_dim: int = 256
@@ -1159,11 +1180,11 @@ Primary metric: macro-averaged F1. Per-class F1 and confusion matrices additiona
 
 | Dimension | Values |
 |---|---|
-| Target | AI adoption (binary, n=1,224), Cohort (3-class, n=1,250) |
+| Target | AI adoption (binary, n=1,224), Cohort (3-class, n=1,250), Stance ambivalence (3-class ordinal, n=1,250; class-imbalanced: med=843, low=352, high=55) |
 | Modalities | text, stats, graph, text+stats, text+graph, text+stats+graph |
 | Architecture | single, stacked, gated, late |
 
-Total: 2 × 6 × 4 = 48 experiments. The config-driven runner makes this a parameter sweep, not 48 separate scripts.
+Total: 3 × 6 × 4 = 72 experiments. The config-driven runner makes this a parameter sweep, not 72 separate scripts.
 
 ### 9.6 baseline and route 2 (sklearn, unchanged)
 
