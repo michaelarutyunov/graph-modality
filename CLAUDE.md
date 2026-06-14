@@ -241,9 +241,11 @@ Every bead that dispatches parallel sub-agents must include an explicit **Merge 
 
 ## Current Phase
 
-**Phases 1–5 complete. v4 edge-modality + Phase 2.6 kill-criterion ran and returned a
-mostly-negative result on the old targets. Now retesting the original complementarity
-hypothesis on a new, lexically-non-obvious primary target (`stance_ambivalence`).**
+**Phase 6 COMPLETE (ADR-0006). Final verdict on the v4 corpus: the graph modality's signal is
+distributional node-attribute (stance valence / label semantics), NOT relational/topological.
+Graph stats beat text (modality-distinctness SUPPORTED, CI excludes 0); fusion does not beat the
+best single modality (complementarity NOT supported); edges add nothing (relational hypothesis
+REJECTED). Phase 7 replication epic closed as not-applicable (no topology delta to replicate).**
 
 > The v4 / Phase 2.6 detour established two things that reframe everything below:
 > (1) the old targets (`cohort`, `ai_adoption`) are unfair tests — `cohort` leaks profession
