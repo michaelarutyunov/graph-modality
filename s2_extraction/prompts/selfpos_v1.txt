@@ -1,0 +1,117 @@
+You are a careful qualitative coder. You will read ONE interview respondent's own words
+(an interview about how they use AI in their professional work) and code their HUMAN–AI
+DELEGATION BOUNDARY: which work tasks they keep for themselves, which they hand to AI, and
+WHY they keep the ones they keep.
+
+This is a CODING task, not a chat. Code only what the respondent actually says. Do not infer
+their profession, do not reward or penalise any stance, and do not invent tasks they did not
+mention. Every coded task MUST be supported by a short verbatim quote from the text.
+
+====================================================================
+WHAT YOU ARE CODING
+====================================================================
+
+1) TASKS AND THEIR DISPOSITION
+For each distinct work task/activity the respondent discusses in relation to AI, decide where it
+sits on their delegation boundary:
+
+- "retained"  — they do it themselves / keep control / deliberately do NOT hand it to AI.
+- "ceded"     — they hand it to AI / let AI do it / delegate it.
+- "shared"    — genuinely collaborative: AI assists but the respondent stays actively in the loop
+                (drafts, suggestions, back-and-forth where the person keeps final control).
+
+2) RATIONALE — WHY the task sits where it does. Required for "retained"/"shared"; for "ceded"
+it is null UNLESS the cede is to cover a skill/expertise gap (then "competence_compensate").
+Use exactly one:
+
+- "competence"          — RETAIN to maintain or build their OWN skill, understanding, judgement,
+                          or learning. ("I need to understand it myself", "I don't want to lose
+                          the skill", "without the struggle I won't retain it", "do my own
+                          research so I stay sharp").
+- "competence_compensate" — CEDE because AI covers a skill/expertise gap the respondent lacks.
+                          ("my coding isn't good, AI gets the syntax right", "I have limited
+                          access to an expert, AI fills in"). This is the OPPOSITE pole of
+                          "competence" and applies to ceded/shared tasks.
+- "identity"            — because the task is core to who they are / their professional self /
+                          authorship or craft. ("this is my creativity", "writing is who I am",
+                          "the human touch is the point", "the creative decisions are mine").
+- "trust_reliability"   — because they don't trust AI to do it correctly/safely/thoroughly.
+                          ("AI isn't thorough enough", "it might miss something", "I have to
+                          verify everything", "it's a crapshoot", "it hallucinates").
+- "output_efficiency"   — purely practical: faster/easier to do themselves, or AI physically
+                          can't (no preference about skill/identity/trust).
+- "other"               — a clear reason fitting none of the above (state it in the "task" note).
+
+TIE-BREAKER (competence/identity vs trust_reliability): if the stated reason is about the
+PERSON (my skill, my understanding, it's mine, I want to stay sharp) -> competence or identity.
+If it is about the AI (inaccurate, not thorough, hallucinates, low quality) -> trust_reliability.
+If genuinely both, code the dominant and name the secondary in the task note.
+
+3) DELEGATION BREADTH (overall)
+How much of their professional work do they cede to AI overall?
+- "low"    — they keep most things; AI is a narrow/occasional helper.
+- "medium" — a real mix of retained and ceded.
+- "high"   — they hand a large share of their work to AI.
+
+4) DOMINANT RETAINED RATIONALE (overall)
+Across all retained/shared tasks, the single most prominent rationale (one of the five above),
+or "mixed" if two are equally prominent, or "none" if they articulate no retained tasks.
+
+5) BOUNDARY-TALK DEPTH (1–3) — how explicitly they reason about WHERE they draw the line
+- 1 — minimal: mostly "I use AI for X" with little/no explicit sense of what they keep or why.
+- 2 — moderate: some explicit retain-vs-cede distinctions with at least one stated reason.
+- 3 — rich: clearly articulates several tasks across the boundary WITH reasons, and/or reflects
+      on where and why they draw the line.
+
+====================================================================
+WORKED EXAMPLES (illustrative; code the actual transcript you are given)
+====================================================================
+
+- "I prefer to do the research myself, I just don't trust AI to be thorough… I took it back to
+   what I knew and understood and worked my way up." → retained, rationale=competence (wanting to
+   keep their own understanding), with a secondary trust flavour; depth 3.
+- "My coding skills are not very good. AI helps make sure I'm using the correct syntax." → ceded
+   (syntax), rationale=competence_compensate (covering a gap — the OPPOSITE pole of guarding).
+- "I keep the creative work because AI output is a crapshoot." → retained, rationale=trust_reliability
+   (the reason is about AI quality), NOT identity — apply the self-vs-AI tie-breaker.
+- "All the creative decisions are ultimately mine. I use it as an interlocutor to refine my
+   thinking." → retained=creative decisions, rationale=identity; shared=thinking/brainstorm.
+- "I generate the message with AI but I call and email clients myself, because it's more genuine."
+   → ceded=drafting, retained=client contact, rationale=identity (genuine human contact); depth 2.
+- "I use AI to scan contracts and pick out key points." with no statement of anything kept back →
+   ceded; if nothing is retained, dominant_retained_rationale="none"; depth likely 1.
+
+====================================================================
+OUTPUT — STRICT JSON, NOTHING ELSE
+====================================================================
+
+Return ONLY this JSON object (no prose, no markdown fences):
+
+{
+  "tasks": [
+    {
+      "task": "<short description of the task>",
+      "disposition": "retained" | "ceded" | "shared",
+      "rationale": "competence" | "competence_compensate" | "identity" | "trust_reliability" | "output_efficiency" | "other" | null,
+      "quote": "<short verbatim quote from the respondent supporting this>"
+    }
+  ],
+  "delegation_breadth": "low" | "medium" | "high",
+  "dominant_retained_rationale": "competence" | "identity" | "trust_reliability" | "output_efficiency" | "mixed" | "none",
+  "boundary_talk_depth": 1 | 2 | 3,
+  "notes": "<one short line: anything ambiguous or noteworthy>"
+}
+
+Rules:
+- "rationale" is required for "retained"/"shared"; null for "ceded" EXCEPT use
+  "competence_compensate" when the cede covers a skill/expertise gap.
+- If the respondent retains almost nothing, set dominant_retained_rationale="none".
+- Every task needs a verbatim "quote". If you cannot find a quote, do not include the task.
+- If the respondent discusses no concrete tasks, return an empty "tasks" list,
+  delegation_breadth as best you can, dominant_retained_rationale="none", boundary_talk_depth=1.
+- Be conservative: code what is said, not what is implied about their occupation.
+
+TRANSCRIPT (respondent's words only):
+---
+{transcript}
+---
