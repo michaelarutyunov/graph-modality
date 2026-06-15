@@ -5,7 +5,7 @@
 > Every numeric choice below is pre-registered and binding on beads `7p2` (P1.3),
 > `e5s` (P1.4), `6i9` (P2.3), and `n70` (P2.4). Changing any rule after seeing results
 > is the exact test-data leak this protocol exists to prevent
-> (`docs/METHOD_REVIEW.md`, concern #6 + Phase-1 watch-out).
+> (`docs/MODEL_REVIEW_1.md`, concern #6 + Phase-1 watch-out).
 >
 > **Any change requires a NEW version file** (`01-evaluation-protocol.md`, …) with its own
 > dated banner. **Never edit a pinned value in place.**
@@ -83,7 +83,7 @@ otherwise (per-class F1 may be reported as supplementary).
   add signal are drawn from this target. It is the cleaner test: less interview-protocol
   confound and less class imbalance than cohort.
 - **Secondary / sanity-only target: `cohort`** (3-class). Reported for completeness, but
-  **flagged as interview-protocol-confounded** (`docs/METHOD_REVIEW.md`, concern #8: cohort
+  **flagged as interview-protocol-confounded** (`docs/MODEL_REVIEW_1.md`, concern #8: cohort
   vocabulary leaks through human turns and the AI steers topic distributions per cohort).
   Cohort results never override an ai_adoption conclusion.
 
@@ -183,7 +183,7 @@ judgement calls:
 
 ## Provenance
 
-- Source review: `docs/METHOD_REVIEW.md` (NEXT STEPS, Phases 1-2).
+- Source review: `docs/MODEL_REVIEW_1.md` (NEXT STEPS, Phases 1-2).
 - Epic: `graph-modality-3es`. This document is bead `graph-modality-0r7` (P1.1).
 - Frozen embeddings reused (no recompute): `cache/` SBERT (768-d), graph-stats (30-d),
   GIN (128-d), each with a sibling `*_ids.json` keyed by `transcript_id`.

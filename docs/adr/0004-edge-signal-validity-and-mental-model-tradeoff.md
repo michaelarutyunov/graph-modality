@@ -3,7 +3,7 @@
 - **Status:** Accepted (decision framing; implementation pending epic `graph-modality-ztg`)
 - **Date:** 2026-06-10
 - **Supersedes:** none
-- **Related:** ADR-0001 (extraction model), ADR-0003 (target-agnostic encoders); `docs/METHOD_REVIEW.md`; results-log Method-Review Phases 1–2
+- **Related:** ADR-0001 (extraction model), ADR-0003 (target-agnostic encoders); `docs/MODEL_REVIEW_1.md`; results-log Method-Review Phases 1–2
 
 ## Context
 
