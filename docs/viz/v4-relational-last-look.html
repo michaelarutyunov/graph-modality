@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>v4 Relational Last-Look — Distributional, not Relational</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F2F1ED; --panel:#FFFFFF; --ink:#14171C; --ink2:#41474F; --ink3:#7A828D;
+  --rule:#DDDCD4; --rule-strong:#C7C5BB; --line:#5B6471;
+  --graph:#4F6E8C; --state:#6B5C8A; --strategy:#8A5C5C; --gen:#5C7A5C; --persist:#7A6B4F; --intake:#5B6471;
+  --llm-bg:#ECECF7; --llm-fg:#2E2A6B;
+  --emb-bg:#E1EFEA; --emb-fg:#16574A;
+  --pure-bg:#F2EAD6; --pure-fg:#5C4612;
+  --edge-bg:#E4E0F0; --edge-fg:#3D2E6B;
+  --async-bg:#F8E8D5; --async-fg:#874A0B;
+  --conflicts:#8A5C5C; --implies:#4F6E8C; --supports:#16574A;
+  --focus-bg:#F2EAD6; --focus-fg:#5C4612; --focus-border:#5C4612;
+  --pass:#5C7A5C; --pass-bg:#E1EFEA; --fail:#8A5C5C; --fail-bg:#F4E6E6;
+  --mono:"JetBrains Mono",monospace; --body:"Inter Tight",-apple-system,sans-serif;
+  --shadow-subtle:0 1px 0 rgba(20,23,28,0.04);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--body); color:var(--ink); background:var(--bg);
+  background-image:linear-gradient(rgba(20,23,28,0.025) 1px,transparent 1px),
+                   linear-gradient(90deg,rgba(20,23,28,0.025) 1px,transparent 1px);
+  background-size:40px 40px;
+  line-height:1.4; -webkit-font-smoothing:antialiased; padding:48px 28px 80px;
+}
+.wrap{max-width:1180px;margin:0 auto}
+
+/* ---- masthead ---- */
+.eyebrow{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:0.18em;
+  text-transform:uppercase;color:var(--strategy);margin-bottom:14px}
+h1{font-size:44px;font-weight:600;letter-spacing:-0.02em;line-height:1.1;margin-bottom:16px;max-width:18ch}
+.subtitle{font-size:18px;color:var(--ink2);line-height:1.4;max-width:62ch;margin-bottom:24px}
+.meta-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+.chip{font-family:var(--mono);font-size:11px;letter-spacing:0.04em;color:var(--ink2);
+  background:var(--panel);border:1px solid var(--rule-strong);border-radius:4px;padding:5px 9px}
+.chip b{color:var(--ink);font-weight:600}
+
+/* ---- section structure ---- */
+section{margin-top:56px}
+.sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:6px;
+  border-bottom:1.5px solid var(--rule-strong);padding-bottom:10px}
+.sec-num{font-family:var(--mono);font-size:13px;font-weight:600;letter-spacing:0.08em;color:var(--ink3)}
+.sec-title{font-size:24px;font-weight:600;letter-spacing:-0.02em}
+.sec-tag{margin-left:auto;font-family:var(--mono);font-size:11px;letter-spacing:0.04em;
+  padding:4px 9px;border-radius:4px}
+.sec-sub{font-size:15px;color:var(--ink2);margin-top:14px;max-width:74ch}
+
+/* ---- cards ---- */
+.card{background:var(--panel);border:1px solid var(--rule-strong);border-radius:10px;
+  padding:20px 22px;box-shadow:var(--shadow-subtle);margin-top:18px}
+.card-label{font-family:var(--mono);font-size:11px;letter-spacing:0.08em;text-transform:uppercase;
+  color:var(--ink3);margin-bottom:12px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media(max-width:860px){.grid2{grid-template-columns:1fr}}
+
+/* ---- badges ---- */
+.badge{display:inline-flex;align-items:center;font-family:var(--mono);font-size:11px;font-weight:500;
+  letter-spacing:0.04em;padding:3px 8px;border-radius:4px}
+.b-pass{background:var(--pass-bg);color:var(--pass)}
+.b-fail{background:var(--fail-bg);color:var(--fail)}
+.b-llm{background:var(--llm-bg);color:var(--llm-fg)}
+.b-emb{background:var(--emb-bg);color:var(--emb-fg)}
+.b-pure{background:var(--pure-bg);color:var(--pure-fg)}
+.b-edge{background:var(--edge-bg);color:var(--edge-fg)}
+.b-async{background:var(--async-bg);color:var(--async-fg)}
+
+/* ---- bar chart ---- */
+.bars{margin-top:8px}
+.bar-row{display:grid;grid-template-columns:210px 1fr 150px;align-items:center;gap:14px;
+  padding:7px 0;border-top:1px solid var(--rule)}
+.bar-row:first-child{border-top:none}
+.bar-name{font-family:var(--mono);font-size:12px;color:var(--ink2)}
+.bar-name .sub{color:var(--ink3);font-size:10.5px}
+.bar-track{position:relative;height:22px;background:#EFEEE8;border-radius:4px;overflow:visible}
+.bar-fill{height:100%;border-radius:4px;background:var(--graph);opacity:0.9}
+.bar-fill.muted{background:var(--ink3);opacity:0.55}
+.bar-fill.hi{background:var(--state)}
+.bar-chance{position:absolute;top:-4px;bottom:-4px;width:2px;background:var(--strategy);z-index:2}
+.bar-chance::after{content:"chance";position:absolute;top:-15px;left:-16px;font-family:var(--mono);
+  font-size:9px;color:var(--strategy);white-space:nowrap}
+.bar-val{font-family:var(--mono);font-size:12px;font-weight:600;color:var(--ink);text-align:right}
+.bar-val .ci{display:block;font-weight:400;font-size:10px;color:var(--ink3)}
+
+/* ---- contrast table ---- */
+table{width:100%;border-collapse:collapse;margin-top:6px;font-size:13px}
+th{font-family:var(--mono);font-size:10.5px;letter-spacing:0.06em;text-transform:uppercase;
+  color:var(--ink3);text-align:left;padding:8px 10px;border-bottom:1.5px solid var(--rule-strong)}
+td{padding:9px 10px;border-bottom:1px solid var(--rule);color:var(--ink2);vertical-align:middle}
+td.contrast{color:var(--ink);font-weight:500}
+td.num{font-family:var(--mono);font-size:12px;color:var(--ink)}
+tr.highlight td{background:var(--focus-bg)}
+.delta-pos{color:var(--gen)} .delta-neg{color:var(--fail)}
+
+/* ---- concept graph (svg example) ---- */
+.example{background:var(--panel);border:1px solid var(--rule-strong);border-radius:12px;
+  padding:18px 20px;box-shadow:var(--shadow-subtle)}
+.gnode{fill:var(--panel);stroke:var(--rule-strong);stroke-width:1px}
+.gnode.construct{stroke:var(--graph);stroke-width:1.5px}
+.glabel{font-family:var(--mono);font-size:11px;fill:var(--ink)}
+.gtype{font-family:var(--mono);font-size:9px;fill:var(--ink3);letter-spacing:0.04em}
+.gval-pos{fill:var(--gen)} .gval-neg{fill:var(--fail)}
+.gedge{stroke-width:1.6px;fill:none}
+.gedge-label{font-family:var(--mono);font-size:9.5px;letter-spacing:0.04em}
+
+/* ---- callout ---- */
+.callout{border-left:3px solid var(--strategy);background:rgba(138,92,92,0.05);
+  padding:14px 18px;border-radius:0 8px 8px 0;margin-top:18px}
+.callout.verdict{border-left-color:var(--gen);background:rgba(92,122,92,0.06)}
+.callout-k{font-family:var(--mono);font-size:10.5px;letter-spacing:0.08em;text-transform:uppercase;
+  color:var(--ink3);margin-bottom:6px}
+.callout p{font-size:14px;color:var(--ink2);line-height:1.45}
+.callout p b{color:var(--ink)}
+
+/* ---- gate / pipeline ---- */
+.gate{display:flex;align-items:stretch;gap:0;margin-top:20px;flex-wrap:wrap}
+.gate-step{flex:1;min-width:180px;background:var(--panel);border:1px solid var(--rule-strong);
+  padding:14px 16px;position:relative}
+.gate-step:first-child{border-radius:10px 0 0 10px}
+.gate-step:last-child{border-radius:0 10px 10px 0}
+.gate-step.opus{background:#FBFAF6}
+.gate-n{font-family:var(--mono);font-size:10px;letter-spacing:0.08em;color:var(--ink3)}
+.gate-title{font-size:14px;font-weight:600;margin:4px 0 6px}
+.gate-desc{font-size:12px;color:var(--ink2);line-height:1.35}
+.gate-arrow{display:flex;align-items:center;color:var(--line);font-family:var(--mono);font-size:18px;padding:0 4px}
+
+.legend{display:flex;flex-wrap:wrap;gap:24px;margin-top:14px;padding-top:14px;
+  border-top:1px solid var(--rule-strong);font-size:12px;color:var(--ink2)}
+.legend span{display:inline-flex;align-items:center;gap:7px}
+.dot{width:11px;height:11px;border-radius:3px;display:inline-block}
+
+footer{margin-top:64px;padding-top:18px;border-top:1px solid var(--rule-strong);
+  font-family:var(--mono);font-size:11px;color:var(--ink3);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.kicker{font-family:var(--mono);font-size:11px;color:var(--ink3);margin-top:4px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ======== MASTHEAD ======== -->
+  <div class="eyebrow">cdt-graph-modality · v4 corpus · phase 6 last-look</div>
+  <h1>Is the graph signal relational — or just distributional?</h1>
+  <p class="subtitle">
+    The founding thesis was that concept-graph <em>structure</em> — how ideas wire together —
+    carries signal that flat text cannot. After a string of nulls (ADR-0006), this is the final,
+    pre-scoped retest on the v4 corpus: give the relational hypothesis its strongest fair shot,
+    then accept the answer. Three tests, one verdict.
+  </p>
+  <div class="meta-row">
+    <span class="chip">corpus <b>v4_think · 1,250 graphs</b></span>
+    <span class="chip">target <b>stance_ambivalence</b></span>
+    <span class="chip">classes <b>med 843 · low 352 · high 55</b></span>
+    <span class="chip">protocol <b>10 seeds (42–51) · class-weighted</b></span>
+    <span class="chip">PASS <b>CI excludes 0 &amp; mean Δ ≥ +0.01</b></span>
+  </div>
+
+  <!-- ======== THE DESIGN ======== -->
+  <section>
+    <div class="sec-head">
+      <span class="sec-num">00</span>
+      <span class="sec-title">The plan, and the guard against fooling ourselves</span>
+    </div>
+    <p class="sec-sub">
+      The relational hypothesis was the one we <em>wanted</em> to be true — exactly the condition for
+      p-hacking. So the tests were ordered as a <b>decision gate</b>: run the two cheap tests first;
+      only escalate to the expensive per-relation GNN if both came back null. A PASS on any test would
+      reopen the relational claim; otherwise, accept the distributional verdict.
+    </p>
+    <div class="gate">
+      <div class="gate-step">
+        <div class="gate-n">B1 · cheap</div>
+        <div class="gate-title">Endpoint-aware conflict edges <span class="badge b-pure">computation</span></div>
+        <div class="gate-desc">Does the one relation theory privileges — <span style="font-family:var(--mono);color:var(--conflicts)">CONFLICTS_WITH</span> between oppositely-valenced ideas — add signal beyond node attributes?</div>
+      </div>
+      <div class="gate-arrow">→</div>
+      <div class="gate-step">
+        <div class="gate-n">B2 · cheap</div>
+        <div class="gate-title">Lexical control <span class="badge b-emb">embeddings</span></div>
+        <div class="gate-desc">Is the distributional signal real concept identity, or just surface wording? (free-text vs canonical labels)</div>
+      </div>
+      <div class="gate-arrow">⇒</div>
+      <div class="gate-step opus">
+        <div class="gate-n">RGCN · gated · Opus</div>
+        <div class="gate-title">Per-relation encoder <span class="badge b-edge">edge</span></div>
+        <div class="gate-desc">Only if B1 &amp; B2 are null: the strongest fair edge encoder. A loss here closes the question.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== B1 ======== -->
+  <section>
+    <div class="sec-head">
+      <span class="sec-num">B1</span>
+      <span class="sec-title">Endpoint-aware conflict edges</span>
+      <span class="sec-tag b-fail">RELATIONAL · FAIL</span>
+    </div>
+    <p class="sec-sub">
+      Ambivalence <em>is</em> holding conflicting stances, so the <span style="font-family:var(--mono);color:var(--conflicts)">CONFLICTS_WITH</span>
+      edge should be where topology pays off. The data first surprised us: <b>425/425 conflict edges connect
+      Construct→Construct, never Stance→Stance</b>, and they are sparse — 880 of 1,250 graphs have none. So the
+      decisive feature had to be genuinely relational: a conflict edge joining two constructs the respondent feels
+      <span class="gval-pos" style="font-weight:600">oppositely</span> about (valence reached via
+      <span style="font-family:var(--mono)">Stance –EXPRESSED_VIA→ Construct</span>).
+    </p>
+
+    <!-- real example -->
+    <div class="card">
+      <div class="card-label">A real opposite-valence conflict · creativity_0023.json</div>
+      <div class="example">
+        <svg viewBox="0 0 760 200" width="100%" height="200" role="img" aria-label="concept graph example">
+          <!-- edge: conflicts -->
+          <path class="gedge" d="M 250 70 L 510 70" stroke="var(--conflicts)"/>
+          <polygon points="510,70 500,65 500,75" fill="var(--conflicts)"/>
+          <polygon points="250,70 260,65 260,75" fill="var(--conflicts)"/>
+          <text class="gedge-label" x="380" y="60" fill="var(--conflicts)" text-anchor="middle">CONFLICTS_WITH</text>
+          <!-- edge: expressed_via (stances into constructs) -->
+          <path class="gedge" d="M 150 165 L 150 100" stroke="var(--supports)" opacity="0.55"/>
+          <polygon points="150,100 145,110 155,110" fill="var(--supports)"/>
+          <path class="gedge" d="M 610 165 L 610 100" stroke="var(--supports)" opacity="0.55"/>
+          <polygon points="610,100 605,110 615,110" fill="var(--supports)"/>
+          <text class="gedge-label" x="165" y="135" fill="var(--supports)">EXPRESSED_VIA</text>
+          <text class="gedge-label" x="490" y="135" fill="var(--supports)" text-anchor="end">EXPRESSED_VIA</text>
+
+          <!-- construct nodes -->
+          <rect class="gnode construct" x="40" y="48" width="210" height="44" rx="6"/>
+          <text class="gtype" x="52" y="64">CONSTRUCT</text>
+          <text class="glabel" x="52" y="82">AI copywriting efficiency</text>
+
+          <rect class="gnode construct" x="510" y="48" width="210" height="44" rx="6"/>
+          <text class="gtype" x="522" y="64">CONSTRUCT</text>
+          <text class="glabel" x="522" y="82">Human creative originality</text>
+
+          <!-- stance nodes -->
+          <rect class="gnode" x="70" y="165" width="160" height="30" rx="6"/>
+          <text class="gtype" x="82" y="178">STANCE</text>
+          <text class="glabel gval-pos" x="135" y="186" text-anchor="middle">positive</text>
+
+          <rect class="gnode" x="530" y="165" width="160" height="30" rx="6"/>
+          <text class="gtype" x="542" y="178">STANCE</text>
+          <text class="glabel gval-neg" x="610" y="186" text-anchor="middle">negative</text>
+        </svg>
+        <div class="legend">
+          <span><span class="dot" style="background:var(--conflicts)"></span> conflicts_with</span>
+          <span><span class="dot" style="background:var(--supports)"></span> expressed_via</span>
+          <span><span class="dot" style="background:var(--gen)"></span> positive stance</span>
+          <span><span class="dot" style="background:var(--fail)"></span> negative stance</span>
+        </div>
+      </div>
+      <p class="kicker" style="margin-top:12px">
+        This is the structure B1 tried to capture: a feature counting opposite-valence conflicts per graph,
+        added on top of the full 30-dim distributional stats.
+      </p>
+    </div>
+
+    <!-- the trap + corrective -->
+    <div class="card">
+      <div class="card-label">The corrective contrast · everything paired under one logistic probe (stats30 baseline = 0.386)</div>
+      <table>
+        <thead><tr><th style="width:46%">Contrast</th><th>Mean Δ macro-F1</th><th>95% CI</th><th>Verdict</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="contrast">stats30 + all conflict features <span style="color:var(--ink3)">vs</span> stats30</td>
+            <td class="num delta-pos">+0.0249</td><td class="num">[+0.003, +0.047]</td>
+            <td><span class="badge b-pass">PASS</span></td>
+          </tr>
+          <tr class="highlight">
+            <td class="contrast">stats30 + raw conflict <b>count</b> <span style="color:var(--ink3)">vs</span> stats30 <span style="color:var(--ink3);font-style:italic">(near-circular)</span></td>
+            <td class="num delta-pos">+0.0275</td><td class="num">[+0.007, +0.048]</td>
+            <td><span class="badge b-pass">PASS</span> ← drives it</td>
+          </tr>
+          <tr>
+            <td class="contrast">stats30 + <b>opposite-valence</b> feature <span style="color:var(--ink3)">vs</span> stats30 <span style="color:var(--ink3);font-style:italic">(the relational one)</span></td>
+            <td class="num delta-pos">+0.0098</td><td class="num">[+0.001, +0.019]</td>
+            <td><span class="badge b-fail">FAIL</span> (&lt; 0.01)</td>
+          </tr>
+          <tr>
+            <td class="contrast">opposite-valence <span style="color:var(--ink3)">vs</span> raw count</td>
+            <td class="num delta-neg">−0.0177</td><td class="num">[−0.035, −0.0001]</td>
+            <td><span class="badge b-fail">worse</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout">
+      <div class="callout-k">Why this is a false positive, not a finding</div>
+      <p>
+        B1's first pass <b>passed</b> against a thin 9-dim baseline (+0.042) — and would have "confirmed" the
+        relational hypothesis. The decomposition reveals the entire gain is the <b>raw conflict count</b>, which is
+        <b>near-circular</b>: a count of conflict edges predicting <em>ambivalence</em> is almost measuring the label twice.
+        Strip that, and the genuinely relational opposite-valence feature is sub-threshold — and <b>worse</b> than the count.
+        Conflict structure adds nothing once circularity is removed.
+      </p>
+    </div>
+  </section>
+
+  <!-- ======== B2 ======== -->
+  <section>
+    <div class="sec-head">
+      <span class="sec-num">B2</span>
+      <span class="sec-title">Lexical vs conceptual control</span>
+      <span class="sec-tag b-pass">POSITIVE HARDENED</span>
+    </div>
+    <p class="sec-sub">
+      The surviving positive (graph beats text) rests on node-<em>label</em> semantics. But is that real concept identity,
+      or just surface wording an SBERT could fake? Re-run the label-bag probe on raw <b>free-text</b> labels vs the
+      synonym-collapsed <b>canonical</b> labels. If they match, the signal is conceptual.
+    </p>
+
+    <div class="card">
+      <div class="card-label">label_bag macro-F1 · pooled MiniLM label embeddings, no edges</div>
+      <div class="bars">
+        <div class="bar-row">
+          <div class="bar-name">canonical labels<br><span class="sub">synonym-collapsed</span></div>
+          <div class="bar-track"><div class="bar-fill" style="width:53.1%"></div><div class="bar-chance" style="left:35.8%"></div></div>
+          <div class="bar-val">0.398<span class="ci">[0.371, 0.425]</span></div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-name">free-text labels<br><span class="sub">raw wording</span></div>
+          <div class="bar-track"><div class="bar-fill" style="width:53.7%"></div><div class="bar-chance" style="left:35.8%"></div></div>
+          <div class="bar-val">0.403<span class="ci">[0.378, 0.427]</span></div>
+        </div>
+      </div>
+      <table style="margin-top:18px">
+        <thead><tr><th>Paired contrast</th><th>Mean Δ</th><th>95% CI</th><th>Reading</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="contrast">free-text − canonical</td>
+            <td class="num">+0.0046</td><td class="num">[−0.009, +0.019]</td>
+            <td>CI spans 0 → equal</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout verdict">
+      <div class="callout-k">Verdict</div>
+      <p>
+        Free-text ≈ canonical — canonicalisation neither helps nor hurts. The distributional signal is
+        <b>conceptual / synonym-invariant</b>, <b>not surface-lexical wording</b>. This <b>strengthens</b> the project's
+        one positive result: graph node-attributes beating text is genuine semantic content, not a keyword artifact.
+      </p>
+    </div>
+  </section>
+
+  <!-- ======== RGCN ======== -->
+  <section>
+    <div class="sec-head">
+      <span class="sec-num">C</span>
+      <span class="sec-title">RGCN — the strongest fair edge encoder</span>
+      <span class="sec-tag b-fail">RELATIONAL · FAIL</span>
+    </div>
+    <p class="sec-sub">
+      Both cheap tests came back null, so the gate opened to the confirmatory shot: a <b>per-relation</b> graph network
+      (RGCNConv, distinct weights per relation type) — strictly more edge-expressive than the additive-edge GINEConv.
+      Added as a 4th rung to the structure-only edge ladder so all encoders train under identical capacity, objective,
+      and splits. <b>Node features are structure-only</b> (type + degree) — no label semantics — to isolate the edge axis.
+    </p>
+
+    <div class="card">
+      <div class="card-label">Edge ladder · macro-F1 vs chance (0.269) · structure-only features</div>
+      <div class="bars">
+        <div class="bar-row">
+          <div class="bar-name">no_edges<br><span class="sub">bag-of-types histogram</span></div>
+          <div class="bar-track"><div class="bar-fill muted" style="width:55.6%"></div><div class="bar-chance" style="left:53.7%"></div></div>
+          <div class="bar-val">0.278</div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-name">untyped<br><span class="sub">GINConv · wiring only</span></div>
+          <div class="bar-track"><div class="bar-fill muted" style="width:54.9%"></div><div class="bar-chance" style="left:53.7%"></div></div>
+          <div class="bar-val">0.274</div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-name">typed<br><span class="sub">GINEConv · additive edges</span></div>
+          <div class="bar-track"><div class="bar-fill muted" style="width:54.7%"></div><div class="bar-chance" style="left:53.7%"></div></div>
+          <div class="bar-val">0.274</div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-name">rgcn<br><span class="sub">RGCNConv · per-relation</span></div>
+          <div class="bar-track"><div class="bar-fill hi" style="width:59.5%"></div><div class="bar-chance" style="left:53.7%"></div></div>
+          <div class="bar-val">0.298<span class="ci">[0.272, 0.323]</span></div>
+        </div>
+      </div>
+      <p class="kicker" style="margin-top:14px">
+        All four arms hug the chance line. The whole edge axis carries almost no signal regardless of encoder.
+      </p>
+    </div>
+
+    <div class="grid2">
+      <div class="card" style="margin-top:0">
+        <div class="card-label">Decisive paired contrasts</div>
+        <table>
+          <thead><tr><th>Contrast</th><th>Δ</th><th>Verdict</th></tr></thead>
+          <tbody>
+            <tr class="highlight">
+              <td class="contrast">rgcn − untyped <span style="color:var(--ink3);font-style:italic">(the relational test)</span></td>
+              <td class="num">+0.0234</td><td><span class="badge b-fail">FAIL</span></td>
+            </tr>
+            <tr>
+              <td class="contrast">rgcn − typed</td>
+              <td class="num">+0.0241</td><td><span class="badge b-pass">pass*</span></td>
+            </tr>
+            <tr>
+              <td class="contrast">typed − untyped</td>
+              <td class="num">−0.0006</td><td><span class="badge b-fail">FAIL</span></td>
+            </tr>
+            <tr>
+              <td class="contrast">untyped − histogram</td>
+              <td class="num">−0.0035</td><td><span class="badge b-fail">FAIL</span></td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="kicker" style="margin-top:10px">
+          rgcn − untyped CI = [−0.006, +0.053] spans 0. *rgcn beating typed reflects GINEConv
+          <em>under</em>performing, not topology recovered.
+        </p>
+      </div>
+
+      <div class="card" style="margin-top:0">
+        <div class="card-label">Capacity match — the killer detail</div>
+        <table>
+          <thead><tr><th>Encoder</th><th>Parameters</th></tr></thead>
+          <tbody>
+            <tr><td class="contrast">untyped (GIN)</td><td class="num">166,784</td></tr>
+            <tr><td class="contrast">typed (GINE)</td><td class="num">168,611</td></tr>
+            <tr class="highlight"><td class="contrast">rgcn (RGCN)</td><td class="num">239,488 <span style="color:var(--ink3)">(+44%)</span></td></tr>
+          </tbody>
+        </table>
+        <p class="kicker" style="margin-top:10px">
+          RGCN has <b>more</b> capacity than untyped, yet still cannot beat it. A loss-with-more-capacity is
+          the strongest possible form of a null — it cannot be dismissed as under-parameterisation.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== VERDICT ======== -->
+  <section>
+    <div class="sec-head">
+      <span class="sec-num">∎</span>
+      <span class="sec-title">Triangulated verdict</span>
+      <span class="sec-tag b-pass">ADR-0007 · ACCEPTED</span>
+    </div>
+    <div class="grid2" style="margin-top:18px">
+      <div class="card" style="margin-top:0;border-left:3px solid var(--gen)">
+        <div class="card-label" style="color:var(--gen)">What the graph modality IS</div>
+        <p style="font-size:15px;color:var(--ink2);line-height:1.5">
+          A structured bag of <b>typed, valenced concepts</b>. Its predictive signal is
+          <b>distributional node-attribute</b> — which concepts appear and how the respondent feels about them —
+          and it is <b>conceptual, not lexical</b> (B2). On a lexically-non-obvious, independently-labelled target,
+          these attributes carry signal flat text cannot recover.
+        </p>
+      </div>
+      <div class="card" style="margin-top:0;border-left:3px solid var(--fail)">
+        <div class="card-label" style="color:var(--fail)">What it is NOT</div>
+        <p style="font-size:15px;color:var(--ink2);line-height:1.5">
+          <b>Relational / topological.</b> How concepts wire together adds nothing: endpoint-aware conflict
+          structure fails net of circularity (B1), and a per-relation GNN with extra capacity cannot beat untyped
+          wiring (RGCN). The relational thread is closed — falsified on evidence, not just argument.
+        </p>
+      </div>
+    </div>
+
+    <div class="callout verdict">
+      <div class="callout-k">Three independent angles, one direction</div>
+      <p>
+        <b>B1</b> (endpoint-aware features) · <b>B2</b> (lexical control) · <b>RGCN</b> (per-relation encoder) all confirm
+        ADR-0006. The most important moment was catching B1's false PASS: a naive pipeline would have shipped
+        "+0.042, p&lt;0.05, relational confirmed." The discipline of testing against the strongest baseline and
+        decomposing for circularity is what separated a finding from a tautology. A null this thoroughly
+        triangulated is a strong, defensible result — not a disappointment.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <span>cdt-graph-modality · v4 relational last-look · ADR-0007</span>
+    <span>10 seeds (42–51) · class-weighted · v4_think · 2026-06-15</span>
+  </footer>
+
+</div>
+</body>
+</html>
