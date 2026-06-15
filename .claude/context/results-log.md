@@ -1105,3 +1105,57 @@ Identical conclusions to the v3 runs, now on one consistent corpus — and **cle
 The "structurally distinct modality" claim holds in the **distributional** sense only, on a
 single v4 corpus, with the circularity (independent labels) and lexical confound (non-obvious
 target) both controlled. This is the project's defensible end-state result.
+
+### B2 — lexical-vs-conceptual probe (v4) — `results/method-review/label_lexical_probe_v4/`
+
+label_bag on FREETEXT labels (0.403, CI [0.378, 0.427]) ≈ label_bag on CANONICAL labels (0.398,
+CI [0.371, 0.425]); paired Δ(FREETEXT−CANON) = +0.0046, CI [−0.0094, +0.0187] spans 0 →
+the distributional node-attribute signal identified above is **conceptual / synonym-invariant**,
+not surface-lexical wording (canonicalisation neither helps nor hurts).
+
+## Relational last-look (v4) — ADR-0007 — distributional verdict confirmed
+
+Pre-scoped retest of the relational hypothesis (epic `graph-modality-yki`), guarded against
+p-hacking by a decision gate (escalate to RGCN only if the cheap tests are null). All on
+v4_think, `stance_ambivalence`, 10 seeds 42–51, class-weighted, paired.
+
+### B1 — endpoint-aware CONFLICTS_WITH features — `results/method-review/conflicts_edge_corrective_v4/`
+Conflict edges are 425/425 Construct–Construct (never Stance–Stance), sparse (~0.34/graph, 880
+graphs have zero). Endpoint-valence-aware feature = conflict edge joining two Constructs of
+opposite dominant stance valence (valence via Stance--EXPRESSED_VIA-->Construct).
+
+Corrective contrasts vs the **full 30-dim stats** baseline (LR, stats30-alone = 0.386 under this
+probe — the 0.433 elsewhere used a different classifier; not paired-comparable):
+| contrast | Δ | CI | verdict |
+|---|---|---|---|
+| stats30 + conflict4 vs stats30 | +0.0249 | [0.003, 0.047] | PASS |
+| stats30 + n_conflict_edges(count) vs stats30 | +0.0275 | [0.007, 0.048] | PASS — drives the gain |
+| stats30 + n_opp_valence_conflicts(relational) vs stats30 | +0.0098 | [0.001, 0.019] | **FAIL** (<0.01) |
+| relational vs count | −0.0177 | [−0.035, −0.0001] | relational **worse** than count |
+
+The only qualifying gain is the **near-circular raw conflict count** (a count of conflict edges
+predicting "ambivalence" ≈ measuring the label twice). The genuinely relational opposite-valence
+feature is sub-threshold and worse than the count → relational structure adds nothing net of
+circularity. (NB: B1's first pass PASSed vs a thin 9-dim valence baseline, +0.042 — a
+thin-baseline artifact corrected here.)
+
+### RGCN (Tier C) — `results/method-review/rgcn_edge_v4/`
+Per-relation RGCNConv (6 relations) added as a 4th arm to the `h_edge.py` structure-only ladder
+(untyped/typed/rgcn trained identically, same capacity/objective/protocol/splits).
+| contrast | Δ | CI | verdict |
+|---|---|---|---|
+| **(a) rgcn − untyped** (THE relational test) | +0.0234 | [−0.0057, +0.0526] | **FAIL** (spans 0) |
+| (b) rgcn − typed | +0.0241 | [+0.0010, +0.0471] | PASS (marginal; GINE underperforms) |
+| typed − untyped (context) | −0.0006 | [−0.019, +0.018] | FAIL |
+| untyped − histogram (context) | −0.0035 | [−0.029, +0.022] | FAIL |
+
+Absolute arm macro-F1 (chance 0.269): no_edges 0.278 / untyped 0.274 / typed 0.274 / rgcn 0.298
+— all near chance. Param counts: untyped 166,784 / typed 168,611 / rgcn 239,488. RGCN has MORE
+capacity than untyped yet does not beat it → a loss-with-more-capacity, the strongest form of
+the null.
+
+### Verdict
+Three independent angles (endpoint-aware conflict features, lexical control B2, per-relation
+RGCN) **all confirm** the ADR-0006 distributional verdict: the graph modality's signal is
+distributional node-attribute (stance valence / concept-label semantics, conceptual not
+lexical), **not relational/topological**. The relational thread is closed (ADR-0007).

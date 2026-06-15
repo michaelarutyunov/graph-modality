@@ -38,7 +38,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from torch_geometric.loader import DataLoader
-from torch_geometric.nn import GINConv, GINEConv, global_mean_pool
+from torch_geometric.nn import GINConv, GINEConv, RGCNConv, global_mean_pool
 
 from s4_encoding.graph_dataset import RELATIONS, FeatureMode, GraphDataset
 
@@ -75,6 +75,11 @@ V4_SO_ENCODER_PATH = CACHE_DIR / "gin_encoder_v4_structure_only.pt"
 V4_SO_CURVES_PATH = CACHE_DIR / "gin_autoencoder_curves_v4_structure_only.png"
 V4_SO_EMBEDDING_CACHE = CACHE_DIR / "gin_embeddings_v4_structure_only.npy"
 V4_SO_ID_CACHE = CACHE_DIR / "gin_embedding_ids_v4_structure_only.json"
+# v4_think RGCN (per-relation-weighted, edge-type-aware) — Tier C confirmatory (621)
+V4_RGCN_ENCODER_PATH = CACHE_DIR / "rgcn_encoder_v4_think.pt"
+V4_RGCN_CURVES_PATH = CACHE_DIR / "rgcn_autoencoder_curves_v4_think.png"
+V4_RGCN_EMBEDDING_CACHE = CACHE_DIR / "gin_embeddings_v4_rgcn.npy"
+V4_RGCN_ID_CACHE = CACHE_DIR / "gin_embeddings_v4_rgcn_ids.json"
 
 
 def _encoder_path(label_source: str, feature_mode: FeatureMode = "full") -> Path:
@@ -264,6 +269,81 @@ class GINEAutoencoder(nn.Module):
     def forward(self, data) -> torch.Tensor:
         """Produce node type logits for all nodes in the batch."""
         _graph_emb, node_emb = self.encoder(data.x, data.edge_index, data.edge_attr, data.batch)
+        return self.node_type_head(node_emb)
+
+
+def _edge_type_from_attr(edge_attr: torch.Tensor) -> torch.Tensor:
+    """Map the 6-dim relation one-hot edge_attr to per-edge relation indices.
+
+    ``edge_type[i] = argmax(edge_attr[i])`` over the RELATIONS ordering
+    (SERVES, EXPRESSED_VIA, MODULATED_BY, CONFLICTS_WITH, SUBSUMES, IMPLIES).
+    Handles the empty-edge case (returns an empty long tensor).
+    """
+    if edge_attr.numel() == 0:
+        return torch.zeros(0, dtype=torch.long, device=edge_attr.device)
+    return edge_attr.argmax(dim=1).long()
+
+
+class RGCNEncoder(nn.Module):
+    """Target-agnostic RGCN encoder producing 128-dim graph embeddings.
+
+    Like GINEEncoder but uses ``RGCNConv`` with a DISTINCT weight matrix per
+    relation type (num_relations=6) rather than GINEConv's single additive edge
+    projection. Per-relation typing is the stronger edge-type instrument the
+    Tier-C confirmatory test (bead 621) needs. Depth/width match the existing
+    GIN/GINE structure_only encoders (in->256->128) so a win reflects relational
+    information, not parameter count.
+    """
+
+    def __init__(
+        self,
+        in_channels: int = IN_CHANNELS_STRUCTURE_ONLY,
+        hidden: int = HIDDEN_DIM,
+        out_channels: int = OUT_CHANNELS,
+        num_relations: int = EDGE_DIM,
+    ):
+        super().__init__()
+        self.conv1 = RGCNConv(in_channels, hidden, num_relations=num_relations)
+        self.bn1 = nn.BatchNorm1d(hidden)
+        self.conv2 = RGCNConv(hidden, out_channels, num_relations=num_relations)
+        self.bn2 = nn.BatchNorm1d(out_channels)
+
+    def forward(
+        self,
+        x: torch.Tensor,
+        edge_index: torch.Tensor,
+        edge_type: torch.Tensor,
+        batch: torch.Tensor,
+    ) -> tuple[torch.Tensor, torch.Tensor]:
+        """Forward pass returning both per-node and graph-level embeddings."""
+        h = F.relu(self.bn1(self.conv1(x, edge_index, edge_type)))
+        node_emb = F.relu(self.bn2(self.conv2(h, edge_index, edge_type)))
+        graph_emb = global_mean_pool(node_emb, batch)
+        return graph_emb, node_emb
+
+
+class RGCNAutoencoder(nn.Module):
+    """Self-supervised RGCN: encode per-relation typed structure, reconstruct types.
+
+    Same masked-free node-type reconstruction objective as ``GINAutoencoder`` /
+    ``GINEAutoencoder`` (the objective the untyped/typed structure_only edge-axis
+    arms use), but message passing uses per-relation weight matrices via RGCNConv.
+    The edge type index is ``argmax`` of the 6-dim relation one-hot ``edge_attr``.
+    """
+
+    def __init__(
+        self,
+        in_channels: int = IN_CHANNELS_STRUCTURE_ONLY,
+        num_relations: int = EDGE_DIM,
+    ):
+        super().__init__()
+        self.encoder = RGCNEncoder(in_channels=in_channels, num_relations=num_relations)
+        self.node_type_head = nn.Linear(OUT_CHANNELS, N_NODE_TYPES)
+
+    def forward(self, data) -> torch.Tensor:
+        """Produce node type logits for all nodes in the batch."""
+        edge_type = _edge_type_from_attr(data.edge_attr)
+        _graph_emb, node_emb = self.encoder(data.x, data.edge_index, edge_type, data.batch)
         return self.node_type_head(node_emb)
 
 
@@ -988,6 +1068,210 @@ def encode_graphs_gine(
 
 
 # ═══════════════════════════════════════════════════════════════════════════════
+# RGCN (per-relation-weighted, edge-type-aware) — v4_think graphs (Tier C, 621)
+# ═══════════════════════════════════════════════════════════════════════════════
+
+
+def train_rgcn_autoencoder(
+    graph_dir: Path | None = None,
+    max_epochs: int = MAX_EPOCHS,
+    early_stopping_patience: int = EARLY_STOPPING_PATIENCE,
+    batch_size: int = BATCH_SIZE,
+    seed: int = 42,
+) -> dict:
+    """Train RGCN autoencoder on v4_think graphs (structure_only, per-relation typed).
+
+    Uses ``RGCNConv`` with ``num_relations=6`` (a distinct weight matrix per
+    relation) and the SAME unmasked node-type reconstruction objective as the
+    untyped GIN / typed GINE structure_only encoders, so the resulting frozen
+    embeddings are capacity-/objective-/feature-matched to those arms. Node
+    features are structure_only (5-d: type one-hot + degree). Edge type index =
+    ``argmax`` of the 6-dim relation one-hot.
+
+    Returns:
+        Dictionary with best_loss, best_epoch, final_accuracy, epochs_run,
+        train_losses, train_accs, n_params.
+    """
+    device = torch.device("cpu")
+    torch.manual_seed(seed)
+    print(f"Training RGCN autoencoder on device: {device} (seed={seed})")
+    print(f"Graph dir: {graph_dir or V4_FREE_TEXT_DIR}")
+    print("Node features: structure_only (5-d)")
+    print(f"Relations: {EDGE_DIM} (per-relation weight matrices)")
+
+    if graph_dir is None:
+        graph_dir = V4_FREE_TEXT_DIR
+
+    graph_paths = _load_all_graph_paths(graph_dir)
+    print(f"Loading {len(graph_paths)} graphs for self-supervised training...")
+    data_list = _precompute_graph_data(graph_paths, feature_mode="structure_only")
+
+    loader = DataLoader(data_list, batch_size=batch_size, shuffle=True)
+    print(f"DataLoader created with {len(loader)} batches (batch_size={batch_size})")
+
+    model = RGCNAutoencoder(in_channels=IN_CHANNELS_STRUCTURE_ONLY, num_relations=EDGE_DIM).to(
+        device
+    )
+    n_params = sum(p.numel() for p in model.encoder.parameters())
+    print(f"Encoder parameters: {n_params:,}")
+
+    criterion = nn.CrossEntropyLoss()
+    optimizer = torch.optim.Adam(model.parameters(), lr=LR, weight_decay=WEIGHT_DECAY)
+    scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(
+        optimizer,
+        mode="min",
+        patience=SCHEDULER_PATIENCE,
+        factor=SCHEDULER_FACTOR,
+    )
+
+    best_loss = float("inf")
+    best_epoch = 0
+    epochs_no_improve = 0
+    train_losses: list[float] = []
+    train_accs: list[float] = []
+
+    for epoch in range(1, max_epochs + 1):
+        model.train()
+        epoch_loss = 0.0
+        epoch_acc = 0.0
+        total_nodes = 0
+        n_batches = 0
+
+        for batch in loader:
+            batch = batch.to(device)
+            node_labels = _get_node_type_labels(batch)
+
+            optimizer.zero_grad()
+            logits = model(batch)
+            loss = criterion(logits, node_labels)
+            loss.backward()
+            optimizer.step()
+
+            epoch_loss += loss.item()
+            epoch_acc += _node_type_accuracy(logits, node_labels) * batch.num_nodes
+            total_nodes += int(batch.num_nodes)
+            n_batches += 1
+
+        avg_loss = epoch_loss / max(n_batches, 1)
+        avg_acc = epoch_acc / max(total_nodes, 1)
+
+        train_losses.append(avg_loss)
+        train_accs.append(avg_acc)
+
+        scheduler.step(avg_loss)
+
+        improved = avg_loss < best_loss
+        if improved:
+            best_loss = avg_loss
+            best_epoch = epoch
+            epochs_no_improve = 0
+            CACHE_DIR.mkdir(parents=True, exist_ok=True)
+            torch.save(model.encoder.state_dict(), V4_RGCN_ENCODER_PATH)
+            mark = "* best"
+        else:
+            epochs_no_improve += 1
+            mark = f"(no improve {epochs_no_improve}/{early_stopping_patience})"
+
+        print(f"  Epoch {epoch}: loss={avg_loss:.4f} acc={avg_acc:.4f} {mark}")
+
+        if epochs_no_improve >= early_stopping_patience:
+            print(f"Early stopping at epoch {epoch}")
+            break
+
+    _plot_training_curves(train_losses, train_accs, V4_RGCN_CURVES_PATH)
+
+    print("\nRGCN autoencoder training complete.")
+    print(f"  Best loss: {best_loss:.4f} at epoch {best_epoch}")
+    print(f"  Final node type accuracy: {train_accs[-1]:.4f}")
+    print(f"  Epochs run: {len(train_losses)}")
+    print(f"  Encoder saved to: {V4_RGCN_ENCODER_PATH}")
+
+    return {
+        "best_loss": best_loss,
+        "best_epoch": best_epoch,
+        "final_accuracy": train_accs[-1],
+        "epochs_run": len(train_losses),
+        "train_losses": train_losses,
+        "train_accs": train_accs,
+        "n_params": n_params,
+    }
+
+
+def encode_graphs_rgcn(
+    graph_dir: Path | None = None,
+    encoder_weights: Path | None = None,
+    force: bool = False,
+) -> tuple[np.ndarray, list[str]]:
+    """Produce 128-dim frozen RGCN embeddings from v4_think graphs.
+
+    Cache-first: loads from ``V4_RGCN_EMBEDDING_CACHE`` unless ``force=True``.
+
+    Returns:
+        (embeddings, transcript_ids) — aligned arrays.
+    """
+    if graph_dir is None:
+        graph_dir = V4_FREE_TEXT_DIR
+    if encoder_weights is None:
+        encoder_weights = V4_RGCN_ENCODER_PATH
+
+    if V4_RGCN_EMBEDDING_CACHE.exists() and V4_RGCN_ID_CACHE.exists() and not force:
+        print("loading cached RGCN embeddings (v4_think, structure_only)")
+        return np.load(V4_RGCN_EMBEDDING_CACHE), json.loads(
+            V4_RGCN_ID_CACHE.read_text(encoding="utf-8")
+        )
+
+    if not encoder_weights.exists():
+        raise FileNotFoundError(
+            f"RGCN encoder weights not found at {encoder_weights}. "
+            "Run 'uv run python s4_encoding/graph_gnn_encoder.py --encoder rgcn' first."
+        )
+
+    device = torch.device("cpu")
+    encoder = RGCNEncoder(in_channels=IN_CHANNELS_STRUCTURE_ONLY, num_relations=EDGE_DIM).to(device)
+    encoder.load_state_dict(torch.load(encoder_weights, map_location=device, weights_only=True))
+    encoder.eval()
+    print(f"Loaded frozen RGCN encoder from {encoder_weights}")
+
+    graph_paths = sorted(graph_dir.glob("*.json"))
+    if not graph_paths:
+        raise FileNotFoundError(f"No graph files found in {graph_dir}")
+
+    dummy_labels = [-1] * len(graph_paths)
+    dataset = GraphDataset(graph_paths, dummy_labels, feature_mode="structure_only")
+    print(f"Pre-loading {len(dataset)} graphs...")
+    data_list = [dataset[i] for i in range(len(dataset))]
+
+    loader = DataLoader(data_list, batch_size=BATCH_SIZE, shuffle=False)
+    all_embeddings: list[np.ndarray] = []
+    all_ids: list[str] = []
+
+    print(f"Encoding {len(data_list)} graphs in batches of {BATCH_SIZE}...")
+    with torch.no_grad():
+        for batch in loader:
+            edge_type = _edge_type_from_attr(batch.edge_attr.to(device))
+            graph_emb, _node_emb = encoder(
+                batch.x.to(device),
+                batch.edge_index.to(device),
+                edge_type,
+                batch.batch.to(device),
+            )
+            all_embeddings.append(graph_emb.cpu().numpy())
+            all_ids.extend(batch.transcript_id)
+
+    result = np.concatenate(all_embeddings, axis=0)
+
+    CACHE_DIR.mkdir(parents=True, exist_ok=True)
+    np.save(V4_RGCN_EMBEDDING_CACHE, result)
+    V4_RGCN_ID_CACHE.write_text(json.dumps(all_ids, ensure_ascii=False), encoding="utf-8")
+    print(
+        f"cached {len(all_ids)} RGCN embeddings "
+        f"({result.shape[1]}d, v4_think, structure_only) -> {V4_RGCN_EMBEDDING_CACHE}"
+    )
+
+    return result, all_ids
+
+
+# ═══════════════════════════════════════════════════════════════════════════════
 # CLI
 # ═══════════════════════════════════════════════════════════════════════════════
 
@@ -996,11 +1280,12 @@ if __name__ == "__main__":
     parser.add_argument(
         "--encoder",
         type=str,
-        choices=["gin", "gine"],
+        choices=["gin", "gine", "rgcn"],
         default="gin",
         help="Encoder architecture (default: gin). "
         "'gine' uses GINEConv (edge-type-aware) with v4_think graphs "
-        "and structure_only features.",
+        "and structure_only features. 'rgcn' uses RGCNConv (per-relation "
+        "weight matrices) with v4_think graphs and structure_only features.",
     )
     parser.add_argument(
         "--encode",
@@ -1051,6 +1336,13 @@ if __name__ == "__main__":
             print(f"Done. Shape: {embeddings.shape}, IDs: {len(ids)}")
         else:
             results = train_gine_autoencoder()
+            print(f"\nFinal node type reconstruction accuracy: {results['final_accuracy']:.4f}")
+    elif args.encoder == "rgcn":
+        if args.encode:
+            embeddings, ids = encode_graphs_rgcn(force=args.force)
+            print(f"Done. Shape: {embeddings.shape}, IDs: {len(ids)}")
+        else:
+            results = train_rgcn_autoencoder()
             print(f"\nFinal node type reconstruction accuracy: {results['final_accuracy']:.4f}")
     elif args.objective == "masked":
         if args.encode:

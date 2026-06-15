@@ -7,17 +7,25 @@ IMPLIES added to break v3 edge-type determinism, per ADR-0004). Because the node
 features carry no label semantics, a win here cannot be "pooled label text in
 disguise" (METHOD_REVIEW concerns #2/#4).
 
-Edge axis (3 rungs, capacity-matched via a fixed-capacity logistic probe):
+Edge axis (4 rungs, capacity-matched via a fixed-capacity logistic probe):
   - no_edges  : 11-dim bag-of-types histogram (node + edge-type frequencies +
                 mean degree). Captures type DISTRIBUTION, ZERO wiring.
   - untyped   : GINConv autoencoder → 128-d. Message passing over the adjacency
                 (which nodes connect) but edge-type-AGNOSTIC.
   - typed     : GINEConv autoencoder → 128-d. Same, but consumes the 6-dim
-                relation-type one-hot per edge.
+                relation-type one-hot per edge (additive edge projection).
+  - rgcn      : RGCNConv autoencoder → 128-d. Per-relation weight matrices
+                (num_relations=6) — the stronger edge-type instrument (Tier C
+                confirmatory, bead 621).
 
 Primary criterion (the H_edge hypothesis):
     typed - untyped : does edge TYPE add over untyped wiring? (PASS = CI excludes
     0 AND mean delta >= +0.01)
+Tier-C confirmatory contrasts (bead 621):
+    rgcn - untyped : does per-relation typing add over untyped wiring? (THE
+        relational test; PASS = CI excludes 0 AND mean delta >= +0.01)
+    rgcn - typed   : does per-relation weighting beat GINEConv's additive edge
+        features?
 Secondary:
     untyped - histogram : does wiring of any kind add over the distributional null?
 
@@ -40,7 +48,15 @@ from scipy import stats
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import f1_score
 
-from s4_encoding.graph_gnn_encoder import V4_FREE_TEXT_DIR, encode_graphs_gine
+from s4_encoding.graph_gnn_encoder import (
+    IN_CHANNELS_STRUCTURE_ONLY,
+    V4_FREE_TEXT_DIR,
+    GINEEncoder,
+    GINEncoder,
+    RGCNEncoder,
+    encode_graphs_gine,
+    encode_graphs_rgcn,
+)
 from s5_classification.null_ladder import _class_names, build_histogram_features
 from s5_classification.repeated_eval import make_split
 from s5_classification.structure_only_probe import (
@@ -52,8 +68,9 @@ from s5_classification.structure_only_probe import (
 )
 
 SEEDS = list(range(42, 52))
-ARMS = ["no_edges", "untyped", "typed"]
+ARMS = ["no_edges", "untyped", "typed", "rgcn"]
 OUT_DIR = Path("cache/h_edge")
+RGCN_OUT_DIR = Path("results/method-review/rgcn_edge_v4")
 
 
 def _weighted_logreg_f1(
@@ -101,20 +118,48 @@ def run(target: str) -> dict:
     print("Training + encoding untyped GINConv (structure-only, v4_think)...")
     graphs = _load_graphs()
     untyped_ids = [p.stem for p in sorted(V4_FREE_TEXT_DIR.glob("*.json"))]
-    untyped_embs = _encode(_train_gin(graphs, seed=42), graphs)
+    untyped_encoder = _train_gin(graphs, seed=42)
+    untyped_embs = _encode(untyped_encoder, graphs)
     untyped_idx = {tid: i for i, tid in enumerate(untyped_ids)}
+
+    print("Encoding RGCNConv embeddings (per-relation typed, cached)...")
+    rgcn_embs, rgcn_ids = encode_graphs_rgcn()
+    rgcn_idx = {tid: i for i, tid in enumerate(rgcn_ids)}
+
+    # ── Encoder parameter counts (capacity-match evidence) ──────────────────
+    # All three arms use structure_only (5-d) node features, matching the
+    # encoders actually trained/encoded above.
+    param_counts = {
+        "untyped": sum(
+            p.numel() for p in GINEncoder(in_channels=IN_CHANNELS_STRUCTURE_ONLY).parameters()
+        ),
+        "typed": sum(p.numel() for p in GINEEncoder().parameters()),
+        "rgcn": sum(p.numel() for p in RGCNEncoder().parameters()),
+    }
+    print(
+        f"Encoder params — untyped(GIN)={param_counts['untyped']:,} "
+        f"typed(GINE)={param_counts['typed']:,} rgcn(RGCN)={param_counts['rgcn']:,}"
+    )
 
     feats = {
         "no_edges": (hist_feats, hist_idx),
         "untyped": (untyped_embs, untyped_idx),
         "typed": (typed_embs, typed_idx),
+        "rgcn": (rgcn_embs, rgcn_idx),
     }
 
     ids_to_labels = _load_labels(target)
     n_classes = len(_class_names(target))
     per_seed: dict[str, list[float]] = {a: [] for a in ARMS}
     per_class: dict[str, list[np.ndarray]] = {a: [] for a in ARMS}
-    paired = {"typed_minus_untyped": [], "untyped_minus_histogram": [], "typed_minus_histogram": []}
+    paired: dict[str, list[float]] = {
+        "typed_minus_untyped": [],
+        "untyped_minus_histogram": [],
+        "typed_minus_histogram": [],
+        "rgcn_minus_untyped": [],
+        "rgcn_minus_typed": [],
+    }
+    runs: list[dict] = []
 
     for seed in SEEDS:
         train_ids, _val_ids, test_ids = make_split(target, seed)
@@ -138,9 +183,21 @@ def run(target: str) -> dict:
         paired["typed_minus_untyped"].append(f1s["typed"] - f1s["untyped"])
         paired["untyped_minus_histogram"].append(f1s["untyped"] - f1s["no_edges"])
         paired["typed_minus_histogram"].append(f1s["typed"] - f1s["no_edges"])
+        paired["rgcn_minus_untyped"].append(f1s["rgcn"] - f1s["untyped"])
+        paired["rgcn_minus_typed"].append(f1s["rgcn"] - f1s["typed"])
+        runs.append(
+            {
+                "seed": seed,
+                "macro_f1": dict(f1s),
+                "rgcn_minus_untyped": f1s["rgcn"] - f1s["untyped"],
+                "rgcn_minus_typed": f1s["rgcn"] - f1s["typed"],
+                "typed_minus_untyped": f1s["typed"] - f1s["untyped"],
+                "untyped_minus_histogram": f1s["untyped"] - f1s["no_edges"],
+            }
+        )
         print(
             f"  seed {seed}: hist={f1s['no_edges']:.4f} untyped={f1s['untyped']:.4f} "
-            f"typed={f1s['typed']:.4f}"
+            f"typed={f1s['typed']:.4f} rgcn={f1s['rgcn']:.4f}"
         )
 
     # ── Aggregate ──────────────────────────────────────────────────────────
@@ -161,6 +218,7 @@ def run(target: str) -> dict:
         deltas_summary[name] = {"mean_delta": m, "ci95": [lo, hi], "verdict": verdict}
 
     primary = deltas_summary["typed_minus_untyped"]["verdict"]
+    rgcn_relational_verdict = deltas_summary["rgcn_minus_untyped"]["verdict"]
 
     payload = {
         "target": target,
@@ -168,9 +226,11 @@ def run(target: str) -> dict:
         "node_features": "structure_only (type one-hot + degree, 5-d) — no label semantics",
         "seeds": SEEDS,
         "chance_baseline": chance,
+        "encoder_param_counts": param_counts,
         "arms": arms_summary,
         "paired_deltas": deltas_summary,
         "primary_verdict_edge_type": primary,
+        "rgcn_relational_verdict": rgcn_relational_verdict,
     }
 
     OUT_DIR.mkdir(parents=True, exist_ok=True)
@@ -178,6 +238,16 @@ def run(target: str) -> dict:
         json.dumps(payload, indent=2, ensure_ascii=False), encoding="utf-8"
     )
     print(f"\nResults saved to {OUT_DIR / f'{target}.json'}")
+
+    # ── Tier-C confirmatory outputs (bead 621) ──────────────────────────────
+    RGCN_OUT_DIR.mkdir(parents=True, exist_ok=True)
+    with (RGCN_OUT_DIR / "runs.jsonl").open("w", encoding="utf-8") as fh:
+        for r in runs:
+            fh.write(json.dumps(r, ensure_ascii=False) + "\n")
+    (RGCN_OUT_DIR / "summary.json").write_text(
+        json.dumps(payload, indent=2, ensure_ascii=False), encoding="utf-8"
+    )
+    print(f"Tier-C results saved to {RGCN_OUT_DIR}/ (runs.jsonl + summary.json)")
     return payload
 
 
@@ -199,10 +269,14 @@ def main() -> None:
             f"  {arm:10s} F1={a['mean_macro_f1']:.4f} CI={a['ci95']} "
             f"d_chance={a['delta_vs_chance']:+.4f}"
         )
+    print("Encoder param counts (capacity-match evidence):")
+    for arm, n in p["encoder_param_counts"].items():
+        print(f"  {arm:10s} {n:,}")
     print("Paired:")
     for name, d in p["paired_deltas"].items():
         print(f"  {name:26s} Δ={d['mean_delta']:+.4f} CI={d['ci95']} {d['verdict']}")
     print(f"\nPRIMARY (edge-type, typed>untyped): {p['primary_verdict_edge_type']}")
+    print(f"TIER-C RELATIONAL (rgcn>untyped):   {p['rgcn_relational_verdict']}")
 
 
 if __name__ == "__main__":

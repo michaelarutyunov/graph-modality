@@ -20,35 +20,56 @@ from sentence_transformers import SentenceTransformer
 
 # v4 corpus (P6.6): all Phase 6 tests run on v4_think only.
 CANONICAL_DIR = Path("s1_data/graphs/v4_think/canonical")
+FREE_TEXT_DIR = Path("s1_data/graphs/v4_think/free_text")
 CACHE_DIR = Path("cache")
 EMBEDDING_CACHE = CACHE_DIR / "label_bag_embeddings.npy"
 ID_CACHE = CACHE_DIR / "label_bag_embedding_ids.json"
+EMBEDDING_CACHE_FREE_TEXT = CACHE_DIR / "label_bag_embeddings_free_text.npy"
+ID_CACHE_FREE_TEXT = CACHE_DIR / "label_bag_embedding_ids_free_text.json"
 
 LABEL_ENCODER_NAME = "all-MiniLM-L6-v2"
 EMBEDDING_DIM = 384
+
+# Maps --label-source values to (default graph dir, embedding cache, id cache).
+LABEL_SOURCE_PATHS: dict[str, tuple[Path, Path, Path]] = {
+    "canonical": (CANONICAL_DIR, EMBEDDING_CACHE, ID_CACHE),
+    "free_text": (FREE_TEXT_DIR, EMBEDDING_CACHE_FREE_TEXT, ID_CACHE_FREE_TEXT),
+}
 
 
 def encode_label_bag(
     graph_dir: Path | None = None,
     force: bool = False,
+    label_source: str = "canonical",
 ) -> tuple[np.ndarray, list[str]]:
-    """Produce 384-dim mean-pooled label-bag embeddings for all canonical graphs.
+    """Produce 384-dim mean-pooled label-bag embeddings for all graphs.
 
     Cache-first: loads from cache unless ``force=True``. Caching is only used for
-    the default ``CANONICAL_DIR`` graph source — a custom ``graph_dir`` (e.g. in
+    the default graph source for ``label_source`` — a custom ``graph_dir`` (e.g. in
     tests) is always recomputed and never written to the shared cache.
+
+    Args:
+        graph_dir: Override the default graph directory. If set, caching is
+            disabled and results are always recomputed.
+        force: Re-encode even if cache exists.
+        label_source: ``"canonical"`` (default) or ``"free_text"`` — selects the
+            default graph directory and cache paths when ``graph_dir`` is None.
 
     Returns:
         (embeddings, transcript_ids) — aligned arrays.
     """
+    if label_source not in LABEL_SOURCE_PATHS:
+        raise ValueError(f"Unknown label_source: {label_source!r}")
+    default_dir, embedding_cache, id_cache = LABEL_SOURCE_PATHS[label_source]
+
     use_cache = graph_dir is None
 
-    if use_cache and EMBEDDING_CACHE.exists() and ID_CACHE.exists() and not force:
-        print("loading cached label-bag embeddings")
-        return np.load(EMBEDDING_CACHE), json.loads(ID_CACHE.read_text(encoding="utf-8"))
+    if use_cache and embedding_cache.exists() and id_cache.exists() and not force:
+        print(f"loading cached label-bag embeddings ({label_source})")
+        return np.load(embedding_cache), json.loads(id_cache.read_text(encoding="utf-8"))
 
     if graph_dir is None:
-        graph_dir = CANONICAL_DIR
+        graph_dir = default_dir
 
     graph_paths = sorted(graph_dir.glob("*.json"))
     if not graph_paths:
@@ -78,10 +99,10 @@ def encode_label_bag(
 
     if use_cache:
         CACHE_DIR.mkdir(parents=True, exist_ok=True)
-        np.save(EMBEDDING_CACHE, result)
-        ID_CACHE.write_text(json.dumps(all_ids, ensure_ascii=False), encoding="utf-8")
+        np.save(embedding_cache, result)
+        id_cache.write_text(json.dumps(all_ids, ensure_ascii=False), encoding="utf-8")
         print(
-            f"cached {len(all_ids)} label-bag embeddings ({result.shape[1]}d) -> {EMBEDDING_CACHE}"
+            f"cached {len(all_ids)} label-bag embeddings ({result.shape[1]}d) -> {embedding_cache}"
         )
 
     return result, all_ids
@@ -94,7 +115,13 @@ if __name__ == "__main__":
         action="store_true",
         help="Re-encode even if cache exists.",
     )
+    parser.add_argument(
+        "--label-source",
+        choices=["canonical", "free_text"],
+        default="canonical",
+        help="Use canonical (default) or free-text node labels.",
+    )
     args = parser.parse_args()
 
-    embeddings, ids = encode_label_bag(force=args.force)
+    embeddings, ids = encode_label_bag(force=args.force, label_source=args.label_source)
     print(f"Done. Shape: {embeddings.shape}, IDs: {len(ids)}")
