@@ -1159,3 +1159,47 @@ Three independent angles (endpoint-aware conflict features, lexical control B2, 
 RGCN) **all confirm** the ADR-0006 distributional verdict: the graph modality's signal is
 distributional node-attribute (stance valence / concept-label semantics, conceptual not
 lexical), **not relational/topological**. The relational thread is closed (ADR-0007).
+
+## Geometry RSA / Mantel test (v4) — `results/method_review/geometry_rsa_v4/`
+
+Pre-registered test of whether the v4 graph-statistic representation is geometrically
+distinct from the text representation, independent of any behavioural prediction target.
+All 1,250 transcripts, human-only SBERT text embeddings, 30-dim graph statistics, and
+label-bag embeddings; distance = cosine (graph stats z-scored per feature); Spearman
+Mantel with 9,999 permutations, seed=42.
+
+### Headline Mantel comparisons
+| comparison | r | p |
+|---|---|---|
+| text ↔ graph_stats | **0.0126** | 0.0001 |
+| text ↔ label_bag | 0.2696 | 0.0001 |
+
+### Anti-noise gates
+| gate | result | pass? |
+|---|---|---|
+| Random-embedding null (100 draws, 95th pct) | graph-vs-text r = 0.0126, null 95th pct = 0.0009 | **PASS** |
+| Split-half reliability (100 random 15/15 feature splits) | mean r = **0.4883** | **FAIL** (threshold = 0.50) |
+
+### Partial Mantel anchors (graph-unique structure beyond text)
+| anchor | n | r(graph, anchor \| text) | p | r(text, anchor \| graph) | p |
+|---|---|---|---|---|---|
+| cohort | 1250 | 0.0166 | 0.0001 | 0.3269 | 0.0001 |
+| stance_ambivalence | 1250 | 0.0314 | 0.0001 | 0.0014 | 0.1069 |
+| ai_adoption | 1224 | 0.0243 | 0.0001 | 0.0083 | 0.0001 |
+
+### Pre-registered verdict
+- **DISTINCT** (text↔graph r < 0.7): **True**
+- **NOT_NOISE** (random null pass AND split-half r ≥ 0.5): **False** — split-half r = 0.4883 just misses the 0.50 threshold
+- **MEANINGFUL** (graph|text partial r > 0 with p < 0.05 for ≥1 anchor): **True** (all three anchors positive and significant)
+- **OVERALL** (all three): **False**
+
+### Interpretation
+The text and graph-statistic similarity geometries are **decoupled** (r ≈ 0.01), the graph
+geometry is clearly non-random relative to text, and it carries label-aligned structure that
+text does not fully explain.  However, the graph-statistic geometry is **just below the
+pre-registered reliability threshold** (split-half r = 0.488 vs 0.500), so the honest overall
+verdict is **DISTINCT-but-not-yet-trustworthy**.  This is consistent with the Phase 6
+predictive finding that graph stats add signal but the signal is distributional
+node-attribute rather than robust topology.  Outputs:
+`results/method_review/geometry_rsa_v4/20260615_143948/summary.json` and
+`disagreement_cases.md`.

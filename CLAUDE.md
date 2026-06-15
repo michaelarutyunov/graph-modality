@@ -158,6 +158,7 @@ uv run python s5_classification/ablation_run.py --target stance_ambivalence --ou
 uv run python s5_classification/baseline.py                          # Text-only LR baseline (convenience)
 uv run python s5_classification/analysis_feature_importance.py       # Permutation importance analysis
 uv run python s5_classification/analysis_stats.py                    # Stats-only per-class report
+PYTHONPATH=. uv run python s5_classification/analysis_geometry_rsa.py    # RSA/Mantel geometry test (v4)
 uv run marimo edit notebooks/01_extraction_review.py        # Graph inspection notebook
 uv run marimo edit notebooks/02_graph_exploration.py        # Cohort topology notebook
 uv run marimo edit notebooks/03_classification_results.py   # Results notebook
