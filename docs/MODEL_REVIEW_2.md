@@ -1,6 +1,7 @@
-# Model Review 2 — From "graphs as a modality" to a mechanism
+# Model Review 2 — From "graphs as a modality" to the human–AI delegation boundary
 
-**Status:** Proposal (pre-grounding-gate). No extraction authorised yet.
+**Status:** Proposal (construct-validation gate). Gate 0 (grounding read) PASSED with a reframe;
+next gate is the graph-free prevalence pass (Gate 1). No graph extraction authorised yet.
 **Date:** 2026-06-15
 **Author:** Michael (with Claude, brainstorming session)
 **Companion docs:** `MODEL_REVIEW_1.md` (round-1 adversarial review), `docs/method-review/00-evaluation-protocol.md` (10-seed protocol), ADR-0006 / ADR-0007 (Phase-6 verdict).
@@ -101,130 +102,179 @@ mattering." Tier 2 fail because they are "property of one thing."
 
 ---
 
-## 5. The chosen design — unified self-positioning ontology
+## 4.5 Empirical pre-tests (this session) — and how the construct evolved
 
-The two Tier-1 candidates are **not two questions**; they are facets of one causal structure:
+Two graph-free read-throughs of the transcripts (hand-coded by Claude; ~30 transcripts total,
+stratified 5/cohort each, two disjoint samples) were run *before* committing any extraction. They
+moved the design substantially:
 
-> AI **threatens** a *task* → that task is (tightly/loosely) **coupled** to *identity* → and the
-> *self* is positioned as **agent or patient** toward the AI.
+- **Gate 0 (grounding read, 15 transcripts).** The displacement-anxiety elements (threat,
+  identity-coupling, agency, felt-anxiety) are **genuinely in respondents' words, not
+  confabulated** (creativity_0025 is a textbook case). BUT: (a) **agency is near-constant** —
+  everyone is an actor in *how they use* the tool; (b) **threat, identity-coupling, and
+  felt-anxiety cluster in creatives** — the same cohort-leakage confound that killed `cohort`;
+  (c) the full anxious-displaced configuration looked **rare** (the ambivalence-`high` power
+  problem again).
+- **Coupling bake-off (fresh 15 transcripts).** Re-coded for three coupling-targets
+  (identity / competence / output) + agency. **Competence-coupling is the cross-cohort winner**
+  (10/15, all three cohorts), with real internal variance (*guard / develop / compensate*).
+  Identity-coupling is creative-skewed; agency is confirmed weak (constant for tool-use).
+  Reframing threat as **competence-erosion** (not job loss) makes it appear in scientists and
+  workforce too (science_0010: "without struggle it's difficult to retain… this kills creativity").
+- **Anthropic per-cohort objectives.** The interviewer probed creatives on *creativity*,
+  scientists on *trust/barriers*, workforce on *relationship/integration* — three surface
+  vocabularies for one underlying act. Trust / perceived value as *scalars* are Tier-2 (lexical →
+  text wins); as **task-conditional** patterns they are the behavioural surface of coupling.
 
-That composition **is** the AI-displacement-anxiety mechanism:
-**anxiety = threat × identity-coupling × low-agency** (a conjunction, not a sum).
+**Net evolution:** displacement-anxiety (identity, creative-skewed, low-power) → competence-coupling
+(cross-cohort) → **the human–AI delegation boundary** — the superordinate that is invariant to the
+interviewer's per-cohort protocol. That is the spine below.
 
-### 5.1 Theoretical grounding (not ad hoc)
+---
 
-- **Appraisal theory of stress** (Lazarus): threat appraisal is *multiplicative* —
-  relevance × controllability. Coupling = relevance; agency = controllability. Appraisal theory
-  *predicts the interaction form.* (Primary citation.)
-- **Means-end chain / laddering** (Gutman 1982): identity-task coupling is a ladder from task
-  (attribute) → identity (terminal value); coupling strength = ladder connectivity.
-- **Locus of control** (Rotter 1966): the agency axis.
+## 5. The chosen construct — the human–AI delegation boundary
 
-### 5.2 Ontology sketch (question-forced, single-purpose)
+The protocol-invariant phenomenon all three cohorts circle is **where the respondent draws the
+line between tasks they retain and tasks they cede to AI, and why.** Trust (scientists), ownership
+(creatives), and relationship (workforce) are three *dialects* describing the same partition.
+Naming the construct after any one dialect (e.g. "perceived reliability") re-imports that cohort's
+bias — and fails on the others (a creative can find AI fully reliable and still retain a task
+because it is *theirs*).
 
-- **Nodes:** Self · Identity/terminal-Value · Task/Activity · AI (with role).
-- **Edges (typed, directed):**
-  - Self —`IDENTIFIES_WITH`→ Task (coupling)
-  - Task —`SERVES`/`CONSTITUTES`→ Identity
-  - Self ↔ AI agency relation (`ACTS_ON` vs `IS_ACTED_ON_BY`)
-  - AI —`THREATENS`/`AUGMENTS`→ Task
-- **Three deterministic structural readouts** (computed, not separately labelled):
-  - *coupling* = path strength Task→Identity
-  - *agency* = direction of the Self↔AI relation
-  - *threat* = displacing AI→Task edge with negative valence
+### 5.1 Three-level model
 
-Keep the schema **minimal** — schema bloat is what destroys reliability. One phenomenon, the
-smallest ontology that expresses it.
+| Level | Construct | Nature |
+|---|---|---|
+| **Driver (latent)** | task ↔ competence / identity **coupling** | *why* a task is retained |
+| **Structure (observable)** | the **delegation boundary** — retained vs ceded task partition | *where / what* — the graph |
+| **Surface (cohort vocab)** | trust / ownership / relationship | *how they describe it* — not measured |
+
+Core hypothesis: **the coupling structure predicts where the delegation boundary falls** — and
+does so beyond a flat trust/sentiment score (the relational claim).
+
+### 5.2 Theoretical grounding (cohort-neutral, not ad hoc)
+
+- **Function allocation / levels of automation** (Sheridan & Verplank 1978; Parasuraman, Sheridan
+  & Wickens 2000): the science of which functions humans retain vs delegate to automation — the
+  delegation boundary itself, decades deep and occupation-neutral. (Primary anchor.)
+- **Means-end chain / laddering** (Gutman 1982): the coupling driver — task (attribute) →
+  competence/identity (terminal value).
+- **Appraisal theory** (Lazarus): retained ⇄ ceded reflects relevance × controllability — the
+  rationale for *why* the boundary sits where it does.
+
+### 5.3 Ontology sketch (question-forced, minimal — designed ONLY if Gate 1 passes)
+
+- **Nodes:** Self · Task/Activity · competence/identity Value · AI.
+- **Edges:** Task—`RETAINED_BY`→Self / Task—`CEDED_TO`→AI (the boundary); Task—`SERVES`→Value
+  (the coupling rationale).
+- **Readouts (computed, not separately labelled):** *delegation breadth* (ceded fraction);
+  *boundary–coupling alignment* (are retained tasks the competence/identity-coupled ones?).
+
+Keep it minimal — schema bloat destroys reliability.
 
 ---
 
 ## 6. How it will be tested (the validity design)
 
-**"One graph, two (or three) readouts" is not redundancy — it is a dissociation design.**
+The relational claim is: **the coupling structure predicts the delegation boundary beyond a flat
+trust/sentiment score.**
 
-### Part 1 — Convergent validity (per construct)
-Each structural readout is compared against an **independent holistic rating** of the same
-construct (ambivalence-style labeler that never sees the graph). Does the structure capture the
-construct at all?
+### Part 1 — Convergent validity
+The graph's structural readout of the delegation boundary (retained/ceded partition) matches an
+**independent holistic coding** of the same boundary (the graph-free labeler of Gate 1, which
+never sees the graph). Does the structure capture the construct at all?
 
-### Part 2 — Double dissociation (what a *difference* means)
-The readouts come from *different substructures*. Ablate:
-- remove Task↔Identity edges → coupling-prediction collapses, agency-prediction survives;
-- remove Self↔AI edges → agency-prediction collapses, coupling-prediction survives.
+### Part 2 — Discriminant / dissociation (what a *difference* means)
+Boundary-location and coupling-rationale live in *different substructures* (Task→Self/AI edges vs
+Task→Value edges). Ablating the coupling edges should degrade prediction of *why* tasks are
+retained while leaving *which* tasks are ceded recoverable, and vice versa. A crossing pattern
+proves the graph encodes **separable** information (Campbell & Fiske). **A difference is the
+positive result, not an embarrassment.**
 
-A crossing pattern proves the graph encodes **separable** constructs (Campbell & Fiske
-multitrait-multimethod logic; neuropsychological dissociation). **A difference is the positive
-result, not an embarrassment.** If the readouts do *not* dissociate, they are one construct →
-do not unify.
+### Part 3 — Relational payoff (where the graph beats text, for a stated reason)
+Test whether the **coupling structure predicts the delegation boundary** beyond (a) a flat
+**trust/sentiment score** and (b) a **matched-reasoning text baseline** (an LLM flat-summary
+embedding — the control rounds 1–2 lacked). Two people with the *same overall trust level* but
+*different boundary patterns* is exactly the case a scalar cannot represent and a graph can.
 
-### Part 3 — Compositional payoff (where the graph beats text, for a stated reason)
-Fit the **interaction** (threat × coupling × agency) to an **independent felt-anxiety outcome**
-and test whether it beats (a) an additive model and (b) a **matched-reasoning text baseline**
-(an LLM flat-summary embedding — the control round-1/2 lacked). The graph's irreducible
-contribution is the *explicit conjunction*; the win, if any, is **explicitness and
-sample-efficiency**, sharpest on the rare high-anxiety cell where a text model has too few
-examples to learn the interaction implicitly.
-
-### 6.1 The composite-coefficient trap (explicit)
-**Do not** fuse threat × coupling × agency into a "displacement coefficient" and call that the
-answer — that *defines the answer out of the inputs* (the `ai_adoption` circularity again, with
-no external criterion). The coefficient is the **estimated output** of the validated interaction
-test, never a constructed input.
+### 6.1 The composite trap (explicit)
+**Do not** fuse the readouts into a single "delegation index" and call it the answer — that
+*defines the answer out of the inputs* (the `ai_adoption` circularity, no external criterion). Any
+index is the **estimated output** of a validated test against an independent criterion, never a
+constructed input.
 
 ### 6.2 Guards
-- **Outcome independence:** the anxiety label rates *expressed affect/distress*, sourced
-  separately, and must be *conceptually downstream* (one can have all three structural conditions
-  and feel no anxiety — resigned/reframed/stoic — and vice versa). This separability is what
-  makes it a non-circular criterion. It is a **different** construct than `stance_ambivalence`
-  (valence-balance) → a fresh label is likely required.
-- **Circularity & reasoning-asymmetry both controlled** by independent labels + the
-  matched-reasoning text baseline.
+- **Independent outcome:** the delegation boundary is coded by a separate process (the Gate-1
+  labeler), never read off the graph.
+- **Circularity (coupling ⇄ boundary ⇄ trust):** often stated in one breath; operationalise
+  coupling from Task→Value structure and the boundary from explicit retain/cede statements, or
+  label them independently.
+- **Protocol confound:** trust / ownership / relationship are elicited *differently per cohort* —
+  measure the construct, not the dialect, and check boundary-talk *depth* for cohort skew (§7).
+- **Reasoning-asymmetry:** controlled by the matched-reasoning text baseline.
 
 ### 6.3 Decision tree (every branch is publishable)
-- **No dissociation** → one construct, no graph needed → stop.
-- **Dissociation but no interaction** → two genuinely separate questions that don't compose →
-  the unified ontology bought nothing → report; treat as separate descriptive constructs.
-- **Dissociation *and* interaction beats additive + text** → the unified ontology is
-  *theoretically earned* and the graph beats text *for a mechanistic reason* → the clean result.
+- **Boundary not codable / no variance** → stop (Gate 1 catches this first).
+- **Coupling does NOT predict boundary beyond sentiment** → the boundary is a scalar attitude →
+  distributional story, no graph needed.
+- **Coupling predicts boundary beyond sentiment AND matched-reasoning text** → the delegation
+  boundary is a genuine relational construct → the clean result.
 
 ---
 
 ## 7. High-level plan for Round 3
 
-> **GATE 0 (MANDATORY, before any extraction call): grounding read.**
-> Hand-read ~15 transcripts spanning cohorts; confirm that threat, identity-coupling,
-> self-positioning/agency, and felt-anxiety are **actually stated in respondents' own words**,
-> not confabulable by the LLM. **Kill/go decision.** If thin, no schema rescues it — stop here,
-> having spent an afternoon instead of an extraction budget.
+> **GATE 0 — grounding read (15 transcripts): ✅ PASSED, with reframe** (§4.5). The elements are in
+> the data; the construct evolved to the delegation boundary.
+>
+> **GATE 1 (NEXT, MANDATORY, graph-free): prevalence / codability pass.** An LLM coding pass over
+> raw human turns — **no graph, no ontology** — to confirm the delegation boundary varies, codes
+> reliably, is cross-cohort, and is not protocol-confounded. Kill/go before any ontology work.
 
+### Gate 1 design (the prevalence pass)
+- **Sample:** ~150 transcripts, **stratified ≈50 / 50 / 50** (workforce / creatives / scientists —
+  *over-sampling the minorities* for cross-cohort power, NOT proportional), seed=42, **human turns
+  only** (interviewer stripped, per the Phase-3 confound fix).
+- **Method:** reuse the `ambivalence_labeler` harness; **new prompt** `prompts/selfpos_v1.txt`.
+  **Dual-model** (Agnes + Haiku — neither is the DeepSeek graph extractor → breaks circularity
+  *and* doubles as the future independent outcome labeler). **Report Cohen's κ** as the codability
+  check. **No adjudication yet** (that is for final label production, post-gate).
+- **Code per transcript:** (a) tasks tagged *retained / ceded / shared*; (b) dominant **coupling
+  rationale** for retained tasks (competence / identity / trust-reliability / output-efficiency /
+  other); (c) **boundary-talk depth** (1–3 richness rating) — the cohort-confound probe.
+- **Gate 1 PASS iff:** boundary varies; competence-rationale appears **across all three cohorts**;
+  κ ≥ ~0.4 (codable); and boundary-talk depth is **not strongly cohort-confounded** (or the skew
+  is measurable and controllable). Fail on any → revisit construct or invoke the data-ceiling branch.
+
+### Subsequent steps (ONLY if Gate 1 passes)
 | Step | Work | Output |
 |---|---|---|
-| 0 | **Grounding read** (gate) | go/no-go note appended here |
-| 1 | Ontology design (question-forced, minimal) + validator update | ADR-0008, `graph-schema` revision |
-| 2 | **Matched-reasoning text baseline** spec (the missing control) | LLM flat-summary → SBERT arm |
-| 3 | Round-3 extraction (single-purpose self-positioning ontology, DeepSeek) + validator | new prompt `v5.txt`, new graph dir |
-| 4 | Independent labels: convergent ratings for coupling & agency; **felt-anxiety outcome** (dual-model + adjudication, ambivalence protocol) | label `.jsonl` + κ |
-| 5 | Analysis: convergent validity, double dissociation (ablation), compositional interaction — under the 10-seed protocol | results-log section |
-| 6 | Write-up (every decision-tree branch is reportable) | paper draft |
+| 2 | Ontology design (minimal: Self/Task/Value/AI; retain-cede + serves) + validator | ADR-0008, schema revision |
+| 3 | **Matched-reasoning text baseline** spec (the missing control) | LLM flat-summary → SBERT arm |
+| 4 | Round-3 extraction (single-purpose, DeepSeek) | `prompts/selfpos_extract_v1.txt`, new graph dir |
+| 5 | Final independent boundary labels (dual-model + adjudication, ambivalence protocol) | label `.jsonl` + κ |
+| 6 | Analysis: convergent validity, dissociation, relational payoff — 10-seed protocol | results-log section |
+| 7 | Write-up (every decision-tree branch reportable) | paper draft |
 
-**Budget note:** the main extraction uses DeepSeek (cheap); short label calls are affordable on
-the full corpus. The **≤30-transcript cap** (memory `phase3-extraction-budget`) applies only to
-*expensive multi-model graph re-extraction* (Sonnet/Claude), not to DeepSeek extraction or short
-label calls.
+**Budget note:** Gate 1 + extraction use cheap backends (Agnes free; Haiku/DeepSeek cheap; short
+calls). The **≤30-transcript cap** (`phase3-extraction-budget`) binds only expensive multi-model
+*graph* re-extraction (Sonnet/Claude), not these.
 
 ---
 
 ## 8. Risks & open questions
 
-1. **Data-depth ceiling (the big one).** 15-minute interviews may not contain the relational
-   detail this design needs. Gate 0 is the test; do not skip it.
-2. **Outcome circularity** if the anxiety labeler silently re-derives the antecedents. Mitigate by
-   instructing it to rate *expressed affect only*.
-3. **Schema complexity vs reliability.** Every added node/edge type risks re-creating the
-   grab-bag. Keep the ontology minimal.
-4. **Interaction learnable by text given enough data.** The claim is explicitness/sample-efficiency,
-   not impossibility — hence the rare-cell focus and the matched-reasoning baseline.
-5. **Fresh anxiety label feasibility/cost** — confirm before committing Step 4.
+1. **Data-depth ceiling.** 15-minute interviews may lack the relational detail needed. *Reduced*
+   by Gate 0 (the boundary is richly stated) but not eliminated; Gate 1 quantifies it.
+2. **Protocol elicitation-depth confound.** The interviewer probed each cohort differently, so
+   *how much* boundary-talk a transcript contains may correlate with cohort even if the construct
+   is shared. Measured directly by Gate 1's depth rating.
+3. **Circularity (coupling ⇄ boundary ⇄ trust).** Often stated in one breath; operationalise from
+   different structures or label independently.
+4. **Boundary edges into the lexical.** "I do it myself" is partly surface text; the relational
+   test (coupling structure predicts the boundary *beyond* a trust-keyword baseline) settles
+   whether a graph is needed.
+5. **Schema complexity vs reliability.** Keep the ontology minimal.
 
 ---
 
@@ -233,10 +283,10 @@ label calls.
 Evaluation under the existing protocol (`docs/method-review/00-evaluation-protocol.md`):
 10-seed frozen CI, PASS = CI excludes 0 **and** mean Δ ≥ +0.01.
 
-- **Convergent validity:** each structural readout correlates with its independent rating.
-- **Double dissociation:** the crossing ablation pattern holds.
-- **Compositional payoff:** interaction(threat × coupling × agency) → felt-anxiety beats additive
-  **and** matched-reasoning text, especially on the rare high-anxiety cell.
+- **Convergent validity:** the structural delegation-boundary readout matches its independent coding.
+- **Dissociation:** boundary-location and coupling-rationale are separably recoverable.
+- **Relational payoff:** the coupling structure predicts the delegation boundary beyond a flat
+  trust/sentiment score **and** a matched-reasoning text baseline.
 
 All three branches of the §6.3 decision tree are honest, publishable outcomes — the design wins
 either way, which is the property rounds 1–2 lacked.
@@ -245,8 +295,10 @@ either way, which is the property rounds 1–2 lacked.
 
 ## Appendix — references
 
-- Lazarus, R. S. (1991). *Emotion and Adaptation.* (appraisal theory; conjunctive threat)
-- Gutman, J. (1982). A means-end chain model based on consumer categorization processes. *JM.*
+- Sheridan, T. B., & Verplank, W. L. (1978). *Human and Computer Control of Undersea Teleoperators.* (levels of automation / function allocation — the delegation boundary)
+- Parasuraman, R., Sheridan, T. B., & Wickens, C. D. (2000). A model for types and levels of human interaction with automation. *IEEE SMC.*
+- Gutman, J. (1982). A means-end chain model based on consumer categorization processes. *JM.* (coupling driver)
+- Lazarus, R. S. (1991). *Emotion and Adaptation.* (appraisal theory; why the boundary sits where it does)
 - Rotter, J. B. (1966). Generalized expectancies for internal vs external control. *Psych. Monographs.*
 - Campbell, D. T., & Fiske, D. W. (1959). Convergent and discriminant validation by the
   multitrait-multimethod matrix. *Psych. Bulletin.* (dissociation logic)
