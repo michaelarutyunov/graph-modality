@@ -81,9 +81,7 @@ def run_all(
     runs_path = out_dir / "runs.jsonl"
     summary_path = out_dir / "summary.json"
 
-    base_configs = [
-        c for c in (build_sweep() + build_sklearn_sweep()) if c.target in run_targets
-    ]
+    base_configs = [c for c in (build_sweep() + build_sklearn_sweep()) if c.target in run_targets]
 
     rows: list[dict] = []
     chance_scores: dict[str, list[float]] = defaultdict(list)

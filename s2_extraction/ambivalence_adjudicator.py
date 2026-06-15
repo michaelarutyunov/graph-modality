@@ -91,9 +91,7 @@ def _load_tagged_records() -> dict[str, dict]:
     return out
 
 
-def _compute_disagreements(
-    a: dict[str, dict], b: dict[str, dict]
-) -> list[tuple[str, str, str]]:
+def _compute_disagreements(a: dict[str, dict], b: dict[str, dict]) -> list[tuple[str, str, str]]:
     """Return list of (tid, label_a, label_b) for transcripts where labels differ."""
     common = sorted(set(a) & set(b))
     disagreements: list[tuple[str, str, str]] = []
@@ -137,11 +135,7 @@ def _annotate_label(ann: dict) -> str:
     reasoning = obj.get("reasoning", "")
     quotes = obj.get("quotes", [])
     quotes_text = "\n".join(f"  - {q}" for q in quotes) if quotes else "  (none provided)"
-    return (
-        f"Label: {label}\n"
-        f"Reasoning: {reasoning}\n"
-        f"Supporting quotes:\n{quotes_text}"
-    )
+    return f"Label: {label}\nReasoning: {reasoning}\nSupporting quotes:\n{quotes_text}"
 
 
 def _build_judge_prompt(
@@ -177,13 +171,13 @@ def _build_judge_prompt(
         "unresolvable from the text, respond with 'manual_review'.\n\n"
         "Respond with a single JSON object and no other text. The JSON must follow "
         "this exact schema:\n"
-        '{\n'
+        "{\n"
         '  "chosen_label": "low|med|high|uncertain|manual_review",\n'
         '  "chosen_annotator": "A|B|none",\n'
         '  "reasoning": "Explain your choice step by step, citing specific quotes '
         'from the transcript.",\n'
         '  "supporting_quotes": ["quote 1", "quote 2"]\n'
-        '}\n\n'
+        "}\n\n"
         'Use "chosen_annotator": "none" when you select "uncertain" or "manual_review".'
     )
 
@@ -254,9 +248,7 @@ def _call_kimi(system_prompt: str, user_message: str, dry_run: bool = False) -> 
     raise RuntimeError(f"All {MAX_RETRIES} attempts failed. Last error: {last_error}")
 
 
-def _parse_judge_output(
-    raw: dict, tid: str, order: tuple[str, str]
-) -> dict:
+def _parse_judge_output(raw: dict, tid: str, order: tuple[str, str]) -> dict:
     """Validate and normalize a Kimi judge response.
 
     order maps (model_for_A, model_for_B).
@@ -290,9 +282,7 @@ def main() -> None:
     parser = argparse.ArgumentParser(
         description="Adjudicate stance_ambivalence disagreements with Kimi"
     )
-    parser.add_argument(
-        "--limit", type=int, default=None, help="Only adjudicate N disagreements"
-    )
+    parser.add_argument("--limit", type=int, default=None, help="Only adjudicate N disagreements")
     parser.add_argument(
         "--dry-run",
         action="store_true",
@@ -308,9 +298,7 @@ def main() -> None:
     existing_details = _load_existing_details(DETAILS_PATH)
     adjudications = _load_existing_adjudications(ADJUDICATION_PATH)
 
-    rubric = (Path(__file__).parent / "prompts" / "ambivalence_v1.txt").read_text(
-        encoding="utf-8"
-    )
+    rubric = (Path(__file__).parent / "prompts" / "ambivalence_v1.txt").read_text(encoding="utf-8")
 
     pending = [
         (tid, la, lb)
@@ -332,10 +320,7 @@ def main() -> None:
     # Persist disagreement worklist for reference.
     DISAGREEMENT_PATH.write_text(
         json.dumps(
-            [
-                {"transcript_id": tid, "agnes": la, "haiku": lb}
-                for tid, la, lb in disagreements
-            ],
+            [{"transcript_id": tid, "agnes": la, "haiku": lb} for tid, la, lb in disagreements],
             indent=2,
         ),
         encoding="utf-8",
@@ -357,9 +342,7 @@ def main() -> None:
             errors.append(f"{tid}: missing annotation")
             continue
 
-        system_prompt, user_message, order = _build_judge_prompt(
-            rubric, record, ann_a, ann_b
-        )
+        system_prompt, user_message, order = _build_judge_prompt(rubric, record, ann_a, ann_b)
 
         print(f"[{i}/{len(pending)}] {tid} -> Kimi", flush=True)
         try:
@@ -397,10 +380,7 @@ def main() -> None:
         if i < len(pending):
             time.sleep(RATE_LIMIT)
 
-    print(
-        f"\nDone. New adjudications: {len(new_adjudications)} | "
-        f"errors: {len(errors)}"
-    )
+    print(f"\nDone. New adjudications: {len(new_adjudications)} | errors: {len(errors)}")
     if errors:
         print("Errors:")
         for e in errors:

@@ -138,9 +138,7 @@ class Trainer:
         # Inverse-frequency class weights (sklearn "balanced" formula) for
         # imbalanced targets. Computed from the TRAIN split only.
         if self.config.class_weight == "balanced":
-            counts = np.bincount(
-                train_data["labels"].astype(int), minlength=self.config.n_classes
-            )
+            counts = np.bincount(train_data["labels"].astype(int), minlength=self.config.n_classes)
             weights = n_train / (self.config.n_classes * np.maximum(counts, 1))
             weight_tensor = torch.tensor(weights, dtype=torch.float32, device=self.device)
             self.criterion = nn.CrossEntropyLoss(weight=weight_tensor)

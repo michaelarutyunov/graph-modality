@@ -250,9 +250,7 @@ def test_main_limit(mock_disagreement_data, monkeypatch):
         "t1": _make_annotation("high", "haiku"),
         "t2": _make_annotation("high", "haiku"),
     }
-    monkeypatch.setattr(
-        adj, "_load_jsonl", lambda _p: a if "agnes" in str(_p) else b
-    )
+    monkeypatch.setattr(adj, "_load_jsonl", lambda _p: a if "agnes" in str(_p) else b)
 
     monkeypatch.setattr(sys, "argv", ["prog", "--limit", "1"])
     adj.main()
