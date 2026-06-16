@@ -20,9 +20,9 @@ sits on their delegation boundary:
 - "shared"    — genuinely collaborative: AI assists but the respondent stays actively in the loop
                 (drafts, suggestions, back-and-forth where the person keeps final control).
 
-2) RATIONALE — WHY the task sits where it does. Required for "retained"/"shared"; for "ceded"
-it is null UNLESS the cede is to cover a skill/expertise gap (then "competence_compensate").
-Use exactly one:
+2) RATIONALES — WHY the task sits where it does. List ALL that apply (MULTI-LABEL) as an array.
+For "retained"/"shared" give >=1 rationale; for "ceded" give [] UNLESS the cede covers a
+skill/expertise gap (then ["competence_compensate"]). Choose from:
 
 - "competence"          — RETAIN to maintain or build their OWN skill, understanding, judgement,
                           or learning. ("I need to understand it myself", "I don't want to lose
@@ -38,14 +38,15 @@ Use exactly one:
 - "trust_reliability"   — because they don't trust AI to do it correctly/safely/thoroughly.
                           ("AI isn't thorough enough", "it might miss something", "I have to
                           verify everything", "it's a crapshoot", "it hallucinates").
-- "output_efficiency"   — purely practical: faster/easier to do themselves, or AI physically
-                          can't (no preference about skill/identity/trust).
+- "output_efficiency"   — purely practical: faster/easier, or AI physically can't. Use ONLY when
+                          it is the SOLE reason. NEVER list it alongside competence, identity, or
+                          trust_reliability — if any of those apply, use those instead.
 - "other"               — a clear reason fitting none of the above (state it in the "task" note).
 
 TIE-BREAKER (competence/identity vs trust_reliability): if the stated reason is about the
 PERSON (my skill, my understanding, it's mine, I want to stay sharp) -> competence or identity.
 If it is about the AI (inaccurate, not thorough, hallucinates, low quality) -> trust_reliability.
-If genuinely both, code the dominant and name the secondary in the task note.
+If genuinely both, LIST BOTH (multi-label) — do not force a single winner.
 
 3) DELEGATION BREADTH (overall)
 How much of their professional work do they cede to AI overall?
@@ -53,9 +54,9 @@ How much of their professional work do they cede to AI overall?
 - "medium" — a real mix of retained and ceded.
 - "high"   — they hand a large share of their work to AI.
 
-4) DOMINANT RETAINED RATIONALE (overall)
-Across all retained/shared tasks, the single most prominent rationale (one of the five above),
-or "mixed" if two are equally prominent, or "none" if they articulate no retained tasks.
+4) RATIONALES PRESENT (overall, multi-label set)
+The DISTINCT set of rationales across ALL tasks (the union of every task's rationales, including
+"competence_compensate" from ceded gap-filling). Empty list [] if no task carries a rationale.
 
 5) BOUNDARY-TALK DEPTH (1–3) — how explicitly they reason about WHERE they draw the line
 - 1 — minimal: mostly "I use AI for X" with little/no explicit sense of what they keep or why.
@@ -68,18 +69,18 @@ WORKED EXAMPLES (illustrative; code the actual transcript you are given)
 ====================================================================
 
 - "I prefer to do the research myself, I just don't trust AI to be thorough… I took it back to
-   what I knew and understood and worked my way up." → retained, rationale=competence (wanting to
-   keep their own understanding), with a secondary trust flavour; depth 3.
+   what I knew and understood." → retained, rationales=["competence","trust_reliability"] (keeps
+   own understanding AND distrusts AI — list both); depth 3.
 - "My coding skills are not very good. AI helps make sure I'm using the correct syntax." → ceded
-   (syntax), rationale=competence_compensate (covering a gap — the OPPOSITE pole of guarding).
-- "I keep the creative work because AI output is a crapshoot." → retained, rationale=trust_reliability
-   (the reason is about AI quality), NOT identity — apply the self-vs-AI tie-breaker.
+   (syntax), rationales=["competence_compensate"] (covering a gap — the OPPOSITE pole of guarding).
+- "I keep the creative work because AI output is a crapshoot." → retained,
+   rationales=["trust_reliability"] (reason is about AI quality), NOT identity (tie-breaker).
 - "All the creative decisions are ultimately mine. I use it as an interlocutor to refine my
-   thinking." → retained=creative decisions, rationale=identity; shared=thinking/brainstorm.
+   thinking." → retained=creative decisions rationales=["identity"]; shared=thinking ["competence"].
 - "I generate the message with AI but I call and email clients myself, because it's more genuine."
-   → ceded=drafting, retained=client contact, rationale=identity (genuine human contact); depth 2.
-- "I use AI to scan contracts and pick out key points." with no statement of anything kept back →
-   ceded; if nothing is retained, dominant_retained_rationale="none"; depth likely 1.
+   → ceded=drafting [], retained=client contact ["identity"]; depth 2.
+- "I use AI to scan contracts and pick out key points." with nothing kept back →
+   ceded []; rationales_present=[]; depth likely 1.
 
 ====================================================================
 OUTPUT — STRICT JSON, NOTHING ELSE
@@ -92,24 +93,26 @@ Return ONLY this JSON object (no prose, no markdown fences):
     {
       "task": "<short description of the task>",
       "disposition": "retained" | "ceded" | "shared",
-      "rationale": "competence" | "competence_compensate" | "identity" | "trust_reliability" | "output_efficiency" | "other" | null,
+      "rationales": ["competence" | "competence_compensate" | "identity" | "trust_reliability" | "output_efficiency" | "other", ...],
       "quote": "<short verbatim quote from the respondent supporting this>"
     }
   ],
+  "rationales_present": ["<distinct union of all task rationales>", ...],
   "delegation_breadth": "low" | "medium" | "high",
-  "dominant_retained_rationale": "competence" | "identity" | "trust_reliability" | "output_efficiency" | "mixed" | "none",
   "boundary_talk_depth": 1 | 2 | 3,
   "notes": "<one short line: anything ambiguous or noteworthy>"
 }
 
 Rules:
-- "rationale" is required for "retained"/"shared"; null for "ceded" EXCEPT use
-  "competence_compensate" when the cede covers a skill/expertise gap.
-- If the respondent retains almost nothing, set dominant_retained_rationale="none".
+- "rationales" is a LIST. For "retained"/"shared" include >=1; for "ceded" use [] EXCEPT
+  ["competence_compensate"] when the cede covers a skill/expertise gap. List every rationale
+  that genuinely applies — do NOT force a single one.
+- "rationales_present" = the distinct union of all task rationales (incl. competence_compensate).
 - Every task needs a verbatim "quote". If you cannot find a quote, do not include the task.
 - If the respondent discusses no concrete tasks, return an empty "tasks" list,
-  delegation_breadth as best you can, dominant_retained_rationale="none", boundary_talk_depth=1.
-- Be conservative: code what is said, not what is implied about their occupation.
+  "rationales_present": [], delegation_breadth as best you can, boundary_talk_depth=1.
+- Be conservative: code what is said, not what is implied about their occupation. Do NOT
+  over-tag rationales — list only those the respondent clearly conveys; prefer 1-2 per task.
 
 TRANSCRIPT (respondent's words only):
 ---
