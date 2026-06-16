@@ -52,7 +52,10 @@ def cramers_v(labels_a: list, labels_b: list) -> float:
     cats_a = sorted(set(labels_a))
     cats_b = sorted(set(labels_b))
     table = [
-        [sum(1 for x, y in zip(labels_a, labels_b) if x == ca and y == cb) for cb in cats_b]
+        [
+            sum(1 for x, y in zip(labels_a, labels_b, strict=False) if x == ca and y == cb)
+            for cb in cats_b
+        ]
         for ca in cats_a
     ]
     chi2 = chi2_contingency(table)[0]
@@ -76,7 +79,7 @@ def main() -> None:
         a = [int(cat in rset(ag[t])) for t in ids]
         b = [int(cat in rset(hk[t])) for t in ids]
         n = len(ids)
-        po = sum(x == y for x, y in zip(a, b)) / n
+        po = sum(x == y for x, y in zip(a, b, strict=False)) / n
         pa, pb = sum(a) / n, sum(b) / n
         pe_k = pa * pb + (1 - pa) * (1 - pb)
         cohen = (po - pe_k) / (1 - pe_k) if pe_k < 1 else 1.0
