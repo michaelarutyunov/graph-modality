@@ -1,6 +1,17 @@
-# graph-schema.md — v4
+# graph-schema.md
 
 > **This is the data contract.** All modules — extraction, validation, canonicalisation, encoding — derive from this document. Any schema change requires simultaneous updates to `s2_extraction/validator.py` and all affected encoding modules. Never modify downstream code without updating this document first.
+
+> **Two ontologies are live.** The repo now hosts two non-interoperable schemas:
+> - **`selfpos` / v5 (ACTIVE for round-3 work)** — the delegation-boundary ontology (Self/AI/Task/Value).
+>   Validated by `validate_selfpos_graph()`. See **§ ROUND-3 (`selfpos` / v5)** immediately below.
+>   Design rationale: **ADR-0008**; construct: `docs/MODEL_REVIEW_2.md` §5–6.
+> - **v4 (SUPERSEDED for round-3; retained for provenance)** — the concept-graph ontology
+>   (Construct/Value/Stance/CSM). Validated by `validate_graph()`. The v4 corpus and Phase-6 verdict are
+>   final (ADR-0006/0007); the v4 spec is preserved unchanged below the round-3 section.
+>
+> The two share no node/edge types. Pick the schema by `prompt_version` (`v5`/`selfpos_v1` → selfpos;
+> `v4`/`v3`/… → v4).
 
 ---
 
@@ -11,7 +22,169 @@
 | v1 | 2026-06-02 | initial extraction ontology |
 | v2 | 2026-06-03 | one-shot example added |
 | v3 | 2026-06-05 | two-shot examples; `CONFLICTS_WITH` added; CSM cap at 2 |
-| **v4** | **2026-06-10** | **per-pole grounding spans; multi-span salience; new relations (SUBSUMES, IMPLIES); CSM recurrence (no cap); edge rationales; topic-neutral domain; valence definitions** |
+| v4 | 2026-06-10 | per-pole grounding spans; multi-span salience; new relations (SUBSUMES, IMPLIES); CSM recurrence (no cap); edge rationales; topic-neutral domain; valence definitions |
+| **v5 / `selfpos`** | **2026-06-16** | **NEW ONTOLOGY (not a v4 increment). Delegation-boundary: Self/AI/Task/Value nodes; RETAINED_BY/CEDED_TO/SHARED_WITH/SERVES edges; extractor-injected anchors; per-edge verbatim grounding_span; boundary partition invariant; two deterministic readouts (breadth, alignment). ADR-0008.** |
+
+---
+
+## ROUND-3 (`selfpos` / v5) — delegation-boundary ontology  ·  **ACTIVE**
+
+> Validated by `validate_selfpos_graph()` in `s2_extraction/validator.py`. Design record: **ADR-0008**.
+> Construct + validity design: `docs/MODEL_REVIEW_2.md` §5–6. Independent criterion labels:
+> `cache/selfpos_boundary.jsonl` (`delegation_breadth`, `rationales_present`, `boundary_talk_depth`).
+
+### what this ontology represents
+
+The **human–AI delegation boundary**: which work tasks a respondent **retains**, which they **cede** to
+AI, which they **share**, and *why they retain what they retain* (competence/identity coupling). It is
+deliberately **thin and structural** — schema bloat destroyed reliability in rounds 1–2 (see ADR-0008
+and the v4 section below). Lexical content is preserved but is an **encoding-time dial**, not baked-in
+node bloat: the headline relational test runs a purified type-only encoding so a graph win is
+unambiguously structural rather than bag-of-words.
+
+### entity types (`selfpos`)
+
+Exactly four node types: `Self`, `AI`, `Task`, `Value`.
+
+**`Self`** — structural anchor for the respondent. Singleton, id `self`. **Injected by the extractor**
+(not emitted by the LLM). Grounding-exempt. Exactly one per graph.
+
+**`AI`** — structural anchor for the AI tool(s). Singleton, id `ai`. Injected by the extractor.
+Grounding-exempt. Present **iff** ≥1 `CEDED_TO`/`SHARED_WITH` edge exists.
+
+**`Task`** — a discrete work task/activity the respondent discusses in relation to AI. LLM-emitted.
+
+| field | type | required | notes |
+|---|---|---|---|
+| `id` | string | yes | unique within graph, e.g. `"t1"` |
+| `type` | `"Task"` | yes | literal |
+| `label` | string | yes | short task description |
+| `grounding_span` | string | yes | verbatim respondent phrase naming/describing the task |
+
+**`Value`** — a terminal self-value the task is coupled to (the means-end driver of retention).
+LLM-emitted.
+
+| field | type | required | notes |
+|---|---|---|---|
+| `id` | string | yes | e.g. `"v1"` |
+| `type` | `"Value"` | yes | literal |
+| `label` | string | yes | free-text value label (canonicalised downstream) |
+| `value_type` | enum | yes | `"competence"` (skill/judgment/learning) or `"identity"` (who-they-are/authorship) |
+| `grounding_span` | string | yes | verbatim respondent phrase supporting the value |
+
+> `type` is the **entity category** (4 values). `value_type` is a sub-attribute carried **only** by
+> `Value` nodes. In the purified type-only encoding, node features are the `type` one-hot with `Value`
+> split by `value_type` → five categories: `Self`, `AI`, `Task`, `Value:competence`, `Value:identity`.
+
+### relation types (`selfpos`)
+
+All directed source → target. **Every edge carries a required verbatim `grounding_span`.**
+
+| relation | source → target | role | extra attr |
+|---|---|---|---|
+| `RETAINED_BY` | Task → Self | boundary partition (kept) | `rationale_tags` |
+| `CEDED_TO` | Task → AI | boundary partition (delegated) | `rationale_tags` |
+| `SHARED_WITH` | Task → AI | boundary partition (collaborative; control kept) | `rationale_tags` |
+| `SERVES` | Task → Value | **coupling** — why the task is retained (the ablatable "why") | — |
+
+**`rationale_tags`** (boundary edges only) — multi-label list ⊆
+`{"trust_reliability", "output_efficiency", "competence_compensate", "other"}`; may be empty. These are
+the non-coupling appraisal/practical reasons. Competence/identity coupling is expressed by `SERVES` →
+`Value`, **not** by tags. The labeler's `rationales_present` is reconstructed as
+`{Value.value_type of SERVES targets} ∪ {boundary rationale_tags}`.
+
+`SERVES` edges have **no** `rationale_tags`.
+
+> **Edge `grounding_span` is dual-purpose** (ADR-0008): auditability/reliability + an optional edge
+> feature for the edge-lexicon ablation. **Edge affective valence** ("reluctantly"/"happily" ceding) is
+> *subsumed* here — it rides in the span text when present; there is no separate `valence` field.
+
+### structural constraints (`selfpos`) — enforced by `validate_selfpos_graph()`
+
+| id | constraint |
+|---|---|
+| S1 | node `type` ∈ {`Self`, `AI`, `Task`, `Value`} |
+| S2 | exactly one `Self` node, id `self` |
+| S3 | at most one `AI` node, id `ai`; `AI` present iff ≥1 `CEDED_TO`/`SHARED_WITH` edge exists |
+| S4 | every `Task` has a non-empty `label` and `grounding_span` |
+| S5 | every `Value` has `label`, `grounding_span`, and `value_type` ∈ {`competence`, `identity`} |
+| S6 | edge `relation` ∈ {`RETAINED_BY`, `CEDED_TO`, `SHARED_WITH`, `SERVES`} |
+| S7 | relation type signatures: `RETAINED_BY` (Task→Self), `CEDED_TO` (Task→AI), `SHARED_WITH` (Task→AI), `SERVES` (Task→Value) |
+| S8 | **partition invariant** — every `Task` has **exactly one** boundary edge (`RETAINED_BY`\|`CEDED_TO`\|`SHARED_WITH`) |
+| S9 | edge `source`/`target` ids exist in `nodes` |
+| S10 | every edge has a non-empty `grounding_span` |
+| S11 | `rationale_tags` only on boundary edges, ⊆ {`trust_reliability`, `output_efficiency`, `competence_compensate`, `other`}; `SERVES` carries none |
+| S12 | graph has a `domain` field |
+
+### deterministic readouts (checkable against `selfpos_boundary.jsonl`)
+
+1. **Delegation breadth** = `(|CEDED_TO| + 0.5·|SHARED_WITH|) / |Task|`, thresholded to low/med/high;
+   convergent-validated against `delegation_breadth`.
+2. **Boundary–coupling alignment** = φ of the 2×2 `{retained vs ceded} × {has SERVES→Value vs not}`
+   over `Task` nodes. Positive φ ⇒ retained tasks are the competence/identity-coupled ones. The boundary
+   (Task→Self/AI) and coupling (Task→Value) substructures are independently ablatable (dissociation test).
+
+### complete example (`selfpos` / v5)
+
+```json
+{
+  "transcript_id": "creativity_0001",
+  "domain": "AI's role in professional work",
+  "split": "creatives",
+  "extraction_model": "deepseek-chat",
+  "prompt_version": "v5",
+  "node_count": 6,
+  "edge_count": 5,
+  "validation_violations": [],
+  "nodes": [
+    {"id": "self", "type": "Self"},
+    {"id": "ai", "type": "AI"},
+    {"id": "t1", "type": "Task", "label": "final creative decisions",
+     "grounding_span": "the creative decisions are ultimately mine"},
+    {"id": "t2", "type": "Task", "label": "drafting boilerplate copy",
+     "grounding_span": "I let it write the first pass of the boring stuff"},
+    {"id": "v1", "type": "Value", "label": "creative authorship", "value_type": "identity",
+     "grounding_span": "this is my voice, it's who I am as a writer"},
+    {"id": "v2", "type": "Value", "label": "craft skill", "value_type": "competence",
+     "grounding_span": "I don't want to lose the muscle of writing"}
+  ],
+  "edges": [
+    {"source": "t1", "target": "self", "relation": "RETAINED_BY", "rationale_tags": [],
+     "grounding_span": "the creative decisions are ultimately mine"},
+    {"source": "t1", "target": "v1", "relation": "SERVES",
+     "grounding_span": "this is my voice, it's who I am as a writer"},
+    {"source": "t1", "target": "v2", "relation": "SERVES",
+     "grounding_span": "I don't want to lose the muscle of writing"},
+    {"source": "t2", "target": "ai", "relation": "SHARED_WITH",
+     "rationale_tags": ["output_efficiency", "trust_reliability"],
+     "grounding_span": "I let it write the first pass of the boring stuff but I always rewrite it"}
+  ]
+}
+```
+
+> `t2` is **shared** (AI drafts, the respondent keeps final control via the rewrite), so it carries a
+> single `SHARED_WITH`→`ai` edge — satisfying the S8 partition invariant (every Task has exactly one
+> boundary edge). `t1` is retained and coupled to both an identity and a competence `Value` (two `SERVES`
+> edges). Readouts on this graph: breadth = `(0 + 0.5·1)/2 = 0.25` (→ low); alignment is positive (the
+> retained task `t1` is the coupled one, the shared task `t2` is not).
+
+### allowed type values (exhaustive, `selfpos`)
+
+```
+node.type:            Self | AI | Task | Value
+value.value_type:     competence | identity
+edge.relation:        RETAINED_BY | CEDED_TO | SHARED_WITH | SERVES
+boundary.rationale_tags ⊆  trust_reliability | output_efficiency | competence_compensate | other
+graph.split:          workforce | creatives | scientists
+```
+
+---
+
+# v4 (SUPERSEDED for round-3; retained for provenance)
+
+> The sections below describe the **v4 concept-graph ontology**, the corpus of record for Phase 6
+> (ADR-0006/0007). It is **not** used for round-3 work and is preserved unchanged for provenance. Use
+> `validate_graph()` (not `validate_selfpos_graph()`) for v4 graphs.
 
 ---
 
