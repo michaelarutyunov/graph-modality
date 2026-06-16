@@ -29,15 +29,31 @@ TAGGED_DIR = Path("s1_data/tagged")
 CACHE_DIR = Path("cache")
 
 BACKENDS = {
-    "agnes": {"type": "openai", "model": "agnes-2.0-flash", "tag": "agnes",
-              "key": "AGNES_API_KEY", "url": "https://apihub.agnes-ai.com/v1/chat/completions",
-              "temperature": 0.0},
-    "haiku": {"type": "anthropic", "model": "claude-haiku-4-5-20251001", "tag": "haiku",
-              "key": "ANTHROPIC_API_KEY", "temperature": 0.0},
+    "agnes": {
+        "type": "openai",
+        "model": "agnes-2.0-flash",
+        "tag": "agnes",
+        "key": "AGNES_API_KEY",
+        "url": "https://apihub.agnes-ai.com/v1/chat/completions",
+        "temperature": 0.0,
+    },
+    "haiku": {
+        "type": "anthropic",
+        "model": "claude-haiku-4-5-20251001",
+        "tag": "haiku",
+        "key": "ANTHROPIC_API_KEY",
+        "temperature": 0.0,
+    },
 }
 
-VALID_RATIONALES = {"competence", "competence_compensate", "identity",
-                    "trust_reliability", "output_efficiency", "other"}
+VALID_RATIONALES = {
+    "competence",
+    "competence_compensate",
+    "identity",
+    "trust_reliability",
+    "output_efficiency",
+    "other",
+}
 VALID_BREADTH = {"low", "medium", "high"}
 MAX_TOKENS = 1800
 TIMEOUT = 60
@@ -51,7 +67,7 @@ def strip_fences(t: str) -> str:
     if t.startswith("```"):
         nl = t.find("\n")
         if nl != -1:
-            t = t[nl + 1:]
+            t = t[nl + 1 :]
         if t.rstrip().endswith("```"):
             t = t.rstrip()[: t.rstrip().rfind("```")]
     return t.strip()
@@ -68,20 +84,37 @@ def parse_json(content: str) -> dict:
 
 
 def call_openai(prompt: str, b: dict) -> dict:
-    body = json.dumps({
-        "model": b["model"],
-        "messages": [{"role": "system", "content": "You are a careful qualitative coder. Output valid JSON only."},
-                     {"role": "user", "content": prompt}],
-        "max_tokens": MAX_TOKENS, "temperature": b["temperature"]}, ensure_ascii=False).encode("utf-8")
+    body = json.dumps(
+        {
+            "model": b["model"],
+            "messages": [
+                {
+                    "role": "system",
+                    "content": "You are a careful qualitative coder. Output valid JSON only.",
+                },
+                {"role": "user", "content": prompt},
+            ],
+            "max_tokens": MAX_TOKENS,
+            "temperature": b["temperature"],
+        },
+        ensure_ascii=False,
+    ).encode("utf-8")
     last: Exception | None = None
     for attempt in range(RETRIES):
         try:
             req = urllib.request.Request(
-                b["url"], data=body,
-                headers={"Content-Type": "application/json", "Authorization": f"Bearer {os.environ[b['key']]}"},
-                method="POST")
+                b["url"],
+                data=body,
+                headers={
+                    "Content-Type": "application/json",
+                    "Authorization": f"Bearer {os.environ[b['key']]}",
+                },
+                method="POST",
+            )
             with urllib.request.urlopen(req, timeout=TIMEOUT) as resp:
-                return parse_json(json.loads(resp.read().decode("utf-8"))["choices"][0]["message"]["content"])
+                return parse_json(
+                    json.loads(resp.read().decode("utf-8"))["choices"][0]["message"]["content"]
+                )
         except (urllib.error.URLError, json.JSONDecodeError, KeyError) as e:
             last = e
             time.sleep(DELAYS[min(attempt, len(DELAYS) - 1)])
@@ -96,9 +129,13 @@ def call_anthropic(prompt: str, b: dict) -> dict:
     for attempt in range(RETRIES):
         try:
             resp = client.messages.create(
-                model=b["model"], max_tokens=MAX_TOKENS, temperature=b["temperature"],
+                model=b["model"],
+                max_tokens=MAX_TOKENS,
+                temperature=b["temperature"],
                 system="You are a careful qualitative coder. Output valid JSON only. No markdown fences.",
-                messages=[{"role": "user", "content": prompt}], timeout=TIMEOUT)
+                messages=[{"role": "user", "content": prompt}],
+                timeout=TIMEOUT,
+            )
             return parse_json("".join(x.text for x in resp.content if x.type == "text"))
         except Exception as e:
             last = e
@@ -166,7 +203,10 @@ def main() -> None:
         records = records[: args.limit]
     cache = load_cache(out_path)
     pending = [r for r in records if r["transcript_id"] not in cache]
-    print(f"backend={b['model']} total={len(records)} cached={len(records) - len(pending)} todo={len(pending)}", flush=True)
+    print(
+        f"backend={b['model']} total={len(records)} cached={len(records) - len(pending)} todo={len(pending)}",
+        flush=True,
+    )
     caller = call_openai if b["type"] == "openai" else call_anthropic
 
     n_fail, warns = 0, 0

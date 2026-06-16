@@ -37,17 +37,35 @@ OUT_DIR = Path("results/method_review/selfpos_calib")
 REF_PATH = OUT_DIR / "reference.jsonl"
 
 CALIB_IDS = [
-    "work_0150", "work_0350", "work_0550", "work_0750",
-    "creativity_0020", "creativity_0055", "creativity_0110",
-    "science_0020", "science_0055", "science_0110",
+    "work_0150",
+    "work_0350",
+    "work_0550",
+    "work_0750",
+    "creativity_0020",
+    "creativity_0055",
+    "creativity_0110",
+    "science_0020",
+    "science_0055",
+    "science_0110",
 ]
 
 # cheapest -> most expensive (selection rule walks this order)
 PANEL = [
-    {"tag": "agnes", "type": "openai", "model": "agnes-2.0-flash", "key": "AGNES_API_KEY",
-     "url": "https://apihub.agnes-ai.com/v1/chat/completions", "temperature": 0.0},
-    {"tag": "haiku", "type": "anthropic", "model": "claude-haiku-4-5-20251001",
-     "key": "ANTHROPIC_API_KEY", "temperature": 0.0},
+    {
+        "tag": "agnes",
+        "type": "openai",
+        "model": "agnes-2.0-flash",
+        "key": "AGNES_API_KEY",
+        "url": "https://apihub.agnes-ai.com/v1/chat/completions",
+        "temperature": 0.0,
+    },
+    {
+        "tag": "haiku",
+        "type": "anthropic",
+        "model": "claude-haiku-4-5-20251001",
+        "key": "ANTHROPIC_API_KEY",
+        "temperature": 0.0,
+    },
     # Kimi dropped from re-run: k2.6 thinking model times out at 60s and is not needed if the
     # cheap pair passes. To re-enable as a fallback, restore this entry AND raise TIMEOUT to ~300.
     # {"tag": "kimi", "type": "openai", "model": "kimi-k2.6", "key": "KIMI_API_KEY",
@@ -55,8 +73,14 @@ PANEL = [
     #  "temperature": 1.0},
 ]
 
-RATIONALE_CATS = ["competence", "competence_compensate", "identity",
-                  "trust_reliability", "output_efficiency", "other"]
+RATIONALE_CATS = [
+    "competence",
+    "competence_compensate",
+    "identity",
+    "trust_reliability",
+    "output_efficiency",
+    "other",
+]
 CORE_CATS = {"competence", "identity", "trust_reliability"}  # Gate-1 load-bearing categories
 JACCARD_THRESHOLD = 0.60  # applied to CORE-category Jaccard
 MAX_TOKENS = 1800
@@ -70,7 +94,7 @@ def strip_fences(t: str) -> str:
     if t.startswith("```"):
         nl = t.find("\n")
         if nl != -1:
-            t = t[nl + 1:]
+            t = t[nl + 1 :]
         if t.rstrip().endswith("```"):
             t = t.rstrip()[: t.rstrip().rfind("```")]
     return t.strip()
@@ -87,20 +111,33 @@ def parse_json(content: str) -> dict:
 
 
 def call_openai(prompt: str, b: dict) -> dict:
-    body = json.dumps({
-        "model": b["model"],
-        "messages": [
-            {"role": "system", "content": "You are a careful qualitative coder. Output valid JSON only."},
-            {"role": "user", "content": prompt}],
-        "max_tokens": MAX_TOKENS, "temperature": b["temperature"],
-    }, ensure_ascii=False).encode("utf-8")
+    body = json.dumps(
+        {
+            "model": b["model"],
+            "messages": [
+                {
+                    "role": "system",
+                    "content": "You are a careful qualitative coder. Output valid JSON only.",
+                },
+                {"role": "user", "content": prompt},
+            ],
+            "max_tokens": MAX_TOKENS,
+            "temperature": b["temperature"],
+        },
+        ensure_ascii=False,
+    ).encode("utf-8")
     last: Exception | None = None
     for attempt in range(RETRIES):
         try:
             req = urllib.request.Request(
-                b["url"], data=body,
-                headers={"Content-Type": "application/json",
-                         "Authorization": f"Bearer {os.environ[b['key']]}"}, method="POST")
+                b["url"],
+                data=body,
+                headers={
+                    "Content-Type": "application/json",
+                    "Authorization": f"Bearer {os.environ[b['key']]}",
+                },
+                method="POST",
+            )
             with urllib.request.urlopen(req, timeout=TIMEOUT) as resp:
                 raw = json.loads(resp.read().decode("utf-8"))
                 return parse_json(raw["choices"][0]["message"]["content"])
@@ -118,9 +155,13 @@ def call_anthropic(prompt: str, b: dict) -> dict:
     for attempt in range(RETRIES):
         try:
             resp = client.messages.create(
-                model=b["model"], max_tokens=MAX_TOKENS, temperature=b["temperature"],
+                model=b["model"],
+                max_tokens=MAX_TOKENS,
+                temperature=b["temperature"],
                 system="You are a careful qualitative coder. Output valid JSON only. No markdown fences.",
-                messages=[{"role": "user", "content": prompt}], timeout=TIMEOUT)
+                messages=[{"role": "user", "content": prompt}],
+                timeout=TIMEOUT,
+            )
             return parse_json("".join(x.text for x in resp.content if x.type == "text"))
         except Exception as e:
             last = e
@@ -172,7 +213,10 @@ def main() -> None:
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     tpl = PROMPT_PATH.read_text(encoding="utf-8")
     records = load_records()
-    ref = {json.loads(l)["transcript_id"]: json.loads(l) for l in REF_PATH.read_text().strip().split("\n")}
+    ref = {
+        json.loads(l)["transcript_id"]: json.loads(l)
+        for l in REF_PATH.read_text().strip().split("\n")
+    }
 
     panel: dict[str, dict[str, dict]] = {}
     for b in PANEL:
@@ -191,7 +235,8 @@ def main() -> None:
             panel[tag][tid] = out
             time.sleep(0.6)
         (OUT_DIR / f"panel_{tag}.jsonl").write_text(
-            "\n".join(json.dumps(panel[tag][t], ensure_ascii=False) for t in CALIB_IDS) + "\n")
+            "\n".join(json.dumps(panel[tag][t], ensure_ascii=False) for t in CALIB_IDS) + "\n"
+        )
 
     ref_sets = {t: rset(ref[t]) for t in CALIB_IDS}
 
@@ -214,20 +259,43 @@ def main() -> None:
                 n += 1
                 hits += (cat in ms) == (cat in rs)
             per_cat[cat] = round(hits / n, 3) if n else None
-        breadth = round(sum(("_error" not in recs[t]) and recs[t].get("delegation_breadth") == ref[t].get("delegation_breadth") for t in CALIB_IDS) / len(CALIB_IDS), 3)
-        depth = round(sum(("_error" not in recs[t]) and recs[t].get("boundary_talk_depth") == ref[t].get("boundary_talk_depth") for t in CALIB_IDS) / len(CALIB_IDS), 3)
-        return {"n_ok": sum("_error" not in recs[t] for t in CALIB_IDS),
-                "mean_jaccard_vs_ref": mean_jac, "mean_jaccard_full_vs_ref": mean_fj,
-                "per_category_presence_agreement": per_cat,
-                "delegation_breadth_agreement": breadth, "boundary_talk_depth_agreement": depth}
+        breadth = round(
+            sum(
+                ("_error" not in recs[t])
+                and recs[t].get("delegation_breadth") == ref[t].get("delegation_breadth")
+                for t in CALIB_IDS
+            )
+            / len(CALIB_IDS),
+            3,
+        )
+        depth = round(
+            sum(
+                ("_error" not in recs[t])
+                and recs[t].get("boundary_talk_depth") == ref[t].get("boundary_talk_depth")
+                for t in CALIB_IDS
+            )
+            / len(CALIB_IDS),
+            3,
+        )
+        return {
+            "n_ok": sum("_error" not in recs[t] for t in CALIB_IDS),
+            "mean_jaccard_vs_ref": mean_jac,
+            "mean_jaccard_full_vs_ref": mean_fj,
+            "per_category_presence_agreement": per_cat,
+            "delegation_breadth_agreement": breadth,
+            "boundary_talk_depth_agreement": depth,
+        }
 
     vs_ref = {b["tag"]: score(b["tag"]) for b in PANEL}
 
     tags = [b["tag"] for b in PANEL]
     inter = {}
     for i, t1 in enumerate(tags):
-        for t2 in tags[i + 1:]:
-            js = [jaccard(core_only(rset(panel[t1][t])), core_only(rset(panel[t2][t]))) for t in CALIB_IDS]
+        for t2 in tags[i + 1 :]:
+            js = [
+                jaccard(core_only(rset(panel[t1][t])), core_only(rset(panel[t2][t])))
+                for t in CALIB_IDS
+            ]
             js = [j for j in js if j is not None]
             inter[f"{t1}__{t2}"] = round(sum(js) / len(js), 3) if js else None
 
@@ -237,31 +305,57 @@ def main() -> None:
         if mj is not None and mj >= JACCARD_THRESHOLD:
             chosen = b["tag"]
             break
-    cheap_ok = [t for t in ("agnes", "haiku")
-                if (vs_ref.get(t, {}).get("mean_jaccard_vs_ref") or 0) >= JACCARD_THRESHOLD]
+    cheap_ok = [
+        t
+        for t in ("agnes", "haiku")
+        if (vs_ref.get(t, {}).get("mean_jaccard_vs_ref") or 0) >= JACCARD_THRESHOLD
+    ]
     if len(cheap_ok) == 2:
         pair = ["agnes", "haiku"]
-        decision = "Cheap pair Agnes+Haiku BOTH pass core-Jaccard>=0.60 -> Gate-1 pair; Kimi not needed."
+        decision = (
+            "Cheap pair Agnes+Haiku BOTH pass core-Jaccard>=0.60 -> Gate-1 pair; Kimi not needed."
+        )
     elif len(cheap_ok) == 1:
         pair = cheap_ok
-        decision = (f"Only {cheap_ok[0]} passes core-Jaccard>=0.60. Per ladder: Kimi-only fallback "
-                    "(re-enable Kimi with TIMEOUT~300) or stop+Sonnet estimate - USER decision.")
+        decision = (
+            f"Only {cheap_ok[0]} passes core-Jaccard>=0.60. Per ladder: Kimi-only fallback "
+            "(re-enable Kimi with TIMEOUT~300) or stop+Sonnet estimate - USER decision."
+        )
     else:
         pair = []
-        decision = ("Neither cheap model passes core-Jaccard>=0.60. Per ladder: Kimi-only "
-                    "(re-enable Kimi) or stop+Sonnet estimate - USER decision.")
+        decision = (
+            "Neither cheap model passes core-Jaccard>=0.60. Per ladder: Kimi-only "
+            "(re-enable Kimi) or stop+Sonnet estimate - USER decision."
+        )
 
-    summary = {"n_transcripts": len(CALIB_IDS),
-               "rationale_scoring": "CORE-category (competence/identity/trust) Jaccard; full-set secondary",
-               "jaccard_threshold": JACCARD_THRESHOLD, "vs_reference": vs_ref,
-               "inter_model_jaccard": inter, "chosen_cheapest_pass": chosen,
-               "gate1_pair": pair, "decision": decision,
-               "note": "n=10 calibration; Jaccard de-noises the multi-label forced-choice problem."}
+    summary = {
+        "n_transcripts": len(CALIB_IDS),
+        "rationale_scoring": "CORE-category (competence/identity/trust) Jaccard; full-set secondary",
+        "jaccard_threshold": JACCARD_THRESHOLD,
+        "vs_reference": vs_ref,
+        "inter_model_jaccard": inter,
+        "chosen_cheapest_pass": chosen,
+        "gate1_pair": pair,
+        "decision": decision,
+        "note": "n=10 calibration; Jaccard de-noises the multi-label forced-choice problem.",
+    }
     (OUT_DIR / "calibration.json").write_text(json.dumps(summary, indent=2, ensure_ascii=False))
     print("\n=== DECISION ===\n" + decision)
-    print(json.dumps({t: {"mean_jaccard": vs_ref[t]["mean_jaccard_vs_ref"],
-                          "competence_presence_agr": vs_ref[t]["per_category_presence_agreement"]["competence"],
-                          "breadth_agr": vs_ref[t]["delegation_breadth_agreement"]} for t in tags}, indent=2))
+    print(
+        json.dumps(
+            {
+                t: {
+                    "mean_jaccard": vs_ref[t]["mean_jaccard_vs_ref"],
+                    "competence_presence_agr": vs_ref[t]["per_category_presence_agreement"][
+                        "competence"
+                    ],
+                    "breadth_agr": vs_ref[t]["delegation_breadth_agreement"],
+                }
+                for t in tags
+            },
+            indent=2,
+        )
+    )
     print("inter-model Jaccard:", json.dumps(inter))
 
 

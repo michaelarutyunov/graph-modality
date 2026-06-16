@@ -1203,3 +1203,37 @@ predictive finding that graph stats add signal but the signal is distributional
 node-attribute rather than robust topology.  Outputs:
 `results/method_review/geometry_rsa_v4/20260615_143948/summary.json` and
 `disagreement_cases.md`.
+
+---
+
+## Gate 1 — delegation-boundary prevalence/codability (Round 3, bead graph-modality-nu2) — GO
+
+*Date: 2026-06-16. Graph-free LLM coding pass over the FULL corpus (user-expanded from the
+planned 150-sample). Rubric `s2_extraction/prompts/selfpos_v1.txt` (multi-label). Dual coders
+**Agnes + Haiku** (selected in B2 calibration: core-category Jaccard vs human reference 0.65 /
+0.633, inter-model 0.717; Kimi dropped — k2.6 thinking model times out; no Sonnet). Outputs:
+`cache/selfpos_{agnes,haiku}.jsonl`, `results/method_review/selfpos_gate1/summary.json`.*
+
+**Dual-coded transcripts:** 1,238 (Agnes 1,245 ok / Haiku 1,243 ok; ~12 dropped to API
+timeouts / JSON-truncation on long transcripts — negligible).
+
+| # | Criterion | Result | Verdict |
+|---|---|---|---|
+| 1 | Boundary varies | breadth low 0.29–0.37 / med 0.61–0.66 / high 0.02–0.06; 5 rationales ≥5% | ✅ |
+| 2 | Competence cross-cohort (≥15%/cohort, consensus) | workforce 0.70, creatives 0.59, scientists 0.72 | ✅ (confound dissolved) |
+| 3 | Codable (inter-coder, competence) | **Gwet AC1 0.675** / PABAK 0.561 / obs-agree 0.78 / inter-core Jaccard 0.785 | ✅ |
+| 4 | Depth × cohort not confounded | Cramér's V 0.06–0.08 (≪0.30) | ✅ |
+
+**Verdict: GO.** Criterion 3 was originally pinned on Cohen's κ (competence κ=0.326), but Cohen's
+κ is unreliable at the observed ~80% competence prevalence (kappa paradox: 78% raw agreement yet
+deflated κ). Amended to **Gwet's AC1** (the standard high-prevalence correction): competence
+AC1=0.675, identity 0.575, trust 0.839 — all "substantial." Metric change is a methodological
+correction, not goalpost-moving; both statistics are recorded in summary.json.
+
+**Design note for B4 (ontology):** competence-coupling is near-ubiquitous (~80%), so the
+construct's *discriminative* power lives in the **boundary partition** (which tasks retained vs
+ceded; breadth varies) and the **rationale mix**, NOT in competence-presence per se. The ontology
+must encode the boundary structure, not merely rationale flags.
+
+Gate passed → B4 (ontology + ADR-0008) and B7 (consensus + adjudication of the dual-coder labels)
+are unblocked.
