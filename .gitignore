@@ -242,3 +242,6 @@ s2_extraction/failed.txt
 .beads-credential-key
 s2_extraction/model_comparison/results/
 s2_extraction/model_comparison/validation_results/
+
+# Reasonix agent config (local)
+reasonix.toml
